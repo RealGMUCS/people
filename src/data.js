@@ -18,18 +18,23 @@ export async function loadFaculty() {
 
     const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
 
-    const faculty = data.map(row => ({
-        firstName: clean(row['First Name']),
-        lastName: clean(row['Last Name']),
-        email: clean(row['gmu email/userid']),
-        track: clean(row['Tenure-Track/Teaching/Staff']),
-        rank: clean(row['Rank']),
-        website: normalizeUrl(clean(row['Website'])),
-        interests: parseInterests(row['Research interests']),
-        office: clean(row['Office (building and room #)']),
-        yearStarted: clean(row['Year started at GMU']),
-        phdFrom: clean(row['PhD from']),
-    }));
+    const faculty = data.map(row => {
+        // Handle variable header name for Research Interests (e.g. includes examples)
+        const interestKey = Object.keys(row).find(k => k.toLowerCase().startsWith('research interests')) || 'Research interests';
+
+        return {
+            firstName: clean(row['First Name']),
+            lastName: clean(row['Last Name']),
+            email: clean(row['gmu email/userid']),
+            track: clean(row['Tenure-Track/Teaching/Staff']),
+            rank: clean(row['Rank']),
+            website: normalizeUrl(clean(row['Website'])),
+            interests: parseInterests(row[interestKey]),
+            office: clean(row['Office (building and room #)']),
+            yearStarted: clean(row['Year started at GMU']),
+            phdFrom: clean(row['PhD from']),
+        };
+    });
 
     // Map each interest string to the list of faculty who share it
     const interestIndex = new Map();
