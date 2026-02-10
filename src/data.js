@@ -19,7 +19,7 @@ export async function loadFaculty() {
     const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
 
     const faculty = data.map(row => {
-        // Handle variable header name for Research Interests (e.g. includes examples)
+        // Handle variable header name for Research Interests
         const interestKey = Object.keys(row).find(k => k.toLowerCase().startsWith('research interests')) || 'Research interests';
 
         return {

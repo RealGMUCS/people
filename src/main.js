@@ -103,13 +103,13 @@ function renderCard(f) {
     const details = [];
     if (f.rank && f.track) details.push(detailRow('Position', `${f.rank} · ${f.track}`));
     if (f.office) details.push(detailRow('Office', f.office));
-    if (f.email) details.push(detailRow('Email', `<a href="mailto:${f.email}" target="_blank">${f.email}</a>`));
+    if (f.email) details.push(detailRow('Email', `<button class="copy-email-inline" data-email="${f.email}">${f.email}</button>`));
     if (f.phdFrom) details.push(detailRow('PhD', f.phdFrom));
     if (f.yearStarted) details.push(detailRow('At GMU since', f.yearStarted));
 
     const links = [];
     if (f.website) links.push(`<a class="card-link" href="${f.website}" target="_blank" rel="noopener">Website ↗</a>`);
-    if (f.email) links.push(`<a class="card-link" href="mailto:${f.email}" target="_blank">Email</a>`);
+    if (f.email) links.push(`<button class="card-link copy-email-btn" data-email="${f.email}">Email</button>`);
 
     return `
     <div class="card">
@@ -148,6 +148,23 @@ document.addEventListener('click', e => {
     document.getElementById('track-filter').value = 'all';
     document.getElementById('rank-filter').value = 'all';
     render();
+});
+
+// Copy email to clipboard
+document.addEventListener('click', e => {
+    const emailBtn = e.target.closest('.copy-email-btn, .copy-email-inline');
+    if (!emailBtn) return;
+    e.preventDefault();
+    const email = emailBtn.dataset.email;
+    navigator.clipboard.writeText(email).then(() => {
+        const original = emailBtn.textContent;
+        emailBtn.textContent = '✓ Copied!';
+        emailBtn.classList.add('copied');
+        setTimeout(() => {
+            emailBtn.textContent = original;
+            emailBtn.classList.remove('copied');
+        }, 1500);
+    });
 });
 
 // Theme Toggle

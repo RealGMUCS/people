@@ -285,7 +285,34 @@ header p {
     margin-bottom: 1rem;
 }
 
-.card-link {
+button.card-link {
+    background: var(--hover-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.3rem 0.9rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    transition: all 0.25s ease;
+}
+
+button.card-link:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+button.card-link.copied {
+    background: #22c55e;
+    color: #fff;
+    border-color: #22c55e;
+}
+
+.card-link:not(button) {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.85rem;
@@ -296,8 +323,28 @@ header p {
     transition: border-color 0.2s;
 }
 
-.card-link:hover {
+.card-link:not(button):hover {
     border-color: var(--text-primary);
+}
+
+.copy-email-inline {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.copy-email-inline:hover {
+    text-decoration: underline;
+}
+
+.copy-email-inline.copied {
+    color: #22c55e;
 }
 
 /* Faculty Detail Rows */
