@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMU CS Faculty Directory</title>
+    <meta name="description"
+        content="Searchable directory of George Mason University Computer Science faculty, research interests, and achievements." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <!-- Theme toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', savedTheme || (systemDark ? 'dark' : 'light'));
+    </script>
+
+    <div id="app">
+        <header>
+            <h1>CS Faculty</h1>
+            <p>George Mason University — Department of Computer Science</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="search" id="main-search"
+                    placeholder="Search by name, area, rank… (try #associate or #tenure)" autofocus>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="track-filter">Track</label>
+                    <select id="track-filter">
+                        <option value="all" selected>All</option>
+                        <option value="Tenure-Track">Tenure-Track</option>
+                        <option value="Teaching">Teaching</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="rank-filter">Rank</label>
+                    <select id="rank-filter">
+                        <option value="all" selected>All</option>
+                        <option value="Professor">Professor</option>
+                        <option value="Associate Professor">Associate</option>
+                        <option value="Assistant Professor">Assistant</option>
+                        <option value="Instructor">Instructor</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active interest filter banner -->
+        <div id="active-filter" class="active-filter-banner" style="display:none;">
+            <span id="active-filter-text"></span>
+            <button id="clear-filter" aria-label="Clear filter">✕</button>
+        </div>
+
+        <div id="faculty-count" class="faculty-count"></div>
+
+        <main>
+            <section id="faculty-results" class="results-grid"></section>
+        </main>
+    </div>
+
+    <footer>
+        <a href="https://cs.gmu.edu/people/faculty/" target="_blank">cs.gmu.edu</a>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
