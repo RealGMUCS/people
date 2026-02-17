@@ -19,15 +19,21 @@ export async function loadFaculty() {
     const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
 
     const faculty = data.map(row => {
-        // Handle variable header name for Research Interests
+        // Handle variable header names (they include examples in parentheses)
         const interestKey = Object.keys(row).find(k => k.toLowerCase().startsWith('research interests')) || 'Research interests';
+        const rankKey = Object.keys(row).find(k => k.toLowerCase().startsWith('rank')) || 'Rank';
+
+        const rawTrack = clean(row['Tenure-Track/Teaching/Staff']);
+        const rawRank = clean(row[rankKey]);
 
         return {
             firstName: clean(row['First Name']),
             lastName: clean(row['Last Name']),
             email: clean(row['gmu email/userid']),
-            track: clean(row['Tenure-Track/Teaching/Staff']),
-            rank: clean(row['Rank']),
+            track: rawTrack,
+            rank: rawRank,
+            type: deriveType(rawTrack, rawRank),
+            category: deriveCategory(rawRank),
             website: normalizeUrl(clean(row['Website'])),
             interests: parseInterests(row[interestKey]),
             office: clean(row['Office (building and room #)']),
@@ -48,6 +54,30 @@ export async function loadFaculty() {
     return { faculty, interestIndex };
 }
 
+function deriveType(track, rank) {
+    if (!track) return null;
+    const t = track.toLowerCase();
+    if (t === 'emeritus') return 'Emeritus';
+    if (t === 'affiliate') return 'Affiliate';
+    if (t === 'staff') return 'Staff';
+    if (t === 'teaching') return 'Teaching';
+    if (t === 'tenured') return 'Tenured';
+    if (t === 'tenure-track') {
+        if (rank && rank.toLowerCase() === 'assistant professor') return 'Tenure-Track';
+        return 'Tenured';
+    }
+    return track; // fallback
+}
+
+function deriveCategory(rank) {
+    if (!rank) return null;
+    const r = rank.toLowerCase();
+    if (r === 'professor') return 'Full';
+    if (r === 'associate professor') return 'Associate';
+    if (r === 'assistant professor') return 'Assistant';
+    return rank; // Instructor, Senior Instructor, Professor of Practice — keep as-is
+}
+
 function clean(val) {
     if (!val) return null;
     const trimmed = val.trim();
@@ -63,3 +93,4 @@ function parseInterests(raw) {
     if (!raw || raw.trim().toLowerCase() === 'null') return [];
     return raw.split(',').map(s => s.trim()).filter(Boolean);
 }
+

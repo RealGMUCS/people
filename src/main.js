@@ -52,8 +52,8 @@ function getFiltered() {
     }
 
     // Dropdown filters
-    if (track !== 'all') list = list.filter(f => f.track === track);
-    if (rank !== 'all') list = list.filter(f => f.rank && f.rank.includes(rank));
+    if (track !== 'all') list = list.filter(f => f.type === track);
+    if (rank !== 'all') list = list.filter(f => f.category === rank);
 
     // Search query
     if (query) {
@@ -61,10 +61,10 @@ function getFiltered() {
         if (query.startsWith('#')) {
             const tag = query.slice(1);
             list = list.filter(f => {
-                const rankMatch = f.rank && f.rank.toLowerCase().includes(tag);
-                const trackMatch = f.track && f.track.toLowerCase().includes(tag);
+                const typeMatch = f.type && f.type.toLowerCase().includes(tag);
+                const categoryMatch = f.category && f.category.toLowerCase().includes(tag);
                 const interestMatch = f.interests.some(i => i.toLowerCase().includes(tag));
-                return rankMatch || trackMatch || interestMatch;
+                return typeMatch || categoryMatch || interestMatch;
             });
         } else {
             list = list.filter(f => searchMatch(f, query));
@@ -77,7 +77,7 @@ function getFiltered() {
 function searchMatch(f, q) {
     const fields = [
         f.firstName, f.lastName, `${f.firstName} ${f.lastName}`,
-        f.email, f.rank, f.track, f.office, f.phdFrom,
+        f.email, f.type, f.category, f.office, f.phdFrom,
         ...f.interests
     ];
     return fields.some(v => v && v.toLowerCase().includes(q));
@@ -101,7 +101,7 @@ function renderCard(f) {
     ).join('');
 
     const details = [];
-    if (f.rank && f.track) details.push(detailRow('Position', `${f.rank} · ${f.track}`));
+    if (f.category && f.type) details.push(detailRow('Position', `${f.category} · ${f.type}`));
     if (f.office) details.push(detailRow('Office', f.office));
     if (f.email) details.push(detailRow('Email', `<button class="copy-email-inline" data-email="${f.email}">${f.email}</button>`));
     if (f.phdFrom) details.push(detailRow('PhD', f.phdFrom));
@@ -117,7 +117,7 @@ function renderCard(f) {
         <h2>${fullName}</h2>
         <span class="toggle-icon">▼</span>
       </div>
-      <div class="card-subtitle">${f.rank || ''}${f.track ? ` · ${f.track}` : ''}</div>
+      <div class="card-subtitle">${f.category || ''}${f.type ? ` · ${f.type}` : ''}</div>
       <div class="card-content">
         <div class="faculty-details">${details.join('')}</div>
         ${links.length ? `<div class="card-links">${links.join('')}</div>` : ''}

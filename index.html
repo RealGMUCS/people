@@ -36,27 +36,30 @@
         <div class="search-section">
             <div class="search-container">
                 <input type="search" id="main-search"
-                    placeholder="Search by name, area, rank… (try #associate or #tenure)" autofocus>
+                    placeholder="Search by name, area, category… (try #associate or #tenure)" autofocus>
             </div>
 
             <div class="filters">
                 <div class="filter-group">
-                    <label for="track-filter">Track</label>
+                    <label for="track-filter">Type</label>
                     <select id="track-filter">
                         <option value="all" selected>All</option>
                         <option value="Tenure-Track">Tenure-Track</option>
+                        <option value="Tenured">Tenured</option>
                         <option value="Teaching">Teaching</option>
+                        <option value="Emeritus">Emeritus</option>
+                        <option value="Affiliate">Affiliate</option>
+                        <option value="Staff">Staff</option>
                     </select>
                 </div>
 
                 <div class="filter-group">
-                    <label for="rank-filter">Rank</label>
+                    <label for="rank-filter">Category</label>
                     <select id="rank-filter">
                         <option value="all" selected>All</option>
-                        <option value="Professor">Professor</option>
-                        <option value="Associate Professor">Associate</option>
-                        <option value="Assistant Professor">Assistant</option>
-                        <option value="Instructor">Instructor</option>
+                        <option value="Full">Full</option>
+                        <option value="Associate">Associate</option>
+                        <option value="Assistant">Assistant</option>
                     </select>
                 </div>
             </div>
