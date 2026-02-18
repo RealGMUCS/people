@@ -14,7 +14,13 @@ async function init() {
     setupFilters();
     setupThemeToggle();
     setupInterestBanner();
+    restoreFromUrl();
     render();
+
+    window.addEventListener('popstate', () => {
+        restoreFromUrl();
+        render();
+    });
 }
 
 // Search & Filters
@@ -83,6 +89,35 @@ function searchMatch(f, q) {
     return fields.some(v => v && v.toLowerCase().includes(q));
 }
 
+function updateUrl() {
+    const params = new URLSearchParams();
+    const q = document.getElementById('main-search').value.trim();
+    const type = document.getElementById('track-filter').value;
+    const cat = document.getElementById('rank-filter').value;
+
+    if (q) params.set('q', q);
+    if (type !== 'all') params.set('type', type);
+    if (cat !== 'all') params.set('cat', cat);
+    if (activeInterest) params.set('interest', activeInterest);
+
+    const qs = params.toString();
+    const url = window.location.pathname + (qs ? '?' + qs : '');
+    history.replaceState(null, '', url);
+}
+
+function restoreFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has('q')) document.getElementById('main-search').value = params.get('q');
+    if (params.has('type')) document.getElementById('track-filter').value = params.get('type');
+    if (params.has('cat')) document.getElementById('rank-filter').value = params.get('cat');
+    if (params.has('interest')) {
+        activeInterest = params.get('interest');
+        document.getElementById('active-filter').style.display = 'flex';
+        document.getElementById('active-filter-text').textContent = `Research: ${activeInterest}`;
+    }
+}
+
 // Rendering
 
 function render() {
@@ -90,8 +125,9 @@ function render() {
     const grid = document.getElementById('faculty-results');
     const countEl = document.getElementById('faculty-count');
 
-    countEl.textContent = `${filtered.length} faculty`;
+    countEl.textContent = `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
+    updateUrl();
 }
 
 function renderCard(f) {
@@ -117,7 +153,7 @@ function renderCard(f) {
         <h2>${fullName}</h2>
         <span class="toggle-icon">▼</span>
       </div>
-      <div class="card-subtitle">${f.category || ''}${f.type ? ` · ${f.type}` : ''}</div>
+      ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
       <div class="card-content">
         <div class="faculty-details">${details.join('')}</div>
         ${links.length ? `<div class="card-links">${links.join('')}</div>` : ''}

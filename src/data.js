@@ -22,6 +22,7 @@ export async function loadFaculty() {
         // Handle variable header names (they include examples in parentheses)
         const interestKey = Object.keys(row).find(k => k.toLowerCase().startsWith('research interests')) || 'Research interests';
         const rankKey = Object.keys(row).find(k => k.toLowerCase().startsWith('rank')) || 'Rank';
+        const roleKey = Object.keys(row).find(k => k.toLowerCase().startsWith('dept role')) || 'Dept Role';
 
         const rawTrack = clean(row['Tenure-Track/Teaching/Staff']);
         const rawRank = clean(row[rankKey]);
@@ -34,13 +35,14 @@ export async function loadFaculty() {
             rank: rawRank,
             type: deriveType(rawTrack, rawRank),
             category: deriveCategory(rawRank),
+            role: clean(row[roleKey]),
             website: normalizeUrl(clean(row['Website'])),
             interests: parseInterests(row[interestKey]),
             office: clean(row['Office (building and room #)']),
             yearStarted: clean(row['Year started at GMU']),
             phdFrom: clean(row['PhD from']),
         };
-    });
+    }).filter(f => f.firstName || f.lastName);
 
     // Map each interest string to the list of faculty who share it
     const interestIndex = new Map();
