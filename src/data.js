@@ -93,6 +93,10 @@ function normalizeUrl(url) {
 
 function parseInterests(raw) {
     if (!raw || raw.trim().toLowerCase() === 'null') return [];
-    return raw.split(',').map(s => s.trim()).filter(Boolean);
+    return raw.split(',').map(s => s.trim()).filter(Boolean).map(titleCase);
+}
+
+function titleCase(str) {
+    return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
 }
 
