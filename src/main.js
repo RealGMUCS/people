@@ -139,13 +139,10 @@ function renderCard(f) {
     const details = [];
     if (f.category && f.type) details.push(detailRow('Position', `${f.category} · ${f.type}`));
     if (f.office) details.push(detailRow('Office', f.office));
-    if (f.email) details.push(detailRow('Email', `<button class="copy-email-inline" data-email="${f.email}">${f.email}</button>`));
+    if (f.email) details.push(detailRow('Email', `<button class="copy-email-inline" data-email="${f.email}">${f.email} 📋</button>`));
+    if (f.website) details.push(detailRow('Website', `<a href="${f.website}" target="_blank" rel="noopener">${f.website.replace(/^https?:\/\//, '')} ↗</a>`));
     if (f.phdFrom) details.push(detailRow('PhD', f.phdFrom));
     if (f.yearStarted) details.push(detailRow('At GMU since', f.yearStarted));
-
-    const links = [];
-    if (f.website) links.push(`<a class="card-link" href="${f.website}" target="_blank" rel="noopener">Website ↗</a>`);
-    if (f.email) links.push(`<button class="card-link copy-email-btn" data-email="${f.email}">Email</button>`);
 
     return `
     <div class="card">
@@ -156,7 +153,6 @@ function renderCard(f) {
       ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
       <div class="card-content">
         <div class="faculty-details">${details.join('')}</div>
-        ${links.length ? `<div class="card-links">${links.join('')}</div>` : ''}
         ${interestTags ? `<div class="interest-tags">${interestTags}</div>` : ''}
       </div>
     </div>
