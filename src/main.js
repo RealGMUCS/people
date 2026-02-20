@@ -144,6 +144,13 @@ function renderCard(f) {
     if (f.phdFrom) details.push(detailRow('PhD', f.phdFrom));
     if (f.yearStarted) details.push(detailRow('At GMU since', f.yearStarted));
 
+    const achievementsList = f.achievements.length
+        ? `<div class="achievements-section">
+             <h3 class="achievements-heading">Achievements</h3>
+             <ul class="achievements-list">${f.achievements.map(a => `<li>${a}</li>`).join('')}</ul>
+           </div>`
+        : '';
+
     return `
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
@@ -153,6 +160,7 @@ function renderCard(f) {
       ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
       <div class="card-content">
         <div class="faculty-details">${details.join('')}</div>
+        ${achievementsList}
         ${interestTags ? `<div class="interest-tags">${interestTags}</div>` : ''}
       </div>
     </div>

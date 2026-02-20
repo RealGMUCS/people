@@ -41,6 +41,7 @@ export async function loadFaculty() {
             office: clean(row['Office (building and room #)']),
             yearStarted: clean(row['Year started at GMU']),
             phdFrom: clean(row['PhD from']),
+            achievements: parseList(row['Achievements']),
         };
     }).filter(f => f.firstName || f.lastName);
 
@@ -98,5 +99,10 @@ function parseInterests(raw) {
 
 function titleCase(str) {
     return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
+}
+
+function parseList(raw) {
+    if (!raw || raw.trim().toLowerCase() === 'null') return [];
+    return raw.split(',').map(s => s.trim()).filter(Boolean);
 }
 
