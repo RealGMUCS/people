@@ -31,8 +31,16 @@ function setupSearch() {
 }
 
 function setupFilters() {
-    document.getElementById('track-filter').addEventListener('change', () => render());
-    document.getElementById('rank-filter').addEventListener('change', () => render());
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            render();
+        });
+    });
+}
+
+function getActiveFilters(containerId) {
+    return Array.from(document.querySelectorAll(`#${containerId} .filter-btn.active`)).map(b => b.dataset.value);
 }
 
 function setupInterestBanner() {
@@ -47,8 +55,8 @@ function setupInterestBanner() {
 // Filter faculty based on current search + dropdowns + active interest
 function getFiltered() {
     const query = document.getElementById('main-search').value.trim().toLowerCase();
-    const track = document.getElementById('track-filter').value;
-    const rank = document.getElementById('rank-filter').value;
+    const activeTypes = getActiveFilters('type-buttons');
+    const activeCategories = getActiveFilters('category-buttons');
 
     let list = allFaculty;
 
@@ -57,9 +65,14 @@ function getFiltered() {
         list = interestIndex.get(activeInterest) || [];
     }
 
-    // Dropdown filters
-    if (track !== 'all') list = list.filter(f => f.type === track);
-    if (rank !== 'all') list = list.filter(f => f.category === rank);
+    // Button filters
+    list = list.filter(f => {
+        const typeMatch = activeTypes.length === 0 || activeTypes.includes(f.type);
+
+        const hasCategory = f.category && ['Full', 'Associate', 'Assistant'].includes(f.category);
+        const categoryMatch = !hasCategory || activeCategories.length === 0 || activeCategories.includes(f.category);
+        return typeMatch && categoryMatch;
+    });
 
     // Search query
     if (query) {
@@ -92,12 +105,16 @@ function searchMatch(f, q) {
 function updateUrl() {
     const params = new URLSearchParams();
     const q = document.getElementById('main-search').value.trim();
-    const type = document.getElementById('track-filter').value;
-    const cat = document.getElementById('rank-filter').value;
+    const activeTypes = getActiveFilters('type-buttons');
+    const activeCategories = getActiveFilters('category-buttons');
+    const allTypes = Array.from(document.querySelectorAll('#type-buttons .filter-btn')).map(b => b.dataset.value);
+    const allCategories = Array.from(document.querySelectorAll('#category-buttons .filter-btn')).map(b => b.dataset.value);
 
     if (q) params.set('q', q);
-    if (type !== 'all') params.set('type', type);
-    if (cat !== 'all') params.set('cat', cat);
+    if (activeTypes.length > 0 && activeTypes.length < allTypes.length) params.set('type', activeTypes.join(','));
+    if (activeTypes.length === 0) params.set('type', 'none');
+    if (activeCategories.length > 0 && activeCategories.length < allCategories.length) params.set('cat', activeCategories.join(','));
+    if (activeCategories.length === 0) params.set('cat', 'none');
     if (activeInterest) params.set('interest', activeInterest);
 
     const qs = params.toString();
@@ -109,8 +126,18 @@ function restoreFromUrl() {
     const params = new URLSearchParams(window.location.search);
 
     if (params.has('q')) document.getElementById('main-search').value = params.get('q');
-    if (params.has('type')) document.getElementById('track-filter').value = params.get('type');
-    if (params.has('cat')) document.getElementById('rank-filter').value = params.get('cat');
+    if (params.has('type')) {
+        const types = params.get('type') === 'none' ? [] : params.get('type').split(',');
+        document.querySelectorAll('#type-buttons .filter-btn').forEach(btn => {
+            btn.classList.toggle('active', types.includes(btn.dataset.value));
+        });
+    }
+    if (params.has('cat')) {
+        const cats = params.get('cat') === 'none' ? [] : params.get('cat').split(',');
+        document.querySelectorAll('#category-buttons .filter-btn').forEach(btn => {
+            btn.classList.toggle('active', cats.includes(btn.dataset.value));
+        });
+    }
     if (params.has('interest')) {
         activeInterest = params.get('interest');
         document.getElementById('active-filter').style.display = 'flex';
@@ -162,8 +189,8 @@ function renderCard(f) {
       ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
       <div class="card-content">
         <div class="faculty-details">${details.join('')}</div>
-        ${achievementsList}
         ${interestTags ? `<div class="interest-tags">${interestTags}</div>` : ''}
+        ${achievementsList}
       </div>
     </div>
   `;

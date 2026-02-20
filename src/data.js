@@ -59,13 +59,13 @@ export async function loadFaculty() {
 
 function deriveType(track, rank) {
     if (!track) return null;
-    const t = track.toLowerCase();
-    if (t === 'emeritus') return 'Emeritus';
+    const t = track.toLowerCase().trim();
+    if (t === 'emeritus' || t === 'retired') return 'Emeritus';
     if (t === 'affiliate') return 'Affiliate';
     if (t === 'staff') return 'Staff';
     if (t === 'teaching') return 'Teaching';
     if (t === 'tenured') return 'Tenured';
-    if (t === 'tenure-track') {
+    if (t === 'tenure-track' || t === 'tenured-track') {
         if (rank && rank.toLowerCase() === 'assistant professor') return 'Tenure-Track';
         return 'Tenured';
     }
