@@ -41,26 +41,24 @@
 
             <div class="filters">
                 <div class="filter-group">
-                    <label for="track-filter">Type</label>
-                    <select id="track-filter">
-                        <option value="all" selected>All</option>
-                        <option value="Tenure-Track">Tenure-Track</option>
-                        <option value="Tenured">Tenured</option>
-                        <option value="Teaching">Teaching</option>
-                        <option value="Emeritus">Emeritus</option>
-                        <option value="Affiliate">Affiliate</option>
-                        <option value="Staff">Staff</option>
-                    </select>
+                    <label>Type</label>
+                    <div class="filter-buttons" id="type-buttons">
+                        <button class="filter-btn active" data-value="Tenure-Track">Tenure-Track</button>
+                        <button class="filter-btn active" data-value="Tenured">Tenured</button>
+                        <button class="filter-btn active" data-value="Teaching">Teaching</button>
+                        <button class="filter-btn active" data-value="Staff">Staff</button>
+                        <button class="filter-btn" data-value="Emeritus">Emeritus</button>
+                        <button class="filter-btn" data-value="Affiliate">Affiliate</button>
+                    </div>
                 </div>
 
                 <div class="filter-group">
-                    <label for="rank-filter">Category</label>
-                    <select id="rank-filter">
-                        <option value="all" selected>All</option>
-                        <option value="Full">Full</option>
-                        <option value="Associate">Associate</option>
-                        <option value="Assistant">Assistant</option>
-                    </select>
+                    <label>Category</label>
+                    <div class="filter-buttons" id="category-buttons">
+                        <button class="filter-btn active" data-value="Full">Full</button>
+                        <button class="filter-btn active" data-value="Associate">Associate</button>
+                        <button class="filter-btn active" data-value="Assistant">Assistant</button>
+                    </div>
                 </div>
             </div>
         </div>
