@@ -145,17 +145,19 @@ function renderCard(f) {
     if (f.yearStarted) details.push(detailRow('At GMU since', f.yearStarted));
 
     const achievementsList = f.achievements.length
-        ? `<div class="achievements-section">
-             <h3 class="achievements-heading">Achievements</h3>
+        ? `<div class="achievements-section collapsed">
+             <div class="achievements-header" onclick="toggleAchievements(this)">
+               <h3 class="achievements-heading">Achievements</h3>
+               <span class="achievements-toggle">▶</span>
+             </div>
              <ul class="achievements-list">${f.achievements.map(a => `<li>${a}</li>`).join('')}</ul>
            </div>`
         : '';
 
     return `
     <div class="card">
-      <div class="card-header" onclick="toggleCard(this)">
+      <div class="card-header">
         <h2>${fullName}</h2>
-        <span class="toggle-icon">▼</span>
       </div>
       ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
       <div class="card-content">
@@ -171,9 +173,9 @@ function detailRow(label, value) {
     return `<div class="faculty-detail"><span class="detail-label">${label}</span><span class="detail-value">${value}</span></div>`;
 }
 
-// Card expand/collapse
-window.toggleCard = function (header) {
-    header.closest('.card').classList.toggle('collapsed');
+// Achievements expand/collapse
+window.toggleAchievements = function (header) {
+    header.closest('.achievements-section').classList.toggle('collapsed');
 };
 
 // Click an interest tag to filter
