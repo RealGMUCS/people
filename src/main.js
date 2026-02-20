@@ -214,8 +214,7 @@ document.addEventListener('click', e => {
     document.getElementById('active-filter').style.display = 'flex';
     document.getElementById('active-filter-text').textContent = `Research: ${interest}`;
     document.getElementById('main-search').value = '';
-    document.getElementById('track-filter').value = 'all';
-    document.getElementById('rank-filter').value = 'all';
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.add('active'));
     render();
 });
 
