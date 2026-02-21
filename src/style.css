@@ -253,8 +253,21 @@ header p {
 
 .card-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+}
+
+.faculty-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.card-header-text {
+    flex: 1;
+    min-width: 0;
 }
 
 .card-content {

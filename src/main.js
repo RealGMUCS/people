@@ -184,9 +184,12 @@ function renderCard(f) {
     return `
     <div class="card">
       <div class="card-header">
-        <h2>${fullName}</h2>
+        ${f.picture ? `<img class="faculty-photo" src="${f.picture}" alt="${fullName}" loading="lazy">` : ''}
+        <div class="card-header-text">
+          <h2>${fullName}</h2>
+          ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
+        </div>
       </div>
-      ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
       <div class="card-content">
         <div class="faculty-details">${details.join('')}</div>
         ${interestTags ? `<div class="interest-tags">${interestTags}</div>` : ''}

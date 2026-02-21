@@ -43,6 +43,7 @@ export async function loadFaculty() {
             phdFrom: clean(row['PhD from']),
             postdocFrom: clean(row['Postdoc from']),
             achievements: parseList(row['Achievements']),
+            picture: normalizeUrl(clean(row['Picture'])),
         };
     }).filter(f => f.firstName || f.lastName);
 
