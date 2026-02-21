@@ -41,6 +41,7 @@ export async function loadFaculty() {
             office: clean(row['Office (building and room #)']),
             yearStarted: clean(row['Year started at GMU']),
             phdFrom: clean(row['PhD from']),
+            postdocFrom: clean(row['Postdoc from']),
             achievements: parseList(row['Achievements']),
         };
     }).filter(f => f.firstName || f.lastName);

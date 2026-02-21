@@ -90,7 +90,7 @@ function getFiltered() {
         }
     }
 
-    return list;
+    return list.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || ''));
 }
 
 function searchMatch(f, q) {
@@ -165,9 +165,10 @@ function renderCard(f) {
     const details = [];
     if (f.category && f.type) details.push(detailRow('Position', `${f.category} · ${f.type}`));
     if (f.office) details.push(detailRow('Office', f.office));
-    if (f.email) details.push(detailRow('Email', `<button class="copy-email-inline" data-email="${f.email}">${f.email} 📋</button>`));
+    if (f.email) details.push(detailRow('Email', f.email));
     if (f.website) details.push(detailRow('Website', `<a href="${f.website}" target="_blank" rel="noopener">${f.website.replace(/^https?:\/\//, '')} ↗</a>`));
     if (f.phdFrom) details.push(detailRow('PhD', f.phdFrom));
+    if (f.postdocFrom) details.push(detailRow('Postdoc', f.postdocFrom));
     if (f.yearStarted) details.push(detailRow('At GMU since', f.yearStarted));
 
     const achievementsList = f.achievements.length
@@ -217,19 +218,7 @@ document.addEventListener('click', e => {
     render();
 });
 
-// Copy email to clipboard
-document.addEventListener('click', e => {
-    const emailBtn = e.target.closest('.copy-email-btn, .copy-email-inline');
-    if (!emailBtn) return;
-    e.preventDefault();
-    const email = emailBtn.dataset.email;
-    navigator.clipboard.writeText(email).then(() => {
-        emailBtn.classList.add('copied');
-        setTimeout(() => {
-            emailBtn.classList.remove('copied');
-        }, 1500);
-    });
-});
+
 
 // Theme Toggle
 
