@@ -224,11 +224,8 @@ document.addEventListener('click', e => {
     e.preventDefault();
     const email = emailBtn.dataset.email;
     navigator.clipboard.writeText(email).then(() => {
-        const original = emailBtn.textContent;
-        emailBtn.textContent = '✓ Copied!';
         emailBtn.classList.add('copied');
         setTimeout(() => {
-            emailBtn.textContent = original;
             emailBtn.classList.remove('copied');
         }, 1500);
     });
