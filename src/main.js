@@ -95,11 +95,10 @@ function getFiltered() {
 
 function searchMatch(f, q) {
     const fields = [
-        f.firstName, f.lastName, `${f.firstName} ${f.lastName}`,
-        f.email, f.type, f.category, f.office, f.phdFrom,
-        ...f.interests
+        `${f.firstName} ${f.lastName}`,
+        ...Object.values(f).flat()
     ];
-    return fields.some(v => v && v.toLowerCase().includes(q));
+    return fields.some(v => v && String(v).toLowerCase().includes(q));
 }
 
 function updateUrl() {
