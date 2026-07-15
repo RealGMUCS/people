@@ -99,8 +99,11 @@ function parseInterests(raw) {
     return raw.split(',').map(s => s.trim().toUpperCase()).filter(Boolean);
 }
 
+// Split a list cell: semicolons take precedence so items may contain commas
+// (e.g. "Best Paper, ICSE 2020; NSF CAREER 2023")
 function parseList(raw) {
     if (!raw || raw.trim().toLowerCase() === 'null') return [];
-    return raw.split(',').map(s => s.trim()).filter(Boolean);
+    const sep = raw.includes(';') ? ';' : ',';
+    return raw.split(sep).map(s => s.trim()).filter(Boolean);
 }
 

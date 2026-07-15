@@ -18,6 +18,10 @@ npm install
 npm run dev
 ```
 
+```
+npm run build && npm run preview
+```
+
 ## Updating Faculty Data
 
 **Data Source:** The directory reads live from [this Google Sheet](https://docs.google.com/spreadsheets/d/1Cei8Dqc_i1MXVBEKy_H6LIG5R6HmFEEwfrk9WmlruXM/edit?usp=sharing).
