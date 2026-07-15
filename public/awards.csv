@@ -43,6 +43,7 @@ Andrian Marcus,"Most Influential Paper, Impact Paper, and Test of Time Paper Awa
 David Rosenblum,"Most Influential Paper, Impact Paper, and Test of Time Paper Awards","Impact Paper Award, SIGSOFT - *A design framework for internet-scale event observation and notification*, SIGSOFT 1997",2008,yes
 David Rosenblum,"Most Influential Paper, Impact Paper, and Test of Time Paper Awards","Most Influential Paper Award, ICSE - *Towards a method of programming with assertions*, ICSE 1992",2002,yes
 Giuseppe Ateniese,Other Research Awards,IEEE CISTC Technical Recognition Award,2018,
+Ziyu Yao, NSF CAREER Awards,"""Towards Scalable and Actionable Interpretability of Language Models for Code Generation""",2026,
 Antonios Anastasopoulos,NSF CAREER Awards,"""Leveraging Grammar Books to Develop Language Technologies for Data-Scarce Languages""",2025,
 Evgenios Kornaropoulos,NSF CAREER Awards,"""Encrypted Systems with Fine-Grained Leakage""",2025,
 Wing Lam,NSF CAREER Awards,"""Enhanced Reliability and Efficiency of Software Regression Testing in the Presence of Flaky Tests""",2024,
@@ -51,14 +52,14 @@ ThanhVu (Vu) Nguyen,NSF CAREER Awards,"""NeuralSAT: A Constraint-Solving Framewo
 Foteini Baldimtsi,NSF CAREER Awards,"""Privacy Preserving Transactions with Accountability Extensions""",2022,
 Qiang Zeng,NSF CAREER Awards,"""Towards Secure and Usable IoT Authentication Under Constraints,"" (Received at University of South Carolina and Transferred to GMU)",2022,
 Parth Pathak,NSF CAREER Awards,"""Unifying Millimeter-wave Networking and Sensing using Commodity Backscatter""",2021,
-Yue Cheng,NSF CAREER Awards,"*\* - ""Harnessing Serverless Functions to Build Highly Elastic Cloud Storage Infrastructure,"" 2021",2021,yes
+Yue Cheng,NSF CAREER Awards,"*""Harnessing Serverless Functions to Build Highly Elastic Cloud Storage Infrastructure,"" 2021",2021,yes
 Craig Yu,NSF CAREER Awards,"""Performance-Guided Synthesis of Virtual Environments for Personalized Training""",2020,
 Dov Gordon,NSF CAREER Awards,"""Trading Security for Efficiency in Secure Computation""",2020,
 Jonathan Bell,NSF CAREER Awards,"* - ""Amplifying Developer-Written Tests for Code Injection Vulnerability Detection,"" 2019",2019,yes
 Thomas LaToza,NSF CAREER Awards,"""Debugging Mental Models""",2019,
 Yotam Gingold,NSF CAREER Awards,"""Direct Manipulation of Numerical Optimization for Structured Geometry Creation""",2015,
-Huzefa Rangwala,NSF CAREER Awards,"\* - ""Annotating the Microbiome Using Machine Learning Methods,"" 2013",2013,yes
-Sam Malek,NSF CAREER Awards,"*\* - ""A Mining‐Based Approach for Consistent and Timely Adaptation of Component‐Based Software,"" 2013",2013,yes
+Huzefa Rangwala,NSF CAREER Awards,"""Annotating the Microbiome Using Machine Learning Methods,"" 2013",2013,yes
+Sam Malek,NSF CAREER Awards,"*""A Mining‐Based Approach for Consistent and Timely Adaptation of Component‐Based Software,"" 2013",2013,yes
 Amarda Shehu,NSF CAREER Awards,"""Probabilistic Methods for Addressing Complexity and Constraints in Protein Systems""",2012,
 Andrian Marcus,NSF CAREER Awards,"""Management of Unstructured Information During Software Evolution""",2009,
 Xinyuan (Frank) Wang,NSF CAREER Awards,"""Malware Immunization and Forensics Based on Another Sense of Self""",2009,
@@ -83,6 +84,7 @@ Keren Zhou,Dissertation Awards,"Doctoral Dissertation Award, ACM SIGHPC",2023,
 Evgenios Kornaropoulos,Dissertation Awards,"Miretta Flytzani-Stephanopoulos Doctoral Thesis Achievement Award, The Circle of Hellenic Academics in Boston",2022,
 Lishan Yang,Dissertation Awards,"Kaivalya Dixit Distinguished Dissertation Award, Standard Performance Evaluation Corporation (SPEC)",2022,
 Wing Lam,Dissertation Awards,"Outstanding Dissertation Award, ACM SIGSOFT",2022,
+Ziyu Yao,Industrial Awards,"Amazon Research Award (Trainium)",2026,
 ThanhVu (Vu) Nguyen,Industrial Awards,"Amazon Research Award (Trainium, Reliable AI)",2026,
 ThanhVu (Vu) Nguyen,Industrial Awards,NVIDIA Academic Grant Award,2025,
 Mingrui Liu,Industrial Awards,Cisco Research Award,2024,
@@ -91,10 +93,10 @@ Bo Han,Industrial Awards,Facebook Research Award (Security),2022,
 Brittany Johnson-Matthew,Industrial Awards,Google Research Scholar Award (Software Engineer),2022,
 Evgenios Kornaropoulos,Industrial Awards,Facebook Research Award (Security),2022,
 Jana Košecká,Industrial Awards,Amazon Research Award (Fairness in AI),2022,
-Kevin Moran,Industrial Awards,"\* - Cisco Advanced Security Research Group Award, 2022",2022,yes
+Kevin Moran,Industrial Awards,"Cisco Advanced Security Research Group Award, 2022",2022,yes
 Songqing Chen,Industrial Awards,Facebook Research Award (Security),2022,
 Foteini Baldimtsi,Industrial Awards,Google Faculty Research Award,2021,
-Kevin Moran,Industrial Awards,"\* - Cisco Advanced Security Research Group Award, 2021",2021,yes
+Kevin Moran,Industrial Awards,"Cisco Advanced Security Research Group Award, 2021",2021,yes
 Antonios Anastasopoulos,Industrial Awards,Google Award for Inclusion,2020,
 Foteini Baldimtsi,Industrial Awards,Facebook Faculty Research Award (Privacy),2020,
 Craig Yu,Industrial Awards,Microsoft Azure Award,2017,
