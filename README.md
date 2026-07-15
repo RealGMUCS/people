@@ -18,6 +18,7 @@ npm install
 npm run dev
 ```
 
+### Local preview
 ```
 npm run build && npm run preview
 ```
