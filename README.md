@@ -8,6 +8,7 @@ Data sourced from [cs.gmu.edu](https://cs.gmu.edu/people/faculty/).
 
 - **Search** by name, email, research area, PhD school, or office
 - **#tag search** — type `#associate`, `#tenure`, `#AI`, etc.
+- **`#awards`** — the faculty awards page, grouped by category (Fellows, NSF CAREER, …)
 - **Filter** by track (Tenure-Track / Teaching) and rank
 - **Click a research interest** to see all faculty in that area
 
@@ -23,15 +24,15 @@ npm run dev
 npm run build && npm run preview
 ```
 
-## Updating Faculty Data
+## Updating the Data
 
-**Data Source:** [`public/faculty.csv`](public/faculty.csv) in this repo is the database.
+The database is two CSVs in this repo. Edit either directly on GitHub (or
+locally) and commit to `main`; the push redeploys the site in about a minute.
 
-To update the directory:
-1. Edit the CSV — directly on GitHub via [this edit link](https://github.com/RealGMUCS/people/edit/main/public/faculty.csv), or locally.
-2. Commit to `main`. The push triggers the GitHub Pages workflow and the site updates in about a minute.
+### `public/faculty.csv` — the people ([edit](https://github.com/RealGMUCS/people/edit/main/public/faculty.csv))
 
-### CSV Columns
+One row per person. There is no achievements column — a person's achievements
+are joined from `awards.csv` by their full name (`First Last`).
 
 | Column | Example |
 |--------|---------|
@@ -48,11 +49,24 @@ To update the directory:
 | Year started at GMU | 2021 |
 | PhD from | University of New Mexico (2014) |
 | Postdoc from | University of Maryland (2016) |
-| Achievements | NSF CAREER 2023, IEEE TSE Most Influential Paper 2025 |
 
-Lists (Research interests, Achievements) are comma-separated. If an item itself
-contains a comma (e.g. `Best Paper, ICSE 2020`), separate the items with `;`
-instead — a cell containing any semicolon is split on semicolons only.
+Research interests are comma-separated.
+
+### `public/awards.csv` — the awards ([edit](https://github.com/RealGMUCS/people/edit/main/public/awards.csv))
+
+One row per award. Drives both the `#awards` page and each faculty card's
+achievements list.
+
+| Column | Example | Notes |
+|--------|---------|-------|
+| Name | ThanhVu (Vu) Nguyen | Must match `First Last` in faculty.csv to link to a card |
+| Category | NSF CAREER Awards | Groups awards on the `#awards` page; category order follows first appearance in the file |
+| Award | Amazon Research Award (Automated Reasoning) | Award text **without** the year |
+| Year | 2023 | Shown separately; used for sorting |
+| Former | yes | `yes` if the person has left GMU (shown but not clickable); blank otherwise |
+
+A `Name` that doesn't match anyone in faculty.csv is treated as a former member
+automatically, so `Former` is only needed to force that flag.
 
 ## Deploying
 

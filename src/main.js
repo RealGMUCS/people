@@ -3,12 +3,14 @@ import './style.css';
 
 let allFaculty = [];
 let interestIndex = new Map();
+let awardCategories = [];
 let activeInterest = null; // currently selected interest filter
 
 async function init() {
     const data = await loadFaculty();
     allFaculty = data.faculty;
     interestIndex = data.interestIndex;
+    awardCategories = data.awardCategories;
 
     setupSearch();
     setupFilters();
@@ -147,13 +149,41 @@ function restoreFromUrl() {
 // Rendering
 
 function render() {
-    const filtered = getFiltered();
+    const query = document.getElementById('main-search').value.trim().toLowerCase();
     const grid = document.getElementById('faculty-results');
     const countEl = document.getElementById('faculty-count');
 
+    // #awards / #award → categorized awards view instead of the card grid
+    if (query === '#awards' || query === '#award') {
+        grid.className = 'awards-view';
+        grid.innerHTML = renderAwards();
+        const total = awardCategories.reduce((n, c) => n + c.awards.length, 0);
+        countEl.textContent = `${total} awards across ${awardCategories.length} categories`;
+        updateUrl();
+        return;
+    }
+
+    grid.className = 'results-grid';
+    const filtered = getFiltered();
     countEl.textContent = `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
     updateUrl();
+}
+
+function renderAwards() {
+    return awardCategories.map(cat => `
+      <section class="award-category">
+        <h2 class="award-category-title">${esc(cat.category)} <span class="award-count">${cat.awards.length}</span></h2>
+        <ul class="award-list">${cat.awards.map(renderAwardItem).join('')}</ul>
+      </section>`).join('');
+}
+
+function renderAwardItem(a) {
+    const name = a.faculty
+        ? `<a class="award-person" data-name="${esc(a.name)}" href="#">${esc(a.name)}</a>`
+        : `<span class="award-person former" title="Formerly at GMU">${esc(a.name)}</span>`;
+    const year = a.year ? `<span class="award-year">${esc(a.year)}</span>` : '';
+    return `<li class="award-item">${name}<span class="award-desc">${esc(a.award)}</span>${year}</li>`;
 }
 
 // Escape untrusted spreadsheet values before inserting into HTML
@@ -235,6 +265,19 @@ document.addEventListener('click', e => {
     document.getElementById('active-filter-text').textContent = `Research: ${interest}`;
     document.getElementById('main-search').value = '';
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.add('active'));
+    render();
+});
+
+// Click an award recipient (in the #awards view) to open their card
+document.addEventListener('click', e => {
+    const link = e.target.closest('.award-person');
+    if (!link || !link.dataset.name) return;
+    e.preventDefault();
+    activeInterest = null;
+    document.getElementById('active-filter').style.display = 'none';
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.add('active'));
+    document.getElementById('main-search').value = link.dataset.name;
+    window.scrollTo({ top: 0 });
     render();
 });
 
