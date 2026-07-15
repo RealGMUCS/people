@@ -16,6 +16,7 @@ async function init() {
     setupFilters();
     setupThemeToggle();
     setupInterestBanner();
+    setupNav();
     restoreFromUrl();
     render();
 
@@ -52,6 +53,18 @@ function setupInterestBanner() {
         document.getElementById('main-search').value = '';
         render();
     });
+}
+
+function setupNav() {
+    const go = (query) => {
+        activeInterest = null;
+        document.getElementById('active-filter').style.display = 'none';
+        document.getElementById('main-search').value = query;
+        window.scrollTo({ top: 0 });
+        render();
+    };
+    document.getElementById('awards-link').addEventListener('click', e => { e.preventDefault(); go('#awards'); });
+    document.getElementById('directory-link').addEventListener('click', e => { e.preventDefault(); go(''); });
 }
 
 // Filter faculty based on current search + dropdowns + active interest
@@ -152,9 +165,12 @@ function render() {
     const query = document.getElementById('main-search').value.trim().toLowerCase();
     const grid = document.getElementById('faculty-results');
     const countEl = document.getElementById('faculty-count');
+    const awardsView = query === '#awards' || query === '#award';
+    document.getElementById('awards-link').classList.toggle('active', awardsView);
+    document.getElementById('directory-link').classList.toggle('active', !awardsView);
 
     // #awards / #award → categorized awards view instead of the card grid
-    if (query === '#awards' || query === '#award') {
+    if (awardsView) {
         grid.className = 'awards-view';
         grid.innerHTML = renderAwards();
         const total = awardCategories.reduce((n, c) => n + c.awards.length, 0);
@@ -217,13 +233,13 @@ function renderCard(f) {
     if (f.postdocFrom) details.push(detailRow('Postdoc', esc(f.postdocFrom)));
     if (f.yearStarted) details.push(detailRow('At GMU since', esc(f.yearStarted)));
 
-    const achievementsList = f.achievements.length
+    const achievementsList = f.awards.length
         ? `<div class="achievements-section collapsed">
              <div class="achievements-header" onclick="toggleAchievements(this)">
-               <h3 class="achievements-heading">Achievements</h3>
+               <h3 class="achievements-heading">Achievements <span class="achievements-badge">${f.awards.length}</span></h3>
                <span class="achievements-toggle">▶</span>
              </div>
-             <ul class="achievements-list">${f.achievements.map(a => `<li>${esc(a)}</li>`).join('')}</ul>
+             <div class="achievements-list">${renderAchievementGroups(f.awards)}</div>
            </div>`
         : '';
 
@@ -248,6 +264,25 @@ function renderCard(f) {
 
 function detailRow(label, value) {
     return `<div class="faculty-detail"><span class="detail-label">${label}</span><span class="detail-value">${value}</span></div>`;
+}
+
+// Group a person's awards by category (newest-first order preserved) so each
+// card shows its awards under headings like "NSF CAREER Awards".
+function renderAchievementGroups(awards) {
+    const groups = [];
+    const index = new Map();
+    awards.forEach(a => {
+        const cat = a.category || 'Awards';
+        if (!index.has(cat)) { index.set(cat, groups.length); groups.push({ cat, items: [] }); }
+        groups[index.get(cat)].items.push(a);
+    });
+    return groups.map(g => `
+        <div class="achievement-group">
+          <div class="achievement-cat">${esc(g.cat)}</div>
+          <ul>${g.items.map(a =>
+            `<li>${esc(a.award)}${a.year ? ` <span class="achievement-year">${esc(a.year)}</span>` : ''}</li>`
+          ).join('')}</ul>
+        </div>`).join('');
 }
 
 // Achievements expand/collapse

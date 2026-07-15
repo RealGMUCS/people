@@ -43,7 +43,9 @@ export async function loadFaculty() {
             phdFrom: clean(row['PhD from']),
             postdocFrom: clean(row['Postdoc from']),
             awards,
-            achievements: awards.map(a => a.year ? `${a.award} (${a.year})` : a.award),
+            // searchable text only (cards render from `awards`); include the
+            // category so e.g. "NSF CAREER" matches
+            achievements: awards.map(a => [a.category, a.award, a.year].filter(Boolean).join(' ')),
             picture: normalizeUrl(clean(row['Picture'])),
         };
     }).filter(f => f.firstName || f.lastName);
