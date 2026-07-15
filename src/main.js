@@ -156,20 +156,36 @@ function render() {
     updateUrl();
 }
 
+// Escape untrusted spreadsheet values before inserting into HTML
+function esc(s) {
+    return String(s)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+}
+
+// Only allow http(s) URLs in href/src attributes
+function safeUrl(url) {
+    return /^https?:\/\//i.test(url) ? esc(url) : null;
+}
+
 function renderCard(f) {
     const fullName = `${f.firstName} ${f.lastName}`;
     const interestTags = f.interests.map(i =>
-        `<span class="interest-tag" data-interest="${i}">${i}</span>`
+        `<span class="interest-tag" data-interest="${esc(i)}">${esc(i)}</span>`
     ).join('');
 
     const details = [];
-    if (f.category && f.type) details.push(detailRow('Position', `${f.category} · ${f.type}`));
-    if (f.office) details.push(detailRow('Office', f.office));
-    if (f.email) details.push(detailRow('Email', f.email));
-    if (f.website) details.push(detailRow('Website', `<a href="${f.website}" target="_blank" rel="noopener">${f.website.replace(/^https?:\/\//, '')} ↗</a>`));
-    if (f.phdFrom) details.push(detailRow('PhD', f.phdFrom));
-    if (f.postdocFrom) details.push(detailRow('Postdoc', f.postdocFrom));
-    if (f.yearStarted) details.push(detailRow('At GMU since', f.yearStarted));
+    if (f.category && f.type) details.push(detailRow('Position', esc(`${f.category} · ${f.type}`)));
+    if (f.office) details.push(detailRow('Office', esc(f.office)));
+    if (f.email) details.push(detailRow('Email', esc(f.email)));
+    const website = f.website && safeUrl(f.website);
+    if (website) details.push(detailRow('Website', `<a href="${website}" target="_blank" rel="noopener">${esc(f.website.replace(/^https?:\/\//, ''))} ↗</a>`));
+    if (f.phdFrom) details.push(detailRow('PhD', esc(f.phdFrom)));
+    if (f.postdocFrom) details.push(detailRow('Postdoc', esc(f.postdocFrom)));
+    if (f.yearStarted) details.push(detailRow('At GMU since', esc(f.yearStarted)));
 
     const achievementsList = f.achievements.length
         ? `<div class="achievements-section collapsed">
@@ -177,17 +193,18 @@ function renderCard(f) {
                <h3 class="achievements-heading">Achievements</h3>
                <span class="achievements-toggle">▶</span>
              </div>
-             <ul class="achievements-list">${f.achievements.map(a => `<li>${a}</li>`).join('')}</ul>
+             <ul class="achievements-list">${f.achievements.map(a => `<li>${esc(a)}</li>`).join('')}</ul>
            </div>`
         : '';
 
+    const picture = f.picture && safeUrl(f.picture);
     return `
     <div class="card">
       <div class="card-header">
-        ${f.picture ? `<img class="faculty-photo" src="${f.picture}" alt="${fullName}" loading="lazy">` : ''}
+        ${picture ? `<img class="faculty-photo" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.remove()">` : ''}
         <div class="card-header-text">
-          <h2>${fullName}</h2>
-          ${f.role ? `<div class="card-subtitle"><strong>${f.role}</strong></div>` : ''}
+          <h2>${esc(fullName)}</h2>
+          ${f.role ? `<div class="card-subtitle"><strong>${esc(f.role)}</strong></div>` : ''}
         </div>
       </div>
       <div class="card-content">
