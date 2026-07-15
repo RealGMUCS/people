@@ -1,20 +1,12 @@
 import Papa from 'papaparse';
 
-// Fetch and parse the CSV, normalize values, build an interest index
-// Google Sheets CSV export URL
-const LIVE_CSV = 'https://docs.google.com/spreadsheets/d/1Cei8Dqc_i1MXVBEKy_H6LIG5R6HmFEEwfrk9WmlruXM/export?format=csv';
-
+// Fetch and parse the CSV, normalize values, build an interest index.
+// The database is public/faculty.csv in this repo; edit it on GitHub and
+// the push redeploys the site.
 export async function loadFaculty() {
-    let text;
-    try {
-        const res = await fetch(LIVE_CSV);
-        if (!res.ok) throw new Error('Failed to fetch live data');
-        text = await res.text();
-    } catch (err) {
-        console.warn('Live fetch failed, falling back to local CSV:', err);
-        const res = await fetch('/faculty.csv');
-        text = await res.text();
-    }
+    const res = await fetch(`${import.meta.env.BASE_URL}faculty.csv`);
+    if (!res.ok) throw new Error(`Failed to load faculty.csv: ${res.status}`);
+    const text = await res.text();
 
     const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
 
