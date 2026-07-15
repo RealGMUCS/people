@@ -236,7 +236,7 @@ function renderCard(f) {
     const achievementsList = f.awards.length
         ? `<div class="achievements-section collapsed">
              <div class="achievements-header" onclick="toggleAchievements(this)">
-               <h3 class="achievements-heading">Achievements <span class="achievements-badge">${f.awards.length}</span></h3>
+               <h3 class="achievements-heading">Achievements</h3>
                <span class="achievements-toggle">▶</span>
              </div>
              <div class="achievements-list">${renderAchievementGroups(f.awards)}</div>
