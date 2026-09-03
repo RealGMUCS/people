@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GMU CS Faculty Directory</title>
+    <title>GMU CS Directory — People</title>
     <meta name="description"
         content="Searchable directory of George Mason University Computer Science faculty, research interests, and achievements." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <div id="app">
         <header>
             <div class="title-row">
-                <h1>People</h1>
+                <h1><a class="home-link" href="./">GMU CS Directory</a></h1>
                 <div class="header-icons">
                     <a class="icon-link github-link" href="https://github.com/RealGMUCS/people" target="_blank"
                         rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">
@@ -34,7 +34,7 @@
             <nav class="header-nav">
                 <a href="?" id="directory-link" class="nav-pill">👥 Directory</a>
                 <a href="?view=awards" id="awards-link" class="nav-pill">🏆 Faculty Awards</a>
-                <a href="?view=students" id="students-link" class="nav-pill">🎓 Students/Alumni</a>
+                <a href="students.html" class="nav-pill">🎓 Students/Alumni</a>
                 <a href="submit.html" class="nav-pill">✍️ Submit / Update</a>
             </nav>
         </header>
@@ -50,7 +50,7 @@
                         </button>
                         <input type="search" id="main-search" role="combobox" aria-autocomplete="list"
                             aria-expanded="false" aria-controls="search-suggestion-panel"
-                            placeholder="Search by name, area, rank… try advisor:, honors:, phd:, #AI" autofocus>
+                            placeholder="Search by name, area, rank… try research:, honors:, phd:, #AI" autofocus>
                     </div>
                     <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
                 </div>
@@ -60,20 +60,7 @@
                 <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help"
                     hidden>
                     <p>Type a keyword prefix to search one field directly:</p>
-                    <ul>
-                        <li><code>name:</code> ThanhVu Nguyen</li>
-                        <li><code>advisor:</code> Jan Allbeck <span class="search-help-scope">(students)</span></li>
-                        <li><code>research:</code> Software Engineering</li>
-                        <li><code>topic:</code> Robotics <span class="search-help-scope">(students)</span></li>
-                        <li><code>rank:</code> Associate Professor <span class="search-help-scope">(faculty)</span>
-                        </li>
-                        <li><code>type:</code> Tenured <span class="search-help-scope">(faculty)</span></li>
-                        <li><code>phd:</code> MIT</li>
-                        <li><code>honors:</code> NSF Fellowship</li>
-                        <li><code>job:</code> Google <span class="search-help-scope">(students)</span></li>
-                        <li><code>internship:</code> Amazon <span class="search-help-scope">(students)</span></li>
-                        <li><code>#tag</code> — e.g. <code>#AI</code>, <code>#associate</code></li>
-                    </ul>
+                    <ul id="search-help-list"></ul>
                 </div>
             </div>
 
