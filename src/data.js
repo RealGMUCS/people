@@ -1,9 +1,11 @@
 import Papa from 'papaparse';
 
-// The database is two CSVs in this repo — public/faculty.csv (people) and
-// public/awards.csv (awards, one row per award). Edit either on GitHub and
-// the push redeploys the site. Achievements shown on a card are joined from
-// awards.csv by full name, so there is no achievements column in faculty.csv.
+// The database is three CSVs in this repo — public/faculty.csv (people),
+// public/awards.csv (awards, one row per award), and public/students.csv
+// (grad students/alumni). Edit any on GitHub and the push redeploys the
+// site. Achievements shown on a card are joined from awards.csv by full
+// name, so there is no achievements column in faculty.csv. Likewise a
+// student's Advisor is joined to a faculty card by full name.
 export async function loadFaculty() {
     const base = import.meta.env.BASE_URL;
     const [facText, awardText] = await Promise.all([
@@ -37,6 +39,8 @@ export async function loadFaculty() {
             category: deriveCategory(rawRank),
             role: clean(row[roleKey]),
             website: normalizeUrl(clean(row['Website'])),
+            linkedin: normalizeUrl(clean(row['LinkedIn'])),
+            scholar: normalizeUrl(clean(row['Google Scholar'])),
             interests: parseInterests(row[interestKey]),
             office: clean(row['Office (building and room #)']),
             yearStarted: clean(row['Year started at GMU']),
@@ -65,7 +69,51 @@ export async function loadFaculty() {
         });
     });
 
-    return { faculty, interestIndex, awardCategories };
+    return { faculty, interestIndex, awardCategories, facultyByName: byName };
+}
+
+// Load public/students.csv (grad students/alumni). facultyByName (from
+// loadFaculty) links each student's Advisor to a faculty card where one
+// exists, the same way awards.csv links to faculty.
+export async function loadStudents(facultyByName) {
+    const base = import.meta.env.BASE_URL;
+    const text = await fetchCsv(`${base}students.csv`);
+    const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
+
+    const topicIndex = new Map();
+    const students = data.map(row => {
+        const firstName = clean(row['First Name']);
+        const lastName = clean(row['Last Name']);
+        const advisor = clean(row['Advisor']);
+        const topics = parseInterests(row['Topics']);
+        const honors = parseList(row['Honors & Awards']);
+
+        const student = {
+            firstName,
+            lastName,
+            advisor,
+            advisorFaculty: advisor ? (facultyByName.get(advisor) || null) : null,
+            degree: clean(row['Degree']),
+            currentJob: clean(row['Current Job']),
+            firstJob: clean(row['First Job']),
+            internships: clean(row['Internships']),
+            honors,
+            topics,
+            picture: normalizeUrl(clean(row['Picture'])),
+            website: normalizeUrl(clean(row['Website'])),
+            linkedin: normalizeUrl(clean(row['LinkedIn'])),
+            scholar: normalizeUrl(clean(row['Google Scholar'])),
+        };
+
+        topics.forEach(topic => {
+            if (!topicIndex.has(topic)) topicIndex.set(topic, []);
+            topicIndex.get(topic).push(student);
+        });
+
+        return student;
+    }).filter(s => s.firstName || s.lastName);
+
+    return { students, topicIndex };
 }
 
 async function fetchCsv(url) {
@@ -143,5 +191,12 @@ function normalizeUrl(url) {
 function parseInterests(raw) {
     if (!raw || raw.trim().toLowerCase() === 'null') return [];
     return raw.split(',').map(s => s.trim().toUpperCase()).filter(Boolean);
+}
+
+// Semicolon-separated free-text list (e.g. Honors & Awards, where a single entry
+// like "Best Paper Award, VLHCC 2021" already contains a comma).
+function parseList(raw) {
+    if (!raw || raw.trim().toLowerCase() === 'null') return [];
+    return raw.split(';').map(s => s.trim()).filter(Boolean);
 }
 
