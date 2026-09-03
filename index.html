@@ -16,53 +16,89 @@
 </head>
 
 <body>
-    <!-- Theme toggle -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-        <span class="sun-icon">☀️</span>
-        <span class="moon-icon">🌙</span>
-    </button>
-    <script>
-        const savedTheme = localStorage.getItem('theme');
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', savedTheme || (systemDark ? 'dark' : 'light'));
-    </script>
-
     <div id="app">
         <header>
-            <h1>CS Faculty</h1>
+            <div class="title-row">
+                <h1>People</h1>
+                <div class="header-icons">
+                    <a class="icon-link github-link" href="https://github.com/RealGMUCS/people" target="_blank"
+                        rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">
+                        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
             <p>George Mason University — Department of Computer Science</p>
             <nav class="header-nav">
                 <a href="?" id="directory-link" class="nav-pill">👥 Directory</a>
-                <a href="?q=%23awards" id="awards-link" class="nav-pill">🏆 Faculty Awards</a>
+                <a href="?view=awards" id="awards-link" class="nav-pill">🏆 Faculty Awards</a>
+                <a href="?view=students" id="students-link" class="nav-pill">🎓 Students/Alumni</a>
+                <a href="submit.html" class="nav-pill">✍️ Submit / Update</a>
             </nav>
         </header>
 
         <div class="search-section">
             <div class="search-container">
-                <input type="search" id="main-search"
-                    placeholder="Search by name, area, category… (try #awards, #associate, #AI)" autofocus>
+                <div class="search-fields">
+                    <div class="search-input-shell">
+                        <button type="button" id="search-scope-chip" class="search-scope-chip" hidden
+                            aria-label="Remove search scope">
+                            <span id="search-scope-chip-label"></span>
+                            <span class="search-scope-chip-remove" aria-hidden="true">×</span>
+                        </button>
+                        <input type="search" id="main-search" role="combobox" aria-autocomplete="list"
+                            aria-expanded="false" aria-controls="search-suggestion-panel"
+                            placeholder="Search by name, area, rank… try advisor:, honors:, phd:, #AI" autofocus>
+                    </div>
+                    <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
+                </div>
+                <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog"
+                    aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax help"
+                    title="Search syntax help">i</button>
+                <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help"
+                    hidden>
+                    <p>Type a keyword prefix to search one field directly:</p>
+                    <ul>
+                        <li><code>name:</code> ThanhVu Nguyen</li>
+                        <li><code>advisor:</code> Jan Allbeck <span class="search-help-scope">(students)</span></li>
+                        <li><code>research:</code> Software Engineering</li>
+                        <li><code>topic:</code> Robotics <span class="search-help-scope">(students)</span></li>
+                        <li><code>rank:</code> Associate Professor <span class="search-help-scope">(faculty)</span>
+                        </li>
+                        <li><code>type:</code> Tenured <span class="search-help-scope">(faculty)</span></li>
+                        <li><code>phd:</code> MIT</li>
+                        <li><code>honors:</code> NSF Fellowship</li>
+                        <li><code>job:</code> Google <span class="search-help-scope">(students)</span></li>
+                        <li><code>internship:</code> Amazon <span class="search-help-scope">(students)</span></li>
+                        <li><code>#tag</code> — e.g. <code>#AI</code>, <code>#associate</code></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="filters">
+            <div class="filters" id="filters">
                 <div class="filter-group">
-                    <label>Type</label>
-                    <div class="filter-buttons" id="type-buttons">
-                        <button class="filter-btn active" data-value="Tenure-Track">Tenure-Track</button>
-                        <button class="filter-btn active" data-value="Tenured">Tenured</button>
-                        <button class="filter-btn active" data-value="Teaching">Teaching</button>
-                        <button class="filter-btn active" data-value="Staff">Staff</button>
-                        <button class="filter-btn" data-value="Emeritus">Emeritus</button>
-                        <button class="filter-btn" data-value="Affiliate">Affiliate</button>
-                    </div>
+                    <label for="type-filter">Type</label>
+                    <select id="type-filter" class="field-select">
+                        <option value="all">All</option>
+                        <option value="Tenured">Tenured</option>
+                        <option value="Tenure-Track">Tenure-Track</option>
+                        <option value="Teaching">Teaching</option>
+                        <option value="Staff">Staff</option>
+                    </select>
                 </div>
 
                 <div class="filter-group">
-                    <label>Category</label>
-                    <div class="filter-buttons" id="category-buttons">
-                        <button class="filter-btn active" data-value="Full">Full</button>
-                        <button class="filter-btn active" data-value="Associate">Associate</button>
-                        <button class="filter-btn active" data-value="Assistant">Assistant</button>
-                    </div>
+                    <label for="rank-filter">Rank</label>
+                    <select id="rank-filter" class="field-select">
+                        <option value="all">All</option>
+                        <option value="Full">Full</option>
+                        <option value="Associate">Associate</option>
+                        <option value="Assistant">Assistant</option>
+                        <option value="Emeritus">Emeritus</option>
+                        <option value="Affiliate">Affiliate</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -79,15 +115,6 @@
             <section id="faculty-results" class="results-grid"></section>
         </main>
     </div>
-
-    <footer>
-        Edit database:
-        <a href="https://github.com/RealGMUCS/people/edit/main/public/faculty.csv"
-            target="_blank">people</a>
-        ·
-        <a href="https://github.com/RealGMUCS/people/edit/main/public/awards.csv"
-            target="_blank">awards</a>
-    </footer>
 
     <script type="module" src="/src/main.js"></script>
 </body>
