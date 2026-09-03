@@ -50,7 +50,7 @@ function studentToText(s) {
 function renderShell() {
     app.innerHTML = `
     <header>
-        <h1><a class="home-link" href="./">People</a></h1>
+        <h1><a class="home-link" href="./">GMU CS Directory</a></h1>
         <p>George Mason University — Department of Computer Science</p>
     </header>
 

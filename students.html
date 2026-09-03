@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GMU CS Directory — People</title>
+    <title>GMU CS Directory — Students/Alumni</title>
     <meta name="description"
-        content="Searchable directory of George Mason University Computer Science faculty, research interests, and achievements." />
+        content="Directory of George Mason University Computer Science graduate students and alumni — advisors, degrees, job placements, and honors." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,11 +30,10 @@
                     </a>
                 </div>
             </div>
-            <p>George Mason University — Department of Computer Science</p>
+            <p>Students &amp; Alumni — Department of Computer Science</p>
             <nav class="header-nav">
-                <a href="?" id="directory-link" class="nav-pill">👥 Directory</a>
-                <a href="?view=awards" id="awards-link" class="nav-pill">🏆 Faculty Awards</a>
-                <a href="students.html" class="nav-pill">🎓 Students/Alumni</a>
+                <a href="?" id="students-link" class="nav-pill">🎓 Students/Alumni</a>
+                <a href="?view=insights" id="insights-link" class="nav-pill">📊 Insights</a>
                 <a href="submit.html" class="nav-pill">✍️ Submit / Update</a>
             </nav>
         </header>
@@ -50,7 +49,7 @@
                         </button>
                         <input type="search" id="main-search" role="combobox" aria-autocomplete="list"
                             aria-expanded="false" aria-controls="search-suggestion-panel"
-                            placeholder="Search by name, area, rank… try research:, honors:, phd:, #AI" autofocus>
+                            placeholder="Search by name, advisor, topic… try advisor:, honors:, job:, #AI" autofocus>
                     </div>
                     <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
                 </div>
@@ -66,31 +65,27 @@
 
             <div class="filters" id="filters">
                 <div class="filter-group">
-                    <label for="type-filter">Type</label>
-                    <select id="type-filter" class="field-select">
+                    <label for="degree-filter">Degree</label>
+                    <select id="degree-filter" class="field-select">
                         <option value="all">All</option>
-                        <option value="Tenured">Tenured</option>
-                        <option value="Tenure-Track">Tenure-Track</option>
-                        <option value="Teaching">Teaching</option>
-                        <option value="Staff">Staff</option>
+                        <option value="PhD">PhD</option>
+                        <option value="MS">MS</option>
+                        <option value="Undergrad">Undergrad</option>
                     </select>
                 </div>
 
                 <div class="filter-group">
-                    <label for="rank-filter">Rank</label>
-                    <select id="rank-filter" class="field-select">
+                    <label for="status-filter">Status</label>
+                    <select id="status-filter" class="field-select">
                         <option value="all">All</option>
-                        <option value="Full">Full</option>
-                        <option value="Associate">Associate</option>
-                        <option value="Assistant">Assistant</option>
-                        <option value="Emeritus">Emeritus</option>
-                        <option value="Affiliate">Affiliate</option>
+                        <option value="current">Current</option>
+                        <option value="alumni">Alumni</option>
                     </select>
                 </div>
             </div>
         </div>
 
-        <!-- Active interest filter banner -->
+        <!-- Active topic filter banner -->
         <div id="active-filter" class="active-filter-banner" style="display:none;">
             <span id="active-filter-text"></span>
             <button id="clear-filter" aria-label="Clear filter">✕</button>
@@ -99,11 +94,11 @@
         <div id="faculty-count" class="faculty-count"></div>
 
         <main>
-            <section id="faculty-results" class="results-grid"></section>
+            <section id="faculty-results" class="roster"></section>
         </main>
     </div>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/students.js"></script>
 </body>
 
 </html>

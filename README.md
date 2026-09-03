@@ -1,16 +1,34 @@
-# CS Faculty Directory
+# GMU CS Directory
 
-Searchable directory for the George Mason University Computer Science department. Browse faculty by name, rank, track, or research interest.
+Two directories for the George Mason University Computer Science department:
+**People** (`index.html`, faculty/staff) and **Students/Alumni**
+(`students.html`, grad students and alumni). They're separate pages but share
+all their UI code (`src/common.js`, `src/style.css`) and data loading
+(`src/data.js`).
 
-Data sourced from [cs.gmu.edu](https://cs.gmu.edu/people/faculty/).
+Faculty data is sourced from [cs.gmu.edu](https://cs.gmu.edu/people/faculty/);
+students/alumni data was researched from each advisor's lab site and public
+profiles (LinkedIn, Google Scholar, personal pages) — see
+`public/students.csv` for coverage, which is best-effort and not exhaustive.
 
 ## Features
 
-- **Search** by name, email, research area, PhD school, or office
-- **#tag search** — type `#associate`, `#tenure`, `#AI`, etc.
-- **`#awards`** — the faculty awards page, grouped by category (Fellows, NSF CAREER, …)
-- **Filter** by track (Tenure-Track / Teaching) and rank
-- **Click a research interest** to see all faculty in that area
+- **People** (`index.html`): search by name, research area, PhD school, rank,
+  or honors; filter by track and rank; `?view=awards` for the faculty awards
+  page grouped by category.
+- **Students/Alumni** (`students.html`): search by name, advisor, topic, job,
+  internship, or honors; filter by degree (PhD/MS/Undergrad) and current vs.
+  alumni status; `?view=insights` for auto-computed stats (top advisors,
+  employers, and research topics).
+- **Keyword search** on both pages — type a prefix like `advisor:`, `honors:`,
+  `phd:`, `topic:`, `job:` to search one field directly (click the "i" icon
+  next to the search box for the full list); `#tag` shortcuts also work.
+- **Submit / Update** (`submit.html`): a plain-text form for adding or
+  correcting an entry in either directory, with a name-autocomplete that
+  pre-fills the existing record. Submits via email or a pre-filled GitHub
+  issue.
+- Website/LinkedIn/Google Scholar render as icons; clicking a research
+  interest or topic tag filters to everyone who shares it.
 
 ## Getting Started
 
@@ -26,8 +44,9 @@ npm run build && npm run preview
 
 ## Updating the Data
 
-The database is two CSVs in this repo. Edit either directly on GitHub (or
+The database is three CSVs in this repo. Edit any directly on GitHub (or
 locally) and commit to `main`; the push redeploys the site in about a minute.
+The `submit.html` form is the non-technical path to the same edit links.
 
 ### `public/faculty.csv` — the people ([edit](https://github.com/RealGMUCS/people/edit/main/public/faculty.csv))
 
@@ -44,6 +63,8 @@ are joined from `awards.csv` by their full name (`First Last`).
 | Rank | Associate Professor |
 | Dept Role | MS SWE Director |
 | Website | roars.dev |
+| LinkedIn | https://www.linkedin.com/in/... |
+| Google Scholar | https://scholar.google.com/citations?user=... |
 | Research interests | Software Engineering (SE), Formal Methods |
 | Office (building and room #) | Engineering 4430 |
 | Year started at GMU | 2021 |
@@ -51,6 +72,32 @@ are joined from `awards.csv` by their full name (`First Last`).
 | Postdoc from | University of Maryland (2016) |
 
 Research interests are comma-separated.
+
+### `public/students.csv` — students/alumni ([edit](https://github.com/RealGMUCS/people/edit/main/public/students.csv))
+
+One row per student. `Advisor` must match `First Last` in faculty.csv to link
+to that faculty member's card; a co-advised student gets one row per advisor.
+
+| Column | Example |
+|--------|---------|
+| First Name | Jane |
+| Last Name | Nguyen |
+| Advisor | Jan Allbeck |
+| Degree | PhD '26 |
+| Current Job | Software Engineer at Google |
+| First Job | SWE Intern at Meta |
+| Internships | Research Intern, NVIDIA (Summer 2023) |
+| Honors & Awards | NSF Graduate Research Fellowship (2022) |
+| Topics | AI, Robotics |
+| Picture | (optional image URL) |
+| Website | (optional personal/lab site) |
+| LinkedIn | https://www.linkedin.com/in/... |
+| Google Scholar | https://scholar.google.com/citations?user=... |
+
+`Internships` and `Honors & Awards` are semicolon-separated if there are
+multiple; `Topics` is comma-separated. The Students/Alumni page infers
+current-vs-alumni status from a `'YY` year in `Degree` (falling back to
+whether `Current Job` is filled in) — there's no separate status column.
 
 ### `public/awards.csv` — the awards ([edit](https://github.com/RealGMUCS/people/edit/main/public/awards.csv))
 

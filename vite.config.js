@@ -10,6 +10,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(root, 'index.html'),
+                students: resolve(root, 'students.html'),
                 submit: resolve(root, 'submit.html'),
             },
         },
