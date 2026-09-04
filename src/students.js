@@ -633,6 +633,7 @@ function renderStudentRow(s) {
         <div class="entry-name-row">
           <span class="entry-name">${esc(fullName)}</span>
           ${icons ? `<span class="entry-icons">${icons}</span>` : ''}
+          <time class="entry-updated" datetime="${esc(s.lastModified || '2026-09-04')}" title="Record last modified ${esc(s.lastModified || '2026-09-04')}">Updated ${esc(s.lastModified || '2026-09-04')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
         ${dissertationHtml}

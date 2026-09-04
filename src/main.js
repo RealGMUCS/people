@@ -346,6 +346,7 @@ function renderCard(f) {
           <div class="card-name-row">
             <h2>${esc(fullName)}</h2>
             ${icons ? `<span class="card-icons">${icons}</span>` : ''}
+            <time class="entry-updated" datetime="${esc(f.lastModified || '2026-09-04')}" title="Record last modified ${esc(f.lastModified || '2026-09-04')}">Updated ${esc(f.lastModified || '2026-09-04')}</time>
           </div>
           ${f.role ? `<div class="card-subtitle"><strong>${esc(f.role)}</strong></div>` : ''}
         </div>
