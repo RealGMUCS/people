@@ -83,6 +83,37 @@ export function splitList(v) {
     return v ? v.split(';').map(x => x.trim()).filter(Boolean) : [];
 }
 
+// Fisher-Yates sample, used to pick fresh "Try:" search examples on each load
+export function sample(items, count) {
+    const arr = items.slice();
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr.slice(0, count);
+}
+
+// Renders the "Try: ..." row of example search queries, shared by both pages.
+// `examples` is an array of { label, query }.
+export function renderSearchExamples(examples) {
+    const fixed = document.getElementById('search-example-fixed');
+    const items = document.getElementById('search-example-items');
+    if (!fixed || !items) return;
+    fixed.innerHTML = '<span>Try:</span>';
+    items.innerHTML = examples
+        .map(ex => `<button type="button" data-search-example="${esc(ex.query)}">${esc(ex.label)}</button>`)
+        .join('');
+}
+
+// Wires clicks on any "Try:" example button to a page-supplied handler.
+export function setupSearchExamplesClick(onSelect) {
+    document.querySelector('.search-examples')?.addEventListener('click', e => {
+        const btn = e.target.closest('[data-search-example]');
+        if (!btn) return;
+        onSelect(btn.dataset.searchExample);
+    });
+}
+
 // Sticky scope chip + live suggestion dropdown for the search box, shared by
 // both pages. Each page supplies its own keyword map / suggestion sources /
 // display metadata since Faculty and Students track different fields.

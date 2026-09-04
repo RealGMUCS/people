@@ -1,5 +1,5 @@
 import { loadFaculty } from './data.js';
-import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp } from './common.js';
+import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick } from './common.js';
 import './style.css';
 
 let allFaculty = [];
@@ -95,6 +95,12 @@ async function init() {
     setupFilters();
     setupInterestBanner();
     setupNav();
+    setupSearchExamplesClick(query => {
+        search.setSearchValue(query);
+        render();
+        document.getElementById('main-search').focus();
+    });
+    refreshSearchExamples();
     restoreFromUrl();
     render();
 
@@ -109,7 +115,7 @@ function setupFilters() {
     document.getElementById('type-filter').addEventListener('change', () => render());
 }
 
-// Rank dropdown mixes two underlying fields: Full/Associate/Assistant come from
+// Rank dropdown mixes two underlying fields: Professor/Associate/Assistant come from
 // f.category (derived from the Rank column), while Emeritus/Affiliate come from
 // f.type (derived from the Tenure-Track/Teaching/Staff column) since those aren't
 // ranks in the data. This keeps Instructors/Senior Instructors/unranked staff out
@@ -144,11 +150,29 @@ function setupNav() {
         document.getElementById('active-filter').style.display = 'none';
         document.getElementById('main-search').value = '';
         search.resetScope();
+        if (view === 'directory') refreshSearchExamples();
         window.scrollTo({ top: 0 });
         render();
     };
     document.getElementById('awards-link').addEventListener('click', e => { e.preventDefault(); go('awards'); });
-    document.getElementById('directory-link').addEventListener('click', e => { e.preventDefault(); go('directory'); });
+    document.getElementById('nav-people').addEventListener('click', e => { e.preventDefault(); go('directory'); });
+}
+
+// One randomized "Try:" example per kind of query the search box accepts, so
+// the row demonstrates the whole vocabulary and stays fresh on every visit.
+function refreshSearchExamples() {
+    const interests = Array.from(interestIndex.keys());
+    const names = uniqueNonEmpty(allFaculty.map(f => `${f.firstName} ${f.lastName}`.trim()));
+    const honors = uniqueNonEmpty(allFaculty.flatMap(f => f.achievements));
+    const ranks = uniqueNonEmpty(allFaculty.map(f => f.category));
+
+    const examples = [
+        ...sample(interests, 2).map(v => ({ label: v, query: `research: ${v}` })),
+        ...sample(names, 1).map(v => ({ label: v, query: `name: ${v}` })),
+        ...sample(honors, 1).map(v => ({ label: v, query: `honors: ${v}` })),
+        ...sample(ranks, 1).map(v => ({ label: `${v} Professors`, query: `rank: ${v}` })),
+    ];
+    renderSearchExamples(examples);
 }
 
 // Filter faculty based on current search + dropdowns + active interest
@@ -237,8 +261,8 @@ function render() {
     const countEl = document.getElementById('faculty-count');
     const awardsView = currentView === 'awards';
     document.getElementById('awards-link').classList.toggle('active', awardsView);
-    document.getElementById('directory-link').classList.toggle('active', !awardsView);
     document.getElementById('filters').style.display = awardsView ? 'none' : '';
+    document.querySelector('.search-examples').style.display = awardsView ? 'none' : '';
 
     if (awardsView) {
         search.resetScope();

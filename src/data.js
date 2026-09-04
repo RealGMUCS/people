@@ -171,7 +171,7 @@ function deriveType(track, rank) {
 function deriveCategory(rank) {
     if (!rank) return null;
     const r = rank.toLowerCase();
-    if (r === 'professor') return 'Full';
+    if (r === 'professor') return 'Professor';
     if (r === 'associate professor') return 'Associate';
     if (r === 'assistant professor') return 'Assistant';
     return rank; // Instructor, Senior Instructor, Professor of Practice — keep as-is
