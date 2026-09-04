@@ -71,7 +71,11 @@ export function parseKeywordQuery(raw, keywordMap) {
     if (!match) return null;
     const key = match[1].toLowerCase().replace(/[^a-z0-9]/g, '');
     if (!keywordMap[key]) return null;
-    return { key, getField: keywordMap[key], query: match[2].trim() };
+    let query = match[2].trim();
+    if ((query.startsWith('"') && query.endsWith('"')) || (query.startsWith("'") && query.endsWith("'"))) {
+        query = query.slice(1, -1).trim();
+    }
+    return { key, getField: keywordMap[key], query };
 }
 
 export function uniqueNonEmpty(arr) {

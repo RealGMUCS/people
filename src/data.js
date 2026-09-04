@@ -8,9 +8,10 @@ import Papa from 'papaparse';
 // student's Advisor is joined to a faculty card by full name.
 export async function loadFaculty() {
     const base = import.meta.env.BASE_URL;
-    const [facText, awardText] = await Promise.all([
+    const [facText, awardText, studentText] = await Promise.all([
         fetchCsv(`${base}faculty.csv`),
         fetchCsv(`${base}awards.csv`),
+        fetchCsv(`${base}students.csv`),
     ]);
 
     const { awardsByName, awardCategories } = parseAwards(awardText);
@@ -51,6 +52,7 @@ export async function loadFaculty() {
             // category so e.g. "NSF CAREER" matches
             achievements: awards.map(a => [a.category, a.award, a.year].filter(Boolean).join(' ')),
             picture: normalizeUrl(clean(row['Picture'])),
+            advisees: [],
         };
     }).filter(f => f.firstName || f.lastName);
 
@@ -59,6 +61,21 @@ export async function loadFaculty() {
     awardCategories.forEach(cat => {
         cat.awards.forEach(a => { a.faculty = byName.get(a.name) || null; });
     });
+
+    // Link student advisees to faculty cards
+    if (studentText) {
+        const { data: studentData } = Papa.parse(studentText, { header: true, skipEmptyLines: true });
+        studentData.forEach(row => {
+            const advisorName = clean(row['Advisor']);
+            if (advisorName && byName.has(advisorName)) {
+                byName.get(advisorName).advisees.push({
+                    firstName: clean(row['First Name']),
+                    lastName: clean(row['Last Name']),
+                    degree: clean(row['Degree']),
+                });
+            }
+        });
+    }
 
     // Map each interest string to the list of faculty who share it
     const interestIndex = new Map();
