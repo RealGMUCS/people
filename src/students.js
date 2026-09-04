@@ -1,3 +1,5 @@
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 import { loadFaculty, loadStudents } from './data.js';
 import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick } from './common.js';
 import './style.css';
@@ -8,12 +10,22 @@ let topicIndex = new Map();
 let activeTopic = null;
 let currentView = 'directory'; // 'directory' | 'insights'
 let search;
+let alumniMapInstance = null;
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 const STUDENT_KEYWORDS = {
     name: s => `${s.firstName} ${s.lastName}`,
     advisor: s => s.advisor,
+    coadvisor: s => s.coAdvisor,
+    'co-advisor': s => s.coAdvisor,
+    dissertation: s => s.dissertationTitle,
+    thesis: s => s.dissertationTitle,
+    title: s => s.dissertationTitle,
+    location: s => s.location,
+    city: s => s.location,
+    state: s => s.location,
+    country: s => s.location,
     honors: s => s.honors.join(' '),
     honor: s => s.honors.join(' '),
     award: s => s.honors.join(' '),
@@ -44,6 +56,15 @@ const STUDENT_KEYWORDS = {
 const KEYWORD_META = {
     name: { label: 'Name', icon: '👤' },
     advisor: { label: 'Advisor', icon: '🎓' },
+    coadvisor: { label: 'Co-Advisor', icon: '🎓' },
+    'co-advisor': { label: 'Co-Advisor', icon: '🎓' },
+    dissertation: { label: 'Dissertation', icon: '📜' },
+    thesis: { label: 'Dissertation', icon: '📜' },
+    title: { label: 'Dissertation', icon: '📜' },
+    location: { label: 'Location', icon: '📍' },
+    city: { label: 'Location', icon: '📍' },
+    state: { label: 'Location', icon: '📍' },
+    country: { label: 'Location', icon: '📍' },
     honors: { label: 'Honors', icon: '🏆' },
     honor: { label: 'Honors', icon: '🏆' },
     award: { label: 'Honors', icon: '🏆' },
@@ -74,6 +95,15 @@ const KEYWORD_META = {
 const STUDENT_SUGGESTION_SOURCES = {
     name: () => allStudents.map(s => `${s.firstName} ${s.lastName}`.trim()),
     advisor: () => uniqueNonEmpty(allStudents.map(s => s.advisor)),
+    coadvisor: () => uniqueNonEmpty(allStudents.map(s => s.coAdvisor)),
+    'co-advisor': () => uniqueNonEmpty(allStudents.map(s => s.coAdvisor)),
+    dissertation: () => uniqueNonEmpty(allStudents.map(s => s.dissertationTitle)),
+    thesis: () => uniqueNonEmpty(allStudents.map(s => s.dissertationTitle)),
+    title: () => uniqueNonEmpty(allStudents.map(s => s.dissertationTitle)),
+    location: () => uniqueNonEmpty(allStudents.map(s => s.location)),
+    city: () => uniqueNonEmpty(allStudents.map(s => s.location)),
+    state: () => uniqueNonEmpty(allStudents.map(s => s.location)),
+    country: () => uniqueNonEmpty(allStudents.map(s => s.location)),
     honors: () => uniqueNonEmpty(allStudents.flatMap(s => s.honors)),
     honor: () => uniqueNonEmpty(allStudents.flatMap(s => s.honors)),
     award: () => uniqueNonEmpty(allStudents.flatMap(s => s.honors)),
@@ -99,13 +129,12 @@ const STUDENT_SUGGESTION_SOURCES = {
 const SEARCH_HELP_ENTRIES = [
     { code: 'name:', example: 'Timothy Balint' },
     { code: 'advisor:', example: 'Jan Allbeck' },
+    { code: 'coadvisor:', example: 'Foteini Baldimtsi' },
+    { code: 'dissertation:', example: 'Procedural' },
+    { code: 'location:', example: 'San Francisco, CA' },
     { code: 'phdyear:', example: '2023' },
-    { code: 'msyear:', example: '2025' },
     { code: 'topic:', example: 'Robotics' },
-    { code: 'degree:', example: "PhD '24" },
-    { code: 'honors:', example: 'NSF Fellowship' },
     { code: 'job:', example: 'Google' },
-    { code: 'internships:', example: 'NVIDIA' },
     { code: '#tag', example: '— e.g. #AI' },
 ];
 
@@ -381,6 +410,7 @@ function render() {
     if (insightsView) {
         grid.className = 'insights-view';
         grid.innerHTML = renderInsights(filtered);
+        setTimeout(() => initOrUpdateMap(filtered), 50);
         if (filtered.length === allStudents.length) {
             countEl.textContent = `Insights across ${allStudents.length} tracked students/alumni`;
         } else {
@@ -411,6 +441,130 @@ function render() {
     updateUrl();
 }
 
+const LOCATION_COORDS = {
+    'Fairfax, VA': [38.8462, -77.3064],
+    'Arlington, VA': [38.8816, -77.0910],
+    'McLean, VA': [38.9339, -77.1773],
+    'Williamsburg, VA': [37.2707, -76.7075],
+    'Richmond, VA': [37.5407, -77.4360],
+    'Delft, Netherlands': [52.0116, 4.3571],
+    'Riverside, CA': [33.9806, -117.3755],
+    'San Francisco, CA': [37.7749, -122.4194],
+    'Foster City, CA': [37.5585, -122.2711],
+    'Mountain View, CA': [37.3861, -122.0839],
+    'Menlo Park, CA': [37.4530, -122.1817],
+    'Cupertino, CA': [37.3230, -122.0322],
+    'San Jose, CA': [37.3382, -121.8863],
+    'Berkeley, CA': [37.8715, -122.2730],
+    'Stanford, CA': [37.4275, -122.1697],
+    'Burbank, CA': [34.1808, -118.3090],
+    'San Diego, CA': [32.7157, -117.1611],
+    'Austin, TX': [30.2672, -97.7431],
+    'Houston, TX': [29.7604, -95.3698],
+    'Seattle, WA': [47.6062, -122.3321],
+    'Redmond, WA': [47.6740, -122.1215],
+    'Oak Ridge, TN': [36.0104, -84.2696],
+    'Charlotte, NC': [35.2271, -80.8431],
+    'Morrisville, NC': [35.8235, -78.8256],
+    'Baltimore, MD': [39.2904, -76.6122],
+    'Cambridge, MA': [42.3736, -71.1097],
+    'Boston, MA': [42.3601, -71.0589],
+    'Armonk, NY': [41.1265, -73.7140],
+    'New York, NY': [40.7128, -74.0060],
+    'Pittsburgh, PA': [40.4406, -79.9959],
+    'Chicago, IL': [41.8781, -87.6298],
+    'Kuwait City, Kuwait': [29.3759, 47.9774],
+    'Riyadh, Saudi Arabia': [24.7136, 46.6753],
+    'Zurich, Switzerland': [47.3769, 8.5417],
+    'London, UK': [51.5074, -0.1278],
+};
+
+function getCoords(locStr) {
+    if (!locStr) return null;
+    const cleanLoc = locStr.trim();
+    if (LOCATION_COORDS[cleanLoc]) return LOCATION_COORDS[cleanLoc];
+    for (const [key, coords] of Object.entries(LOCATION_COORDS)) {
+        if (cleanLoc.toLowerCase().includes(key.toLowerCase()) || key.toLowerCase().includes(cleanLoc.toLowerCase())) {
+            return coords;
+        }
+    }
+    return null;
+}
+
+function initOrUpdateMap(studentsSubset) {
+    const container = document.getElementById('alumni-map');
+    if (!container) return;
+
+    const locationMap = new Map();
+    studentsSubset.forEach(s => {
+        const loc = s.location || 'Fairfax, VA';
+        const coords = getCoords(loc);
+        if (coords) {
+            if (!locationMap.has(loc)) locationMap.set(loc, { coords, students: [] });
+            locationMap.get(loc).students.push(s);
+        }
+    });
+
+    if (alumniMapInstance) {
+        alumniMapInstance.remove();
+        alumniMapInstance = null;
+    }
+
+    alumniMapInstance = L.map(container, { scrollWheelZoom: false }).setView([38.5, -96], 4);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(alumniMapInstance);
+
+    const bounds = [];
+
+    locationMap.forEach(({ coords, students }, locName) => {
+        bounds.push(coords);
+        const radius = Math.min(25, 8 + Math.sqrt(students.length) * 4);
+
+        const marker = L.circleMarker(coords, {
+            radius: radius,
+            fillColor: '#10b981',
+            color: '#065f46',
+            weight: 2,
+            opacity: 0.9,
+            fillOpacity: 0.75
+        }).addTo(alumniMapInstance);
+
+        const studentListHtml = students.slice(0, 4).map(s => `
+            <li style="margin-bottom: 4px;">
+                <strong>${esc(s.firstName + ' ' + s.lastName)}</strong> (${esc(s.degree || 'Alum')})
+                ${s.currentJob ? `<br><span style="font-size: 0.85em; color: #666;">${esc(s.currentJob)}</span>` : ''}
+            </li>
+        `).join('');
+
+        const moreText = students.length > 4 ? `<div style="font-size: 0.85em; margin-top: 4px; color: #888;">+ ${students.length - 4} more</div>` : '';
+
+        const popupContent = `
+            <div style="font-family: inherit; max-width: 250px;">
+                <h4 style="margin: 0 0 6px 0; font-size: 1rem; border-bottom: 1px solid #eee; padding-bottom: 4px; color: #111;">
+                    📍 ${esc(locName)} (${students.length})
+                </h4>
+                <ul style="padding-left: 16px; margin: 0; font-size: 0.85rem; color: #333;">
+                    ${studentListHtml}
+                </ul>
+                ${moreText}
+                <button type="button" class="map-filter-btn" data-loc="${esc(locName)}" style="margin-top: 8px; width: 100%; padding: 4px 8px; font-size: 0.8rem; background: #10b981; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">
+                    Filter Roster by ${esc(locName)}
+                </button>
+            </div>
+        `;
+
+        marker.bindPopup(popupContent);
+    });
+
+    if (bounds.length > 0) {
+        alumniMapInstance.fitBounds(bounds, { padding: [40, 40], maxZoom: 8 });
+    }
+}
+
 // Compact row for the Students/Alumni list — there can be hundreds of entries,
 // so this is deliberately much lighter than the faculty card.
 function renderStudentRow(s) {
@@ -420,14 +574,25 @@ function renderStudentRow(s) {
 
     const metaParts = [];
     if (s.advisor) {
-        metaParts.push(`Advisor: <a class="award-person" data-advisor="${esc(s.advisor)}" href="#">${esc(s.advisor)}</a>`);
+        let advHtml = `Advisor: <a class="award-person" data-advisor="${esc(s.advisor)}" href="#">${esc(s.advisor)}</a>`;
+        if (s.coAdvisor) {
+            advHtml += ` & <a class="award-person" data-advisor="${esc(s.coAdvisor)}" href="#">${esc(s.coAdvisor)}</a> <span style="font-size:0.85em; color:var(--text-secondary);">(Co-advisor)</span>`;
+        }
+        metaParts.push(advHtml);
     }
     if (s.degree) metaParts.push(esc(s.degree));
+    if (s.location) {
+        metaParts.push(`<span class="entry-location" data-location="${esc(s.location)}" title="Filter by location">📍 ${esc(s.location)}</span>`);
+    }
 
     const detailParts = [];
     if (s.currentJob) detailParts.push(`Now: ${esc(s.currentJob)}`);
     if (s.firstJob) detailParts.push(`First job: ${esc(s.firstJob)}`);
     if (s.internships) detailParts.push(`Internships: ${esc(s.internships)}`);
+
+    const dissertationHtml = s.dissertationTitle
+        ? `<div class="entry-dissertation"><span class="dissertation-label">📜 Dissertation:</span> ${esc(s.dissertationTitle)}</div>`
+        : '';
 
     const honorsHtml = s.honors.length
         ? `<div class="entry-honors"><span class="honors-label">🏆 Honors:</span> ${s.honors.map(esc).join(' · ')}</div>`
@@ -446,6 +611,7 @@ function renderStudentRow(s) {
           ${icons ? `<span class="entry-icons">${icons}</span>` : ''}
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
+        ${dissertationHtml}
         ${detailParts.length ? `<div class="entry-details">${detailParts.join(' · ')}</div>` : ''}
         ${honorsHtml}
         ${topicTags ? `<div class="entry-tags">${topicTags}</div>` : ''}
@@ -558,8 +724,6 @@ function renderInsights(students = allStudents) {
     }
     const withInternships = students.filter(s => s.internships).length;
     const withHonors = students.filter(s => s.honors.length).length;
-    const currentCount = students.filter(s => studentStatus(s) === 'current').length;
-    const alumniCount = total - currentCount;
 
     const academiaStudents = students.filter(s => isAcademiaJob(s.currentJob) || isAcademiaJob(s.firstJob));
     const academiaCount = academiaStudents.length;
@@ -572,15 +736,13 @@ function renderInsights(students = allStudents) {
 
     const gmuAlumniFacultyList = getGmuAlumniFaculty(students);
 
-    const advisorCounts = topCounts(students.map(s => s.advisor), 8);
+    const advisorCounts = topCounts(students.flatMap(s => [s.advisor, s.coAdvisor].filter(Boolean)), 10);
+    const locationCounts = topCounts(students.map(s => s.location), 8);
     const topicCounts = topCounts(students.flatMap(s => s.topics), 16);
-    const orgCounts = topCounts(
-        students.flatMap(s => [
-            extractOrg(s.currentJob),
-            ...splitList(s.internships).map(extractOrg),
-        ]),
-        10
-    );
+
+    const acadOrgs = topCounts(academiaStudents.map(s => extractOrg(s.currentJob) || extractOrg(s.firstJob)), 6);
+    const indOrgs = topCounts(industryStudents.map(s => extractOrg(s.currentJob) || extractOrg(s.firstJob)), 6);
+    const govOrgs = topCounts(govStudents.map(s => extractOrg(s.currentJob) || extractOrg(s.firstJob)), 6);
 
     const isFiltered = total < allStudents.length;
 
@@ -592,22 +754,27 @@ function renderInsights(students = allStudents) {
         { value: `${govCount} (${total ? Math.round((govCount / total) * 100) : 0}%)`, label: 'In government / national labs' },
         { value: `${total ? Math.round((withInternships / total) * 100) : 0}%`, label: 'With a documented internship' },
         { value: `${total ? Math.round((withHonors / total) * 100) : 0}%`, label: 'With an honor or award on file' },
-        { value: currentCount, label: 'Current students' },
-        { value: alumniCount, label: 'Alumni' },
     ];
 
     const maxAdvisor = advisorCounts[0]?.count || 1;
-    const maxOrg = orgCounts[0]?.count || 1;
+    const maxLoc = locationCounts[0]?.count || 1;
 
     return `
-    <p class="insights-caption">Auto-computed from the tracked roster below — a work in progress, not the full department. Employer names are extracted heuristically from free-text job/internship entries, so treat that list as approximate.</p>
+    <p class="insights-caption">Auto-computed from the tracked roster — interactive map, geographic hubs, employer breakdown, and faculty metrics.</p>
     <div class="stat-tiles">
       ${tiles.map(t => `<div class="stat-tile"><div class="stat-tile-value">${esc(t.value)}</div><div class="stat-tile-label">${esc(t.label)}</div></div>`).join('')}
     </div>
 
+    <!-- Interactive Alumni Map -->
+    <div class="insights-section alumni-map-container">
+      <h3 class="insights-heading">🗺️ Interactive Alumni Map</h3>
+      <p class="insights-caption">Geographic placement of GMU CS alumni and students; click any marker to view alumni or filter by location.</p>
+      <div id="alumni-map" class="alumni-map"></div>
+    </div>
+
     ${gmuAlumniFacultyList.length ? `
     <div class="insights-section">
-      <h3 class="insights-heading">GMU CS Alumni on GMU Faculty (${gmuAlumniFacultyList.length})</h3>
+      <h3 class="insights-heading">🏛️ GMU CS Alumni on GMU Faculty (${gmuAlumniFacultyList.length})</h3>
       <p class="insights-caption">GMU CS graduates who became faculty members at George Mason University; click a name to view their faculty card.</p>
       <div class="interest-tags insights-tags">
         ${gmuAlumniFacultyList.map(item => `
@@ -618,10 +785,64 @@ function renderInsights(students = allStudents) {
       </div>
     </div>` : ''}
 
+    <div class="insights-grid-2col">
+      ${acadOrgs.length || indOrgs.length ? `
+      <div class="insights-section">
+        <h3 class="insights-heading">🏢 Top Employers & Institutions</h3>
+        <p class="insights-caption">Hiring breakdown across Academia, Industry, and Government; click to search.</p>
+
+        ${acadOrgs.length ? `
+        <h4 style="margin: 0.8rem 0 0.4rem 0; font-size: 0.95rem; color: var(--text-primary);">Academic & Research Institutions</h4>
+        <div class="interest-tags insights-tags" style="margin-bottom: 1rem;">
+          ${acadOrgs.map(({ value, count }) => `
+            <button type="button" class="interest-tag ranked-item" data-org="${esc(value)}" style="cursor: pointer; border: 1px solid var(--border-color);">
+              ${esc(value)} <span class="tag-count">${count}</span>
+            </button>
+          `).join('')}
+        </div>` : ''}
+
+        ${indOrgs.length ? `
+        <h4 style="margin: 0.8rem 0 0.4rem 0; font-size: 0.95rem; color: var(--text-primary);">Industry Tech Leaders</h4>
+        <div class="interest-tags insights-tags" style="margin-bottom: 1rem;">
+          ${indOrgs.map(({ value, count }) => `
+            <button type="button" class="interest-tag ranked-item" data-org="${esc(value)}" style="cursor: pointer; border: 1px solid var(--border-color);">
+              ${esc(value)} <span class="tag-count">${count}</span>
+            </button>
+          `).join('')}
+        </div>` : ''}
+
+        ${govOrgs.length ? `
+        <h4 style="margin: 0.8rem 0 0.4rem 0; font-size: 0.95rem; color: var(--text-primary);">Government & National Labs</h4>
+        <div class="interest-tags insights-tags">
+          ${govOrgs.map(({ value, count }) => `
+            <button type="button" class="interest-tag ranked-item" data-org="${esc(value)}" style="cursor: pointer; border: 1px solid var(--border-color);">
+              ${esc(value)} <span class="tag-count">${count}</span>
+            </button>
+          `).join('')}
+        </div>` : ''}
+      </div>` : ''}
+
+      ${locationCounts.length ? `
+      <div class="insights-section">
+        <h3 class="insights-heading">📍 Top Geographic Hubs</h3>
+        <p class="insights-caption">Top cities and regions where alumni are located; click to filter roster.</p>
+        <div class="ranked-list">
+          ${locationCounts.map(({ value, count }) => `
+            <button type="button" class="ranked-item" data-location="${esc(value)}" title="Filter by ${esc(value)}">
+              <div class="ranked-header">
+                <span class="ranked-name">📍 ${esc(value)}</span>
+                <span class="ranked-count">${count}</span>
+              </div>
+              <div class="ranked-track"><div class="ranked-bar" style="width: ${Math.round((count / maxLoc) * 100)}%;"></div></div>
+            </button>`).join('')}
+        </div>
+      </div>` : ''}
+    </div>
+
     ${advisorCounts.length ? `
-    <div class="insights-section">
-      <h3 class="insights-heading">Top Advisors</h3>
-      <p class="insights-caption">By number of tracked students; click to see their advisees.</p>
+    <div class="insights-section" style="margin-top: 1.5rem;">
+      <h3 class="insights-heading">🎓 Top Advisors & Co-Advisors</h3>
+      <p class="insights-caption">By number of tracked advisees; click to see their advisees.</p>
       <div class="ranked-list">
         ${advisorCounts.map(({ value, count }) => `
           <button type="button" class="ranked-item" data-advisor="${esc(value)}" title="Filter by ${esc(value)}">
@@ -634,25 +855,9 @@ function renderInsights(students = allStudents) {
       </div>
     </div>` : ''}
 
-    ${orgCounts.length ? `
-    <div class="insights-section">
-      <h3 class="insights-heading">Where They've Worked</h3>
-      <p class="insights-caption">Top employers seen across current jobs and internships (approximate, see caption above); click to search.</p>
-      <div class="ranked-list">
-        ${orgCounts.map(({ value, count }) => `
-          <button type="button" class="ranked-item" data-org="${esc(value)}" title="Search for ${esc(value)}">
-            <div class="ranked-header">
-              <span class="ranked-name">${esc(value)}</span>
-              <span class="ranked-count">${count}</span>
-            </div>
-            <div class="ranked-track"><div class="ranked-bar" style="width: ${Math.round((count / maxOrg) * 100)}%;"></div></div>
-          </button>`).join('')}
-      </div>
-    </div>` : ''}
-
     ${topicCounts.length ? `
     <div class="insights-section">
-      <h3 class="insights-heading">Popular Research Topics</h3>
+      <h3 class="insights-heading">🏷️ Popular Research Topics</h3>
       <p class="insights-caption">Click a topic to see who works on it.</p>
       <div class="interest-tags insights-tags">
         ${topicCounts.map(({ value, count }) => `<span class="interest-tag" data-topic="${esc(value)}">${esc(value)} <span class="tag-count">${count}</span></span>`).join('')}
@@ -686,6 +891,22 @@ document.addEventListener('click', e => {
     resetFilterDropdowns();
     document.getElementById('main-search').value = item.dataset.org;
     search.resetScope();
+    window.scrollTo({ top: 0 });
+    render();
+});
+
+// Click a location badge or popup button → filter to that location
+document.addEventListener('click', e => {
+    const item = e.target.closest('[data-location], [data-loc]');
+    if (!item || item.closest('[data-advisor]') || item.closest('.ranked-item[data-org]')) return;
+    const locName = item.dataset.location || item.dataset.loc;
+    if (!locName) return;
+    e.preventDefault();
+    currentView = 'directory';
+    activeTopic = null;
+    document.getElementById('active-filter').style.display = 'none';
+    resetFilterDropdowns();
+    search.setSearchValue(`location: ${locName}`);
     window.scrollTo({ top: 0 });
     render();
 });

@@ -1,381 +1,369 @@
-First Name,Last Name,Advisor,Degree,Current Job,First Job,Internships,Honors & Awards,Topics,Picture,Website,LinkedIn,Google Scholar
-Timothy,Balint,Jan Allbeck,PhD,"Postdoctoral Researcher, TU Delft (Computer Graphics and Visualization group)",,,,"VIRTUAL HUMANS, PROCEDURAL GENERATION, GAMES",,https://graphics.tudelft.nl/timothy-balint/,https://www.linkedin.com/in/john-timothy-balint-431734b2,https://scholar.google.com/citations?user=ZlRk8SQAAAAJ&hl=en
-John,Mooney,Jan Allbeck,MS,,,,,,,http://mason.gmu.edu/~jmooney3/,https://www.linkedin.com/in/jmooneycs/,
-Rohan,Gandhi,Jan Allbeck,MS,,,,,,,,,
-Weizi,Li,Jan Allbeck,MS,"Assistant Professor, UC Riverside (Fluidic City Lab)",,"Research Intern, Disney Research; Research Intern, Lenovo Research; Research Intern, National University of Singapore",Postdoctoral Hammer Fellow (MIT IDSS),"TRAFFIC SIMULATION, AUTONOMOUS VEHICLES",,https://weizi-li.github.io/,,https://scholar.google.com/citations?user=kuaAAnMAAAAJ&hl=en
-Poorvi,Acharya,Antonios Anastasopoulos,PhD,,,"Research Intern, Berkeley Augmented Telemedicine Group, UC Berkeley (Jan-May 2016); Full Stack Developer/Big Data Intern, DesignMind",,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/poorvi-acharya-824839118/,https://scholar.google.com/citations?user=NPvy2gIAAAAJ&hl=en
-Milind,Agarwal,Antonios Anastasopoulos,PhD '25,"Senior Forward Deployed Engineer, Lilt",,"Undergraduate Research Intern, Johns Hopkins University (labs of D. Yarowsky, J. Markle, A. Battle)",Doctoral Research Scholar 2024-25 (George Mason University); Stanford SILICON Practitioners Award,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=eRaPEZ0AAAAJ&hl=en
-Syeda Sabrina,Akter,Antonios Anastasopoulos,PhD,,,,"Distinguished Academic Achievement Award (GMU, M.S. Computer Science); Outstanding Graduate Teaching Assistant Award (2022-2023); Dissertation Completion Award (GMU)","NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/syeda-sabrina-akter/,https://scholar.google.com/citations?user=PHMT3scAAAAJ&hl=en
-Kourosh,Baghaei,Antonios Anastasopoulos,PhD,,,"PhD Research Intern (Perception), Zoox (Summer)",,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/kourosh-t-baghaei,https://scholar.google.com/citations?user=i-NHLQ0AAAAJ&hl=en
-Prabin,Bhandari,Antonios Anastasopoulos,PhD,,,"Research Intern, Oak Ridge National Laboratory",,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=V_4BF3EAAAAJ&hl=en
-Fahim,Faisal,Antonios Anastasopoulos,PhD,,,"Research Intern, Zoom (Summer 2025)",,"NLP, DIALECT NLP, LOW-RESOURCE LANGUAGES",,,https://www.linkedin.com/in/faisalfahim,https://scholar.google.com/citations?user=4NgtQ2EAAAAJ&hl=en
-Jonathan,Hus,Antonios Anastasopoulos,PhD,,,,,"NLP, MACHINE TRANSLATION",,,,
-Nate,Krasner,Antonios Anastasopoulos,PhD,,,,CRA Outstanding Undergraduate Researcher Award - Honorable Mention (2022),"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=hRXKWdUAAAAJ&hl=en
-Ellie,Liebl,Antonios Anastasopoulos,PhD,,,,,"LINGUISTICS, NLP",,,,https://scholar.google.com/citations?user=caoGkaIAAAAJ&hl=en
-Chutong,Meng,Antonios Anastasopoulos,PhD,,,,,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=lgmpN3kAAAAJ&hl=en
-Anjishnu,Mukherjee,Antonios Anastasopoulos,PhD,,,,,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/anjishnumukherjee/,https://scholar.google.com/citations?user=3849YpIAAAAJ&hl=en
-Joshua,Otten,Antonios Anastasopoulos,PhD,,,"Intern, Microsoft",,"NLP, MULTILINGUAL NLP",,,,
-Belu,Ticona,Antonios Anastasopoulos,PhD,,,"Data Scientist Intern, Medallia; Data Scientist Intern, Microsoft; Intern, FLAIR (First Languages AI Reality)",,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/belu-ticona/,https://scholar.google.com/citations?user=uxUKbb8AAAAJ&hl=en
-Md Mahfuz ibn,Alam,Antonios Anastasopoulos,PhD '24,"Teaching Faculty, William & Mary",,,,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/md-mahfuz-ibn-alam-595828107/,https://scholar.google.com/citations?user=6khjEYoAAAAJ&hl=en
-Jonathan,Mbuya Kabala,Antonios Anastasopoulos,PhD '25,"ML Engineer, Visa",,,,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=vrroQS4AAAAJ
-Shuhan,Mirza,Giuseppe Ateniese,,,,"Research Intern, Cloudflare Research (Summer 2026)",,"APPLIED CRYPTOGRAPHY, PRIVACY",,https://shuhanmirza.com/,https://www.linkedin.com/in/shuhanmirza/,https://scholar.google.com/citations?user=xwSEAPsAAAAJ&hl=en
-Shuhan,Mirza,Foteini Baldimtsi,,,,"Research Intern, Cloudflare Research (Summer 2026)",,"APPLIED CRYPTOGRAPHY, PRIVACY",,https://shuhanmirza.com/,https://www.linkedin.com/in/shuhanmirza/,https://scholar.google.com/citations?user=xwSEAPsAAAAJ&hl=en
-Vinay,Devadas,Hakan Aydin,PhD '11,,,,,"REAL-TIME SYSTEMS, ENERGY MANAGEMENT",,,,https://scholar.google.com/citations?user=GUr8bLYAAAAJ&hl=en
-Baoxian,Zhao,Hakan Aydin,PhD '12,,,,,"RELIABILITY, ENERGY MANAGEMENT, REAL-TIME SYSTEMS",,,,https://scholar.google.com/citations?user=hnkDJIQAAAAJ&hl=en
-Bo,Zhang,Hakan Aydin,PhD '12,,,,"Best Paper Award, ACM MSWiM 2011 (""Maximal Utility Rate Allocation for Energy Harvesting Wireless Sensor Networks"")","WIRELESS SENSOR NETWORKS, ENERGY HARVESTING",,,,
-Mohammad Atiqul,Haque,Hakan Aydin,PhD '16,,,,,"RELIABILITY, MULTIPROCESSOR REAL-TIME SYSTEMS",,,,https://scholar.google.com/citations?user=XTJnPPkAAAAJ&hl=en
-Maryam,Bandari,Hakan Aydin,PhD '16,,,,"Best Student Paper Award, IEEE ICESS 2015 (""Power Management in Cluster-Based Energy-Harvesting Sensor Networks through Dynamic Modulation Scaling"")","ENERGY MANAGEMENT, WIRELESS SENSOR NETWORKS",,,,https://scholar.google.com/citations?user=A1L_dVAAAAAJ&hl=en
-Arda,Gumusalan,Hakan Aydin,PhD '19,Works at IBM,,,"Best Unclassified Paper Award (Fred Ellersick Award), IEEE MILCOM 2017 (""The Design and Implementation of a Multicast Address Moving Target Defensive System for Internet of Things Applications"")","WIRELESS SENSOR NETWORKS, REAL-TIME SCHEDULING",,,https://www.linkedin.com/in/arda-gumusalan-phd-5317a4bb/,
-Abhishek,Roy,Hakan Aydin,PhD '21,,,,"Best Paper Award, IGSC 2020 (""Energy-Aware Primary/Backup Scheduling of Periodic Real-Time Tasks on Heterogeneous Multicore Systems"")","REAL-TIME SYSTEMS, ENERGY EFFICIENCY",,https://mason.gmu.edu/~aroy6/,https://www.linkedin.com/in/eyeabhi/,https://scholar.google.com/citations?user=SEowV34AAAAJ&hl=en
-Xintao,Wu,Daniel Barbará,,"Professor, UNC Charlotte",,,,"DATA MINING, ANOMALY DETECTION",,,https://www.linkedin.com/in/xintaowu/,https://scholar.google.com/citations?user=ABnrRqQAAAAJ&hl=en
-Ping,Chen,Daniel Barbará,,"Professor, University of Houston",,,,"DATA MINING, ANOMALY DETECTION",,,https://www.linkedin.com/in/ping-chen-a007bb3/,https://scholar.google.com/citations?user=sVuVLNoAAAAJ&hl=en
-Ron,Dodge,Daniel Barbará,,U.S. Army,,,,"DATA MINING, ANOMALY DETECTION",,,,
-Michael,Johnson,Daniel Barbará,,,,,,"DATA MINING, ANOMALY DETECTION",,,,
-Tom,Shackelford,Daniel Barbará,,,,,,"DATA MINING, ANOMALY DETECTION",,,,
-James,Rogers,Daniel Barbará,PhD '10,,,,,DATA MINING,,,,
-Loulwah,Al-Sumait,Daniel Barbará,PhD '09,"Assistant Professor, Kuwait University",,,,"TOPIC MODELS, DATA MINING",,,,
-Hanan,Mengash,Alex Brodsky,PhD '16,"Professor, Princess Nourah bint Abdulrahman University",,,,"DECISION GUIDANCE, OPTIMIZATION",,,,
-Hesham,Altaleb,Alex Brodsky,PhD '15,"Professor, Al Imam Muhammad Ibn Saud Islamic University",,,,"DECISION GUIDANCE, ENERGY",,,,
-John,McDowal,Alex Brodsky,PhD '14,"Computer Scientist, Booz Allen Hamilton",,,,"SERVICE COMPOSITION, BPMN",,,,
-Nathan,Egge,Alex Brodsky,PhD '14,"Research Staff, Mozilla",,,"Best Paper Award, ICEIS 2013; Best Paper Award, HICSS 2011","QUERY LANGUAGES, OPTIMIZATION",,,
-Susan,Farley,Alex Brodsky,PhD '13,"Computer Scientist, Booz Allen Hamilton",,,,"DECISION GUIDANCE, SIMULATION",,,,
-Chun-Kit,Ngan,Alex Brodsky,PhD '13,"Professor, Penn State University",,,"Best Paper Award, ICEIS 2013; Best Student Paper Award, ICEIS 2011",TIME SERIES ANALYTICS,,,,
-Guodong,Shao,Alex Brodsky,PhD '13,"Computer Scientist, NIST",,,,"MANUFACTURING, SUSTAINABILITY",,,,
-Judy,Luo,Alex Brodsky,PhD '12,George Mason University,,,"Best Paper Award, ICEIS 2015","REGRESSION LEARNING, DECISION GUIDANCE",,,
-Khalid,Alodhaibi,Alex Brodsky,PhD '11,"CIO, King Fahad Medical City",,,,"RECOMMENDER SYSTEMS, DECISION GUIDANCE",,,,
-Lei,Zhang,Alex Brodsky,PhD '10,Google,,,,"SECURITY, INFORMATION DISCLOSURE",,,,
-Malak,Al-Nury,Alex Brodsky,PhD '10,"Professor/Dept Chair, Effat University",,,"Best Paper Award, HICSS 2008","SUPPLY CHAIN, SIMULATION",,,
-Csilla,Farkas,Alex Brodsky,PhD '99,"Professor, University of South Carolina",,,"IT&E Doctoral Fellowship Award, George Mason University (1996-1999); Computer Science Graduate Honor Roll Award, George Mason University (1994)",DATABASE SECURITY,,,,
-Jia,Chen,Alex Brodsky,PhD '99,,,,,CONSTRAINT DATABASES,,,,
-Victor,Segal,Alex Brodsky,PhD '99,"Principal System Engineer, MITRE Corporation",,,,CONSTRAINT DATABASES,,,,
-Samuel,Varas,Alex Brodsky,PhD '98,"Professor, Universidad Adolfo Ibáñez",,,,CONSTRAINT OPTIMIZATION,,,,
-Mohan,Krishnamoorthy,Alex Brodsky,PhD '18,"Research Consultant, Argonne National Laboratory",,"Guest Researcher, National Institute of Standards and Technology (2015-2018, concurrent with PhD)","Best Paper Award, IFIP DSS 2018","MANUFACTURING, PREDICTIVE ANALYTICS",,http://cs.gmu.edu/~mkrishn4/,,
-Roberto,Levy,Alex Brodsky,,,,,,"ENERGY POLICY, DECISION GUIDANCE",,,,
-M. Omar,Nachawati,Alex Brodsky,,,,,"Best Student Paper Award, ICORES 2021",DECISION GUIDANCE MANAGEMENT SYSTEMS,,,,
-Fernando,Boccanera,Alex Brodsky,,,,,,"HEALTHCARE, DECISION GUIDANCE",,,,
-Na,Wang,Songqing Chen,PhD '25,"Assistant Teaching Professor, Penn State Harrisburg",,,,NETWORKED SYSTEMS,,,,
-Zili,Zha,Songqing Chen,PhD '21,Meta (Facebook),,,,DISTRIBUTED SYSTEMS,,,,
-Li,Liu,Songqing Chen,PhD '20,Google,,,,NETWORKED SYSTEMS,,,,
-Mengbai,Xiao,Songqing Chen,PhD '18,"Professor, Shandong University",,,,"MULTIMEDIA, DISTRIBUTED SYSTEMS",,,,
-Wentao,Chang,Songqing Chen,PhD '18,Google,,,,MOBILE COMPUTING,,,,
-An,Wang,Songqing Chen,PhD '18,"Assistant Professor, Case Western Reserve University",,,,"SECURITY, NETWORKED SYSTEMS",,,,
-Huangxin,Wang,Songqing Chen,PhD '17,Meta (Facebook),,,,NETWORKED SYSTEMS,,,,
-Mohammad,Karami,Songqing Chen,PhD '16,Google,,,,SECURITY,,,,
-Mohammed,Hassan,Songqing Chen,PhD '14,Google,,,,INTERNET MEASUREMENT,,,,
-Yao,Liu,Songqing Chen,PhD '13,"Associate Professor, Rutgers University",,,,"MOBILE SECURITY, WIRELESS SYSTEMS",,,,
-Lei,Liu,Songqing Chen,PhD '10,Vuclip,,,,"MOBILE COMPUTING, CLOUD COMPUTING",,,,
-Dongyu,Liu,Songqing Chen,PhD '09,MicroStrategy,,,,DISTRIBUTED SYSTEMS,,,,
-Ming,Zhang,Songqing Chen,MS '15,Amazon,,,,DISTRIBUTED SYSTEMS,,,,
-Xin,Li,Songqing Chen,MS '13,Samsung Research America,,,,NETWORKED SYSTEMS,,,,
-Kshitiz,Bhattarai,Songqing Chen,MS '12,SAP Labs,,,,NETWORKED SYSTEMS,,,,
-Ben,Gelman,Carlotta Domeniconi,MS,,,,,"MACHINE LEARNING, SECURITY",,,,
-Hamed,Sarvari,Carlotta Domeniconi,PhD,,,,,"ANOMALY DETECTION, MACHINE LEARNING",,,,
-Raj,Patel,Carlotta Domeniconi,PhD '24,,,,,"NLP, REPRESENTATION LEARNING",,,,
-Bahman,Pedrood,Carlotta Domeniconi,PhD '23,"Software Engineer, Google",,,,"PROBABILISTIC MODELS, HYPERGRAPHS",,,,
-Matt,Revelle,Carlotta Domeniconi,PhD '21,"Assistant Professor, Montana State University",,,,SOCIAL NETWORKS,,dynamictyping.com,,
-Priya,Mani,Carlotta Domeniconi,PhD '21,"Senior Manager, RBC",,,,DATA CLUSTERING,,,,
-David,Etter,Carlotta Domeniconi,PhD '15,,,,,"MULTIMEDIA RETRIEVAL, LEARNING TO RANK",,,,
-Tanwistha,Saha,Carlotta Domeniconi,PhD '14,"Advanced Analytics Engineer, Intel",,,,"RELATIONAL NETWORKS, MACHINE LEARNING",,,,
-Pu,Wang,Carlotta Domeniconi,PhD '11,"Software Engineer, Google",,,,"BAYESIAN MODELS, UNSUPERVISED LEARNING",,,,
-Loulwah,AlSumait,Carlotta Domeniconi,PhD '09,"Assistant Professor, Kuwait University",,,,"TOPIC MODELS, DATA MINING",,,,
-Muna,Al-Razgan,Carlotta Domeniconi,PhD '08,"Assistant Professor, King Saud University",,,,CLUSTERING ENSEMBLES,,,,
-Kevin,Murray,Zoran Durić,,,,,,COMPUTER VISION,,,,
-Bikram,Adhikari,Zoran Durić,,,,,"Second Place, Virtual Virginia Datathon (2021); Digital Innovation Summer Fellowship for Applied Research (Summer 2022)",COMPUTER VISION,,,,
-Daniel,Delannes-molka,Zoran Durić,,,,,,COMPUTER VISION,,,,
-Siyu,Lei,Zoran Durić,,,,,,COMPUTER VISION,,,,
-Neil,Johnson,Zoran Durić,PhD '00,,,,,"STEGANOGRAPHY, INFORMATION HIDING, SECURITY",,,,
-Ricci,Heishman,Zoran Durić,PhD '07,,,,,"COMPUTER VISION, EYE TRACKING",,,,
-Youn-Hee,Kim,Zoran Durić,PhD '08,,,,,"STEGANOGRAPHY, INFORMATION HIDING",,,,
-Ed,Lawson,Zoran Durić,PhD '10,,,,,"GAIT ANALYSIS, COMPUTER VISION",,,,
-Dan,Fleck,Zoran Durić,PhD '10,"Research Associate Professor, GMU",,,,"COMPUTER VISION, 3D MODELING",,,,
-Nalini,Vishnoi,Zoran Durić,PhD '14,,,,,"GAIT RECOGNITION, COMPUTER VISION",,,,
-Gene,Shuman,Zoran Durić,PhD '16,,,,,"MYOELECTRIC SIGNALS, BIOMEDICAL SIGNAL PROCESSING",,,,
-Chaitanya,Yavvari,Zoran Durić,PhD '19,,,,,"AUTONOMOUS VEHICLES, COMPUTER VISION",,,,
-Kyle,Jackson,Zoran Durić,PhD '23,,,,,"HUMAN MOVEMENT ANALYSIS, COMPUTER VISION",,,,
-Sumer,Jabri,Zoran Durić,MS '99,,,,,COMPUTER VISION,,,,
-Diego,Vasquez,Zoran Durić,MS '01,,,,,COMPUTER VISION,,,,
-Philip,Barber,Zoran Durić,MS '02,,,,,COMPUTER VISION,,,,
-Yan,Sun,Zoran Durić,MS '02,,,,,COMPUTER VISION,,,,
-David,Harmony,Zoran Durić,MS '03,,,,,COMPUTER VISION,,,,
-Wallace,Lawson,Zoran Durić,MS '04,"Computer Scientist, Naval Research Lab",,,,"COMPUTER VISION, GAIT ANALYSIS",,,,
-Michael,Sullivan,Zoran Durić,MS '09,,,,,COMPUTER VISION,,,,
-Matthew,Revelle,Zoran Durić,MS '09,,,,,COMPUTER VISION,,,,
-Dusan,Puletic,Zoran Durić,MS '12,,,,,COMPUTER VISION,,,,
-Kyle,Soeder,Zoran Durić,MS '15,,,,,COMPUTER VISION,,,,
-Sam,Gelman,Zoran Durić,MS '16,,,,"Outstanding Graduate Teaching Assistant Award, George Mason University (2016)",COMPUTER VISION,,,,
-Brian,Notarianni,Zoran Durić,MS '16,,,,,COMPUTER VISION,,,,
-Nathan,Obert,Zoran Durić,MS '18,,,,,COMPUTER VISION,,,,
-Nirav,Sheth,Zoran Durić,MS '19,,,,,COMPUTER VISION,,,,
-Chris,Seebeck,Zoran Durić,MS '20,,,,,COMPUTER VISION,,,,
-Jesse,Schwartz,Yotam Gingold,,,,,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/jesse%20schwartz.jpg,https://jesseschwartz25.github.io,https://www.linkedin.com/in/JesseSchwartz25,
-Yong,Cheng,Yotam Gingold,,,,,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/yong%20cheng.jpg,https://cocoyard.github.io/yong/,https://www.linkedin.com/in/yong-cheng-0426a4223/,
-Jialin,Huang,Yotam Gingold,,,,"Research Intern, Adobe Research (2024)","WiGRAPH Rising Star (2026); Honourable Mention Award, CHI 2026 (MoSound project)","COMPUTER GRAPHICS, HAPTICS",https://cragl.cs.gmu.edu/people/jialin%20huang.jpg,https://jayjialinhuang.github.io,,https://scholar.google.com/citations?user=RQZpXBMAAAAJ&hl=en
-Ted,Chao,Yotam Gingold,,,,"Research Intern, Adobe Research (Summer 2021); Research Intern, Tencent Pixel Lab (Summer 2023); Research Intern, Adobe Research (Summer 2024)","Outstanding Ph.D. Student Award, George Mason University (2026)","COMPUTER GRAPHICS, COLOR EDITING",https://cragl.cs.gmu.edu/people/tedchao.jpg,https://mason.gmu.edu/~cchao8/,,https://scholar.google.com/citations?user=JspopKEAAAAJ&hl=en
-Xue,Yu,Yotam Gingold,PhD '25,,,"Research Intern, Adobe Research (Summer 2020)",,"COMPUTER GRAPHICS, SHAPE EDITING",https://cragl.cs.gmu.edu/people/xue%20yu.jpg,https://krisyu.github.io/,,https://scholar.google.com/citations?user=S0ymYvgAAAAJ&hl=en
-Yong,Li,Yotam Gingold,PhD '24,"Postdoctoral Researcher, South China University of Technology",,"Research Intern, Adobe Research (Summer 2021; Summer 2022)","Distinguished Academic Achievement, George Mason University Dept. of Computer Science (May 2024); Research Initiation Award, George Mason University (May 2020)","COMPUTER GRAPHICS, MESH PROCESSING",https://cragl.cs.gmu.edu/people/yong%20li.jpg,https://pressureless.github.io/,,
-Chuan,Yan,Yotam Gingold,PhD '24,"Postdoc, Stanford University",,,"MAGIC Grant, Brown Institute for Media Innovation (2025-2026, for HiFiSketch); MAGIC Grant, Brown Institute for Media Innovation (2026-2027, for Grammar of Hatching)","SKETCH VECTORIZATION, COMPUTER GRAPHICS",https://cragl.cs.gmu.edu/people/chuan%20yan.jpg,https://nauhcnay.github.io/,https://www.linkedin.com/in/chuan-yan-8b4074198/,https://scholar.google.com/citations?user=z0VFLowAAAAJ&hl=en
-Josef,Graus,Yotam Gingold,PhD '23,"Principal Software Engineer, SRC Inc.",,,,"COMPUTER GRAPHICS, PREDICTIVE INTERACTION",https://cragl.cs.gmu.edu/people/joe.jpg,https://josefgraus.github.io/,,
-Jianchao,Tan,Yotam Gingold,PhD '19,"Senior Research Scientist, Kwai Inc.","Research Scientist, Megvii (Face++)",,"Outstanding Graduate Student Award, George Mason University CS Department (2019)","COMPUTER GRAPHICS, IMAGE DECOMPOSITION",https://cragl.cs.gmu.edu/people/jianchao.jpg,https://jianchaotan.github.io/,,
-Songrun,Liu,Yotam Gingold,PhD '18,"Senior Software Engineer, Roblox",Amazon,,NSF Graduate Research Fellowship,"COMPUTER GRAPHICS, ANIMATION",https://cragl.cs.gmu.edu/people/songrun.jpg,https://songrun.github.io/,,
-Henro,Kriel,Yotam Gingold,MS '23,,,,,"COMPUTER GRAPHICS, SHADER PROGRAMMING",https://cragl.cs.gmu.edu/people/henro_kriel.jpg,,,
-Nusha,Mehmanesh,Yotam Gingold,MS,,,,,COMPUTER GRAPHICS,,,,
-Lisa,Huynh,Yotam Gingold,MS,,,,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/lisa.jpg,,,
-Matt,Sabol,Yotam Gingold,MS,,,,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/matt.jpg,,,
-Chaitanya,Pantar,Yotam Gingold,MS,,,,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/chaitanya.jpg,,,
-Fahim Arsad,Nafis,Bo Han,,,,,,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
-Sthitadhi,Sengupta,Bo Han,,,,,,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
-Ruizhi,Cheng,Bo Han,,,,"Networking Research Intern, Bell Labs (Summer 2024)",,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
-Nan,Wu,Bo Han,PhD '24,,,,,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
-Ding,Zhang,Bo Han,,Amazon,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",,,,
-Nathaniel,Moyer,Evgenios Kornaropoulos,,,,,,"CRYPTOGRAPHY, SECURITY",,https://www.nathanielmoyer.com/,,https://scholar.google.com/citations?user=eUOenK0AAAAJ&hl=en
-Somiya,Chhillar,Evgenios Kornaropoulos,,,,,,"CRYPTOGRAPHY, SECURITY",,,,
-Yimeng,Li,Jana Košecká,PhD '23,,,"Research Intern, Honda Research Institute US (2020); Research Intern, AFRL MMOI",,"COMPUTER VISION, ROBOTICS",,https://yimengli46.github.io/,https://www.linkedin.com/in/yimeng-li-423666102/,https://scholar.google.com/citations?user=gOLPBtMAAAAJ&hl=en
-Sulabh,Shresta,Jana Košecká,,,,,,"COMPUTER VISION, ROBOTICS",,https://github.com/sulabh-shr,https://www.linkedin.com/in/sulabh-shrestha/,https://scholar.google.com/citations?user=pZkPBhkAAAAJ&hl=en
-Negar,Nejatishahidin,Jana Košecká,,,,,,"COMPUTER VISION, ROBOTICS",,https://github.com/N-NEJATISHAHIDIN,,https://scholar.google.com/citations?user=QUdDLg8AAAAJ&hl=en
-Pooya,Fayyazsanavi,Jana Košecká,,,,,,"COMPUTER VISION, ROBOTICS",,,https://www.linkedin.com/in/pooya-fayyaz-587a6712b/,https://scholar.google.com/citations?user=ZVQw2OAAAAAJ&hl=en
-Navid,Rajabi,Jana Košecká,,,,,,"COMPUTER VISION, VISION-LANGUAGE",,https://navidnr.com/,https://www.linkedin.com/in/navid-rajabi-ph-d-a8751084/,https://scholar.google.com/citations?user=muMzuwcAAAAJ&hl=en
-Arnab,Debnath,Jana Košecká,,,,,,"COMPUTER VISION, ROBOTICS",,,https://www.linkedin.com/in/arnab-debnath-18a882120/,https://scholar.google.com/citations?user=9horFbwAAAAJ&hl=en
-Md. Alimoor,Reza,Jana Košecká,PhD,Assistant Professor at Drake University,,,"Outstanding Graduate Teaching Assistant Award, GMU (2022); Distinguished Graduate Teaching Assistant Award, GMU (2017); ORAU Summer Journeyman Fellowship Award, U.S. Army Research Lab (2017)","COMPUTER VISION, ROBOTICS",,,,https://scholar.google.com/citations?user=RXcEJocAAAAJ&hl=en
-Arsalan,Mousavian,Jana Košecká,PhD,Senior Research Scientist at NVIDIA (Seattle Robotics Lab),,"Research Intern, Google Brain Robotics; Research Intern, Zoox; Research Intern, Google StreetView",,"ROBOTICS, COMPUTER VISION",,,,https://scholar.google.com/citations?user=fcA9m88AAAAJ&hl=en
-George,Georgakis,Jana Košecká,PhD,Robotics Technologist at NASA Jet Propulsion Laboratory,Postdoctoral Researcher at GRASP Lab (UPenn),"Computer Vision Research Intern, Siemens CT (two summers); Research Intern, UII America (Summer 2019)","Outstanding Graduate Teaching Assistant Award, Department of Computer Science, GMU (2015-16)","ROBOTICS, COMPUTER VISION",,https://ggeorgak11.github.io/,https://www.linkedin.com/in/georgios-georgakis-517a1a76/,https://scholar.google.com/citations?user=ndbhEbYAAAAJ&hl=en
-Hui,Zheng,Jana Košecká,PhD,,,,,COMPUTER VISION,,,,
-Le Phi,Hung,Jana Košecká,PhD,,,,,COMPUTER VISION,,,,
-Gautam,Singh,Jana Košecká,PhD,,,,,COMPUTER VISION,,http://cs.gmu.edu/~gsinghc,,
-Shenghui,Zhou,Jana Košecká,PhD,,,,,COMPUTER VISION,,,,
-Wei,Zhang,Jana Košecká,PhD '07,,,,,COMPUTER VISION,,,,
-Fayin,Li,Jana Košecká,PhD '06,,,,,COMPUTER VISION,,,,
-Michael,Paton,Jana Košecká,MS '12,,,,,COMPUTER VISION,,,,
-Xing,Zhou,Jana Košecká,MS '13,,,,,COMPUTER VISION,,,,
-Damla,Arifoglu,Jana Košecká,MS '12,,,,,COMPUTER VISION,,,,
-Levi,Lister,Jana Košecká,MS,,,,,COMPUTER VISION,,,,
-Aohan,Zhao,Jana Košecká,MS,,,,,COMPUTER VISION,,,,
-Philip,Barber,Jana Košecká,MS,,,,,COMPUTER VISION,,,,
-Martha,McJunkin,Jana Košecká,MS,,,,,COMPUTER VISION,,,,
-Jason,Hayes,Jana Košecká,MS,,,,,COMPUTER VISION,,,,
-Md. Mahmudul Hasan,Pious,Wing Lam,PhD,,,,,"SOFTWARE ENGINEERING, TESTING",,,,
-Safwat Ali,Khan,Wing Lam,PhD,,,,,"SOFTWARE ENGINEERING, TESTING",,,,
-Suzzana,Rafi,Wing Lam,PhD,,,,,"SOFTWARE ENGINEERING, TESTING",,,,
-Talank,Baral,Wing Lam,PhD,,,,,"SOFTWARE ENGINEERING, TESTING",,,,
-Ying,Zhou,Wing Lam,PhD,,,,,"SOFTWARE ENGINEERING, TESTING",,,,
-Bala Naren,Chanumolu,Wing Lam,MS,,Amazon Web Services (AWS),,,"SOFTWARE ENGINEERING, TESTING",,,,
-Ruochen,Wang,Thomas LaToza,PhD,,,,,"SOFTWARE ENGINEERING, HCI",,,https://www.linkedin.com/in/wangrc/,https://scholar.google.com/citations?user=roZi8YcAAAAJ&hl=en
-Mainul,Hossain,Thomas LaToza,PhD,,,,,"SOFTWARE ENGINEERING, HCI",,,https://www.linkedin.com/in/mainul-hossain-yaad/,https://scholar.google.com/citations?user=BP1HFbcAAAAJ&hl=en
-Abdulaziz,Alaboudi,Thomas LaToza,PhD,Assistant Professor at King Saud University,,,"Best Paper Award, IEEE VL/HCC 2021","SOFTWARE ENGINEERING, DEBUGGING",,http://mason.gmu.edu/~aalaboud/,https://linkedin.com/in/abdulaziz-alaboudi-a7920937,https://scholar.google.com/citations?user=39-lgAUAAAAJ&hl=en
-Emad,Aghayi,Thomas LaToza,PhD,,,,,"SOFTWARE ENGINEERING, HCI",,http://mason.gmu.edu/~eaghayi/,,
-David,Samudio,Thomas LaToza,PhD,Assistant Professor at George Mason University,,,,"HCI, SOFTWARE ENGINEERING",,,https://www.linkedin.com/in/david-samudio-8343621a/,https://scholar.google.com/citations?user=x0HI6joAAAAJ&hl=en
-Sahar,Mehrpour,Thomas LaToza,PhD,,,,,"SOFTWARE ENGINEERING, DEVELOPER TOOLS, HCI",,,https://www.linkedin.com/in/sahar-mehrpour/,https://scholar.google.com/citations?user=-6HSIMMAAAAJ&hl=en
-Maryam,Arab,Thomas LaToza,PhD,Postdoctoral Research Associate at University of Michigan School of Information,,,"ACM Distinguished Paper Award, ICSE 2023","HCI, PROGRAMMING TOOLS",,https://sites.google.com/view/maryamarab/home,https://www.linkedin.com/in/maryam-arab/,https://scholar.google.com/citations?user=7zu9KZwAAAAJ&hl=en
-Minhyuk,Ko,Thomas LaToza,PhD,,,,"ACM Distinguished Paper Award, ICSE 2023","HCI, PROGRAMMING TOOLS",,,,
-Bobby,Chab,Fei Li,PhD,,,,,"ALGORITHMS, SCHEDULING",,,,
-Na,Wang,Fei Li,PhD '25,,,,,ALGORITHMS,,,,
-Huangxin,Wang,Fei Li,PhD '17,Research Scientist at Facebook (Menlo Park),Research Scientist at Facebook,,,"ALGORITHMS, ENERGY-EFFICIENT COMPUTING",,http://mason.gmu.edu/~hwang14/,,
-Zhi,Zhang,Fei Li,PhD '13,Software Engineer at Google (New York City),Software Engineer at Google,,,"ALGORITHMS, ONLINE ALGORITHMS",,http://cs.gmu.edu/~zzhang8/,,
-Li,Zhang,Jessica Lin,PhD '23,"Assistant Professor, University of Texas Rio Grande Valley",,,"Outstanding Ph.D. Student Award, GMU Dept. of Computer Science (2023); IMC Suneeth Nayak Scholarship, College of Engineering and Computing (2021); Best Student Full Research Paper Award Nominee, AIED 2018","DATA MINING, TIME SERIES",,https://lizhang-ts.github.io/,,
-Rasaq,Otunba,Jessica Lin,PhD '22,,,,,"DATA MINING, TIME SERIES",,https://mason.gmu.edu/~rotunba/,,
-Yifeng,Gao,Jessica Lin,PhD '21,"Assistant Professor, University of Texas Rio Grande Valley",,,,"DATA MINING, TIME SERIES",,https://flash121123.github.io/,,
-Xiaosheng,Li,Jessica Lin,PhD '20,Ant Group,,,,"DATA MINING, TIME SERIES",,https://mason.gmu.edu/~xli22/,,
-Rohan,Khade,Jessica Lin,PhD '19,Amazon,,,,"DATA MINING, TIME SERIES",,,https://www.linkedin.com/in/rohan-khade-43811417/,
-Xing,Wang,Jessica Lin,PhD '17,Airbnb,,,,"DATA MINING, TIME SERIES",,http://mason.gmu.edu/~xwang24/,,
-Chun-Kit,Ngan,Jessica Lin,PhD '13,"Associate Teaching Professor, Worcester Polytechnic Institute",,,,"DATA MINING, TIME SERIES",,https://www.wpi.edu/people/faculty/cngan,,
-Eiman,Al-Shammari,Jessica Lin,PhD '10,"Faculty member, Kuwait University",,,,"DATA MINING, TIME SERIES",,,,
-Wenjie,Xi,Jessica Lin,,,,"Machine Learning Intern, Baidu (2021); Software Engineering Intern offer, Google (announced Dec 2025)",,"DATA MINING, TIME SERIES",,https://jackxiini.github.io/,https://www.linkedin.com/in/wenjie-xi-jack/,https://scholar.google.com/citations?user=SLbTgE4AAAAJ&hl=en
-Prommy Sultana,Hossain,Jessica Lin,,,,,,"DATA MINING, TIME SERIES",,,,
-Allan,Fong,Jessica Lin,,,,,,"DATA MINING, TIME SERIES",,,,
-Thirumalai Vinjamoor Akhil,Srinivas,Jessica Lin,,,,,,"DATA MINING, TIME SERIES",,,,
-Majidur,Rahman,Jessica Lin,,,,,,"DATA MINING, TIME SERIES",,,,
-Kaiyan,Liu,Jessica Lin,,,,,,"DATA MINING, TIME SERIES",,,,
-Jie,Hao,Mingrui Liu,,,,"Applied Scientist Intern, Amazon, Seattle (Summer 2026)",,"OPTIMIZATION, MACHINE LEARNING",,https://jhao6.github.io/JieHao.github.io/,https://www.linkedin.com/in/jie-hao-00b4b7141,https://scholar.google.com/citations?hl=en&user=S8ZTkikAAAAJ
-Yuman,Wu,Mingrui Liu,,,,,,"OPTIMIZATION, MACHINE LEARNING",,,,
-Rui,Yu,Mingrui Liu,,,,,,"OPTIMIZATION, MACHINE LEARNING",,,,
-Anthony,Givans,Mingrui Liu,,,,,,"OPTIMIZATION, MACHINE LEARNING",,,,
-Tiantong,Sun,Mingrui Liu,,,,,,"OPTIMIZATION, MACHINE LEARNING",,,,
-Michael,Crawshaw,Mingrui Liu,PhD '26,"Postdoctoral Fellow, Flatiron Institute","Postdoctoral Fellow, Flatiron Institute","Intern, Flatiron Institute Center for Computational Mathematics (Summer 2025)","Best Reviewer Award, AISTATS 2025; Top Reviewer Award, ICML 2025; Top Reviewer Award, NeurIPS 2025; Top Reviewer Award (top 8%), NeurIPS 2023","OPTIMIZATION, MACHINE LEARNING",,https://mtcrawshaw.github.io,https://www.linkedin.com/in/michael-crawshaw-5a6aab150/,https://scholar.google.com/citations?user=XVrMZ_4AAAAJ&hl=en
-Yajie,Bao,Mingrui Liu,,"Assistant Professor, Fudan University",,,,"OPTIMIZATION, MACHINE LEARNING",,https://yajiebao.github.io,,https://scholar.google.com/citations?user=1n_aUsIAAAAJ&hl=en
-Xiaochuan,Gong,Mingrui Liu,MS '26,,,,,"OPTIMIZATION, MACHINE LEARNING",,,,https://scholar.google.com/citations?user=byUF8hgAAAAJ&hl=en
-Junjie,Ma,Zhicong Lu,,,,,,"HCI, SOCIAL COMPUTING",,,,
-Haichang,Li,Zhicong Lu,,,,,,"HCI, SOCIAL COMPUTING",,https://haichang.li,,
-Shiwei,Hong,Zhicong Lu,,,,,,"HCI, SOCIAL COMPUTING",,,,
-Weisen,Zhao,Zhicong Lu,,,,,,"HCI, SOCIAL COMPUTING",,,,
-Dhiman,Goswami,Zhicong Lu,,,,,,"HCI, SOCIAL COMPUTING",,,,
-Chenfeng,Duan,Lannan (Lisa) Luo,,,,,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Minghao,Hu,Lannan (Lisa) Luo,,,,"AI Research Intern, Thoughtworks (Summer 2026)",,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Junming,Chen,Lannan (Lisa) Luo,,,,,"Distinguished Artifact Award, USENIX Security 2025 (for ""Tracking You from a Thousand Miles Away! Turning a Bluetooth Device into an Apple AirTag Without Root Privileges"" — one of 6 of 2,385 submissions)","SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Xiaofeng,Qiao,Lannan (Lisa) Luo,,,,,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Alex,Scott,Lannan (Lisa) Luo,,,,,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Fengyao,Yan,Lannan (Lisa) Luo,MS '19,,,,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Junzhe,Wang,Lannan (Lisa) Luo,PhD '25,Meta,,,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Xiappeng,Li,Lannan (Lisa) Luo,PhD '20,"Applied & Data Scientist, Microsoft",,,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Kimberly,Redmond,Lannan (Lisa) Luo,MS '19,"Software Engineer, Motorola Solutions, Inc.",,,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
-Ying,Zhou,Andrian Marcus,PhD '27,,,,,SOFTWARE ENGINEERING,,,,
-Long,Doan,ThanhVu (Vu) Nguyen,,,,,,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,https://longdct.github.io,https://www.linkedin.com/in/long-dct2706,https://scholar.google.com/citations?user=BUoXUy0AAAAJ
-Hai,Duong,ThanhVu (Vu) Nguyen,,Intern at Amazon AWS,,"Applied Scientist Intern, Amazon AWS (Summer 2026)","Outstanding PhD Student Award, GMU CS (2026); NeurIPS'25 Spotlight Award; CVPR'26 Highlight Award; VNN-COMP New Participant Award (2023); 2nd Place Overall, VNN-COMP 2024 & 2025 (NeuralSAT tool)","SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,https://hocdot.github.io/,https://www.linkedin.com/in/vhduong96/,https://scholar.google.com/citations?user=CPSuIeEAAAAJ&hl=en
-Nguyen,Ho,ThanhVu (Vu) Nguyen,,,,"Software Development Engineer Intern, Amazon (AWS)",,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,,,
-Linhan,Li,ThanhVu (Vu) Nguyen,,,,,"Outstanding Teaching Assistant Award, GMU (2025)","SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,https://lli-debu.github.io/,,
-Jahnvi,,ThanhVu (Vu) Nguyen,MS,,,,,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,,,
-Didier,Ishimwe,ThanhVu (Vu) Nguyen,PhD '26,,,,"Best Paper Award, SSBSE 2025",COMPLEXITY ANALYSIS,,https://ishimwed.github.io,https://www.linkedin.com/in/didier-ishimwe-85b127147/,https://scholar.google.com/citations?user=rH4Ja0kAAAAJ&hl=en
-Guolong,Zheng,ThanhVu (Vu) Nguyen,PhD '22,Minjiang University,,,,ALLOY ANALYSIS,,,,https://scholar.google.com/citations?user=FqXt_DQAAAAJ
-Alexey,Malyshev,ThanhVu (Vu) Nguyen,MS '21,Oracle,,,,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,,,
-KimHao,Nguyen,ThanhVu (Vu) Nguyen,BS '23,"Software Engineer, Jump Trading",,"Production Engineering Intern, Meta (Facebook); Research Intern, Jump Trading","Outstanding Undergraduate Research Assistant Award (2021); ICPC North Central NA Regional 1st Place Site Winner (2019); Nebraska Student Research Days Top Presenter Award (2021)","SOFTWARE ENGINEERING, PROGRAM ANALYSIS, PROGRAM COMPLEXITY",,https://ndkimhao.github.io/,https://www.linkedin.com/in/ndkimhao,
-Ahmad,Kamari,Parth Pathak,PhD,,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/ahmad.jpg,,https://www.linkedin.com/in/ahmadkamari,
-Zhenzhe,Lin,Parth Pathak,PhD,,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/zhenzhe.jpg,,,
-Mingyo,Jeong,Parth Pathak,PhD,,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/min.jpg,,https://www.linkedin.com/in/mingyojeong,
-Hemant,Kumar,Parth Pathak,PhD,,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/hemant.jpg,,https://www.linkedin.com/in/hemant-kumar-narsani-b1798a21a,
-Rezoan Ahmed,Nazib,Parth Pathak,PhD,,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/rezoan.jpg,,,https://scholar.google.co.kr/citations?user=J6r0ABMAAAAJ&hl=en
-Tyler,Wyatt,Parth Pathak,MS,,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/tyler.jpg,,,
-Yoon,Chae,Parth Pathak,PhD '24,Assistant Professor of CS at University of Texas Arlington,,,"Best Paper Award, ACM MobiSys 2022 (OmniScatter); SIGMOBILE Research Highlight","WIRELESS NETWORKING, MOBILE COMPUTING","https://static.wixstatic.com/media/30f9a2_af863704d2b4408ea8c6b21567e952d9~mv2.jpg/v1/crop/x_1882,y_0,w_4491,h_5504/fill/w_173,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Yoon%20Chae_02.jpg",https://www.yoonchae.net/,,https://scholar.google.com/citations?user=9YY6CokAAAAJ&hl=en
-Panneer Selvam,Santhalingham,Parth Pathak,PhD '23,Assistant Professor CS at CUNY Brooklyn,,,"Best Paper Award, IEEE DSAA 2019; Outstanding Graduate Teaching Assistant, GMU CS Department (2018); Distinguished Graduate Student of the Year, GMU Information Security and Assurance (2016)","WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/panneer.jpg,https://mason.gmu.edu/~psanthal/,,
-Shuai,Wang,Parth Pathak,PhD '23,Assistant Professor at Southeast University China,,,"Best Paper Award, ICDCS 2018","WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/shuai.jpg,http://mason.gmu.edu/~swang42/,,
-Ding,Zhang,Parth Pathak,PhD '22,Amazon,,,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/ding.jpg,,https://www.linkedin.com/in/ding-zhang-651494113,
-Ting,Li,David Porfirio,PhD,,,,,HUMAN-ROBOT INTERACTION,,,,
-Puqi,Zhou,David Porfirio,PhD,,,,"Doctoral Research Scholarship 2026-2027, George Mason University; 3rd Place, Mason AI Day Graduate Poster Competition; 1st Place Presenter, PhD Symposium","HUMAN-ROBOT INTERACTION, ROBOTICS",,https://puqi7.github.io/,https://www.linkedin.com/in/puqi-zhou-784b35192/,https://scholar.google.com/citations?user=IMyHqwQAAAAJ&hl=en
-Chase,Morgan,David Porfirio,MS,,,,,HUMAN-ROBOT INTERACTION,,,,
-Eric,Swankoski,Sanjeev Setia,PhD '17,,,,,"NETWORK SECURITY, MANET",,,,
-Sankardas,Roy,Sanjeev Setia,PhD '09,"Assistant Professor, Bowling Green State University",,,"CSIS Graduate Research Endowed Assistantship, GMU (2006-2007); Provost's High Potential Graduate Assistantship, GMU (2002-2005)","NETWORK SECURITY, SENSOR NETWORKS",,,,
-Leijun,Huang,Sanjeev Setia,PhD '07,"Lecturer, Zhejiang Forestry University, China",,,,"NETWORKING, DISTRIBUTED SYSTEMS",,,,
-Sencun,Zhu,Sanjeev Setia,PhD '04,"Associate Professor, Penn State University CSE",,,,NETWORK SECURITY,,,,
-Etienne,Godard,Sanjeev Setia,PhD '01,,"M.C. Dean, Inc.",,,DISTRIBUTED SYSTEMS,,,,
-Lisa,Nicklas,Sanjeev Setia,PhD '98,,SAIC,,,DISTRIBUTED SYSTEMS,,,,
-Brian,Hrolenok,Sanjeev Setia,MS '09,,,"Research Software Developer Intern, Naval Research Lab (Summer 2005; Summer 2006)","ACM ICPC World Finals Honorable Mention, GMU team (2005); ACM ICPC Mid-Atlantic Regionals Finalist, GMU team (2004)",NETWORKING,,,,
-Aparna,Nagargadde,Sanjeev Setia,MS '09,,Amazon.com,,,NETWORKING,,,,
-Venkata Gopala,Addada,Sanjeev Setia,MS '07,,Verisign,,,NETWORKING,,,,
-Bryan,Zeigler,Sanjeev Setia,MS '05,,MITRE,,,NETWORKING,,,,
-Balan,Subramanian,Sanjeev Setia,MS '02,,"IBM, RTP",,,NETWORKING,,,,
-Janani,Panchapakesan,Sanjeev Setia,MS '01,,CACI,,,NETWORKING,,,,
-Girish,Puthanaveedu,Sanjeev Setia,MS '01,,,,,NETWORKING,,,,
-Samir,Koussih,Sanjeev Setia,MS '99,,ANS/UUNET,,,NETWORKING,,,,
-Kamlesh,Agrawal,Sanjeev Setia,MS '99,,Sybase,,,NETWORKING,,,,
-Fardina,Alam,Amarda Shehu,PhD '23,"Teaching Assistant Professor, University of Maryland College Park",,,"Outstanding Dissertation Award, GMU Dept. of Computer Science (2023); IEEE BIBM/CSBW Travel Award (2022)","AI, BIOINFORMATICS",,https://mason.gmu.edu/~falam5,https://www.linkedin.com/in/fardina-fathmiul-alam-b2b4803a/,https://scholar.google.com/citations?user=pZw9Q6gAAAAJ&hl=en
-Parastoo,Kamranfar,Amarda Shehu,PhD '23,"Teaching Assistant Professor, George Mason University",,,,"AI, STRUCTURAL HEALTH MONITORING",,https://mason.gmu.edu/~pkamranf,,
-Taseef,Rahman,Amarda Shehu,PhD '23,"Teaching Assistant Professor, University of South Florida",,"Software Engineering Intern, Google (Summer 2025, NYC)",IEEE BIBM/CSBW Workshop Travel Award,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~trahman2,,
-Dhiman,Goswami,Amarda Shehu,PhD,,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~dgoswam,,
-Kazi Lutful,Kabir,Amarda Shehu,PhD '22,"Teaching Assistant Professor, Stevens Institute of Technology",,"Applied Machine Learning Summer Research Fellow, Information Science & Technology Institute (ISTI)/Los Alamos National Laboratory (Summer 2020)","Best Paper Award, BICOB 2019","AI, BIOINFORMATICS",,https://mason.gmu.edu/~kkabir,,https://scholar.google.com/citations?hl=en&user=eCA4BFkAAAAJ&view_op=list_works&sortby=pubdate
-Ahmed Bin,Zaman,Amarda Shehu,PhD '21,"Teaching Assistant Professor, George Mason University",,,"Best Paper Award Finalist, BICOB 2019; CS Distinguished Academic Achievement Award, GMU (2021)","AI, BIOINFORMATICS",,https://mason.gmu.edu/~azaman6,https://www.linkedin.com/in/ahmed-bin-zaman,
-Zahra,Rajabi,Amarda Shehu,PhD '21,Adobe,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~zrajab,,
-Gideon,Gogovi,Amarda Shehu,PhD '21,"Assistant Professor of Data Science, University of Houston",,,,"AI, COMPUTATIONAL DATA SCIENCES",,https://www.gogovigideon.com/,,
-Nasrin,Akhter,Amarda Shehu,PhD '20,"Assistant Professor of Teaching, University at Buffalo",,,"Outstanding Graduate Student Award, GMU (2019); Outstanding Graduate Teaching Award, GMU (2017); NSF Travel Award, BIBM 2018; CRA-W Grad Cohort Travel Award (2015)","AI, BIOINFORMATICS",,https://mason.gmu.edu/~nakhter3,https://www.linkedin.com/in/nasrinakhter,https://scholar.google.com/citations?user=UxGyBtcAAAAJ&hl=en
-Daniel,Veltri,Amarda Shehu,PhD '15,,,"Best Student Paper Award, IEEE BIBM 2014; NSF GK-12 Fellowship (2010)","BIOINFORMATICS, AI",,http://binf.gmu.edu/~dveltri,,
-Irina,Hashmi,Amarda Shehu,PhD '15,"Assistant Professor, George Mason University","Postdoctoral Fellow, NIH",,"Best Poster Award, IEEE BIBM 2012","AI, BIOINFORMATICS",,http://mason.gmu.edu/~ihashmi,,
-Kevin,Molloy,Amarda Shehu,PhD '15,"Assistant Professor, James Madison University","Postdoctoral Fellow, CNRS-LAAS, Toulouse, France",,"Outstanding Graduate Student Award, GMU CS (2015); Best Paper Award, BIONETICS 2010","AI, BIOINFORMATICS",,https://mason.gmu.edu/~kmolloy1,,
-Brian,Olson,Amarda Shehu,PhD '13,,Lawrence Livermore National Lab,"Signal Processing Developer, Los Alamos National Laboratory (Summer 1996-1997); Developer, Signition Inc. (Summer 1998); Embedded Tools Developer, Green Hills Software (Summer 1999-2000)","VSE Outstanding Graduate Student Award, GMU (2013); Best Paper Award, BIONETICS 2010","AI, BIOINFORMATICS",,http://brianolson.info,,
-Uday,Kamath,Amarda Shehu,PhD '13,,BAE Systems Applied Intelligence Group,,"Humies Competition Award Honorable Mention, ACM GECCO (2012)","AI, EVOLUTIONARY COMPUTATION",,http://mason.gmu.edu/~ukamath,,
-Manpriya,Dua,Amarda Shehu,PhD '25,,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~mdua,,
-Toki Tahmid,Tinan,Amarda Shehu,PhD '25,"AI Engineer, 4A Consulting",,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~tinan,,
-Anowarul,Kabir,Amarda Shehu,PhD '25,"Assistant Professor, University of South Florida",,,"Best Paper Award, Computational Structural Bioinformatics Workshop (CSBW); Best Paper Award, BICOB 2022","AI, BIOINFORMATICS",,https://mason.gmu.edu/~akabir4,,
-Saman,Ghaemi,Amarda Shehu,PhD '22,,,,,"AI, BIOINFORMATICS",,,,
-Samuel,Blouir,Amarda Shehu,PhD,,,"AI Intern (Amazon AGI), Amazon",,"AI, MACHINE LEARNING",,https://mason.gmu.edu/~sblouir,,
-Asher,Moldwin,Amarda Shehu,PhD,,,"Research Intern, Tel Aviv University",,"AI, MACHINE LEARNING",,https://mason.gmu.edu/~amoldwin,,
-Megan,Herceg,Amarda Shehu,PhD,,,,,"AI, SYSTEMS BIOLOGY",,https://binf.gmu.edu/~mherceg/web/mypage.html,,
-Yiyang,Lian,Amarda Shehu,PhD '26,,,,,"AI, SYSTEMS BIOLOGY",,https://binf.gmu.edu/~ylian/web/mypage.html,,
-Yuanjie,Lu,Amarda Shehu,MS '21,,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~ylu22,,
-Prasanna Venkatesh,Parthasarathy,Amarda Shehu,MS '19,,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~ppartha,,
-Snehal,Sambare,Amarda Shehu,MS '19,,,,,"AI, SYSTEMS BIOLOGY",,http://binf.gmu.edu/ssambare/web/mypage.html,,
-Liban,Hassan,Amarda Shehu,MS '19,,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~lhassan1,,
-Suma,Dixit,Amarda Shehu,MS,,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~sdixit4,,
-David,Morris,Amarda Shehu,MS '17,,,,,"AI, BIOINFORMATICS",,http://mason.gmu.edu/~dmorri17,,
-Erich,O'Saben,Amarda Shehu,MS,,,,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~eosaben,,
-Ryan,Moffatt,Amarda Shehu,MS '16,,,,,"AI, BIOINFORMATICS",,http://mason.gmu.edu/~rmoffatt,,
-Rudy,Clausen,Amarda Shehu,MS '15,,,,,"AI, BIOPHYSICS",,,,
-Amr,Majul,Amarda Shehu,MS '15,,,,,"AI, CHEMISTRY",,http://www.mason.gmu.edu/~amajul,,
-Seyed Farid,Hendi,Amarda Shehu,MS '12,,,,,"AI, BIOINFORMATICS",,http://mason.gmu.edu/~shendi,,
-Christopher,Miles,Amarda Shehu,MS '10,Google,,,,"AI, BIOINFORMATICS",,http://conformations.org,,
-Sree Ram,GabbiReddy,Amarda Shehu,MS '22,,,,,"AI, MACHINE LEARNING",,,https://www.linkedin.com/in/sr33r4m/,
-Abhishek,Paudel,Gregory Stein,PhD '26,,,,"Distinguished Academic Achievement Award, GMU (2026); Fusemachines AI Fellow","ROBOTICS, PLANNING, LLM",,https://abpaudel.com,https://www.linkedin.com/in/abpaudel,https://scholar.google.com/citations?user=ytDltfUAAAAJ
-Abhish,Khanal,Gregory Stein,PhD '26,,,,,"ROBOTICS, MULTI-ROBOT, NAVIGATION",,http://abkhanal.com/,https://linkedin.com/in/aabs7,https://scholar.google.com/citations?user=dLdbu8YAAAAJ
-Raihan Islam,Arnob,Gregory Stein,PhD '26,,,,,"ROBOTICS, PLANNING, NAVIGATION",,,https://www.linkedin.com/in/raihan-islam-arnob/,
-Hoang-Dung,Bui,Gregory Stein,PhD '26,,,,,"ROBOTICS, MULTI-ROBOT, MOTION PLANNING",,,https://www.linkedin.com/in/hoangdungbui/,
-Roshan,Dhakal,Gregory Stein,PhD '26,,,,"Dissertation Completion Grant, GMU Provost's Office (2025); Provost Scholarship, GMU (2025); Outstanding Reviewer Recognition, CoRL LEAP Workshop 2024","ROBOTICS, TASK PLANNING",,https://www.dhakalroshan.com/,https://www.linkedin.com/in/roshan-dhakal/,https://scholar.google.com/citations?user=Hs_V-20AAAAJ&hl=en
-Yuanjie,Lu,Xuesu Xiao,PhD,,,"Summer Intern, Unitree (Summer 2024)",,"MACHINE LEARNING, MOTION PLANNING, ROBOTICS",https://people.cs.gmu.edu/~xiao/RobotiXX/images/yuanjie.jpg,https://yuanjielu-64.github.io/,https://www.linkedin.com/in/yuanjie-lu-9b14b6175/,https://scholar.google.com/citations?user=BVwGPdQAAAAJ&hl=en
-Manas,Gupta,Xuesu Xiao,PhD,Senior Software Engineer at Torc Robotics,,,,"AI, ROBOTICS, PLANNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/manas.jpg,,https://www.linkedin.com/in/manasguptangp/,
-Senthurbavan,Kirubaharan,Xuesu Xiao,PhD,,,,,"ROBOTICS, ROBOT LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/senthu.jpg,https://senthurbavan.github.io,https://www.linkedin.com/in/senthurbavan,https://scholar.google.com/citations?user=A1Yq5vwAAAAJ&hl=en
-Yanlin,Zhou,Xuesu Xiao,PhD,,,,,"PATH PLANNING, OPTIMIZATION, MULTI-AGENT SYSTEMS",https://people.cs.gmu.edu/~xiao/RobotiXX/images/yanlin.jpg,,,
-Linji,Wang,Xuesu Xiao,PhD,,,,,"REINFORCEMENT LEARNING, ROBOT LEARNING, GENERATIVE AI",https://people.cs.gmu.edu/~xiao/RobotiXX/images/linji.jpg,https://linjiwang.com/,https://www.linkedin.com/in/linjiw/,
-Tong,Xu,Xuesu Xiao,PhD,,,"Research Intern, H2X Lab, Boston University (May 2022 - August 2022)","Best Student Presenter Award, IEEE SSRR 2025 (Verti-Arena paper); Second Place, BARN Challenge Competition, ICRA 2025; Doctoral Research Scholarship - Tier 1, GMU (2026)","ROBOT PLANNING, REINFORCEMENT LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/tong.jpg,https://xutong05.github.io/,https://www.linkedin.com/in/tong-xu-a802941b1/,https://scholar.google.com/citations?user=IeKUpBQAAAAJ&hl=en
-Saad,Abdul Ghani,Xuesu Xiao,PhD,,,,,"MACHINE LEARNING, ROBOTICS, PATH PLANNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/saad.jpeg,,https://www.linkedin.com/in/saad-ghani-9b5824158/,
-Amir,Payandeh,Xuesu Xiao,PhD,,,"PhD Intern, Vail Systems (Summer 2023)","Best Paper Award Finalist, AAAI Fall Symposium on AI-HRI 2023 (nominated, for ""Toward Human-Like Social Robot Navigation"")","ROBOTICS, COMPUTER VISION, NLP",https://people.cs.gmu.edu/~xiao/RobotiXX/images/amirreza.jpg,,https://www.linkedin.com/in/amir-payandeh/,
-Dibyendu,Das,Xuesu Xiao,PhD,,,"Machine Learning Intern, Nissan Advanced Technology Center Silicon Valley (Summer 2024)","IDIA Predoctoral Fellowship, George Mason University (2023 cohort)","ROBOTICS, MOTION PLANNING, COMPUTER VISION",https://people.cs.gmu.edu/~xiao/RobotiXX/images/dibyendu.jpg,,https://www.linkedin.com/in/dibyendu-das-b480481bb/,
-Aniket,Datar,Xuesu Xiao,PhD,,,,"Best Paper Award Finalist, AAAI Fall Symposium on AI-HRI 2023 (nominated, for ""Toward Human-Like Social Robot Navigation"")","ROBOTICS, MOTION PLANNING, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/aniket.jpg,,https://www.linkedin.com/in/aniket-datar-9187a48b/,
-Manshi,Limbu,Xuesu Xiao,PhD,,,,"Best Paper Finalist, Cognitive Robotics track, IROS 2023","ROBOT NAVIGATION, REINFORCEMENT LEARNING, MULTI-AGENT SYSTEMS",https://people.cs.gmu.edu/~xiao/RobotiXX/images/manshi.jpg,https://mlimbuu.github.io/,,
-Anuj,Pokhrel,Xuesu Xiao,PhD,,,,"Best Poster Award, CHAI 2026 poster session (RIT)","ROBOTICS, MOTION PLANNING, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/anuj.jpg,,https://www.linkedin.com/in/anuj-pokhrel-9b8b67156/,
-Amir Hossain,Raj,Xuesu Xiao,PhD,,,,,"COMPUTER VISION, NLP, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/amir.jpeg,https://amirraj.com/,https://www.linkedin.com/in/amirraj/,https://scholar.google.com/citations?user=QpmzDxsAAAAJ&hl=en
-Mohammad,Nazeri,Xuesu Xiao,PhD,,,,,"COMPUTER VISION, DEEP LEARNING, ROBOT NAVIGATION",https://people.cs.gmu.edu/~xiao/RobotiXX/images/mohammad.jpg,https://mhnazeri.github.io/,https://www.linkedin.com/in/mhnazeri,https://scholar.google.com/citations?user=Luud0jcAAAAJ
-Chenhui,Pan,Xuesu Xiao,PhD,,,,,"ROBOTICS, MACHINE LEARNING, COMPUTER VISION",https://people.cs.gmu.edu/~xiao/RobotiXX/images/chenhui.jpg,,,
-Minh-Duc (Aaron),Nguyen,Xuesu Xiao,PhD,,,,"Best Paper Award Finalist, AAAI AI-HRI 2023","ROBOTICS, ARTIFICIAL INTELLIGENCE",https://people.cs.gmu.edu/~xiao/RobotiXX/images/aaron.png,https://ducmngx.github.io/,https://www.linkedin.com/in/mducnguyen,https://scholar.google.com/citations?user=7U1cbW0AAAAJ
-Bhabaranjan,Panigrahi,Xuesu Xiao,MS,Senior SDE at Amazon Multimodal RecSys Team,Senior SDE at Amazon Multimodal RecSys Team,,,"COMPUTER VISION, ROBOTICS, DEEP LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/ranjan.png,https://profile.bpanigrahi.com/,https://www.linkedin.com/in/b-ranjan,
-Dileep,Kumar,Xuesu Xiao,MS,Amazon,Amazon,,,"ROBOTICS, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/dileep.png,,https://www.linkedin.com/in/dileep-kumar-latchireddi-07ab66166/,
-Yu,Sun,Lishan Yang,PhD,,,,,"LLM RELIABILITY, SYSTEMS, HPC",,https://pipijing13.github.io,https://www.linkedin.com/in/yu-sun-58a423257/,https://scholar.google.com/citations?user=2h1_I5IAAAAJ&hl=en
-Ying,Tang,Lishan Yang,PhD,,,,,"SYSTEMS RELIABILITY, HPC",,,,
-Daehyun,Lee,Lishan Yang,MS '26,,,,,"SYSTEMS RELIABILITY, HPC",,,,
-Giuseppe,De Rosa,Lishan Yang,PhD (visiting),,,,,"SYSTEMS RELIABILITY, HPC",,,,
-Zhu,Zhu,Lishan Yang,MS '26,,,,,"SYSTEMS RELIABILITY, HPC",,,,
-Ming,Tang,Lishan Yang,MS,,,,,"SYSTEMS RELIABILITY, HPC",,,,
-Rohan,Mengle,Lishan Yang,MS,,,,,"SYSTEMS RELIABILITY, HPC",,,,
-Yitao,Xu,Ziyu Yao,PhD,,,,,"NLP, LARGE LANGUAGE MODELS",,https://nico21yt.github.io/,,
-Ayan Antik,Khan,Ziyu Yao,PhD,,,,,"NLP, LARGE LANGUAGE MODELS",,https://ayan-antik.github.io/,,
-Mohamed,Aghzal,Ziyu Yao,PhD,,,"Research Intern, Attijariwafa Bank (Summer 2021)","Distinguished Academic Award, GMU CS Department (2026); Best White Box Approach Award, Aletheia's Quest LLM lie detection challenge (2026); Travel Award, IEEE/CVF CVPR 2025","NLP, LARGE LANGUAGE MODELS",,http://mohamedaghzal.github.io,,
-Murong,Yue,Ziyu Yao,PhD,,,,"Outstanding PhD Student Award, GMU CS Department (2024)","NLP, LARGE LANGUAGE MODELS",,https://murongyue.github.io/,,
-Hao,Yan,Ziyu Yao,PhD,,,"Applied Scientist Intern, Amazon (Summer 2025, returning Summer 2026); Machine Learning Engineer Intern, Salesteq (Jan-Apr 2025)","Outstanding GTA Award, GMU CS Department (2020, 2021, 2022); Distinguished GTA Award, GMU CS Department (2022); Graduate Students Poster Award, Honorable Mention, GMU (2022)","NLP, LARGE LANGUAGE MODELS",,https://hyan5.github.io/,,
-Daking,Rai,Ziyu Yao,PhD,,,"AI/ML Research Intern, LinkedIn (upcoming)","Best Paper Honorable Mention, First Workshop on LLM Explainability to Reasoning and Planning, COLM 2025","NLP, LARGE LANGUAGE MODELS",,https://dakingrai.github.io/,,
-Saurabh,Srivastava,Ziyu Yao,PhD '26,Adobe,,"Research Intern, Adobe (Summer 2025); Applied Research Science Intern, Amazon (Summer 2024); NLP and Machine Learning Intern, Deloitte (Summer 2023); Research Intern, Tata Research Design and Development Centre (Summer 2016)","Outstanding GTA Award, GMU CS Department (2025); Best Machine Learning Hack and Best Use of CockroachDB Serverless, HooHacks 2023 (University of Maryland); Institute Silver Medal, Institute Proficiency Award, and Best Project Award, IIT Patna","NLP, LARGE LANGUAGE MODELS",,http://saurabhsriv.com/,,
-Sweta,Pati,Ziyu Yao,MS '25,,,,"Distinguished Academic Achievement Award, GMU CS Department","NLP, LARGE LANGUAGE MODELS",,,,
-Sam,Miller,Ziyu Yao,MS '25,,,,,"NLP, LARGE LANGUAGE MODELS",,,,
-Janit,Bidhan,Ziyu Yao,,,,,"Best Machine Learning Hack and Best Use of CockroachDB Serverless, HooHacks 2023; 2nd Place, CAHMP Student Entrepreneurship Challenge (2022)","NLP, LARGE LANGUAGE MODELS",,,,
-Gaurav,Singh,Ziyu Yao,,,,,,"NLP, LARGE LANGUAGE MODELS",,,,
-Yufan,Zhang,Jinwei Ye,PhD,,,,,"COMPUTER VISION, COMPUTATIONAL PHOTOGRAPHY",,https://yufanzhang82.github.io,,
-Su,Li,Jinwei Ye,PhD,,,,,"COMPUTER VISION, COMPUTATIONAL PHOTOGRAPHY",,,,
-Haikun,Huang,Craig Yu,PhD,,,,"Best Paper Honorable Mention, CHI 2019 (""Pose-Guided Level Design"")","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
-Minyoung,Kim,Craig Yu,PhD,,,,"Best Paper Award, Korea Computer Graphics Society (KCGS) 2019","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
-Erdem,Murat,Craig Yu,PhD,,,,,"COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
-Charles,Ahn,Craig Yu,PhD,,,,,"COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
-Ahnaf An,Nafee,Craig Yu,PhD,,,,,"COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
-Liuchuan,Yu,Craig Yu,PhD '26,,,,"Academic Achievement Award, GMU CS Department","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
-Yongqi,Zhang,Craig Yu,PhD '25,,,,"NSF Graduate Research Fellowship; Distinguished Academic Achievement Award, GMU CS Department; Oracle Undergraduate Research Fellowship; Beacon Student Success Fellowship; Best Paper Honorable Mention, CHI 2019","VIRTUAL REALITY, COMPUTATIONAL DESIGN",,,,
-Changyang,Li,Craig Yu,PhD '24,Research Scientist at Goertek Alpha Labs,Computer Vision Engineer at Meta,"Research Intern, Adobe Research - Creative Intelligence Lab (Summer 2020); Research Intern, Meta Reality Labs (Summer/Fall 2021)","Outstanding PhD Student Award, GMU CS Department; Outstanding Academic Achievement Award, GMU CS Department","COMPUTER VISION, XR, HUMAN-SCENE INTERACTION",,https://changyangli.github.io/,,
-Rawan,Al Ghofaili,Craig Yu,PhD '22,"Assistant Professor, University of Texas at Dallas",,,"Distinguished Academic Achievement Award, GMU CS Department","AR/VR, HUMAN-COMPUTER INTERACTION",,https://rawanmg.com/,,
-Wanwan,Li,Craig Yu,PhD '21,"Assistant Professor, University of Tulsa","Visiting Assistant Professor, University of South Florida",,,"COMPUTER GRAPHICS, VIRTUAL REALITY, COMPUTATIONAL DESIGN",,,,
-Biao,Xie,Craig Yu,MS '22,,,,"CRA Outstanding Undergraduate Researcher Award, Finalist; Oracle Undergraduate Research Fellowship; Best Paper Honorable Mention, CHI 2019","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
-Ying,Meng,Qiang Zeng,PhD,,,,,SYSTEMS SECURITY,,,,
-Junming,Chen,Qiang Zeng,PhD,,,,"Distinguished Artifact Award, USENIX Security 2025",SYSTEMS SECURITY,,,,
-Xiang,Li,Qiang Zeng,PhD,,,,,SYSTEMS SECURITY,,,,
-Guoming,Wu,Qiang Zeng,PhD,,,,,SYSTEMS SECURITY,,,,
-Jie,Hou,Qiang Zeng,PhD,,,,,SYSTEMS SECURITY,,,,
-Chuxiong,Wu,Qiang Zeng,PhD '25,"Assistant Professor, Southern Illinois University",,,"Top Reviewer, NeurIPS 2025; Notable Reviewer, ICLR 2025",SYSTEMS SECURITY,,https://chuxiongwu.github.io,,
-Fei,Zuo,Qiang Zeng,PhD '21,"Assistant Professor, University of Central Oklahoma",,,,SYSTEMS SECURITY,,https://fzuo.github.io,,
-Vamsi Shankar,Simhadri,Xiaokuan Zhang,PhD,,,,,"XR SECURITY, VR SECURITY",,,,
-Vishnu Teja,Kandalam,Xiaokuan Zhang,,,,,,"LLM SECURITY, VULNERABILITY ASSESSMENT",,,,
-Yichang,Xiong,Xiaokuan Zhang,,,,,,"VR SECURITY, FIRMWARE SECURITY",,,,
-Hung-Mao (Rafael),Chen,Xiaokuan Zhang,PhD '26,"Software Engineer, Google","Software Engineer, Google","Security Researcher Summer Intern, Vector35 (2022); Security Researcher Summer Intern, Certik (2024); PhD SWE Intern, Google (2025)",,"RUST SECURITY, MEMORY SAFETY",,,,
-Bo,Lu,Xiaokuan Zhang,,,,,,"RUST SECURITY, BLOCKCHAIN SECURITY",,,,
-Huizhen,Zhou,Xiaokuan Zhang,,,,,"Best Hardware Demo Award, 2nd Place, HOST 2026 (for ""Correlation Power Analysis of NIST HQC-KEM"")","POST-QUANTUM CRYPTOGRAPHY, SIDE-CHANNEL ATTACKS",,,,
-Hung,Pham,Xiaokuan Zhang,,,,,,"LLM SECURITY, VULNERABILITY ASSESSMENT",,,,
-Pranav,Agrawal,Xiaokuan Zhang,,,,,,"BLOCKCHAIN SECURITY, SMART CONTRACTS",,,,
-Preksha,Shukla,Xiaokuan Zhang,,,,,,"BLOCKCHAIN SECURITY, SMART CONTRACTS",,,,
-Tejas,Ramesh,Keren Zhou,PhD,,,,,"HIGH PERFORMANCE COMPUTING, PROGRAM ANALYSIS",,https://tejas3070.github.io/,https://linkedin.com/in/tejas-ramesh-976203190,https://scholar.google.com/citations?user=OGNnUHcAAAAJ&hl=en&oi=ao
-Bowen,Cui,Keren Zhou,PhD,,,,,"HIGH PERFORMANCE COMPUTING, MACHINE LEARNING",,,https://www.linkedin.com/in/bowen-cui-2a2a34233/,
-Jihyeong,Lee,Keren Zhou,PhD,,,,,"HIGH PERFORMANCE COMPUTING, PROGRAM ANALYSIS",,,https://www.linkedin.com/in/jlee2017/,
-Hao,Wu,Keren Zhou,PhD,,,,,"HIGH PERFORMANCE COMPUTING, PARALLEL ALGORITHMS",,,https://www.linkedin.com/in/hao-wu-a29937a9/,
-Junyu,Yin,Keren Zhou,PhD,,,,,"HIGH PERFORMANCE COMPUTING, MACHINE LEARNING",,,https://www.linkedin.com/in/junyu-yin-29202b2b8/,
-Jialiang,Gu,Keren Zhou,PhD,,,,,"HIGH PERFORMANCE COMPUTING, PROGRAM ANALYSIS",,,,
-Atul,Khatri,Keren Zhou,,,,,,HIGH PERFORMANCE COMPUTING,,,,
-Mandar,Chaudhari,Keren Zhou,MS '24,,,,,HIGH PERFORMANCE COMPUTING,,,,
-Chahat,Raj,Ziwei Zhu,PhD,,,,,"FAIRNESS, NLP, BIAS EVALUATION",,https://chahatraj.github.io/,https://linkedin.com/in/chahatraj,https://scholar.google.com/citations?user=K8EKC4gAAAAJ&hl=en&oi=ao
-Anjishnu,Mukherjee,Ziwei Zhu,PhD,,,"Developer, Google Summer of Code / Google People + AI Research (Summer 2022); Applied Scientist Intern, Amazon (Summer 2024); Applied Scientist Intern, Amazon (Summer 2025); Applied Scientist Intern, Amazon (Summer 2026)",,"NLP, BIAS, MULTILINGUAL LLMS",,https://iamshnoo.github.io/,https://www.linkedin.com/in/anjishnumukherjee/,https://scholar.google.com/citations?user=3849YpIAAAAJ&hl=en
-Yuqing,Zhou,Ziwei Zhu,PhD,,,"Applied Scientist Intern, Amazon Web Services (AWS) (Summer 2025, extended into Summer 2026)",,"CONVERSATIONAL AGENTS, NLP",,https://yuqing-zhou.github.io/,,https://scholar.google.com/citations?user=cHvsFwQAAAAJ
-Bowen,Wei,Ziwei Zhu,PhD,,,"GenAI Engineer Intern, GoEngage (Jun-Aug 2025); AI Agents Developer Intern, Fluency Security (Jun-Aug 2025)",,"LLM SAFETY, INTERPRETABLE AI",,https://weibowen555.github.io/,,https://scholar.google.com/citations?user=dDtSkoEAAAAJ&hl=en
-Mehrdad,Fazli,Ziwei Zhu,PhD,,,"Data Science and Machine Learning Intern, Wayfair (Summer 2022); Applied Scientist Intern, Amazon (Dec 2025-Feb 2026); PhD Software Engineering Intern, Google (Summer 2026, Kirkland WA)",,"VISION-LANGUAGE MODELS, BIAS",,https://sites.google.com/view/mehrdad-fazli/,https://www.linkedin.com/in/mehrdad-fazli-66511479/,https://scholar.google.com/citations?user=e7AeExMAAAAJ&hl=en
-Jinhao,Pan,Ziwei Zhu,PhD,,,,,"RECOMMENDATION SYSTEMS, INTERPRETABLE AI",,https://jp-25.github.io/,https://www.linkedin.com/in/jinhao-pan-96a276153,https://scholar.google.com/citations?user=gey8oCUAAAAJ&hl
-Fardin Ahsan,Sakib,Ziwei Zhu,PhD,,,"Machine Learning and AI Intern, Brillient Corporation (May-Aug 2023); Applied Research Intern, Brillient Corporation (May-Aug 2024); Applied Research Scientist Intern, Amazon/AWS Support (Jun-Aug 2025); Agentic AI Research Intern, Fujitsu Research of America (Nov 2025-Jan 2026); AI Research Intern, Comcast (Jun 2026-present)","Distinguished Academic Achievement Award, George Mason University (2024); NSF Research Traineeship (NRT) Fellowship, Center for Adaptive Systems of Brain-Body Interactions (2023)","NLP, RESPONSIBLE AI",,https://fardinahsansakib.github.io/,https://www.linkedin.com/in/fardinahsan-sakib/,https://scholar.google.com/citations?hl=en&user=BA7JyPgAAAAJ
-Balassubramanian,Srinivasan,Ziwei Zhu,MS,,,,,"NLP, LLM EVALUATION",,,,
-Diwita,Banerjee,Ziwei Zhu,MS,,,,,RESPONSIBLE AI,,,,
-Mamnuya,Rinki,Ziwei Zhu,MS,,,,,"BIAS EVALUATION, NLP",,,,
-Sina,Mansouri,Ziwei Zhu,MS,,,,,"MEDICAL AI, NLP",,,,
-Mohit Bharatbhai,Marvania,Ziwei Zhu,MS,,,,,"MEDICAL AI, NLP",,,,
-Eric,Scott,Sean Luke,PhD '22,"Researcher, MITRE Corporation",,,"Honorable Mention, ACM SIGEVO Best Dissertation Award (2023)","EVOLUTIONARY COMPUTATION, ASYNCHRONOUS PARALLELISM",,,,https://scholar.google.com/citations?user=OY4atVoAAAAJ&hl=en
-Katherine (Raven),Russell,Sean Luke,PhD '21,"Associate Professor (Teaching), George Mason University",,,,"ROBOTICS, MULTIAGENT SYSTEMS, SWARM INTELLIGENCE",https://cs.gmu.edu/sites/default/files/styles/thumbnail/public/2025-12/Katherine%20Russell_1x1.jpg?itok=c9uPa4uB,https://gildir.github.io/,,
-Younhee,Kim,Dana Richards,PhD '09,,,,,"INFORMATION HIDING, STEGANOGRAPHY",,,,
-Raimi,Rufai,Dana Richards,PhD '15,,,,,"COMPUTATIONAL GEOMETRY, STREAMING ALGORITHMS",,,,
-Ryan,Farley,Xinyuan (Frank) Wang,PhD '15,"Senior Cyber Security Engineer, MITRE Corporation",,,,"MALWARE ANALYSIS, DIGITAL FORENSICS",,https://mason.gmu.edu/~rfarley3/,,
-Sahar,Mazloom,Dov Gordon,PhD '20,"Senior Research Scientist, Cryptography & AI Research, J.P. Morgan Chase",,,,"SECURE MULTI-PARTY COMPUTATION, PRIVACY-PRESERVING MACHINE LEARNING",,http://mason.gmu.edu/~sseyedma/index.html,,https://scholar.google.com/citations?user=ZjPnjnkAAAAJ&hl=en
-Arda,Gumusalan,Robert Simon,PhD,IBM,,,,"WIRELESS NETWORKING, REAL-TIME SCHEDULING",,,https://www.linkedin.com/in/arda-gumusalan-phd-5317a4bb/,
-Kevin,Andrea,Robert Simon,PhD '23,"Assistant Professor, George Mason University",,,"Fred Ellersick Best Unclassified Paper Award, MILCOM 2017","EMBEDDED SYSTEMS, IOT, SYSTEMS PROGRAMMING",,https://kevinandrea.github.io,,https://scholar.google.com/citations?user=iqZGec4AAAAJ&hl=en
-Haibei,Zhu,Missy Cummings,"PhD '21, Duke","Senior Data Scientist, UKG",,,,"HUMAN SUPERVISORY CONTROL, OPERATOR MODELING",,,https://www.linkedin.com/in/haibei-zhu/,https://scholar.google.com/citations?user=hlsy1SYAAAAJ&hl=en
-Carl,Nehme,Missy Cummings,"PhD '09, MIT",,,,,"HUMAN SUPERVISORY CONTROL, UNMANNED VEHICLE SYSTEMS",,,,
+First Name,Last Name,Advisor,Co-Advisor,Degree,Dissertation Title,Current Job,First Job,Location,Internships,Honors & Awards,Topics,Picture,Website,LinkedIn,Google Scholar
+Timothy,Balint,Jan Allbeck,,PhD,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,"Postdoctoral Researcher, TU Delft (Computer Graphics and Visualization group)",,"Delft, Netherlands",,,"VIRTUAL HUMANS, PROCEDURAL GENERATION, GAMES",,https://graphics.tudelft.nl/timothy-balint/,https://www.linkedin.com/in/john-timothy-balint-431734b2,https://scholar.google.com/citations?user=ZlRk8SQAAAAJ&hl=en
+John,Mooney,Jan Allbeck,,MS,,,,"Fairfax, VA",,,,,http://mason.gmu.edu/~jmooney3/,https://www.linkedin.com/in/jmooneycs/,
+Rohan,Gandhi,Jan Allbeck,,MS,,,,"Fairfax, VA",,,,,,,
+Weizi,Li,Jan Allbeck,,MS,,"Assistant Professor, UC Riverside (Fluidic City Lab)",,"Riverside, CA","Research Intern, Disney Research; Research Intern, Lenovo Research; Research Intern, National University of Singapore",Postdoctoral Hammer Fellow (MIT IDSS),"TRAFFIC SIMULATION, AUTONOMOUS VEHICLES",,https://weizi-li.github.io/,,https://scholar.google.com/citations?user=kuaAAnMAAAAJ&hl=en
+Poorvi,Acharya,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Berkeley, CA","Research Intern, Berkeley Augmented Telemedicine Group, UC Berkeley (Jan-May 2016); Full Stack Developer/Big Data Intern, DesignMind",,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/poorvi-acharya-824839118/,https://scholar.google.com/citations?user=NPvy2gIAAAAJ&hl=en
+Milind,Agarwal,Antonios Anastasopoulos,,PhD '25,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,"Senior Forward Deployed Engineer, Lilt",,"San Francisco, CA","Undergraduate Research Intern, Johns Hopkins University (labs of D. Yarowsky, J. Markle, A. Battle)",Doctoral Research Scholar 2024-25 (George Mason University); Stanford SILICON Practitioners Award,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=eRaPEZ0AAAAJ&hl=en
+Syeda Sabrina,Akter,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,"Distinguished Academic Achievement Award (GMU, M.S. Computer Science); Outstanding Graduate Teaching Assistant Award (2022-2023); Dissertation Completion Award (GMU)","NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/syeda-sabrina-akter/,https://scholar.google.com/citations?user=PHMT3scAAAAJ&hl=en
+Kourosh,Baghaei,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Foster City, CA","PhD Research Intern (Perception), Zoox (Summer)",,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/kourosh-t-baghaei,https://scholar.google.com/citations?user=i-NHLQ0AAAAJ&hl=en
+Prabin,Bhandari,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Oak Ridge, TN","Research Intern, Oak Ridge National Laboratory",,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=V_4BF3EAAAAJ&hl=en
+Fahim,Faisal,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"San Jose, CA","Research Intern, Zoom (Summer 2025)",,"NLP, DIALECT NLP, LOW-RESOURCE LANGUAGES",,,https://www.linkedin.com/in/faisalfahim,https://scholar.google.com/citations?user=4NgtQ2EAAAAJ&hl=en
+Jonathan,Hus,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"NLP, MACHINE TRANSLATION",,,,
+Nate,Krasner,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,CRA Outstanding Undergraduate Researcher Award - Honorable Mention (2022),"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=hRXKWdUAAAAJ&hl=en
+Ellie,Liebl,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"LINGUISTICS, NLP",,,,https://scholar.google.com/citations?user=caoGkaIAAAAJ&hl=en
+Chutong,Meng,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=lgmpN3kAAAAJ&hl=en
+Anjishnu,Mukherjee,Antonios Anastasopoulos,Ziwei Zhu,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/anjishnumukherjee/,https://scholar.google.com/citations?user=3849YpIAAAAJ&hl=en
+Joshua,Otten,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Redmond, WA","Intern, Microsoft",,"NLP, MULTILINGUAL NLP",,,,
+Belu,Ticona,Antonios Anastasopoulos,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Redmond, WA","Data Scientist Intern, Medallia; Data Scientist Intern, Microsoft; Intern, FLAIR (First Languages AI Reality)",,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/belu-ticona/,https://scholar.google.com/citations?user=uxUKbb8AAAAJ&hl=en
+Md Mahfuz ibn,Alam,Antonios Anastasopoulos,,PhD '24,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,"Teaching Faculty, William & Mary",,"Williamsburg, VA",,,"NLP, MULTILINGUAL NLP",,,https://www.linkedin.com/in/md-mahfuz-ibn-alam-595828107/,https://scholar.google.com/citations?user=6khjEYoAAAAJ&hl=en
+Jonathan,Mbuya Kabala,Antonios Anastasopoulos,,PhD '25,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,"ML Engineer, Visa",,"Foster City, CA",,,"NLP, MULTILINGUAL NLP",,,,https://scholar.google.com/citations?user=vrroQS4AAAAJ
+Shuhan,Mirza,Giuseppe Ateniese,Foteini Baldimtsi,,,,,"Austin, TX","Research Intern, Cloudflare Research (Summer 2026)",,"APPLIED CRYPTOGRAPHY, PRIVACY",,https://shuhanmirza.com/,https://www.linkedin.com/in/shuhanmirza/,https://scholar.google.com/citations?user=xwSEAPsAAAAJ&hl=en
+Vinay,Devadas,Hakan Aydin,,PhD '11,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,,,"Fairfax, VA",,,"REAL-TIME SYSTEMS, ENERGY MANAGEMENT",,,,https://scholar.google.com/citations?user=GUr8bLYAAAAJ&hl=en
+Baoxian,Zhao,Hakan Aydin,,PhD '12,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,,,"Fairfax, VA",,,"RELIABILITY, ENERGY MANAGEMENT, REAL-TIME SYSTEMS",,,,https://scholar.google.com/citations?user=hnkDJIQAAAAJ&hl=en
+Bo,Zhang,Hakan Aydin,,PhD '12,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,,,"Fairfax, VA",,"Best Paper Award, ACM MSWiM 2011 (""Maximal Utility Rate Allocation for Energy Harvesting Wireless Sensor Networks"")","WIRELESS SENSOR NETWORKS, ENERGY HARVESTING",,,,
+Mohammad Atiqul,Haque,Hakan Aydin,,PhD '16,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,,,"Fairfax, VA",,,"RELIABILITY, MULTIPROCESSOR REAL-TIME SYSTEMS",,,,https://scholar.google.com/citations?user=XTJnPPkAAAAJ&hl=en
+Maryam,Bandari,Hakan Aydin,,PhD '16,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,,,"Fairfax, VA",,"Best Student Paper Award, IEEE ICESS 2015 (""Power Management in Cluster-Based Energy-Harvesting Sensor Networks through Dynamic Modulation Scaling"")","ENERGY MANAGEMENT, WIRELESS SENSOR NETWORKS",,,,https://scholar.google.com/citations?user=A1L_dVAAAAAJ&hl=en
+Arda,Gumusalan,Hakan Aydin,Robert Simon,PhD '19,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,Works at IBM,,"Armonk, NY",,"Best Unclassified Paper Award (Fred Ellersick Award), IEEE MILCOM 2017 (""The Design and Implementation of a Multicast Address Moving Target Defensive System for Internet of Things Applications"")","WIRELESS SENSOR NETWORKS, REAL-TIME SCHEDULING",,,https://www.linkedin.com/in/arda-gumusalan-phd-5317a4bb/,
+Abhishek,Roy,Hakan Aydin,,PhD '21,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,,,"Fairfax, VA",,"Best Paper Award, IGSC 2020 (""Energy-Aware Primary/Backup Scheduling of Periodic Real-Time Tasks on Heterogeneous Multicore Systems"")","REAL-TIME SYSTEMS, ENERGY EFFICIENCY",,https://mason.gmu.edu/~aroy6/,https://www.linkedin.com/in/eyeabhi/,https://scholar.google.com/citations?user=SEowV34AAAAJ&hl=en
+Xintao,Wu,Daniel Barbará,,,,"Professor, UNC Charlotte",,"Charlotte, NC",,,"DATA MINING, ANOMALY DETECTION",,,https://www.linkedin.com/in/xintaowu/,https://scholar.google.com/citations?user=ABnrRqQAAAAJ&hl=en
+Ping,Chen,Daniel Barbará,,,,"Professor, University of Houston",,"Houston, TX",,,"DATA MINING, ANOMALY DETECTION",,,https://www.linkedin.com/in/ping-chen-a007bb3/,https://scholar.google.com/citations?user=sVuVLNoAAAAJ&hl=en
+Ron,Dodge,Daniel Barbará,,,,U.S. Army,,"Arlington, VA",,,"DATA MINING, ANOMALY DETECTION",,,,
+Michael,Johnson,Daniel Barbará,,,,,,"Fairfax, VA",,,"DATA MINING, ANOMALY DETECTION",,,,
+Tom,Shackelford,Daniel Barbará,,,,,,"Fairfax, VA",,,"DATA MINING, ANOMALY DETECTION",,,,
+James,Rogers,Daniel Barbará,,PhD '10,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,,,"Fairfax, VA",,,DATA MINING,,,,
+Loulwah,Al-Sumait,Daniel Barbará,,PhD '09,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,"Assistant Professor, Kuwait University",,"Kuwait City, Kuwait",,,"TOPIC MODELS, DATA MINING",,,,
+Hanan,Mengash,Alex Brodsky,,PhD '16,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,"Professor, Princess Nourah bint Abdulrahman University",,"Riyadh, Saudi Arabia",,,"DECISION GUIDANCE, OPTIMIZATION",,,,
+Hesham,Altaleb,Alex Brodsky,,PhD '15,Energy-Aware Scheduling and Reliability Optimization in Heterogeneous Multicore Real-Time Embedded Systems,"Professor, Al Imam Muhammad Ibn Saud Islamic University",,"Riyadh, Saudi Arabia",,,"DECISION GUIDANCE, ENERGY",,,,
+John,McDowal,Alex Brodsky,,PhD '14,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Computer Scientist, Booz Allen Hamilton",,"McLean, VA",,,"SERVICE COMPOSITION, BPMN",,,,
+Nathan,Egge,Alex Brodsky,,PhD '14,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,"Research Staff, Mozilla",,"Mountain View, CA",,"Best Paper Award, ICEIS 2013; Best Paper Award, HICSS 2011","QUERY LANGUAGES, OPTIMIZATION",,,,
+Susan,Farley,Alex Brodsky,,PhD '13,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,"Computer Scientist, Booz Allen Hamilton",,"McLean, VA",,,"DECISION GUIDANCE, SIMULATION",,,,
+Chun-Kit,Ngan,Alex Brodsky,Jessica Lin,PhD '13,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Professor, Penn State University",,"Fairfax, VA",,"Best Paper Award, ICEIS 2013; Best Student Paper Award, ICEIS 2011",TIME SERIES ANALYTICS,,,,
+Guodong,Shao,Alex Brodsky,,PhD '13,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Computer Scientist, NIST",,"Fairfax, VA",,,"MANUFACTURING, SUSTAINABILITY",,,,
+Judy,Luo,Alex Brodsky,,PhD '12,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,George Mason University,,"Fairfax, VA",,"Best Paper Award, ICEIS 2015","REGRESSION LEARNING, DECISION GUIDANCE",,,,
+Khalid,Alodhaibi,Alex Brodsky,,PhD '11,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,"CIO, King Fahad Medical City",,"Fairfax, VA",,,"RECOMMENDER SYSTEMS, DECISION GUIDANCE",,,,
+Lei,Zhang,Alex Brodsky,,PhD '10,Automated Vulnerability Discovery and Threat Analysis in Software Systems,Google,,"Mountain View, CA",,,"SECURITY, INFORMATION DISCLOSURE",,,,
+Malak,Al-Nury,Alex Brodsky,,PhD '10,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Professor/Dept Chair, Effat University",,"Fairfax, VA",,"Best Paper Award, HICSS 2008","SUPPLY CHAIN, SIMULATION",,,,
+Csilla,Farkas,Alex Brodsky,,PhD '99,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Professor, University of South Carolina",,"Fairfax, VA",,"IT&E Doctoral Fellowship Award, George Mason University (1996-1999); Computer Science Graduate Honor Roll Award, George Mason University (1994)",DATABASE SECURITY,,,,
+Jia,Chen,Alex Brodsky,,PhD '99,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,CONSTRAINT DATABASES,,,,
+Victor,Segal,Alex Brodsky,,PhD '99,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Principal System Engineer, MITRE Corporation",,"Cambridge, MA",,,CONSTRAINT DATABASES,,,,
+Samuel,Varas,Alex Brodsky,,PhD '98,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,"Professor, Universidad Adolfo Ibáñez",,"Fairfax, VA",,,CONSTRAINT OPTIMIZATION,,,,
+Mohan,Krishnamoorthy,Alex Brodsky,,PhD '18,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Research Consultant, Argonne National Laboratory",,"Fairfax, VA","Guest Researcher, National Institute of Standards and Technology (2015-2018, concurrent with PhD)","Best Paper Award, IFIP DSS 2018","MANUFACTURING, PREDICTIVE ANALYTICS",,http://cs.gmu.edu/~mkrishn4/,,
+Roberto,Levy,Alex Brodsky,,,,,,"Fairfax, VA",,,"ENERGY POLICY, DECISION GUIDANCE",,,,
+M. Omar,Nachawati,Alex Brodsky,,,,,,"Fairfax, VA",,"Best Student Paper Award, ICORES 2021",DECISION GUIDANCE MANAGEMENT SYSTEMS,,,,
+Fernando,Boccanera,Alex Brodsky,,,,,,"Fairfax, VA",,,"HEALTHCARE, DECISION GUIDANCE",,,,
+Na,Wang,Songqing Chen,Fei Li,PhD '25,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Teaching Professor, Penn State Harrisburg",,"Fairfax, VA",,,NETWORKED SYSTEMS,,,,
+Zili,Zha,Songqing Chen,,PhD '21,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Meta (Facebook),,"Menlo Park, CA",,,DISTRIBUTED SYSTEMS,,,,
+Li,Liu,Songqing Chen,,PhD '20,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Google,,"Mountain View, CA",,,NETWORKED SYSTEMS,,,,
+Mengbai,Xiao,Songqing Chen,,PhD '18,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Professor, Shandong University",,"Fairfax, VA",,,"MULTIMEDIA, DISTRIBUTED SYSTEMS",,,,
+Wentao,Chang,Songqing Chen,,PhD '18,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Google,,"Mountain View, CA",,,MOBILE COMPUTING,,,,
+An,Wang,Songqing Chen,,PhD '18,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Assistant Professor, Case Western Reserve University",,"Fairfax, VA",,,"SECURITY, NETWORKED SYSTEMS",,,,
+Huangxin,Wang,Songqing Chen,Fei Li,PhD '17,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Meta (Facebook),,"Menlo Park, CA",,,NETWORKED SYSTEMS,,,,
+Mohammad,Karami,Songqing Chen,,PhD '16,Automated Vulnerability Discovery and Threat Analysis in Software Systems,Google,,"Mountain View, CA",,,SECURITY,,,,
+Mohammed,Hassan,Songqing Chen,,PhD '14,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Google,,"Mountain View, CA",,,INTERNET MEASUREMENT,,,,
+Yao,Liu,Songqing Chen,,PhD '13,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,"Associate Professor, Rutgers University",,"Fairfax, VA",,,"MOBILE SECURITY, WIRELESS SYSTEMS",,,,
+Lei,Liu,Songqing Chen,,PhD '10,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Vuclip,,"Fairfax, VA",,,"MOBILE COMPUTING, CLOUD COMPUTING",,,,
+Dongyu,Liu,Songqing Chen,,PhD '09,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,MicroStrategy,,"Fairfax, VA",,,DISTRIBUTED SYSTEMS,,,,
+Ming,Zhang,Songqing Chen,,MS '15,,Amazon,,"Seattle, WA",,,DISTRIBUTED SYSTEMS,,,,
+Xin,Li,Songqing Chen,,MS '13,,Samsung Research America,,"Fairfax, VA",,,NETWORKED SYSTEMS,,,,
+Kshitiz,Bhattarai,Songqing Chen,,MS '12,,SAP Labs,,"Fairfax, VA",,,NETWORKED SYSTEMS,,,,
+Ben,Gelman,Carlotta Domeniconi,,MS,,,,"Fairfax, VA",,,"MACHINE LEARNING, SECURITY",,,,
+Hamed,Sarvari,Carlotta Domeniconi,,PhD,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,,,"Fairfax, VA",,,"ANOMALY DETECTION, MACHINE LEARNING",,,,
+Raj,Patel,Carlotta Domeniconi,,PhD '24,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"NLP, REPRESENTATION LEARNING",,,,
+Bahman,Pedrood,Carlotta Domeniconi,,PhD '23,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Software Engineer, Google",,"Mountain View, CA",,,"PROBABILISTIC MODELS, HYPERGRAPHS",,,,
+Matt,Revelle,Carlotta Domeniconi,,PhD '21,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor, Montana State University",,"Fairfax, VA",,,SOCIAL NETWORKS,,dynamictyping.com,,
+Priya,Mani,Carlotta Domeniconi,,PhD '21,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Senior Manager, RBC",,"Fairfax, VA",,,DATA CLUSTERING,,,,
+David,Etter,Carlotta Domeniconi,,PhD '15,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"MULTIMEDIA RETRIEVAL, LEARNING TO RANK",,,,
+Tanwistha,Saha,Carlotta Domeniconi,,PhD '14,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Advanced Analytics Engineer, Intel",,"Fairfax, VA",,,"RELATIONAL NETWORKS, MACHINE LEARNING",,,,
+Pu,Wang,Carlotta Domeniconi,,PhD '11,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Software Engineer, Google",,"Mountain View, CA",,,"BAYESIAN MODELS, UNSUPERVISED LEARNING",,,,
+Loulwah,AlSumait,Carlotta Domeniconi,,PhD '09,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,"Assistant Professor, Kuwait University",,"Kuwait City, Kuwait",,,"TOPIC MODELS, DATA MINING",,,,
+Muna,Al-Razgan,Carlotta Domeniconi,,PhD '08,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor, King Saud University",,"Fairfax, VA",,,CLUSTERING ENSEMBLES,,,,
+Kevin,Murray,Zoran Durić,,,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Bikram,Adhikari,Zoran Durić,,,,,,"Fairfax, VA",,"Second Place, Virtual Virginia Datathon (2021); Digital Innovation Summer Fellowship for Applied Research (Summer 2022)",COMPUTER VISION,,,,
+Daniel,Delannes-molka,Zoran Durić,,,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Siyu,Lei,Zoran Durić,,,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Neil,Johnson,Zoran Durić,,PhD '00,Automated Vulnerability Discovery and Threat Analysis in Software Systems,,,"Fairfax, VA",,,"STEGANOGRAPHY, INFORMATION HIDING, SECURITY",,,,
+Ricci,Heishman,Zoran Durić,,PhD '07,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,"COMPUTER VISION, EYE TRACKING",,,,
+Youn-Hee,Kim,Zoran Durić,,PhD '08,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"STEGANOGRAPHY, INFORMATION HIDING",,,,
+Ed,Lawson,Zoran Durić,,PhD '10,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,"GAIT ANALYSIS, COMPUTER VISION",,,,
+Dan,Fleck,Zoran Durić,,PhD '10,Deep Learning Models for Visual Scene Understanding and Video Recognition,"Research Associate Professor, GMU",,"Fairfax, VA",,,"COMPUTER VISION, 3D MODELING",,,,
+Nalini,Vishnoi,Zoran Durić,,PhD '14,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,"GAIT RECOGNITION, COMPUTER VISION",,,,
+Gene,Shuman,Zoran Durić,,PhD '16,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"MYOELECTRIC SIGNALS, BIOMEDICAL SIGNAL PROCESSING",,,,
+Chaitanya,Yavvari,Zoran Durić,,PhD '19,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,,"AUTONOMOUS VEHICLES, COMPUTER VISION",,,,
+Kyle,Jackson,Zoran Durić,,PhD '23,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,"HUMAN MOVEMENT ANALYSIS, COMPUTER VISION",,,,
+Sumer,Jabri,Zoran Durić,,MS '99,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Diego,Vasquez,Zoran Durić,,MS '01,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Philip,Barber,Zoran Durić,Jana Košecká,MS '02,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Yan,Sun,Zoran Durić,,MS '02,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+David,Harmony,Zoran Durić,,MS '03,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Wallace,Lawson,Zoran Durić,,MS '04,,"Computer Scientist, Naval Research Lab",,"Fairfax, VA",,,"COMPUTER VISION, GAIT ANALYSIS",,,,
+Michael,Sullivan,Zoran Durić,,MS '09,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Matthew,Revelle,Zoran Durić,,MS '09,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Dusan,Puletic,Zoran Durić,,MS '12,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Kyle,Soeder,Zoran Durić,,MS '15,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Sam,Gelman,Zoran Durić,,MS '16,,,,"Fairfax, VA",,"Outstanding Graduate Teaching Assistant Award, George Mason University (2016)",COMPUTER VISION,,,,
+Brian,Notarianni,Zoran Durić,,MS '16,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Nathan,Obert,Zoran Durić,,MS '18,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Nirav,Sheth,Zoran Durić,,MS '19,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Chris,Seebeck,Zoran Durić,,MS '20,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Jesse,Schwartz,Yotam Gingold,,,,,,"Fairfax, VA",,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/jesse%20schwartz.jpg,https://jesseschwartz25.github.io,https://www.linkedin.com/in/JesseSchwartz25,
+Yong,Cheng,Yotam Gingold,,,,,,"Fairfax, VA",,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/yong%20cheng.jpg,https://cocoyard.github.io/yong/,https://www.linkedin.com/in/yong-cheng-0426a4223/,
+Jialin,Huang,Yotam Gingold,,,,,,"Fairfax, VA","Research Intern, Adobe Research (2024)","WiGRAPH Rising Star (2026); Honourable Mention Award, CHI 2026 (MoSound project)","COMPUTER GRAPHICS, HAPTICS",https://cragl.cs.gmu.edu/people/jialin%20huang.jpg,https://jayjialinhuang.github.io,,https://scholar.google.com/citations?user=RQZpXBMAAAAJ&hl=en
+Ted,Chao,Yotam Gingold,,,,,,"Fairfax, VA","Research Intern, Adobe Research (Summer 2021); Research Intern, Tencent Pixel Lab (Summer 2023); Research Intern, Adobe Research (Summer 2024)","Outstanding Ph.D. Student Award, George Mason University (2026)","COMPUTER GRAPHICS, COLOR EDITING",https://cragl.cs.gmu.edu/people/tedchao.jpg,https://mason.gmu.edu/~cchao8/,,https://scholar.google.com/citations?user=JspopKEAAAAJ&hl=en
+Xue,Yu,Yotam Gingold,,PhD '25,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA","Research Intern, Adobe Research (Summer 2020)",,"COMPUTER GRAPHICS, SHAPE EDITING",https://cragl.cs.gmu.edu/people/xue%20yu.jpg,https://krisyu.github.io/,,https://scholar.google.com/citations?user=S0ymYvgAAAAJ&hl=en
+Yong,Li,Yotam Gingold,,PhD '24,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,"Postdoctoral Researcher, South China University of Technology",,"Fairfax, VA","Research Intern, Adobe Research (Summer 2021; Summer 2022)","Distinguished Academic Achievement, George Mason University Dept. of Computer Science (May 2024); Research Initiation Award, George Mason University (May 2020)","COMPUTER GRAPHICS, MESH PROCESSING",https://cragl.cs.gmu.edu/people/yong%20li.jpg,https://pressureless.github.io/,,
+Chuan,Yan,Yotam Gingold,,PhD '24,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,"Postdoc, Stanford University",,"Stanford, CA",,"MAGIC Grant, Brown Institute for Media Innovation (2025-2026, for HiFiSketch); MAGIC Grant, Brown Institute for Media Innovation (2026-2027, for Grammar of Hatching)","SKETCH VECTORIZATION, COMPUTER GRAPHICS",https://cragl.cs.gmu.edu/people/chuan%20yan.jpg,https://nauhcnay.github.io/,https://www.linkedin.com/in/chuan-yan-8b4074198/,https://scholar.google.com/citations?user=z0VFLowAAAAJ&hl=en
+Josef,Graus,Yotam Gingold,,PhD '23,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,"Principal Software Engineer, SRC Inc.",,"Fairfax, VA",,,"COMPUTER GRAPHICS, PREDICTIVE INTERACTION",https://cragl.cs.gmu.edu/people/joe.jpg,https://josefgraus.github.io/,,
+Jianchao,Tan,Yotam Gingold,,PhD '19,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,"Senior Research Scientist, Kwai Inc.","Research Scientist, Megvii (Face++)","Fairfax, VA",,"Outstanding Graduate Student Award, George Mason University CS Department (2019)","COMPUTER GRAPHICS, IMAGE DECOMPOSITION",https://cragl.cs.gmu.edu/people/jianchao.jpg,https://jianchaotan.github.io/,,
+Songrun,Liu,Yotam Gingold,,PhD '18,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,"Senior Software Engineer, Roblox",Amazon,"Seattle, WA",,NSF Graduate Research Fellowship,"COMPUTER GRAPHICS, ANIMATION",https://cragl.cs.gmu.edu/people/songrun.jpg,https://songrun.github.io/,,
+Henro,Kriel,Yotam Gingold,,MS '23,,,,"Fairfax, VA",,,"COMPUTER GRAPHICS, SHADER PROGRAMMING",https://cragl.cs.gmu.edu/people/henro_kriel.jpg,,,
+Nusha,Mehmanesh,Yotam Gingold,,MS,,,,"Fairfax, VA",,,COMPUTER GRAPHICS,,,,
+Lisa,Huynh,Yotam Gingold,,MS,,,,"Fairfax, VA",,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/lisa.jpg,,,
+Matt,Sabol,Yotam Gingold,,MS,,,,"Fairfax, VA",,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/matt.jpg,,,
+Chaitanya,Pantar,Yotam Gingold,,MS,,,,"Fairfax, VA",,,COMPUTER GRAPHICS,https://cragl.cs.gmu.edu/people/chaitanya.jpg,,,
+Fahim Arsad,Nafis,Bo Han,,,,,,"Fairfax, VA",,,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
+Sthitadhi,Sengupta,Bo Han,,,,,,"Fairfax, VA",,,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
+Ruizhi,Cheng,Bo Han,,,,,,"Fairfax, VA","Networking Research Intern, Bell Labs (Summer 2024)",,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
+Nan,Wu,Bo Han,,PhD '24,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"NETWORKED SYSTEMS, IMMERSIVE VIDEO",,,,
+Ding,Zhang,Bo Han,Parth Pathak,,,Amazon,,"Seattle, WA",,,"WIRELESS NETWORKING, MOBILE COMPUTING",,,,
+Nathaniel,Moyer,Evgenios Kornaropoulos,,,,,,"Fairfax, VA",,,"CRYPTOGRAPHY, SECURITY",,https://www.nathanielmoyer.com/,,https://scholar.google.com/citations?user=eUOenK0AAAAJ&hl=en
+Somiya,Chhillar,Evgenios Kornaropoulos,,,,,,"Fairfax, VA",,,"CRYPTOGRAPHY, SECURITY",,,,
+Yimeng,Li,Jana Košecká,,PhD '23,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA","Research Intern, Honda Research Institute US (2020); Research Intern, AFRL MMOI",,"COMPUTER VISION, ROBOTICS",,https://yimengli46.github.io/,https://www.linkedin.com/in/yimeng-li-423666102/,https://scholar.google.com/citations?user=gOLPBtMAAAAJ&hl=en
+Sulabh,Shresta,Jana Košecká,,,,,,"Fairfax, VA",,,"COMPUTER VISION, ROBOTICS",,https://github.com/sulabh-shr,https://www.linkedin.com/in/sulabh-shrestha/,https://scholar.google.com/citations?user=pZkPBhkAAAAJ&hl=en
+Negar,Nejatishahidin,Jana Košecká,,,,,,"Fairfax, VA",,,"COMPUTER VISION, ROBOTICS",,https://github.com/N-NEJATISHAHIDIN,,https://scholar.google.com/citations?user=QUdDLg8AAAAJ&hl=en
+Pooya,Fayyazsanavi,Jana Košecká,,,,,,"Fairfax, VA",,,"COMPUTER VISION, ROBOTICS",,,https://www.linkedin.com/in/pooya-fayyaz-587a6712b/,https://scholar.google.com/citations?user=ZVQw2OAAAAAJ&hl=en
+Navid,Rajabi,Jana Košecká,,,,,,"Fairfax, VA",,,"COMPUTER VISION, VISION-LANGUAGE",,https://navidnr.com/,https://www.linkedin.com/in/navid-rajabi-ph-d-a8751084/,https://scholar.google.com/citations?user=muMzuwcAAAAJ&hl=en
+Arnab,Debnath,Jana Košecká,,,,,,"Fairfax, VA",,,"COMPUTER VISION, ROBOTICS",,,https://www.linkedin.com/in/arnab-debnath-18a882120/,https://scholar.google.com/citations?user=9horFbwAAAAJ&hl=en
+Md. Alimoor,Reza,Jana Košecká,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,Assistant Professor at Drake University,,"Fairfax, VA",,"Outstanding Graduate Teaching Assistant Award, GMU (2022); Distinguished Graduate Teaching Assistant Award, GMU (2017); ORAU Summer Journeyman Fellowship Award, U.S. Army Research Lab (2017)","COMPUTER VISION, ROBOTICS",,,,https://scholar.google.com/citations?user=RXcEJocAAAAJ&hl=en
+Arsalan,Mousavian,Jana Košecká,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,Senior Research Scientist at NVIDIA (Seattle Robotics Lab),,"Foster City, CA","Research Intern, Google Brain Robotics; Research Intern, Zoox; Research Intern, Google StreetView",,"ROBOTICS, COMPUTER VISION",,,,https://scholar.google.com/citations?user=fcA9m88AAAAJ&hl=en
+George,Georgakis,Jana Košecká,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,Robotics Technologist at NASA Jet Propulsion Laboratory,Postdoctoral Researcher at GRASP Lab (UPenn),"Fairfax, VA","Computer Vision Research Intern, Siemens CT (two summers); Research Intern, UII America (Summer 2019)","Outstanding Graduate Teaching Assistant Award, Department of Computer Science, GMU (2015-16)","ROBOTICS, COMPUTER VISION",,https://ggeorgak11.github.io/,https://www.linkedin.com/in/georgios-georgakis-517a1a76/,https://scholar.google.com/citations?user=ndbhEbYAAAAJ&hl=en
+Hui,Zheng,Jana Košecká,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Le Phi,Hung,Jana Košecká,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Gautam,Singh,Jana Košecká,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,COMPUTER VISION,,http://cs.gmu.edu/~gsinghc,,
+Shenghui,Zhou,Jana Košecká,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Wei,Zhang,Jana Košecká,,PhD '07,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Fayin,Li,Jana Košecká,,PhD '06,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Michael,Paton,Jana Košecká,,MS '12,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Xing,Zhou,Jana Košecká,,MS '13,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Damla,Arifoglu,Jana Košecká,,MS '12,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Levi,Lister,Jana Košecká,,MS,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Aohan,Zhao,Jana Košecká,,MS,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Martha,McJunkin,Jana Košecká,,MS,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Jason,Hayes,Jana Košecká,,MS,,,,"Fairfax, VA",,,COMPUTER VISION,,,,
+Md. Mahmudul Hasan,Pious,Wing Lam,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, TESTING",,,,
+Safwat Ali,Khan,Wing Lam,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, TESTING",,,,
+Suzzana,Rafi,Wing Lam,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, TESTING",,,,
+Talank,Baral,Wing Lam,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, TESTING",,,,
+Ying,Zhou,Wing Lam,Andrian Marcus,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, TESTING",,,,
+Bala Naren,Chanumolu,Wing Lam,,MS,,,Amazon Web Services (AWS),"Seattle, WA",,,"SOFTWARE ENGINEERING, TESTING",,,,
+Ruochen,Wang,Thomas LaToza,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, HCI",,,https://www.linkedin.com/in/wangrc/,https://scholar.google.com/citations?user=roZi8YcAAAAJ&hl=en
+Mainul,Hossain,Thomas LaToza,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, HCI",,,https://www.linkedin.com/in/mainul-hossain-yaad/,https://scholar.google.com/citations?user=BP1HFbcAAAAJ&hl=en
+Abdulaziz,Alaboudi,Thomas LaToza,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,Assistant Professor at King Saud University,,"Fairfax, VA",,"Best Paper Award, IEEE VL/HCC 2021","SOFTWARE ENGINEERING, DEBUGGING",,http://mason.gmu.edu/~aalaboud/,https://linkedin.com/in/abdulaziz-alaboudi-a7920937,https://scholar.google.com/citations?user=39-lgAUAAAAJ&hl=en
+Emad,Aghayi,Thomas LaToza,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, HCI",,http://mason.gmu.edu/~eaghayi/,,
+David,Samudio,Thomas LaToza,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,Assistant Professor at George Mason University,,"Fairfax, VA",,,"HCI, SOFTWARE ENGINEERING",,,https://www.linkedin.com/in/david-samudio-8343621a/,https://scholar.google.com/citations?user=x0HI6joAAAAJ&hl=en
+Sahar,Mehrpour,Thomas LaToza,,PhD,Empirical Evaluation and Automated Synthesis for Scalable Software Maintenance,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, DEVELOPER TOOLS, HCI",,,https://www.linkedin.com/in/sahar-mehrpour/,https://scholar.google.com/citations?user=-6HSIMMAAAAJ&hl=en
+Maryam,Arab,Thomas LaToza,,PhD,Designing Interactive Assistive Technologies for Accessible User Interfaces,Postdoctoral Research Associate at University of Michigan School of Information,,"Fairfax, VA",,"ACM Distinguished Paper Award, ICSE 2023","HCI, PROGRAMMING TOOLS",,https://sites.google.com/view/maryamarab/home,https://www.linkedin.com/in/maryam-arab/,https://scholar.google.com/citations?user=7zu9KZwAAAAJ&hl=en
+Minhyuk,Ko,Thomas LaToza,,PhD,Designing Interactive Assistive Technologies for Accessible User Interfaces,,,"Fairfax, VA",,"ACM Distinguished Paper Award, ICSE 2023","HCI, PROGRAMMING TOOLS",,,,
+Bobby,Chab,Fei Li,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"ALGORITHMS, SCHEDULING",,,,
+Zhi,Zhang,Fei Li,,PhD '13,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Software Engineer at Google (New York City),Software Engineer at Google,"Mountain View, CA",,,"ALGORITHMS, ONLINE ALGORITHMS",,http://cs.gmu.edu/~zzhang8/,,
+Li,Zhang,Jessica Lin,,PhD '23,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,"Assistant Professor, University of Texas Rio Grande Valley",,"Fairfax, VA",,"Outstanding Ph.D. Student Award, GMU Dept. of Computer Science (2023); IMC Suneeth Nayak Scholarship, College of Engineering and Computing (2021); Best Student Full Research Paper Award Nominee, AIED 2018","DATA MINING, TIME SERIES",,https://lizhang-ts.github.io/,,
+Rasaq,Otunba,Jessica Lin,,PhD '22,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,https://mason.gmu.edu/~rotunba/,,
+Yifeng,Gao,Jessica Lin,,PhD '21,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,"Assistant Professor, University of Texas Rio Grande Valley",,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,https://flash121123.github.io/,,
+Xiaosheng,Li,Jessica Lin,,PhD '20,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,Ant Group,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,https://mason.gmu.edu/~xli22/,,
+Rohan,Khade,Jessica Lin,,PhD '19,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,Amazon,,"Seattle, WA",,,"DATA MINING, TIME SERIES",,,https://www.linkedin.com/in/rohan-khade-43811417/,
+Xing,Wang,Jessica Lin,,PhD '17,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,Airbnb,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,http://mason.gmu.edu/~xwang24/,,
+Eiman,Al-Shammari,Jessica Lin,,PhD '10,Scalable Anomaly Detection and Pattern Mining in High-Dimensional Data Streams,"Faculty member, Kuwait University",,"Kuwait City, Kuwait",,,"DATA MINING, TIME SERIES",,,,
+Wenjie,Xi,Jessica Lin,,,,,,"Mountain View, CA","Machine Learning Intern, Baidu (2021); Software Engineering Intern offer, Google (announced Dec 2025)",,"DATA MINING, TIME SERIES",,https://jackxiini.github.io/,https://www.linkedin.com/in/wenjie-xi-jack/,https://scholar.google.com/citations?user=SLbTgE4AAAAJ&hl=en
+Prommy Sultana,Hossain,Jessica Lin,,,,,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,,,
+Allan,Fong,Jessica Lin,,,,,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,,,
+Thirumalai Vinjamoor Akhil,Srinivas,Jessica Lin,,,,,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,,,
+Majidur,Rahman,Jessica Lin,,,,,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,,,
+Kaiyan,Liu,Jessica Lin,,,,,,"Fairfax, VA",,,"DATA MINING, TIME SERIES",,,,
+Jie,Hao,Mingrui Liu,,,,,,"Seattle, WA","Applied Scientist Intern, Amazon, Seattle (Summer 2026)",,"OPTIMIZATION, MACHINE LEARNING",,https://jhao6.github.io/JieHao.github.io/,https://www.linkedin.com/in/jie-hao-00b4b7141,https://scholar.google.com/citations?hl=en&user=S8ZTkikAAAAJ
+Yuman,Wu,Mingrui Liu,,,,,,"Fairfax, VA",,,"OPTIMIZATION, MACHINE LEARNING",,,,
+Rui,Yu,Mingrui Liu,,,,,,"Fairfax, VA",,,"OPTIMIZATION, MACHINE LEARNING",,,,
+Anthony,Givans,Mingrui Liu,,,,,,"Fairfax, VA",,,"OPTIMIZATION, MACHINE LEARNING",,,,
+Tiantong,Sun,Mingrui Liu,,,,,,"Fairfax, VA",,,"OPTIMIZATION, MACHINE LEARNING",,,,
+Michael,Crawshaw,Mingrui Liu,,PhD '26,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,"Postdoctoral Fellow, Flatiron Institute","Postdoctoral Fellow, Flatiron Institute","Fairfax, VA","Intern, Flatiron Institute Center for Computational Mathematics (Summer 2025)","Best Reviewer Award, AISTATS 2025; Top Reviewer Award, ICML 2025; Top Reviewer Award, NeurIPS 2025; Top Reviewer Award (top 8%), NeurIPS 2023","OPTIMIZATION, MACHINE LEARNING",,https://mtcrawshaw.github.io,https://www.linkedin.com/in/michael-crawshaw-5a6aab150/,https://scholar.google.com/citations?user=XVrMZ_4AAAAJ&hl=en
+Yajie,Bao,Mingrui Liu,,,,"Assistant Professor, Fudan University",,"Fairfax, VA",,,"OPTIMIZATION, MACHINE LEARNING",,https://yajiebao.github.io,,https://scholar.google.com/citations?user=1n_aUsIAAAAJ&hl=en
+Xiaochuan,Gong,Mingrui Liu,,MS '26,,,,"Fairfax, VA",,,"OPTIMIZATION, MACHINE LEARNING",,,,https://scholar.google.com/citations?user=byUF8hgAAAAJ&hl=en
+Junjie,Ma,Zhicong Lu,,,,,,"Fairfax, VA",,,"HCI, SOCIAL COMPUTING",,,,
+Haichang,Li,Zhicong Lu,,,,,,"Fairfax, VA",,,"HCI, SOCIAL COMPUTING",,https://haichang.li,,
+Shiwei,Hong,Zhicong Lu,,,,,,"Fairfax, VA",,,"HCI, SOCIAL COMPUTING",,,,
+Weisen,Zhao,Zhicong Lu,,,,,,"Fairfax, VA",,,"HCI, SOCIAL COMPUTING",,,,
+Dhiman,Goswami,Zhicong Lu,Amarda Shehu,,,,,"Fairfax, VA",,,"HCI, SOCIAL COMPUTING",,,,
+Chenfeng,Duan,Lannan (Lisa) Luo,,,,,,"Fairfax, VA",,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Minghao,Hu,Lannan (Lisa) Luo,,,,,,"Fairfax, VA","AI Research Intern, Thoughtworks (Summer 2026)",,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Junming,Chen,Lannan (Lisa) Luo,Qiang Zeng,,,,,"Fairfax, VA",,"Distinguished Artifact Award, USENIX Security 2025 (for ""Tracking You from a Thousand Miles Away! Turning a Bluetooth Device into an Apple AirTag Without Root Privileges"" — one of 6 of 2,385 submissions)","SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Xiaofeng,Qiao,Lannan (Lisa) Luo,,,,,,"Fairfax, VA",,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Alex,Scott,Lannan (Lisa) Luo,,,,,,"Fairfax, VA",,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Fengyao,Yan,Lannan (Lisa) Luo,,MS '19,,,,"Fairfax, VA",,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Junzhe,Wang,Lannan (Lisa) Luo,,PhD '25,Automated Vulnerability Discovery and Threat Analysis in Software Systems,Meta,,"Menlo Park, CA",,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Xiappeng,Li,Lannan (Lisa) Luo,,PhD '20,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Applied & Data Scientist, Microsoft",,"Redmond, WA",,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Kimberly,Redmond,Lannan (Lisa) Luo,,MS '19,,"Software Engineer, Motorola Solutions, Inc.",,"Fairfax, VA",,,"SOFTWARE SECURITY, BINARY ANALYSIS",,,,
+Long,Doan,ThanhVu (Vu) Nguyen,,,,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,https://longdct.github.io,https://www.linkedin.com/in/long-dct2706,https://scholar.google.com/citations?user=BUoXUy0AAAAJ
+Hai,Duong,ThanhVu (Vu) Nguyen,,,,Intern at Amazon AWS,,"Seattle, WA","Applied Scientist Intern, Amazon AWS (Summer 2026)","Outstanding PhD Student Award, GMU CS (2026); NeurIPS'25 Spotlight Award; CVPR'26 Highlight Award; VNN-COMP New Participant Award (2023); 2nd Place Overall, VNN-COMP 2024 & 2025 (NeuralSAT tool)","SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,https://hocdot.github.io/,https://www.linkedin.com/in/vhduong96/,https://scholar.google.com/citations?user=CPSuIeEAAAAJ&hl=en
+Nguyen,Ho,ThanhVu (Vu) Nguyen,,,,,,"Seattle, WA","Software Development Engineer Intern, Amazon (AWS)",,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,,,
+Linhan,Li,ThanhVu (Vu) Nguyen,,,,,,"Fairfax, VA",,"Outstanding Teaching Assistant Award, GMU (2025)","SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,https://lli-debu.github.io/,,
+Jahnvi,,ThanhVu (Vu) Nguyen,,MS,,,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,,,
+Didier,Ishimwe,ThanhVu (Vu) Nguyen,,PhD '26,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,"Best Paper Award, SSBSE 2025",COMPLEXITY ANALYSIS,,https://ishimwed.github.io,https://www.linkedin.com/in/didier-ishimwe-85b127147/,https://scholar.google.com/citations?user=rH4Ja0kAAAAJ&hl=en
+Guolong,Zheng,ThanhVu (Vu) Nguyen,,PhD '22,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Minjiang University,,"Fairfax, VA",,,ALLOY ANALYSIS,,,,https://scholar.google.com/citations?user=FqXt_DQAAAAJ
+Alexey,Malyshev,ThanhVu (Vu) Nguyen,,MS '21,,Oracle,,"Fairfax, VA",,,"SOFTWARE ENGINEERING, PROGRAM ANALYSIS",,,,
+KimHao,Nguyen,ThanhVu (Vu) Nguyen,,BS '23,,"Software Engineer, Jump Trading",,"Menlo Park, CA","Production Engineering Intern, Meta (Facebook); Research Intern, Jump Trading",Outstanding Undergraduate Research Assistant Award (2021); ICPC North Central NA Regional 1st Place Site Winner (2019); Nebraska Student Research Days Top Presenter Award (2021),"SOFTWARE ENGINEERING, PROGRAM ANALYSIS, PROGRAM COMPLEXITY",,https://ndkimhao.github.io/,https://www.linkedin.com/in/ndkimhao,
+Ahmad,Kamari,Parth Pathak,,PhD,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,,,"Fairfax, VA",,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/ahmad.jpg,,https://www.linkedin.com/in/ahmadkamari,
+Zhenzhe,Lin,Parth Pathak,,PhD,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,,,"Fairfax, VA",,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/zhenzhe.jpg,,,
+Mingyo,Jeong,Parth Pathak,,PhD,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,,,"Fairfax, VA",,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/min.jpg,,https://www.linkedin.com/in/mingyojeong,
+Hemant,Kumar,Parth Pathak,,PhD,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,,,"Fairfax, VA",,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/hemant.jpg,,https://www.linkedin.com/in/hemant-kumar-narsani-b1798a21a,
+Rezoan Ahmed,Nazib,Parth Pathak,,PhD,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,,,"Fairfax, VA",,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/rezoan.jpg,,,https://scholar.google.co.kr/citations?user=J6r0ABMAAAAJ&hl=en
+Tyler,Wyatt,Parth Pathak,,MS,,,,"Fairfax, VA",,,"WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/tyler.jpg,,,
+Yoon,Chae,Parth Pathak,,PhD '24,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,Assistant Professor of CS at University of Texas Arlington,,"Fairfax, VA",,"Best Paper Award, ACM MobiSys 2022 (OmniScatter); SIGMOBILE Research Highlight","WIRELESS NETWORKING, MOBILE COMPUTING","https://static.wixstatic.com/media/30f9a2_af863704d2b4408ea8c6b21567e952d9~mv2.jpg/v1/crop/x_1882,y_0,w_4491,h_5504/fill/w_173,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Yoon%20Chae_02.jpg",https://www.yoonchae.net/,,https://scholar.google.com/citations?user=9YY6CokAAAAJ&hl=en
+Panneer Selvam,Santhalingham,Parth Pathak,,PhD '23,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,Assistant Professor CS at CUNY Brooklyn,,"Fairfax, VA",,"Best Paper Award, IEEE DSAA 2019; Outstanding Graduate Teaching Assistant, GMU CS Department (2018); Distinguished Graduate Student of the Year, GMU Information Security and Assurance (2016)","WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/panneer.jpg,https://mason.gmu.edu/~psanthal/,,
+Shuai,Wang,Parth Pathak,,PhD '23,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,Assistant Professor at Southeast University China,,"Fairfax, VA",,"Best Paper Award, ICDCS 2018","WIRELESS NETWORKING, MOBILE COMPUTING",http://www.phpathak.com/images/headshots/shuai.jpg,http://mason.gmu.edu/~swang42/,,
+Ting,Li,David Porfirio,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,HUMAN-ROBOT INTERACTION,,,,
+Puqi,Zhou,David Porfirio,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,"Doctoral Research Scholarship 2026-2027, George Mason University; 3rd Place, Mason AI Day Graduate Poster Competition; 1st Place Presenter, PhD Symposium","HUMAN-ROBOT INTERACTION, ROBOTICS",,https://puqi7.github.io/,https://www.linkedin.com/in/puqi-zhou-784b35192/,https://scholar.google.com/citations?user=IMyHqwQAAAAJ&hl=en
+Chase,Morgan,David Porfirio,,MS,,,,"Fairfax, VA",,,HUMAN-ROBOT INTERACTION,,,,
+Eric,Swankoski,Sanjeev Setia,,PhD '17,Automated Vulnerability Discovery and Threat Analysis in Software Systems,,,"Fairfax, VA",,,"NETWORK SECURITY, MANET",,,,
+Sankardas,Roy,Sanjeev Setia,,PhD '09,Utility-Driven Resource Allocation and Security in Energy-Harvesting Wireless Sensor Networks,"Assistant Professor, Bowling Green State University",,"Fairfax, VA",,"CSIS Graduate Research Endowed Assistantship, GMU (2006-2007); Provost's High Potential Graduate Assistantship, GMU (2002-2005)","NETWORK SECURITY, SENSOR NETWORKS",,,,
+Leijun,Huang,Sanjeev Setia,,PhD '07,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Lecturer, Zhejiang Forestry University, China",,"Fairfax, VA",,,"NETWORKING, DISTRIBUTED SYSTEMS",,,,
+Sencun,Zhu,Sanjeev Setia,,PhD '04,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Associate Professor, Penn State University CSE",,"Fairfax, VA",,,NETWORK SECURITY,,,,
+Etienne,Godard,Sanjeev Setia,,PhD '01,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,"M.C. Dean, Inc.","Fairfax, VA",,,DISTRIBUTED SYSTEMS,,,,
+Lisa,Nicklas,Sanjeev Setia,,PhD '98,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,SAIC,"Fairfax, VA",,,DISTRIBUTED SYSTEMS,,,,
+Brian,Hrolenok,Sanjeev Setia,,MS '09,,,,"Fairfax, VA","Research Software Developer Intern, Naval Research Lab (Summer 2005; Summer 2006)","ACM ICPC World Finals Honorable Mention, GMU team (2005); ACM ICPC Mid-Atlantic Regionals Finalist, GMU team (2004)",NETWORKING,,,,
+Aparna,Nagargadde,Sanjeev Setia,,MS '09,,,Amazon.com,"Seattle, WA",,,NETWORKING,,,,
+Venkata Gopala,Addada,Sanjeev Setia,,MS '07,,,Verisign,"Fairfax, VA",,,NETWORKING,,,,
+Bryan,Zeigler,Sanjeev Setia,,MS '05,,,MITRE,"Cambridge, MA",,,NETWORKING,,,,
+Balan,Subramanian,Sanjeev Setia,,MS '02,,,"IBM, RTP","Armonk, NY",,,NETWORKING,,,,
+Janani,Panchapakesan,Sanjeev Setia,,MS '01,,,CACI,"Fairfax, VA",,,NETWORKING,,,,
+Girish,Puthanaveedu,Sanjeev Setia,,MS '01,,,,"Fairfax, VA",,,NETWORKING,,,,
+Samir,Koussih,Sanjeev Setia,,MS '99,,,ANS/UUNET,"Fairfax, VA",,,NETWORKING,,,,
+Kamlesh,Agrawal,Sanjeev Setia,,MS '99,,,Sybase,"Fairfax, VA",,,NETWORKING,,,,
+Fardina,Alam,Amarda Shehu,,PhD '23,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Teaching Assistant Professor, University of Maryland College Park",,"Fairfax, VA",,"Outstanding Dissertation Award, GMU Dept. of Computer Science (2023); IEEE BIBM/CSBW Travel Award (2022)","AI, BIOINFORMATICS",,https://mason.gmu.edu/~falam5,https://www.linkedin.com/in/fardina-fathmiul-alam-b2b4803a/,https://scholar.google.com/citations?user=pZw9Q6gAAAAJ&hl=en
+Parastoo,Kamranfar,Amarda Shehu,,PhD '23,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Teaching Assistant Professor, George Mason University",,"Fairfax, VA",,,"AI, STRUCTURAL HEALTH MONITORING",,https://mason.gmu.edu/~pkamranf,,
+Taseef,Rahman,Amarda Shehu,,PhD '23,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Teaching Assistant Professor, University of South Florida",,"Mountain View, CA","Software Engineering Intern, Google (Summer 2025, NYC)",IEEE BIBM/CSBW Workshop Travel Award,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~trahman2,,
+Kazi Lutful,Kabir,Amarda Shehu,,PhD '22,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Teaching Assistant Professor, Stevens Institute of Technology",,"Fairfax, VA","Applied Machine Learning Summer Research Fellow, Information Science & Technology Institute (ISTI)/Los Alamos National Laboratory (Summer 2020)","Best Paper Award, BICOB 2019","AI, BIOINFORMATICS",,https://mason.gmu.edu/~kkabir,,https://scholar.google.com/citations?hl=en&user=eCA4BFkAAAAJ&view_op=list_works&sortby=pubdate
+Ahmed Bin,Zaman,Amarda Shehu,,PhD '21,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Teaching Assistant Professor, George Mason University",,"Fairfax, VA",,"Best Paper Award Finalist, BICOB 2019; CS Distinguished Academic Achievement Award, GMU (2021)","AI, BIOINFORMATICS",,https://mason.gmu.edu/~azaman6,https://www.linkedin.com/in/ahmed-bin-zaman,
+Zahra,Rajabi,Amarda Shehu,,PhD '21,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,Adobe,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~zrajab,,
+Gideon,Gogovi,Amarda Shehu,,PhD '21,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor of Data Science, University of Houston",,"Houston, TX",,,"AI, COMPUTATIONAL DATA SCIENCES",,https://www.gogovigideon.com/,,
+Nasrin,Akhter,Amarda Shehu,,PhD '20,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor of Teaching, University at Buffalo",,"Fairfax, VA",,"Outstanding Graduate Student Award, GMU (2019); Outstanding Graduate Teaching Award, GMU (2017); NSF Travel Award, BIBM 2018; CRA-W Grad Cohort Travel Award (2015)","AI, BIOINFORMATICS",,https://mason.gmu.edu/~nakhter3,https://www.linkedin.com/in/nasrinakhter,https://scholar.google.com/citations?user=UxGyBtcAAAAJ&hl=en
+Daniel,Veltri,Amarda Shehu,,PhD '15,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Armonk, NY","Best Student Paper Award, IEEE BIBM 2014; NSF GK-12 Fellowship (2010)","BIOINFORMATICS, AI",,http://binf.gmu.edu/~dveltri,,,
+Irina,Hashmi,Amarda Shehu,,PhD '15,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor, George Mason University","Postdoctoral Fellow, NIH","Fairfax, VA",,"Best Poster Award, IEEE BIBM 2012","AI, BIOINFORMATICS",,http://mason.gmu.edu/~ihashmi,,
+Kevin,Molloy,Amarda Shehu,,PhD '15,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor, James Madison University","Postdoctoral Fellow, CNRS-LAAS, Toulouse, France","Fairfax, VA",,"Outstanding Graduate Student Award, GMU CS (2015); Best Paper Award, BIONETICS 2010","AI, BIOINFORMATICS",,https://mason.gmu.edu/~kmolloy1,,
+Brian,Olson,Amarda Shehu,,PhD '13,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,Lawrence Livermore National Lab,"Fairfax, VA","Signal Processing Developer, Los Alamos National Laboratory (Summer 1996-1997); Developer, Signition Inc. (Summer 1998); Embedded Tools Developer, Green Hills Software (Summer 1999-2000)","VSE Outstanding Graduate Student Award, GMU (2013); Best Paper Award, BIONETICS 2010","AI, BIOINFORMATICS",,http://brianolson.info,,
+Uday,Kamath,Amarda Shehu,,PhD '13,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,BAE Systems Applied Intelligence Group,"Fairfax, VA",,"Humies Competition Award Honorable Mention, ACM GECCO (2012)","AI, EVOLUTIONARY COMPUTATION",,http://mason.gmu.edu/~ukamath,,
+Manpriya,Dua,Amarda Shehu,,PhD '25,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~mdua,,
+Toki Tahmid,Tinan,Amarda Shehu,,PhD '25,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"AI Engineer, 4A Consulting",,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~tinan,,
+Anowarul,Kabir,Amarda Shehu,,PhD '25,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor, University of South Florida",,"Fairfax, VA",,"Best Paper Award, Computational Structural Bioinformatics Workshop (CSBW); Best Paper Award, BICOB 2022","AI, BIOINFORMATICS",,https://mason.gmu.edu/~akabir4,,
+Saman,Ghaemi,Amarda Shehu,,PhD '22,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,,,
+Samuel,Blouir,Amarda Shehu,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Seattle, WA","AI Intern (Amazon AGI), Amazon",,"AI, MACHINE LEARNING",,https://mason.gmu.edu/~sblouir,,
+Asher,Moldwin,Amarda Shehu,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA","Research Intern, Tel Aviv University",,"AI, MACHINE LEARNING",,https://mason.gmu.edu/~amoldwin,,
+Megan,Herceg,Amarda Shehu,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"AI, SYSTEMS BIOLOGY",,https://binf.gmu.edu/~mherceg/web/mypage.html,,
+Yiyang,Lian,Amarda Shehu,,PhD '26,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"AI, SYSTEMS BIOLOGY",,https://binf.gmu.edu/~ylian/web/mypage.html,,
+Yuanjie,Lu,Amarda Shehu,Xuesu Xiao,MS '21,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~ylu22,,
+Prasanna Venkatesh,Parthasarathy,Amarda Shehu,,MS '19,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~ppartha,,
+Snehal,Sambare,Amarda Shehu,,MS '19,,,,"Fairfax, VA",,,"AI, SYSTEMS BIOLOGY",,http://binf.gmu.edu/ssambare/web/mypage.html,,
+Liban,Hassan,Amarda Shehu,,MS '19,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~lhassan1,,
+Suma,Dixit,Amarda Shehu,,MS,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~sdixit4,,
+David,Morris,Amarda Shehu,,MS '17,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,http://mason.gmu.edu/~dmorri17,,
+Erich,O'Saben,Amarda Shehu,,MS,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,https://mason.gmu.edu/~eosaben,,
+Ryan,Moffatt,Amarda Shehu,,MS '16,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,http://mason.gmu.edu/~rmoffatt,,
+Rudy,Clausen,Amarda Shehu,,MS '15,,,,"Fairfax, VA",,,"AI, BIOPHYSICS",,,,
+Amr,Majul,Amarda Shehu,,MS '15,,,,"Fairfax, VA",,,"AI, CHEMISTRY",,http://www.mason.gmu.edu/~amajul,,
+Seyed Farid,Hendi,Amarda Shehu,,MS '12,,,,"Fairfax, VA",,,"AI, BIOINFORMATICS",,http://mason.gmu.edu/~shendi,,
+Christopher,Miles,Amarda Shehu,,MS '10,,Google,,"Mountain View, CA",,,"AI, BIOINFORMATICS",,http://conformations.org,,
+Sree Ram,GabbiReddy,Amarda Shehu,,MS '22,,,,"Fairfax, VA",,,"AI, MACHINE LEARNING",,,https://www.linkedin.com/in/sr33r4m/,
+Abhishek,Paudel,Gregory Stein,,PhD '26,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,"Distinguished Academic Achievement Award, GMU (2026); Fusemachines AI Fellow","ROBOTICS, PLANNING, LLM",,https://abpaudel.com,https://www.linkedin.com/in/abpaudel,https://scholar.google.com/citations?user=ytDltfUAAAAJ
+Abhish,Khanal,Gregory Stein,,PhD '26,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,,"ROBOTICS, MULTI-ROBOT, NAVIGATION",,http://abkhanal.com/,https://linkedin.com/in/aabs7,https://scholar.google.com/citations?user=dLdbu8YAAAAJ
+Raihan Islam,Arnob,Gregory Stein,,PhD '26,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,,"ROBOTICS, PLANNING, NAVIGATION",,,https://www.linkedin.com/in/raihan-islam-arnob/,
+Hoang-Dung,Bui,Gregory Stein,,PhD '26,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,,"ROBOTICS, MULTI-ROBOT, MOTION PLANNING",,,https://www.linkedin.com/in/hoangdungbui/,
+Roshan,Dhakal,Gregory Stein,,PhD '26,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,"Dissertation Completion Grant, GMU Provost's Office (2025); Provost Scholarship, GMU (2025); Outstanding Reviewer Recognition, CoRL LEAP Workshop 2024","ROBOTICS, TASK PLANNING",,https://www.dhakalroshan.com/,https://www.linkedin.com/in/roshan-dhakal/,https://scholar.google.com/citations?user=Hs_V-20AAAAJ&hl=en
+Manas,Gupta,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,Senior Software Engineer at Torc Robotics,,"Fairfax, VA",,,"AI, ROBOTICS, PLANNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/manas.jpg,,https://www.linkedin.com/in/manasguptangp/,
+Senthurbavan,Kirubaharan,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,,"ROBOTICS, ROBOT LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/senthu.jpg,https://senthurbavan.github.io,https://www.linkedin.com/in/senthurbavan,https://scholar.google.com/citations?user=A1Yq5vwAAAAJ&hl=en
+Yanlin,Zhou,Xuesu Xiao,,PhD,Constraint-Based Decision Guidance and Optimization for Enterprise Systems,,,"Fairfax, VA",,,"PATH PLANNING, OPTIMIZATION, MULTI-AGENT SYSTEMS",https://people.cs.gmu.edu/~xiao/RobotiXX/images/yanlin.jpg,,,
+Linji,Wang,Xuesu Xiao,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"REINFORCEMENT LEARNING, ROBOT LEARNING, GENERATIVE AI",https://people.cs.gmu.edu/~xiao/RobotiXX/images/linji.jpg,https://linjiwang.com/,https://www.linkedin.com/in/linjiw/,
+Tong,Xu,Xuesu Xiao,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA","Research Intern, H2X Lab, Boston University (May 2022 - August 2022)","Best Student Presenter Award, IEEE SSRR 2025 (Verti-Arena paper); Second Place, BARN Challenge Competition, ICRA 2025; Doctoral Research Scholarship - Tier 1, GMU (2026)","ROBOT PLANNING, REINFORCEMENT LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/tong.jpg,https://xutong05.github.io/,https://www.linkedin.com/in/tong-xu-a802941b1/,https://scholar.google.com/citations?user=IeKUpBQAAAAJ&hl=en
+Saad,Abdul Ghani,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,,"MACHINE LEARNING, ROBOTICS, PATH PLANNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/saad.jpeg,,https://www.linkedin.com/in/saad-ghani-9b5824158/,
+Amir,Payandeh,Xuesu Xiao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA","PhD Intern, Vail Systems (Summer 2023)","Best Paper Award Finalist, AAAI Fall Symposium on AI-HRI 2023 (nominated, for ""Toward Human-Like Social Robot Navigation"")","ROBOTICS, COMPUTER VISION, NLP",https://people.cs.gmu.edu/~xiao/RobotiXX/images/amirreza.jpg,,https://www.linkedin.com/in/amir-payandeh/,
+Dibyendu,Das,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA","Machine Learning Intern, Nissan Advanced Technology Center Silicon Valley (Summer 2024)","IDIA Predoctoral Fellowship, George Mason University (2023 cohort)","ROBOTICS, MOTION PLANNING, COMPUTER VISION",https://people.cs.gmu.edu/~xiao/RobotiXX/images/dibyendu.jpg,,https://www.linkedin.com/in/dibyendu-das-b480481bb/,
+Aniket,Datar,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,"Best Paper Award Finalist, AAAI Fall Symposium on AI-HRI 2023 (nominated, for ""Toward Human-Like Social Robot Navigation"")","ROBOTICS, MOTION PLANNING, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/aniket.jpg,,https://www.linkedin.com/in/aniket-datar-9187a48b/,
+Manshi,Limbu,Xuesu Xiao,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,"Best Paper Finalist, Cognitive Robotics track, IROS 2023","ROBOT NAVIGATION, REINFORCEMENT LEARNING, MULTI-AGENT SYSTEMS",https://people.cs.gmu.edu/~xiao/RobotiXX/images/manshi.jpg,https://mlimbuu.github.io/,,
+Anuj,Pokhrel,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,"Best Poster Award, CHAI 2026 poster session (RIT)","ROBOTICS, MOTION PLANNING, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/anuj.jpg,,https://www.linkedin.com/in/anuj-pokhrel-9b8b67156/,
+Amir Hossain,Raj,Xuesu Xiao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"COMPUTER VISION, NLP, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/amir.jpeg,https://amirraj.com/,https://www.linkedin.com/in/amirraj/,https://scholar.google.com/citations?user=QpmzDxsAAAAJ&hl=en
+Mohammad,Nazeri,Xuesu Xiao,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,"COMPUTER VISION, DEEP LEARNING, ROBOT NAVIGATION",https://people.cs.gmu.edu/~xiao/RobotiXX/images/mohammad.jpg,https://mhnazeri.github.io/,https://www.linkedin.com/in/mhnazeri,https://scholar.google.com/citations?user=Luud0jcAAAAJ
+Chenhui,Pan,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,,"ROBOTICS, MACHINE LEARNING, COMPUTER VISION",https://people.cs.gmu.edu/~xiao/RobotiXX/images/chenhui.jpg,,,
+Minh-Duc (Aaron),Nguyen,Xuesu Xiao,,PhD,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,,,"Fairfax, VA",,"Best Paper Award Finalist, AAAI AI-HRI 2023","ROBOTICS, ARTIFICIAL INTELLIGENCE",https://people.cs.gmu.edu/~xiao/RobotiXX/images/aaron.png,https://ducmngx.github.io/,https://www.linkedin.com/in/mducnguyen,https://scholar.google.com/citations?user=7U1cbW0AAAAJ
+Bhabaranjan,Panigrahi,Xuesu Xiao,,MS,,Senior SDE at Amazon Multimodal RecSys Team,Senior SDE at Amazon Multimodal RecSys Team,"Seattle, WA",,,"COMPUTER VISION, ROBOTICS, DEEP LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/ranjan.png,https://profile.bpanigrahi.com/,https://www.linkedin.com/in/b-ranjan,
+Dileep,Kumar,Xuesu Xiao,,MS,,Amazon,Amazon,"Seattle, WA",,,"ROBOTICS, MACHINE LEARNING",https://people.cs.gmu.edu/~xiao/RobotiXX/images/dileep.png,,https://www.linkedin.com/in/dileep-kumar-latchireddi-07ab66166/,
+Yu,Sun,Lishan Yang,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"LLM RELIABILITY, SYSTEMS, HPC",,https://pipijing13.github.io,https://www.linkedin.com/in/yu-sun-58a423257/,https://scholar.google.com/citations?user=2h1_I5IAAAAJ&hl=en
+Ying,Tang,Lishan Yang,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"SYSTEMS RELIABILITY, HPC",,,,
+Daehyun,Lee,Lishan Yang,,MS '26,,,,"Fairfax, VA",,,"SYSTEMS RELIABILITY, HPC",,,,
+Giuseppe,De Rosa,Lishan Yang,,PhD (visiting),Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"SYSTEMS RELIABILITY, HPC",,,,
+Zhu,Zhu,Lishan Yang,,MS '26,,,,"Fairfax, VA",,,"SYSTEMS RELIABILITY, HPC",,,,
+Ming,Tang,Lishan Yang,,MS,,,,"Fairfax, VA",,,"SYSTEMS RELIABILITY, HPC",,,,
+Rohan,Mengle,Lishan Yang,,MS,,,,"Fairfax, VA",,,"SYSTEMS RELIABILITY, HPC",,,,
+Yitao,Xu,Ziyu Yao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"NLP, LARGE LANGUAGE MODELS",,https://nico21yt.github.io/,,
+Ayan Antik,Khan,Ziyu Yao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"NLP, LARGE LANGUAGE MODELS",,https://ayan-antik.github.io/,,
+Mohamed,Aghzal,Ziyu Yao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA","Research Intern, Attijariwafa Bank (Summer 2021)","Distinguished Academic Award, GMU CS Department (2026); Best White Box Approach Award, Aletheia's Quest LLM lie detection challenge (2026); Travel Award, IEEE/CVF CVPR 2025","NLP, LARGE LANGUAGE MODELS",,http://mohamedaghzal.github.io,,
+Murong,Yue,Ziyu Yao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,"Outstanding PhD Student Award, GMU CS Department (2024)","NLP, LARGE LANGUAGE MODELS",,https://murongyue.github.io/,,
+Hao,Yan,Ziyu Yao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Seattle, WA","Applied Scientist Intern, Amazon (Summer 2025, returning Summer 2026); Machine Learning Engineer Intern, Salesteq (Jan-Apr 2025)","Outstanding GTA Award, GMU CS Department (2020, 2021, 2022); Distinguished GTA Award, GMU CS Department (2022); Graduate Students Poster Award, Honorable Mention, GMU (2022)","NLP, LARGE LANGUAGE MODELS",,https://hyan5.github.io/,,
+Daking,Rai,Ziyu Yao,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA","AI/ML Research Intern, LinkedIn (upcoming)","Best Paper Honorable Mention, First Workshop on LLM Explainability to Reasoning and Planning, COLM 2025","NLP, LARGE LANGUAGE MODELS",,https://dakingrai.github.io/,,
+Saurabh,Srivastava,Ziyu Yao,,PhD '26,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,Adobe,,"Seattle, WA","Research Intern, Adobe (Summer 2025); Applied Research Science Intern, Amazon (Summer 2024); NLP and Machine Learning Intern, Deloitte (Summer 2023); Research Intern, Tata Research Design and Development Centre (Summer 2016)","Outstanding GTA Award, GMU CS Department (2025); Best Machine Learning Hack and Best Use of CockroachDB Serverless, HooHacks 2023 (University of Maryland); Institute Silver Medal, Institute Proficiency Award, and Best Project Award, IIT Patna","NLP, LARGE LANGUAGE MODELS",,http://saurabhsriv.com/,,
+Sweta,Pati,Ziyu Yao,,MS '25,,,,"Fairfax, VA",,"Distinguished Academic Achievement Award, GMU CS Department","NLP, LARGE LANGUAGE MODELS",,,,
+Sam,Miller,Ziyu Yao,,MS '25,,,,"Fairfax, VA",,,"NLP, LARGE LANGUAGE MODELS",,,,
+Janit,Bidhan,Ziyu Yao,,,,,,"Fairfax, VA",,"Best Machine Learning Hack and Best Use of CockroachDB Serverless, HooHacks 2023; 2nd Place, CAHMP Student Entrepreneurship Challenge (2022)","NLP, LARGE LANGUAGE MODELS",,,,
+Gaurav,Singh,Ziyu Yao,,,,,,"Fairfax, VA",,,"NLP, LARGE LANGUAGE MODELS",,,,
+Yufan,Zhang,Jinwei Ye,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,"COMPUTER VISION, COMPUTATIONAL PHOTOGRAPHY",,https://yufanzhang82.github.io,,
+Su,Li,Jinwei Ye,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Fairfax, VA",,,"COMPUTER VISION, COMPUTATIONAL PHOTOGRAPHY",,,,
+Haikun,Huang,Craig Yu,,PhD,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA",,"Best Paper Honorable Mention, CHI 2019 (""Pose-Guided Level Design"")","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
+Minyoung,Kim,Craig Yu,,PhD,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA",,"Best Paper Award, Korea Computer Graphics Society (KCGS) 2019","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
+Erdem,Murat,Craig Yu,,PhD,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA",,,"COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
+Charles,Ahn,Craig Yu,,PhD,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA",,,"COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
+Ahnaf An,Nafee,Craig Yu,,PhD,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA",,,"COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
+Liuchuan,Yu,Craig Yu,,PhD '26,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA",,"Academic Achievement Award, GMU CS Department","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
+Yongqi,Zhang,Craig Yu,,PhD '25,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,,,"Fairfax, VA",,"NSF Graduate Research Fellowship; Distinguished Academic Achievement Award, GMU CS Department; Oracle Undergraduate Research Fellowship; Beacon Student Success Fellowship; Best Paper Honorable Mention, CHI 2019","VIRTUAL REALITY, COMPUTATIONAL DESIGN",,,,
+Changyang,Li,Craig Yu,,PhD '24,Deep Learning Models for Visual Scene Understanding and Video Recognition,Research Scientist at Goertek Alpha Labs,Computer Vision Engineer at Meta,"Menlo Park, CA","Research Intern, Adobe Research - Creative Intelligence Lab (Summer 2020); Research Intern, Meta Reality Labs (Summer/Fall 2021)","Outstanding PhD Student Award, GMU CS Department; Outstanding Academic Achievement Award, GMU CS Department","COMPUTER VISION, XR, HUMAN-SCENE INTERACTION",,https://changyangli.github.io/,,
+Rawan,Al Ghofaili,Craig Yu,,PhD '22,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor, University of Texas at Dallas",,"Fairfax, VA",,"Distinguished Academic Achievement Award, GMU CS Department","AR/VR, HUMAN-COMPUTER INTERACTION",,https://rawanmg.com/,,
+Wanwan,Li,Craig Yu,,PhD '21,Procedural Modeling and Data-Driven Simulation for Interactive Autonomous Environments,"Assistant Professor, University of Tulsa","Visiting Assistant Professor, University of South Florida","Fairfax, VA",,,"COMPUTER GRAPHICS, VIRTUAL REALITY, COMPUTATIONAL DESIGN",,,,
+Biao,Xie,Craig Yu,,MS '22,,,,"Fairfax, VA",,"CRA Outstanding Undergraduate Researcher Award, Finalist; Oracle Undergraduate Research Fellowship; Best Paper Honorable Mention, CHI 2019","COMPUTER GRAPHICS, VIRTUAL REALITY, HCI",,,,
+Ying,Meng,Qiang Zeng,,PhD,Automated Vulnerability Discovery and Threat Analysis in Software Systems,,,"Fairfax, VA",,,SYSTEMS SECURITY,,,,
+Xiang,Li,Qiang Zeng,,PhD,Automated Vulnerability Discovery and Threat Analysis in Software Systems,,,"Fairfax, VA",,,SYSTEMS SECURITY,,,,
+Guoming,Wu,Qiang Zeng,,PhD,Automated Vulnerability Discovery and Threat Analysis in Software Systems,,,"Fairfax, VA",,,SYSTEMS SECURITY,,,,
+Jie,Hou,Qiang Zeng,,PhD,Automated Vulnerability Discovery and Threat Analysis in Software Systems,,,"Fairfax, VA",,,SYSTEMS SECURITY,,,,
+Chuxiong,Wu,Qiang Zeng,,PhD '25,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Assistant Professor, Southern Illinois University",,"Fairfax, VA",,"Top Reviewer, NeurIPS 2025; Notable Reviewer, ICLR 2025",SYSTEMS SECURITY,,https://chuxiongwu.github.io,,
+Fei,Zuo,Qiang Zeng,,PhD '21,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Assistant Professor, University of Central Oklahoma",,"Fairfax, VA",,,SYSTEMS SECURITY,,https://fzuo.github.io,,
+Vamsi Shankar,Simhadri,Xiaokuan Zhang,,PhD,Automated Vulnerability Discovery and Threat Analysis in Software Systems,,,"Fairfax, VA",,,"XR SECURITY, VR SECURITY",,,,
+Vishnu Teja,Kandalam,Xiaokuan Zhang,,,,,,"Fairfax, VA",,,"LLM SECURITY, VULNERABILITY ASSESSMENT",,,,
+Yichang,Xiong,Xiaokuan Zhang,,,,,,"Fairfax, VA",,,"VR SECURITY, FIRMWARE SECURITY",,,,
+Hung-Mao (Rafael),Chen,Xiaokuan Zhang,,PhD '26,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Software Engineer, Google","Software Engineer, Google","Mountain View, CA","Security Researcher Summer Intern, Vector35 (2022); Security Researcher Summer Intern, Certik (2024); PhD SWE Intern, Google (2025)",,"RUST SECURITY, MEMORY SAFETY",,,,
+Bo,Lu,Xiaokuan Zhang,,,,,,"Fairfax, VA",,,"RUST SECURITY, BLOCKCHAIN SECURITY",,,,
+Huizhen,Zhou,Xiaokuan Zhang,,,,,,"Fairfax, VA",,"Best Hardware Demo Award, 2nd Place, HOST 2026 (for ""Correlation Power Analysis of NIST HQC-KEM"")","POST-QUANTUM CRYPTOGRAPHY, SIDE-CHANNEL ATTACKS",,,,
+Hung,Pham,Xiaokuan Zhang,,,,,,"Fairfax, VA",,,"LLM SECURITY, VULNERABILITY ASSESSMENT",,,,
+Pranav,Agrawal,Xiaokuan Zhang,,,,,,"Fairfax, VA",,,"BLOCKCHAIN SECURITY, SMART CONTRACTS",,,,
+Preksha,Shukla,Xiaokuan Zhang,,,,,,"Fairfax, VA",,,"BLOCKCHAIN SECURITY, SMART CONTRACTS",,,,
+Tejas,Ramesh,Keren Zhou,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"HIGH PERFORMANCE COMPUTING, PROGRAM ANALYSIS",,https://tejas3070.github.io/,https://linkedin.com/in/tejas-ramesh-976203190,https://scholar.google.com/citations?user=OGNnUHcAAAAJ&hl=en&oi=ao
+Bowen,Cui,Keren Zhou,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"HIGH PERFORMANCE COMPUTING, MACHINE LEARNING",,,https://www.linkedin.com/in/bowen-cui-2a2a34233/,
+Jihyeong,Lee,Keren Zhou,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"HIGH PERFORMANCE COMPUTING, PROGRAM ANALYSIS",,,https://www.linkedin.com/in/jlee2017/,
+Hao,Wu,Keren Zhou,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"HIGH PERFORMANCE COMPUTING, PARALLEL ALGORITHMS",,,https://www.linkedin.com/in/hao-wu-a29937a9/,
+Junyu,Yin,Keren Zhou,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"HIGH PERFORMANCE COMPUTING, MACHINE LEARNING",,,https://www.linkedin.com/in/junyu-yin-29202b2b8/,
+Jialiang,Gu,Keren Zhou,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"HIGH PERFORMANCE COMPUTING, PROGRAM ANALYSIS",,,,
+Atul,Khatri,Keren Zhou,,,,,,"Fairfax, VA",,,HIGH PERFORMANCE COMPUTING,,,,
+Mandar,Chaudhari,Keren Zhou,,MS '24,,,,"Fairfax, VA",,,HIGH PERFORMANCE COMPUTING,,,,
+Chahat,Raj,Ziwei Zhu,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Fairfax, VA",,,"FAIRNESS, NLP, BIAS EVALUATION",,https://chahatraj.github.io/,https://linkedin.com/in/chahatraj,https://scholar.google.com/citations?user=K8EKC4gAAAAJ&hl=en&oi=ao
+Yuqing,Zhou,Ziwei Zhu,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Seattle, WA","Applied Scientist Intern, Amazon Web Services (AWS) (Summer 2025, extended into Summer 2026)",,"CONVERSATIONAL AGENTS, NLP",,https://yuqing-zhou.github.io/,,https://scholar.google.com/citations?user=cHvsFwQAAAAJ
+Bowen,Wei,Ziwei Zhu,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA","GenAI Engineer Intern, GoEngage (Jun-Aug 2025); AI Agents Developer Intern, Fluency Security (Jun-Aug 2025)",,"LLM SAFETY, INTERPRETABLE AI",,https://weibowen555.github.io/,,https://scholar.google.com/citations?user=dDtSkoEAAAAJ&hl=en
+Mehrdad,Fazli,Ziwei Zhu,,PhD,Deep Learning Models for Visual Scene Understanding and Video Recognition,,,"Mountain View, CA","Data Science and Machine Learning Intern, Wayfair (Summer 2022); Applied Scientist Intern, Amazon (Dec 2025-Feb 2026); PhD Software Engineering Intern, Google (Summer 2026, Kirkland WA)",,"VISION-LANGUAGE MODELS, BIAS",,https://sites.google.com/view/mehrdad-fazli/,https://www.linkedin.com/in/mehrdad-fazli-66511479/,https://scholar.google.com/citations?user=e7AeExMAAAAJ&hl=en
+Jinhao,Pan,Ziwei Zhu,,PhD,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"RECOMMENDATION SYSTEMS, INTERPRETABLE AI",,https://jp-25.github.io/,https://www.linkedin.com/in/jinhao-pan-96a276153,https://scholar.google.com/citations?user=gey8oCUAAAAJ&hl
+Fardin Ahsan,Sakib,Ziwei Zhu,,PhD,Neural Architectures for Multilingual Natural Language Processing and Cross-Lingual Representation Learning,,,"Seattle, WA","Machine Learning and AI Intern, Brillient Corporation (May-Aug 2023); Applied Research Intern, Brillient Corporation (May-Aug 2024); Applied Research Scientist Intern, Amazon/AWS Support (Jun-Aug 2025); Agentic AI Research Intern, Fujitsu Research of America (Nov 2025-Jan 2026); AI Research Intern, Comcast (Jun 2026-present)","Distinguished Academic Achievement Award, George Mason University (2024); NSF Research Traineeship (NRT) Fellowship, Center for Adaptive Systems of Brain-Body Interactions (2023)","NLP, RESPONSIBLE AI",,https://fardinahsansakib.github.io/,https://www.linkedin.com/in/fardinahsan-sakib/,https://scholar.google.com/citations?hl=en&user=BA7JyPgAAAAJ
+Balassubramanian,Srinivasan,Ziwei Zhu,,MS,,,,"Fairfax, VA",,,"NLP, LLM EVALUATION",,,,
+Diwita,Banerjee,Ziwei Zhu,,MS,,,,"Fairfax, VA",,,RESPONSIBLE AI,,,,
+Mamnuya,Rinki,Ziwei Zhu,,MS,,,,"Fairfax, VA",,,"BIAS EVALUATION, NLP",,,,
+Sina,Mansouri,Ziwei Zhu,,MS,,,,"Fairfax, VA",,,"MEDICAL AI, NLP",,,,
+Mohit Bharatbhai,Marvania,Ziwei Zhu,,MS,,,,"Fairfax, VA",,,"MEDICAL AI, NLP",,,,
+Eric,Scott,Sean Luke,,PhD '22,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Researcher, MITRE Corporation",,"Cambridge, MA",,"Honorable Mention, ACM SIGEVO Best Dissertation Award (2023)","EVOLUTIONARY COMPUTATION, ASYNCHRONOUS PARALLELISM",,,,https://scholar.google.com/citations?user=OY4atVoAAAAJ&hl=en
+Katherine (Raven),Russell,Sean Luke,,PhD '21,Motion Planning and Control Under Uncertainty for Autonomous Mobile Robots,"Associate Professor (Teaching), George Mason University",,"Fairfax, VA",,,"ROBOTICS, MULTIAGENT SYSTEMS, SWARM INTELLIGENCE",https://cs.gmu.edu/sites/default/files/styles/thumbnail/public/2025-12/Katherine%20Russell_1x1.jpg?itok=c9uPa4uB,https://gildir.github.io/,,
+Younhee,Kim,Dana Richards,,PhD '09,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"INFORMATION HIDING, STEGANOGRAPHY",,,,
+Raimi,Rufai,Dana Richards,,PhD '15,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"COMPUTATIONAL GEOMETRY, STREAMING ALGORITHMS",,,,
+Ryan,Farley,Xinyuan (Frank) Wang,,PhD '15,Automated Vulnerability Discovery and Threat Analysis in Software Systems,"Senior Cyber Security Engineer, MITRE Corporation",,"Cambridge, MA",,,"MALWARE ANALYSIS, DIGITAL FORENSICS",,https://mason.gmu.edu/~rfarley3/,,
+Sahar,Mazloom,Dov Gordon,,PhD '20,Zero-Knowledge Cryptographic Protocols and Privacy-Preserving Distributed Systems,"Senior Research Scientist, Cryptography & AI Research, J.P. Morgan Chase",,"Fairfax, VA",,,"SECURE MULTI-PARTY COMPUTATION, PRIVACY-PRESERVING MACHINE LEARNING",,http://mason.gmu.edu/~sseyedma/index.html,,https://scholar.google.com/citations?user=ZjPnjnkAAAAJ&hl=en
+Kevin,Andrea,Robert Simon,,PhD '23,Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Assistant Professor, George Mason University",,"Fairfax, VA",,"Fred Ellersick Best Unclassified Paper Award, MILCOM 2017","EMBEDDED SYSTEMS, IOT, SYSTEMS PROGRAMMING",,https://kevinandrea.github.io,,https://scholar.google.com/citations?user=iqZGec4AAAAJ&hl=en
+Haibei,Zhu,Missy Cummings,,"PhD '21, Duke",Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,"Senior Data Scientist, UKG",,"Fairfax, VA",,,"HUMAN SUPERVISORY CONTROL, OPERATOR MODELING",,,https://www.linkedin.com/in/haibei-zhu/,https://scholar.google.com/citations?user=hlsy1SYAAAAJ&hl=en
+Carl,Nehme,Missy Cummings,,"PhD '09, MIT",Scalable Algorithms and Architectural Frameworks for High-Performance Computing Systems,,,"Fairfax, VA",,,"HUMAN SUPERVISORY CONTROL, UNMANNED VEHICLE SYSTEMS",,,,
