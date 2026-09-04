@@ -608,15 +608,7 @@ function renderStudentRow(s) {
     if (s.degree) metaParts.push(esc(s.degree));
 
     const detailParts = [];
-    if (s.currentJob) {
-        let jobStr = `Now: ${esc(s.currentJob)}`;
-        if (s.location) {
-            jobStr += ` <span class="entry-location" data-location="${esc(s.location)}" title="Filter by location">📍 ${esc(s.location)}</span>`;
-        }
-        detailParts.push(jobStr);
-    } else if (s.location) {
-        detailParts.push(`<span class="entry-location" data-location="${esc(s.location)}" title="Filter by location">📍 ${esc(s.location)}</span>`);
-    }
+    if (s.currentJob) detailParts.push(`Now: ${esc(s.currentJob)}`);
     if (s.firstJob) detailParts.push(`First job: ${esc(s.firstJob)}`);
     if (s.internships) detailParts.push(`Internships: ${esc(s.internships)}`);
 
@@ -632,12 +624,17 @@ function renderStudentRow(s) {
         `<span class="interest-tag" data-topic="${esc(t)}">${esc(t)}</span>`
     ).join('');
 
+    const locationBadge = s.location
+        ? `<span class="entry-location" data-location="${esc(s.location)}" title="Estimated current location: ${esc(s.location)}">📍 ${esc(s.location)}</span>`
+        : '';
+
     return `
     <div class="entry entry-with-portrait">
       <img class="entry-portrait" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
           <span class="entry-name">${esc(fullName)}</span>
+          ${locationBadge}
           ${icons ? `<span class="entry-icons">${icons}</span>` : ''}
           <time class="entry-updated" datetime="${esc(s.lastModified || '2026-09-04')}" title="Record last modified ${esc(s.lastModified || '2026-09-04')}">Updated ${esc(s.lastModified || '2026-09-04')}</time>
         </div>
