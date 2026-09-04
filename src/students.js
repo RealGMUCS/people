@@ -364,17 +364,19 @@ function render() {
     document.getElementById('filters').style.display = insightsView ? 'none' : '';
     document.querySelector('.search-examples').style.display = insightsView ? 'none' : '';
 
+    const filtered = getFiltered();
+
     if (insightsView) {
-        search.resetScope();
         grid.className = 'insights-view';
-        grid.innerHTML = renderInsights();
-        countEl.textContent = `Insights across ${allStudents.length} tracked students/alumni`;
+        grid.innerHTML = renderInsights(filtered);
+        if (filtered.length === allStudents.length) {
+            countEl.textContent = `Insights across ${allStudents.length} tracked students/alumni`;
+        } else {
+            countEl.textContent = `Insights across ${filtered.length} matching students/alumni (out of ${allStudents.length} total)`;
+        }
         updateUrl();
         return;
     }
-
-    grid.className = 'roster';
-    const filtered = getFiltered();
 
     const kw = search.effectiveSearch();
     const isAdvisorSearch = kw && kw.key === 'advisor' && kw.query;
@@ -463,27 +465,32 @@ function topCounts(items, limit) {
         .slice(0, limit);
 }
 
-function renderInsights() {
-    const total = allStudents.length;
-    const withInternships = allStudents.filter(s => s.internships).length;
-    const withHonors = allStudents.filter(s => s.honors.length).length;
-    const currentCount = allStudents.filter(s => studentStatus(s) === 'current').length;
+function renderInsights(students = allStudents) {
+    const total = students.length;
+    if (total === 0) {
+        return `<p class="insights-caption" style="margin-top: 2rem; font-size: 1.1rem; text-align: center;">No students match the current search filter.</p>`;
+    }
+    const withInternships = students.filter(s => s.internships).length;
+    const withHonors = students.filter(s => s.honors.length).length;
+    const currentCount = students.filter(s => studentStatus(s) === 'current').length;
     const alumniCount = total - currentCount;
 
-    const advisorCounts = topCounts(allStudents.map(s => s.advisor), 8);
-    const topicCounts = topCounts(allStudents.flatMap(s => s.topics), 16);
+    const advisorCounts = topCounts(students.map(s => s.advisor), 8);
+    const topicCounts = topCounts(students.flatMap(s => s.topics), 16);
     const orgCounts = topCounts(
-        allStudents.flatMap(s => [
+        students.flatMap(s => [
             extractOrg(s.currentJob),
             ...splitList(s.internships).map(extractOrg),
         ]),
         10
     );
 
+    const isFiltered = total < allStudents.length;
+
     const tiles = [
-        { value: total, label: 'Tracked students/alumni' },
-        { value: `${Math.round((withInternships / total) * 100)}%`, label: 'With a documented internship' },
-        { value: `${Math.round((withHonors / total) * 100)}%`, label: 'With an honor or award on file' },
+        { value: total, label: isFiltered ? 'Matching students/alumni' : 'Tracked students/alumni' },
+        { value: `${total ? Math.round((withInternships / total) * 100) : 0}%`, label: 'With a documented internship' },
+        { value: `${total ? Math.round((withHonors / total) * 100) : 0}%`, label: 'With an honor or award on file' },
         { value: currentCount, label: 'Current students' },
         { value: alumniCount, label: 'Alumni' },
     ];
@@ -497,6 +504,7 @@ function renderInsights() {
       ${tiles.map(t => `<div class="stat-tile"><div class="stat-tile-value">${esc(t.value)}</div><div class="stat-tile-label">${esc(t.label)}</div></div>`).join('')}
     </div>
 
+    ${advisorCounts.length ? `
     <div class="insights-section">
       <h3 class="insights-heading">Top Advisors</h3>
       <p class="insights-caption">By number of tracked students; click to see their advisees.</p>
@@ -510,7 +518,7 @@ function renderInsights() {
             <div class="ranked-track"><div class="ranked-bar" style="width: ${Math.round((count / maxAdvisor) * 100)}%;"></div></div>
           </button>`).join('')}
       </div>
-    </div>
+    </div>` : ''}
 
     ${orgCounts.length ? `
     <div class="insights-section">
@@ -528,13 +536,14 @@ function renderInsights() {
       </div>
     </div>` : ''}
 
+    ${topicCounts.length ? `
     <div class="insights-section">
       <h3 class="insights-heading">Popular Research Topics</h3>
       <p class="insights-caption">Click a topic to see who works on it.</p>
       <div class="interest-tags insights-tags">
         ${topicCounts.map(({ value, count }) => `<span class="interest-tag" data-topic="${esc(value)}">${esc(value)} <span class="tag-count">${count}</span></span>`).join('')}
       </div>
-    </div>
+    </div>` : ''}
   `;
 }
 
