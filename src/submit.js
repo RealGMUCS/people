@@ -9,6 +9,7 @@ const app = document.getElementById('app');
 // Plain-text dump of a faculty record, one line per faculty.csv column — so a maintainer
 // can copy a corrected version straight back into the spreadsheet.
 function facultyToText(f) {
+    const today = new Date().toISOString().split('T')[0];
     return [
         ['First Name', f.firstName],
         ['Last Name', f.lastName],
@@ -25,18 +26,24 @@ function facultyToText(f) {
         ['Year started at GMU', f.yearStarted],
         ['PhD from', f.phdFrom],
         ['Postdoc from', f.postdocFrom],
+        ['Last Modified', today],
+        ['Last Verified', today],
     ].map(([k, v]) => `${k}: ${v || ''}`).join('\n');
 }
 
 // Plain-text dump of a student/alumni record, one line per students.csv column.
 function studentToText(s) {
+    const today = new Date().toISOString().split('T')[0];
     return [
         ['First Name', s.firstName],
         ['Last Name', s.lastName],
         ['Advisor', s.advisor],
+        ['Co-Advisor', s.coAdvisor],
         ['Degree', s.degree],
+        ['Dissertation Title', s.dissertationTitle],
         ['Current Job', s.currentJob],
         ['First Job', s.firstJob],
+        ['Location', s.location],
         ['Internships', s.internships],
         ['Honors & Awards', s.honors.join('; ')],
         ['Topics', s.topics.join(', ')],
@@ -44,6 +51,8 @@ function studentToText(s) {
         ['Website', s.website],
         ['LinkedIn', s.linkedin],
         ['Google Scholar', s.scholar],
+        ['Last Modified', today],
+        ['Last Verified', today],
     ].map(([k, v]) => `${k}: ${v || ''}`).join('\n');
 }
 
