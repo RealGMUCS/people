@@ -1314,3 +1314,20 @@ button.card-link.copied {
         grid-template-columns: 1fr;
     }
 }
+
+/* Last Modified / Updated Tag Styling */
+.entry-updated {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: var(--hover-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+    margin-left: auto;
+    font-weight: 500;
+    opacity: 0.85;
+    white-space: nowrap;
+    line-height: 1.3;
+}
