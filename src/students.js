@@ -494,6 +494,7 @@ const LOCATION_COORDS = {
     'Tulsa, OK': [36.1540, -95.9928],
     'Jinan, China': [36.6512, 117.1201],
     'Natick, MA': [42.2834, -71.3495],
+    'Santa Clara, CA': [37.3541, -121.9552],
 };
 
 function getCoords(locStr) {
