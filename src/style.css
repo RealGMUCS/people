@@ -534,6 +534,16 @@ a.award-person:hover {
     font-weight: 500;
 }
 
+.faculty-count a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.faculty-count a:hover {
+    text-decoration: underline;
+}
+
 /* Cards */
 .card {
     background: var(--card-bg);
