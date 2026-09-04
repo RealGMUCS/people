@@ -15,6 +15,7 @@ export function safeUrl(url) {
     return /^https?:\/\//i.test(url) ? esc(url) : null;
 }
 
+export const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0v6h2v-6h-2Zm6 0v6h2v-6h-2ZM3 21h18v-2H3v2Z"/>';
 export const WEBSITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
 export const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
 export const LINKEDIN_ICON = '<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1s2.5 1.12 2.5 2.5ZM.24 8h4.48v15.5H.24V8Zm7.72 0h4.29v2.12h.06c.6-1.13 2.06-2.33 4.25-2.33 4.54 0 5.38 2.99 5.38 6.88v8.83h-4.47v-7.83c0-1.87-.03-4.27-2.6-4.27-2.61 0-3.01 2.04-3.01 4.14v7.96H7.96V8Z"/>';
@@ -23,13 +24,27 @@ export function iconLink(className, href, label, iconPath) {
     return `<a class="icon-link ${className}" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${label}" title="${label}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${iconPath}</svg></a>`;
 }
 
-// Website/LinkedIn/Google Scholar icon row shared by faculty cards and student rows
+// GMU Profile / Website / LinkedIn / Google Scholar icon row shared by faculty cards and student rows
 export function profileIcons(p, name) {
     const links = [];
+
+    let gmuUrl = p.gmuProfile;
+    if (!gmuUrl && p.email) {
+        const netid = p.email.replace(/@.*$/, '').trim();
+        if (netid && !['csgrad', 'csug'].includes(netid.toLowerCase())) {
+            gmuUrl = `https://cs.gmu.edu/profiles/${netid}`;
+        }
+    }
+
+    const safeGmu = gmuUrl && safeUrl(gmuUrl);
     const website = p.website && safeUrl(p.website);
     const linkedin = p.linkedin && safeUrl(p.linkedin);
     const scholar = p.scholar && safeUrl(p.scholar);
-    if (website) links.push(iconLink('website-link', website, `${name} personal or lab website`, WEBSITE_ICON));
+
+    const cleanUrl = url => url ? url.replace(/\/$/, '') : '';
+
+    if (safeGmu) links.push(iconLink('gmu-profile-link', safeGmu, `${name} official GMU profile`, PROFILE_ICON));
+    if (website && cleanUrl(website) !== cleanUrl(safeGmu)) links.push(iconLink('website-link', website, `${name} personal or lab website`, WEBSITE_ICON));
     if (linkedin) links.push(iconLink('linkedin-link', linkedin, `${name} on LinkedIn`, LINKEDIN_ICON));
     if (scholar) links.push(iconLink('scholar-link', scholar, `${name} on Google Scholar`, SCHOLAR_ICON));
     return links.join('');
