@@ -587,7 +587,8 @@ function initOrUpdateMap(studentsSubset) {
 // so this is deliberately much lighter than the faculty card.
 function renderStudentRow(s) {
     const fullName = `${s.firstName} ${s.lastName}`.trim();
-    const picture = s.picture && safeUrl(s.picture);
+    const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
+    const picture = (s.picture && safeUrl(s.picture)) || defaultPortrait;
     const icons = profileIcons(s, fullName, 'students');
 
     const metaParts = [];
@@ -627,8 +628,8 @@ function renderStudentRow(s) {
     ).join('');
 
     return `
-    <div class="entry${picture ? ' entry-with-portrait' : ''}">
-      ${picture ? `<img class="entry-portrait" src="${picture}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+    <div class="entry entry-with-portrait">
+      <img class="entry-portrait" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
           <span class="entry-name">${esc(fullName)}</span>
