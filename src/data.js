@@ -102,15 +102,21 @@ export async function loadStudents(facultyByName) {
         const firstName = clean(row['First Name']);
         const lastName = clean(row['Last Name']);
         const advisor = clean(row['Advisor']);
+        const degree = clean(row['Degree']);
         const topics = parseInterests(row['Topics']);
         const honors = parseList(row['Honors & Awards']);
+        const { phdYear, msYear, bsYear, gradYear } = parseDegreeYears(degree);
 
         const student = {
             firstName,
             lastName,
             advisor,
             advisorFaculty: advisor ? (facultyByName.get(advisor) || null) : null,
-            degree: clean(row['Degree']),
+            degree,
+            phdYear,
+            msYear,
+            bsYear,
+            gradYear,
             currentJob: clean(row['Current Job']),
             firstJob: clean(row['First Job']),
             internships: clean(row['Internships']),
@@ -131,6 +137,33 @@ export async function loadStudents(facultyByName) {
     }).filter(s => s.firstName || s.lastName);
 
     return { students, topicIndex };
+}
+
+function parseDegreeYears(degreeStr) {
+    if (!degreeStr) return { phdYear: '', msYear: '', bsYear: '', gradYear: '' };
+    const d = degreeStr.trim();
+    const m = d.match(/\x27?(\d{2,4})/);
+    let year = '';
+    let fullYear = '';
+    if (m) {
+        year = m[1];
+        if (year.length === 2) {
+            const num = parseInt(year, 10);
+            fullYear = (num > 50 ? '19' : '20') + year;
+        } else {
+            fullYear = year;
+        }
+    }
+    const isPhd = /ph\.?d/i.test(d);
+    const isMs = /\b(m\.?s|master)\b/i.test(d);
+    const isBs = /\b(b\.?s|bachelor)\b/i.test(d);
+
+    const phdYear = isPhd && fullYear ? `${fullYear} ${year}` : '';
+    const msYear = isMs && fullYear ? `${fullYear} ${year}` : '';
+    const bsYear = isBs && fullYear ? `${fullYear} ${year}` : '';
+    const gradYear = fullYear ? `${fullYear} ${year}` : '';
+
+    return { phdYear, msYear, bsYear, gradYear };
 }
 
 async function fetchCsv(url) {

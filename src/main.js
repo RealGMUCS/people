@@ -191,12 +191,21 @@ function getFiltered() {
     // Dropdown filters
     list = list.filter(f => rankMatches(f, rankFilter) && typeMatches(f, typeFilter));
 
-    // Search query
-    if (query) {
-        const kw = search.effectiveSearch();
-        if (kw) {
+    // Search query or keyword filter
+    const kw = search.effectiveSearch();
+    if (kw) {
+        if (kw.query) {
             list = list.filter(f => String(kw.getField(f) || '').toLowerCase().includes(kw.query));
-        } else if (query.startsWith('#')) {
+        } else {
+            list = list.filter(f => {
+                const val = kw.getField(f);
+                if (!val) return false;
+                if (Array.isArray(val)) return val.length > 0;
+                return String(val).trim() !== '';
+            });
+        }
+    } else if (query) {
+        if (query.startsWith('#')) {
             // #tag shortcuts
             const tag = query.slice(1);
             list = list.filter(f => {
