@@ -34,6 +34,9 @@ const STUDENT_KEYWORDS = {
     internship: s => s.internships,
     internships: s => s.internships,
     academia: s => (isAcademiaJob(s.currentJob) || isAcademiaJob(s.firstJob)) ? 'academia faculty professor postdoc' : '',
+    industry: s => ((s.currentJob && isIndustryJob(s.currentJob)) || (s.firstJob && isIndustryJob(s.firstJob))) ? 'industry corporate tech engineer scientist' : '',
+    gov: s => (isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob)) ? 'government national lab nasa mitre' : '',
+    government: s => (isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob)) ? 'government national lab nasa mitre' : '',
 };
 
 const KEYWORD_META = {
@@ -60,6 +63,9 @@ const KEYWORD_META = {
     internship: { label: 'Internship', icon: '💼' },
     internships: { label: 'Internship', icon: '💼' },
     academia: { label: 'Academia', icon: '🏛️' },
+    industry: { label: 'Industry', icon: '💼' },
+    gov: { label: 'Government', icon: '🏢' },
+    government: { label: 'Government', icon: '🏢' },
 };
 
 const STUDENT_SUGGESTION_SOURCES = {
@@ -459,6 +465,18 @@ function isAcademiaJob(text) {
     return false;
 }
 
+function isGovLabJob(text) {
+    if (!text) return false;
+    const t = text.toLowerCase();
+    const keywords = ['nasa', 'jpl', 'oak ridge', 'national lab', 'mitre', 'rand', 'nih', 'dod', 'navy', 'air force', 'army', 'defense', 'department of', 'government'];
+    return keywords.some(k => t.includes(k));
+}
+
+function isIndustryJob(text) {
+    if (!text) return false;
+    return !isAcademiaJob(text) && !isGovLabJob(text);
+}
+
 function extractOrg(text) {
     if (!text) return null;
     let part = text.includes(',') ? text.split(',').slice(1).join(',').trim() : text.trim();
@@ -486,8 +504,15 @@ function renderInsights(students = allStudents) {
     const withHonors = students.filter(s => s.honors.length).length;
     const currentCount = students.filter(s => studentStatus(s) === 'current').length;
     const alumniCount = total - currentCount;
+
     const academiaStudents = students.filter(s => isAcademiaJob(s.currentJob) || isAcademiaJob(s.firstJob));
     const academiaCount = academiaStudents.length;
+
+    const govStudents = students.filter(s => isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob));
+    const govCount = govStudents.length;
+
+    const industryStudents = students.filter(s => (s.currentJob && isIndustryJob(s.currentJob)) || (s.firstJob && isIndustryJob(s.firstJob)));
+    const industryCount = industryStudents.length;
 
     const advisorCounts = topCounts(students.map(s => s.advisor), 8);
     const topicCounts = topCounts(students.flatMap(s => s.topics), 16);
@@ -504,6 +529,8 @@ function renderInsights(students = allStudents) {
     const tiles = [
         { value: total, label: isFiltered ? 'Matching students/alumni' : 'Tracked students/alumni' },
         { value: `${academiaCount} (${total ? Math.round((academiaCount / total) * 100) : 0}%)`, label: 'In academia (faculty / postdoc)' },
+        { value: `${industryCount} (${total ? Math.round((industryCount / total) * 100) : 0}%)`, label: 'In industry / corporate' },
+        { value: `${govCount} (${total ? Math.round((govCount / total) * 100) : 0}%)`, label: 'In government / national labs' },
         { value: `${total ? Math.round((withInternships / total) * 100) : 0}%`, label: 'With a documented internship' },
         { value: `${total ? Math.round((withHonors / total) * 100) : 0}%`, label: 'With an honor or award on file' },
         { value: currentCount, label: 'Current students' },
