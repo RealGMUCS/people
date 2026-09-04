@@ -336,12 +336,13 @@ function renderCard(f) {
            </div>`
         : '';
 
-    const picture = f.picture && safeUrl(f.picture);
+    const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
+    const picture = (f.picture && safeUrl(f.picture)) || defaultPortrait;
     const icons = profileIcons(f, fullName, 'faculty');
     return `
     <div class="card">
       <div class="card-header">
-        ${picture ? `<img class="faculty-photo" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.remove()">` : ''}
+        <img class="faculty-photo" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.src='${defaultPortrait}'">
         <div class="card-header-text">
           <div class="card-name-row">
             <h2>${esc(fullName)}</h2>
