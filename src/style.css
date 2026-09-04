@@ -749,11 +749,9 @@ button.card-link.copied {
 }
 
 .achievements-heading {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     margin: 0;
 }
 

@@ -35,10 +35,10 @@ const KEYWORD_META = {
     rank: { label: 'Rank', icon: '🎓' },
     type: { label: 'Type', icon: '🏷️' },
     office: { label: 'Office', icon: '🏢' },
-    honors: { label: 'Honors', icon: '🏅' },
-    honor: { label: 'Honors', icon: '🏅' },
-    award: { label: 'Honors', icon: '🏅' },
-    awards: { label: 'Honors', icon: '🏅' },
+    honors: { label: 'Honors', icon: '🏆' },
+    honor: { label: 'Honors', icon: '🏆' },
+    award: { label: 'Honors', icon: '🏆' },
+    awards: { label: 'Honors', icon: '🏆' },
 };
 
 function uniqueNonEmpty(arr) {
@@ -320,7 +320,7 @@ function renderCard(f) {
     const achievementsList = f.awards.length
         ? `<div class="achievements-section collapsed">
              <div class="achievements-header" onclick="toggleAchievements(this)">
-               <h3 class="achievements-heading">Achievements</h3>
+               <h3 class="achievements-heading"><span class="honors-label">🏆 Honors & Awards:</span></h3>
                <span class="achievements-toggle">▶</span>
              </div>
              <div class="achievements-list">${renderAchievementGroups(f.awards)}</div>
