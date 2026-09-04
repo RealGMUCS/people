@@ -19,10 +19,15 @@ const STUDENT_KEYWORDS = {
     awards: s => s.honors.join(' '),
     phd: s => s.degree,
     degree: s => s.degree,
+    phdyear: s => s.phdYear,
+    msyear: s => s.msYear,
+    bsyear: s => s.bsYear,
+    year: s => s.gradYear,
+    gradyear: s => s.gradYear,
     topic: s => s.topics.join(' '),
     topics: s => s.topics.join(' '),
     research: s => s.topics.join(' '),
-    job: s => [s.currentJob, s.firstJob].join(' '),
+    job: s => [s.currentJob, s.firstJob].filter(Boolean).join(' '),
     currentjob: s => s.currentJob,
     firstjob: s => s.firstJob,
     intern: s => s.internships,
@@ -39,6 +44,11 @@ const KEYWORD_META = {
     awards: { label: 'Honors', icon: '🏆' },
     phd: { label: 'Degree', icon: '🎓' },
     degree: { label: 'Degree', icon: '🎓' },
+    phdyear: { label: 'PhD Year', icon: '🎓' },
+    msyear: { label: 'MS Year', icon: '🎓' },
+    bsyear: { label: 'BS Year', icon: '🎓' },
+    year: { label: 'Grad Year', icon: '🎓' },
+    gradyear: { label: 'Grad Year', icon: '🎓' },
     topic: { label: 'Topic', icon: '🏷️' },
     topics: { label: 'Topic', icon: '🏷️' },
     research: { label: 'Topic', icon: '🏷️' },
@@ -59,6 +69,11 @@ const STUDENT_SUGGESTION_SOURCES = {
     awards: () => uniqueNonEmpty(allStudents.flatMap(s => s.honors)),
     phd: () => uniqueNonEmpty(allStudents.map(s => s.degree)),
     degree: () => uniqueNonEmpty(allStudents.map(s => s.degree)),
+    phdyear: () => uniqueNonEmpty(allStudents.map(s => s.phdYear.split(' ')[0])),
+    msyear: () => uniqueNonEmpty(allStudents.map(s => s.msYear.split(' ')[0])),
+    bsyear: () => uniqueNonEmpty(allStudents.map(s => s.bsYear.split(' ')[0])),
+    year: () => uniqueNonEmpty(allStudents.map(s => s.gradYear.split(' ')[0])),
+    gradyear: () => uniqueNonEmpty(allStudents.map(s => s.gradYear.split(' ')[0])),
     topic: () => Array.from(topicIndex.keys()),
     topics: () => Array.from(topicIndex.keys()),
     research: () => Array.from(topicIndex.keys()),
@@ -71,13 +86,15 @@ const STUDENT_SUGGESTION_SOURCES = {
 };
 
 const SEARCH_HELP_ENTRIES = [
-    { code: 'name:', example: 'Jane Nguyen' },
+    { code: 'name:', example: 'Timothy Balint' },
     { code: 'advisor:', example: 'Jan Allbeck' },
+    { code: 'phdyear:', example: '2023' },
+    { code: 'msyear:', example: '2025' },
     { code: 'topic:', example: 'Robotics' },
     { code: 'degree:', example: "PhD '24" },
     { code: 'honors:', example: 'NSF Fellowship' },
     { code: 'job:', example: 'Google' },
-    { code: 'internship:', example: 'Amazon' },
+    { code: 'internships:', example: 'NVIDIA' },
     { code: '#tag', example: '— e.g. #AI' },
 ];
 
@@ -210,11 +227,20 @@ function getFiltered() {
     list = list.filter(s => degreeMatches(s, degreeFilter) && statusMatches(s, statusFilter));
 
     const query = document.getElementById('main-search').value.trim().toLowerCase();
-    if (query) {
-        const kw = search.effectiveSearch();
-        if (kw) {
+    const kw = search.effectiveSearch();
+    if (kw) {
+        if (kw.query) {
             list = list.filter(s => String(kw.getField(s) || '').toLowerCase().includes(kw.query));
-        } else if (query.startsWith('#')) {
+        } else {
+            list = list.filter(s => {
+                const val = kw.getField(s);
+                if (!val) return false;
+                if (Array.isArray(val)) return val.length > 0;
+                return String(val).trim() !== '';
+            });
+        }
+    } else if (query) {
+        if (query.startsWith('#')) {
             const tag = query.slice(1);
             list = list.filter(s =>
                 s.topics.some(t => t.toLowerCase().includes(tag)) ||

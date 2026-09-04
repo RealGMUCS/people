@@ -84,7 +84,7 @@ function renderShell() {
                 text is fine — a maintainer will read it and add/update the record.
             </p>
             <textarea id="details" name="details" rows="10"
-                placeholder="e.g.&#10;Jane Nguyen, PhD 2026, advised by Jan Allbeck.&#10;Topics: AI, Robotics.&#10;Current job: Research Scientist at NVIDIA. First job: SWE Intern at Meta."></textarea>
+                placeholder="e.g.&#10;Timothy Balint, PhD 2023, advised by Jan Allbeck.&#10;Topics: Virtual Humans, Games.&#10;Current job: Postdoctoral Researcher at TU Delft."></textarea>
         </div>
       </div>
 
@@ -212,7 +212,7 @@ async function init() {
             if (details.value === lastAutoFilled) { details.value = ''; lastAutoFilled = ''; }
             detailsLabel.textContent = 'Details';
             detailsHelp.textContent = 'Paste anything: full details, a link to a profile page, or just a few facts. Plain text is fine — a maintainer will read it and add/update the record.';
-            details.placeholder = 'e.g.\nJane Nguyen, PhD 2026, advised by Jan Allbeck.\nTopics: AI, Robotics.\nCurrent job: Research Scientist at NVIDIA. First job: SWE Intern at Meta.';
+            details.placeholder = 'e.g.\nTimothy Balint, PhD 2023, advised by Jan Allbeck.\nTopics: Virtual Humans, Procedural Generation, Games.\nCurrent job: Postdoctoral Researcher at TU Delft.';
         } else {
             detailsLabel.textContent = 'What should change?';
             detailsHelp.textContent = 'Type the name above to load their current entry, then edit the text below to show what should change.';

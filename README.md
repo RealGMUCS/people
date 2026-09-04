@@ -80,8 +80,8 @@ to that faculty member's card; a co-advised student gets one row per advisor.
 
 | Column | Example |
 |--------|---------|
-| First Name | Jane |
-| Last Name | Nguyen |
+| First Name | Timothy |
+| Last Name | Balint |
 | Advisor | Jan Allbeck |
 | Degree | PhD '26 |
 | Current Job | Software Engineer at Google |
