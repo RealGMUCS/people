@@ -3,6 +3,7 @@ import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, un
 import './style.css';
 
 let allStudents = [];
+let allFaculty = [];
 let topicIndex = new Map();
 let activeTopic = null;
 let currentView = 'directory'; // 'directory' | 'insights'
@@ -37,6 +38,7 @@ const STUDENT_KEYWORDS = {
     industry: s => ((s.currentJob && isIndustryJob(s.currentJob)) || (s.firstJob && isIndustryJob(s.firstJob))) ? 'industry corporate tech engineer scientist' : '',
     gov: s => (isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob)) ? 'government national lab nasa mitre' : '',
     government: s => (isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob)) ? 'government national lab nasa mitre' : '',
+    gmufaculty: s => (isGmuFacultyJob(s.currentJob) || isGmuFacultyJob(s.firstJob)) ? 'gmu faculty alumni professor' : '',
 };
 
 const KEYWORD_META = {
@@ -66,6 +68,7 @@ const KEYWORD_META = {
     industry: { label: 'Industry', icon: '💼' },
     gov: { label: 'Government', icon: '🏢' },
     government: { label: 'Government', icon: '🏢' },
+    gmufaculty: { label: 'GMU Faculty Alumni', icon: '🏛️' },
 };
 
 const STUDENT_SUGGESTION_SOURCES = {
@@ -108,6 +111,7 @@ const SEARCH_HELP_ENTRIES = [
 
 async function init() {
     const facultyData = await loadFaculty();
+    allFaculty = facultyData.faculty;
     const studentData = await loadStudents(facultyData.facultyByName);
     allStudents = studentData.students;
     topicIndex = studentData.topicIndex;
@@ -477,6 +481,58 @@ function isIndustryJob(text) {
     return !isAcademiaJob(text) && !isGovLabJob(text);
 }
 
+function isGmuFacultyJob(job) {
+    if (!job) return false;
+    const j = job.toLowerCase();
+    return (j.includes('gmu') || j.includes('george mason')) &&
+        (j.includes('professor') || j.includes('prof') || j.includes('faculty') || j.includes('lecturer') || j.includes('instructor'));
+}
+
+function nameKey(first, last) {
+    const full = `${first || ''} ${last || ''}`.toLowerCase();
+    if (full.includes('samudio')) return 'samudio';
+    return full.replace(/[^a-z]/g, '');
+}
+
+function getGmuAlumniFaculty(studentsSubset) {
+    const list = [];
+    const seen = new Set();
+    const studentKeys = new Set(studentsSubset.map(s => nameKey(s.firstName, s.lastName)));
+
+    allFaculty.forEach(f => {
+        const phd = (f.phdFrom || '').toLowerCase();
+        if (phd.includes('gmu') || phd.includes('george mason')) {
+            const key = nameKey(f.firstName, f.lastName);
+            if (studentKeys.has(key) || studentsSubset.length === allStudents.length) {
+                if (!seen.has(key)) {
+                    seen.add(key);
+                    list.push({
+                        name: `${f.firstName || ''} ${f.lastName || ''}`.trim(),
+                        role: `${f.rank || f.category || 'Faculty'}, GMU CS`,
+                    });
+                }
+            }
+        }
+    });
+
+    studentsSubset.forEach(s => {
+        const cur = s.currentJob || '';
+        const fst = s.firstJob || '';
+        if (isGmuFacultyJob(cur) || isGmuFacultyJob(fst)) {
+            const key = nameKey(s.firstName, s.lastName);
+            if (!seen.has(key)) {
+                seen.add(key);
+                list.push({
+                    name: `${s.firstName || ''} ${s.lastName || ''}`.trim(),
+                    role: cur || fst,
+                });
+            }
+        }
+    });
+
+    return list.sort((a, b) => a.name.localeCompare(b.name));
+}
+
 function extractOrg(text) {
     if (!text) return null;
     let part = text.includes(',') ? text.split(',').slice(1).join(',').trim() : text.trim();
@@ -514,6 +570,8 @@ function renderInsights(students = allStudents) {
     const industryStudents = students.filter(s => (s.currentJob && isIndustryJob(s.currentJob)) || (s.firstJob && isIndustryJob(s.firstJob)));
     const industryCount = industryStudents.length;
 
+    const gmuAlumniFacultyList = getGmuAlumniFaculty(students);
+
     const advisorCounts = topCounts(students.map(s => s.advisor), 8);
     const topicCounts = topCounts(students.flatMap(s => s.topics), 16);
     const orgCounts = topCounts(
@@ -528,6 +586,7 @@ function renderInsights(students = allStudents) {
 
     const tiles = [
         { value: total, label: isFiltered ? 'Matching students/alumni' : 'Tracked students/alumni' },
+        { value: gmuAlumniFacultyList.length, label: 'GMU CS alumni on GMU faculty' },
         { value: `${academiaCount} (${total ? Math.round((academiaCount / total) * 100) : 0}%)`, label: 'In academia (faculty / postdoc)' },
         { value: `${industryCount} (${total ? Math.round((industryCount / total) * 100) : 0}%)`, label: 'In industry / corporate' },
         { value: `${govCount} (${total ? Math.round((govCount / total) * 100) : 0}%)`, label: 'In government / national labs' },
@@ -545,6 +604,19 @@ function renderInsights(students = allStudents) {
     <div class="stat-tiles">
       ${tiles.map(t => `<div class="stat-tile"><div class="stat-tile-value">${esc(t.value)}</div><div class="stat-tile-label">${esc(t.label)}</div></div>`).join('')}
     </div>
+
+    ${gmuAlumniFacultyList.length ? `
+    <div class="insights-section">
+      <h3 class="insights-heading">GMU CS Alumni on GMU Faculty (${gmuAlumniFacultyList.length})</h3>
+      <p class="insights-caption">GMU CS graduates who became faculty members at George Mason University; click a name to view their faculty card.</p>
+      <div class="interest-tags insights-tags">
+        ${gmuAlumniFacultyList.map(item => `
+          <a class="interest-tag" href="index.html?q=name: ${encodeURIComponent(item.name)}" title="View ${esc(item.name)} faculty card">
+            ${esc(item.name)} <span class="tag-count">${esc(item.role)}</span>
+          </a>
+        `).join('')}
+      </div>
+    </div>` : ''}
 
     ${advisorCounts.length ? `
     <div class="insights-section">
