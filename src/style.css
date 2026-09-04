@@ -1254,3 +1254,63 @@ button.card-link.copied {
     font-size: 0.85rem;
     max-width: 62ch;
 }
+
+/* Alumni Map & Dissertation Styles */
+.alumni-map-container {
+    margin-bottom: 2.5rem;
+}
+
+.alumni-map {
+    width: 100%;
+    height: 380px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.entry-dissertation {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--hover-bg);
+    padding: 0.4rem 0.65rem;
+    border-left: 3px solid var(--accent-color);
+    border-radius: 0 6px 6px 0;
+    line-height: 1.4;
+}
+
+.dissertation-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.entry-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    background: var(--hover-bg);
+    transition: background-color 0.15s ease;
+}
+
+.entry-location:hover {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+}
+
+.insights-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .insights-grid-2col {
+        grid-template-columns: 1fr;
+    }
+}

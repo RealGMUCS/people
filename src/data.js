@@ -67,12 +67,17 @@ export async function loadFaculty() {
         const { data: studentData } = Papa.parse(studentText, { header: true, skipEmptyLines: true });
         studentData.forEach(row => {
             const advisorName = clean(row['Advisor']);
+            const coAdvisorName = clean(row['Co-Advisor']);
+            const studentInfo = {
+                firstName: clean(row['First Name']),
+                lastName: clean(row['Last Name']),
+                degree: clean(row['Degree']),
+            };
             if (advisorName && byName.has(advisorName)) {
-                byName.get(advisorName).advisees.push({
-                    firstName: clean(row['First Name']),
-                    lastName: clean(row['Last Name']),
-                    degree: clean(row['Degree']),
-                });
+                byName.get(advisorName).advisees.push({ ...studentInfo, isCoAdvisor: false });
+            }
+            if (coAdvisorName && byName.has(coAdvisorName)) {
+                byName.get(coAdvisorName).advisees.push({ ...studentInfo, isCoAdvisor: true });
             }
         });
     }
@@ -102,6 +107,7 @@ export async function loadStudents(facultyByName) {
         const firstName = clean(row['First Name']);
         const lastName = clean(row['Last Name']);
         const advisor = clean(row['Advisor']);
+        const coAdvisor = clean(row['Co-Advisor']);
         const degree = clean(row['Degree']);
         const topics = parseInterests(row['Topics']);
         const honors = parseList(row['Honors & Awards']);
@@ -111,8 +117,12 @@ export async function loadStudents(facultyByName) {
             firstName,
             lastName,
             advisor,
+            coAdvisor,
             advisorFaculty: advisor ? (facultyByName.get(advisor) || null) : null,
+            coAdvisorFaculty: coAdvisor ? (facultyByName.get(coAdvisor) || null) : null,
             degree,
+            dissertationTitle: clean(row['Dissertation Title']),
+            location: clean(row['Location']),
             phdYear,
             msYear,
             bsYear,

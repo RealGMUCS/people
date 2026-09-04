@@ -9,9 +9,11 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "leaflet": "^1.9.4",
         "papaparse": "^5.7.0"
     },
     "devDependencies": {
+        "@types/leaflet": "^1.9.22",
         "vite": "^8.2.2"
     }
 }
