@@ -104,6 +104,10 @@ async function init() {
     allStudents = studentData.students;
     topicIndex = studentData.topicIndex;
 
+    // Assign a random index to each student once per session load
+    const randomIndices = sample(Array.from({ length: allStudents.length }, (_, i) => i), allStudents.length);
+    allStudents.forEach((s, idx) => { s.randomIndex = randomIndices[idx]; });
+
     setupSearchHelp(SEARCH_HELP_ENTRIES);
     search = createSearchController({
         input: document.getElementById('main-search'),
@@ -137,11 +141,13 @@ async function init() {
 function setupFilters() {
     document.getElementById('degree-filter').addEventListener('change', () => render());
     document.getElementById('status-filter').addEventListener('change', () => render());
+    document.getElementById('sort-order').addEventListener('change', () => render());
 }
 
 function resetFilterDropdowns() {
     document.getElementById('degree-filter').value = 'all';
     document.getElementById('status-filter').value = 'all';
+    document.getElementById('sort-order').value = 'random';
 }
 
 // Degree dropdown reads the free-text Degree column ("PhD '24", "MS", "PhD (visiting)", ...)
@@ -251,7 +257,59 @@ function getFiltered() {
         }
     }
 
-    return list.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || ''));
+    const sortOrder = document.getElementById('sort-order')?.value || 'random';
+    return sortStudents(list, sortOrder);
+}
+
+function sortStudents(list, order) {
+    const arr = list.slice();
+    switch (order) {
+        case 'random':
+            return arr.sort((a, b) => (a.randomIndex ?? 0) - (b.randomIndex ?? 0));
+        case 'name-asc':
+            return arr.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || '') || (a.firstName || '').localeCompare(b.firstName || ''));
+        case 'name-desc':
+            return arr.sort((a, b) => (b.lastName || '').localeCompare(a.lastName || '') || (b.firstName || '').localeCompare(a.firstName || ''));
+        case 'grad-desc':
+            return arr.sort((a, b) => {
+                const yA = getGradYearNum(a);
+                const yB = getGradYearNum(b);
+                if (yA !== yB) return yB - yA;
+                return (a.lastName || '').localeCompare(b.lastName || '');
+            });
+        case 'grad-asc':
+            return arr.sort((a, b) => {
+                const yA = getGradYearNum(a);
+                const yB = getGradYearNum(b);
+                if (yA === -1 && yB === -1) return (a.lastName || '').localeCompare(b.lastName || '');
+                if (yA === -1) return 1;
+                if (yB === -1) return -1;
+                if (yA !== yB) return yA - yB;
+                return (a.lastName || '').localeCompare(b.lastName || '');
+            });
+        case 'advisor-asc':
+            return arr.sort((a, b) => {
+                const advA = a.advisor || 'ZZZ';
+                const advB = b.advisor || 'ZZZ';
+                const partsA = advA.split(' ');
+                const partsB = advB.split(' ');
+                const lastA = partsA[partsA.length - 1];
+                const lastB = partsB[partsB.length - 1];
+                const comp = lastA.localeCompare(lastB);
+                if (comp !== 0) return comp;
+                return (a.lastName || '').localeCompare(b.lastName || '');
+            });
+        default:
+            return arr.sort((a, b) => (a.randomIndex ?? 0) - (b.randomIndex ?? 0));
+    }
+}
+
+function getGradYearNum(s) {
+    const raw = s.gradYear || s.phdYear || s.msYear || s.degree || '';
+    const m = raw.match(/\b(19\d{2}|20\d{2})\b/) || raw.match(/\x27(\d{2})\b/);
+    if (!m) return -1;
+    const val = parseInt(m[1], 10);
+    return val < 100 ? (val > 50 ? 1900 + val : 2000 + val) : val;
 }
 
 function studentSearchMatch(s, q) {
@@ -267,11 +325,13 @@ function updateUrl() {
     const q = search.searchQueryValue();
     const degree = document.getElementById('degree-filter').value;
     const status = document.getElementById('status-filter').value;
+    const sort = document.getElementById('sort-order')?.value || 'random';
 
     if (currentView !== 'directory') params.set('view', currentView);
     if (q) params.set('q', q);
     if (degree !== 'all') params.set('degree', degree);
     if (status !== 'all') params.set('status', status);
+    if (sort !== 'random') params.set('sort', sort);
     if (activeTopic) params.set('topic', activeTopic);
 
     const qs = params.toString();
@@ -286,6 +346,7 @@ function restoreFromUrl() {
     if (params.has('q')) search.setSearchValue(params.get('q'));
     if (params.has('degree')) document.getElementById('degree-filter').value = params.get('degree');
     if (params.has('status')) document.getElementById('status-filter').value = params.get('status');
+    if (params.has('sort') && document.getElementById('sort-order')) document.getElementById('sort-order').value = params.get('sort');
     if (params.has('topic')) {
         activeTopic = params.get('topic');
         document.getElementById('active-filter').style.display = 'flex';
