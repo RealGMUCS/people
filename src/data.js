@@ -47,6 +47,8 @@ export async function loadFaculty() {
             yearStarted: clean(row['Year started at GMU']),
             phdFrom: clean(row['PhD from']),
             postdocFrom: clean(row['Postdoc from']),
+            lastModified: clean(row['Last Modified']),
+            lastVerified: clean(row['Last Verified']),
             awards,
             // searchable text only (cards render from `awards`); include the
             // category so e.g. "NSF CAREER" matches
@@ -136,6 +138,8 @@ export async function loadStudents(facultyByName) {
             website: normalizeUrl(clean(row['Website'])),
             linkedin: normalizeUrl(clean(row['LinkedIn'])),
             scholar: normalizeUrl(clean(row['Google Scholar'])),
+            lastModified: clean(row['Last Modified']),
+            lastVerified: clean(row['Last Verified']),
         };
 
         topics.forEach(topic => {
