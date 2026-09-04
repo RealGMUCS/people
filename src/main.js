@@ -310,6 +310,12 @@ function renderCard(f) {
     if (f.phdFrom) details.push(detailRow('PhD', esc(f.phdFrom)));
     if (f.postdocFrom) details.push(detailRow('Postdoc', esc(f.postdocFrom)));
     if (f.yearStarted) details.push(detailRow('At GMU since', esc(f.yearStarted)));
+    if (f.advisees && f.advisees.length > 0) {
+        const count = f.advisees.length;
+        const label = count === 1 ? '1 student' : `${count} students`;
+        const url = `students.html?q=advisor:${encodeURIComponent(fullName)}`;
+        details.push(detailRow('Advisees', `<a class="advisees-link" href="${esc(url)}">${esc(label)} ↗</a>`));
+    }
 
     const achievementsList = f.awards.length
         ? `<div class="achievements-section collapsed">
