@@ -606,12 +606,17 @@ function renderStudentRow(s) {
         metaParts.push(`Advisor: <a class="award-person" data-advisor="None" href="#">None</a>`);
     }
     if (s.degree) metaParts.push(esc(s.degree));
-    if (s.location) {
-        metaParts.push(`<span class="entry-location" data-location="${esc(s.location)}" title="Filter by location">📍 ${esc(s.location)}</span>`);
-    }
 
     const detailParts = [];
-    if (s.currentJob) detailParts.push(`Now: ${esc(s.currentJob)}`);
+    if (s.currentJob) {
+        let jobStr = `Now: ${esc(s.currentJob)}`;
+        if (s.location) {
+            jobStr += ` <span class="entry-location" data-location="${esc(s.location)}" title="Filter by location">📍 ${esc(s.location)}</span>`;
+        }
+        detailParts.push(jobStr);
+    } else if (s.location) {
+        detailParts.push(`<span class="entry-location" data-location="${esc(s.location)}" title="Filter by location">📍 ${esc(s.location)}</span>`);
+    }
     if (s.firstJob) detailParts.push(`First job: ${esc(s.firstJob)}`);
     if (s.internships) detailParts.push(`Internships: ${esc(s.internships)}`);
 
