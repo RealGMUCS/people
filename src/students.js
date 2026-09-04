@@ -431,8 +431,12 @@ function render() {
 
     if (advisorName) {
         const countText = filtered.length === 1 ? '1 student/alumnus' : `${filtered.length} students/alumni`;
-        const facultyUrl = `index.html?q=name: ${encodeURIComponent(advisorName)}`;
-        countEl.innerHTML = `${countText} advised by <a href="${esc(facultyUrl)}">${esc(advisorName)}</a>`;
+        if (advisorName.toLowerCase() === 'none') {
+            countEl.textContent = `${countText} with no designated advisor (None / Coursework MS)`;
+        } else {
+            const facultyUrl = `index.html?q=name: ${encodeURIComponent(advisorName)}`;
+            countEl.innerHTML = `${countText} advised by <a href="${esc(facultyUrl)}">${esc(advisorName)}</a>`;
+        }
     } else {
         countEl.textContent = `${filtered.length} students/alumni`;
     }
@@ -587,11 +591,17 @@ function renderStudentRow(s) {
 
     const metaParts = [];
     if (s.advisor) {
-        let advHtml = `Advisor: <a class="award-person" data-advisor="${esc(s.advisor)}" href="#">${esc(s.advisor)}</a>`;
-        if (s.coAdvisor) {
-            advHtml += ` & <a class="award-person" data-advisor="${esc(s.coAdvisor)}" href="#">${esc(s.coAdvisor)}</a> <span style="font-size:0.85em; color:var(--text-secondary);">(Co-advisor)</span>`;
+        if (s.advisor.toLowerCase() === 'none') {
+            metaParts.push(`Advisor: <a class="award-person" data-advisor="None" href="#">None</a>`);
+        } else {
+            let advHtml = `Advisor: <a class="award-person" data-advisor="${esc(s.advisor)}" href="#">${esc(s.advisor)}</a>`;
+            if (s.coAdvisor) {
+                advHtml += ` & <a class="award-person" data-advisor="${esc(s.coAdvisor)}" href="#">${esc(s.coAdvisor)}</a> <span style="font-size:0.85em; color:var(--text-secondary);">(Co-advisor)</span>`;
+            }
+            metaParts.push(advHtml);
         }
-        metaParts.push(advHtml);
+    } else {
+        metaParts.push(`Advisor: <a class="award-person" data-advisor="None" href="#">None</a>`);
     }
     if (s.degree) metaParts.push(esc(s.degree));
     if (s.location) {
