@@ -588,7 +588,7 @@ function initOrUpdateMap(studentsSubset) {
 function renderStudentRow(s) {
     const fullName = `${s.firstName} ${s.lastName}`.trim();
     const picture = s.picture && safeUrl(s.picture);
-    const icons = profileIcons(s, fullName);
+    const icons = profileIcons(s, fullName, 'students');
 
     const metaParts = [];
     if (s.advisor) {
