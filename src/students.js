@@ -33,6 +33,7 @@ const STUDENT_KEYWORDS = {
     intern: s => s.internships,
     internship: s => s.internships,
     internships: s => s.internships,
+    academia: s => (isAcademiaJob(s.currentJob) || isAcademiaJob(s.firstJob)) ? 'academia faculty professor postdoc' : '',
 };
 
 const KEYWORD_META = {
@@ -58,6 +59,7 @@ const KEYWORD_META = {
     intern: { label: 'Internship', icon: '💼' },
     internship: { label: 'Internship', icon: '💼' },
     internships: { label: 'Internship', icon: '💼' },
+    academia: { label: 'Academia', icon: '🏛️' },
 };
 
 const STUDENT_SUGGESTION_SOURCES = {
@@ -447,6 +449,16 @@ function renderStudentRow(s) {
 // Internships/Current Job fields with a simple heuristic (text after the
 // first comma, parentheticals stripped), so treat the employer list as
 // approximate rather than authoritative.
+function isAcademiaJob(text) {
+    if (!text) return false;
+    const t = text.toLowerCase();
+    const roles = ['professor', 'prof.', 'prof ', 'postdoc', 'postdoctoral', 'faculty', 'lecturer', 'instructor', 'tenure'];
+    const insts = ['university', 'college', 'univ', 'tu delft', 'eth zurich', 'epfl', 'mit ', 'stanford'];
+    if (roles.some(r => t.includes(r))) return true;
+    if (insts.some(i => t.includes(i)) && (t.includes('researcher') || t.includes('fellow') || t.includes('scholar'))) return true;
+    return false;
+}
+
 function extractOrg(text) {
     if (!text) return null;
     let part = text.includes(',') ? text.split(',').slice(1).join(',').trim() : text.trim();
@@ -474,6 +486,8 @@ function renderInsights(students = allStudents) {
     const withHonors = students.filter(s => s.honors.length).length;
     const currentCount = students.filter(s => studentStatus(s) === 'current').length;
     const alumniCount = total - currentCount;
+    const academiaStudents = students.filter(s => isAcademiaJob(s.currentJob) || isAcademiaJob(s.firstJob));
+    const academiaCount = academiaStudents.length;
 
     const advisorCounts = topCounts(students.map(s => s.advisor), 8);
     const topicCounts = topCounts(students.flatMap(s => s.topics), 16);
@@ -489,6 +503,7 @@ function renderInsights(students = allStudents) {
 
     const tiles = [
         { value: total, label: isFiltered ? 'Matching students/alumni' : 'Tracked students/alumni' },
+        { value: `${academiaCount} (${total ? Math.round((academiaCount / total) * 100) : 0}%)`, label: 'In academia (faculty / postdoc)' },
         { value: `${total ? Math.round((withInternships / total) * 100) : 0}%`, label: 'With a documented internship' },
         { value: `${total ? Math.round((withHonors / total) * 100) : 0}%`, label: 'With an honor or award on file' },
         { value: currentCount, label: 'Current students' },
