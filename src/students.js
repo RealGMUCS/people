@@ -477,6 +477,19 @@ const LOCATION_COORDS = {
     'Riyadh, Saudi Arabia': [24.7136, 46.6753],
     'Zurich, Switzerland': [47.3769, 8.5417],
     'London, UK': [51.5074, -0.1278],
+    'College Park, MD': [38.9897, -76.9378],
+    'Pasadena, CA': [34.1478, -118.1445],
+    'Harrisburg, PA': [40.2732, -76.8867],
+    'Cleveland, OH': [41.4993, -81.6944],
+    'Tampa, FL': [27.9506, -82.4572],
+    'Hoboken, NJ': [40.7440, -74.0324],
+    'New Brunswick, NJ': [40.4862, -74.4518],
+    'Bozeman, MT': [45.6770, -111.0429],
+    'Toronto, Canada': [43.6532, -79.3832],
+    'Dallas, TX': [32.7767, -96.7970],
+    'Tulsa, OK': [36.1540, -95.9928],
+    'Jinan, China': [36.6512, 117.1201],
+    'Natick, MA': [42.2834, -71.3495],
 };
 
 function getCoords(locStr) {
