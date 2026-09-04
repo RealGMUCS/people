@@ -274,8 +274,27 @@ async function init() {
         e.preventDefault();
     });
 
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('list')) {
+        const listVal = params.get('list');
+        const radio = document.querySelector(`input[name="list"][value="${listVal}"]`);
+        if (radio) radio.checked = true;
+    }
+
     refreshByName();
+
+    if (params.has('purpose') || params.has('name')) {
+        const purposeVal = params.get('purpose') || (params.has('name') ? 'update' : 'add');
+        const radio = document.querySelector(`input[name="purpose"][value="${purposeVal}"]`);
+        if (radio) radio.checked = true;
+    }
+
     applyPurpose();
+
+    if (params.has('name')) {
+        nameInput.value = params.get('name');
+        checkMatch();
+    }
 
     form.addEventListener('submit', e => {
         e.preventDefault();

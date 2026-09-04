@@ -1331,3 +1331,15 @@ button.card-link.copied {
     white-space: nowrap;
     line-height: 1.3;
 }
+
+.icon-link.edit-link {
+    color: var(--text-secondary);
+    opacity: 0.65;
+    transition: color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+}
+
+.icon-link.edit-link:hover {
+    color: var(--primary-color);
+    opacity: 1;
+    transform: scale(1.18);
+}

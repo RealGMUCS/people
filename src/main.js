@@ -337,7 +337,7 @@ function renderCard(f) {
         : '';
 
     const picture = f.picture && safeUrl(f.picture);
-    const icons = profileIcons(f, fullName);
+    const icons = profileIcons(f, fullName, 'faculty');
     return `
     <div class="card">
       <div class="card-header">
