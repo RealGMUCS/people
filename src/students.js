@@ -288,7 +288,24 @@ function render() {
 
     grid.className = 'roster';
     const filtered = getFiltered();
-    countEl.textContent = `${filtered.length} students/alumni`;
+
+    const kw = search.effectiveSearch();
+    const isAdvisorSearch = kw && kw.key === 'advisor' && kw.query;
+    let advisorName = null;
+    if (isAdvisorSearch) {
+        const sampleStudent = filtered.find(s => s.advisor && s.advisor.toLowerCase().includes(kw.query))
+            || allStudents.find(s => s.advisor && s.advisor.toLowerCase().includes(kw.query));
+        advisorName = sampleStudent ? sampleStudent.advisor : kw.query;
+    }
+
+    if (advisorName) {
+        const countText = filtered.length === 1 ? '1 student/alumnus' : `${filtered.length} students/alumni`;
+        const facultyUrl = `index.html?q=name: ${encodeURIComponent(advisorName)}`;
+        countEl.innerHTML = `${countText} advised by <a href="${esc(facultyUrl)}">${esc(advisorName)}</a>`;
+    } else {
+        countEl.textContent = `${filtered.length} students/alumni`;
+    }
+
     grid.innerHTML = filtered.map(renderStudentRow).join('');
     updateUrl();
 }
