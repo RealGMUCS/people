@@ -1,5 +1,5 @@
 import { loadFaculty, loadStudents } from './data.js';
-import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList } from './common.js';
+import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick } from './common.js';
 import './style.css';
 
 let allStudents = [];
@@ -102,6 +102,12 @@ async function init() {
     setupFilters();
     setupActiveFilterBanner();
     setupNav();
+    setupSearchExamplesClick(query => {
+        search.setSearchValue(query);
+        render();
+        document.getElementById('main-search').focus();
+    });
+    refreshSearchExamples();
     restoreFromUrl();
     render();
 
@@ -156,13 +162,14 @@ function setupActiveFilterBanner() {
 }
 
 function setupNav() {
-    document.getElementById('students-link').addEventListener('click', e => {
+    document.getElementById('nav-students').addEventListener('click', e => {
         e.preventDefault();
         currentView = 'directory';
         activeTopic = null;
         document.getElementById('active-filter').style.display = 'none';
         document.getElementById('main-search').value = '';
         search.resetScope();
+        refreshSearchExamples();
         window.scrollTo({ top: 0 });
         render();
     });
@@ -172,6 +179,23 @@ function setupNav() {
         window.scrollTo({ top: 0 });
         render();
     });
+}
+
+// One randomized "Try:" example per kind of query the search box accepts, so
+// the row demonstrates the whole vocabulary and stays fresh on every visit.
+function refreshSearchExamples() {
+    const topics = Array.from(topicIndex.keys());
+    const advisors = uniqueNonEmpty(allStudents.map(s => s.advisor));
+    const honors = uniqueNonEmpty(allStudents.flatMap(s => s.honors));
+    const jobs = uniqueNonEmpty(allStudents.flatMap(s => [s.currentJob, s.firstJob]));
+
+    const examples = [
+        ...sample(topics, 2).map(v => ({ label: v, query: `topic: ${v}` })),
+        ...sample(advisors, 1).map(v => ({ label: v, query: `advisor: ${v}` })),
+        ...sample(honors, 1).map(v => ({ label: v, query: `honors: ${v}` })),
+        ...sample(jobs, 1).map(v => ({ label: v, query: `job: ${v}` })),
+    ];
+    renderSearchExamples(examples);
 }
 
 function getFiltered() {
@@ -249,9 +273,9 @@ function render() {
     const grid = document.getElementById('faculty-results');
     const countEl = document.getElementById('faculty-count');
     const insightsView = currentView === 'insights';
-    document.getElementById('students-link').classList.toggle('active', !insightsView);
     document.getElementById('insights-link').classList.toggle('active', insightsView);
     document.getElementById('filters').style.display = insightsView ? 'none' : '';
+    document.querySelector('.search-examples').style.display = insightsView ? 'none' : '';
 
     if (insightsView) {
         search.resetScope();
@@ -278,10 +302,7 @@ function renderStudentRow(s) {
 
     const metaParts = [];
     if (s.advisor) {
-        const advisorValue = s.advisorFaculty
-            ? `<a class="award-person" href="index.html?q=${encodeURIComponent(s.advisor)}">${esc(s.advisor)}</a>`
-            : esc(s.advisor);
-        metaParts.push(`Advisor: ${advisorValue}`);
+        metaParts.push(`Advisor: <a class="award-person" data-advisor="${esc(s.advisor)}" href="#">${esc(s.advisor)}</a>`);
     }
     if (s.degree) metaParts.push(esc(s.degree));
 
@@ -413,10 +434,12 @@ function renderInsights() {
   `;
 }
 
-// Click an advisor bar in Insights → filter the directory to that advisor
+// Click an advisor name (roster row or Insights bar) → filter to that advisor,
+// same as typing "advisor: <name>" in the search box.
 document.addEventListener('click', e => {
-    const item = e.target.closest('.ranked-item[data-advisor]');
+    const item = e.target.closest('[data-advisor]');
     if (!item) return;
+    e.preventDefault();
     currentView = 'directory';
     activeTopic = null;
     document.getElementById('active-filter').style.display = 'none';

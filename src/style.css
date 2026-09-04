@@ -60,37 +60,80 @@ body {
 
 /* Header */
 header {
-    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 760px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 }
 
 h1 {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
+    font-size: 2.4rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     margin: 0;
     color: var(--text-primary);
 }
 
-header p {
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    font-weight: 400;
-}
-
 .title-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 0.5rem;
 }
 
-.header-icons {
+.site-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.top-nav {
     display: flex;
     align-items: center;
-    gap: 0.15rem;
-    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.top-nav a {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+    color: var(--text-primary);
+}
+
+/* Links above the search bar for secondary pages (awards, insights, submit) */
+.page-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.page-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.page-links a:hover,
+.page-links a.active {
+    color: var(--text-primary);
 }
 
 .icon-link {
@@ -347,46 +390,48 @@ header p {
     border-color: var(--accent-color);
 }
 
+/* "Try: ..." example search queries */
+.search-examples {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 30px;
+    margin-top: 1.25rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.search-examples-row {
+    display: contents;
+}
+
+.search-examples button {
+    padding: 0.2rem 0.5rem;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.search-examples button:hover {
+    color: var(--text-primary);
+    background: var(--hover-bg);
+}
+
 /* Results Grid */
 .results-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
-}
-
-/* Header nav pills (Directory / Awards) */
-.header-nav {
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem;
-    margin-top: 1.1rem;
-}
-
-.nav-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-family: var(--font-body);
-    font-size: 0.92rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--text-primary);
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 999px;
-    padding: 0.4rem 1rem;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-}
-
-.nav-pill:hover {
-    background: var(--hover-bg);
-}
-
-.nav-pill.active {
-    background: var(--primary-color);
-    color: var(--bg-color);
-    border-color: var(--primary-color);
 }
 
 /* Awards view (#awards) */
