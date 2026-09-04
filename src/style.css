@@ -960,10 +960,19 @@ button.card-link.copied {
 }
 
 .entry-portrait {
+    grid-column: 1;
     width: 48px;
     height: 48px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* Pinned to column 2 explicitly (only relevant when .entry-with-portrait):
+   if the portrait <img> fails to load, its onerror handler removes it from
+   the DOM, and without this the lone remaining grid child would fall back
+   into column 1 (48px) and every word would wrap onto its own line. */
+.entry-with-portrait .entry-content {
+    grid-column: 2;
 }
 
 .entry-content {
