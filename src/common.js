@@ -250,6 +250,7 @@ export function createSearchController({ input, scopeChip, scopeChipLabel, sugge
     }
 
     input.addEventListener('input', () => {
+        hideCommandOutput();
         if (!activeScope) {
             const parsed = parseKeywordQuery(input.value, keywordMap);
             if (parsed) {
@@ -267,11 +268,11 @@ export function createSearchController({ input, scopeChip, scopeChipLabel, sugge
         const options = [...suggestionPanel.querySelectorAll('.search-suggestion')];
         if (e.key === 'Escape') {
             hideSuggestions();
+            hideCommandOutput();
             if (input.value || activeScope) {
                 e.preventDefault();
                 resetScope();
                 input.value = '';
-                hideCommandOutput();
                 onChange();
             }
             return;
@@ -303,7 +304,7 @@ export function createSearchController({ input, scopeChip, scopeChipLabel, sugge
     return { effectiveSearch, setSearchValue, searchQueryValue, resetScope, activeScope: () => activeScope };
 }
 
-// Populates the "(i)" search-syntax popover with page-specific keyword entries
+// Populates the "(?)" search-syntax popover with page-specific keyword entries
 // and wires its open/close behavior. `entries` is an array of
 // { code, example, scope? } — scope is an optional parenthetical hint.
 export function setupSearchHelp(entries) {
@@ -332,14 +333,14 @@ export function setupSearchHelp(entries) {
     });
 }
 
-export function createSharedCommandHandler({ getSearch, resetDirectory, onRandom, facts }) {
+export function createSharedCommandHandler({ getSearch, resetDirectory, onUpdate, onRandom, facts, getQueryPlan, getStats }) {
     function completeCommand(msg) {
         const input = document.getElementById('main-search');
         if (input) input.value = '';
         const search = getSearch ? getSearch() : null;
         if (search) search.resetScope();
         showCommandOutput(msg);
-        if (resetDirectory) resetDirectory();
+        if (onUpdate) onUpdate();
     }
 
     return function runCommand(raw) {
@@ -355,12 +356,24 @@ export function createSharedCommandHandler({ getSearch, resetDirectory, onRandom
             completeCommand('help: query prefixes, shortcuts, and commands are listed above');
             return true;
         }
-        if (cmd === 'whoami') {
+        if (cmd === 'query plan') {
+            const plan = getQueryPlan ? getQueryPlan() : '';
+            completeCommand(`query plan: ${plan}`);
+            return true;
+        }
+        if (cmd === 'whoami' || cmd === 'about') {
             completeCommand('GMU CS Directory — an open, community-maintained index of George Mason University Computer Science faculty, students, and alumni.');
             return true;
         }
-        if (cmd === 'uname -a') {
-            completeCommand(`GMU CS Directory static-web JavaScript/Vite build ${typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev'} browser/${navigator.platform || 'unknown'}`);
+        if (cmd === 'uname -a' || cmd === 'build' || cmd === 'built' || cmd === 'build it' || cmd === 'version') {
+            const commit = typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev';
+            const label = typeof __BUILD_LABEL__ !== 'undefined' ? __BUILD_LABEL__ : '';
+            completeCommand(`GMU CS Directory static-web JavaScript/Vite build ${commit}${label ? ' (' + label + ')' : ''} browser/${navigator.platform || 'unknown'}`);
+            return true;
+        }
+        if (cmd === 'stats' || cmd === 'status') {
+            const stats = getStats ? getStats() : '';
+            completeCommand(`stats: ${stats}`);
             return true;
         }
         if (cmd === 'sudo find professor' || cmd === 'sudo find faculty' || cmd === 'sudo find student') {

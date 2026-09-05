@@ -64,16 +64,20 @@
                     <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
                 </div>
                 <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog"
-                    aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax help"
-                    title="Search syntax help">i</button>
+                    aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help"
+                    title="Search syntax and keyboard help">?</button>
                 <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help"
                     hidden>
+                    <p><strong>QUERY SYNTAX</strong></p>
                     <p>Type a keyword prefix to search one field directly:</p>
                     <ul id="search-help-list"></ul>
+                    <p style="margin-top:0.75rem;"><strong>KEYBOARD</strong></p>
+                    <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>r</code> random · <code>Esc</code> clear</p>
+                    <p style="margin-top:0.75rem;"><strong>COMMANDS</strong></p>
+                    <p><code>help</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>build</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
                 </div>
             </div>
             <output id="command-output" class="command-output" hidden></output>
-            <div id="query-plan" class="query-plan" aria-live="polite"></div>
 
             <div class="filters" id="filters">
                 <div class="filter-group">

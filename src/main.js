@@ -100,29 +100,17 @@ function pickRandomFaculty() {
     }
 }
 
-const runCommand = createSharedCommandHandler({
-    getSearch: () => search,
-    resetDirectory,
-    onRandom: pickRandomFaculty,
-    facts: [
-        'GMU CS Faculty hold over 30+ NSF CAREER & Young Investigator Awards.',
-        'GMU CS ranks among top US universities in systems, SE, security, and AI research.',
-        'CS at Mason was founded as part of the Volgenau School of Engineering and is now in the College of Computing and Engineering.',
-        'Faculty research areas span Software Engineering, Security & Privacy, Robotics, Systems & Networking, Machine Learning, and Theory.'
-    ]
-});
+let queryPlan = '';
 
-function renderQueryPlan(matches) {
-    const el = document.getElementById('query-plan');
-    if (!el) return;
-    const query = document.getElementById('main-search').value.trim();
-    const rankFilter = document.getElementById('rank-filter').value;
-    const typeFilter = document.getElementById('type-filter').value;
+function updateQueryPlan(matches) {
+    const query = document.getElementById('main-search')?.value.trim() || '';
+    const rankFilter = document.getElementById('rank-filter')?.value || 'all';
+    const typeFilter = document.getElementById('type-filter')?.value || 'all';
     const sortOrder = document.getElementById('sort-order')?.value || 'name-asc';
     const kw = search ? search.effectiveSearch() : null;
     const scope = kw && kw.key ? kw.key : 'all';
 
-    el.textContent = [
+    queryPlan = [
         `mode=${currentView}`,
         `scope=${scope}`,
         `query=${query ? JSON.stringify(query) : '*'}`,
@@ -133,6 +121,21 @@ function renderQueryPlan(matches) {
         `matches=${matches}`,
     ].filter(Boolean).join('  ');
 }
+
+const runCommand = createSharedCommandHandler({
+    getSearch: () => search,
+    resetDirectory,
+    onUpdate: () => render(),
+    onRandom: pickRandomFaculty,
+    getQueryPlan: () => queryPlan,
+    getStats: () => `${allFaculty.length} faculty across ${awardCategories.length} award categories`,
+    facts: [
+        'GMU CS Faculty hold over 30+ NSF CAREER & Young Investigator Awards.',
+        'GMU CS ranks among top US universities in systems, SE, security, and AI research.',
+        'CS at Mason was founded as part of the Volgenau School of Engineering and is now in the College of Computing and Engineering.',
+        'Faculty research areas span Software Engineering, Security & Privacy, Robotics, Systems & Networking, Machine Learning, and Theory.'
+    ]
+});
 
 async function init() {
     const data = await loadFaculty();
@@ -373,7 +376,7 @@ function render() {
         grid.innerHTML = renderAwards();
         const total = awardCategories.reduce((n, c) => n + c.awards.length, 0);
         countEl.textContent = `${total} awards across ${awardCategories.length} categories`;
-        renderQueryPlan(total);
+        updateQueryPlan(total);
         updateUrl();
         return;
     }
@@ -382,7 +385,7 @@ function render() {
     const filtered = getFiltered();
     countEl.textContent = `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
-    renderQueryPlan(filtered.length);
+    updateQueryPlan(filtered.length);
     updateUrl();
 }
 
