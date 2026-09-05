@@ -5,6 +5,7 @@
     --text-color: hsl(0, 0%, 0%);
     --text-primary: #000000;
     --text-secondary: #000000;
+    --text-muted: #656d76;
     --accent-color: #333333;
     --card-bg: #ffffff;
     --border-color: #000000;
@@ -16,6 +17,7 @@
     --tag-text: #1d4ed8;
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Dark Mode (follows OS/browser preference) */
@@ -25,6 +27,7 @@
         --text-color: #e0e0e0;
         --text-primary: #ffffff;
         --text-secondary: #ababad;
+        --text-muted: #8b949e;
         --accent-color: #36c5f0;
         --card-bg: #222529;
         --border-color: #3d4043;
@@ -1342,4 +1345,69 @@ button.card-link.copied {
     color: var(--primary-color);
     opacity: 1;
     transform: scale(1.18);
+}
+
+/* Nerdy CS Style UI & Terminal Easter Eggs */
+
+.command-output {
+    display: block;
+    margin-top: 0.65rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--tag-bg);
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.command-output[hidden] {
+    display: none;
+}
+
+.query-plan {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.query-plan:empty {
+    display: none;
+}
+
+.card.card-keyboard-selected,
+.entry.entry-keyboard-selected {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(54, 197, 240, 0.25);
+}
+
+/* Optional CRT Retro Terminal Theme — toggled with `theme crt` */
+.crt-mode {
+    --bg-color: #07100b;
+    --card-bg: #0b1710;
+    --text-color: #b8ffd0;
+    --text-primary: #b8ffd0;
+    --text-secondary: #83d99f;
+    --text-muted: #57966b;
+    --border-color: #20472d;
+    --hover-bg: #102719;
+    --tag-bg: #102319;
+    --tag-text: #8beaab;
+    --primary-color: #55d68b;
+    --primary-dark: #2e9e64;
+    --primary-light: #102719;
+    --accent-color: #55d68b;
+}
+
+.crt-mode body {
+    background-image: repeating-linear-gradient(0deg, rgb(0 0 0 / 11%) 0, rgb(0 0 0 / 11%) 1px, transparent 1px, transparent 4px);
+    text-shadow: 0 0 0.35rem rgb(85 214 139 / 18%);
 }
