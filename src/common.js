@@ -331,3 +331,138 @@ export function setupSearchHelp(entries) {
         if (e.key === 'Escape' && !helpPanel.hidden) hideSearchHelp();
     });
 }
+
+export function createSharedCommandHandler({ getSearch, resetDirectory, onRandom, facts }) {
+    function completeCommand(msg) {
+        const input = document.getElementById('main-search');
+        if (input) input.value = '';
+        const search = getSearch ? getSearch() : null;
+        if (search) search.resetScope();
+        showCommandOutput(msg);
+        if (resetDirectory) resetDirectory();
+    }
+
+    return function runCommand(raw) {
+        const cmd = raw.trim().toLowerCase().replace(/^:/, '');
+        if (!cmd) return false;
+        if (cmd === 'help') {
+            const panel = document.getElementById('search-help-panel');
+            const btn = document.getElementById('search-help-btn');
+            if (panel && btn) {
+                panel.hidden = false;
+                btn.setAttribute('aria-expanded', 'true');
+            }
+            completeCommand('help: query prefixes, shortcuts, and commands are listed above');
+            return true;
+        }
+        if (cmd === 'whoami') {
+            completeCommand('GMU CS Directory — an open, community-maintained index of George Mason University Computer Science faculty, students, and alumni.');
+            return true;
+        }
+        if (cmd === 'uname -a') {
+            completeCommand(`GMU CS Directory static-web JavaScript/Vite build ${typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev'} browser/${navigator.platform || 'unknown'}`);
+            return true;
+        }
+        if (cmd === 'sudo find professor' || cmd === 'sudo find faculty' || cmd === 'sudo find student') {
+            completeCommand('Permission granted. Academic credentials still require independent verification.');
+            return true;
+        }
+        if (cmd === 'fortune') {
+            const list = facts && facts.length ? facts : [
+                'GMU CS Faculty & Alumni contribute groundbreaking research across AI, SE, Systems, and Security.',
+                'CS at Mason is part of the College of Computing and Engineering.'
+            ];
+            const fact = list[Math.floor(Math.random() * list.length)];
+            completeCommand(`fortune: ${fact}`);
+            return true;
+        }
+        if (cmd === '/dev/random' || cmd === 'random') {
+            if (onRandom) onRandom();
+            return true;
+        }
+        if (cmd === 'theme crt') {
+            const enabled = document.documentElement.classList.toggle('crt-mode');
+            localStorage.setItem('gmu_cs:crt', enabled ? '1' : '0');
+            completeCommand(`crt theme ${enabled ? 'enabled' : 'disabled'}; reduced-motion preferences are respected`);
+            return true;
+        }
+        if (cmd === 'clear' || cmd === 'reset') {
+            hideCommandOutput();
+            if (resetDirectory) resetDirectory();
+            return true;
+        }
+        return false;
+    };
+}
+
+export function setupSharedKeyboardShortcuts({ getItemElements, getSelectedIndex, setSelectedIndex, onRandom }) {
+    document.addEventListener('keydown', e => {
+        const helpPanel = document.getElementById('search-help-panel');
+        const helpBtn = document.getElementById('search-help-btn');
+        if (e.key === 'Escape' && helpPanel && !helpPanel.hidden) {
+            helpPanel.hidden = true;
+            if (helpBtn) helpBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        const target = e.target;
+        const typing = target && target.matches('input, textarea, select, [contenteditable="true"]');
+        const input = document.getElementById('main-search');
+
+        if (e.key === '/' && !typing) {
+            e.preventDefault();
+            if (input) input.focus();
+            return;
+        }
+
+        if (e.key === '?' && !typing) {
+            e.preventDefault();
+            if (helpBtn) helpBtn.click();
+            return;
+        }
+
+        if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
+
+        const items = getItemElements ? getItemElements() : [];
+        let currIdx = getSelectedIndex ? getSelectedIndex() : -1;
+        const selectedClass = items[0]?.classList.contains('card') ? 'card-keyboard-selected' : 'entry-keyboard-selected';
+
+        if ((e.key === 'j' || e.key === 'k') && items.length) {
+            e.preventDefault();
+            if (currIdx >= 0 && items[currIdx]) {
+                items[currIdx].classList.remove(selectedClass);
+            }
+            currIdx = e.key === 'j'
+                ? (currIdx + 1) % items.length
+                : (currIdx - 1 + items.length) % items.length;
+            if (setSelectedIndex) setSelectedIndex(currIdx);
+            const selected = items[currIdx];
+            if (selected) {
+                selected.classList.add(selectedClass);
+                selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+            return;
+        }
+
+        const selected = items[currIdx];
+        if (e.key === 'Enter' && selected) {
+            e.preventDefault();
+            const link = selected.querySelector('.icon-link.gmu-profile-link') ||
+                selected.querySelector('.icon-link.website-link') ||
+                selected.querySelector('.icon-link.linkedin-link') ||
+                selected.querySelector('h2, .entry-name');
+            if (link) link.click();
+            return;
+        }
+        if (e.key === 'f' && selected) {
+            e.preventDefault();
+            const editBtn = selected.querySelector('.icon-link.edit-link');
+            if (editBtn) editBtn.click();
+            return;
+        }
+        if (e.key === 'r') {
+            e.preventDefault();
+            if (onRandom) onRandom();
+        }
+    });
+}
+

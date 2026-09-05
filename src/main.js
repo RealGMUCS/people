@@ -1,5 +1,5 @@
 import { loadFaculty } from './data.js';
-import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput } from './common.js';
+import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common.js';
 import './style.css';
 
 let allFaculty = [];
@@ -85,76 +85,32 @@ function resetDirectory() {
     render();
 }
 
-function completeCommand(msg) {
-    document.getElementById('main-search').value = '';
-    search.resetScope();
-    showCommandOutput(msg);
-    render();
+function pickRandomFaculty() {
+    if (allFaculty.length > 0) {
+        const person = allFaculty[Math.floor(Math.random() * allFaculty.length)];
+        document.getElementById('main-search').value = `name: ${person.firstName} ${person.lastName}`;
+        hideCommandOutput();
+        render();
+        const cards = document.querySelectorAll('.card');
+        if (cards.length > 0) {
+            keyboardSelectedIndex = 0;
+            cards[0].classList.add('card-keyboard-selected');
+            cards[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+    }
 }
 
-function runCommand(raw) {
-    const cmd = raw.trim().toLowerCase().replace(/^:/, '');
-    if (!cmd) return false;
-    if (cmd === 'help') {
-        const panel = document.getElementById('search-help-panel');
-        const btn = document.getElementById('search-help-btn');
-        if (panel && btn) {
-            panel.hidden = false;
-            btn.setAttribute('aria-expanded', 'true');
-        }
-        completeCommand('help: query prefixes, shortcuts, and commands are listed above');
-        return true;
-    }
-    if (cmd === 'whoami') {
-        completeCommand('GMU CS Directory — an open, community-maintained index of George Mason University Computer Science faculty, students, and alumni.');
-        return true;
-    }
-    if (cmd === 'uname -a') {
-        completeCommand(`GMU CS Directory static-web JavaScript/Vite build ${typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev'} browser/${navigator.platform || 'unknown'}`);
-        return true;
-    }
-    if (cmd === 'sudo find professor' || cmd === 'sudo find faculty' || cmd === 'sudo find student') {
-        completeCommand('Permission granted. Academic credentials still require independent verification.');
-        return true;
-    }
-    if (cmd === 'fortune') {
-        const facts = [
-            'GMU CS Faculty hold over 30+ NSF CAREER & Young Investigator Awards.',
-            'GMU CS ranks among top US universities in systems, SE, security, and AI research.',
-            'CS at Mason was founded as part of the Volgenau School of Engineering and is now in the College of Computing and Engineering.',
-            'Faculty research areas span Software Engineering, Security & Privacy, Robotics, Systems & Networking, Machine Learning, and Theory.'
-        ];
-        const fact = facts[Math.floor(Math.random() * facts.length)];
-        completeCommand(`fortune: ${fact}`);
-        return true;
-    }
-    if (cmd === '/dev/random' || cmd === 'random') {
-        if (allFaculty.length > 0) {
-            const person = allFaculty[Math.floor(Math.random() * allFaculty.length)];
-            document.getElementById('main-search').value = `name: ${person.firstName} ${person.lastName}`;
-            hideCommandOutput();
-            render();
-            const cards = document.querySelectorAll('.card');
-            if (cards.length > 0) {
-                keyboardSelectedIndex = 0;
-                cards[0].classList.add('card-keyboard-selected');
-                cards[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-            }
-        }
-        return true;
-    }
-    if (cmd === 'theme crt') {
-        const enabled = document.documentElement.classList.toggle('crt-mode');
-        localStorage.setItem('gmu_cs:crt', enabled ? '1' : '0');
-        completeCommand(`crt theme ${enabled ? 'enabled' : 'disabled'}; reduced-motion preferences are respected`);
-        return true;
-    }
-    if (cmd === 'clear' || cmd === 'reset') {
-        resetDirectory();
-        return true;
-    }
-    return false;
-}
+const runCommand = createSharedCommandHandler({
+    getSearch: () => search,
+    resetDirectory,
+    onRandom: pickRandomFaculty,
+    facts: [
+        'GMU CS Faculty hold over 30+ NSF CAREER & Young Investigator Awards.',
+        'GMU CS ranks among top US universities in systems, SE, security, and AI research.',
+        'CS at Mason was founded as part of the Volgenau School of Engineering and is now in the College of Computing and Engineering.',
+        'Faculty research areas span Software Engineering, Security & Privacy, Robotics, Systems & Networking, Machine Learning, and Theory.'
+    ]
+});
 
 function renderQueryPlan(matches) {
     const el = document.getElementById('query-plan');
@@ -162,6 +118,7 @@ function renderQueryPlan(matches) {
     const query = document.getElementById('main-search').value.trim();
     const rankFilter = document.getElementById('rank-filter').value;
     const typeFilter = document.getElementById('type-filter').value;
+    const sortOrder = document.getElementById('sort-order')?.value || 'name-asc';
     const kw = search ? search.effectiveSearch() : null;
     const scope = kw && kw.key ? kw.key : 'all';
 
@@ -172,72 +129,9 @@ function renderQueryPlan(matches) {
         `rank=${JSON.stringify(rankFilter)}`,
         `type=${JSON.stringify(typeFilter)}`,
         activeInterest ? `interest=${JSON.stringify(activeInterest)}` : '',
+        `sort=${sortOrder}`,
         `matches=${matches}`,
     ].filter(Boolean).join('  ');
-}
-
-function setupKeyboardShortcuts() {
-    document.addEventListener('keydown', e => {
-        const helpPanel = document.getElementById('search-help-panel');
-        const helpBtn = document.getElementById('search-help-btn');
-        if (e.key === 'Escape' && helpPanel && !helpPanel.hidden) {
-            helpPanel.hidden = true;
-            if (helpBtn) helpBtn.setAttribute('aria-expanded', 'false');
-        }
-
-        const target = e.target;
-        const typing = target && target.matches('input, textarea, select, [contenteditable="true"]');
-        const input = document.getElementById('main-search');
-
-        if (e.key === '/' && !typing) {
-            e.preventDefault();
-            if (input) input.focus();
-            return;
-        }
-
-        if (e.key === '?' && !typing) {
-            e.preventDefault();
-            if (helpBtn) helpBtn.click();
-            return;
-        }
-
-        if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
-
-        const cards = [...document.querySelectorAll('.card')];
-        if ((e.key === 'j' || e.key === 'k') && cards.length) {
-            e.preventDefault();
-            if (keyboardSelectedIndex >= 0 && cards[keyboardSelectedIndex]) {
-                cards[keyboardSelectedIndex].classList.remove('card-keyboard-selected');
-            }
-            keyboardSelectedIndex = e.key === 'j'
-                ? (keyboardSelectedIndex + 1) % cards.length
-                : (keyboardSelectedIndex - 1 + cards.length) % cards.length;
-            const selected = cards[keyboardSelectedIndex];
-            if (selected) {
-                selected.classList.add('card-keyboard-selected');
-                selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-            }
-            return;
-        }
-
-        const selected = cards[keyboardSelectedIndex];
-        if (e.key === 'Enter' && selected) {
-            e.preventDefault();
-            const link = selected.querySelector('.icon-link.gmu-profile-link') || selected.querySelector('.icon-link.website-link') || selected.querySelector('h2');
-            if (link) link.click();
-            return;
-        }
-        if (e.key === 'f' && selected) {
-            e.preventDefault();
-            const editBtn = selected.querySelector('.icon-link.edit-link');
-            if (editBtn) editBtn.click();
-            return;
-        }
-        if (e.key === 'r') {
-            e.preventDefault();
-            runCommand('/dev/random');
-        }
-    });
 }
 
 async function init() {
@@ -268,7 +162,12 @@ async function init() {
         render();
         document.getElementById('main-search').focus();
     });
-    setupKeyboardShortcuts();
+    setupSharedKeyboardShortcuts({
+        getItemElements: () => [...document.querySelectorAll('.card')],
+        getSelectedIndex: () => keyboardSelectedIndex,
+        setSelectedIndex: idx => { keyboardSelectedIndex = idx; },
+        onRandom: () => runCommand('/dev/random'),
+    });
     refreshSearchExamples();
     restoreFromUrl();
     render();
@@ -287,6 +186,7 @@ async function init() {
 function setupFilters() {
     document.getElementById('rank-filter').addEventListener('change', () => render());
     document.getElementById('type-filter').addEventListener('change', () => render());
+    document.getElementById('sort-order')?.addEventListener('change', () => render());
 }
 
 // Rank dropdown mixes two underlying fields: Professor/Associate/Assistant come from
@@ -307,6 +207,8 @@ function typeMatches(f, value) {
 function resetFilterDropdowns() {
     document.getElementById('rank-filter').value = 'all';
     document.getElementById('type-filter').value = 'all';
+    const sortEl = document.getElementById('sort-order');
+    if (sortEl) sortEl.value = 'name-asc';
 }
 
 function setupInterestBanner() {
@@ -347,6 +249,19 @@ function refreshSearchExamples() {
         ...sample(ranks, 1).map(v => ({ label: `${v} Professors`, query: `rank: ${v}` })),
     ];
     renderSearchExamples(examples);
+}
+
+function sortFaculty(list, order) {
+    const arr = list.slice();
+    switch (order) {
+        case 'name-desc':
+            return arr.sort((a, b) => (b.lastName || '').localeCompare(a.lastName || '') || (b.firstName || '').localeCompare(a.firstName || ''));
+        case 'recent':
+            return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (a.lastName || '').localeCompare(b.lastName || ''));
+        case 'name-asc':
+        default:
+            return arr.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || '') || (a.firstName || '').localeCompare(b.firstName || ''));
+    }
 }
 
 // Filter faculty based on current search + dropdowns + active interest
@@ -393,7 +308,8 @@ function getFiltered() {
         }
     }
 
-    return list.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || ''));
+    const sortOrder = document.getElementById('sort-order')?.value || 'name-asc';
+    return sortFaculty(list, sortOrder);
 }
 
 function searchMatch(f, q) {
@@ -409,11 +325,13 @@ function updateUrl() {
     const q = search.searchQueryValue();
     const rank = document.getElementById('rank-filter').value;
     const type = document.getElementById('type-filter').value;
+    const sort = document.getElementById('sort-order')?.value || 'name-asc';
 
     if (currentView !== 'directory') params.set('view', currentView);
     if (q) params.set('q', q);
     if (rank !== 'all') params.set('rank', rank);
     if (type !== 'all') params.set('type', type);
+    if (sort !== 'name-asc') params.set('sort', sort);
     if (activeInterest) params.set('interest', activeInterest);
 
     const qs = params.toString();
@@ -430,6 +348,7 @@ function restoreFromUrl() {
     if (params.has('q')) search.setSearchValue(params.get('q'));
     if (params.has('rank')) document.getElementById('rank-filter').value = params.get('rank');
     if (params.has('type')) document.getElementById('type-filter').value = params.get('type');
+    if (params.has('sort') && document.getElementById('sort-order')) document.getElementById('sort-order').value = params.get('sort');
     if (params.has('interest')) {
         activeInterest = params.get('interest');
         document.getElementById('active-filter').style.display = 'flex';
