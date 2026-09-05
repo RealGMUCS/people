@@ -1367,19 +1367,6 @@ button.card-link.copied {
     display: none;
 }
 
-.query-plan {
-    margin-top: 0.5rem;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    overflow-x: auto;
-    white-space: nowrap;
-    line-height: 1.4;
-}
-
-.query-plan:empty {
-    display: none;
-}
 
 .card.card-keyboard-selected,
 .entry.entry-keyboard-selected {

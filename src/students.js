@@ -165,28 +165,17 @@ function pickRandomStudent() {
     }
 }
 
-const runCommand = createSharedCommandHandler({
-    getSearch: () => search,
-    resetDirectory,
-    onRandom: pickRandomStudent,
-    facts: [
-        'GMU CS Alumni work at top tech companies, research labs, and academic institutions worldwide.',
-        'GMU CS graduate students publish at top-tier conferences like SIGCOMM, S&P, PLDI, ICSE, and NeurIPS.',
-        'Over 40+ alumni hold tenure-line or research faculty positions across global universities.'
-    ]
-});
+let queryPlan = '';
 
-function renderQueryPlan(matches, mode = currentView) {
-    const el = document.getElementById('query-plan');
-    if (!el) return;
-    const query = document.getElementById('main-search').value.trim();
+function updateQueryPlan(matches, mode = currentView) {
+    const query = document.getElementById('main-search')?.value.trim() || '';
     const degreeFilter = document.getElementById('degree-filter')?.value || 'all';
     const statusFilter = document.getElementById('status-filter')?.value || 'all';
     const sortOrder = document.getElementById('sort-order')?.value || 'random';
     const kw = search ? search.effectiveSearch() : null;
     const scope = kw && kw.key ? kw.key : 'all';
 
-    el.textContent = [
+    queryPlan = [
         `mode=${mode}`,
         `scope=${scope}`,
         `query=${query ? JSON.stringify(query) : '*'}`,
@@ -197,6 +186,20 @@ function renderQueryPlan(matches, mode = currentView) {
         `matches=${matches}`,
     ].filter(Boolean).join('  ');
 }
+
+const runCommand = createSharedCommandHandler({
+    getSearch: () => search,
+    resetDirectory,
+    onUpdate: () => render(),
+    onRandom: pickRandomStudent,
+    getQueryPlan: () => queryPlan,
+    getStats: () => `${allStudents.length} graduate students and alumni`,
+    facts: [
+        'GMU CS Alumni work at top tech companies, research labs, and academic institutions worldwide.',
+        'GMU CS graduate students publish at top-tier conferences like SIGCOMM, S&P, PLDI, ICSE, and NeurIPS.',
+        'Over 40+ alumni hold tenure-line or research faculty positions across global universities.'
+    ]
+});
 
 async function init() {
     const facultyData = await loadFaculty();
@@ -489,7 +492,7 @@ function render() {
         } else {
             countEl.textContent = `Insights across ${filtered.length} matching students/alumni (out of ${allStudents.length} total)`;
         }
-        renderQueryPlan(filtered.length, 'insights');
+        updateQueryPlan(filtered.length, 'insights');
         updateUrl();
         return;
     }
@@ -516,7 +519,7 @@ function render() {
     }
 
     grid.innerHTML = filtered.map(renderStudentRow).join('');
-    renderQueryPlan(filtered.length);
+    updateQueryPlan(filtered.length);
     updateUrl();
 }
 
