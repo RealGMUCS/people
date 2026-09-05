@@ -1,7 +1,7 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { loadFaculty, loadStudents } from './data.js';
-import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput } from './common.js';
+import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common.js';
 import './style.css';
 
 let allStudents = [];
@@ -150,75 +150,31 @@ function resetDirectory() {
     render();
 }
 
-function completeCommand(msg) {
-    document.getElementById('main-search').value = '';
-    search.resetScope();
-    showCommandOutput(msg);
-    render();
+function pickRandomStudent() {
+    if (allStudents.length > 0) {
+        const person = allStudents[Math.floor(Math.random() * allStudents.length)];
+        document.getElementById('main-search').value = `name: ${person.firstName} ${person.lastName}`;
+        hideCommandOutput();
+        render();
+        const entries = document.querySelectorAll('.entry');
+        if (entries.length > 0) {
+            keyboardSelectedIndex = 0;
+            entries[0].classList.add('entry-keyboard-selected');
+            entries[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+    }
 }
 
-function runCommand(raw) {
-    const cmd = raw.trim().toLowerCase().replace(/^:/, '');
-    if (!cmd) return false;
-    if (cmd === 'help') {
-        const panel = document.getElementById('search-help-panel');
-        const btn = document.getElementById('search-help-btn');
-        if (panel && btn) {
-            panel.hidden = false;
-            btn.setAttribute('aria-expanded', 'true');
-        }
-        completeCommand('help: query prefixes, shortcuts, and commands are listed above');
-        return true;
-    }
-    if (cmd === 'whoami') {
-        completeCommand('GMU CS Directory — an open, community-maintained index of George Mason University Computer Science faculty, students, and alumni.');
-        return true;
-    }
-    if (cmd === 'uname -a') {
-        completeCommand(`GMU CS Directory static-web JavaScript/Vite build ${typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev'} browser/${navigator.platform || 'unknown'}`);
-        return true;
-    }
-    if (cmd === 'sudo find professor' || cmd === 'sudo find faculty' || cmd === 'sudo find student') {
-        completeCommand('Permission granted. Academic credentials still require independent verification.');
-        return true;
-    }
-    if (cmd === 'fortune') {
-        const facts = [
-            'GMU CS Alumni work at top tech companies, research labs, and academic institutions worldwide.',
-            'GMU CS graduate students publish at top-tier conferences like SIGCOMM, S&P, PLDI, ICSE, and NeurIPS.',
-            'Over 40+ alumni hold tenure-line or research faculty positions across global universities.'
-        ];
-        const fact = facts[Math.floor(Math.random() * facts.length)];
-        completeCommand(`fortune: ${fact}`);
-        return true;
-    }
-    if (cmd === '/dev/random' || cmd === 'random') {
-        if (allStudents.length > 0) {
-            const person = allStudents[Math.floor(Math.random() * allStudents.length)];
-            document.getElementById('main-search').value = `name: ${person.firstName} ${person.lastName}`;
-            hideCommandOutput();
-            render();
-            const entries = document.querySelectorAll('.entry');
-            if (entries.length > 0) {
-                keyboardSelectedIndex = 0;
-                entries[0].classList.add('entry-keyboard-selected');
-                entries[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-            }
-        }
-        return true;
-    }
-    if (cmd === 'theme crt') {
-        const enabled = document.documentElement.classList.toggle('crt-mode');
-        localStorage.setItem('gmu_cs:crt', enabled ? '1' : '0');
-        completeCommand(`crt theme ${enabled ? 'enabled' : 'disabled'}; reduced-motion preferences are respected`);
-        return true;
-    }
-    if (cmd === 'clear' || cmd === 'reset') {
-        resetDirectory();
-        return true;
-    }
-    return false;
-}
+const runCommand = createSharedCommandHandler({
+    getSearch: () => search,
+    resetDirectory,
+    onRandom: pickRandomStudent,
+    facts: [
+        'GMU CS Alumni work at top tech companies, research labs, and academic institutions worldwide.',
+        'GMU CS graduate students publish at top-tier conferences like SIGCOMM, S&P, PLDI, ICSE, and NeurIPS.',
+        'Over 40+ alumni hold tenure-line or research faculty positions across global universities.'
+    ]
+});
 
 function renderQueryPlan(matches, mode = currentView) {
     const el = document.getElementById('query-plan');
@@ -240,70 +196,6 @@ function renderQueryPlan(matches, mode = currentView) {
         `sort=${sortOrder}`,
         `matches=${matches}`,
     ].filter(Boolean).join('  ');
-}
-
-function setupKeyboardShortcuts() {
-    document.addEventListener('keydown', e => {
-        const helpPanel = document.getElementById('search-help-panel');
-        const helpBtn = document.getElementById('search-help-btn');
-        if (e.key === 'Escape' && helpPanel && !helpPanel.hidden) {
-            helpPanel.hidden = true;
-            if (helpBtn) helpBtn.setAttribute('aria-expanded', 'false');
-        }
-
-        const target = e.target;
-        const typing = target && target.matches('input, textarea, select, [contenteditable="true"]');
-        const input = document.getElementById('main-search');
-
-        if (e.key === '/' && !typing) {
-            e.preventDefault();
-            if (input) input.focus();
-            return;
-        }
-
-        if (e.key === '?' && !typing) {
-            e.preventDefault();
-            if (helpBtn) helpBtn.click();
-            return;
-        }
-
-        if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
-
-        const entries = [...document.querySelectorAll('.entry')];
-        if ((e.key === 'j' || e.key === 'k') && entries.length) {
-            e.preventDefault();
-            if (keyboardSelectedIndex >= 0 && entries[keyboardSelectedIndex]) {
-                entries[keyboardSelectedIndex].classList.remove('entry-keyboard-selected');
-            }
-            keyboardSelectedIndex = e.key === 'j'
-                ? (keyboardSelectedIndex + 1) % entries.length
-                : (keyboardSelectedIndex - 1 + entries.length) % entries.length;
-            const selected = entries[keyboardSelectedIndex];
-            if (selected) {
-                selected.classList.add('entry-keyboard-selected');
-                selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-            }
-            return;
-        }
-
-        const selected = entries[keyboardSelectedIndex];
-        if (e.key === 'Enter' && selected) {
-            e.preventDefault();
-            const link = selected.querySelector('.icon-link.website-link') || selected.querySelector('.icon-link.linkedin-link') || selected.querySelector('.entry-name');
-            if (link) link.click();
-            return;
-        }
-        if (e.key === 'f' && selected) {
-            e.preventDefault();
-            const editBtn = selected.querySelector('.icon-link.edit-link');
-            if (editBtn) editBtn.click();
-            return;
-        }
-        if (e.key === 'r') {
-            e.preventDefault();
-            runCommand('/dev/random');
-        }
-    });
 }
 
 async function init() {
@@ -338,7 +230,12 @@ async function init() {
         render();
         document.getElementById('main-search').focus();
     });
-    setupKeyboardShortcuts();
+    setupSharedKeyboardShortcuts({
+        getItemElements: () => [...document.querySelectorAll('.entry')],
+        getSelectedIndex: () => keyboardSelectedIndex,
+        setSelectedIndex: idx => { keyboardSelectedIndex = idx; },
+        onRandom: () => runCommand('/dev/random'),
+    });
     refreshSearchExamples();
     restoreFromUrl();
     render();
