@@ -1,5 +1,5 @@
 import { loadFaculty } from './data.js';
-import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick } from './common.js';
+import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput } from './common.js';
 import './style.css';
 
 let allFaculty = [];
@@ -8,6 +8,7 @@ let awardCategories = [];
 let activeInterest = null; // currently selected faculty research-interest filter
 let currentView = 'directory'; // 'directory' | 'awards'
 let search;
+let keyboardSelectedIndex = -1;
 
 const FACULTY_KEYWORDS = {
     name: f => `${f.firstName} ${f.lastName}`,
@@ -73,6 +74,172 @@ const SEARCH_HELP_ENTRIES = [
     { code: '#tag', example: '— e.g. #AI, #associate' },
 ];
 
+function resetDirectory() {
+    document.getElementById('main-search').value = '';
+    search.resetScope();
+    hideCommandOutput();
+    activeInterest = null;
+    document.getElementById('active-filter').style.display = 'none';
+    resetFilterDropdowns();
+    currentView = 'directory';
+    render();
+}
+
+function completeCommand(msg) {
+    document.getElementById('main-search').value = '';
+    search.resetScope();
+    showCommandOutput(msg);
+    render();
+}
+
+function runCommand(raw) {
+    const cmd = raw.trim().toLowerCase().replace(/^:/, '');
+    if (!cmd) return false;
+    if (cmd === 'help') {
+        const panel = document.getElementById('search-help-panel');
+        const btn = document.getElementById('search-help-btn');
+        if (panel && btn) {
+            panel.hidden = false;
+            btn.setAttribute('aria-expanded', 'true');
+        }
+        completeCommand('help: query prefixes, shortcuts, and commands are listed above');
+        return true;
+    }
+    if (cmd === 'whoami') {
+        completeCommand('GMU CS Directory — an open, community-maintained index of George Mason University Computer Science faculty, students, and alumni.');
+        return true;
+    }
+    if (cmd === 'uname -a') {
+        completeCommand(`GMU CS Directory static-web JavaScript/Vite build ${typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev'} browser/${navigator.platform || 'unknown'}`);
+        return true;
+    }
+    if (cmd === 'sudo find professor' || cmd === 'sudo find faculty' || cmd === 'sudo find student') {
+        completeCommand('Permission granted. Academic credentials still require independent verification.');
+        return true;
+    }
+    if (cmd === 'fortune') {
+        const facts = [
+            'GMU CS Faculty hold over 30+ NSF CAREER & Young Investigator Awards.',
+            'GMU CS ranks among top US universities in systems, SE, security, and AI research.',
+            'CS at Mason was founded as part of the Volgenau School of Engineering and is now in the College of Computing and Engineering.',
+            'Faculty research areas span Software Engineering, Security & Privacy, Robotics, Systems & Networking, Machine Learning, and Theory.'
+        ];
+        const fact = facts[Math.floor(Math.random() * facts.length)];
+        completeCommand(`fortune: ${fact}`);
+        return true;
+    }
+    if (cmd === '/dev/random' || cmd === 'random') {
+        if (allFaculty.length > 0) {
+            const person = allFaculty[Math.floor(Math.random() * allFaculty.length)];
+            document.getElementById('main-search').value = `name: ${person.firstName} ${person.lastName}`;
+            hideCommandOutput();
+            render();
+            const cards = document.querySelectorAll('.card');
+            if (cards.length > 0) {
+                keyboardSelectedIndex = 0;
+                cards[0].classList.add('card-keyboard-selected');
+                cards[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+        }
+        return true;
+    }
+    if (cmd === 'theme crt') {
+        const enabled = document.documentElement.classList.toggle('crt-mode');
+        localStorage.setItem('gmu_cs:crt', enabled ? '1' : '0');
+        completeCommand(`crt theme ${enabled ? 'enabled' : 'disabled'}; reduced-motion preferences are respected`);
+        return true;
+    }
+    if (cmd === 'clear' || cmd === 'reset') {
+        resetDirectory();
+        return true;
+    }
+    return false;
+}
+
+function renderQueryPlan(matches) {
+    const el = document.getElementById('query-plan');
+    if (!el) return;
+    const query = document.getElementById('main-search').value.trim();
+    const rankFilter = document.getElementById('rank-filter').value;
+    const typeFilter = document.getElementById('type-filter').value;
+    const kw = search ? search.effectiveSearch() : null;
+    const scope = kw && kw.key ? kw.key : 'all';
+
+    el.textContent = [
+        `mode=${currentView}`,
+        `scope=${scope}`,
+        `query=${query ? JSON.stringify(query) : '*'}`,
+        `rank=${JSON.stringify(rankFilter)}`,
+        `type=${JSON.stringify(typeFilter)}`,
+        activeInterest ? `interest=${JSON.stringify(activeInterest)}` : '',
+        `matches=${matches}`,
+    ].filter(Boolean).join('  ');
+}
+
+function setupKeyboardShortcuts() {
+    document.addEventListener('keydown', e => {
+        const helpPanel = document.getElementById('search-help-panel');
+        const helpBtn = document.getElementById('search-help-btn');
+        if (e.key === 'Escape' && helpPanel && !helpPanel.hidden) {
+            helpPanel.hidden = true;
+            if (helpBtn) helpBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        const target = e.target;
+        const typing = target && target.matches('input, textarea, select, [contenteditable="true"]');
+        const input = document.getElementById('main-search');
+
+        if (e.key === '/' && !typing) {
+            e.preventDefault();
+            if (input) input.focus();
+            return;
+        }
+
+        if (e.key === '?' && !typing) {
+            e.preventDefault();
+            if (helpBtn) helpBtn.click();
+            return;
+        }
+
+        if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
+
+        const cards = [...document.querySelectorAll('.card')];
+        if ((e.key === 'j' || e.key === 'k') && cards.length) {
+            e.preventDefault();
+            if (keyboardSelectedIndex >= 0 && cards[keyboardSelectedIndex]) {
+                cards[keyboardSelectedIndex].classList.remove('card-keyboard-selected');
+            }
+            keyboardSelectedIndex = e.key === 'j'
+                ? (keyboardSelectedIndex + 1) % cards.length
+                : (keyboardSelectedIndex - 1 + cards.length) % cards.length;
+            const selected = cards[keyboardSelectedIndex];
+            if (selected) {
+                selected.classList.add('card-keyboard-selected');
+                selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+            return;
+        }
+
+        const selected = cards[keyboardSelectedIndex];
+        if (e.key === 'Enter' && selected) {
+            e.preventDefault();
+            const link = selected.querySelector('.icon-link.gmu-profile-link') || selected.querySelector('.icon-link.website-link') || selected.querySelector('h2');
+            if (link) link.click();
+            return;
+        }
+        if (e.key === 'f' && selected) {
+            e.preventDefault();
+            const editBtn = selected.querySelector('.icon-link.edit-link');
+            if (editBtn) editBtn.click();
+            return;
+        }
+        if (e.key === 'r') {
+            e.preventDefault();
+            runCommand('/dev/random');
+        }
+    });
+}
+
 async function init() {
     const data = await loadFaculty();
     allFaculty = data.faculty;
@@ -90,6 +257,7 @@ async function init() {
         keywordMeta: KEYWORD_META,
         suggestionSources: FACULTY_SUGGESTION_SOURCES,
         onChange: render,
+        onCommand: runCommand,
     });
 
     setupFilters();
@@ -100,6 +268,7 @@ async function init() {
         render();
         document.getElementById('main-search').focus();
     });
+    setupKeyboardShortcuts();
     refreshSearchExamples();
     restoreFromUrl();
     render();
@@ -108,6 +277,11 @@ async function init() {
         restoreFromUrl();
         render();
     });
+
+    const commitStr = typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev';
+    console.info(`%cGMU CS Directory ${commitStr}`, 'color:#006633;font-weight:bold;font-size:16px');
+    console.info('The roster is open source: https://github.com/RealGMUCS/people');
+    console.info('Try typing “help”, “fortune”, or “uname -a” into search.');
 }
 
 function setupFilters() {
@@ -272,6 +446,7 @@ function render() {
     document.getElementById('awards-link').classList.toggle('active', awardsView);
     document.getElementById('filters').style.display = awardsView ? 'none' : '';
     document.querySelector('.search-examples').style.display = awardsView ? 'none' : '';
+    keyboardSelectedIndex = -1;
 
     if (awardsView) {
         search.resetScope();
@@ -279,6 +454,7 @@ function render() {
         grid.innerHTML = renderAwards();
         const total = awardCategories.reduce((n, c) => n + c.awards.length, 0);
         countEl.textContent = `${total} awards across ${awardCategories.length} categories`;
+        renderQueryPlan(total);
         updateUrl();
         return;
     }
@@ -287,6 +463,7 @@ function render() {
     const filtered = getFiltered();
     countEl.textContent = `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
+    renderQueryPlan(filtered.length);
     updateUrl();
 }
 

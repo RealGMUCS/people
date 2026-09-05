@@ -142,8 +142,30 @@ export function setupSearchExamplesClick(onSelect) {
 
 // Sticky scope chip + live suggestion dropdown for the search box, shared by
 // both pages. Each page supplies its own keyword map / suggestion sources /
+if (typeof localStorage !== 'undefined' && localStorage.getItem('gmu_cs:crt') === '1') {
+    document.documentElement.classList.add('crt-mode');
+}
+
+export function showCommandOutput(message) {
+    const el = document.getElementById('command-output');
+    if (el) {
+        el.textContent = message;
+        el.hidden = false;
+    }
+}
+
+export function hideCommandOutput() {
+    const el = document.getElementById('command-output');
+    if (el) {
+        el.hidden = true;
+        el.textContent = '';
+    }
+}
+
+// Sticky scope chip + live suggestion dropdown for the search box, shared by
+// both pages. Each page supplies its own keyword map / suggestion sources /
 // display metadata since Faculty and Students track different fields.
-export function createSearchController({ input, scopeChip, scopeChipLabel, suggestionPanel, keywordMap, keywordMeta, suggestionSources, onChange }) {
+export function createSearchController({ input, scopeChip, scopeChipLabel, suggestionPanel, keywordMap, keywordMeta, suggestionSources, onChange, onCommand }) {
     let activeScope = null;
     let activeSuggestion = -1;
 
@@ -200,10 +222,10 @@ export function createSearchController({ input, scopeChip, scopeChipLabel, sugge
     function effectiveSearch() {
         const raw = input.value.trim();
         if (activeScope && keywordMap[activeScope]) {
-            return { getField: keywordMap[activeScope], query: raw.toLowerCase() };
+            return { key: activeScope, getField: keywordMap[activeScope], query: raw.toLowerCase() };
         }
         const parsed = parseKeywordQuery(raw, keywordMap);
-        return parsed ? { getField: parsed.getField, query: parsed.query.toLowerCase() } : null;
+        return parsed ? { key: parsed.key, getField: parsed.getField, query: parsed.query.toLowerCase() } : null;
     }
 
     function setSearchValue(raw) {
@@ -243,13 +265,30 @@ export function createSearchController({ input, scopeChip, scopeChipLabel, sugge
     input.addEventListener('blur', () => window.setTimeout(hideSuggestions, 150));
     input.addEventListener('keydown', e => {
         const options = [...suggestionPanel.querySelectorAll('.search-suggestion')];
-        if (e.key === 'Escape') { hideSuggestions(); return; }
-        if (!options.length || !['ArrowDown', 'ArrowUp', 'Enter'].includes(e.key)) return;
-        if (e.key === 'Enter' && activeSuggestion >= 0) {
-            e.preventDefault();
-            options[activeSuggestion].click();
+        if (e.key === 'Escape') {
+            hideSuggestions();
+            if (input.value || activeScope) {
+                e.preventDefault();
+                resetScope();
+                input.value = '';
+                hideCommandOutput();
+                onChange();
+            }
             return;
         }
+        if (e.key === 'Enter') {
+            if (activeSuggestion >= 0 && options[activeSuggestion]) {
+                e.preventDefault();
+                options[activeSuggestion].click();
+                return;
+            }
+            if (onCommand && onCommand(searchQueryValue())) {
+                e.preventDefault();
+                hideSuggestions();
+                return;
+            }
+        }
+        if (!options.length || !['ArrowDown', 'ArrowUp'].includes(e.key)) return;
         if (e.key === 'ArrowDown') activeSuggestion = (activeSuggestion + 1) % options.length;
         if (e.key === 'ArrowUp') activeSuggestion = (activeSuggestion - 1 + options.length) % options.length;
         options.forEach((opt, i) => opt.setAttribute('aria-selected', String(i === activeSuggestion)));
@@ -261,7 +300,7 @@ export function createSearchController({ input, scopeChip, scopeChipLabel, sugge
         onChange();
     });
 
-    return { effectiveSearch, setSearchValue, searchQueryValue, resetScope };
+    return { effectiveSearch, setSearchValue, searchQueryValue, resetScope, activeScope: () => activeScope };
 }
 
 // Populates the "(i)" search-syntax popover with page-specific keyword entries
