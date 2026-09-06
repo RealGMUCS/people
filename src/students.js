@@ -14,10 +14,11 @@ let alumniMapInstance = null;
 let keyboardSelectedIndex = -1;
 
 const CURRENT_YEAR = new Date().getFullYear();
+const advisorSearchText = s => [s.advisor, s.coAdvisor].filter(Boolean).join(' ');
 
 const STUDENT_KEYWORDS = {
     name: s => `${s.firstName} ${s.lastName}`,
-    advisor: s => s.advisor,
+    advisor: advisorSearchText,
     coadvisor: s => s.coAdvisor,
     'co-advisor': s => s.coAdvisor,
     dissertation: s => s.dissertationTitle,
@@ -95,7 +96,7 @@ const KEYWORD_META = {
 
 const STUDENT_SUGGESTION_SOURCES = {
     name: () => allStudents.map(s => `${s.firstName} ${s.lastName}`.trim()),
-    advisor: () => uniqueNonEmpty(allStudents.map(s => s.advisor)),
+    advisor: () => uniqueNonEmpty(allStudents.flatMap(s => [s.advisor, s.coAdvisor])),
     coadvisor: () => uniqueNonEmpty(allStudents.map(s => s.coAdvisor)),
     'co-advisor': () => uniqueNonEmpty(allStudents.map(s => s.coAdvisor)),
     dissertation: () => uniqueNonEmpty(allStudents.map(s => s.dissertationTitle)),
@@ -501,9 +502,11 @@ function render() {
     const isAdvisorSearch = kw && kw.key === 'advisor' && kw.query;
     let advisorName = null;
     if (isAdvisorSearch) {
-        const sampleStudent = filtered.find(s => s.advisor && s.advisor.toLowerCase().includes(kw.query))
-            || allStudents.find(s => s.advisor && s.advisor.toLowerCase().includes(kw.query));
-        advisorName = sampleStudent ? sampleStudent.advisor : kw.query;
+        const sampleStudent = filtered.find(s => advisorSearchText(s).toLowerCase().includes(kw.query))
+            || allStudents.find(s => advisorSearchText(s).toLowerCase().includes(kw.query));
+        advisorName = sampleStudent
+            ? [sampleStudent.advisor, sampleStudent.coAdvisor].find(name => name && name.toLowerCase().includes(kw.query))
+            : kw.query;
     }
 
     if (advisorName) {
