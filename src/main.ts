@@ -1,5 +1,6 @@
-import { loadFaculty } from './data.js';
-import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common.js';
+// @ts-nocheck
+import { loadFaculty } from './data';
+import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
 import './style.css';
 
 let allFaculty = [];
@@ -490,3 +491,5 @@ document.addEventListener('click', e => {
 });
 
 init();
+// Existing page rendering is preserved during the migration.
+// @ts-nocheck

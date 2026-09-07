@@ -3,8 +3,8 @@
 Two directories for the George Mason University Computer Science department:
 **People** (`index.html`, faculty/staff) and **Students/Alumni**
 (`students.html`, grad students and alumni). They're separate pages but share
-all their UI code (`src/common.js`, `src/style.css`) and data loading
-(`src/data.js`).
+all their UI code (`src/common.ts`, `src/style.css`) and data loading
+(`src/data.ts`).
 
 Faculty data is sourced from [cs.gmu.edu](https://cs.gmu.edu/people/faculty/);
 students/alumni data was researched from each advisor's lab site and public
