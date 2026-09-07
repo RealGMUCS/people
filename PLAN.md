@@ -8,9 +8,9 @@ Keep the directory's behavior, public URLs, and JSON records intact. HTML, CSS,
 SVG assets, workflow YAML, and the three JSON datasets retain their formats.
 Generated files in `dist/` and dependency code are outside the migration scope.
 
-The migration is implemented in the working tree. The checklist records the
-completed work and the remaining follow-up for removing the temporary UI
-compatibility boundaries.
+The migration and structural cleanup are implemented in the working tree. The
+checklist records completed infrastructure work and the remaining follow-up for
+removing temporary UI compatibility boundaries.
 
 ## Current setup
 
@@ -38,22 +38,22 @@ compatibility boundaries.
 
 ## 2. Add TypeScript tooling
 
-- [ ] Add TypeScript and Node type definitions as development dependencies;
+- [x] Add TypeScript and Node type definitions as development dependencies;
   retain the existing Leaflet types and update the lockfile.
-- [ ] Add separate browser and tooling TypeScript configurations, with a shared
+- [x] Add separate browser and tooling TypeScript configurations, with a shared
   strict baseline. Browser configuration includes DOM libraries and Vite client
   types; tooling configuration includes Node types and covers the validator and
   Vite configuration. Include tests in the appropriate configuration.
-- [ ] Use `strict`, `noEmit`, and `noUncheckedIndexedAccess`. Choose module and
+- [x] Use `strict`, `noEmit`, and `noUncheckedIndexedAccess`. Choose module and
   import resolution settings appropriate to Vite in the browser and the selected
   Node runner for scripts. Document one consistent import-extension convention.
-- [ ] Use a TypeScript runner such as `tsx` for the validator and TypeScript
+- [x] Use a TypeScript runner such as `tsx` for the validator and TypeScript
   tests, so execution does not depend on implicit Node type stripping.
-- [ ] Add `src/vite-env.d.ts` for Vite client types, CSS imports, and the build
+- [x] Add `src/vite-env.d.ts` for Vite client types, CSS imports, and the build
   constants declared by `vite.config.ts`.
-- [ ] Add `typecheck` and `validate:data` npm scripts. During staged conversion,
+- [x] Add `typecheck` and `validate:data` npm scripts. During staged conversion,
   temporary JavaScript interop is allowed, but remove it at completion.
-- [ ] Align CI with `.nvmrc` using the workflow's Node version-file setting.
+- [x] Align CI with `.nvmrc` using the workflow's Node version-file setting.
 
 ## 3. Define and validate data contracts
 
@@ -62,7 +62,7 @@ compatibility boundaries.
 - [ ] Add separate normalized UI types for faculty, students, awards, award
   categories, and advisee summaries. Type maps, arrays, nullable links, and UI
   state such as randomized sort indices explicitly.
-- [ ] Convert the validator to `scripts/validate-data.ts`. Treat parsed JSON as
+- [x] Convert the validator to `scripts/validate-data.ts`. Treat parsed JSON as
   `unknown`; check arrays, object entries, required and unexpected properties,
   and property value types before trimming or reading values.
 - [ ] Share runtime record validation between tooling and browser loading where
@@ -71,7 +71,7 @@ compatibility boundaries.
 - [ ] Preserve useful failures for malformed JSON, null entries, wrong value
   types, and missing keys. Report filenames and record indexes or names, rather
   than misleading CSV-style line numbers.
-- [ ] Convert `src/data.ts` to typed data contracts with explicit loader return types.
+- [x] Convert `src/data.ts` to typed data contracts with explicit loader return types.
   Validate network JSON before normalizing it; a type assertion alone does not
   validate fetched data.
 
@@ -99,15 +99,15 @@ compatibility boundaries.
 
 ## 5. Integrate build and deployment
 
-- [ ] Keep `vite.config.ts`, retaining the `/people/` base,
+- [x] Keep `vite.config.ts`, retaining the `/people/` base,
   three HTML inputs, commit lookup, and build metadata.
-- [ ] Update HTML module entry paths and internal imports for renamed files.
-- [ ] Make `npm run build` run type checking and data validation before
+- [x] Update HTML module entry paths and internal imports for renamed files.
+- [x] Make `npm run build` run type checking and data validation before
   `vite build`; Vite transpilation alone is not a type check.
 - [ ] Keep GitHub Pages deployment gated on the full build and focused tests.
 - [ ] Update README commands and maintenance references to the TypeScript
   validator, runtime requirement, and development workflow.
-- [ ] Remove superseded JavaScript files and temporary migration configuration.
+- [x] Remove superseded JavaScript files and temporary migration configuration.
 
 ## 6. Verify and complete
 

@@ -338,5 +338,3 @@ async function init() {
 }
 
 init();
-// Existing form behavior is preserved during the migration.
-// @ts-nocheck

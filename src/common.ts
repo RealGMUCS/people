@@ -479,5 +479,3 @@ export function setupSharedKeyboardShortcuts({ getItemElements, getSelectedIndex
         }
     });
 }
-// Existing DOM-heavy UI helpers are being migrated incrementally; runtime behavior is unchanged.
-// @ts-nocheck

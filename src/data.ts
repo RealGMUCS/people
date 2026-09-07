@@ -267,5 +267,3 @@ function parseList(raw) {
     if (!raw || raw.trim().toLowerCase() === 'null') return [];
     return raw.split(';').map(s => s.trim()).filter(Boolean);
 }
-// Existing normalization and rendering contracts are preserved during the migration.
-// @ts-nocheck
