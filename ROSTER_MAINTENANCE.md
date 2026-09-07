@@ -21,6 +21,12 @@ Include current graduate students and alumni who earned or are pursuing degrees 
   * **Thesis M.S.**: Include thesis advisor and thesis title.
   * **Coursework / Non-Thesis M.S.**: Include degree (`MS '24`), current placement/location, and set `Advisor` to `None`.
 
+### Undergraduate Researchers
+Include current undergraduate researchers affiliated with GMU Computer Science research labs or faculty projects:
+* Track degree as `BS` or `BS 'YY` when the expected or completed year is known.
+* Include the supervising faculty member in `Advisor`, research topics, current location, and public website or profile links when available.
+* Use the same verification and maintenance timestamp requirements as graduate-student records.
+
 ---
 
 ## 2. Mandatory Verification & Maintenance Metadata
