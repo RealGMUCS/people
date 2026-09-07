@@ -43,15 +43,16 @@ const studentFields = [
 
 const awardFields = ['Name', 'Category', 'Award', 'Year', 'Former'];
 const facultyTypes = new Set(['Affiliate', 'Emeritus', 'Staff', 'Teaching', 'Tenure-Track', 'Tenured']);
-const errors = [];
+type JsonRecord = Record<string, unknown>;
+const errors: string[] = [];
 
-function parse(file, expectedFields) {
+function parse(file: string, expectedFields: readonly string[]): JsonRecord[] {
     const text = fs.readFileSync(new URL(`../public/${file}`, import.meta.url), 'utf8');
     let data;
     try {
-        data = JSON.parse(text);
+        data = JSON.parse(text) as unknown;
     } catch (error) {
-        errors.push(`${file}: invalid JSON (${error.message})`);
+        errors.push(`${file}: invalid JSON (${error instanceof Error ? error.message : String(error)})`);
         return [];
     }
     if (!Array.isArray(data)) {
@@ -59,7 +60,7 @@ function parse(file, expectedFields) {
         return [];
     }
 
-    data.forEach((row, index) => {
+    data.forEach((row: unknown, index: number) => {
         const entry = index + 1;
         if (!row || typeof row !== 'object' || Array.isArray(row)) {
             errors.push(`${file}:${entry}: expected an object`);
@@ -73,15 +74,15 @@ function parse(file, expectedFields) {
         });
     });
 
-    return data;
+    return data as JsonRecord[];
 }
 
-function value(row, field) {
-    const raw = row[field]?.trim() || '';
+function value(row: JsonRecord, field: string) {
+    const raw = typeof row[field] === 'string' ? row[field].trim() : '';
     return raw.toLowerCase() === 'null' ? '' : raw;
 }
 
-function validHttpUrl(raw, allowMissingProtocol = false) {
+function validHttpUrl(raw: string, allowMissingProtocol = false) {
     if (!raw) return true;
     const candidate = allowMissingProtocol && !/^https?:\/\//i.test(raw) ? `https://${raw}` : raw;
     try {

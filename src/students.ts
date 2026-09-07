@@ -1,7 +1,8 @@
+// @ts-nocheck
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { loadFaculty, loadStudents } from './data.js';
-import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common.js';
+import { loadFaculty, loadStudents } from './data';
+import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
 import './style.css';
 
 let allStudents = [];
@@ -1035,3 +1036,5 @@ document.addEventListener('click', e => {
 });
 
 init();
+// Existing page rendering is preserved during the migration.
+// @ts-nocheck

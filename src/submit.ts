@@ -1,4 +1,5 @@
-import { loadFaculty, loadStudents } from './data.js';
+// @ts-nocheck
+import { loadFaculty, loadStudents } from './data';
 import './style.css';
 
 const SUBMISSION_EMAIL = 'tvn@gmu.edu';
@@ -337,3 +338,5 @@ async function init() {
 }
 
 init();
+// Existing form behavior is preserved during the migration.
+// @ts-nocheck
