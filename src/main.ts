@@ -491,5 +491,3 @@ document.addEventListener('click', e => {
 });
 
 init();
-// Existing page rendering is preserved during the migration.
-// @ts-nocheck
