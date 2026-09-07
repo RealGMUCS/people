@@ -31,7 +31,7 @@ Include current undergraduate researchers affiliated with GMU Computer Science r
 
 ## 2. Mandatory Verification & Maintenance Metadata
 
-Every entry in `public/faculty.csv` and `public/students.csv` MUST contain the following maintenance timestamps:
+Every entry in `public/faculty.json` and `public/students.json` MUST contain the following maintenance timestamps:
 
 | Field Name | Format | Description |
 | :--- | :--- | :--- |
@@ -67,7 +67,7 @@ When verifying or updating entries, consult sources in the following priority or
 
 ## 4. Field Specification & Conventions
 
-### `public/students.csv`
+### `public/students.json`
 * `First Name`, `Last Name`: Official name as registered at GMU.
 * `Advisor`: Full name of primary faculty advisor (e.g., `Amarda Shehu`). Set to `None` for unadvised coursework M.S. students.
 * `Co-Advisor`: Full name of co-advisor, if applicable (e.g., `Fei Li`).
@@ -79,7 +79,7 @@ When verifying or updating entries, consult sources in the following priority or
 * `Last Modified`: `YYYY-MM-DD`
 * `Last Verified`: `YYYY-MM-DD`
 
-### `public/faculty.csv`
+### `public/faculty.json`
 * `First Name`, `Last Name`: Faculty member's name.
 * `gmu email/userid`: GMU email address or NetID.
 * `Tenure-Track/Teaching/Staff`: Primary track (`Tenure-Track`, `Teaching`, `Research`, `Staff`).

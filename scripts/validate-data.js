@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import Papa from 'papaparse';
 
 const facultyFields = [
     'First Name',
@@ -48,22 +47,33 @@ const errors = [];
 
 function parse(file, expectedFields) {
     const text = fs.readFileSync(new URL(`../public/${file}`, import.meta.url), 'utf8');
-    const result = Papa.parse(text, { header: true, skipEmptyLines: 'greedy' });
+    let data;
+    try {
+        data = JSON.parse(text);
+    } catch (error) {
+        errors.push(`${file}: invalid JSON (${error.message})`);
+        return [];
+    }
+    if (!Array.isArray(data)) {
+        errors.push(`${file}: expected a JSON array`);
+        return [];
+    }
 
-    result.errors.forEach(error => {
-        const line = Number.isInteger(error.row) ? error.row + 2 : 'unknown';
-        errors.push(`${file}:${line}: ${error.message}`);
+    data.forEach((row, index) => {
+        const entry = index + 1;
+        if (!row || typeof row !== 'object' || Array.isArray(row)) {
+            errors.push(`${file}:${entry}: expected an object`);
+            return;
+        }
+        expectedFields.forEach(field => {
+            if (!Object.hasOwn(row, field)) errors.push(`${file}:${entry}: missing property "${field}"`);
+        });
+        Object.keys(row).forEach(field => {
+            if (!expectedFields.includes(field)) errors.push(`${file}:${entry}: unexpected property "${field}"`);
+        });
     });
 
-    const actualFields = result.meta.fields || [];
-    expectedFields.forEach(field => {
-        if (!actualFields.includes(field)) errors.push(`${file}: missing column "${field}"`);
-    });
-    actualFields.forEach(field => {
-        if (!expectedFields.includes(field)) errors.push(`${file}: unexpected column "${field}"`);
-    });
-
-    return result.data;
+    return data;
 }
 
 function value(row, field) {
@@ -82,9 +92,9 @@ function validHttpUrl(raw, allowMissingProtocol = false) {
     }
 }
 
-const faculty = parse('faculty.csv', facultyFields);
-const students = parse('students.csv', studentFields);
-const awards = parse('awards.csv', awardFields);
+const faculty = parse('faculty.json', facultyFields);
+const students = parse('students.json', studentFields);
+const awards = parse('awards.json', awardFields);
 const facultyNames = new Set();
 const facultyEmails = new Set();
 
@@ -103,25 +113,25 @@ faculty.forEach((row, index) => {
     const lastModified = value(row, 'Last Modified');
     const lastVerified = value(row, 'Last Verified');
 
-    if (!firstName || !lastName) errors.push(`faculty.csv:${line}: first and last name are required`);
-    if (facultyNames.has(name)) errors.push(`faculty.csv:${line}: duplicate faculty name "${name}"`);
+    if (!firstName || !lastName) errors.push(`faculty.json:${line}: first and last name are required`);
+    if (facultyNames.has(name)) errors.push(`faculty.json:${line}: duplicate faculty name "${name}"`);
     facultyNames.add(name);
     if (email) {
-        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errors.push(`faculty.csv:${line}: invalid email "${email}"`);
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errors.push(`faculty.json:${line}: invalid email "${email}"`);
         const genericStaffEmails = new Set(['csug@gmu.edu', 'csgrad@gmu.edu']);
         if (!genericStaffEmails.has(email.toLowerCase()) && facultyEmails.has(email)) {
-            errors.push(`faculty.csv:${line}: duplicate email "${email}"`);
+            errors.push(`faculty.json:${line}: duplicate email "${email}"`);
         }
         facultyEmails.add(email);
     }
-    if (type && !facultyTypes.has(type)) errors.push(`faculty.csv:${line}: invalid faculty type "${type}"`);
-    if (startYear && !/^\d{4}$/.test(startYear)) errors.push(`faculty.csv:${line}: invalid start year "${startYear}"`);
-    if (!validHttpUrl(picture)) errors.push(`faculty.csv:${line}: invalid picture URL "${picture}"`);
-    if (!validHttpUrl(website, true)) errors.push(`faculty.csv:${line}: invalid website URL "${website}"`);
-    if (!validHttpUrl(linkedin, true)) errors.push(`faculty.csv:${line}: invalid linkedin URL "${linkedin}"`);
-    if (!validHttpUrl(scholar, true)) errors.push(`faculty.csv:${line}: invalid scholar URL "${scholar}"`);
-    if (lastModified && !/^\d{4}-\d{2}-\d{2}$/.test(lastModified)) errors.push(`faculty.csv:${line}: invalid Last Modified date "${lastModified}"`);
-    if (lastVerified && !/^\d{4}-\d{2}-\d{2}$/.test(lastVerified)) errors.push(`faculty.csv:${line}: invalid Last Verified date "${lastVerified}"`);
+    if (type && !facultyTypes.has(type)) errors.push(`faculty.json:${line}: invalid faculty type "${type}"`);
+    if (startYear && !/^\d{4}$/.test(startYear)) errors.push(`faculty.json:${line}: invalid start year "${startYear}"`);
+    if (!validHttpUrl(picture)) errors.push(`faculty.json:${line}: invalid picture URL "${picture}"`);
+    if (!validHttpUrl(website, true)) errors.push(`faculty.json:${line}: invalid website URL "${website}"`);
+    if (!validHttpUrl(linkedin, true)) errors.push(`faculty.json:${line}: invalid linkedin URL "${linkedin}"`);
+    if (!validHttpUrl(scholar, true)) errors.push(`faculty.json:${line}: invalid scholar URL "${scholar}"`);
+    if (lastModified && !/^\d{4}-\d{2}-\d{2}$/.test(lastModified)) errors.push(`faculty.json:${line}: invalid Last Modified date "${lastModified}"`);
+    if (lastVerified && !/^\d{4}-\d{2}-\d{2}$/.test(lastVerified)) errors.push(`faculty.json:${line}: invalid Last Verified date "${lastVerified}"`);
 });
 
 students.forEach((row, index) => {
@@ -137,13 +147,13 @@ students.forEach((row, index) => {
     const lastModified = value(row, 'Last Modified');
     const lastVerified = value(row, 'Last Verified');
 
-    if (!firstName && !lastName) errors.push(`students.csv:${line}: first or last name is required`);
-    if (!validHttpUrl(picture)) errors.push(`students.csv:${line}: invalid picture URL "${picture}"`);
-    if (!validHttpUrl(website, true)) errors.push(`students.csv:${line}: invalid website URL "${website}"`);
-    if (!validHttpUrl(linkedin, true)) errors.push(`students.csv:${line}: invalid linkedin URL "${linkedin}"`);
-    if (!validHttpUrl(scholar, true)) errors.push(`students.csv:${line}: invalid scholar URL "${scholar}"`);
-    if (lastModified && !/^\d{4}-\d{2}-\d{2}$/.test(lastModified)) errors.push(`students.csv:${line}: invalid Last Modified date "${lastModified}"`);
-    if (lastVerified && !/^\d{4}-\d{2}-\d{2}$/.test(lastVerified)) errors.push(`students.csv:${line}: invalid Last Verified date "${lastVerified}"`);
+    if (!firstName && !lastName) errors.push(`students.json:${line}: first or last name is required`);
+    if (!validHttpUrl(picture)) errors.push(`students.json:${line}: invalid picture URL "${picture}"`);
+    if (!validHttpUrl(website, true)) errors.push(`students.json:${line}: invalid website URL "${website}"`);
+    if (!validHttpUrl(linkedin, true)) errors.push(`students.json:${line}: invalid linkedin URL "${linkedin}"`);
+    if (!validHttpUrl(scholar, true)) errors.push(`students.json:${line}: invalid scholar URL "${scholar}"`);
+    if (lastModified && !/^\d{4}-\d{2}-\d{2}$/.test(lastModified)) errors.push(`students.json:${line}: invalid Last Modified date "${lastModified}"`);
+    if (lastVerified && !/^\d{4}-\d{2}-\d{2}$/.test(lastVerified)) errors.push(`students.json:${line}: invalid Last Verified date "${lastVerified}"`);
 });
 
 const awardKeys = new Set();
@@ -156,12 +166,12 @@ awards.forEach((row, index) => {
     const former = value(row, 'Former').toLowerCase();
     const key = [name, category, award, year].join('\u0000');
 
-    if (!name) errors.push(`awards.csv:${line}: name is required`);
-    if (!category) errors.push(`awards.csv:${line}: category is required`);
-    if (!award) errors.push(`awards.csv:${line}: award is required`);
-    if (year && !/^\d{4}$/.test(year)) errors.push(`awards.csv:${line}: invalid year "${year}"`);
-    if (former && former !== 'yes') errors.push(`awards.csv:${line}: Former must be "yes" or blank`);
-    if (awardKeys.has(key)) errors.push(`awards.csv:${line}: duplicate award for "${name}"`);
+    if (!name) errors.push(`awards.json:${line}: name is required`);
+    if (!category) errors.push(`awards.json:${line}: category is required`);
+    if (!award) errors.push(`awards.json:${line}: award is required`);
+    if (year && !/^\d{4}$/.test(year)) errors.push(`awards.json:${line}: invalid year "${year}"`);
+    if (former && former !== 'yes') errors.push(`awards.json:${line}: Former must be "yes" or blank`);
+    if (awardKeys.has(key)) errors.push(`awards.json:${line}: duplicate award for "${name}"`);
     awardKeys.add(key);
 });
 

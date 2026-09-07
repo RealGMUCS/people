@@ -9,7 +9,7 @@ all their UI code (`src/common.js`, `src/style.css`) and data loading
 Faculty data is sourced from [cs.gmu.edu](https://cs.gmu.edu/people/faculty/);
 students/alumni data was researched from each advisor's lab site and public
 profiles (LinkedIn, Google Scholar, personal pages) — see
-`public/students.csv` for coverage, which is best-effort and not exhaustive.
+`public/students.json` for coverage, which is best-effort and not exhaustive.
 
 ## Features
 
@@ -44,16 +44,16 @@ npm run build && npm run preview
 
 ## Updating the Data
 
-The database is three CSVs in this repo. Edit any directly on GitHub (or
+The database is three JSON files in this repo. Edit any directly on GitHub (or
 locally) and commit to `main`; the push redeploys the site in about a minute.
 The `submit.html` form is the non-technical path to the same edit links.
 
-### `public/faculty.csv` — the people ([edit](https://github.com/RealGMUCS/people/edit/main/public/faculty.csv))
+### `public/faculty.json` — the people ([edit](https://github.com/RealGMUCS/people/edit/main/public/faculty.json))
 
-One row per person. There is no achievements column — a person's achievements
-are joined from `awards.csv` by their full name (`First Last`).
+One object per person. There is no achievements property — a person's achievements
+are joined from `awards.json` by their full name (`First Last`).
 
-| Column | Example |
+| Property | Example |
 |--------|---------|
 | First Name | ThanhVu |
 | Last Name | Nguyen |
@@ -73,12 +73,12 @@ are joined from `awards.csv` by their full name (`First Last`).
 
 Research interests are comma-separated.
 
-### `public/students.csv` — students/alumni ([edit](https://github.com/RealGMUCS/people/edit/main/public/students.csv))
+### `public/students.json` — students/alumni ([edit](https://github.com/RealGMUCS/people/edit/main/public/students.json))
 
-One row per student. `Advisor` must match `First Last` in faculty.csv to link
-to that faculty member's card; a co-advised student gets one row per advisor.
+One object per student. `Advisor` must match `First Last` in faculty.json to link
+to that faculty member's card; use `Co-Advisor` for a second advisor.
 
-| Column | Example |
+| Property | Example |
 |--------|---------|
 | First Name | Timothy |
 | Last Name | Balint |
@@ -99,20 +99,20 @@ multiple; `Topics` is comma-separated. The Students/Alumni page infers
 current-vs-alumni status from a `'YY` year in `Degree` (falling back to
 whether `Current Job` is filled in) — there's no separate status column.
 
-### `public/awards.csv` — the awards ([edit](https://github.com/RealGMUCS/people/edit/main/public/awards.csv))
+### `public/awards.json` — the awards ([edit](https://github.com/RealGMUCS/people/edit/main/public/awards.json))
 
-One row per award. Drives both the `#awards` page and each faculty card's
+One object per award. Drives both the `#awards` page and each faculty card's
 achievements list.
 
-| Column | Example | Notes |
+| Property | Example | Notes |
 |--------|---------|-------|
-| Name | ThanhVu (Vu) Nguyen | Must match `First Last` in faculty.csv to link to a card |
+| Name | ThanhVu (Vu) Nguyen | Must match `First Last` in faculty.json to link to a card |
 | Category | NSF CAREER Awards | Groups awards on the `#awards` page; category order follows first appearance in the file |
 | Award | Amazon Research Award (Automated Reasoning) | Award text **without** the year |
 | Year | 2023 | Shown separately; used for sorting |
 | Former | yes | `yes` if the person has left GMU (shown but not clickable); blank otherwise |
 
-A `Name` that doesn't match anyone in faculty.csv is treated as a former member
+A `Name` that doesn't match anyone in faculty.json is treated as a former member
 automatically, so `Former` is only needed to force that flag.
 
 ## Deploying

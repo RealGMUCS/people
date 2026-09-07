@@ -1,22 +1,18 @@
-import Papa from 'papaparse';
-
-// The database is three CSVs in this repo — public/faculty.csv (people),
-// public/awards.csv (awards, one row per award), and public/students.csv
+// The database is three JSON files in this repo — public/faculty.json (people),
+// public/awards.json (awards, one object per award), and public/students.json
 // (grad students/alumni). Edit any on GitHub and the push redeploys the
-// site. Achievements shown on a card are joined from awards.csv by full
-// name, so there is no achievements column in faculty.csv. Likewise a
+// site. Achievements shown on a card are joined from awards.json by full
+// name, so there is no achievements column in faculty.json. Likewise a
 // student's Advisor is joined to a faculty card by full name.
 export async function loadFaculty() {
     const base = import.meta.env.BASE_URL;
-    const [facText, awardText, studentText] = await Promise.all([
-        fetchCsv(`${base}faculty.csv`),
-        fetchCsv(`${base}awards.csv`),
-        fetchCsv(`${base}students.csv`),
+    const [data, awardData, studentData] = await Promise.all([
+        fetchJson(`${base}faculty.json`),
+        fetchJson(`${base}awards.json`),
+        fetchJson(`${base}students.json`),
     ]);
 
-    const { awardsByName, awardCategories } = parseAwards(awardText);
-
-    const { data } = Papa.parse(facText, { header: true, skipEmptyLines: true });
+    const { awardsByName, awardCategories } = parseAwards(awardData);
 
     const faculty = data.map(row => {
         // Handle variable header names (they include examples in parentheses)
@@ -65,8 +61,7 @@ export async function loadFaculty() {
     });
 
     // Link student advisees to faculty cards
-    if (studentText) {
-        const { data: studentData } = Papa.parse(studentText, { header: true, skipEmptyLines: true });
+    if (studentData) {
         studentData.forEach(row => {
             const advisorName = clean(row['Advisor']);
             const coAdvisorName = clean(row['Co-Advisor']);
@@ -96,13 +91,12 @@ export async function loadFaculty() {
     return { faculty, interestIndex, awardCategories, facultyByName: byName };
 }
 
-// Load public/students.csv (grad students/alumni). facultyByName (from
+// Load public/students.json (grad students/alumni). facultyByName (from
 // loadFaculty) links each student's Advisor to a faculty card where one
-// exists, the same way awards.csv links to faculty.
+// exists, the same way awards.json links to faculty.
 export async function loadStudents(facultyByName) {
     const base = import.meta.env.BASE_URL;
-    const text = await fetchCsv(`${base}students.csv`);
-    const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
+    const data = await fetchJson(`${base}students.json`);
 
     const topicIndex = new Map();
     const students = data.map(row => {
@@ -180,16 +174,15 @@ function parseDegreeYears(degreeStr) {
     return { phdYear, msYear, bsYear, gradYear };
 }
 
-async function fetchCsv(url) {
+async function fetchJson(url) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
-    return res.text();
+    return res.json();
 }
 
-// Parse awards.csv into: a name→awards map (for cards) and category-grouped
-// awards (for the #awards view). Category order follows the CSV's own order.
-function parseAwards(text) {
-    const { data } = Papa.parse(text, { header: true, skipEmptyLines: true });
+// Parse awards.json into: a name→awards map (for cards) and category-grouped
+// awards (for the #awards view). Category order follows the JSON file's own order.
+function parseAwards(data) {
     const awardsByName = new Map();
     const catMap = new Map(); // preserves first-seen category order
 
@@ -263,4 +256,3 @@ function parseList(raw) {
     if (!raw || raw.trim().toLowerCase() === 'null') return [];
     return raw.split(';').map(s => s.trim()).filter(Boolean);
 }
-

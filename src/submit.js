@@ -6,8 +6,8 @@ const GITHUB_REPO = 'RealGMUCS/people';
 
 const app = document.getElementById('app');
 
-// Plain-text dump of a faculty record, one line per faculty.csv column — so a maintainer
-// can copy a corrected version straight back into the spreadsheet.
+// Plain-text dump of a faculty record, one line per faculty.json property — so a maintainer
+// can copy a corrected version straight back into the data file.
 function facultyToText(f) {
     const today = new Date().toISOString().split('T')[0];
     return [
@@ -31,7 +31,7 @@ function facultyToText(f) {
     ].map(([k, v]) => `${k}: ${v || ''}`).join('\n');
 }
 
-// Plain-text dump of a student/alumni record, one line per students.csv column.
+// Plain-text dump of a student/alumni record, one line per students.json property.
 function studentToText(s) {
     const today = new Date().toISOString().split('T')[0];
     return [
