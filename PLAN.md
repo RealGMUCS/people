@@ -20,7 +20,6 @@ removing temporary UI compatibility boundaries.
 - `src/common.ts` provides search, suggestions, commands, keyboard controls,
   and shared rendering helpers.
 - `src/main.ts`, `src/students.ts`, and `src/submit.ts` implement the page UIs.
-  The student page uses Leaflet; its type definitions are already installed.
 - The data validator checks JSON properties and roster conventions but is not
   currently part of the build command.
 - `.nvmrc` specifies Node 24; the deployment workflow currently specifies Node 20.
@@ -32,14 +31,13 @@ removing temporary UI compatibility boundaries.
 - [ ] Run the existing validator and production build before changing code.
 - [ ] Record dataset counts and preserve a field-for-field baseline of the JSON
   files. Do not change data or maintenance timestamps for a code-only migration.
-- [ ] Smoke-test all three pages, faculty awards, student insights and map,
+- [ ] Smoke-test all three pages, faculty awards, and student insights,
   search/filter URLs, and submission form prefilling.
 - [ ] Record any existing failures separately from migration regressions.
 
 ## 2. Add TypeScript tooling
 
-- [x] Add TypeScript and Node type definitions as development dependencies;
-  retain the existing Leaflet types and update the lockfile.
+- [x] Add TypeScript and Node type definitions as development dependencies.
 - [x] Add separate browser and tooling TypeScript configurations, with a shared
   strict baseline. Browser configuration includes DOM libraries and Vite client
   types; tooling configuration includes Node types and covers the validator and
@@ -84,9 +82,7 @@ removing temporary UI compatibility boundaries.
   appropriate input, select, form, button, and textarea types. Handle optional
   elements and narrow event targets before accessing element-specific properties.
 - [ ] Type `src/main.ts` and `src/students.ts`. Type filters, sort modes, view state, and aggregations;
-  guard empty arrays and missing map entries exposed by strict checks.
-- [ ] Type Leaflet maps, layers, markers, coordinate tuples, and nullable map
-  lifecycle state. Preserve existing map initialization and cleanup behavior.
+  guard empty arrays and missing insight data exposed by strict checks.
 - [ ] Type `src/submit.ts`. Use a discriminated faculty vs.
   student list configuration so each formatter receives its correct record type.
   Narrow submit events and submitter buttons safely.
@@ -118,7 +114,7 @@ removing temporary UI compatibility boundaries.
   validation, focused tests, and the production build.
 - [ ] Confirm the JSON files are byte-for-byte unchanged from the baseline.
 - [ ] Preview the production build and repeat the baseline browser checks,
-  including map rendering, form autocomplete, and browser back/forward navigation.
+  including form autocomplete and browser back/forward navigation.
   Check for console errors and failed assets under `/people/`.
 - [ ] Confirm no maintained `.js` modules or stale entry paths remain, excluding
   generated output and dependencies.
