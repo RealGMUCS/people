@@ -1,60 +1,41 @@
-@import './styles/student-map.css';
+/*
+ * GMU CS Directory — component styles
+ *
+ * Design-system tokens (CSS variables, reset, base body) are loaded from the
+ * shared vietprofs stylesheet:
+ *   https://vietprofs.roars.dev/shared/tokens.css
+ *
+ * This file contains only components that are specific to this site.
+ * Token names match vietprofs conventions: --bamboo-green, --bamboo-green-hover,
+ * --accent, --focus-ring, etc.
+ *
+ * People-specific palette overrides (applied in :root below):
+ *   --bamboo-green      → #000000 (monochrome accent in light mode)
+ *   --bamboo-green-hover→ #000000
+ *   --accent            → #333333
+ */
 
-/* Design System & Variables */
+/* ─── People-specific token overrides ─────────────────────────────────────── */
 :root {
-    color-scheme: light dark;
-    --bg-color: #ffffff;
-    --text-color: hsl(0, 0%, 0%);
-    --text-primary: #000000;
-    --text-secondary: #000000;
-    --text-muted: #656d76;
-    --accent-color: #333333;
-    --card-bg: #ffffff;
-    --border-color: #000000;
-    --hover-bg: #f5f5f5;
-    --primary-color: #000000;
-    --primary-dark: #000000;
-    --primary-light: #eff6ff;
-    --tag-bg: #e0edff;
-    --tag-text: #1d4ed8;
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bamboo-green: #000000;
+    --bamboo-green-hover: #000000;
+    --accent: #333333;
+    /* vietprofs body has a bamboo grid background; people uses plain white */
+    --body-bg-image: none;
 }
 
-/* Dark Mode (follows OS/browser preference) */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #1a1d21;
-        --text-color: #e0e0e0;
-        --text-primary: #ffffff;
-        --text-secondary: #ababad;
-        --text-muted: #8b949e;
-        --accent-color: #36c5f0;
-        --card-bg: #222529;
-        --border-color: #3d4043;
-        --hover-bg: #2c2f33;
-        --primary-color: #36c5f0;
-        --primary-dark: #1d9bd1;
-        --primary-light: #2c3e50;
-        --tag-bg: #1e3a5f;
-        --tag-text: #93c5fd;
+        --bamboo-green: #36c5f0;
+        --bamboo-green-hover: #1d9bd1;
+        --accent: #36c5f0;
     }
 }
 
-/* Reset & Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Override body to remove vietprofs bamboo grid (people uses a plain bg) */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-body);
+    background-image: var(--body-bg-image);
     min-height: 100vh;
-    line-height: 1.6;
 }
 
 #app {
@@ -63,7 +44,7 @@ body {
     padding: 4rem 2rem;
 }
 
-/* Header */
+/* ─── Header ────────────────────────────────────────────────────────────────── */
 header {
     display: flex;
     align-items: center;
@@ -120,7 +101,7 @@ h1 {
     color: var(--text-primary);
 }
 
-/* Links above the search bar for secondary pages (awards, insights, submit) */
+/* ─── Page links (awards / submit strip) ────────────────────────────────────── */
 .page-links {
     display: flex;
     justify-content: center;
@@ -141,6 +122,7 @@ h1 {
     color: var(--text-primary);
 }
 
+/* ─── Icon links ─────────────────────────────────────────────────────────────── */
 .icon-link {
     display: inline-flex;
     align-items: center;
@@ -162,9 +144,11 @@ h1 {
 .icon-link:focus-visible {
     color: var(--text-primary);
     background: var(--hover-bg);
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
 }
 
-/* Search & Filters */
+/* ─── Search & Filters ──────────────────────────────────────────────────────── */
 .search-section {
     max-width: 800px;
     margin: 0 auto 2rem;
@@ -188,6 +172,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    /* light-mode magnifier icon baked in as a data URI */
     background: rgba(0, 0, 0, .05) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=) no-repeat 14px center;
     border-radius: 3em;
     height: 3em;
@@ -197,6 +182,11 @@ h1 {
 .search-input-shell:hover,
 .search-input-shell:focus-within {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-input-shell:focus-within {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 1px;
 }
 
 .search-input-shell input {
@@ -218,6 +208,7 @@ h1 {
 
 @media (prefers-color-scheme: dark) {
     .search-input-shell {
+        /* dark-mode magnifier icon */
         background-color: rgba(255, 255, 255, .1);
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==);
     }
@@ -229,7 +220,7 @@ h1 {
     align-items: center;
     gap: 0.3rem;
     padding: 0.25rem 0.6rem;
-    background: var(--primary-color);
+    background: var(--bamboo-green);
     color: var(--bg-color);
     border: none;
     border-radius: 999px;
@@ -298,11 +289,10 @@ h1 {
 
 .search-help-panel ul {
     margin: 0;
-    padding-left: 1.1rem;
+    padding-left: 0;
     display: grid;
     gap: 0.3rem;
     list-style: none;
-    padding-left: 0;
 }
 
 .search-help-panel code {
@@ -392,10 +382,10 @@ h1 {
 }
 
 .field-select:hover {
-    border-color: var(--accent-color);
+    border-color: var(--accent);
 }
 
-/* "Try: ..." example search queries */
+/* "Try: …" example search queries */
 .search-examples {
     display: flex;
     flex-wrap: wrap;
@@ -431,7 +421,7 @@ h1 {
     background: var(--hover-bg);
 }
 
-/* Results Grid */
+/* ─── Results Grid ───────────────────────────────────────────────────────────── */
 .results-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -439,7 +429,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
-/* Awards view (#awards) */
+/* ─── Awards view (#awards) ─────────────────────────────────────────────────── */
 .awards-view {
     display: block;
     max-width: 820px;
@@ -493,7 +483,7 @@ h1 {
 
 .award-person {
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--bamboo-green);
     text-decoration: none;
 }
 
@@ -530,7 +520,7 @@ a.award-person:hover {
     }
 }
 
-/* Faculty Count */
+/* ─── Faculty count ──────────────────────────────────────────────────────────── */
 .faculty-count {
     text-align: center;
     color: var(--text-secondary);
@@ -540,7 +530,7 @@ a.award-person:hover {
 }
 
 .faculty-count a {
-    color: var(--primary-color);
+    color: var(--bamboo-green);
     text-decoration: none;
     font-weight: 600;
 }
@@ -549,7 +539,7 @@ a.award-person:hover {
     text-decoration: underline;
 }
 
-/* Cards */
+/* ─── Cards ──────────────────────────────────────────────────────────────────── */
 .card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -652,9 +642,9 @@ button.card-link {
 }
 
 button.card-link:hover {
-    background: var(--primary-color);
+    background: var(--bamboo-green);
     color: #ffffff;
-    border-color: var(--primary-color);
+    border-color: var(--bamboo-green);
 }
 
 button.card-link.copied {
@@ -681,7 +671,7 @@ button.card-link.copied {
 .copy-email-inline {
     background: none;
     border: none;
-    color: var(--primary-color);
+    color: var(--bamboo-green);
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
@@ -698,7 +688,7 @@ button.card-link.copied {
     color: #22c55e;
 }
 
-/* Faculty Detail Rows */
+/* ─── Faculty detail rows ────────────────────────────────────────────────────── */
 .faculty-details {
     display: flex;
     flex-direction: column;
@@ -732,7 +722,7 @@ button.card-link.copied {
 }
 
 .detail-value a {
-    color: var(--primary-color);
+    color: var(--bamboo-green);
     text-decoration: none;
 }
 
@@ -740,7 +730,7 @@ button.card-link.copied {
     text-decoration: underline;
 }
 
-/* Achievements */
+/* ─── Achievements ───────────────────────────────────────────────────────────── */
 .achievements-section {
     margin-top: 1.5rem;
 }
@@ -793,7 +783,7 @@ button.card-link.copied {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--accent-color);
+    color: var(--bamboo-green);
     margin-bottom: 0.15rem;
 }
 
@@ -816,7 +806,7 @@ button.card-link.copied {
     font-size: 0.85rem;
 }
 
-/* Research Interest Tags */
+/* ─── Research interest tags ─────────────────────────────────────────────────── */
 .interest-tags {
     display: flex;
     flex-wrap: wrap;
@@ -849,7 +839,7 @@ button.card-link.copied {
     font-weight: 500;
 }
 
-/* Insights view (students.html?view=insights) */
+/* ─── Insights view (students.html?view=insights) ────────────────────────────── */
 .insights-view {
     display: block;
     max-width: 820px;
@@ -922,6 +912,11 @@ button.card-link.copied {
     cursor: pointer;
 }
 
+.ranked-item:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 1px;
+}
+
 .ranked-header {
     display: flex;
     justify-content: space-between;
@@ -948,10 +943,10 @@ button.card-link.copied {
 .ranked-bar {
     height: 100%;
     border-radius: 999px;
-    background: var(--primary-color);
+    background: var(--bamboo-green);
 }
 
-/* Students/Alumni row list (compact, unlike the faculty cards — there can be many students) */
+/* ─── Students/Alumni row list ───────────────────────────────────────────────── */
 .roster {
     display: flex;
     flex-direction: column;
@@ -980,10 +975,6 @@ button.card-link.copied {
     object-fit: cover;
 }
 
-/* Pinned to column 2 explicitly (only relevant when .entry-with-portrait):
-   if the portrait <img> fails to load, its onerror handler removes it from
-   the DOM, and without this the lone remaining grid child would fall back
-   into column 1 (48px) and every word would wrap onto its own line. */
 .entry-with-portrait .entry-content {
     grid-column: 2;
 }
@@ -1046,7 +1037,42 @@ button.card-link.copied {
     margin-top: 0.15rem;
 }
 
-/* Active Interest Filter Banner */
+/* Student directory details */
+.entry-dissertation {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--hover-bg);
+    padding: 0.4rem 0.65rem;
+    border-left: 3px solid var(--bamboo-green);
+    border-radius: 0 6px 6px 0;
+    line-height: 1.4;
+}
+
+.dissertation-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.entry-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    background: var(--hover-bg);
+    transition: background-color 0.15s ease;
+}
+
+.entry-location:hover {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+}
+
+/* ─── Active interest/topic filter banner ────────────────────────────────────── */
 .active-filter-banner {
     display: flex;
     align-items: center;
@@ -1076,7 +1102,7 @@ button.card-link.copied {
     color: var(--text-primary);
 }
 
-/* Responsive */
+/* ─── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
     h1 {
         font-size: 2.5rem;
@@ -1096,7 +1122,7 @@ button.card-link.copied {
     }
 }
 
-/* Submission form (submit.html) */
+/* ─── Submission form (submit.html) ──────────────────────────────────────────── */
 .home-link {
     color: inherit;
     text-decoration: none;
@@ -1121,7 +1147,7 @@ button.card-link.copied {
 }
 
 .required-group {
-    border-color: var(--primary-color);
+    border-color: var(--bamboo-green);
 }
 
 .form-section {
@@ -1152,6 +1178,13 @@ button.card-link.copied {
     color: var(--text-primary);
     font-family: var(--font-body);
     font-size: 1rem;
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 1px;
 }
 
 .form-section textarea {
@@ -1212,7 +1245,7 @@ button.card-link.copied {
 }
 
 .form-help.notice {
-    color: var(--primary-color);
+    color: var(--bamboo-green);
     font-weight: 600;
 }
 
@@ -1239,9 +1272,9 @@ button.card-link.copied {
 
 .submit-btn {
     padding: 0.7rem 1.4rem;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--bamboo-green);
     border-radius: 8px;
-    background: var(--primary-color);
+    background: var(--bamboo-green);
     color: var(--bg-color);
     font-family: var(--font-body);
     font-weight: 600;
@@ -1254,13 +1287,18 @@ button.card-link.copied {
     opacity: 0.85;
 }
 
+.submit-btn:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
 .submit-hint {
     color: var(--text-secondary);
     font-size: 0.85rem;
     max-width: 62ch;
 }
 
-/* Last Modified / Updated Tag Styling */
+/* ─── Last Modified / Updated tag ────────────────────────────────────────────── */
 .entry-updated {
     display: inline-flex;
     align-items: center;
@@ -1284,13 +1322,12 @@ button.card-link.copied {
 }
 
 .icon-link.edit-link:hover {
-    color: var(--primary-color);
+    color: var(--bamboo-green);
     opacity: 1;
     transform: scale(1.18);
 }
 
-/* Nerdy CS Style UI & Terminal Easter Eggs */
-
+/* ─── Terminal command output ─────────────────────────────────────────────────── */
 .command-output {
     display: block;
     margin-top: 0.65rem;
@@ -1298,7 +1335,7 @@ button.card-link.copied {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     background: var(--tag-bg);
-    color: var(--primary-color);
+    color: var(--bamboo-green);
     font-family: var(--font-mono);
     font-size: 0.82rem;
     line-height: 1.4;
@@ -1309,20 +1346,19 @@ button.card-link.copied {
     display: none;
 }
 
-
+/* ─── Keyboard navigation selection highlight ────────────────────────────────── */
 .card.card-keyboard-selected,
 .entry.entry-keyboard-selected {
-    outline: 2px solid var(--primary-color);
+    outline: 2px solid var(--bamboo-green);
     outline-offset: 2px;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(54, 197, 240, 0.25);
+    border-color: var(--bamboo-green);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--bamboo-green) 25%, transparent);
 }
 
-/* Optional CRT Retro Terminal Theme — toggled with `theme crt` */
+/* ─── CRT retro terminal theme (toggled via `theme crt` command) ─────────────── */
 .crt-mode {
     --bg-color: #07100b;
     --card-bg: #0b1710;
-    --text-color: #b8ffd0;
     --text-primary: #b8ffd0;
     --text-secondary: #83d99f;
     --text-muted: #57966b;
@@ -1330,10 +1366,9 @@ button.card-link.copied {
     --hover-bg: #102719;
     --tag-bg: #102319;
     --tag-text: #8beaab;
-    --primary-color: #55d68b;
-    --primary-dark: #2e9e64;
-    --primary-light: #102719;
-    --accent-color: #55d68b;
+    --bamboo-green: #55d68b;
+    --bamboo-green-hover: #2e9e64;
+    --accent: #55d68b;
 }
 
 .crt-mode body {
