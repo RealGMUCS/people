@@ -378,7 +378,6 @@ a.award-person:hover { text-decoration: underline; }
 
 .insights-section { margin-bottom: 2.25rem; }
 .insights-heading { font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.25rem; }
-.insights-tags { padding-top: 0; }
 
 /* ─── Submit form ─────────────────────────────────────────────────────────── */
 .home-link { color: inherit; text-decoration: none; }

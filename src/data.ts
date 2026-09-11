@@ -258,7 +258,7 @@ function normalizeUrl(url) {
 
 function parseInterests(raw) {
     if (!raw || raw.trim().toLowerCase() === 'null') return [];
-    return raw.split(',').map(s => s.trim().toUpperCase()).filter(Boolean);
+    return raw.split(',').map(s => s.trim()).filter(Boolean);
 }
 
 // Semicolon-separated free-text list (e.g. Honors & Awards, where a single entry
