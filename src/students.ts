@@ -1,8 +1,7 @@
 // @ts-nocheck
 import { loadFaculty, loadStudents } from './data';
-import { esc, safeUrl, profileIcons, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
+import { esc, safeUrl, loadSearchKit, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
 import './style.css';
-import { initOrUpdateMap } from './student-map';
 import { isAcademiaJob, isGovLabJob, isIndustryJob, isGmuFacultyJob, getGmuAlumniFaculty, extractOrg, topCounts } from './student-insights';
 
 let allStudents = [];
@@ -188,21 +187,10 @@ function updateQueryPlan(matches, mode = currentView) {
     ].filter(Boolean).join('  ');
 }
 
-const runCommand = createSharedCommandHandler({
-    getSearch: () => search,
-    resetDirectory,
-    onUpdate: () => render(),
-    onRandom: pickRandomStudent,
-    getQueryPlan: () => queryPlan,
-    getStats: () => `${allStudents.length} graduate students and alumni`,
-    facts: [
-        'GMU CS Alumni work at top tech companies, research labs, and academic institutions worldwide.',
-        'GMU CS graduate students publish at top-tier conferences like SIGCOMM, S&P, PLDI, ICSE, and NeurIPS.',
-        'Over 40+ alumni hold tenure-line or research faculty positions across global universities.'
-    ]
-});
+let runCommand;
 
 async function init() {
+    await loadSearchKit();
     const facultyData = await loadFaculty();
     allFaculty = facultyData.faculty;
     const studentData = await loadStudents(facultyData.facultyByName);
@@ -212,6 +200,20 @@ async function init() {
     // Assign a random index to each student once per session load
     const randomIndices = sample(Array.from({ length: allStudents.length }, (_, i) => i), allStudents.length);
     allStudents.forEach((s, idx) => { s.randomIndex = randomIndices[idx]; });
+
+    runCommand = createSharedCommandHandler({
+        getSearch: () => search,
+        resetDirectory,
+        onUpdate: () => render(),
+        onRandom: pickRandomStudent,
+        getQueryPlan: () => queryPlan,
+        getStats: () => `${allStudents.length} graduate students and alumni`,
+        facts: [
+            'GMU CS Alumni work at top tech companies, research labs, and academic institutions worldwide.',
+            'GMU CS graduate students publish at top-tier conferences like SIGCOMM, S&P, PLDI, ICSE, and NeurIPS.',
+            'Over 40+ alumni hold tenure-line or research faculty positions across global universities.'
+        ]
+    });
 
     setupSearchHelp(SEARCH_HELP_ENTRIES);
     search = createSearchController({
@@ -487,7 +489,6 @@ function render() {
     if (insightsView) {
         grid.className = 'insights-view';
         grid.innerHTML = renderInsights(filtered);
-        setTimeout(() => initOrUpdateMap(filtered), 50);
         if (filtered.length === allStudents.length) {
             countEl.textContent = `Insights across ${allStudents.length} tracked students/alumni`;
         } else {
@@ -532,7 +533,6 @@ function renderStudentRow(s) {
     const fullName = `${s.firstName} ${s.lastName}`.trim();
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
     const picture = (s.picture && safeUrl(s.picture)) || defaultPortrait;
-    const icons = profileIcons(s, fullName, 'students');
 
     const metaParts = [];
     if (s.advisor) {
@@ -578,7 +578,6 @@ function renderStudentRow(s) {
         <div class="entry-name-row">
           <span class="entry-name">${esc(fullName)}</span>
           ${locationBadge}
-          ${icons ? `<span class="entry-icons">${icons}</span>` : ''}
           <time class="entry-updated" datetime="${esc(s.lastModified || '2026-09-04')}" title="Record last modified ${esc(s.lastModified || '2026-09-04')}">Updated ${esc(s.lastModified || '2026-09-04')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
@@ -639,16 +638,9 @@ function renderInsights(students = allStudents) {
     const maxLoc = locationCounts[0]?.count || 1;
 
     return `
-    <p class="insights-caption">Auto-computed from the tracked roster — interactive map, geographic hubs, employer breakdown, and faculty metrics.</p>
+    <p class="insights-caption">Auto-computed from the tracked roster — geographic hubs, employer breakdown, and faculty metrics.</p>
     <div class="stat-tiles">
       ${tiles.map(t => `<div class="stat-tile"><div class="stat-tile-value">${esc(t.value)}</div><div class="stat-tile-label">${esc(t.label)}</div></div>`).join('')}
-    </div>
-
-    <!-- Interactive Alumni Map -->
-    <div class="insights-section alumni-map-container">
-      <h3 class="insights-heading">🗺️ Interactive Alumni Map</h3>
-      <p class="insights-caption">Geographic placement of GMU CS alumni and students; click any marker to view alumni or filter by location.</p>
-      <div id="alumni-map" class="alumni-map"></div>
     </div>
 
     ${gmuAlumniFacultyList.length ? `

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty } from './data';
-import { esc, safeUrl, profileIcons, detailRow, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
+import { esc, safeUrl, detailRow, renderAchievementGroups, setupAchievementsToggle, loadSearchKit, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
 import './style.css';
 
 let allFaculty = [];
@@ -123,26 +123,29 @@ function updateQueryPlan(matches) {
     ].filter(Boolean).join('  ');
 }
 
-const runCommand = createSharedCommandHandler({
-    getSearch: () => search,
-    resetDirectory,
-    onUpdate: () => render(),
-    onRandom: pickRandomFaculty,
-    getQueryPlan: () => queryPlan,
-    getStats: () => `${allFaculty.length} faculty across ${awardCategories.length} award categories`,
-    facts: [
-        'GMU CS Faculty hold over 30+ NSF CAREER & Young Investigator Awards.',
-        'GMU CS ranks among top US universities in systems, SE, security, and AI research.',
-        'CS at Mason was founded as part of the Volgenau School of Engineering and is now in the College of Computing and Engineering.',
-        'Faculty research areas span Software Engineering, Security & Privacy, Robotics, Systems & Networking, Machine Learning, and Theory.'
-    ]
-});
+let runCommand;
 
 async function init() {
+    await loadSearchKit();
     const data = await loadFaculty();
     allFaculty = data.faculty;
     interestIndex = data.interestIndex;
     awardCategories = data.awardCategories;
+
+    runCommand = createSharedCommandHandler({
+        getSearch: () => search,
+        resetDirectory,
+        onUpdate: () => render(),
+        onRandom: pickRandomFaculty,
+        getQueryPlan: () => queryPlan,
+        getStats: () => `${allFaculty.length} faculty across ${awardCategories.length} award categories`,
+        facts: [
+            'GMU CS Faculty hold over 30+ NSF CAREER & Young Investigator Awards.',
+            'GMU CS ranks among top US universities in systems, SE, security, and AI research.',
+            'CS at Mason was founded as part of the Volgenau School of Engineering and is now in the College of Computing and Engineering.',
+            'Faculty research areas span Software Engineering, Security & Privacy, Robotics, Systems & Networking, Machine Learning, and Theory.'
+        ]
+    });
 
     setupAchievementsToggle();
     setupSearchHelp(SEARCH_HELP_ENTRIES);
@@ -435,7 +438,7 @@ function renderCard(f) {
     // Tags: track type + research interest topics
     const trackTag = f.type ? `<span class="tag tag-track">${esc(f.type)}</span>` : '';
     const interestTags = f.interests
-        .map(i => `<span class="tag tag-topic" data-interest="${esc(i)}">${esc(i)}</span>`)
+        .map(i => `<span class="tag tag-topic">${esc(i)}</span>`)
         .join('');
 
     // Collapsible honors & awards (people-specific)
@@ -451,7 +454,6 @@ function renderCard(f) {
 
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
     const picture = (f.picture && safeUrl(f.picture)) || defaultPortrait;
-    const icons = profileIcons(f, fullName, 'faculty');
 
     return `
     <div class="entry entry-with-portrait">
@@ -459,7 +461,6 @@ function renderCard(f) {
       <div class="entry-content">
         <div class="entry-name-row">
           <span class="entry-name">${esc(fullName)}</span>
-          ${icons ? `<span class="entry-icons">${icons}</span>` : ''}
           <time class="entry-updated" datetime="${esc(f.lastModified || '')}" title="Record last modified ${esc(f.lastModified || '')}">Updated ${esc(f.lastModified || '')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
@@ -471,20 +472,6 @@ function renderCard(f) {
     </div>
   `;
 }
-
-// Click a research interest tag to filter the directory
-document.addEventListener('click', e => {
-    const tag = e.target.closest('.tag-topic[data-interest]');
-    if (!tag) return;
-    document.getElementById('active-filter').style.display = 'flex';
-    resetFilterDropdowns();
-    document.getElementById('main-search').value = '';
-    search.resetScope();
-    currentView = 'directory';
-    activeInterest = tag.dataset.interest;
-    document.getElementById('active-filter-text').textContent = `Research: ${activeInterest}`;
-    render();
-});
 
 // Click an award recipient (in the #awards view) to open their card
 document.addEventListener('click', e => {
