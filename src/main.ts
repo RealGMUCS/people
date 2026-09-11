@@ -412,9 +412,9 @@ function renderAwardItem(a) {
 function renderCard(f) {
     const fullName = `${f.firstName} ${f.lastName}`;
 
-    // Position meta line: "Associate Professor · Tenured · ENGR 4430"
+    // Position meta line: "Associate Professor · ENGR 4430"
     const metaParts = [
-        (f.category && f.type) ? esc(`${f.category} · ${f.type}`) : (f.category ? esc(f.category) : null),
+        f.category ? esc(f.category) : null,
         f.office ? esc(f.office) : null,
     ].filter(Boolean);
     if (f.role) metaParts.unshift(esc(f.role));
