@@ -564,7 +564,7 @@ function renderStudentRow(s) {
         : '';
 
     const topicTags = s.topics.map(t =>
-        `<span class="tag tag-topic" data-topic="${esc(t)}">${esc(t)}</span>`
+        `<span class="tag tag-topic">${esc(t)}</span>`
     ).join('');
 
     const locationBadge = s.location
@@ -793,9 +793,10 @@ document.addEventListener('click', e => {
     render();
 });
 
-// Click a topic tag (in the roster or Insights) to filter
+// Click a topic in the Insights "Popular Research Topics" ranked list to filter.
+// Per-row topic tags on the roster are static, matching faculty and vietprofs.
 document.addEventListener('click', e => {
-    const tag = e.target.closest('[data-topic]');
+    const tag = e.target.closest('.ranked-item[data-topic]');
     if (!tag) return;
     currentView = 'directory';
     activeTopic = tag.dataset.topic;
