@@ -92,10 +92,10 @@ function pickRandomFaculty() {
         document.getElementById('main-search').value = `name: ${person.firstName} ${person.lastName}`;
         hideCommandOutput();
         render();
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.entry');
         if (cards.length > 0) {
             keyboardSelectedIndex = 0;
-            cards[0].classList.add('card-keyboard-selected');
+            cards[0].classList.add('entry-keyboard-selected');
             cards[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         }
     }
@@ -167,7 +167,7 @@ async function init() {
         document.getElementById('main-search').focus();
     });
     setupSharedKeyboardShortcuts({
-        getItemElements: () => [...document.querySelectorAll('.card')],
+        getItemElements: () => [...document.querySelectorAll('.entry')],
         getSelectedIndex: () => keyboardSelectedIndex,
         setSelectedIndex: idx => { keyboardSelectedIndex = idx; },
         onRandom: () => runCommand('/dev/random'),
@@ -382,7 +382,7 @@ function render() {
         return;
     }
 
-    grid.className = 'results-grid';
+    grid.className = 'roster';
     const filtered = getFiltered();
     countEl.textContent = `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
@@ -408,28 +408,41 @@ function renderAwardItem(a) {
 
 function renderCard(f) {
     const fullName = `${f.firstName} ${f.lastName}`;
-    const interestTags = f.interests.map(i =>
-        `<span class="interest-tag" data-interest="${esc(i)}">${esc(i)}</span>`
-    ).join('');
 
-    const details = [];
-    if (f.category && f.type) details.push(detailRow('Position', esc(`${f.category} · ${f.type}`)));
-    if (f.office) details.push(detailRow('Office', esc(f.office)));
-    if (f.email) details.push(detailRow('Email', esc(f.email)));
-    if (f.phdFrom) details.push(detailRow('PhD', esc(f.phdFrom)));
-    if (f.postdocFrom) details.push(detailRow('Postdoc', esc(f.postdocFrom)));
-    if (f.yearStarted) details.push(detailRow('At GMU since', esc(f.yearStarted)));
-    if (f.advisees && f.advisees.length > 0) {
-        const count = f.advisees.length;
-        const label = count === 1 ? '1 student' : `${count} students`;
-        const url = `students.html?q=advisor:${encodeURIComponent(fullName)}`;
-        details.push(detailRow('Advisees', `<a class="advisees-link" href="${esc(url)}">${esc(label)} ↗</a>`));
-    }
+    // Position meta line: "Associate Professor · Tenured · ENGR 4430"
+    const metaParts = [
+        (f.category && f.type) ? esc(`${f.category} · ${f.type}`) : (f.category ? esc(f.category) : null),
+        f.office ? esc(f.office) : null,
+    ].filter(Boolean);
+    if (f.role) metaParts.unshift(esc(f.role));
 
+    // Education details line: "PhD: MIT; Postdoc: CMU; At GMU since 2018"
+    const detailParts = [
+        f.phdFrom ? `PhD: ${esc(f.phdFrom)}` : null,
+        f.postdocFrom ? `Postdoc: ${esc(f.postdocFrom)}` : null,
+        f.yearStarted ? `At GMU since ${esc(String(f.yearStarted))}` : null,
+    ].filter(Boolean);
+
+    // Contact line: email + advisees count
+    const emailHtml = f.email
+        ? `<a class="faculty-email" href="mailto:${esc(f.email)}">${esc(f.email)}</a>`
+        : '';
+    const adviseesHtml = f.advisees?.length > 0
+        ? `<a class="advisees-link" href="students.html?q=advisor:${encodeURIComponent(fullName)}">${f.advisees.length} student${f.advisees.length === 1 ? '' : 's'} ↗</a>`
+        : '';
+    const contactParts = [emailHtml, adviseesHtml].filter(Boolean);
+
+    // Tags: track type + research interest topics
+    const trackTag = f.type ? `<span class="tag tag-track">${esc(f.type)}</span>` : '';
+    const interestTags = f.interests
+        .map(i => `<span class="tag tag-topic" data-interest="${esc(i)}">${esc(i)}</span>`)
+        .join('');
+
+    // Collapsible honors & awards (people-specific)
     const achievementsList = f.awards.length
         ? `<div class="achievements-section collapsed">
              <div class="achievements-header" onclick="toggleAchievements(this)">
-               <h3 class="achievements-heading"><span class="honors-label">🏆 Honors & Awards:</span></h3>
+               <h3 class="achievements-heading"><span class="honors-label">🏆 Honors &amp; Awards</span></h3>
                <span class="achievements-toggle">▶</span>
              </div>
              <div class="achievements-list">${renderAchievementGroups(f.awards)}</div>
@@ -439,31 +452,29 @@ function renderCard(f) {
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
     const picture = (f.picture && safeUrl(f.picture)) || defaultPortrait;
     const icons = profileIcons(f, fullName, 'faculty');
+
     return `
-    <div class="card">
-      <div class="card-header">
-        <img class="faculty-photo" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.src='${defaultPortrait}'">
-        <div class="card-header-text">
-          <div class="card-name-row">
-            <h2>${esc(fullName)}</h2>
-            ${icons ? `<span class="card-icons">${icons}</span>` : ''}
-            <time class="entry-updated" datetime="${esc(f.lastModified || '2026-09-04')}" title="Record last modified ${esc(f.lastModified || '2026-09-04')}">Updated ${esc(f.lastModified || '2026-09-04')}</time>
-          </div>
-          ${f.role ? `<div class="card-subtitle"><strong>${esc(f.role)}</strong></div>` : ''}
+    <div class="entry entry-with-portrait">
+      <img class="entry-portrait" src="${picture}" alt="" width="64" height="64" loading="lazy" onerror="this.src='${defaultPortrait}'">
+      <div class="entry-content">
+        <div class="entry-name-row">
+          <span class="entry-name">${esc(fullName)}</span>
+          ${icons ? `<span class="entry-icons">${icons}</span>` : ''}
+          <time class="entry-updated" datetime="${esc(f.lastModified || '')}" title="Record last modified ${esc(f.lastModified || '')}">Updated ${esc(f.lastModified || '')}</time>
         </div>
-      </div>
-      <div class="card-content">
-        <div class="faculty-details">${details.join('')}</div>
-        ${interestTags ? `<div class="interest-tags">${interestTags}</div>` : ''}
+        ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
+        ${detailParts.length ? `<div class="entry-details">${detailParts.join('; ')}</div>` : ''}
+        ${contactParts.length ? `<div class="entry-details">${contactParts.join(' · ')}</div>` : ''}
         ${achievementsList}
+        ${(trackTag || interestTags) ? `<div class="tags">${trackTag}${interestTags}</div>` : ''}
       </div>
     </div>
   `;
 }
 
-// Click an interest tag to filter
+// Click a research interest tag to filter the directory
 document.addEventListener('click', e => {
-    const tag = e.target.closest('.interest-tag');
+    const tag = e.target.closest('.tag-topic[data-interest]');
     if (!tag) return;
     document.getElementById('active-filter').style.display = 'flex';
     resetFilterDropdowns();
