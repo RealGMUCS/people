@@ -16,10 +16,6 @@ export function safeUrl(url) {
     return /^https?:\/\//i.test(url) ? esc(url) : null;
 }
 
-export function detailRow(label, value) {
-    return `<div class="faculty-detail"><span class="detail-label">${label}</span><span class="detail-value">${value}</span></div>`;
-}
-
 // Group a person's awards by category (newest-first order preserved) so each
 // card shows its awards under headings like "NSF CAREER Awards".
 export function renderAchievementGroups(awards) {
