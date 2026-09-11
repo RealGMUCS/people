@@ -564,7 +564,7 @@ function renderStudentRow(s) {
         : '';
 
     const topicTags = s.topics.map(t =>
-        `<span class="interest-tag" data-topic="${esc(t)}">${esc(t)}</span>`
+        `<span class="tag tag-topic" data-topic="${esc(t)}">${esc(t)}</span>`
     ).join('');
 
     const locationBadge = s.location
@@ -584,7 +584,7 @@ function renderStudentRow(s) {
         ${dissertationHtml}
         ${detailParts.length ? `<div class="entry-details">${detailParts.join(' · ')}</div>` : ''}
         ${honorsHtml}
-        ${topicTags ? `<div class="entry-tags">${topicTags}</div>` : ''}
+        ${topicTags ? `<div class="tags">${topicTags}</div>` : ''}
       </div>
     </div>
   `;
@@ -636,6 +636,19 @@ function renderInsights(students = allStudents) {
 
     const maxAdvisor = advisorCounts[0]?.count || 1;
     const maxLoc = locationCounts[0]?.count || 1;
+    const maxAcadOrg = acadOrgs[0]?.count || 1;
+    const maxIndOrg = indOrgs[0]?.count || 1;
+    const maxGovOrg = govOrgs[0]?.count || 1;
+    const maxTopic = topicCounts[0]?.count || 1;
+
+    const orgBar = (org, max) => `
+        <button type="button" class="ranked-item" data-org="${esc(org.value)}" title="Search ${esc(org.value)}">
+          <div class="ranked-header">
+            <span class="ranked-name">${esc(org.value)}</span>
+            <span class="ranked-count">${org.count}</span>
+          </div>
+          <div class="ranked-track"><div class="ranked-bar" style="width: ${Math.round((org.count / max) * 100)}%;"></div></div>
+        </button>`;
 
     return `
     <p class="insights-caption">Auto-computed from the tracked roster — geographic hubs, employer breakdown, and faculty metrics.</p>
@@ -647,16 +660,19 @@ function renderInsights(students = allStudents) {
     <div class="insights-section">
       <h3 class="insights-heading">🏛️ GMU CS Alumni on GMU Faculty (${gmuAlumniFacultyList.length})</h3>
       <p class="insights-caption">GMU CS graduates who became faculty members at George Mason University; click a name to view their faculty card.</p>
-      <div class="interest-tags insights-tags">
+      <div class="ranked-list">
         ${gmuAlumniFacultyList.map(item => `
-          <a class="interest-tag" href="index.html?q=name: ${encodeURIComponent(item.name)}" title="View ${esc(item.name)} faculty card">
-            ${esc(item.name)} <span class="tag-count">${esc(item.role)}</span>
+          <a class="ranked-item" href="index.html?q=name: ${encodeURIComponent(item.name)}" title="View ${esc(item.name)} faculty card">
+            <div class="ranked-header">
+              <span class="ranked-name">${esc(item.name)}</span>
+              <span class="ranked-count">${esc(item.role)}</span>
+            </div>
           </a>
         `).join('')}
       </div>
     </div>` : ''}
 
-    <div class="insights-grid-2col">
+    <div class="insights-grid">
       ${acadOrgs.length || indOrgs.length ? `
       <div class="insights-section">
         <h3 class="insights-heading">🏢 Top Employers & Institutions</h3>
@@ -664,32 +680,20 @@ function renderInsights(students = allStudents) {
 
         ${acadOrgs.length ? `
         <h4 style="margin: 0.8rem 0 0.4rem 0; font-size: 0.95rem; color: var(--text-primary);">Academic & Research Institutions</h4>
-        <div class="interest-tags insights-tags" style="margin-bottom: 1rem;">
-          ${acadOrgs.map(({ value, count }) => `
-            <button type="button" class="interest-tag ranked-item" data-org="${esc(value)}" style="cursor: pointer; border: 1px solid var(--border-color);">
-              ${esc(value)} <span class="tag-count">${count}</span>
-            </button>
-          `).join('')}
+        <div class="ranked-list" style="margin-bottom: 1rem;">
+          ${acadOrgs.map(org => orgBar(org, maxAcadOrg)).join('')}
         </div>` : ''}
 
         ${indOrgs.length ? `
         <h4 style="margin: 0.8rem 0 0.4rem 0; font-size: 0.95rem; color: var(--text-primary);">Industry Tech Leaders</h4>
-        <div class="interest-tags insights-tags" style="margin-bottom: 1rem;">
-          ${indOrgs.map(({ value, count }) => `
-            <button type="button" class="interest-tag ranked-item" data-org="${esc(value)}" style="cursor: pointer; border: 1px solid var(--border-color);">
-              ${esc(value)} <span class="tag-count">${count}</span>
-            </button>
-          `).join('')}
+        <div class="ranked-list" style="margin-bottom: 1rem;">
+          ${indOrgs.map(org => orgBar(org, maxIndOrg)).join('')}
         </div>` : ''}
 
         ${govOrgs.length ? `
         <h4 style="margin: 0.8rem 0 0.4rem 0; font-size: 0.95rem; color: var(--text-primary);">Government & National Labs</h4>
-        <div class="interest-tags insights-tags">
-          ${govOrgs.map(({ value, count }) => `
-            <button type="button" class="interest-tag ranked-item" data-org="${esc(value)}" style="cursor: pointer; border: 1px solid var(--border-color);">
-              ${esc(value)} <span class="tag-count">${count}</span>
-            </button>
-          `).join('')}
+        <div class="ranked-list">
+          ${govOrgs.map(org => orgBar(org, maxGovOrg)).join('')}
         </div>` : ''}
       </div>` : ''}
 
@@ -730,8 +734,15 @@ function renderInsights(students = allStudents) {
     <div class="insights-section">
       <h3 class="insights-heading">🏷️ Popular Research Topics</h3>
       <p class="insights-caption">Click a topic to see who works on it.</p>
-      <div class="interest-tags insights-tags">
-        ${topicCounts.map(({ value, count }) => `<span class="interest-tag" data-topic="${esc(value)}">${esc(value)} <span class="tag-count">${count}</span></span>`).join('')}
+      <div class="ranked-list">
+        ${topicCounts.map(({ value, count }) => `
+          <button type="button" class="ranked-item" data-topic="${esc(value)}" title="Filter by ${esc(value)}">
+            <div class="ranked-header">
+              <span class="ranked-name">${esc(value)}</span>
+              <span class="ranked-count">${count}</span>
+            </div>
+            <div class="ranked-track"><div class="ranked-bar" style="width: ${Math.round((count / maxTopic) * 100)}%;"></div></div>
+          </button>`).join('')}
       </div>
     </div>` : ''}
   `;
@@ -784,8 +795,8 @@ document.addEventListener('click', e => {
 
 // Click a topic tag (in the roster or Insights) to filter
 document.addEventListener('click', e => {
-    const tag = e.target.closest('.interest-tag');
-    if (!tag || !tag.dataset.topic) return;
+    const tag = e.target.closest('[data-topic]');
+    if (!tag) return;
     currentView = 'directory';
     activeTopic = tag.dataset.topic;
     document.getElementById('active-filter').style.display = 'flex';
