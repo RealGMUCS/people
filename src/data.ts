@@ -49,6 +49,7 @@ export async function loadFaculty() {
             postdocFrom: clean(row['Postdoc from']),
             lastModified: clean(row['Last Modified']),
             lastVerified: clean(row['Last Verified']),
+            verified: clean(row['Verified']) === 'Yes',
             awards,
             // searchable text only (cards render from `awards`); include the
             // category so e.g. "NSF CAREER" matches
@@ -138,6 +139,7 @@ export async function loadStudents(facultyByName) {
             scholar: normalizeUrl(clean(row['Google Scholar'])),
             lastModified: clean(row['Last Modified']),
             lastVerified: clean(row['Last Verified']),
+            verified: clean(row['Verified']) === 'Yes',
         };
 
         topics.forEach(topic => {

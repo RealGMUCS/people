@@ -29,6 +29,14 @@ body {
     min-height: 100vh;
 }
 
+/* ─── Verified badge (this site's own concept — vietprofs only has the inverse
+   .tag-unconfirmed) — marks a record confirmed via direct correspondence with
+   the advisor/student rather than solely scraped from a public source. ── */
+.tag-verified {
+    border-color: #2f855a;
+    color: #276749;
+}
+
 /* Wider container */
 #app {
     max-width: 1000px;

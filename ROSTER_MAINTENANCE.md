@@ -37,11 +37,19 @@ Every entry in `public/faculty.json` and `public/students.json` MUST contain the
 | :--- | :--- | :--- |
 | `Last Modified` | `YYYY-MM-DD` | Timestamp of the most recent change to any field in the record. |
 | `Last Verified` | `YYYY-MM-DD` | Timestamp when the record was last verified against an authoritative live source. |
+| `Verified` | `Yes` or blank | See below. Distinct from `Last Verified` — this marks *how* the record was confirmed, not *when*. |
 
 ### Verification Rules
 * Whenever a maintainer or automated process modifies an entry (e.g., job change, location update, degree completion), set `Last Modified` to the current date (`YYYY-MM-DD`).
 * Whenever a record is audited against live sources and confirmed accurate (even if no data changes), update `Last Verified` to the current date (`YYYY-MM-DD`).
 * Never leave `Last Modified` or `Last Verified` blank.
+
+### `Verified` — direct-confirmation marker (mirrors vietprofs' `confirmed`/`directFields` concept)
+Set `Verified` to `Yes` when a record (or the specific edit just made) was confirmed via **direct correspondence** with the subject or their advisor/department — e.g. a faculty email reply, an attached CV/screenshot, a explicit written correction — rather than solely inferred from automated web scraping of public pages. Leave it blank for records whose only support is a scraped public source (GMU directory page, personal website, Google Scholar, etc.) with no direct human confirmation.
+
+* `Verified: Yes` records render a green **✓ Verified** badge on the card (see `.tag-verified` in `src/style.css`), the inverse of vietprofs' amber **Unconfirmed** badge (`.tag-unconfirmed`) — vietprofs defaults to confirmed-unless-flagged, this roster defaults to unflagged-unless-directly-confirmed, since most of this roster originates from scraping rather than institutional submission.
+* Only `Yes` or blank are valid values (validated in `scripts/validate-data.ts`, same pattern as `awards.json`'s `Former` column).
+* When in doubt whether a source counts as "direct," prefer leaving it blank — a false `Verified` badge is worse than a missing one.
 
 ---
 
