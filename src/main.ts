@@ -420,10 +420,14 @@ function renderCard(f) {
     ].filter(Boolean);
     if (f.role) metaParts.unshift(esc(f.role));
 
-    // Education details line: "PhD: MIT; Postdoc: CMU; At GMU since 2018"
+    // Education details line, vietprofs' Postdoc/PhD/MS/Undergrad order:
+    // "Postdoc: CMU, 2016; PhD: MIT, 2014; MS: Cornell, 2010; Undergrad: UCLA, 2008; At GMU since 2018"
+    const eduPart = (label, from, year) => from ? `${label}: ${[esc(from), year ? esc(String(year)) : null].filter(Boolean).join(', ')}` : null;
     const detailParts = [
-        f.phdFrom ? `PhD: ${esc(f.phdFrom)}` : null,
-        f.postdocFrom ? `Postdoc: ${esc(f.postdocFrom)}` : null,
+        eduPart('Postdoc', f.postdocFrom, f.postdocYear),
+        eduPart('PhD', f.phdFrom, f.phdYear),
+        eduPart('MS', f.msFrom, f.msYear),
+        eduPart('Undergrad', f.undergradFrom, f.undergradYear),
         f.yearStarted ? `At GMU since ${esc(String(f.yearStarted))}` : null,
     ].filter(Boolean);
 

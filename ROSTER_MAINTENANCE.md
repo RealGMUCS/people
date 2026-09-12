@@ -93,6 +93,7 @@ When verifying or updating entries, consult sources in the following priority or
 * `Tenure-Track/Teaching/Staff`: Primary track (`Tenure-Track`, `Teaching`, `Research`, `Staff`).
 * `Rank`: Academic rank (e.g., `Associate Professor`).
 * `Dept Role`: Administrative role, if any (e.g., `Department Chair`).
+* `Undergrad from` / `Undergrad Year`, `MS from` / `MS Year`, `PhD from` / `PhD Year`, `Postdoc from` / `Postdoc Year`: institution name and 4-digit graduation/completion year for each degree stage, when known (mirrors vietprofs' `undergradInstitution`/`undergradYear` etc.). Leave both blank together if a stage doesn't apply (e.g. no postdoc) or the year can't be confirmed — never guess a year.
 * `Last Modified`: `YYYY-MM-DD`
 * `Last Verified`: `YYYY-MM-DD`
 
