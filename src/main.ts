@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty } from './data';
-import { esc, safeUrl, renderAchievementGroups, setupAchievementsToggle, loadSearchKit, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
+import { esc, safeUrl, renderAchievementGroups, setupAchievementsToggle, loadSearchKit, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons, renderEmailBadge, activateEmailBadges } from './common';
 import './style.css';
 
 let allFaculty = [];
@@ -389,6 +389,7 @@ function render() {
     const filtered = getFiltered();
     countEl.textContent = `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
+    activateEmailBadges(grid);
     updateQueryPlan(filtered.length);
     updateUrl();
 }
@@ -426,10 +427,8 @@ function renderCard(f) {
         f.yearStarted ? `At GMU since ${esc(String(f.yearStarted))}` : null,
     ].filter(Boolean);
 
-    // Contact line: email + advisees count
-    const emailHtml = f.email
-        ? `<a class="faculty-email" href="mailto:${esc(f.email)}">${esc(f.email)}</a>`
-        : '';
+    // Contact line: email (rendered as an image, see renderEmailBadge) + advisees count
+    const emailHtml = renderEmailBadge(f.email);
     const adviseesHtml = f.advisees?.length > 0
         ? `<a class="advisees-link" href="students.html?q=advisor:${encodeURIComponent(fullName)}">${f.advisees.length} student${f.advisees.length === 1 ? '' : 's'} ↗</a>`
         : '';
@@ -457,13 +456,14 @@ function renderCard(f) {
 
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
     const picture = (f.picture && safeUrl(f.picture)) || defaultPortrait;
+    const profileIcons = renderProfileIcons(fullName, { website: f.website, scholar: f.scholar, linkedin: f.linkedin });
 
     return `
     <div class="entry entry-with-portrait">
       <img class="entry-portrait" src="${picture}" alt="" width="64" height="64" loading="lazy" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
-          <span class="entry-name">${esc(fullName)}</span>
+          <span class="entry-name">${esc(fullName)}</span>${profileIcons}
           <time class="entry-updated" datetime="${esc(f.lastModified || '')}" title="Record last modified ${esc(f.lastModified || '')}">Updated ${esc(f.lastModified || '')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}

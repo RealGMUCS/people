@@ -37,6 +37,18 @@ body {
     color: #276749;
 }
 
+/* Email shown as a canvas-drawn image (see common.ts activateEmailBadges) so a
+   plain "user@domain" string never appears in the served page source. */
+.email-badge {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.email-badge canvas {
+    pointer-events: none;
+}
+
 /* Wider container */
 #app {
     max-width: 1000px;

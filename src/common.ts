@@ -16,6 +16,77 @@ export function safeUrl(url) {
     return /^https?:\/\//i.test(url) ? esc(url) : null;
 }
 
+// Small external-link icons (profile/personal site/Scholar/LinkedIn), styled by
+// vietprofs' shared stylesheet (.profile-link/.personal-site-link/.scholar-link/
+// .linkedin-link already ship in profile.css — see index.html/students.html).
+const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
+const PERSONAL_SITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
+const LINKEDIN_ICON = '<path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48Z"/>';
+
+function entryIconLink(className, href, label, title, icon) {
+    const url = safeUrl(href);
+    if (!url) return '';
+    return ` <a class="${className}" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}" title="${esc(title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg></a>`;
+}
+
+// website/scholar/linkedin icon trio for a faculty or student entry's name row.
+export function renderProfileIcons(name, { website, scholar, linkedin }) {
+    return [
+        website && entryIconLink('personal-site-link', website, `${name} personal or lab website`, 'Personal or lab website', PERSONAL_SITE_ICON),
+        scholar && entryIconLink('scholar-link', scholar, `${name} on Google Scholar`, 'Google Scholar', SCHOLAR_ICON),
+        linkedin && entryIconLink('linkedin-link', linkedin, `${name} on LinkedIn`, 'LinkedIn', LINKEDIN_ICON),
+    ].filter(Boolean).join('');
+}
+
+// Email addresses are shown as a canvas-rendered image (drawn client-side from
+// obfuscated parts, never present as plain text in the served HTML/JS) to deter
+// naive scraping, while staying clickable for real visitors. The static markup
+// only carries a reversed-base64 blob split across two data attributes — never
+// the literal "user@domain" substring — so a scraper reading the page source
+// alone finds nothing that looks like an email address.
+function obfuscate(s) {
+    return btoa(unescape(encodeURIComponent(s))).split('').reverse().join('');
+}
+function deobfuscate(s) {
+    return decodeURIComponent(escape(atob(s.split('').reverse().join(''))));
+}
+
+export function renderEmailBadge(email) {
+    if (!email || !email.includes('@')) return '';
+    const [user, domain] = email.split('@');
+    return `<span class="email-badge" data-u="${obfuscate(user)}" data-d="${obfuscate(domain)}" role="button" tabindex="0" title="Click to email"></span>`;
+}
+
+// Call once after any render pass that may have inserted .email-badge spans.
+export function activateEmailBadges(root = document) {
+    root.querySelectorAll('.email-badge:not([data-ready])').forEach(badge => {
+        const address = `${deobfuscate(badge.dataset.u)}@${deobfuscate(badge.dataset.d)}`;
+        badge.dataset.ready = '1';
+
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const font = '12px ui-monospace, SFMono-Regular, Menlo, monospace';
+        ctx.font = font;
+        const dpr = window.devicePixelRatio || 1;
+        const width = Math.ceil(ctx.measureText(address).width) + 4;
+        const height = 16;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.scale(dpr, dpr);
+        ctx.font = font;
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = getComputedStyle(badge).color || '#333';
+        ctx.fillText(address, 2, height / 2 + 1);
+        badge.appendChild(canvas);
+
+        const go = () => { window.location.href = `mailto:${address}`; };
+        badge.addEventListener('click', go);
+        badge.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+}
+
 // Group a person's awards by category (newest-first order preserved) so each
 // card shows its awards under headings like "NSF CAREER Awards".
 export function renderAchievementGroups(awards) {

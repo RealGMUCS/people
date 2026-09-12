@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty, loadStudents } from './data';
-import { esc, safeUrl, loadSearchKit, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
+import { esc, safeUrl, loadSearchKit, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons } from './common';
 import './style.css';
 import { isAcademiaJob, isGovLabJob, isIndustryJob, isGmuFacultyJob, getGmuAlumniFaculty, extractOrg, topCounts } from './student-insights';
 
@@ -574,13 +574,14 @@ function renderStudentRow(s) {
     const locationBadge = s.location
         ? `<span class="entry-location" data-location="${esc(s.location)}" title="Estimated current location: ${esc(s.location)}">📍 ${esc(s.location)}</span>`
         : '';
+    const profileIcons = renderProfileIcons(fullName, { website: s.website, scholar: s.scholar, linkedin: s.linkedin });
 
     return `
     <div class="entry entry-with-portrait">
       <img class="entry-portrait" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
-          <span class="entry-name">${esc(fullName)}</span>
+          <span class="entry-name">${esc(fullName)}</span>${profileIcons}
           ${locationBadge}
           <time class="entry-updated" datetime="${esc(s.lastModified || '2026-09-04')}" title="Record last modified ${esc(s.lastModified || '2026-09-04')}">Updated ${esc(s.lastModified || '2026-09-04')}</time>
         </div>
