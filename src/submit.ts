@@ -29,6 +29,7 @@ function facultyToText(f) {
         ['Postdoc from', f.postdocFrom],
         ['Last Modified', today],
         ['Last Verified', today],
+        ['Verified', 'Yes'],
     ].map(([k, v]) => `${k}: ${v || ''}`).join('\n');
 }
 
@@ -54,6 +55,7 @@ function studentToText(s) {
         ['Google Scholar', s.scholar],
         ['Last Modified', today],
         ['Last Verified', today],
+        ['Verified', 'Yes'],
     ].map(([k, v]) => `${k}: ${v || ''}`).join('\n');
 }
 

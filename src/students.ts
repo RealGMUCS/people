@@ -563,6 +563,10 @@ function renderStudentRow(s) {
         ? `<div class="entry-honors"><span class="honors-label">🏆 Honors:</span> ${s.honors.map(esc).join(' · ')}</div>`
         : '';
 
+    const verifiedTag = s.verified
+        ? `<span class="tag tag-verified" title="Confirmed directly by the advisor or student, not just scraped from a public source">✓ Verified</span>`
+        : '';
+
     const topicTags = s.topics.map(t =>
         `<span class="tag tag-topic">${esc(t)}</span>`
     ).join('');
@@ -584,7 +588,7 @@ function renderStudentRow(s) {
         ${dissertationHtml}
         ${detailParts.length ? `<div class="entry-details">${detailParts.join(' · ')}</div>` : ''}
         ${honorsHtml}
-        ${topicTags ? `<div class="tags">${topicTags}</div>` : ''}
+        ${(verifiedTag || topicTags) ? `<div class="tags">${verifiedTag}${topicTags}</div>` : ''}
       </div>
     </div>
   `;

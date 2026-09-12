@@ -435,8 +435,11 @@ function renderCard(f) {
         : '';
     const contactParts = [emailHtml, adviseesHtml].filter(Boolean);
 
-    // Tags: track type + research interest topics
+    // Tags: track type + research interest topics + manual-verification badge
     const trackTag = f.type ? `<span class="tag tag-track">${esc(f.type)}</span>` : '';
+    const verifiedTag = f.verified
+        ? `<span class="tag tag-verified" title="Confirmed directly by this person or their department, not just scraped from a public source">✓ Verified</span>`
+        : '';
     const interestTags = f.interests
         .map(i => `<span class="tag tag-topic">${esc(i)}</span>`)
         .join('');
@@ -467,7 +470,7 @@ function renderCard(f) {
         ${detailParts.length ? `<div class="entry-details">${detailParts.join('; ')}</div>` : ''}
         ${contactParts.length ? `<div class="entry-details">${contactParts.join(' · ')}</div>` : ''}
         ${achievementsList}
-        ${(trackTag || interestTags) ? `<div class="tags">${trackTag}${interestTags}</div>` : ''}
+        ${(trackTag || verifiedTag || interestTags) ? `<div class="tags">${trackTag}${verifiedTag}${interestTags}</div>` : ''}
       </div>
     </div>
   `;
