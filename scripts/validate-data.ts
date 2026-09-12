@@ -14,8 +14,14 @@ const facultyFields = [
     'Research interests',
     'Office (building and room #)',
     'Year started at GMU',
+    'Undergrad from',
+    'Undergrad Year',
+    'MS from',
+    'MS Year',
     'PhD from',
+    'PhD Year',
     'Postdoc from',
+    'Postdoc Year',
     'Last Modified',
     'Last Verified',
     'Verified',
@@ -129,6 +135,10 @@ faculty.forEach((row, index) => {
     }
     if (type && !facultyTypes.has(type)) errors.push(`faculty.json:${line}: invalid faculty type "${type}"`);
     if (startYear && !/^\d{4}$/.test(startYear)) errors.push(`faculty.json:${line}: invalid start year "${startYear}"`);
+    for (const field of ['Undergrad Year', 'MS Year', 'PhD Year', 'Postdoc Year']) {
+        const year = value(row, field);
+        if (year && !/^\d{4}$/.test(year)) errors.push(`faculty.json:${line}: invalid ${field} "${year}"`);
+    }
     if (!validHttpUrl(picture)) errors.push(`faculty.json:${line}: invalid picture URL "${picture}"`);
     if (!validHttpUrl(website, true)) errors.push(`faculty.json:${line}: invalid website URL "${website}"`);
     if (!validHttpUrl(linkedin, true)) errors.push(`faculty.json:${line}: invalid linkedin URL "${linkedin}"`);

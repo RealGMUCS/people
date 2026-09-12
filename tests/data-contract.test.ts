@@ -5,7 +5,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const schemas = {
-    faculty: ['First Name', 'Last Name', 'gmu email/userid', 'Picture', 'Tenure-Track/Teaching/Staff', 'Rank', 'Dept Role', 'Website', 'LinkedIn', 'Google Scholar', 'Research interests', 'Office (building and room #)', 'Year started at GMU', 'PhD from', 'Postdoc from', 'Last Modified', 'Last Verified', 'Verified'],
+    faculty: ['First Name', 'Last Name', 'gmu email/userid', 'Picture', 'Tenure-Track/Teaching/Staff', 'Rank', 'Dept Role', 'Website', 'LinkedIn', 'Google Scholar', 'Research interests', 'Office (building and room #)', 'Year started at GMU', 'Undergrad from', 'Undergrad Year', 'MS from', 'MS Year', 'PhD from', 'PhD Year', 'Postdoc from', 'Postdoc Year', 'Last Modified', 'Last Verified', 'Verified'],
     students: ['First Name', 'Last Name', 'Advisor', 'Co-Advisor', 'Degree', 'Dissertation Title', 'Current Job', 'First Job', 'Location', 'Internships', 'Honors & Awards', 'Topics', 'Picture', 'Website', 'LinkedIn', 'Google Scholar', 'Last Modified', 'Last Verified', 'Verified'],
     awards: ['Name', 'Category', 'Award', 'Year', 'Former'],
 } as const;
