@@ -5,7 +5,10 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "npm run typecheck && npm run validate:data && npm test && vite build",
+        "predev": "npm run sync && tsx scripts/generate-profile-pages.ts --dev",
+        "sync": "tsx scripts/sync-upstream.ts",
+        "generate:profiles": "tsx scripts/generate-profile-pages.ts",
+        "build": "npm run sync && npm run typecheck && npm run validate:data && npm test && vite build && tsx scripts/generate-profile-pages.ts",
         "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
         "validate:data": "tsx scripts/validate-data.ts",
         "test": "tsx --test tests/**/*.test.ts",
