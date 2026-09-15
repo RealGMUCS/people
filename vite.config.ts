@@ -35,6 +35,7 @@ export default defineConfig({
                 main: resolve(root, 'index.html'),
                 students: resolve(root, 'students.html'),
                 submit: resolve(root, 'submit.html'),
+                notFound: resolve(root, '404.html'),
             },
         },
     },
