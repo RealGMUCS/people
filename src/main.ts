@@ -158,7 +158,24 @@ async function init() {
         keywordMeta: KEYWORD_META,
         suggestionSources: FACULTY_SUGGESTION_SOURCES,
         onChange: render,
-        onCommand: runCommand,
+        onCommand: (raw) => {
+            const cmd = raw.trim().toLowerCase().replace(/^[:\/]/, '');
+            if (cmd === 'recent' || cmd === 'updates' || cmd === 'recently updated' || cmd === 'whats new') {
+                const sortEl = document.getElementById('sort-order');
+                if (sortEl) sortEl.value = 'recent';
+                render();
+                showCommandOutput('Displaying faculty sorted by most recently updated.');
+                return true;
+            }
+            if (cmd === 'newest' || cmd === 'added' || cmd === 'recently added' || cmd === 'new') {
+                const sortEl = document.getElementById('sort-order');
+                if (sortEl) sortEl.value = 'newest';
+                render();
+                showCommandOutput('Displaying faculty sorted by newest entry added.');
+                return true;
+            }
+            return runCommand(raw);
+        },
     });
 
     setupFilters();
@@ -263,8 +280,14 @@ function sortFaculty(list, order) {
     switch (order) {
         case 'name-desc':
             return arr.sort((a, b) => (b.lastName || '').localeCompare(a.lastName || '') || (b.firstName || '').localeCompare(a.firstName || ''));
+        case 'first-name':
+            return arr.sort((a, b) => (a.firstName || '').localeCompare(b.firstName || '') || (a.lastName || '').localeCompare(b.lastName || ''));
         case 'recent':
-            return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (a.lastName || '').localeCompare(b.lastName || ''));
+            return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (b.entryIndex ?? 0) - (a.entryIndex ?? 0) || (a.lastName || '').localeCompare(b.lastName || ''));
+        case 'newest':
+        case 'vp-newest':
+        case 'recently-added':
+            return arr.sort((a, b) => (b.entryIndex ?? 0) - (a.entryIndex ?? 0));
         case 'name-asc':
         default:
             return arr.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || '') || (a.firstName || '').localeCompare(b.firstName || ''));
@@ -369,9 +392,11 @@ function render() {
     const grid = document.getElementById('faculty-results');
     const countEl = document.getElementById('faculty-count');
     const awardsView = currentView === 'awards';
-    document.getElementById('awards-link').classList.toggle('active', awardsView);
-    document.getElementById('filters').style.display = awardsView ? 'none' : '';
-    document.querySelector('.search-examples').style.display = awardsView ? 'none' : '';
+    document.getElementById('awards-link')?.classList.toggle('active', awardsView);
+    const controlsEl = document.getElementById('controls') || document.getElementById('filters');
+    if (controlsEl) controlsEl.style.display = awardsView ? 'none' : '';
+    const examplesEl = document.getElementById('examples') || document.querySelector('.search-examples');
+    if (examplesEl) examplesEl.style.display = awardsView ? 'none' : '';
     keyboardSelectedIndex = -1;
 
     if (awardsView) {
@@ -464,10 +489,10 @@ function renderCard(f) {
 
     return `
     <div class="entry entry-with-portrait">
-      <img class="entry-portrait" src="${picture}" alt="" width="64" height="64" loading="lazy" onerror="this.src='${defaultPortrait}'">
+      <img class="entry-portrait" src="${picture}" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
-          <span class="entry-name">${esc(fullName)}</span>${profileIcons}
+          <a class="entry-name" href="people/${f.slug}.html">${esc(fullName)}</a>${profileIcons}
           <time class="entry-updated" datetime="${esc(f.lastModified || '')}" title="Record last modified ${esc(f.lastModified || '')}">Updated ${esc(f.lastModified || '')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
@@ -495,4 +520,15 @@ document.addEventListener('click', e => {
     render();
 });
 
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        backToTopBtn.hidden = window.scrollY < 400;
+    });
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 init();
+

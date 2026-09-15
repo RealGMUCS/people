@@ -225,7 +225,24 @@ async function init() {
         keywordMeta: KEYWORD_META,
         suggestionSources: STUDENT_SUGGESTION_SOURCES,
         onChange: render,
-        onCommand: runCommand,
+        onCommand: (raw) => {
+            const cmd = raw.trim().toLowerCase().replace(/^[:\/]/, '');
+            if (cmd === 'recent' || cmd === 'updates' || cmd === 'recently updated' || cmd === 'whats new') {
+                const sortEl = document.getElementById('sort-order');
+                if (sortEl) sortEl.value = 'recent';
+                render();
+                showCommandOutput('Displaying students sorted by most recently updated.');
+                return true;
+            }
+            if (cmd === 'newest' || cmd === 'added' || cmd === 'recently added' || cmd === 'new') {
+                const sortEl = document.getElementById('sort-order');
+                if (sortEl) sortEl.value = 'newest';
+                render();
+                showCommandOutput('Displaying students sorted by newest entry added.');
+                return true;
+            }
+            return runCommand(raw);
+        },
     });
 
     setupFilters();
@@ -389,6 +406,14 @@ function sortStudents(list, order) {
             return arr.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || '') || (a.firstName || '').localeCompare(b.firstName || ''));
         case 'name-desc':
             return arr.sort((a, b) => (b.lastName || '').localeCompare(a.lastName || '') || (b.firstName || '').localeCompare(a.firstName || ''));
+        case 'first-name':
+            return arr.sort((a, b) => (a.firstName || '').localeCompare(b.firstName || '') || (a.lastName || '').localeCompare(b.lastName || ''));
+        case 'recent':
+            return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (b.entryIndex ?? 0) - (a.entryIndex ?? 0) || (a.lastName || '').localeCompare(b.lastName || ''));
+        case 'newest':
+        case 'vp-newest':
+        case 'recently-added':
+            return arr.sort((a, b) => (b.entryIndex ?? 0) - (a.entryIndex ?? 0));
         case 'grad-desc':
             return arr.sort((a, b) => {
                 const yA = getGradYearNum(a);
@@ -479,9 +504,11 @@ function render() {
     const grid = document.getElementById('faculty-results');
     const countEl = document.getElementById('faculty-count');
     const insightsView = currentView === 'insights';
-    document.getElementById('insights-link').classList.toggle('active', insightsView);
-    document.getElementById('filters').style.display = insightsView ? 'none' : '';
-    document.querySelector('.search-examples').style.display = insightsView ? 'none' : '';
+    document.getElementById('insights-link')?.classList.toggle('active', insightsView);
+    const controlsEl = document.getElementById('controls') || document.getElementById('filters');
+    if (controlsEl) controlsEl.style.display = insightsView ? 'none' : '';
+    const examplesEl = document.getElementById('examples') || document.querySelector('.search-examples');
+    if (examplesEl) examplesEl.style.display = insightsView ? 'none' : '';
     keyboardSelectedIndex = -1;
 
     const filtered = getFiltered();
@@ -498,6 +525,8 @@ function render() {
         updateUrl();
         return;
     }
+
+    grid.className = 'roster';
 
     const kw = search.effectiveSearch();
     const isAdvisorSearch = kw && kw.key === 'advisor' && kw.query;
@@ -578,10 +607,10 @@ function renderStudentRow(s) {
 
     return `
     <div class="entry entry-with-portrait">
-      <img class="entry-portrait" src="${picture}" alt="${esc(fullName)}" loading="lazy" onerror="this.src='${defaultPortrait}'">
+      <img class="entry-portrait" src="${picture}" alt="${esc(fullName)}" width="64" height="64" loading="lazy" decoding="async" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
-          <span class="entry-name">${esc(fullName)}</span>${profileIcons}
+          <a class="entry-name" href="people/${s.slug}.html">${esc(fullName)}</a>${profileIcons}
           ${locationBadge}
           <time class="entry-updated" datetime="${esc(s.lastModified || '2026-09-04')}" title="Record last modified ${esc(s.lastModified || '2026-09-04')}">Updated ${esc(s.lastModified || '2026-09-04')}</time>
         </div>
@@ -813,4 +842,15 @@ document.addEventListener('click', e => {
     render();
 });
 
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        backToTopBtn.hidden = window.scrollY < 400;
+    });
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 init();
+

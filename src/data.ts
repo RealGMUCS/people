@@ -5,6 +5,19 @@
 // site. Achievements shown on a card are joined from awards.json by full
 // name, so there is no achievements column in faculty.json. Likewise a
 // student's Advisor is joined to a faculty card by full name.
+export function slugify(name: string): string {
+    return name
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+export function personPath(slug: string): string {
+    return `people/${slug}.html`;
+}
+
 export async function loadFaculty() {
     const base = import.meta.env.BASE_URL;
     const [rawFaculty, rawAwards, rawStudents] = await Promise.all([
@@ -18,7 +31,7 @@ export async function loadFaculty() {
 
     const { awardsByName, awardCategories } = parseAwards(awardData);
 
-    const faculty = data.map(row => {
+    const faculty = data.map((row, index) => {
         // Handle variable header names (they include examples in parentheses)
         const interestKey = Object.keys(row).find(k => k.toLowerCase().startsWith('research interests')) || 'Research interests';
         const rankKey = Object.keys(row).find(k => k.toLowerCase().startsWith('rank')) || 'Rank';
@@ -29,10 +42,14 @@ export async function loadFaculty() {
         const firstName = clean(row['First Name']);
         const lastName = clean(row['Last Name']);
         const awards = awardsByName.get(`${firstName || ''} ${lastName || ''}`.trim()) || [];
+        const slug = slugify(`${firstName || ''} ${lastName || ''}`.trim());
 
         return {
+            id: `faculty-${index + 1}`,
+            entryIndex: index,
             firstName,
             lastName,
+            slug,
             email: clean(row['gmu email/userid']),
             track: rawTrack,
             rank: rawRank,
@@ -109,8 +126,11 @@ export async function loadStudents(facultyByName) {
     const base = import.meta.env.BASE_URL;
     const data = await fetchJson(`${base}students.json`);
 
+    const facultySlugs = new Set(facultyByName ? Array.from(facultyByName.values()).map(f => f.slug || slugify(`${f.firstName} ${f.lastName}`.trim())) : []);
+    const usedStudentSlugs = new Set();
     const topicIndex = new Map();
-    const students = data.map(row => {
+
+    const students = data.map((row, index) => {
         const firstName = clean(row['First Name']);
         const lastName = clean(row['Last Name']);
         const advisor = clean(row['Advisor']);
@@ -120,13 +140,27 @@ export async function loadStudents(facultyByName) {
         const honors = parseList(row['Honors & Awards']);
         const { phdYear, msYear, bsYear, gradYear } = parseDegreeYears(degree);
 
+        const fullName = `${firstName || ''} ${lastName || ''}`.trim();
+        let slug = slugify(fullName);
+        if (facultySlugs.has(slug)) {
+            slug = `${slug}-student`;
+        } else if (usedStudentSlugs.has(slug)) {
+            let counter = 2;
+            while (usedStudentSlugs.has(`${slug}-${counter}`)) counter++;
+            slug = `${slug}-${counter}`;
+        }
+        usedStudentSlugs.add(slug);
+
         const student = {
+            id: `student-${index + 1}`,
+            entryIndex: index,
             firstName,
             lastName,
+            slug,
             advisor,
             coAdvisor,
-            advisorFaculty: advisor ? (facultyByName.get(advisor) || null) : null,
-            coAdvisorFaculty: coAdvisor ? (facultyByName.get(coAdvisor) || null) : null,
+            advisorFaculty: advisor ? (facultyByName?.get(advisor) || null) : null,
+            coAdvisorFaculty: coAdvisor ? (facultyByName?.get(coAdvisor) || null) : null,
             degree,
             dissertationTitle: clean(row['Dissertation Title']),
             location: clean(row['Location']),
