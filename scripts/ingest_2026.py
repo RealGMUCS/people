@@ -118,7 +118,7 @@ phd_graduates = [
         'honor': 'Distinguished Academic Achievement (PhD)'
     },
     {
-        'first': 'Taylor', 'last': 'Henderson', 'advisor': 'Hakan Aydin', 'coadvisor': '',
+        'first': 'Taylor', 'last': 'Henderson', 'advisor': 'Robert Simon', 'coadvisor': '',
         'dissertation': 'Time Series Analysis for Malicious Communications',
         'honor': 'Distinguished Academic Achievement (PhD)'
     },
