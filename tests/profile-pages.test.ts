@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { slugify } from '../scripts/generate-profile-pages.ts';
 
 const root = process.cwd();
@@ -17,7 +18,6 @@ test('profile pages generate valid HTML for faculty and students', () => {
     const peopleDir = path.join(root, 'public', 'people');
     if (!fs.existsSync(peopleDir)) {
         // Run generation if not already generated
-        const { execFileSync } = require('node:child_process');
         execFileSync('npx', ['tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
     }
 
