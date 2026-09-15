@@ -99,7 +99,7 @@ interface StudentEntry {
 
 function renderFacultyProfile(f: FacultyEntry) {
   const fullName = `${f.firstName} ${f.lastName}`.trim();
-  const title = `${fullName} — GMU CS Directory`;
+  const title = `${fullName} — Faculty Profile | GMU Computer Science`;
   const canonicalUrl = `${siteUrl}/people/${f.slug}.html`;
   const ogImage = f.picture || `${siteUrl}/default-portrait.svg`;
   const roleParts = [f.category || f.rank, f.role, f.office, 'Department of Computer Science, George Mason University'].filter(Boolean);
@@ -150,11 +150,23 @@ function renderFacultyProfile(f: FacultyEntry) {
   const editUrl = `../submit.html`;
   const rawRecord = escapeHtml(JSON.stringify(f, null, 2));
 
+  const sameAs = [f.website, f.scholar, f.linkedin].filter(Boolean);
+  const alumniOf = [
+    f.phdFrom && { '@type': 'EducationalOrganization', name: f.phdFrom },
+    f.msFrom && { '@type': 'EducationalOrganization', name: f.msFrom },
+    f.undergradFrom && { '@type': 'EducationalOrganization', name: f.undergradFrom },
+  ].filter(Boolean);
+
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: fullName,
     jobTitle: f.category || f.rank,
+    worksFor: {
+      '@type': 'EducationalOrganization',
+      name: 'George Mason University',
+      department: { '@type': 'Organization', name: 'Department of Computer Science' },
+    },
     affiliation: {
       '@type': 'EducationalOrganization',
       name: 'George Mason University',
@@ -162,6 +174,9 @@ function renderFacultyProfile(f: FacultyEntry) {
     },
     url: canonicalUrl,
     ...(f.picture ? { image: f.picture } : {}),
+    ...(sameAs.length ? { sameAs } : {}),
+    ...(alumniOf.length ? { alumniOf } : {}),
+    ...(f.interests.length ? { knowsAbout: f.interests } : {}),
   });
 
   return `<!doctype html>
@@ -187,6 +202,10 @@ function renderFacultyProfile(f: FacultyEntry) {
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="${escapeHtml(ogImage)}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${escapeHtml(ogImage)}">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -231,7 +250,7 @@ function renderFacultyProfile(f: FacultyEntry) {
           <div class="tags">
             ${f.type ? `<span class="tag tag-track">${escapeHtml(f.type)}</span>` : ''}
             ${f.verified ? '<span class="tag tag-verified">✓ Verified</span>' : ''}
-            ${f.interests.map(i => `<span class="tag tag-topic">${escapeHtml(i)}</span>`).join('')}
+            ${f.interests.map(i => `<a class="tag tag-topic" href="../index.html?q=${encodeURIComponent(i)}">${escapeHtml(i)}</a>`).join('')}
           </div>
         </section>
         ${research}
@@ -261,7 +280,7 @@ function renderFacultyProfile(f: FacultyEntry) {
 
 function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, FacultyEntry>) {
   const fullName = `${s.firstName} ${s.lastName}`.trim();
-  const title = `${fullName} — GMU CS Students & Alumni`;
+  const title = `${fullName}${s.degree ? ` (${s.degree})` : ''} — GMU CS Students & Alumni`;
   const canonicalUrl = `${siteUrl}/people/${s.slug}.html`;
   const ogImage = s.picture || `${siteUrl}/default-portrait.svg`;
   const roleParts = [s.degree, s.currentJob || s.firstJob, s.location, 'Department of Computer Science, George Mason University'].filter(Boolean);
@@ -328,17 +347,26 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
   const editUrl = `../submit.html`;
   const rawRecord = escapeHtml(JSON.stringify(s, null, 2));
 
+  const sameAs = [s.website, s.scholar, s.linkedin].filter(Boolean);
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: fullName,
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'George Mason University',
+      department: { '@type': 'Organization', name: 'Department of Computer Science' },
+    },
     affiliation: {
       '@type': 'EducationalOrganization',
       name: 'George Mason University',
       department: { '@type': 'Organization', name: 'Department of Computer Science' },
     },
     url: canonicalUrl,
+    ...(s.currentJob ? { jobTitle: s.currentJob } : {}),
     ...(s.picture ? { image: s.picture } : {}),
+    ...(sameAs.length ? { sameAs } : {}),
+    ...(s.topics.length ? { knowsAbout: s.topics } : {}),
   });
 
   return `<!doctype html>
@@ -364,6 +392,10 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="${escapeHtml(ogImage)}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${escapeHtml(ogImage)}">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -408,7 +440,7 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
           <div class="tags">
             ${s.degree ? `<span class="tag tag-track">${escapeHtml(s.degree)}</span>` : ''}
             ${s.verified ? '<span class="tag tag-verified">✓ Verified</span>' : ''}
-            ${s.topics.map(t => `<span class="tag tag-topic">${escapeHtml(t)}</span>`).join('')}
+            ${s.topics.map(t => `<a class="tag tag-topic" href="../students.html?q=${encodeURIComponent(t)}">${escapeHtml(t)}</a>`).join('')}
           </div>
         </section>
         ${mentorshipSection}
@@ -565,10 +597,10 @@ async function main() {
 
   if (!development) {
     const sitemapUrls = [
-      ...facultyList.map(f => `  <url>\n    <loc>${siteUrl}/people/${f.slug}.html</loc>\n    <lastmod>${f.lastModified || ''}</lastmod>\n  </url>`),
-      ...studentList.map(s => `  <url>\n    <loc>${siteUrl}/people/${s.slug}.html</loc>\n    <lastmod>${s.lastModified || ''}</lastmod>\n  </url>`),
+      ...facultyList.map(f => `  <url>\n    <loc>${siteUrl}/people/${f.slug}.html</loc>\n    <lastmod>${f.lastModified || '2026-09-15'}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`),
+      ...studentList.map(s => `  <url>\n    <loc>${siteUrl}/people/${s.slug}.html</loc>\n    <lastmod>${s.lastModified || '2026-09-15'}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`),
     ];
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n  </url>\n  <url>\n    <loc>${siteUrl}/students.html</loc>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n  </url>\n${sitemapUrls.join('\n')}\n</urlset>\n`;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/students.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${sitemapUrls.join('\n')}\n</urlset>\n`;
     await writeFile(resolve(output, 'sitemap.xml'), sitemap, 'utf8');
   }
 
