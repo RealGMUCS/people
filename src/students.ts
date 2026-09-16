@@ -620,7 +620,7 @@ function renderStudentRow(s) {
       <img class="entry-portrait" src="${picture}" alt="${esc(fullName)}" width="64" height="64" loading="lazy" decoding="async" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
-          <a class="entry-name" href="people/${s.slug}.html">${esc(fullName)}</a>${profileIcons}
+          <a class="entry-name" href="${import.meta.env.BASE_URL}people/${s.slug}.html">${esc(fullName)}</a>${profileIcons}
           ${locationBadge}
           <time class="entry-updated" datetime="${esc(s.lastModified || '2026-09-04')}" title="Record last modified ${esc(s.lastModified || '2026-09-04')}">Updated ${esc(s.lastModified || '2026-09-04')}</time>
         </div>

@@ -15,7 +15,7 @@ export function slugify(name: string): string {
 }
 
 export function personPath(slug: string): string {
-    return `people/${slug}.html`;
+    return `${import.meta.env.BASE_URL}people/${slug}.html`;
 }
 
 export async function loadFaculty() {
