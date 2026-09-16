@@ -34,6 +34,12 @@ function clean(v: unknown): string {
   return v ? String(v).trim() : '';
 }
 
+function normalizeUrl(v: unknown): string {
+  const url = clean(v);
+  if (!url) return '';
+  return url.startsWith('http') ? url : `https://${url}`;
+}
+
 // Faculty `picture` is either an external hotlinked URL or a local relative
 // path under public/portraits/ (see scripts/fetch-portraits.ts) — resolve the
 // latter to an absolute site URL for og:image/JSON-LD and for the profile
@@ -511,9 +517,9 @@ async function main() {
       type: clean(row['Tenure-Track/Teaching/Staff']),
       category: clean(row['Rank']),
       role: clean(row['Dept Role']),
-      website: clean(row['Website']),
-      linkedin: clean(row['LinkedIn']),
-      scholar: clean(row['Google Scholar']),
+      website: normalizeUrl(row['Website']),
+      linkedin: normalizeUrl(row['LinkedIn']),
+      scholar: normalizeUrl(row['Google Scholar']),
       interests: parseInterests(row['Research interests'] || row['Research Interests']),
       office: clean(row['Office (building and room #)']),
       yearStarted: clean(row['Year started at GMU']),
@@ -579,9 +585,9 @@ async function main() {
       honors: parseList(row['Honors & Awards']),
       topics: parseInterests(row['Topics']),
       picture: clean(row['Picture']),
-      website: clean(row['Website']),
-      linkedin: clean(row['LinkedIn']),
-      scholar: clean(row['Google Scholar']),
+      website: normalizeUrl(row['Website']),
+      linkedin: normalizeUrl(row['LinkedIn']),
+      scholar: normalizeUrl(row['Google Scholar']),
       lastModified: clean(row['Last Modified']),
       lastVerified: clean(row['Last Verified']),
       verified: clean(row['Verified']) === 'Yes',

@@ -503,7 +503,7 @@ function renderCard(f) {
       <img class="entry-portrait" src="${picture}" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
-          <a class="entry-name" href="people/${f.slug}.html">${esc(fullName)}</a>${profileIcons}
+          <a class="entry-name" href="${import.meta.env.BASE_URL}people/${f.slug}.html">${esc(fullName)}</a>${profileIcons}
           <time class="entry-updated" datetime="${esc(f.lastModified || '')}" title="Record last modified ${esc(f.lastModified || '')}">Updated ${esc(f.lastModified || '')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
