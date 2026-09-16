@@ -576,7 +576,7 @@ function renderStudentRow(s) {
         } else {
             let advHtml = `Advisor: <a class="award-person" data-advisor="${esc(s.advisor)}" href="#">${esc(s.advisor)}</a>`;
             if (s.coAdvisor) {
-                advHtml += ` & <a class="award-person" data-advisor="${esc(s.coAdvisor)}" href="#">${esc(s.coAdvisor)}</a> <span style="font-size:0.85em; color:var(--text-secondary);">(Co-advisor)</span>`;
+                advHtml += ` & <a class="award-person" data-advisor="${esc(s.coAdvisor)}" href="#">${esc(s.coAdvisor)}</a>`;
             }
             metaParts.push(advHtml);
         }
@@ -703,10 +703,10 @@ function renderInsights(students = allStudents) {
     ${gmuAlumniFacultyList.length ? `
     <div class="insights-section">
       <h3 class="insights-heading">🏛️ GMU CS Alumni on GMU Faculty (${gmuAlumniFacultyList.length})</h3>
-      <p class="insights-caption">GMU CS graduates who became faculty members at George Mason University; click a name to view their faculty card.</p>
+      <p class="insights-caption">GMU CS graduates who became faculty members at George Mason University; click a name to view their alumni entry.</p>
       <div class="ranked-list">
         ${gmuAlumniFacultyList.map(item => `
-          <a class="ranked-item" href="index.html?q=name: ${encodeURIComponent(item.name)}" title="View ${esc(item.name)} faculty card">
+          <a class="ranked-item" href="students.html?q=name: ${encodeURIComponent(item.name)}" title="View ${esc(item.name)} alumni entry">
             <div class="ranked-header">
               <span class="ranked-name">${esc(item.name)}</span>
               <span class="ranked-count">${esc(item.role)}</span>

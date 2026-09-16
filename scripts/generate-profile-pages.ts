@@ -133,7 +133,7 @@ function renderFacultyProfile(f: FacultyEntry) {
     ? `<section class="man-section"><h2>ADVISEES &amp; ALUMNI (${f.advisees.length})</h2><ul>${f.advisees.map(adv => {
         const advName = `${adv.firstName} ${adv.lastName}`.trim();
         const advSlug = slugify(advName);
-        return `<li><a href="${advSlug}.html">${escapeHtml(advName)}</a>${adv.degree ? ` (${escapeHtml(adv.degree)})` : ''}${adv.isCoAdvisor ? ' <span class="section-note">(Co-advised)</span>' : ''}</li>`;
+        return `<li><a href="${advSlug}.html">${escapeHtml(advName)}</a>${adv.degree ? ` (${escapeHtml(adv.degree)})` : ''}</li>`;
       }).join('')}</ul></section>`
     : '';
 
