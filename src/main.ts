@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty } from './data';
-import { esc, safeUrl, renderAchievementGroups, setupAchievementsToggle, loadSearchKit, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts } from './common';
+import { esc, safeUrl, renderAchievementGroups, setupAchievementsToggle, loadSearchKit, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons, renderEmailBadge, activateEmailBadges } from './common';
 import './style.css';
 
 let allFaculty = [];
@@ -158,7 +158,24 @@ async function init() {
         keywordMeta: KEYWORD_META,
         suggestionSources: FACULTY_SUGGESTION_SOURCES,
         onChange: render,
-        onCommand: runCommand,
+        onCommand: (raw) => {
+            const cmd = raw.trim().toLowerCase().replace(/^[:\/]/, '');
+            if (cmd === 'recent' || cmd === 'updates' || cmd === 'recently updated' || cmd === 'whats new') {
+                const sortEl = document.getElementById('sort-order');
+                if (sortEl) sortEl.value = 'recent';
+                render();
+                showCommandOutput('Displaying faculty sorted by most recently updated.');
+                return true;
+            }
+            if (cmd === 'newest' || cmd === 'added' || cmd === 'recently added' || cmd === 'new') {
+                const sortEl = document.getElementById('sort-order');
+                if (sortEl) sortEl.value = 'newest';
+                render();
+                showCommandOutput('Displaying faculty sorted by newest entry added.');
+                return true;
+            }
+            return runCommand(raw);
+        },
     });
 
     setupFilters();
@@ -263,8 +280,14 @@ function sortFaculty(list, order) {
     switch (order) {
         case 'name-desc':
             return arr.sort((a, b) => (b.lastName || '').localeCompare(a.lastName || '') || (b.firstName || '').localeCompare(a.firstName || ''));
+        case 'first-name':
+            return arr.sort((a, b) => (a.firstName || '').localeCompare(b.firstName || '') || (a.lastName || '').localeCompare(b.lastName || ''));
         case 'recent':
-            return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (a.lastName || '').localeCompare(b.lastName || ''));
+            return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (b.entryIndex ?? 0) - (a.entryIndex ?? 0) || (a.lastName || '').localeCompare(b.lastName || ''));
+        case 'newest':
+        case 'vp-newest':
+        case 'recently-added':
+            return arr.sort((a, b) => (b.entryIndex ?? 0) - (a.entryIndex ?? 0));
         case 'name-asc':
         default:
             return arr.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || '') || (a.firstName || '').localeCompare(b.firstName || ''));
@@ -369,9 +392,11 @@ function render() {
     const grid = document.getElementById('faculty-results');
     const countEl = document.getElementById('faculty-count');
     const awardsView = currentView === 'awards';
-    document.getElementById('awards-link').classList.toggle('active', awardsView);
-    document.getElementById('filters').style.display = awardsView ? 'none' : '';
-    document.querySelector('.search-examples').style.display = awardsView ? 'none' : '';
+    document.getElementById('awards-link')?.classList.toggle('active', awardsView);
+    const controlsEl = document.getElementById('controls') || document.getElementById('filters');
+    if (controlsEl) controlsEl.style.display = awardsView ? 'none' : '';
+    const examplesEl = document.getElementById('examples') || document.querySelector('.search-examples');
+    if (examplesEl) examplesEl.style.display = awardsView ? 'none' : '';
     keyboardSelectedIndex = -1;
 
     if (awardsView) {
@@ -389,6 +414,7 @@ function render() {
     const filtered = getFiltered();
     countEl.textContent = `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
+    activateEmailBadges(grid);
     updateQueryPlan(filtered.length);
     updateUrl();
 }
@@ -412,31 +438,36 @@ function renderAwardItem(a) {
 function renderCard(f) {
     const fullName = `${f.firstName} ${f.lastName}`;
 
-    // Position meta line: "Associate Professor · Tenured · ENGR 4430"
+    // Position meta line: "Associate Professor · ENGR 4430"
     const metaParts = [
-        (f.category && f.type) ? esc(`${f.category} · ${f.type}`) : (f.category ? esc(f.category) : null),
+        f.category ? esc(f.category) : null,
         f.office ? esc(f.office) : null,
     ].filter(Boolean);
     if (f.role) metaParts.unshift(esc(f.role));
 
-    // Education details line: "PhD: MIT; Postdoc: CMU; At GMU since 2018"
+    // Education details line, vietprofs' Postdoc/PhD/MS/Undergrad order:
+    // "Postdoc: CMU, 2016; PhD: MIT, 2014; MS: Cornell, 2010; Undergrad: UCLA, 2008; At GMU since 2018"
+    const eduPart = (label, from, year) => from ? `${label}: ${[esc(from), year ? esc(String(year)) : null].filter(Boolean).join(', ')}` : null;
     const detailParts = [
-        f.phdFrom ? `PhD: ${esc(f.phdFrom)}` : null,
-        f.postdocFrom ? `Postdoc: ${esc(f.postdocFrom)}` : null,
+        eduPart('Postdoc', f.postdocFrom, f.postdocYear),
+        eduPart('PhD', f.phdFrom, f.phdYear),
+        eduPart('MS', f.msFrom, f.msYear),
+        eduPart('Undergrad', f.undergradFrom, f.undergradYear),
         f.yearStarted ? `At GMU since ${esc(String(f.yearStarted))}` : null,
     ].filter(Boolean);
 
-    // Contact line: email + advisees count
-    const emailHtml = f.email
-        ? `<a class="faculty-email" href="mailto:${esc(f.email)}">${esc(f.email)}</a>`
-        : '';
+    // Contact line: email (rendered as an image, see renderEmailBadge) + advisees count
+    const emailHtml = renderEmailBadge(f.email);
     const adviseesHtml = f.advisees?.length > 0
         ? `<a class="advisees-link" href="students.html?q=advisor:${encodeURIComponent(fullName)}">${f.advisees.length} student${f.advisees.length === 1 ? '' : 's'} ↗</a>`
         : '';
     const contactParts = [emailHtml, adviseesHtml].filter(Boolean);
 
-    // Tags: track type + research interest topics
+    // Tags: track type + research interest topics + manual-verification badge
     const trackTag = f.type ? `<span class="tag tag-track">${esc(f.type)}</span>` : '';
+    const verifiedTag = f.verified
+        ? `<span class="tag tag-verified" title="Confirmed directly by this person or their department, not just scraped from a public source">✓ Verified</span>`
+        : '';
     const interestTags = f.interests
         .map(i => `<span class="tag tag-topic">${esc(i)}</span>`)
         .join('');
@@ -454,20 +485,21 @@ function renderCard(f) {
 
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
     const picture = (f.picture && safeUrl(f.picture)) || defaultPortrait;
+    const profileIcons = renderProfileIcons(fullName, { website: f.website, scholar: f.scholar, linkedin: f.linkedin });
 
     return `
     <div class="entry entry-with-portrait">
-      <img class="entry-portrait" src="${picture}" alt="" width="64" height="64" loading="lazy" onerror="this.src='${defaultPortrait}'">
+      <img class="entry-portrait" src="${picture}" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.src='${defaultPortrait}'">
       <div class="entry-content">
         <div class="entry-name-row">
-          <span class="entry-name">${esc(fullName)}</span>
+          <a class="entry-name" href="people/${f.slug}.html">${esc(fullName)}</a>${profileIcons}
           <time class="entry-updated" datetime="${esc(f.lastModified || '')}" title="Record last modified ${esc(f.lastModified || '')}">Updated ${esc(f.lastModified || '')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
         ${detailParts.length ? `<div class="entry-details">${detailParts.join('; ')}</div>` : ''}
         ${contactParts.length ? `<div class="entry-details">${contactParts.join(' · ')}</div>` : ''}
         ${achievementsList}
-        ${(trackTag || interestTags) ? `<div class="tags">${trackTag}${interestTags}</div>` : ''}
+        ${(trackTag || verifiedTag || interestTags) ? `<div class="tags">${trackTag}${verifiedTag}${interestTags}</div>` : ''}
       </div>
     </div>
   `;
@@ -488,4 +520,15 @@ document.addEventListener('click', e => {
     render();
 });
 
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        backToTopBtn.hidden = window.scrollY < 400;
+    });
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 init();
+

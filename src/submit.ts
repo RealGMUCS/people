@@ -25,10 +25,17 @@ function facultyToText(f) {
         ['Research interests', f.interests.join(', ')],
         ['Office (building and room #)', f.office],
         ['Year started at GMU', f.yearStarted],
+        ['Undergrad from', f.undergradFrom],
+        ['Undergrad Year', f.undergradYear],
+        ['MS from', f.msFrom],
+        ['MS Year', f.msYear],
         ['PhD from', f.phdFrom],
+        ['PhD Year', f.phdYear],
         ['Postdoc from', f.postdocFrom],
+        ['Postdoc Year', f.postdocYear],
         ['Last Modified', today],
         ['Last Verified', today],
+        ['Verified', 'Yes'],
     ].map(([k, v]) => `${k}: ${v || ''}`).join('\n');
 }
 
@@ -54,6 +61,7 @@ function studentToText(s) {
         ['Google Scholar', s.scholar],
         ['Last Modified', today],
         ['Last Verified', today],
+        ['Verified', 'Yes'],
     ].map(([k, v]) => `${k}: ${v || ''}`).join('\n');
 }
 

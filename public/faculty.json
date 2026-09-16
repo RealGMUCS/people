@@ -13,10 +13,17 @@
         "Research interests": "Artificial Intelligence (AI), machine learning (ML), Internet of Things, Security",
         "Office (building and room #)": "Engineering 4439",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Howard University",
+        "PhD Year": "2023",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Jan",
@@ -32,10 +39,17 @@
         "Research interests": "AI, Computer Game Technology, Graphics",
         "Office (building and room #)": "Buchanan D205D",
         "Year started at GMU": "2009",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Pennsylvania",
+        "PhD Year": "2009",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Paul",
@@ -51,10 +65,17 @@
         "Research interests": "Software Engineering (SE)",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "University of Virginia",
+        "MS Year": "",
         "PhD from": "University of Virginia",
+        "PhD Year": "1988",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Antonios",
@@ -70,10 +91,17 @@
         "Research interests": "Natural Language Processing (NLP)",
         "Office (building and room #)": "Engineering 4412",
         "Year started at GMU": "2020",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Notre Dame",
+        "PhD Year": "2019",
         "Postdoc from": "Carnegie Mellon University",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Kevin",
@@ -89,10 +117,17 @@
         "Research interests": "Embedded Systems, Systems Programming, IoT",
         "Office (building and room #)": "Buchanan Hall D217C",
         "Year started at GMU": "2016",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "2023",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Giuseppe",
@@ -108,10 +143,17 @@
         "Research interests": "Cloud Security, Security, Cryptography",
         "Office (building and room #)": "Research Hall 339",
         "Year started at GMU": "2021",
+        "Undergrad from": "University of Salerno (Italy)",
+        "Undergrad Year": "",
+        "MS from": "University of Salerno (Italy)",
+        "MS Year": "1995",
         "PhD from": "University of Genoa",
+        "PhD Year": "2000",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Ivan",
@@ -127,10 +169,17 @@
         "Research interests": "Algorithms, Theory, Systems",
         "Office (building and room #)": "Buchanan Hall D215K",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "2020",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Hakan",
@@ -146,10 +195,17 @@
         "Research interests": "Real-Time Systems, Embedded Systems, Sustainable Computing",
         "Office (building and room #)": "Engineering 4426",
         "Year started at GMU": "2001",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Pittsburgh",
+        "PhD Year": "2001",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Foteini",
@@ -165,10 +221,17 @@
         "Research interests": "Cryptography, Privacy, Blockchain, Digital Identities, Security",
         "Office (building and room #)": "Engineering 5333",
         "Year started at GMU": "2016",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Brown University",
-        "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "PhD Year": "2014",
+        "Postdoc from": "Boston University",
+        "Postdoc Year": "2016",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Daniel",
@@ -184,10 +247,17 @@
         "Research interests": "Databases, Data Mining",
         "Office (building and room #)": "Engineering 5324",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Princeton University",
+        "PhD Year": "1985",
         "Postdoc from": "",
-        "Last Modified": "2026-09-05",
-        "Last Verified": "2026-09-05"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Mihai",
@@ -203,10 +273,17 @@
         "Research interests": "Artificial Intelligence (AI), Machine Learning (ML)",
         "Office (building and room #)": "Nguyen Engineering 4611",
         "Year started at GMU": "",
-        "PhD from": "George Mason University (2003)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "George Mason University",
+        "PhD Year": "2003",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Alex",
@@ -222,10 +299,17 @@
         "Research interests": "Decision Support, Guidance and Optimization (DSGO)",
         "Office (building and room #)": "Engineering 5316",
         "Year started at GMU": "1993",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Hebrew University of Jerusalem",
+        "PhD Year": "1991",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Songqing",
@@ -241,10 +325,17 @@
         "Research interests": "Computer and Network Security, computer networks, computer systems, parallel and distributed systems, mobile computing",
         "Office (building and room #)": "Engineering 5319",
         "Year started at GMU": "2004",
+        "Undergrad from": "Huazhong University of Science and Technology",
+        "Undergrad Year": "",
+        "MS from": "Huazhong University of Science and Technology",
+        "MS Year": "",
         "PhD from": "William & Mary",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Missy",
@@ -260,10 +351,17 @@
         "Research interests": "Human-unmanned Vehicle Interaction, Human-autonomous System Collaboration, Human-systems Engineering, Public Policy Implications of Unmanned Vehicles, Ethical and Social Impact of Technology",
         "Office (building and room #)": "Engineering 2705",
         "Year started at GMU": "2023",
-        "PhD from": "University of Virginia (2004)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "University of Virginia",
+        "PhD Year": "2004",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Sanchari",
@@ -279,10 +377,17 @@
         "Research interests": "Security and Privacy, Human-Computer Interaction (HCI), Artificial Intelligence (AI), Machine Learning (ML)",
         "Office (building and room #)": "Engr #3234",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Indiana University Bloomington",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Kenneth",
@@ -298,10 +403,17 @@
         "Research interests": "Evolutionary Computation",
         "Office (building and room #)": "",
         "Year started at GMU": "1984",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Michigan",
+        "PhD Year": "1975",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Ping",
@@ -317,10 +429,17 @@
         "Research interests": "Databases and data mining",
         "Office (building and room #)": "Engineering 4608",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Texas at Dallas",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-04",
+        "Verified": ""
     },
     {
         "First Name": "Archange",
@@ -336,10 +455,17 @@
         "Research interests": "Explainable AI, Neuro-Symbolic Learning, and Natural Language Processing",
         "Office (building and room #)": "Engineering 3241",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Emily",
@@ -355,10 +481,17 @@
         "Research interests": "",
         "Office (building and room #)": "Buchanan Hall D215",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Socrates",
@@ -374,10 +507,17 @@
         "Research interests": "Computational cognitive science, human and computer vision, and the multifaceted process of learning",
         "Office (building and room #)": "Engineering 4508",
         "Year started at GMU": "",
+        "Undergrad from": "University of Ioannina",
+        "Undergrad Year": "",
+        "MS from": "Brown University",
+        "MS Year": "",
         "PhD from": "Brown University",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Carlotta",
@@ -393,10 +533,17 @@
         "Research interests": "Machine Learning (ML), Data Mining",
         "Office (building and room #)": "Engineering 4424",
         "Year started at GMU": "2002",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of California, Riverside",
+        "PhD Year": "2002",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Zoran",
@@ -412,10 +559,17 @@
         "Research interests": "Computer Vision, AI",
         "Office (building and room #)": "Vernon Smith 1309",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "University of Sarajevo, Bosnia and Herzegovina",
+        "MS Year": "1986",
         "PhD from": "University of Maryland",
+        "PhD Year": "1995",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Joshua",
@@ -431,10 +585,17 @@
         "Research interests": "",
         "Office (building and room #)": "Buchanan Hall D215",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Sapna",
@@ -450,10 +611,17 @@
         "Research interests": "Machine Learning (ML), Internet-of-Things, Security",
         "Office (building and room #)": "Research 356",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Jamia Millia Islamia, India",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Yotam",
@@ -469,10 +637,17 @@
         "Research interests": "Computer Graphics, Human-Computer Interaction (HCI)",
         "Office (building and room #)": "FUSE 6328",
         "Year started at GMU": "2012",
+        "Undergrad from": "Brown University",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "New York University (NYU)",
+        "PhD Year": "2009",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Hassan",
@@ -488,10 +663,17 @@
         "Research interests": "Human-Centered Computing",
         "Office (building and room #)": "",
         "Year started at GMU": "1989",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Imperial College",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "David",
@@ -507,10 +689,17 @@
         "Research interests": "Human-Computer Interaction (HCI), Software Engineering (SE)",
         "Office (building and room #)": "Buchanan D215F",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Sara-Lynn",
@@ -526,10 +715,17 @@
         "Research interests": "Computer science education, computer science policy implementation",
         "Office (building and room #)": "Buchanan Hall D217E",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Washington University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Dov",
@@ -545,10 +741,17 @@
         "Research interests": "Cryptography, Security",
         "Office (building and room #)": "Engineering 5352",
         "Year started at GMU": "2015",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Maryland",
-        "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "PhD Year": "2010",
+        "Postdoc from": "Columbia University",
+        "Postdoc Year": "2012",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Henry",
@@ -564,10 +767,17 @@
         "Research interests": "Artificial Intelligence, Natural Language Processing (NLP)",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Xu (Ethan)",
@@ -583,10 +793,17 @@
         "Research interests": "Decision Guidance, Smart Manufacturing",
         "Office (building and room #)": "Engineering 4446",
         "Year started at GMU": "2025",
-        "PhD from": "George Mason University (2025)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "George Mason University",
+        "PhD Year": "2025",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Bo",
@@ -602,10 +819,17 @@
         "Research interests": "Computer Networks, Mobile Computing, Security, Privacy",
         "Office (building and room #)": "Engineering 5324",
         "Year started at GMU": "2020",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Maryland",
+        "PhD Year": "2012",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Christopher",
@@ -621,10 +845,17 @@
         "Research interests": "",
         "Office (building and room #)": "Nguyen Engineering 4300",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Sungsoo (Ray)",
@@ -640,10 +871,17 @@
         "Research interests": "Data Science, Health Informatics, HCC",
         "Office (building and room #)": "Research Hall 433",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Washington",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Imekom",
@@ -659,10 +897,17 @@
         "Research interests": "",
         "Office (building and room #)": "Nguyen Engineering 4300",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Wassim",
@@ -678,10 +923,17 @@
         "Research interests": "DATA SCIENCE AND AI IN NETWORKING AND CYBER SECURITY, CLOUD COMPUTING SECURITY AND PRIVACY, CLOUD VISUALIZATION, ENERGY EFFICIENCY, AND RESOURCE ALLOCATION",
         "Office (building and room #)": "Buchanan Hall D217I",
         "Year started at GMU": "2022",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "American University of Beirut",
+        "PhD Year": "2012",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Michael",
@@ -697,10 +949,17 @@
         "Research interests": "Quantum Computing",
         "Office (building and room #)": "Exploratory 2220",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Maryland",
+        "PhD Year": "2016",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Brittany",
@@ -716,10 +975,17 @@
         "Research interests": "Software Engineering (SE), Ethics in AI",
         "Office (building and room #)": "Engineering 4440",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "North Carolina State University",
-        "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "PhD Year": "2017",
+        "Postdoc from": "University of Massachusetts Amherst",
+        "Postdoc Year": "2020",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Aditya",
@@ -735,10 +1001,17 @@
         "Research interests": "Educational Technology, HCC, Engineering Education",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "Delhi College of Engineering",
+        "Undergrad Year": "1998",
+        "MS from": "Georgia Institute of Technology",
+        "MS Year": "2002",
         "PhD from": "Stanford University",
+        "PhD Year": "2007",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Shahnaz",
@@ -754,10 +1027,17 @@
         "Research interests": "Educational technology, game-based learning, virtual and online learning environments, computer science education",
         "Office (building and room #)": "Engineering 2706",
         "Year started at GMU": "",
-        "PhD from": "George Mason University",
+        "Undergrad from": "George Mason University",
+        "Undergrad Year": "2005",
+        "MS from": "Bournemouth University",
+        "MS Year": "2006",
+        "PhD from": "Colorado Technical University",
+        "PhD Year": "2015",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Parastoo",
@@ -773,10 +1053,17 @@
         "Research interests": "Data mining, Machine Learning, Artificial Intelligence",
         "Office (building and room #)": "Research Hall 361",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Larry",
@@ -792,10 +1079,17 @@
         "Research interests": "Databases, Data Mining, Social Networks",
         "Office (building and room #)": "",
         "Year started at GMU": "1986",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Purdue University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Khaled",
@@ -811,10 +1105,17 @@
         "Research interests": "Computer Architecture Security, Malware Detection, Adversarial ML",
         "Office (building and room #)": "ENGR 3223",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of California, Riverside",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Angkul",
@@ -830,10 +1131,17 @@
         "Research interests": "Parallel and distributed systems, computer architecture, performance optimization",
         "Office (building and room #)": "Engineering 4428",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Louisiana at Lafayette",
+        "PhD Year": "1999",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Evgenios",
@@ -849,10 +1157,17 @@
         "Research interests": "Security",
         "Office (building and room #)": "Research Hall 352",
         "Year started at GMU": "",
+        "Undergrad from": "University of Crete",
+        "Undergrad Year": "",
+        "MS from": "University of Crete",
+        "MS Year": "",
         "PhD from": "Brown University",
-        "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "PhD Year": "",
+        "Postdoc from": "UC Berkeley",
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Jana",
@@ -868,10 +1183,17 @@
         "Research interests": "Computer Vision, Robotics",
         "Office (building and room #)": "Engineering 4444",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Pennsylvania",
+        "PhD Year": "1996",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Wing",
@@ -887,10 +1209,17 @@
         "Research interests": "Software Engineering (SE), Software Testing, AI",
         "Office (building and room #)": "Engineering 4442",
         "Year started at GMU": "2021",
-        "PhD from": "UIUC (2021)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "UIUC",
+        "PhD Year": "2021",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Thomas",
@@ -906,10 +1235,17 @@
         "Research interests": "Software Engineering (SE), Human-Computer Interaction (HCI)",
         "Office (building and room #)": "Engineering 5313",
         "Year started at GMU": "2015",
+        "Undergrad from": "University of Illinois at Urbana-Champaign",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Carnegie Mellon University",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Tonya",
@@ -925,10 +1261,17 @@
         "Research interests": "",
         "Office (building and room #)": "Nguyen Engineering 4300",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Fei",
@@ -944,10 +1287,17 @@
         "Research interests": "Algorithms, Theory",
         "Office (building and room #)": "Engineering 5340",
         "Year started at GMU": "2007",
+        "Undergrad from": "Jilin University",
+        "Undergrad Year": "",
+        "MS from": "Columbia University",
+        "MS Year": "",
         "PhD from": "Columbia University",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Jessica",
@@ -963,10 +1313,17 @@
         "Research interests": "Data Mining, Data Analytics, Machine Learning (ML)",
         "Office (building and room #)": "Engineering 4418",
         "Year started at GMU": "2005",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "University of California, Riverside",
+        "MS Year": "",
         "PhD from": "University of California, Riverside",
+        "PhD Year": "2005",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Mingrui",
@@ -982,10 +1339,17 @@
         "Research interests": "Machine Learning (ML), Optimization, Deep Learning",
         "Office (building and room #)": "Engineering 5322",
         "Year started at GMU": "2021",
+        "Undergrad from": "Shanghai Jiao Tong University",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Iowa",
+        "PhD Year": "2020",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Zhicong",
@@ -1001,10 +1365,17 @@
         "Research interests": "human-computer interaction(HCI), social computing, computational social science, machine learning (ML)",
         "Office (building and room #)": "Engineering 4427",
         "Year started at GMU": "2025",
-        "PhD from": "University of Toronto (2020)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "University of Toronto",
+        "PhD Year": "2020",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Sean",
@@ -1020,10 +1391,17 @@
         "Research interests": "stochastic optimization and metaheuristics, evolutionary computation, multi-agent systems and multi-agent learning, autonomous robotics and robot swarms, simulation development, music technology, computational creativity",
         "Office (building and room #)": "Engineering 4451",
         "Year started at GMU": "2000",
-        "PhD from": "University of Maryland (2000)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "University of Maryland",
+        "PhD Year": "2000",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Juan (Judy)",
@@ -1039,10 +1417,17 @@
         "Research interests": "",
         "Office (building and room #)": "Engineering 5328",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "2012",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Lannan (Lisa)",
@@ -1058,10 +1443,17 @@
         "Research interests": "Software Security, IoT Security, Mobile Security",
         "Office (building and room #)": "Engineering 5332",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Pennsylvania State University",
+        "PhD Year": "2017",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Kevin",
@@ -1077,10 +1469,17 @@
         "Research interests": "Artificial Intelligence (AI), Machine Learning (ML)",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Washington",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Tamara",
@@ -1096,10 +1495,17 @@
         "Research interests": "Artificial Intelligence, Computer Law & Ethics",
         "Office (building and room #)": "Engineering 5387",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Andrian",
@@ -1115,10 +1521,17 @@
         "Research interests": "Software Engineering (SE)",
         "Office (building and room #)": "Engineering 5323",
         "Year started at GMU": "",
+        "Undergrad from": "University of Memphis; Babeș-Bolyai University (Cluj-Napoca, Romania)",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Kent State University",
+        "PhD Year": "2003",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Wassim (Wes)",
@@ -1134,10 +1547,17 @@
         "Research interests": "Software Engineering (SE), Software Testing",
         "Office (building and room #)": "Engineering 5351",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Case Western Reserve University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Nora",
@@ -1153,10 +1573,17 @@
         "Research interests": "AI/ML, Security, HCC, Digital Privacy",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Drexel University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Daniel",
@@ -1172,10 +1599,17 @@
         "Research interests": "Performance Evaluation, Autonomic Computing",
         "Office (building and room #)": "",
         "Year started at GMU": "1992",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "UCLA",
+        "PhD Year": "1978",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Shima",
@@ -1191,10 +1625,17 @@
         "Research interests": "Cyber-physical systems, Game theory, Smart cities",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "K.N. Toosi University of Technology, Tehran, Iran",
+        "MS Year": "",
         "PhD from": "University of Tennessee, Knoxville",
-        "Postdoc from": "",
+        "PhD Year": "",
+        "Postdoc from": "University of South Florida",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Thema",
@@ -1210,10 +1651,17 @@
         "Research interests": "AI Innovation Policy (Joint w/ Schar)",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "Howard University",
+        "Undergrad Year": "",
+        "MS from": "Howard University",
+        "MS Year": "",
         "PhD from": "Georgia Tech",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Kristi",
@@ -1229,10 +1677,17 @@
         "Research interests": "",
         "Office (building and room #)": "Virtual",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Amihai",
@@ -1248,10 +1703,17 @@
         "Research interests": "Databases, Information Systems",
         "Office (building and room #)": "",
         "Year started at GMU": "1990",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Pennsylvania",
+        "PhD Year": "1981",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Vivian",
@@ -1267,10 +1729,17 @@
         "Research interests": "Human-Computer Interaction (HCI), Wearable Computing, Usable Privacy",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "University of São Paulo",
+        "Undergrad Year": "",
+        "MS from": "University of São Paulo",
+        "MS Year": "",
         "PhD from": "Catholic University of Louvain",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Hamza",
@@ -1286,29 +1755,17 @@
         "Research interests": "CS Education, Computer Systems",
         "Office (building and room #)": "Buchanan Hall D217F",
         "Year started at GMU": "",
+        "Undergrad from": "George Mason University",
+        "Undergrad Year": "2018",
+        "MS from": "George Mason University",
+        "MS Year": "2020",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
-    },
-    {
-        "First Name": "Radu",
-        "Last Name": "Negulescu",
-        "gmu email/userid": "rnegules@gmu.edu",
-        "Picture": "https://cs.gmu.edu/sites/default/files/2023-08/Radu-Negulescu-1x1_.jpg",
-        "Tenure-Track/Teaching/Staff": "Teaching",
-        "Rank": "Associate Professor",
-        "Dept Role": "",
-        "Website": "",
-        "LinkedIn": "",
-        "Google Scholar": "",
-        "Research interests": "",
-        "Office (building and room #)": "Engineering 4453",
-        "Year started at GMU": "",
-        "PhD from": "University of Waterloo",
-        "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "ThanhVu (Vu)",
@@ -1324,10 +1781,17 @@
         "Research interests": "Software Engineering (SE), Formal Methods, Programming Languages",
         "Office (building and room #)": "Engineering 4430",
         "Year started at GMU": "2021",
-        "PhD from": "University of New Mexico (2014)",
-        "Postdoc from": "University of Maryland (2016)",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "University of New Mexico",
+        "PhD Year": "2014",
+        "Postdoc from": "University of Maryland",
+        "Postdoc Year": "2016",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Lauren",
@@ -1343,10 +1807,17 @@
         "Research interests": "",
         "Office (building and room #)": "Nguyen Engineering 4300",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "John",
@@ -1362,10 +1833,17 @@
         "Research interests": "CS Education, Embedded Systems",
         "Office (building and room #)": "Engineering 5335",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Parth",
@@ -1381,10 +1859,17 @@
         "Research interests": "Wireless Networks, Mobile Computing, IoT",
         "Office (building and room #)": "Engineering 5349",
         "Year started at GMU": "2016",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "North Carolina State University",
+        "PhD Year": "2012",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Robert",
@@ -1400,10 +1885,17 @@
         "Research interests": "Software Engineering (SE), Real-Time Systems",
         "Office (building and room #)": "Engineering 4417",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Dieter",
@@ -1419,10 +1911,17 @@
         "Research interests": "Geography and Geoinformation Science",
         "Office (building and room #)": "",
         "Year started at GMU": "2012",
+        "Undergrad from": "Johannes Kepler Universität Linz",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Aalborg University",
+        "PhD Year": "2000",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Michele",
@@ -1438,10 +1937,17 @@
         "Research interests": "",
         "Office (building and room #)": "Nguyen Engineering 4300",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "David",
@@ -1457,10 +1963,17 @@
         "Research interests": "HRI, End-User Development, AI Planning",
         "Office (building and room #)": "Fuse 7310",
         "Year started at GMU": "2025",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Wisconsin-Madison",
-        "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "PhD Year": "2022",
+        "Postdoc from": "U.S. Naval Research Laboratory",
+        "Postdoc Year": "2025",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Beth",
@@ -1476,10 +1989,17 @@
         "Research interests": "",
         "Office (building and room #)": "Nguyen Engineering 4300",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Michael",
@@ -1495,10 +2015,17 @@
         "Research interests": "Software engineering, Agile in federal government, disciplined Agile",
         "Office (building and room #)": "Engineering 4417",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Dana",
@@ -1514,10 +2041,17 @@
         "Research interests": "theory, Parallel and Distributed Systems",
         "Office (building and room #)": "Engineering 5320",
         "Year started at GMU": "1994",
-        "PhD from": "UIUC (1984)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "UIUC",
+        "PhD Year": "1984",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "David",
@@ -1533,10 +2067,17 @@
         "Research interests": "Software Engineering (SE), Object Technology",
         "Office (building and room #)": "",
         "Year started at GMU": "",
-        "PhD from": "University of Iowa (1970)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "University of Iowa",
+        "PhD Year": "1970",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Katherine (Raven)",
@@ -1552,10 +2093,17 @@
         "Research interests": "CS Education, Robotics",
         "Office (building and room #)": "Buchanan Hall D217A",
         "Year started at GMU": "2015",
+        "Undergrad from": "University of Maryland University College",
+        "Undergrad Year": "2007",
+        "MS from": "George Mason University",
+        "MS Year": "2012",
         "PhD from": "George Mason University",
+        "PhD Year": "2020",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Sanjeev",
@@ -1571,10 +2119,17 @@
         "Research interests": "Computer Systems, Networks, Mobile Computing",
         "Office (building and room #)": "Engineering 5305",
         "Year started at GMU": "1993",
-        "PhD from": "University of Maryland (1993)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "University of Maryland",
+        "PhD Year": "1993",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Maha",
@@ -1590,10 +2145,17 @@
         "Research interests": "Network security, machine learning, edge computing, Internet of Things (IoT), software-defined networking",
         "Office (building and room #)": "Buchanan Hall D215I",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "American University of Beirut",
+        "PhD Year": "2018",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Amarda",
@@ -1609,10 +2171,17 @@
         "Research interests": "AI, Bioinformatics, Computational Biology",
         "Office (building and room #)": "Engineering 4452",
         "Year started at GMU": "2008",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Rice University",
+        "PhD Year": "2008",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Robert",
@@ -1628,10 +2197,17 @@
         "Research interests": "Networking, Distributed Systems",
         "Office (building and room #)": "",
         "Year started at GMU": "1994",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Pittsburgh",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Gurdip",
@@ -1647,10 +2223,17 @@
         "Research interests": "Real-time embedded systems, sensor networks, network protocols, distributed computing",
         "Office (building and room #)": "",
         "Year started at GMU": "2023",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "SUNY Stony Brook",
+        "MS Year": "1989",
         "PhD from": "SUNY Stony Brook",
+        "PhD Year": "1991",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Mark",
@@ -1666,10 +2249,17 @@
         "Research interests": "CS Education, Language Interpretation",
         "Office (building and room #)": "Buchanan D217G",
         "Year started at GMU": "2011",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "University of Kansas",
+        "MS Year": "",
         "PhD from": "University of Kansas",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Arun",
@@ -1685,10 +2275,17 @@
         "Research interests": "Computer Vision, Security",
         "Office (building and room #)": "",
         "Year started at GMU": "1987",
-        "PhD from": "",
+        "Undergrad from": "IIT Delhi",
+        "Undergrad Year": "",
+        "MS from": "Carnegie Mellon University",
+        "MS Year": "",
+        "PhD from": "Carnegie Mellon University",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Shvetha",
@@ -1704,10 +2301,17 @@
         "Research interests": "Software Engineering (SE), Agile",
         "Office (building and room #)": "Buchanan Hall D217H",
         "Year started at GMU": "",
+        "Undergrad from": "Anna University",
+        "Undergrad Year": "",
+        "MS from": "Virginia Tech",
+        "MS Year": "",
         "PhD from": "Virginia Tech",
+        "PhD Year": "2013",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Gregory",
@@ -1723,10 +2327,17 @@
         "Research interests": "Robotics, Machine Learning (ML)",
         "Office (building and room #)": "Research 169",
         "Year started at GMU": "2020",
+        "Undergrad from": "Cornell University",
+        "Undergrad Year": "2013",
+        "MS from": "MIT",
+        "MS Year": "2015",
         "PhD from": "MIT",
+        "PhD Year": "2020",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Rahul",
@@ -1742,10 +2353,17 @@
         "Research interests": "Databases, Graph Analytics",
         "Office (building and room #)": "Buchanan Hall D217D",
         "Year started at GMU": "2025",
+        "Undergrad from": "Bangalore University, India",
+        "Undergrad Year": "",
+        "MS from": "Wayne State University",
+        "MS Year": "",
         "PhD from": "Wayne State University",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Alyssa",
@@ -1761,10 +2379,17 @@
         "Research interests": "",
         "Office (building and room #)": "Nguyen Engineering 4300",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Pearl",
@@ -1780,10 +2405,17 @@
         "Research interests": "Game Programming, CS Education",
         "Office (building and room #)": "",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Xinyuan (Frank)",
@@ -1799,10 +2431,17 @@
         "Research interests": "computer networks, security",
         "Office (building and room #)": "Engineering 5331",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "North Carolina State University",
+        "PhD Year": "2004",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Harry",
@@ -1818,10 +2457,17 @@
         "Research interests": "Educational Technology",
         "Office (building and room #)": "",
         "Year started at GMU": "1987",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "UC Irvine",
+        "PhD Year": "1975",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Qi",
@@ -1837,10 +2483,17 @@
         "Research interests": "Bioengineering, Computational Neuroscience",
         "Office (building and room #)": "Engineering 5348",
         "Year started at GMU": "",
+        "Undergrad from": "Beijing Institute of Technology",
+        "Undergrad Year": "",
+        "MS from": "University of British Columbia",
+        "MS Year": "",
         "PhD from": "Rutgers University",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Elizabeth",
@@ -1856,10 +2509,17 @@
         "Research interests": "Systems Software, Compilers, Distributed Computing",
         "Office (building and room #)": "Engineering 4103",
         "Year started at GMU": "1994",
+        "Undergrad from": "William & Mary",
+        "Undergrad Year": "",
+        "MS from": "William & Mary",
+        "MS Year": "",
         "PhD from": "University of Maryland",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16"
+        "Last Verified": "2026-09-16",
+        "Verified": ""
     },
     {
         "First Name": "Duminda",
@@ -1875,10 +2535,17 @@
         "Research interests": "Cybersecurity, Cyber-Physical Systems",
         "Office (building and room #)": "Research Hall 330",
         "Year started at GMU": "1999",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Minnesota",
+        "PhD Year": "1997",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Vernell",
@@ -1894,10 +2561,17 @@
         "Research interests": "",
         "Office (building and room #)": "Buchanan Hall D215E",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Xuesu",
@@ -1913,10 +2587,17 @@
         "Research interests": "Field robotics, motion planning, machine learning (ML)",
         "Office (building and room #)": "Fuse 3311",
         "Year started at GMU": "2022",
-        "PhD from": "Texas A&M University (2019)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "Texas A&M University",
+        "PhD Year": "2019",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Lishan",
@@ -1932,10 +2613,17 @@
         "Research interests": "System Reliability, GPUs, Autonomous Systems",
         "Office (building and room #)": "Engineering 4610",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "William & Mary",
+        "PhD Year": "2022",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Shuochao",
@@ -1951,10 +2639,17 @@
         "Research interests": "Artificial Intelligence (AI)",
         "Office (building and room #)": "Engineering 5327",
         "Year started at GMU": "2020",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "UIUC",
+        "PhD Year": "",
         "Postdoc from": "",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Ziyu",
@@ -1970,10 +2665,17 @@
         "Research interests": "Natural Language Processing (NLP), Large Language Model, Interpretability",
         "Office (building and room #)": "Research Hall 407",
         "Year started at GMU": "2021",
+        "Undergrad from": "Beijing University of Posts and Telecommunications",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Ohio State University",
+        "PhD Year": "2021",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Jinwei",
@@ -1989,10 +2691,17 @@
         "Research interests": "Computer vision, computational imaging, computer graphics",
         "Office (building and room #)": "Engineering 4422",
         "Year started at GMU": "2021",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Delaware",
+        "PhD Year": "2014",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Binqian (Bella)",
@@ -2008,10 +2717,17 @@
         "Research interests": "Machine Learning (ML), Geological Problems",
         "Office (building and room #)": "Buchanan Hall D215J",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "University of Pittsburgh",
+        "MS Year": "",
         "PhD from": "University of Texas at Arlington",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Fang-Yi",
@@ -2027,10 +2743,17 @@
         "Research interests": "machine learning (ML), artificial intelligence (AI), and economics",
         "Office (building and room #)": "Research 350",
         "Year started at GMU": "2022",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "University of Michigan",
+        "PhD Year": "",
         "Postdoc from": "Harvard University",
+        "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Craig",
@@ -2046,10 +2769,17 @@
         "Research interests": "Computer Graphics, VR, AI",
         "Office (building and room #)": "Fuse 6327",
         "Year started at GMU": "2019",
+        "Undergrad from": "HKUST",
+        "Undergrad Year": "",
+        "MS from": "HKUST",
+        "MS Year": "",
         "PhD from": "UCLA",
+        "PhD Year": "2013",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Ahmed Bin",
@@ -2065,10 +2795,17 @@
         "Research interests": "Evolutionary algorithms, computational biology and bioinformatics, artificial intelligence, and machine learning",
         "Office (building and room #)": "Engineering 4455",
         "Year started at GMU": "",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "George Mason University",
+        "PhD Year": "2021",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Qiang",
@@ -2084,10 +2821,17 @@
         "Research interests": "Computer systems, Security, Internet of Things (IoT), mobile computing",
         "Office (building and room #)": "Engineering 4448",
         "Year started at GMU": "2023",
-        "PhD from": "Penn State University (2014)",
+        "Undergrad from": "",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
+        "PhD from": "Penn State University",
+        "PhD Year": "2014",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Xiaokuan",
@@ -2103,10 +2847,17 @@
         "Research interests": "System Security, Privacy",
         "Office (building and room #)": "Research 357",
         "Year started at GMU": "2022",
+        "Undergrad from": "Shanghai Jiao Tong University",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Ohio State University",
-        "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "PhD Year": "2021",
+        "Postdoc from": "Georgia Institute of Technology",
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Yutao",
@@ -2122,10 +2873,17 @@
         "Research interests": "Compilers, Program Analysis and Optimizations, Programming Languages",
         "Office (building and room #)": "Engineering 4433",
         "Year started at GMU": "2014",
+        "Undergrad from": "Nanjing University",
+        "Undergrad Year": "1997",
+        "MS from": "University of Rochester",
+        "MS Year": "2002",
         "PhD from": "University of Rochester",
+        "PhD Year": "2005",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Keren",
@@ -2141,10 +2899,17 @@
         "Research interests": "High performance computing, parallel algorithms, program analysis, Machine Learning (ML)",
         "Office (building and room #)": "Engineering 5315",
         "Year started at GMU": "2023",
-        "PhD from": "Rice University (2022)",
+        "Undergrad from": "Yunnan University",
+        "Undergrad Year": "2014",
+        "MS from": "Institute of Computing Technology, Chinese Academy of Sciences",
+        "MS Year": "2017",
+        "PhD from": "Rice University",
+        "PhD Year": "2022",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     },
     {
         "First Name": "Ziwei",
@@ -2160,9 +2925,16 @@
         "Research interests": "Artificial Intelligence (AI), Machine Learning (ML), Data Mining",
         "Office (building and room #)": "Research Hall 406",
         "Year started at GMU": "2022",
+        "Undergrad from": "Wuhan University",
+        "Undergrad Year": "",
+        "MS from": "",
+        "MS Year": "",
         "PhD from": "Texas A&M University",
+        "PhD Year": "",
         "Postdoc from": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04"
+        "Postdoc Year": "",
+        "Last Modified": "2026-09-11",
+        "Last Verified": "2026-09-11",
+        "Verified": ""
     }
 ]

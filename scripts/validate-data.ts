@@ -14,10 +14,17 @@ const facultyFields = [
     'Research interests',
     'Office (building and room #)',
     'Year started at GMU',
+    'Undergrad from',
+    'Undergrad Year',
+    'MS from',
+    'MS Year',
     'PhD from',
+    'PhD Year',
     'Postdoc from',
+    'Postdoc Year',
     'Last Modified',
     'Last Verified',
+    'Verified',
 ];
 
 const studentFields = [
@@ -39,6 +46,7 @@ const studentFields = [
     'Google Scholar',
     'Last Modified',
     'Last Verified',
+    'Verified',
 ];
 
 const awardFields = ['Name', 'Category', 'Award', 'Year', 'Former'];
@@ -127,12 +135,18 @@ faculty.forEach((row, index) => {
     }
     if (type && !facultyTypes.has(type)) errors.push(`faculty.json:${line}: invalid faculty type "${type}"`);
     if (startYear && !/^\d{4}$/.test(startYear)) errors.push(`faculty.json:${line}: invalid start year "${startYear}"`);
+    for (const field of ['Undergrad Year', 'MS Year', 'PhD Year', 'Postdoc Year']) {
+        const year = value(row, field);
+        if (year && !/^\d{4}$/.test(year)) errors.push(`faculty.json:${line}: invalid ${field} "${year}"`);
+    }
     if (!validHttpUrl(picture)) errors.push(`faculty.json:${line}: invalid picture URL "${picture}"`);
     if (!validHttpUrl(website, true)) errors.push(`faculty.json:${line}: invalid website URL "${website}"`);
     if (!validHttpUrl(linkedin, true)) errors.push(`faculty.json:${line}: invalid linkedin URL "${linkedin}"`);
     if (!validHttpUrl(scholar, true)) errors.push(`faculty.json:${line}: invalid scholar URL "${scholar}"`);
     if (lastModified && !/^\d{4}-\d{2}-\d{2}$/.test(lastModified)) errors.push(`faculty.json:${line}: invalid Last Modified date "${lastModified}"`);
     if (lastVerified && !/^\d{4}-\d{2}-\d{2}$/.test(lastVerified)) errors.push(`faculty.json:${line}: invalid Last Verified date "${lastVerified}"`);
+    const verified = value(row, 'Verified');
+    if (verified && verified !== 'Yes') errors.push(`faculty.json:${line}: Verified must be "Yes" or blank`);
 });
 
 students.forEach((row, index) => {
@@ -155,6 +169,8 @@ students.forEach((row, index) => {
     if (!validHttpUrl(scholar, true)) errors.push(`students.json:${line}: invalid scholar URL "${scholar}"`);
     if (lastModified && !/^\d{4}-\d{2}-\d{2}$/.test(lastModified)) errors.push(`students.json:${line}: invalid Last Modified date "${lastModified}"`);
     if (lastVerified && !/^\d{4}-\d{2}-\d{2}$/.test(lastVerified)) errors.push(`students.json:${line}: invalid Last Verified date "${lastVerified}"`);
+    const verified = value(row, 'Verified');
+    if (verified && verified !== 'Yes') errors.push(`students.json:${line}: Verified must be "Yes" or blank`);
 });
 
 const awardKeys = new Set();
