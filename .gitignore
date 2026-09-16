@@ -3,3 +3,6 @@ dist
 .DS_Store
 cspicks/
 csawards/
+mails/
+public/people/
+public/sitemap.xml

@@ -34,12 +34,11 @@ profiles (LinkedIn, Google Scholar, personal pages) — see
 
 ```bash
 npm install
-npm run dev
-```
-
-### Local preview
-```
-npm run build && npm run preview
+npm run dev       # start the Vite development server
+npm run sync      # sync shared CSS, search kit, and assets from vietprofs
+npm test          # validate datasets and run tests
+npm run build     # sync, typecheck, test, and build the production site
+npm run preview   # preview the production build
 ```
 
 ## Updating the Data

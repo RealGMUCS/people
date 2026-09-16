@@ -1,10 +1,10 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "lib": ["ES2022"],
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM"],
     "types": ["node"]
   },
-  "include": ["scripts/**/*.ts", "tests/**/*.ts", "vite.config.ts"]
+  "include": ["src/vite-env.d.ts", "scripts/**/*.ts", "tests/**/*.ts", "vite.config.ts"]
 }

@@ -2,369 +2,337 @@
  * GMU CS Directory — overrides & people-specific components
  *
  * The design-system base (tokens, reset, body, .entry/roster rows, .tags,
- * search components, form elements, etc.) comes from:
- *   https://vietprofs.roars.dev/profile.css
+ * search components, form elements, insights, etc.) comes from vietprofs'
+ * master stylesheet, synced to src/profile.css.
  *
- * This file loads after and only adds or overrides what's specific to this site.
+ * This file loads after and only adds what is specific to GMU CS.
  */
+@import './profile.css';
 
-/* ─── Token overrides ─────────────────────────────────────────────────────── */
-:root {
-    --bamboo-green: #000000;
-    --bamboo-green-hover: #000000;
-    --accent: #333333;
+/* ─── GMU CS specific components & enhancements ────────────────────────── */
+
+/* Verified badge — marks a record confirmed via direct correspondence */
+.tag-verified {
+  border-color: #2f855a;
+  color: #276749;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bamboo-green: #36c5f0;
-        --bamboo-green-hover: #1d9bd1;
-        --accent: #36c5f0;
-    }
+  .tag-verified {
+    border-color: #48bb78;
+    color: #9ae6b4;
+  }
 }
 
-/* Plain white background (vietprofs has a bamboo grid) */
-body {
-    background-image: none;
-    min-height: 100vh;
+/* Email shown as a canvas-drawn image (see common.ts activateEmailBadges) */
+.email-badge {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  vertical-align: middle;
 }
 
-/* Wider container */
-#app {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+.email-badge canvas {
+  pointer-events: none;
 }
 
-@media (max-width: 640px) {
-    #app { padding: 2rem 1rem; }
-    h1 { font-size: 2.5rem; }
+/* Navigation tabs in header */
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-
-/* ─── Header ──────────────────────────────────────────────────────────────── */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-@media (max-width: 760px) {
-    header { align-items: flex-start; flex-direction: column; gap: 0.75rem; }
-}
-
-h1 {
-    font-family: var(--font-heading);
-    font-size: 2.4rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    margin: 0;
-    color: var(--text-primary);
-}
-
-.title-row { display: flex; align-items: center; gap: 0.5rem; }
-.site-title-link { color: inherit; text-decoration: none; }
-
-.top-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
 
 .top-nav a {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.15s ease;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .top-nav a:hover,
-.top-nav a.active { color: var(--text-primary); }
-
-/* ─── Page links (awards / submit strip) ─────────────────────────────────── */
-.page-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    margin-bottom: 1.25rem;
-    font-size: 0.9rem;
+.top-nav a.active {
+  color: var(--text-primary);
+  background: var(--hover-bg);
 }
 
-.page-links a { color: var(--text-secondary); text-decoration: none; font-weight: 600; }
-.page-links a:hover, .page-links a.active { color: var(--text-primary); }
-
-/* ─── Search — people uses pill shape + magnifier icon (overrides vietprofs) */
-.search-section { max-width: 800px; margin: 0 auto 2rem; }
-
-.search-container {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 1.5rem;
-    position: relative;
+.page-link-btn {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
-.search-input-shell {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(0, 0, 0, .05) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=) no-repeat 14px center;
-    border-radius: 3em;
-    height: 3em;
-    padding: 0 1.5em;
-    border: none;
+.page-link-btn:hover,
+.page-link-btn.active {
+  color: var(--text-primary);
+  border-color: var(--bamboo-green);
+  background: var(--hover-bg);
 }
 
-.search-input-shell:hover,
-.search-input-shell:focus-within { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
-
-.search-input-shell:focus-within { outline: 2px solid var(--focus-ring); outline-offset: 1px; }
-
-.search-input-shell input {
-    flex: 1;
-    min-width: 0;
-    height: 100%;
-    text-indent: 1em;
-    border: 0;
-    outline: none;
-    background: none;
-    cursor: text;
-    -webkit-appearance: none;
-    appearance: none;
-    font-size: 1.1rem;
-    font-family: inherit;
-    color: var(--text-primary);
+/* Active research interest/topic filter banner */
+.active-filter-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.45rem 0.85rem;
+  margin-bottom: 1rem;
+  background: var(--hover-bg);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--bamboo-green);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
-@media (prefers-color-scheme: dark) {
-    .search-input-shell {
-        background-color: rgba(255, 255, 255, .1);
-        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==);
-    }
+.active-filter-banner button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0 0.25rem;
+  line-height: 1;
 }
 
-/* Scope chip: solid accent background (vietprofs uses --tag-bg) */
-.search-scope-chip {
-    background: var(--bamboo-green);
-    color: var(--bg-color);
-    margin-left: 0;
-    padding: 0.25rem 0.6rem;
+.active-filter-banner button:hover {
+  color: var(--danger-color);
 }
 
-/* Help button: serif italic (vietprofs uses monospace) */
-.search-help-btn { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
-
-/* Filters: pill-shaped selects */
-.filters { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-
-.filter-group { display: flex; align-items: center; gap: 0.75rem; }
-
-.filter-group label {
-    font-weight: 500;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+/* Faculty entry extras */
+.faculty-email {
+  color: var(--bamboo-green);
+  text-decoration: none;
 }
 
-.field-select { padding: 0.45rem 2rem 0.45rem 0.9rem; border-radius: 20px; width: auto; }
-.field-select:hover { border-color: var(--accent); }
-
-/* "Try: …" example queries */
-.search-examples {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0.45rem;
-    min-height: 30px;
-    margin-top: 1.25rem;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
+.faculty-email:hover {
+  text-decoration: underline;
 }
 
-.search-examples-row { display: contents; }
-
-.search-examples button {
-    padding: 0.2rem 0.5rem;
-    color: var(--text-secondary);
-    background: transparent;
-    border: 0;
-    border-radius: 6px;
-    font: inherit;
-    text-decoration: underline;
-    text-decoration-color: var(--border-color);
-    text-underline-offset: 3px;
-    cursor: pointer;
-    transition: color 0.15s ease, background-color 0.15s ease;
+.advisees-link {
+  color: var(--bamboo-green);
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.search-examples button:hover { color: var(--text-primary); background: var(--hover-bg); }
-
-/* ─── Result count (centered, vietprofs default is left-aligned) ──────────── */
-.result-count { text-align: center; font-weight: 500; margin-bottom: 1.5rem; }
-.result-count a { color: var(--bamboo-green); text-decoration: none; font-weight: 600; }
-.result-count a:hover { text-decoration: underline; }
-
-/* ─── Faculty entry extras ────────────────────────────────────────────────── */
-/* Email link & advisees link inside .entry rows */
-.faculty-email { color: var(--bamboo-green); text-decoration: none; }
-.faculty-email:hover { text-decoration: underline; }
-
-.advisees-link { color: var(--bamboo-green); font-weight: 600; text-decoration: none; }
-.advisees-link:hover { text-decoration: underline; }
-
-/* ─── Command output (people: full border box; vietprofs: left-border only) ── */
-.command-output {
-    display: block;
-    margin-top: 0.65rem;
-    padding: 0.65rem 0.85rem;
-    border: 1px solid var(--border-color);
-    border-left: 3px solid var(--bamboo-green);
-    border-radius: 6px;
-    background: var(--tag-bg);
-    color: var(--bamboo-green);
-    font-size: 0.82rem;
-    overflow-wrap: anywhere;
+.advisees-link:hover {
+  text-decoration: underline;
 }
 
-/* ─── Awards view ─────────────────────────────────────────────────────────── */
-.awards-view { display: block; max-width: 820px; margin: 0 auto 2rem; }
+/* Awards view */
+.awards-view {
+  display: block;
+  max-width: 820px;
+  margin: 0 auto 2rem;
+}
 
-.award-category { margin-bottom: 2.25rem; }
+.award-category {
+  margin-bottom: 2.25rem;
+}
 
 .award-category-title {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.4rem;
-    margin-bottom: 0.85rem;
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
 }
 
 .award-count {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    background: var(--hover-bg);
-    border-radius: 999px;
-    padding: 0.05rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--hover-bg);
+  border-radius: var(--radius-full);
+  padding: 0.05rem 0.55rem;
 }
 
-.award-list { list-style: none; padding: 0; margin: 0; }
+.award-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .award-item {
-    display: grid;
-    grid-template-columns: minmax(9rem, 12rem) 1fr auto;
-    gap: 0.75rem;
-    align-items: baseline;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr auto;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.award-item:last-child { border-bottom: none; }
+.award-item:last-child {
+  border-bottom: none;
+}
 
-.award-person { font-weight: 600; color: var(--bamboo-green); text-decoration: none; }
-a.award-person:hover { text-decoration: underline; }
+.award-person {
+  font-weight: 600;
+  color: var(--bamboo-green);
+  text-decoration: none;
+}
+
+a.award-person:hover {
+  text-decoration: underline;
+}
 
 .award-person.former {
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-style: italic;
-    cursor: default;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-style: italic;
+  cursor: default;
 }
 
-.award-desc { color: var(--text-primary); }
-.award-year { color: var(--text-secondary); font-variant-numeric: tabular-nums; font-size: 0.9rem; white-space: nowrap; }
+.award-desc {
+  color: var(--text-primary);
+}
+
+.award-year {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
 
 @media (max-width: 560px) {
-    .award-item { grid-template-columns: 1fr auto; }
-    .award-desc { grid-column: 1 / -1; color: var(--text-secondary); font-size: 0.92rem; }
+  .award-item {
+    grid-template-columns: 1fr auto;
+  }
+
+  .award-desc {
+    grid-column: 1 / -1;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+  }
 }
 
-/* ─── Achievements (collapsible honors on faculty entries) ─────────────────── */
-.achievements-section { margin-top: 0.75rem; }
+/* Collapsible achievements on faculty cards */
+.achievements-section {
+  margin-top: 0.75rem;
+}
 
-.achievements-header { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; }
+.achievements-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
 
-.achievements-heading { font-size: 0.88rem; font-weight: 600; color: var(--text-primary); margin: 0; }
+.achievements-heading {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
 
-.achievements-toggle { font-size: 0.7rem; color: var(--text-secondary); transition: transform 0.3s ease; }
+.achievements-toggle {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+}
 
-.achievements-section:not(.collapsed) .achievements-toggle { transform: rotate(90deg); }
+.achievements-section:not(.collapsed) .achievements-toggle {
+  transform: rotate(90deg);
+}
 
-.achievements-list { margin: 0.5rem 0 0; overflow: hidden; max-height: 2000px; opacity: 1; transition: all 0.3s ease; }
+.achievements-list {
+  margin: 0.5rem 0 0;
+  overflow: hidden;
+  max-height: 2000px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
 
-.achievements-section.collapsed .achievements-list { max-height: 0; opacity: 0; margin-top: 0; }
+.achievements-section.collapsed .achievements-list {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
 
-.achievement-group { margin-bottom: 0.6rem; }
+.achievement-group {
+  margin-bottom: 0.6rem;
+}
 
 .achievement-cat {
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--bamboo-green);
-    margin-bottom: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bamboo-green);
+  margin-bottom: 0.15rem;
 }
 
-.achievement-group ul { margin: 0; padding-left: 1.2rem; list-style: disc; }
-
-.achievements-list li { font-size: 0.9rem; color: var(--text-primary); padding: 0.15rem 0; line-height: 1.4; }
-
-.achievement-year { color: var(--text-secondary); font-variant-numeric: tabular-nums; font-size: 0.85rem; }
-
-/* ─── Active research interest filter banner ───────────────────────────────── */
-.active-filter-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 0.6rem 1.2rem;
-    margin: 0 auto 1.5rem;
-    max-width: 500px;
-    background: var(--hover-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text-primary);
+.achievement-group ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
 }
 
-.active-filter-banner button { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text-secondary); }
-.active-filter-banner button:hover { color: var(--text-primary); }
+.achievements-list li {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  padding: 0.15rem 0;
+  line-height: 1.4;
+}
 
-/* ─── Students/Alumni: dissertation & location details ───────────────────── */
+.achievement-year {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+}
+
+/* Students/Alumni dissertation & location details */
 .entry-dissertation {
-    margin-top: 0.35rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    background: var(--hover-bg);
-    padding: 0.4rem 0.65rem;
-    border-left: 3px solid var(--bamboo-green);
-    border-radius: 0 6px 6px 0;
-    line-height: 1.4;
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  background: var(--hover-bg);
+  padding: 0.4rem 0.65rem;
+  border-left: 3px solid var(--bamboo-green);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.4;
 }
 
-.dissertation-label { font-weight: 600; color: var(--text-primary); }
+.dissertation-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
 
 .entry-location {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.2rem;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    cursor: pointer;
-    padding: 0.1rem 0.4rem;
-    border-radius: 4px;
-    background: var(--hover-bg);
-    transition: background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+  background: var(--hover-bg);
+  transition: background-color 0.15s ease;
 }
 
-.entry-location:hover { background: var(--tag-bg); color: var(--tag-text); }
+.entry-location:hover {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+}
 
 .tag-status {
     cursor: pointer;
@@ -397,35 +365,64 @@ a.award-person:hover { text-decoration: underline; }
 .insights-view { display: block; max-width: 820px; margin: 0 auto 2rem; }
 .insights-caption { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.25rem; }
 
-.stat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+/* Students insights view */
+.insights-view {
+  display: block;
+  max-width: 880px;
+  margin: 0 auto 2rem;
+}
 
-.stat-tile { padding: 1rem; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; }
-.stat-tile-value { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-primary); }
-.stat-tile-label { margin-top: 0.25rem; font-size: 0.8rem; color: var(--text-secondary); }
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
 
-.insights-section { margin-bottom: 2.25rem; }
-.insights-heading { font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.25rem; }
+.stat-tile {
+  padding: 0.9rem 0.75rem;
+  text-align: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
 
-/* ─── Submit form ─────────────────────────────────────────────────────────── */
-.home-link { color: inherit; text-decoration: none; }
+.stat-tile-value {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
 
-/* ─── CRT retro terminal theme ────────────────────────────────────────────── */
+.stat-tile-label {
+  margin-top: 0.3rem;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* CRT theme */
 .crt-mode {
-    --bg-color: #07100b;
-    --card-bg: #0b1710;
-    --text-primary: #b8ffd0;
-    --text-secondary: #83d99f;
-    --text-muted: #57966b;
-    --border-color: #20472d;
-    --hover-bg: #102719;
-    --tag-bg: #102319;
-    --tag-text: #8beaab;
-    --bamboo-green: #55d68b;
-    --bamboo-green-hover: #2e9e64;
-    --accent: #55d68b;
+  --bg-color: #07100b;
+  --card-bg: #0b1710;
+  --text-primary: #b8ffd0;
+  --text-secondary: #83d99f;
+  --text-muted: #57966b;
+  --border-color: #20472d;
+  --hover-bg: #102719;
+  --tag-bg: #102319;
+  --tag-text: #8beaab;
+  --bamboo-green: #55d68b;
+  --bamboo-green-hover: #2e9e64;
+  --accent: #55d68b;
 }
 
 .crt-mode body {
-    background-image: repeating-linear-gradient(0deg, rgb(0 0 0 / 11%) 0, rgb(0 0 0 / 11%) 1px, transparent 1px, transparent 4px);
-    text-shadow: 0 0 0.35rem rgb(85 214 139 / 18%);
+  background-image: repeating-linear-gradient(0deg, rgb(0 0 0 / 11%) 0, rgb(0 0 0 / 11%) 1px, transparent 1px, transparent 4px);
+  text-shadow: 0 0 0.35rem rgb(85 214 139 / 18%);
 }
