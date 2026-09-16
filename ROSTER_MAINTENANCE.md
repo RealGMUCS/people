@@ -90,6 +90,8 @@ When verifying or updating entries, consult sources in the following priority or
 ### `public/faculty.json`
 * `First Name`, `Last Name`: Faculty member's name.
 * `gmu email/userid`: GMU email address or NetID.
+* `Picture`: local relative path under `public/portraits/` (e.g. `portraits/jane-doe.webp`), written by `npm run fetch:portraits` — do not hand-edit this to an external URL; set `Picture Source` instead and re-run the script.
+* `Picture Source`: the original external hotlink the local picture was fetched from (provenance only, not rendered).
 * `Tenure-Track/Teaching/Staff`: Primary track (`Tenure-Track`, `Teaching`, `Research`, `Staff`).
 * `Rank`: Academic rank (e.g., `Associate Professor`).
 * `Dept Role`: Administrative role, if any (e.g., `Department Chair`).
@@ -107,3 +109,6 @@ Maintainers should periodically perform batch audits of faculty and student reco
 2. Update job titles, locations, and dissertation titles.
 3. Set `Last Modified` for changed rows and `Last Verified` for all checked rows.
 4. Run `npm run build` to verify clean bundle generation.
+
+### Faculty Portraits
+When a faculty `Picture` field is set to an external URL (freshly added via the submit form, or by hand), run `npm run fetch:portraits` to download it, convert it to a size-capped `.webp`, store it under `public/portraits/`, and rewrite `faculty.json` to point at the local copy (`Picture Source` keeps the original URL for provenance). This keeps the site from depending on external hosts staying up. Pass `--name "Full Name"` to fetch just one person, or `--dry-run` to preview without downloading.

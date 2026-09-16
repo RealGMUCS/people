@@ -5,6 +5,7 @@ const facultyFields = [
     'Last Name',
     'gmu email/userid',
     'Picture',
+    'Picture Source',
     'Tenure-Track/Teaching/Staff',
     'Rank',
     'Dept Role',
@@ -101,6 +102,15 @@ function validHttpUrl(raw: string, allowMissingProtocol = false) {
     }
 }
 
+// A faculty "Picture" is either an external hotlinked URL, or a local relative
+// path under public/portraits/ (written by scripts/fetch-portraits.ts) — verify
+// the referenced file actually exists on disk.
+function validPicture(raw: string) {
+    if (!raw) return true;
+    if (raw.startsWith('portraits/')) return fs.existsSync(new URL(`../public/${raw}`, import.meta.url));
+    return validHttpUrl(raw);
+}
+
 const faculty = parse('faculty.json', facultyFields);
 const students = parse('students.json', studentFields);
 const awards = parse('awards.json', awardFields);
@@ -139,7 +149,7 @@ faculty.forEach((row, index) => {
         const year = value(row, field);
         if (year && !/^\d{4}$/.test(year)) errors.push(`faculty.json:${line}: invalid ${field} "${year}"`);
     }
-    if (!validHttpUrl(picture)) errors.push(`faculty.json:${line}: invalid picture URL "${picture}"`);
+    if (!validPicture(picture)) errors.push(`faculty.json:${line}: invalid picture URL "${picture}"`);
     if (!validHttpUrl(website, true)) errors.push(`faculty.json:${line}: invalid website URL "${website}"`);
     if (!validHttpUrl(linkedin, true)) errors.push(`faculty.json:${line}: invalid linkedin URL "${linkedin}"`);
     if (!validHttpUrl(scholar, true)) errors.push(`faculty.json:${line}: invalid scholar URL "${scholar}"`);

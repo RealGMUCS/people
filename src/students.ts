@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty, loadStudents } from './data';
-import { esc, safeUrl, loadSearchKit, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons } from './common';
+import { esc, resolvePictureUrl, loadSearchKit, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons, annotateOptionCounts } from './common';
 import './style.css';
 import { isAcademiaJob, isGovLabJob, isIndustryJob, isGmuFacultyJob, getGmuAlumniFaculty, extractOrg, topCounts } from './student-insights';
 
@@ -278,6 +278,8 @@ function setupFilters() {
     document.getElementById('degree-filter').addEventListener('change', () => render());
     document.getElementById('status-filter').addEventListener('change', () => render());
     document.getElementById('sort-order').addEventListener('change', () => render());
+    annotateOptionCounts('degree-filter', allStudents, degreeMatches);
+    annotateOptionCounts('status-filter', allStudents, statusMatches);
 }
 
 function resetFilterDropdowns() {
@@ -412,8 +414,6 @@ function sortStudents(list, order) {
             return arr.sort((a, b) => (a.lastName || '').localeCompare(b.lastName || '') || (a.firstName || '').localeCompare(b.firstName || ''));
         case 'name-desc':
             return arr.sort((a, b) => (b.lastName || '').localeCompare(a.lastName || '') || (b.firstName || '').localeCompare(a.firstName || ''));
-        case 'first-name':
-            return arr.sort((a, b) => (a.firstName || '').localeCompare(b.firstName || '') || (a.lastName || '').localeCompare(b.lastName || ''));
         case 'recent':
             return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (b.entryIndex ?? 0) - (a.entryIndex ?? 0) || (a.lastName || '').localeCompare(b.lastName || ''));
         case 'newest':
@@ -567,7 +567,7 @@ function render() {
 function renderStudentRow(s) {
     const fullName = `${s.firstName} ${s.lastName}`.trim();
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
-    const picture = (s.picture && safeUrl(s.picture)) || defaultPortrait;
+    const picture = resolvePictureUrl(s.picture) || defaultPortrait;
 
     const metaParts = [];
     if (s.advisor) {
@@ -598,8 +598,8 @@ function renderStudentRow(s) {
         ? `<div class="entry-honors"><span class="honors-label">🏆 Honors:</span> ${s.honors.map(esc).join(' · ')}</div>`
         : '';
 
-    const verifiedTag = s.verified
-        ? `<span class="tag tag-verified" title="Confirmed directly by the advisor or student, not just scraped from a public source">✓ Verified</span>`
+    const verifiedBadge = s.verified
+        ? `<span class="verified-check" title="Confirmed directly by the advisor or student, not just scraped from a public source">✓</span>`
         : '';
 
     const topicTags = s.topics.map(t =>
@@ -628,8 +628,9 @@ function renderStudentRow(s) {
         ${dissertationHtml}
         ${detailParts.length ? `<div class="entry-details">${detailParts.join(' · ')}</div>` : ''}
         ${honorsHtml}
-        <div class="tags">${statusTag}${verifiedTag}${topicTags}</div>
+        <div class="tags">${statusTag}${topicTags}</div>
       </div>
+      ${verifiedBadge}
     </div>
   `;
 }

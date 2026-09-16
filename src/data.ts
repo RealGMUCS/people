@@ -77,7 +77,7 @@ export async function loadFaculty() {
             // searchable text only (cards render from `awards`); include the
             // category so e.g. "NSF CAREER" matches
             achievements: awards.map(a => [a.category, a.award, a.year].filter(Boolean).join(' ')),
-            picture: normalizeUrl(clean(row['Picture'])),
+            picture: normalizePicture(clean(row['Picture'])),
             advisees: [],
         };
     }).filter(f => f.firstName || f.lastName);
@@ -296,6 +296,15 @@ function clean(val) {
 function normalizeUrl(url) {
     if (!url) return null;
     return url.startsWith('http') ? url : `https://${url}`;
+}
+
+// A faculty "Picture" value is either an external hotlinked URL or a local
+// relative asset path (e.g. "portraits/x.webp", written by
+// scripts/fetch-portraits.ts) — the latter must NOT get an https:// prefix.
+function normalizePicture(picture) {
+    if (!picture) return null;
+    if (picture.startsWith('http') || picture.startsWith('portraits/')) return picture;
+    return `https://${picture}`;
 }
 
 function parseInterests(raw) {
