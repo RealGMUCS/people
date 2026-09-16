@@ -11,6 +11,16 @@ export function safeUrl(url: unknown): string | null {
   return /^https?:\/\//i.test(url) ? escapeHtml(url) : null;
 }
 
+// A person's `picture` field is either a full external URL (hotlinked, only
+// http(s) allowed) or a local relative asset path (e.g. "portraits/x.webp",
+// downloaded/converted by scripts/fetch-portraits.ts and served from the site
+// root alongside default-portrait.svg).
+export function resolvePictureUrl(picture: unknown): string | null {
+  if (typeof picture !== 'string' || !picture) return null;
+  if (/^https?:\/\//i.test(picture)) return safeUrl(picture);
+  return escapeHtml(`${import.meta.env.BASE_URL}${picture}`);
+}
+
 // Small external-link icons (profile/personal site/Scholar/LinkedIn), styled by
 // vietprofs' shared stylesheet (.profile-link/.personal-site-link/.scholar-link/
 // .linkedin-link).
@@ -114,6 +124,26 @@ export function setupAchievementsToggle() {
 
 export function uniqueNonEmpty<T>(arr: T[]): T[] {
   return Array.from(new Set(arr.filter(Boolean)));
+}
+
+// Matches an institution's free-text name against GMU/George Mason University
+export function isGmuInstitution(name?: string | null): boolean {
+  if (!name) return false;
+  const n = name.toLowerCase();
+  return n.includes('gmu') || n.includes('george mason');
+}
+
+// Appends a dynamically computed "(count)" to each <option> of a filter <select>,
+// based on how many records in `items` match that option's value per `matches`.
+// Re-running this (e.g. after data reloads) replaces any previously appended count.
+export function annotateOptionCounts<T>(selectId: string, items: T[], matches: (item: T, value: string) => boolean) {
+  const select = document.getElementById(selectId) as HTMLSelectElement | null;
+  if (!select) return;
+  Array.from(select.options).forEach(opt => {
+    const label = opt.textContent?.replace(/\s*\(\d+\)$/, '') ?? '';
+    const count = opt.value === 'all' ? items.length : items.filter(item => matches(item, opt.value)).length;
+    opt.textContent = `${label} (${count})`;
+  });
 }
 
 // Semicolon-separated free-text list (e.g. Internships, Honors & Awards)

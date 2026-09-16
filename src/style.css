@@ -11,16 +11,61 @@
 
 /* ─── GMU CS specific components & enhancements ────────────────────────── */
 
-/* Verified badge — marks a record confirmed via direct correspondence */
-.tag-verified {
-  border-color: #2f855a;
+/* Verified badge — small checkmark in the card's bottom-right corner,
+   marks a record confirmed via direct correspondence */
+.verified-check {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 50%;
+  border: 1px solid #2f855a;
+  color: #276749;
+  cursor: default;
+}
+
+@media (prefers-color-scheme: dark) {
+  .verified-check {
+    border-color: #48bb78;
+    color: #9ae6b4;
+  }
+}
+
+/* GMU Alumni badge — faculty who earned a PhD/MS/undergrad degree at GMU.
+   Lightly tinted in GMU green so it reads as a badge without shouting. */
+.tag-gmu-alumni {
+  background: color-mix(in srgb, #2f855a 12%, transparent);
+  border-color: color-mix(in srgb, #2f855a 55%, transparent);
   color: #276749;
 }
 
 @media (prefers-color-scheme: dark) {
-  .tag-verified {
-    border-color: #48bb78;
+  .tag-gmu-alumni {
+    background: color-mix(in srgb, #48bb78 14%, var(--card-bg));
+    border-color: color-mix(in srgb, #48bb78 55%, transparent);
     color: #9ae6b4;
+  }
+}
+
+/* Emeritus track tag — a mild amber tint distinguishes it from the plain
+   outlined track tags without being as loud as a solid fill. */
+.tag-track.tag-emeritus {
+  background: color-mix(in srgb, #d97706 12%, transparent);
+  border-color: color-mix(in srgb, #d97706 55%, transparent);
+  color: #92400e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tag-track.tag-emeritus {
+    background: color-mix(in srgb, #f6ad55 14%, var(--card-bg));
+    border-color: color-mix(in srgb, #f6ad55 55%, transparent);
+    color: #fbd38d;
   }
 }
 

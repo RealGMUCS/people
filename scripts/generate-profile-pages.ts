@@ -34,6 +34,14 @@ function clean(v: unknown): string {
   return v ? String(v).trim() : '';
 }
 
+// Faculty `picture` is either an external hotlinked URL or a local relative
+// path under public/portraits/ (see scripts/fetch-portraits.ts) — resolve the
+// latter to an absolute site URL for og:image/JSON-LD and for the profile
+// page's <img> src (profile pages live one directory below the site root).
+function resolvePictureUrl(picture: string): string {
+  return picture.startsWith('http') ? picture : `${siteUrl}/${picture}`;
+}
+
 function parseList(v: unknown): string[] {
   return v ? String(v).split(';').map(s => s.trim()).filter(Boolean) : [];
 }
@@ -101,12 +109,12 @@ function renderFacultyProfile(f: FacultyEntry) {
   const fullName = `${f.firstName} ${f.lastName}`.trim();
   const title = `${fullName} — Faculty Profile | GMU Computer Science`;
   const canonicalUrl = `${siteUrl}/people/${f.slug}.html`;
-  const ogImage = f.picture || `${siteUrl}/default-portrait.svg`;
+  const ogImage = f.picture ? resolvePictureUrl(f.picture) : `${siteUrl}/default-portrait.svg`;
   const roleParts = [f.category || f.rank, f.role, f.office, 'Department of Computer Science, George Mason University'].filter(Boolean);
   const description = `${fullName} is ${roleParts.join(' · ')}.`;
 
   const portrait = f.picture
-    ? `<img class="portrait" src="${escapeHtml(f.picture)}" alt="Portrait of ${escapeHtml(fullName)}" width="240" height="240">`
+    ? `<img class="portrait" src="${escapeHtml(resolvePictureUrl(f.picture))}" alt="Portrait of ${escapeHtml(fullName)}" width="240" height="240">`
     : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file for ${escapeHtml(fullName)}" width="240" height="240">`;
 
   const research = f.interests.length
@@ -173,7 +181,7 @@ function renderFacultyProfile(f: FacultyEntry) {
       department: { '@type': 'Organization', name: 'Department of Computer Science' },
     },
     url: canonicalUrl,
-    ...(f.picture ? { image: f.picture } : {}),
+    ...(f.picture ? { image: resolvePictureUrl(f.picture) } : {}),
     ...(sameAs.length ? { sameAs } : {}),
     ...(alumniOf.length ? { alumniOf } : {}),
     ...(f.interests.length ? { knowsAbout: f.interests } : {}),

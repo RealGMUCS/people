@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty } from './data';
-import { esc, safeUrl, renderAchievementGroups, setupAchievementsToggle, loadSearchKit, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons, renderEmailBadge, activateEmailBadges } from './common';
+import { esc, resolvePictureUrl, renderAchievementGroups, setupAchievementsToggle, loadSearchKit, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons, renderEmailBadge, activateEmailBadges, annotateOptionCounts, isGmuInstitution } from './common';
 import './style.css';
 
 let allFaculty = [];
@@ -211,6 +211,8 @@ function setupFilters() {
     document.getElementById('rank-filter').addEventListener('change', () => render());
     document.getElementById('type-filter').addEventListener('change', () => render());
     document.getElementById('sort-order')?.addEventListener('change', () => render());
+    annotateOptionCounts('rank-filter', allFaculty, rankMatches);
+    annotateOptionCounts('type-filter', allFaculty, typeMatches);
 }
 
 // Rank dropdown mixes two underlying fields: Professor/Associate/Assistant come from
@@ -221,6 +223,11 @@ function setupFilters() {
 function rankMatches(f, value) {
     if (value === 'all') return true;
     if (value === 'Emeritus' || value === 'Affiliate') return f.type === value;
+    // Professor/Associate/Assistant are exclusive of Emeritus/Affiliate: an
+    // Emeritus professor still carries their prior rank in f.category (so
+    // their card still shows e.g. "Professor"), but they should only be
+    // counted/filterable under Emeritus, not double-counted under Professor.
+    if (f.type === 'Emeritus' || f.type === 'Affiliate') return false;
     return f.category === value;
 }
 
@@ -280,8 +287,6 @@ function sortFaculty(list, order) {
     switch (order) {
         case 'name-desc':
             return arr.sort((a, b) => (b.lastName || '').localeCompare(a.lastName || '') || (b.firstName || '').localeCompare(a.firstName || ''));
-        case 'first-name':
-            return arr.sort((a, b) => (a.firstName || '').localeCompare(b.firstName || '') || (a.lastName || '').localeCompare(b.lastName || ''));
         case 'recent':
             return arr.sort((a, b) => (b.lastModified || '').localeCompare(a.lastModified || '') || (b.entryIndex ?? 0) - (a.entryIndex ?? 0) || (a.lastName || '').localeCompare(b.lastName || ''));
         case 'newest':
@@ -463,10 +468,16 @@ function renderCard(f) {
         : '';
     const contactParts = [emailHtml, adviseesHtml].filter(Boolean);
 
-    // Tags: track type + research interest topics + manual-verification badge
-    const trackTag = f.type ? `<span class="tag tag-track">${esc(f.type)}</span>` : '';
-    const verifiedTag = f.verified
-        ? `<span class="tag tag-verified" title="Confirmed directly by this person or their department, not just scraped from a public source">✓ Verified</span>`
+    // Tags: track type (Emeritus gets a standout style) + GMU-alumni badge (PhD/MS/Undergrad from GMU) + research interest topics
+    const trackTag = f.type
+        ? `<span class="tag tag-track${f.type === 'Emeritus' ? ' tag-emeritus' : ''}">${esc(f.type)}</span>`
+        : '';
+    const isGmuAlumni = isGmuInstitution(f.phdFrom) || isGmuInstitution(f.msFrom) || isGmuInstitution(f.undergradFrom);
+    const gmuAlumniTag = isGmuAlumni
+        ? `<span class="tag tag-gmu-alumni" title="Earned a degree from GMU">🎓 GMU Alumni</span>`
+        : '';
+    const verifiedBadge = f.verified
+        ? `<span class="verified-check" title="Confirmed directly by this person or their department, not just scraped from a public source">✓</span>`
         : '';
     const interestTags = f.interests
         .map(i => `<span class="tag tag-topic">${esc(i)}</span>`)
@@ -484,7 +495,7 @@ function renderCard(f) {
         : '';
 
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
-    const picture = (f.picture && safeUrl(f.picture)) || defaultPortrait;
+    const picture = resolvePictureUrl(f.picture) || defaultPortrait;
     const profileIcons = renderProfileIcons(fullName, { website: f.website, scholar: f.scholar, linkedin: f.linkedin });
 
     return `
@@ -499,8 +510,9 @@ function renderCard(f) {
         ${detailParts.length ? `<div class="entry-details">${detailParts.join('; ')}</div>` : ''}
         ${contactParts.length ? `<div class="entry-details">${contactParts.join(' · ')}</div>` : ''}
         ${achievementsList}
-        ${(trackTag || verifiedTag || interestTags) ? `<div class="tags">${trackTag}${verifiedTag}${interestTags}</div>` : ''}
+        ${(trackTag || gmuAlumniTag || interestTags) ? `<div class="tags">${trackTag}${gmuAlumniTag}${interestTags}</div>` : ''}
       </div>
+      ${verifiedBadge}
     </div>
   `;
 }
