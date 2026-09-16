@@ -117,7 +117,7 @@
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?user=eRaPEZ0AAAAJ&hl=en",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Syeda Sabrina",
@@ -184,9 +184,9 @@
     "Last Name": "Faisal",
     "Advisor": "Antonios Anastasopoulos",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "Postdoctoral Researcher, Oak Ridge National Laboratory",
     "First Job": "",
     "Location": "San Jose, CA",
     "Internships": "Research Intern, Zoom (Summer 2025)",
@@ -196,8 +196,8 @@
     "Website": "",
     "LinkedIn": "https://www.linkedin.com/in/faisalfahim",
     "Google Scholar": "https://scholar.google.com/citations?user=4NgtQ2EAAAAJ&hl=en",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Jonathan",
@@ -357,16 +357,16 @@
     "LinkedIn": "https://www.linkedin.com/in/md-mahfuz-ibn-alam-595828107/",
     "Google Scholar": "https://scholar.google.com/citations?user=6khjEYoAAAAJ&hl=en",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Jonathan",
     "Last Name": "Mbuya Kabala",
     "Advisor": "Antonios Anastasopoulos",
-    "Co-Advisor": "",
+    "Co-Advisor": "Dieter Pfoser",
     "Degree": "PhD '25",
     "Dissertation Title": "",
-    "Current Job": "ML Engineer, Visa",
+    "Current Job": "Staff Machine Learning Engineer, Visa",
     "First Job": "",
     "Location": "Foster City, CA",
     "Internships": "",
@@ -376,8 +376,8 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?user=vrroQS4AAAAJ",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Shuhan",
@@ -542,7 +542,7 @@
   {
     "First Name": "Xintao",
     "Last Name": "Wu",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "",
     "Degree": "PhD '01",
     "Dissertation Title": "Approximate Algorithms for Data Warehousing and Data Mining",
@@ -562,7 +562,7 @@
   {
     "First Name": "Ping",
     "Last Name": "Chen",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "",
     "Degree": "PhD '01",
     "Dissertation Title": "",
@@ -582,8 +582,8 @@
   {
     "First Name": "Ron",
     "Last Name": "Dodge",
-    "Advisor": "Daniel Barbar\u00e1",
-    "Co-Advisor": "Daniel Menasc\u00e9",
+    "Advisor": "Daniel Barbará",
+    "Co-Advisor": "Daniel Menascé",
     "Degree": "PhD '01",
     "Dissertation Title": "Improving E-commerce System Performance with Dynamic System Tuning",
     "Current Job": "Business Executive, CISO",
@@ -602,7 +602,7 @@
   {
     "First Name": "Michael",
     "Last Name": "Johnson",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "",
     "Degree": "PhD '05",
     "Dissertation Title": "",
@@ -622,7 +622,7 @@
   {
     "First Name": "Tom",
     "Last Name": "Shackelford",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "",
     "Degree": "PhD '05",
     "Dissertation Title": "",
@@ -642,7 +642,7 @@
   {
     "First Name": "John",
     "Last Name": "Rigsby",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "",
     "Degree": "PhD '18",
     "Dissertation Title": "",
@@ -662,7 +662,7 @@
   {
     "First Name": "Michael",
     "Last Name": "Tran",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "",
     "Degree": "MS '26",
     "Dissertation Title": "Master thesis",
@@ -682,7 +682,7 @@
   {
     "First Name": "Rehenuma Tasnim",
     "Last Name": "Rodoshi",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "Amarda Shehu",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -702,7 +702,7 @@
   {
     "First Name": "James",
     "Last Name": "Rogers",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "",
     "Degree": "PhD '10",
     "Dissertation Title": "",
@@ -722,7 +722,7 @@
   {
     "First Name": "Loulwah",
     "Last Name": "Al-Sumait",
-    "Advisor": "Daniel Barbar\u00e1",
+    "Advisor": "Daniel Barbará",
     "Co-Advisor": "Carlotta Domeniconi",
     "Degree": "PhD '09",
     "Dissertation Title": "Online Topic Detection, Tracking, and Significance Ranking Using Generative Topic Models",
@@ -1026,7 +1026,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '98",
     "Dissertation Title": "",
-    "Current Job": "Professor, Universidad Adolfo Ib\u00e1\u00f1ez",
+    "Current Job": "Professor, Universidad Adolfo Ibáñez",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -1137,7 +1137,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Zili",
@@ -1477,7 +1477,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Bahman",
@@ -1622,7 +1622,7 @@
   {
     "First Name": "Kevin",
     "Last Name": "Murray",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -1642,11 +1642,11 @@
   {
     "First Name": "Bikram",
     "Last Name": "Adhikari",
-    "Advisor": "Zoran Duri\u0107",
-    "Co-Advisor": "",
-    "Degree": "PhD",
+    "Advisor": "Zoran Durić",
+    "Co-Advisor": "Duminda Wijesekera",
+    "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "Research Scientist, Driver Research Institute",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -1656,13 +1656,13 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Daniel",
     "Last Name": "Delannes-molka",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -1682,7 +1682,7 @@
   {
     "First Name": "Siyu",
     "Last Name": "Lei",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -1702,7 +1702,7 @@
   {
     "First Name": "Neil",
     "Last Name": "Johnson",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '00",
     "Dissertation Title": "",
@@ -1722,7 +1722,7 @@
   {
     "First Name": "Ricci",
     "Last Name": "Heishman",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '07",
     "Dissertation Title": "",
@@ -1742,7 +1742,7 @@
   {
     "First Name": "Youn-Hee",
     "Last Name": "Kim",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '08",
     "Dissertation Title": "",
@@ -1762,7 +1762,7 @@
   {
     "First Name": "Ed",
     "Last Name": "Lawson",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '10",
     "Dissertation Title": "",
@@ -1782,7 +1782,7 @@
   {
     "First Name": "Dan",
     "Last Name": "Fleck",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '10",
     "Dissertation Title": "Efficient Affine Image Matching for Building and Maintaining 3D Models",
@@ -1802,7 +1802,7 @@
   {
     "First Name": "Nalini",
     "Last Name": "Vishnoi",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '14",
     "Dissertation Title": "",
@@ -1822,7 +1822,7 @@
   {
     "First Name": "Gene",
     "Last Name": "Shuman",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '16",
     "Dissertation Title": "",
@@ -1842,7 +1842,7 @@
   {
     "First Name": "Chaitanya",
     "Last Name": "Yavvari",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '19",
     "Dissertation Title": "",
@@ -1862,7 +1862,7 @@
   {
     "First Name": "Kyle",
     "Last Name": "Jackson",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "PhD '23",
     "Dissertation Title": "",
@@ -1882,7 +1882,7 @@
   {
     "First Name": "Sumer",
     "Last Name": "Jabri",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '99",
     "Dissertation Title": "",
@@ -1902,7 +1902,7 @@
   {
     "First Name": "Diego",
     "Last Name": "Vasquez",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '01",
     "Dissertation Title": "",
@@ -1922,8 +1922,8 @@
   {
     "First Name": "Philip",
     "Last Name": "Barber",
-    "Advisor": "Zoran Duri\u0107",
-    "Co-Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Zoran Durić",
+    "Co-Advisor": "Jana Košecká",
     "Degree": "MS '02",
     "Dissertation Title": "",
     "Current Job": "",
@@ -1942,7 +1942,7 @@
   {
     "First Name": "Yan",
     "Last Name": "Sun",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '02",
     "Dissertation Title": "",
@@ -1962,7 +1962,7 @@
   {
     "First Name": "David",
     "Last Name": "Harmony",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '03",
     "Dissertation Title": "",
@@ -1982,7 +1982,7 @@
   {
     "First Name": "Wallace",
     "Last Name": "Lawson",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '04",
     "Dissertation Title": "",
@@ -2002,7 +2002,7 @@
   {
     "First Name": "Michael",
     "Last Name": "Sullivan",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '09",
     "Dissertation Title": "",
@@ -2022,7 +2022,7 @@
   {
     "First Name": "Matthew",
     "Last Name": "Revelle",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '09",
     "Dissertation Title": "",
@@ -2042,7 +2042,7 @@
   {
     "First Name": "Dusan",
     "Last Name": "Puletic",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '12",
     "Dissertation Title": "",
@@ -2062,7 +2062,7 @@
   {
     "First Name": "Kyle",
     "Last Name": "Soeder",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '15",
     "Dissertation Title": "",
@@ -2082,7 +2082,7 @@
   {
     "First Name": "Sam",
     "Last Name": "Gelman",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '16",
     "Dissertation Title": "",
@@ -2102,7 +2102,7 @@
   {
     "First Name": "Brian",
     "Last Name": "Notarianni",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '16",
     "Dissertation Title": "",
@@ -2122,7 +2122,7 @@
   {
     "First Name": "Nathan",
     "Last Name": "Obert",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '18",
     "Dissertation Title": "",
@@ -2142,7 +2142,7 @@
   {
     "First Name": "Nirav",
     "Last Name": "Sheth",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '19",
     "Dissertation Title": "",
@@ -2162,7 +2162,7 @@
   {
     "First Name": "Chris",
     "Last Name": "Seebeck",
-    "Advisor": "Zoran Duri\u0107",
+    "Advisor": "Zoran Durić",
     "Co-Advisor": "",
     "Degree": "MS '20",
     "Dissertation Title": "",
@@ -2244,7 +2244,7 @@
     "Last Name": "Chao",
     "Advisor": "Yotam Gingold",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '26",
     "Dissertation Title": "",
     "Current Job": "",
     "First Job": "",
@@ -2256,8 +2256,8 @@
     "Website": "https://mason.gmu.edu/~cchao8/",
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?user=JspopKEAAAAJ&hl=en",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Xue",
@@ -2277,7 +2277,7 @@
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?user=S0ymYvgAAAAJ&hl=en",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Yong",
@@ -2297,7 +2297,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Chuan",
@@ -2317,7 +2317,7 @@
     "LinkedIn": "https://www.linkedin.com/in/chuan-yan-8b4074198/",
     "Google Scholar": "https://scholar.google.com/citations?user=z0VFLowAAAAJ&hl=en",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Josef",
@@ -2385,7 +2385,7 @@
     "Advisor": "Yotam Gingold",
     "Co-Advisor": "Yotam Gingold",
     "Degree": "MS '23",
-    "Dissertation Title": "I \u2764\ufe0f IQ: A Shader Graphing Calculator for Signed Distance Functions (SDFs)",
+    "Dissertation Title": "I ❤️ IQ: A Shader Graphing Calculator for Signed Distance Functions (SDFs)",
     "Current Job": "Software Engineer",
     "First Job": "",
     "Location": "Fairfax, VA",
@@ -2524,9 +2524,9 @@
     "Last Name": "Cheng",
     "Advisor": "Bo Han",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "Researcher, Meta",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "Networking Research Intern, Bell Labs (Summer 2024)",
@@ -2536,8 +2536,8 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Nan",
@@ -2557,7 +2557,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Ding",
@@ -2642,7 +2642,7 @@
   {
     "First Name": "Yimeng",
     "Last Name": "Li",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD '23",
     "Dissertation Title": "",
@@ -2662,7 +2662,7 @@
   {
     "First Name": "Sulabh",
     "Last Name": "Shresta",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -2682,11 +2682,11 @@
   {
     "First Name": "Negar",
     "Last Name": "Nejatishahidin",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '25",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "HP Inc.",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -2696,15 +2696,15 @@
     "Website": "https://github.com/N-NEJATISHAHIDIN",
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?user=QUdDLg8AAAAJ&hl=en",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Pooya",
     "Last Name": "Fayyazsanavi",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '25",
     "Dissertation Title": "",
     "Current Job": "",
     "First Job": "",
@@ -2716,17 +2716,17 @@
     "Website": "",
     "LinkedIn": "https://www.linkedin.com/in/pooya-fayyaz-587a6712b/",
     "Google Scholar": "https://scholar.google.com/citations?user=ZVQw2OAAAAAJ&hl=en",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Navid",
     "Last Name": "Rajabi",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '25",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "Data Scientist, Capital Group",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -2736,13 +2736,13 @@
     "Website": "https://navidnr.com/",
     "LinkedIn": "https://www.linkedin.com/in/navid-rajabi-ph-d-a8751084/",
     "Google Scholar": "https://scholar.google.com/citations?user=muMzuwcAAAAJ&hl=en",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Arnab",
     "Last Name": "Debnath",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -2762,7 +2762,7 @@
   {
     "First Name": "Md. Alimoor",
     "Last Name": "Reza",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -2782,7 +2782,7 @@
   {
     "First Name": "Arsalan",
     "Last Name": "Mousavian",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD '18",
     "Dissertation Title": "Acquiring Semantics Induced Topology in Urban Environments",
@@ -2802,7 +2802,7 @@
   {
     "First Name": "George",
     "Last Name": "Georgakis",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD '20",
     "Dissertation Title": "3D Model-Assisted Learning for Object Detection and Pose Estimation",
@@ -2822,7 +2822,7 @@
   {
     "First Name": "Hui",
     "Last Name": "Zheng",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -2842,7 +2842,7 @@
   {
     "First Name": "Le Phi",
     "Last Name": "Hung",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -2862,7 +2862,7 @@
   {
     "First Name": "Gautam",
     "Last Name": "Singh",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -2882,7 +2882,7 @@
   {
     "First Name": "Shenghui",
     "Last Name": "Zhou",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD",
     "Dissertation Title": "",
@@ -2902,7 +2902,7 @@
   {
     "First Name": "Wei",
     "Last Name": "Zhang",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD '07",
     "Dissertation Title": "",
@@ -2922,7 +2922,7 @@
   {
     "First Name": "Fayin",
     "Last Name": "Li",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "PhD '06",
     "Dissertation Title": "",
@@ -2942,7 +2942,7 @@
   {
     "First Name": "Michael",
     "Last Name": "Paton",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "MS '12",
     "Dissertation Title": "",
@@ -2962,7 +2962,7 @@
   {
     "First Name": "Xing",
     "Last Name": "Zhou",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "MS '13",
     "Dissertation Title": "",
@@ -2982,7 +2982,7 @@
   {
     "First Name": "Damla",
     "Last Name": "Arifoglu",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "MS '12",
     "Dissertation Title": "",
@@ -3002,7 +3002,7 @@
   {
     "First Name": "Levi",
     "Last Name": "Lister",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "MS",
     "Dissertation Title": "",
@@ -3022,7 +3022,7 @@
   {
     "First Name": "Aohan",
     "Last Name": "Zhao",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "MS",
     "Dissertation Title": "",
@@ -3042,7 +3042,7 @@
   {
     "First Name": "Martha",
     "Last Name": "McJunkin",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "MS",
     "Dissertation Title": "",
@@ -3062,7 +3062,7 @@
   {
     "First Name": "Jason",
     "Last Name": "Hayes",
-    "Advisor": "Jana Ko\u0161eck\u00e1",
+    "Advisor": "Jana Košecká",
     "Co-Advisor": "",
     "Degree": "MS",
     "Dissertation Title": "",
@@ -3177,7 +3177,7 @@
     "LinkedIn": "https://www.linkedin.com/in/james-kukucka-phd-79816422",
     "Google Scholar": "",
     "Last Modified": "2026-09-06",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Ying",
@@ -3284,7 +3284,7 @@
     "Last Name": "Aghayi",
     "Advisor": "Thomas LaToza",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '24",
     "Dissertation Title": "Social Translucency in Software Engineering",
     "Current Job": "Postdoctoral Researcher / Software Engineer",
     "First Job": "",
@@ -3296,8 +3296,8 @@
     "Website": "http://mason.gmu.edu/~eaghayi/",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "David",
@@ -3324,7 +3324,7 @@
     "Last Name": "Mehrpour",
     "Advisor": "Thomas LaToza",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '24",
     "Dissertation Title": "",
     "Current Job": "",
     "First Job": "",
@@ -3336,15 +3336,15 @@
     "Website": "",
     "LinkedIn": "https://www.linkedin.com/in/sahar-mehrpour/",
     "Google Scholar": "https://scholar.google.com/citations?user=-6HSIMMAAAAJ&hl=en",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Maryam",
     "Last Name": "Arab",
     "Advisor": "Thomas LaToza",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '24",
     "Dissertation Title": "Design and Evaluation of Tools for Debugging Web Applications",
     "Current Job": "Postdoctoral Research Associate at University of Michigan School of Information",
     "First Job": "",
@@ -3356,8 +3356,8 @@
     "Website": "https://sites.google.com/view/maryamarab/home",
     "LinkedIn": "https://www.linkedin.com/in/maryam-arab/",
     "Google Scholar": "https://scholar.google.com/citations?user=7zu9KZwAAAAJ&hl=en",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Minhyuk",
@@ -3766,7 +3766,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "Postdoctoral Fellow, Flatiron Institute",
+    "Current Job": "Research Fellow, Flatiron Institute (Center for Computational Mathematics)",
     "First Job": "Postdoctoral Fellow, Flatiron Institute",
     "Location": "Fairfax, VA",
     "Internships": "Intern, Flatiron Institute Center for Computational Mathematics (Summer 2025)",
@@ -3776,8 +3776,8 @@
     "Website": "https://mtcrawshaw.github.io",
     "LinkedIn": "https://www.linkedin.com/in/michael-crawshaw-5a6aab150/",
     "Google Scholar": "https://scholar.google.com/citations?user=XVrMZ_4AAAAJ&hl=en",
-    "Last Modified": "2026-09-06",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Yajie",
@@ -3970,7 +3970,7 @@
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
-    "Honors & Awards": "Distinguished Artifact Award, USENIX Security 2025 (for \"Tracking You from a Thousand Miles Away! Turning a Bluetooth Device into an Apple AirTag Without Root Privileges\" \u2014 one of 6 of 2,385 submissions)",
+    "Honors & Awards": "Distinguished Artifact Award, USENIX Security 2025 (for \"Tracking You from a Thousand Miles Away! Turning a Bluetooth Device into an Apple AirTag Without Root Privileges\" — one of 6 of 2,385 submissions)",
     "Topics": "Software Security, Binary Analysis",
     "Picture": "",
     "Website": "",
@@ -3984,7 +3984,7 @@
     "Last Name": "Ma",
     "Advisor": "Lannan (Lisa) Luo",
     "Co-Advisor": "Qiang Zeng",
-    "Degree": "PhD '26",
+    "Degree": "PhD '25",
     "Dissertation Title": "Hub-Based Vulnerability Discovery for Internet of Things Firmware",
     "Current Job": "",
     "First Job": "",
@@ -3996,8 +3996,8 @@
     "Website": "https://agatah2333.github.io",
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?hl=en&user=TyIsqPMAAAAJ",
-    "Last Modified": "2026-09-06",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Xiaofeng",
@@ -4066,7 +4066,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '25",
     "Dissertation Title": "",
-    "Current Job": "Meta",
+    "Current Job": "Software Engineer, Meta",
     "First Job": "",
     "Location": "Menlo Park, CA",
     "Internships": "",
@@ -4076,8 +4076,8 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Xiappeng",
@@ -4226,7 +4226,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "Machine Learning Engineer, Experian",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -4236,8 +4236,8 @@
     "Website": "https://ishimwed.github.io",
     "LinkedIn": "https://www.linkedin.com/in/didier-ishimwe-85b127147/",
     "Google Scholar": "https://scholar.google.com/citations?user=rH4Ja0kAAAAJ&hl=en",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Guolong",
@@ -4437,7 +4437,7 @@
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?user=9YY6CokAAAAJ&hl=en",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Panneer Selvam",
@@ -5117,7 +5117,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Toki Tahmid",
@@ -5137,7 +5137,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Anowarul",
@@ -5146,7 +5146,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '25",
     "Dissertation Title": "",
-    "Current Job": "Assistant Professor, University of South Florida",
+    "Current Job": "Tenure-track Assistant Professor, University of South Florida",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -5156,15 +5156,15 @@
     "Website": "https://mason.gmu.edu/~akabir4",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Shiva",
     "Last Name": "Ghaemi",
     "Advisor": "Amarda Shehu",
     "Co-Advisor": "",
-    "Degree": "PhD",
+    "Degree": "PhD '26",
     "Dissertation Title": "",
     "Current Job": "",
     "First Job": "",
@@ -5176,14 +5176,14 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-05",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Shahana",
     "Last Name": "Shultana",
     "Advisor": "Amarda Shehu",
-    "Co-Advisor": "Daniel Barbar\u00e1",
+    "Co-Advisor": "Daniel Barbará",
     "Degree": "PhD",
     "Dissertation Title": "",
     "Current Job": "",
@@ -5577,7 +5577,7 @@
     "LinkedIn": "https://www.linkedin.com/in/abpaudel",
     "Google Scholar": "https://scholar.google.com/citations?user=ytDltfUAAAAJ",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Abhish",
@@ -5597,7 +5597,7 @@
     "LinkedIn": "https://linkedin.com/in/aabs7",
     "Google Scholar": "https://scholar.google.com/citations?user=dLdbu8YAAAAJ",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Raihan Islam",
@@ -5617,16 +5617,16 @@
     "LinkedIn": "https://www.linkedin.com/in/raihan-islam-arnob/",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Hoang-Dung",
     "Last Name": "Bui",
     "Advisor": "Gregory Stein",
-    "Co-Advisor": "",
+    "Co-Advisor": "Erion Plaku",
     "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "Dispatch Engineer, Bayro LLC",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -5636,8 +5636,8 @@
     "Website": "",
     "LinkedIn": "https://www.linkedin.com/in/hoangdungbui/",
     "Google Scholar": "",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Roshan",
@@ -5657,7 +5657,7 @@
     "LinkedIn": "https://www.linkedin.com/in/roshan-dhakal/",
     "Google Scholar": "https://scholar.google.com/citations?user=Hs_V-20AAAAJ&hl=en",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Manas",
@@ -6266,7 +6266,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "Adobe",
+    "Current Job": "Applied Scientist, Adobe",
     "First Job": "",
     "Location": "Seattle, WA",
     "Internships": "Research Intern, Adobe (Summer 2025); Applied Research Science Intern, Amazon (Summer 2024); NLP and Machine Learning Intern, Deloitte (Summer 2023); Research Intern, Tata Research Design and Development Centre (Summer 2016)",
@@ -6276,8 +6276,8 @@
     "Website": "http://saurabhsriv.com/",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Sweta",
@@ -6506,7 +6506,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '26",
     "Dissertation Title": "",
-    "Current Job": "",
+    "Current Job": "Robotics Engineer, General Intelligent Machines",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -6516,8 +6516,8 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Yongqi",
@@ -6537,7 +6537,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Changyang",
@@ -6557,7 +6557,7 @@
     "LinkedIn": "",
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Rawan",
@@ -6706,7 +6706,7 @@
     "Co-Advisor": "",
     "Degree": "PhD '25",
     "Dissertation Title": "",
-    "Current Job": "Assistant Professor, Southern Illinois University",
+    "Current Job": "Tenure-track Assistant Professor, Southern Illinois University",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -6716,8 +6716,8 @@
     "Website": "https://chuxiongwu.github.io",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-04",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Fei",
@@ -7442,11 +7442,11 @@
   {
     "First Name": "SM Hasan",
     "Last Name": "Mansur",
-    "Advisor": "Kevin Moran",
-    "Co-Advisor": "",
-    "Degree": "PhD '23",
+    "Advisor": "Thomas LaToza",
+    "Co-Advisor": "Kevin Moran",
+    "Degree": "PhD '26",
     "Dissertation Title": "Automated User Interface Design and Understanding through Multimodal Artificial Intelligence",
-    "Current Job": "AI Research Engineer",
+    "Current Job": "Tenure-track Assistant Professor, Stephen F. Austin State University",
     "First Job": "",
     "Location": "Fairfax, VA",
     "Internships": "",
@@ -7456,8 +7456,8 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-07",
-    "Last Verified": "2026-09-07"
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   },
   {
     "First Name": "Arun Krishna",
@@ -7958,5 +7958,425 @@
     "Google Scholar": "",
     "Last Modified": "2026-09-04",
     "Last Verified": "2026-09-07"
+  },
+  {
+    "First Name": "Afaq",
+    "Last Name": "Ahmed",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Software Engineering",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Bala Naga",
+    "Last Name": "Annadata",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Software Engineering",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Michael",
+    "Last Name": "Choi",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Software Engineering",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Anusha",
+    "Last Name": "Gurram",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Software Engineering, Full-Stack Development, Data Engineering",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "https://www.linkedin.com/in/anusha-gurram-970b2a223",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Woon",
+    "Last Name": "Hong",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Software Engineering",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Alec",
+    "Last Name": "Kasulaitis",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Software Engineering",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Joseph",
+    "Last Name": "Sepich",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE '26",
+    "Dissertation Title": "",
+    "Current Job": "Software Engineer, Capital One",
+    "First Job": "",
+    "Location": "McLean, VA",
+    "Internships": "",
+    "Honors & Awards": "Distinguished Academic Achievement Award, George Mason University CS",
+    "Topics": "Software Engineering, Cloud Computing, AI, Security",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "https://www.linkedin.com/in/joseph-sepich-255075143",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Chase",
+    "Last Name": "Walters",
+    "Advisor": "None",
+    "Co-Advisor": "",
+    "Degree": "MS SWE '25",
+    "Dissertation Title": "",
+    "Current Job": "Independent Game Developer, Self-employed",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Software Engineering, Game Development",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "https://www.linkedin.com/in/chase-walters",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-14",
+    "Last Verified": "2026-09-14"
+  },
+  {
+    "First Name": "Abdulrahman",
+    "Last Name": "Alshammari",
+    "Advisor": "",
+    "Co-Advisor": "",
+    "Degree": "PhD '24",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Angeela",
+    "Last Name": "Acharya",
+    "Advisor": "",
+    "Co-Advisor": "",
+    "Degree": "PhD '24",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Daniel",
+    "Last Name": "McVicker",
+    "Advisor": "",
+    "Co-Advisor": "",
+    "Degree": "PhD '24",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Tasfia",
+    "Last Name": "Mashiat",
+    "Advisor": "",
+    "Co-Advisor": "",
+    "Degree": "PhD '24",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Yong",
+    "Last Name": "Xue",
+    "Advisor": "",
+    "Co-Advisor": "",
+    "Degree": "PhD '24",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Jonathan Patricio",
+    "Last Name": "Vasquez Verdugo",
+    "Advisor": "",
+    "Co-Advisor": "",
+    "Degree": "PhD '24",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Ajay Krishna",
+    "Last Name": "Vajjala",
+    "Advisor": "David S. Rosenblum",
+    "Co-Advisor": "",
+    "Degree": "PhD '25",
+    "Dissertation Title": "",
+    "Current Job": "Machine Learning Engineer 2, Samsung Ads",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Benjamin",
+    "Last Name": "Carver",
+    "Advisor": "Songqing Chen",
+    "Co-Advisor": "Yue Cheng",
+    "Degree": "PhD '25",
+    "Dissertation Title": "",
+    "Current Job": "Software Engineer, Meta / Google",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Taylor",
+    "Last Name": "Henderson",
+    "Advisor": "Robert Simon",
+    "Co-Advisor": "Hakan Aydin",
+    "Degree": "PhD '25",
+    "Dissertation Title": "",
+    "Current Job": "Senior Professional Staff 1 (AI/ML R&D), Johns Hopkins University Applied Physics Laboratory",
+    "First Job": "",
+    "Location": "Laurel, MD",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Sean",
+    "Last Name": "Cannan",
+    "Advisor": "Sanjeev Setia",
+    "Co-Advisor": "Robert Simon",
+    "Degree": "PhD '26",
+    "Dissertation Title": "",
+    "Current Job": "",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Nabit",
+    "Last Name": "Bajwa",
+    "Advisor": "Sanmay Das",
+    "Co-Advisor": "",
+    "Degree": "PhD '26",
+    "Dissertation Title": "",
+    "Current Job": "AI Engineer, Merck",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Md Nishat",
+    "Last Name": "Raihan",
+    "Advisor": "Marcos Zampieri",
+    "Co-Advisor": "Antonios Anastasopoulos",
+    "Degree": "PhD '26",
+    "Dissertation Title": "",
+    "Current Job": "Provost's Postdoctoral Fellow, University of Notre Dame",
+    "First Job": "",
+    "Location": "South Bend, IN",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
+  },
+  {
+    "First Name": "Aayush",
+    "Last Name": "Yadav",
+    "Advisor": "Foteini Baldimtsi",
+    "Co-Advisor": "",
+    "Degree": "PhD '26",
+    "Dissertation Title": "",
+    "Current Job": "Tenure-track Assistant Professor, Rutgers University-Camden",
+    "First Job": "",
+    "Location": "Camden, NJ",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "",
+    "Picture": "",
+    "Website": "",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-16",
+    "Last Verified": "2026-09-16"
   }
 ]

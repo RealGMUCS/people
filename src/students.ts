@@ -279,16 +279,22 @@ function degreeMatches(s, value) {
     return true;
 }
 
-// There's no explicit "graduated" flag in the data, so Current/Alumni is inferred:
-// a apostrophe-year in the Degree column (e.g. "PhD '26") is compared to the current
-// year; without one, we fall back to whether a Current Job is on file.
+// Inferred Current vs. Alumni status logic:
+// 1. If a student has a post-grad job on file (Current Job or First Job), they are Alumni.
+// 2. Otherwise, parse graduation year from Degree (handling 2-digit years correctly e.g. '99 -> 1999, '26 -> 2026).
+// 3. Compare graduation year with CURRENT_YEAR (past year = Alumni, future/current without job = Current).
 function studentStatus(s) {
+    if (s.currentJob || s.firstJob) {
+        return 'alumni';
+    }
     const match = (s.degree || '').match(/'(\d{2})\b/);
     if (match) {
-        const year = 2000 + parseInt(match[1], 10);
-        return year >= CURRENT_YEAR ? 'current' : 'alumni';
+        const rawYr = parseInt(match[1], 10);
+        const year = rawYr > 50 ? 1900 + rawYr : 2000 + rawYr;
+        if (year < CURRENT_YEAR) return 'alumni';
+        if (year > CURRENT_YEAR) return 'current';
     }
-    return s.currentJob ? 'alumni' : 'current';
+    return 'current';
 }
 
 function statusMatches(s, value) {
@@ -567,6 +573,10 @@ function renderStudentRow(s) {
         `<span class="tag tag-topic">${esc(t)}</span>`
     ).join('');
 
+    const status = studentStatus(s);
+    const statusLabel = status === 'alumni' ? 'Alumni' : 'Current';
+    const statusTag = `<span class="tag tag-status status-${status}" data-status="${status}" title="Filter by ${statusLabel} status">${statusLabel}</span>`;
+
     const locationBadge = s.location
         ? `<span class="entry-location" data-location="${esc(s.location)}" title="Estimated current location: ${esc(s.location)}">📍 ${esc(s.location)}</span>`
         : '';
@@ -584,7 +594,7 @@ function renderStudentRow(s) {
         ${dissertationHtml}
         ${detailParts.length ? `<div class="entry-details">${detailParts.join(' · ')}</div>` : ''}
         ${honorsHtml}
-        ${topicTags ? `<div class="tags">${topicTags}</div>` : ''}
+        <div class="tags">${statusTag}${topicTags}</div>
       </div>
     </div>
   `;
@@ -805,6 +815,24 @@ document.addEventListener('click', e => {
     resetFilterDropdowns();
     document.getElementById('main-search').value = '';
     search.resetScope();
+    render();
+});
+
+// Click a status badge (Alumni or Current) -> filter roster by status
+document.addEventListener('click', e => {
+    const item = e.target.closest('[data-status]');
+    if (!item || item.closest('#status-filter')) return;
+    const status = item.dataset.status;
+    if (!status) return;
+    e.preventDefault();
+    currentView = 'directory';
+    activeTopic = null;
+    document.getElementById('active-filter').style.display = 'none';
+    const statusSelect = document.getElementById('status-filter');
+    if (statusSelect) {
+        statusSelect.value = status;
+    }
+    window.scrollTo({ top: 0 });
     render();
 });
 
