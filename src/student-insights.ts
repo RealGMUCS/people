@@ -13,8 +13,20 @@ export function isAcademiaJob(text) {
 export function isGovLabJob(text) {
     if (!text) return false;
     const t = text.toLowerCase();
-    const keywords = ['nasa', 'jpl', 'oak ridge', 'national lab', 'mitre', 'rand', 'nih', 'dod', 'navy', 'air force', 'army', 'defense', 'department of', 'government'];
-    return keywords.some(k => t.includes(k));
+    const keywords = [
+        'nasa', 'jpl', 'jet propulsion laboratory', 'oak ridge', 'ornl', 'national lab',
+        'national laboratory', 'mitre', 'rand corp', 'rand corporation', 'nih', 'dod',
+        'navy', 'naval', 'air force', 'army', 'defense', 'darpa', 'nist', 'sandia',
+        'argonne', 'llnl', 'lanl', 'pnnl', 'inl', 'lbl', 'lawrence livermore',
+        'lawrence berkeley', 'los alamos', 'pacific northwest', 'fermilab', 'slac',
+        'nrel', 'brookhaven', 'nrl', 'cisa', 'usda', 'usgs', 'fda', 'epa',
+        'department of defense', 'department of energy', 'department of state',
+        'department of homeland security', 'dept of defense', 'government'
+    ];
+    return keywords.some(k => {
+        const regex = new RegExp(`\\b${k.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')}\\b`, 'i');
+        return regex.test(t);
+    });
 }
 
 export function isIndustryJob(text) {

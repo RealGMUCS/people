@@ -51,6 +51,13 @@ const STUDENT_KEYWORDS = {
     industry: s => ((s.currentJob && isIndustryJob(s.currentJob)) || (s.firstJob && isIndustryJob(s.firstJob))) ? 'industry corporate tech engineer scientist' : '',
     gov: s => (isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob)) ? 'government national lab nasa mitre' : '',
     government: s => (isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob)) ? 'government national lab nasa mitre' : '',
+    placement: s => {
+        const parts = [];
+        if (isAcademiaJob(s.currentJob) || isAcademiaJob(s.firstJob)) parts.push('academia academic faculty');
+        if ((s.currentJob && isIndustryJob(s.currentJob)) || (s.firstJob && isIndustryJob(s.firstJob))) parts.push('industry industrial corporate');
+        if (isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob)) parts.push('national labs government gov');
+        return parts.join(' ');
+    },
     gmufaculty: s => (isGmuFacultyJob(s.currentJob) || isGmuFacultyJob(s.firstJob)) ? 'gmu faculty alumni professor' : '',
 };
 
@@ -86,6 +93,7 @@ const KEYWORD_META = {
     intern: { label: 'Internship', icon: '💼' },
     internship: { label: 'Internship', icon: '💼' },
     internships: { label: 'Internship', icon: '💼' },
+    placement: { label: 'Job Placement', icon: '💼' },
     academia: { label: 'Academia', icon: '🏛️' },
     industry: { label: 'Industry', icon: '💼' },
     gov: { label: 'Government', icon: '🏢' },
@@ -125,6 +133,7 @@ const STUDENT_SUGGESTION_SOURCES = {
     intern: () => uniqueNonEmpty(allStudents.flatMap(s => splitList(s.internships))),
     internship: () => uniqueNonEmpty(allStudents.flatMap(s => splitList(s.internships))),
     internships: () => uniqueNonEmpty(allStudents.flatMap(s => splitList(s.internships))),
+    placement: () => ['Academia', 'Industrial', 'National Labs'],
 };
 
 const SEARCH_HELP_ENTRIES = [
@@ -170,6 +179,7 @@ let queryPlan = '';
 function updateQueryPlan(matches, mode = currentView) {
     const query = document.getElementById('main-search')?.value.trim() || '';
     const degreeFilter = document.getElementById('degree-filter')?.value || 'all';
+    const placementFilter = document.getElementById('placement-filter')?.value || 'all';
     const statusFilter = document.getElementById('status-filter')?.value || 'all';
     const sortOrder = document.getElementById('sort-order')?.value || 'random';
     const kw = search ? search.effectiveSearch() : null;
@@ -180,6 +190,7 @@ function updateQueryPlan(matches, mode = currentView) {
         `scope=${scope}`,
         `query=${query ? JSON.stringify(query) : '*'}`,
         `degree=${JSON.stringify(degreeFilter)}`,
+        `placement=${JSON.stringify(placementFilter)}`,
         `status=${JSON.stringify(statusFilter)}`,
         activeTopic ? `topic=${JSON.stringify(activeTopic)}` : '',
         `sort=${sortOrder}`,
@@ -276,16 +287,27 @@ async function init() {
 
 function setupFilters() {
     document.getElementById('degree-filter').addEventListener('change', () => render());
+    document.getElementById('placement-filter')?.addEventListener('change', () => render());
     document.getElementById('status-filter').addEventListener('change', () => render());
     document.getElementById('sort-order').addEventListener('change', () => render());
     annotateOptionCounts('degree-filter', allStudents, degreeMatches);
+    annotateOptionCounts('placement-filter', allStudents, placementMatches);
     annotateOptionCounts('status-filter', allStudents, statusMatches);
 }
 
 function resetFilterDropdowns() {
     document.getElementById('degree-filter').value = 'all';
+    if (document.getElementById('placement-filter')) document.getElementById('placement-filter').value = 'all';
     document.getElementById('status-filter').value = 'all';
     document.getElementById('sort-order').value = 'random';
+}
+
+function placementMatches(s, value) {
+    if (value === 'all') return true;
+    if (value === 'academia') return Boolean(isAcademiaJob(s.currentJob) || isAcademiaJob(s.firstJob));
+    if (value === 'industry' || value === 'industrial') return Boolean((s.currentJob && isIndustryJob(s.currentJob)) || (s.firstJob && isIndustryJob(s.firstJob)));
+    if (value === 'gov' || value === 'national-labs' || value === 'labs') return Boolean(isGovLabJob(s.currentJob) || isGovLabJob(s.firstJob));
+    return true;
 }
 
 // Degree dropdown reads the free-text Degree column ("PhD '24", "MS", "PhD (visiting)", ...)
@@ -373,8 +395,9 @@ function getFiltered() {
     }
 
     const degreeFilter = document.getElementById('degree-filter').value;
+    const placementFilter = document.getElementById('placement-filter')?.value || 'all';
     const statusFilter = document.getElementById('status-filter').value;
-    list = list.filter(s => degreeMatches(s, degreeFilter) && statusMatches(s, statusFilter));
+    list = list.filter(s => degreeMatches(s, degreeFilter) && placementMatches(s, placementFilter) && statusMatches(s, statusFilter));
 
     const query = document.getElementById('main-search').value.trim().toLowerCase();
     const kw = search.effectiveSearch();
@@ -474,12 +497,14 @@ function updateUrl() {
     const params = new URLSearchParams();
     const q = search.searchQueryValue();
     const degree = document.getElementById('degree-filter').value;
+    const placement = document.getElementById('placement-filter')?.value || 'all';
     const status = document.getElementById('status-filter').value;
     const sort = document.getElementById('sort-order')?.value || 'random';
 
     if (currentView !== 'directory') params.set('view', currentView);
     if (q) params.set('q', q);
     if (degree !== 'all') params.set('degree', degree);
+    if (placement !== 'all') params.set('placement', placement);
     if (status !== 'all') params.set('status', status);
     if (sort !== 'random') params.set('sort', sort);
     if (activeTopic) params.set('topic', activeTopic);
@@ -495,6 +520,7 @@ function restoreFromUrl() {
     if (params.get('view') === 'insights') currentView = 'insights';
     if (params.has('q')) search.setSearchValue(params.get('q'));
     if (params.has('degree')) document.getElementById('degree-filter').value = params.get('degree');
+    if (params.has('placement') && document.getElementById('placement-filter')) document.getElementById('placement-filter').value = params.get('placement');
     if (params.has('status')) document.getElementById('status-filter').value = params.get('status');
     if (params.has('sort') && document.getElementById('sort-order')) document.getElementById('sort-order').value = params.get('sort');
     if (params.has('topic')) {
