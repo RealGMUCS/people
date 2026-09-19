@@ -9,6 +9,8 @@ This directory contains executable task playbooks for maintaining the **GMU CS P
 Each playbook is pre-configured with an **Autonomous Goal Directive** header. You can trigger any workflow by typing `/goal TASKS/<filename>.md`:
 
 ```bash
+/goal TASKS/discover_new_faculty_and_staff.md
+/goal TASKS/discover_new_students_and_alumni.md
 /goal TASKS/fetch_portraits.md
 /goal TASKS/backfill_linkedin.md
 /goal TASKS/check_google_scholar.md
@@ -25,7 +27,7 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 
 To preserve git history and ensure multi-agent safety:
 
-1. **Maintenance Agents DO NOT commit directly to `main`**:
+1. **Maintenance & Discovery Agents DO NOT commit directly to `main`**:
    - All roster maintenance updates, schema fixes, and verified profile additions MUST be committed on a dedicated topic branch (e.g. `task/audit-faculty-batch-1`) and submitted as a **GitHub Pull Request**.
    - If an update is ambiguous, unconfirmed by official sources, or requires direct subject confirmation, create a **GitHub Issue** detailing the finding instead of pushing a PR.
 
@@ -40,6 +42,8 @@ To preserve git history and ensure multi-agent safety:
 
 | Playbook | Purpose | Core Output |
 | :--- | :--- | :--- |
+| [`discover_new_faculty_and_staff.md`](discover_new_faculty_and_staff.md) | Search GMU CS department announcements and directories for newly hired faculty and staff. | `public/faculty.json` PRs |
+| [`discover_new_students_and_alumni.md`](discover_new_students_and_alumni.md) | Search lab sites, MARS dissertation repository, and Scholar to discover unlisted students & alumni. | `public/students.json` PRs |
 | [`fetch_portraits.md`](fetch_portraits.md) | Search official GMU directory pages, lab sites, and homepages for verified headshots. | `public/faculty.json`, `public/students.json` PRs |
 | [`backfill_linkedin.md`](backfill_linkedin.md) | Backfill missing LinkedIn personal profile URLs for faculty and student cards. | `public/faculty.json`, `public/students.json` PRs |
 | [`check_google_scholar.md`](check_google_scholar.md) | Audit and backfill missing Google Scholar citation profile links. | `public/faculty.json`, `public/students.json` PRs |
