@@ -1,7 +1,7 @@
 # Audit Faculty Roster (`audit_faculty_roster.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/audit_faculty_roster.md`):**  
-> Systematically audit and maintain the GMU CS faculty dataset in `public/faculty.json`. Verify tenure-track, teaching, research, and emeritus ranks, administrative roles (`Dept Role`), office locations, GMU netids/emails, research interests, and degree progression (`Undergrad from`/`Year`, `MS from`/`Year`, `PhD from`/`Year`, `Postdoc from`/`Year`). Follow all verification and metadata standards in `ROSTER_MAINTENANCE.md`. Set `Verified: Yes` ONLY if confirmed by direct correspondence. Update `Last Modified` and `Last Verified` dates. Submit all edits as a GitHub PR. Never commit directly to `main`.
+> **Autonomous Goal Directive (`/goal TASKS/audit_faculty_roster.md`):**
+> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Systematically audit and maintain the GMU CS faculty dataset in `public/faculty.json`. Verify tenure-track, teaching, research, and emeritus ranks, administrative roles (`Dept Role`), office locations, GMU netids/emails, research interests, and degree progression (`Undergrad from`/`Year`, `MS from`/`Year`, `PhD from`/`Year`, `Postdoc from`/`Year`). Follow all verification and metadata standards in `ROSTER_MAINTENANCE.md`. Set `Verified: Yes` ONLY if confirmed by direct correspondence. Update `Last Modified` and `Last Verified` dates. Submit all edits as a GitHub PR. Never commit directly to `main`. Do NOT stop execution until ALL batches are completed!
 
 ---
 

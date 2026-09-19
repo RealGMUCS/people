@@ -1,7 +1,7 @@
 # Discover New GMU CS Faculty & Staff (`discover_new_faculty_and_staff.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/discover_new_faculty_and_staff.md`):**  
-> Systematically search GMU CS department announcements, official directories (`cs.gmu.edu/people/faculty/`, `computing.gmu.edu/directory`), press releases, and faculty hiring notices to discover new tenure-track, teaching, research, emeritus, or staff appointments not yet listed in `public/faculty.json`. Verify appointment track, rank, office, netid, degree progression, and initial metadata. Submit new faculty entries as a GitHub PR (or GitHub Issue if unconfirmed). Never commit directly to `main`. Iterate in bounded batches.
+> **Autonomous Goal Directive (`/goal TASKS/discover_new_faculty_and_staff.md`):**
+> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Systematically search GMU CS department announcements, official directories (`cs.gmu.edu/people/faculty/`, `computing.gmu.edu/directory`), press releases, and faculty hiring notices to discover new tenure-track, teaching, research, emeritus, or staff appointments not yet listed in `public/faculty.json`. Verify appointment track, rank, office, netid, degree progression, and initial metadata. Submit new faculty entries as a GitHub PR (or GitHub Issue if unconfirmed). Never commit directly to `main`. Iterate in bounded batches. Do NOT stop execution until ALL batches are completed!
 
 ---
 

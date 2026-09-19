@@ -1,7 +1,7 @@
 # Backfill LinkedIn Profiles (`backfill_linkedin.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/backfill_linkedin.md`):**  
-> Systematically search for missing LinkedIn profile links in `public/faculty.json` and `public/students.json`. Perform multi-query research using name, GMU CS affiliation, advisor, degree, and current placement. Validate that the LinkedIn profile matches the exact individual before adding it. Update `LinkedIn`, `Last Modified`, and `Last Verified` fields. Submit all changes as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches until all entries are audited.
+> **Autonomous Goal Directive (`/goal TASKS/backfill_linkedin.md`):**
+> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Systematically search for missing LinkedIn profile links in `public/faculty.json` and `public/students.json`. Perform multi-query research using name, GMU CS affiliation, advisor, degree, and current placement. Validate that the LinkedIn profile matches the exact individual before adding it. Update `LinkedIn`, `Last Modified`, and `Last Verified` fields. Submit all changes as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches until all entries are audited. Do NOT stop execution until ALL batches are completed!
 
 ---
 
