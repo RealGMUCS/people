@@ -1,7 +1,7 @@
 # Discover New Students & Alumni (`discover_new_students_and_alumni.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/discover_new_students_and_alumni.md`):**  
-> Systematically discover unlisted GMU CS PhD students, M.S. thesis students, undergraduate lab researchers, recent graduates, and dissertation deposits on MARS (`mars.gmu.edu`). Audit advisor lab websites, GMU CS lab rosters, Google Scholar, DBLP, and LinkedIn to find current and former GMU CS students not yet in `public/students.json`. Verify primary `Advisor` (matching a faculty entry in `faculty.json`), degree format (`PhD '25`, `MS '24`), dissertation title, placement, and location. Submit proposed new records as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches.
+> **Autonomous Goal Directive (`/goal TASKS/discover_new_students_and_alumni.md`):**
+> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Systematically discover unlisted GMU CS PhD students, M.S. thesis students, undergraduate lab researchers, recent graduates, and dissertation deposits on MARS (`mars.gmu.edu`). Audit advisor lab websites, GMU CS lab rosters, Google Scholar, DBLP, and LinkedIn to find current and former GMU CS students not yet in `public/students.json`. Verify primary `Advisor` (matching a faculty entry in `faculty.json`), degree format (`PhD '25`, `MS '24`), dissertation title, placement, and location. Submit proposed new records as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches. Do NOT stop execution until ALL batches are completed!
 
 ---
 

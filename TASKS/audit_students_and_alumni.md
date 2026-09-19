@@ -1,7 +1,7 @@
 # Audit Graduate Students & Alumni Roster (`audit_students_and_alumni.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/audit_students_and_alumni.md`):**  
-> Systematically audit and update graduate student and alumni records in `public/students.json`. Cross-check PhD/MS degree progress, primary advisors (`Advisor` matching `First Last` in `faculty.json`), co-advisors, dissertation titles against MARS (Mason Archival Repository Service at `mars.gmu.edu`), first jobs, current placements, location, internships, honors, and research topics. Set `Verified: Yes` ONLY if confirmed by direct communication. Update `Last Modified` and `Last Verified` timestamps. Submit updates as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches until all student records are verified.
+> **Autonomous Goal Directive (`/goal TASKS/audit_students_and_alumni.md`):**
+> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Systematically audit and update graduate student and alumni records in `public/students.json`. Cross-check PhD/MS degree progress, primary advisors (`Advisor` matching `First Last` in `faculty.json`), co-advisors, dissertation titles against MARS (Mason Archival Repository Service at `mars.gmu.edu`), first jobs, current placements, location, internships, honors, and research topics. Set `Verified: Yes` ONLY if confirmed by direct communication. Update `Last Modified` and `Last Verified` timestamps. Submit updates as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches until all student records are verified. Do NOT stop execution until ALL batches are completed!
 
 ---
 

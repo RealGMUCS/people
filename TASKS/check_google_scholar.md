@@ -1,7 +1,7 @@
 # Check & Backfill Google Scholar Profiles (`check_google_scholar.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/check_google_scholar.md`):**  
-> Audit missing Google Scholar citation profile links in `public/faculty.json` and `public/students.json`. Perform targeted web searches to identify authentic Google Scholar user IDs matching faculty and graduate student publication records. Update `Google Scholar`, `Last Modified`, and `Last Verified` fields. Submit updates as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches until all entries are checked.
+> **Autonomous Goal Directive (`/goal TASKS/check_google_scholar.md`):**
+> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Audit missing Google Scholar citation profile links in `public/faculty.json` and `public/students.json`. Perform targeted web searches to identify authentic Google Scholar user IDs matching faculty and graduate student publication records. Update `Google Scholar`, `Last Modified`, and `Last Verified` fields. Submit updates as a GitHub PR. Never commit directly to `main`. Iterate in bounded batches until all entries are checked. Do NOT stop execution until ALL batches are completed!
 
 ---
 
