@@ -1293,5 +1293,26 @@
     "Award": "Distinguished Paper Award, IEEE S&P",
     "Year": "2026",
     "Former": ""
+  },
+  {
+    "Name": "Hai Duong",
+    "Category": "Mason Awards",
+    "Award": "Outstanding PhD Student Award, GMU CS",
+    "Year": "2026",
+    "Former": ""
+  },
+  {
+    "Name": "Hai Duong",
+    "Category": "Other Research Awards",
+    "Award": "CVPR Highlight, paper on verifying AI-based computer vision systems",
+    "Year": "2026",
+    "Former": ""
+  },
+  {
+    "Name": "Didier Ishimwe",
+    "Category": "Other Research Awards",
+    "Award": "Best Paper Award, SSBSE (LLM-guided Input Generation)",
+    "Year": "2025",
+    "Former": ""
   }
 ]
