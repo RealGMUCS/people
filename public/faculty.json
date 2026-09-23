@@ -251,7 +251,7 @@
         "Tenure-Track/Teaching/Staff": "Emeritus",
         "Rank": "Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~dbarbara",
+        "Website": "https://people.cs.gmu.edu/~dbarbara",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=wtZwMSgAAAAJ&hl=en",
         "Research interests": "Databases, Data Mining",
@@ -265,8 +265,8 @@
         "PhD Year": "1985",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -305,7 +305,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~brodsky",
+        "Website": "https://people.cs.gmu.edu/~brodsky",
         "LinkedIn": "https://www.linkedin.com/pub/alexander-brodsky/9/121/72",
         "Google Scholar": "https://scholar.google.com/citations?hl=en&user=AsyAUTIAAAAJ",
         "Research interests": "Decision Support, Guidance and Optimization (DSGO)",
@@ -319,8 +319,8 @@
         "PhD Year": "1991",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1223,7 +1223,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~kosecka/",
+        "Website": "https://people.cs.gmu.edu/~kosecka/",
         "LinkedIn": "https://www.linkedin.com/in/jana-kosecka-9a95801b/",
         "Google Scholar": "https://scholar.google.com/citations?user=sQ6l4sMAAAAJ&hl=en",
         "Research interests": "Computer Vision, Robotics",
@@ -1237,8 +1237,8 @@
         "PhD Year": "1996",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1250,7 +1250,7 @@
         "Tenure-Track/Teaching/Staff": "Tenure-Track",
         "Rank": "Assistant Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~winglam/",
+        "Website": "https://people.cs.gmu.edu/~winglam/",
         "LinkedIn": "https://www.linkedin.com/pub/wing-lam/53/681/314",
         "Google Scholar": "https://scholar.google.com/citations?user=OXYaXQsAAAAJ",
         "Research interests": "Software Engineering (SE), Software Testing, AI",
@@ -1264,8 +1264,8 @@
         "PhD Year": "2021",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1277,7 +1277,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Associate Professor",
         "Dept Role": "On Leave (Google)",
-        "Website": "people.cs.gmu.edu/~tlatoza/",
+        "Website": "https://people.cs.gmu.edu/~tlatoza/",
         "LinkedIn": "https://www.linkedin.com/in/thomas-latoza-67474a55/",
         "Google Scholar": "https://scholar.google.com/citations?user=200KNLAAAAAJ&hl=en",
         "Research interests": "Software Engineering (SE), Human-Computer Interaction (HCI)",
@@ -1291,8 +1291,8 @@
         "PhD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1331,7 +1331,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~lifei/",
+        "Website": "https://people.cs.gmu.edu/~lifei/",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=ql6BXwcAAAAJ&hl=en",
         "Research interests": "Algorithms, Theory",
@@ -1345,8 +1345,8 @@
         "PhD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1358,7 +1358,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~jessica/",
+        "Website": "https://people.cs.gmu.edu/~jessica/",
         "LinkedIn": "https://www.linkedin.com/in/jessica-lin-bb31196/",
         "Google Scholar": "https://scholar.google.com/citations?user=tRHOWkcAAAAJ",
         "Research interests": "Data Mining, Data Analytics, Machine Learning (ML)",
@@ -1372,8 +1372,8 @@
         "PhD Year": "2005",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1628,7 +1628,7 @@
         "Tenure-Track/Teaching/Staff": "Affiliate",
         "Rank": "Assistant Professor",
         "Dept Role": "IST",
-        "Website": "www.noramcdonald.net",
+        "Website": "https://www.noramcdonald.net",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "AI/ML, Security, HCC, Digital Privacy",
@@ -1642,8 +1642,8 @@
         "PhD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1682,7 +1682,7 @@
         "Tenure-Track/Teaching/Staff": "Affiliate",
         "Rank": "Assistant Professor",
         "Dept Role": "Systems Engineering and Operations Research",
-        "Website": "mohebbilab.cec.gmu.edu/",
+        "Website": "https://mohebbilab.cec.gmu.edu/",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Cyber-physical systems, Game theory, Smart cities",
@@ -1696,8 +1696,8 @@
         "PhD Year": "",
         "Postdoc from": "University of South Florida",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1790,7 +1790,7 @@
         "Tenure-Track/Teaching/Staff": "Affiliate",
         "Rank": "Associate Professor",
         "Dept Role": "IST",
-        "Website": "sites.google.com/site/vivianmotti/welcome",
+        "Website": "https://sites.google.com/site/vivianmotti/welcome",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Human-Computer Interaction (HCI), Wearable Computing, Usable Privacy",
@@ -1804,8 +1804,8 @@
         "PhD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1844,7 +1844,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Associate Professor",
         "Dept Role": "MS SWE Director",
-        "Website": "roars.dev",
+        "Website": "https://roars.dev",
         "LinkedIn": "https://www.linkedin.com/in/thanhvu-nguyen-9b1487110/",
         "Google Scholar": "https://scholar.google.com/citations?user=TLcVQ-MAAAAJ&hl=en",
         "Research interests": "Software Engineering (SE), Formal Methods, Programming Languages",
@@ -1858,8 +1858,8 @@
         "PhD Year": "2014",
         "Postdoc from": "University of Maryland",
         "Postdoc Year": "2016",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1979,7 +1979,7 @@
         "Tenure-Track/Teaching/Staff": "Affiliate",
         "Rank": "Professor",
         "Dept Role": "Geography and Geoinformation Science",
-        "Website": "www.dieter.pfoser.org/",
+        "Website": "https://www.dieter.pfoser.org/",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Geography and Geoinformation Science",
@@ -1993,8 +1993,8 @@
         "PhD Year": "2000",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -2249,7 +2249,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Professor",
         "Dept Role": "VP and Chief AI Officer, Associate Dean for Research",
-        "Website": "people.cs.gmu.edu/~ashehu/",
+        "Website": "https://people.cs.gmu.edu/~ashehu/",
         "LinkedIn": "https://www.linkedin.com/in/amarda-shehu-167a569/",
         "Google Scholar": "https://scholar.google.com/citations?user=HkB_Gz0AAAAJ&hl=en",
         "Research interests": "AI, Bioinformatics, Computational Biology",
@@ -2263,8 +2263,8 @@
         "PhD Year": "2008",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
