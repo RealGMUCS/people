@@ -207,7 +207,7 @@ if (errors.length) {
     process.exitCode = 1;
 } else {
     const formerNames = new Set(awards
-        .filter(row => value(row, 'Former').toLowerCase() === 'yes' || !facultyNames.has(value(row, 'Name')))
+        .filter(row => value(row, 'Former').toLowerCase() === 'yes')
         .map(row => value(row, 'Name')));
     console.log(`Data validation passed: ${faculty.length} faculty, ${students.length} students, ${awards.length} awards, ${formerNames.size} former award recipients.`);
 }
