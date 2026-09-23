@@ -1419,5 +1419,40 @@
     "Award": "Outstanding GTA Award, George Mason University Department of Computer Science",
     "Year": "2025",
     "Former": "yes"
+  },
+  {
+    "Name": "Saurabh Srivastava",
+    "Category": "Other Research Awards",
+    "Award": "Selected Presentation, SIAM SDM Doctoral Forum",
+    "Year": "2025",
+    "Former": "yes"
+  },
+  {
+    "Name": "Daking Rai",
+    "Category": "Other Research Awards",
+    "Award": "Best Paper Honorable Mention, First Workshop on the Application of LLM Explainability to Reasoning and Planning, COLM",
+    "Year": "2025",
+    "Former": ""
+  },
+  {
+    "Name": "Daking Rai",
+    "Category": "Other Research Awards",
+    "Award": "NeurIPS Travel Award",
+    "Year": "2025",
+    "Former": ""
+  },
+  {
+    "Name": "Mohamed Aghzal",
+    "Category": "Other Research Awards",
+    "Award": "CVPR Travel Award",
+    "Year": "2025",
+    "Former": ""
+  },
+  {
+    "Name": "Murong Yue",
+    "Category": "Mason Awards",
+    "Award": "Outstanding PhD Student Award, George Mason University Department of Computer Science",
+    "Year": "2024",
+    "Former": ""
   }
 ]
