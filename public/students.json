@@ -105,11 +105,11 @@
     "Verified": ""
   },
   {
-    "First Name": "Milind",
-    "Last Name": "Agarwal",
+        "First Name": "Milind",
+        "Last Name": "Agarwal",
     "Advisor": "Antonios Anastasopoulos",
     "Co-Advisor": "",
-    "Degree": "PhD '26",
+        "Degree": "PhD '25",
     "Dissertation Title": "Improving Resource Creation for Low-Resource Languages using NLP Methods",
     "Current Job": "Senior Forward Deployed Engineer, LILT AI",
     "First Job": "",
@@ -121,8 +121,8 @@
     "Website": "https://milindagarwal.github.io/",
     "LinkedIn": "",
     "Google Scholar": "https://scholar.google.com/citations?user=eRaPEZ0AAAAJ&hl=en",
-    "Last Modified": "2026-09-14",
-    "Last Verified": "2026-09-14",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
     "Verified": ""
   },
   {
@@ -5313,11 +5313,11 @@
     "Verified": "Yes"
   },
   {
-    "First Name": "Manpriya",
-    "Last Name": "Dua",
+        "First Name": "Manpriya",
+        "Last Name": "Dua",
     "Advisor": "Amarda Shehu",
     "Co-Advisor": "",
-    "Degree": "PhD '26",
+        "Degree": "PhD '25",
     "Dissertation Title": "Machine Learning-Enabled Unraveling, Organizing, and Enriching of AI Strategies",
     "Current Job": "Postdoctoral Research Fellow, George Mason University",
     "First Job": "",
@@ -5329,16 +5329,16 @@
     "Website": "https://mason.gmu.edu/~mdua",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-14",
-    "Last Verified": "2026-09-14",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
     "Verified": "Yes"
   },
   {
-    "First Name": "Toki Tahmid",
+        "First Name": "Toki Tahmid",
     "Last Name": "Inan",
     "Advisor": "Amarda Shehu",
     "Co-Advisor": "",
-    "Degree": "PhD '26",
+        "Degree": "PhD '25",
     "Dissertation Title": "Rethinking Optimization for Deep Learning Under the Umbrella of Evolutionary Computation",
     "Current Job": "AI Engineer, 4A Consulting",
     "First Job": "",
@@ -5350,16 +5350,16 @@
     "Website": "https://mason.gmu.edu/~tinan",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-14",
-    "Last Verified": "2026-09-14",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
     "Verified": "Yes"
   },
   {
-    "First Name": "Anowarul",
+        "First Name": "Anowarul",
     "Last Name": "Kabir",
     "Advisor": "Amarda Shehu",
     "Co-Advisor": "",
-    "Degree": "PhD '26",
+        "Degree": "PhD '25",
     "Dissertation Title": "Foundation Models Meet Life Sciences: Advancing Knowledge - Rich Multimodal AI in Molecular Biology",
     "Current Job": "Assistant Professor, Bellini College of AI, Cybersecurity and Computing, University of South Florida",
     "First Job": "",
@@ -5371,8 +5371,8 @@
     "Website": "https://mason.gmu.edu/~akabir4",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-14",
-    "Last Verified": "2026-09-14",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
     "Verified": "Yes"
   },
   {
@@ -8673,11 +8673,11 @@
     "Verified": "Yes"
   },
   {
-    "First Name": "Taylor",
-    "Last Name": "Henderson",
-    "Advisor": "Robert Simon",
-    "Co-Advisor": "",
-    "Degree": "PhD '26",
+        "First Name": "Taylor",
+        "Last Name": "Henderson",
+        "Advisor": "Robert Simon",
+        "Co-Advisor": "Hakan Aydin",
+        "Degree": "PhD '25",
     "Dissertation Title": "Time Series Analysis for Malicious Communications",
     "Current Job": "",
     "First Job": "",
@@ -8689,8 +8689,8 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-15",
-    "Last Verified": "2026-09-14",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
     "Verified": "Yes"
   },
   {
@@ -8946,11 +8946,11 @@
     "Verified": ""
   },
   {
-    "First Name": "Benjamin Richard",
-    "Last Name": "Carver",
-    "Advisor": "Yue Cheng",
-    "Co-Advisor": "",
-    "Degree": "PhD '26",
+        "First Name": "Benjamin Richard",
+        "Last Name": "Carver",
+        "Advisor": "Yue Cheng",
+        "Co-Advisor": "Songqing Chen",
+        "Degree": "PhD '25",
     "Dissertation Title": "Towards Elastic, High-Performance, Stateful Serverless Systems",
     "Current Job": "",
     "First Job": "",
@@ -8962,8 +8962,8 @@
     "Website": "",
     "LinkedIn": "",
     "Google Scholar": "",
-    "Last Modified": "2026-09-14",
-    "Last Verified": "2026-09-14",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
     "Verified": ""
   },
   {
