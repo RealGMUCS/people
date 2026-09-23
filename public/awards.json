@@ -1321,5 +1321,26 @@
     "Award": "Distinguished Paper Award, IEEE Symposium on Security and Privacy",
     "Year": "2026",
     "Former": "yes"
+  },
+  {
+    "Name": "ThanhVu (Vu) Nguyen",
+    "Category": "Other Research Awards",
+    "Award": "ICML Spotlight, Learning Randomized Reductions",
+    "Year": "2026",
+    "Former": ""
+  },
+  {
+    "Name": "Hai Duong",
+    "Category": "Other Research Awards",
+    "Award": "NeurIPS Spotlight, paper on compositional DNN verification",
+    "Year": "2025",
+    "Former": ""
+  },
+  {
+    "Name": "Linhan Li",
+    "Category": "Mason Awards",
+    "Award": "Outstanding Teaching Assistants Award, GMU CS",
+    "Year": "2025",
+    "Former": ""
   }
 ]
