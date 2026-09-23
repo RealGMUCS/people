@@ -35,7 +35,7 @@
         "Tenure-Track/Teaching/Staff": "Tenure-Track",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~jallbeck/",
+        "Website": "https://people.cs.gmu.edu/~jallbeck/",
         "LinkedIn": "https://www.linkedin.com/in/jan-allbeck-ab78512",
         "Google Scholar": "https://scholar.google.com/citations?user=GF-eRaMAAAAJ&hl=en",
         "Research interests": "AI, Computer Game Technology, Graphics",
@@ -49,8 +49,8 @@
         "PhD Year": "2009",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -62,7 +62,7 @@
         "Tenure-Track/Teaching/Staff": "Emeritus",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~pammann/",
+        "Website": "https://people.cs.gmu.edu/~pammann/",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Software Engineering (SE)",
@@ -76,8 +76,8 @@
         "PhD Year": "1988",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -89,7 +89,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "antonisa.github.io/",
+        "Website": "https://antonisa.github.io/",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=g_G_SNAAAAAJ&hl=en",
         "Research interests": "Natural Language Processing (NLP)",
@@ -103,8 +103,8 @@
         "PhD Year": "2019",
         "Postdoc from": "Carnegie Mellon University",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -116,7 +116,7 @@
         "Tenure-Track/Teaching/Staff": "Teaching",
         "Rank": "Assistant Professor",
         "Dept Role": "",
-        "Website": "kevinandrea.github.io",
+        "Website": "https://kevinandrea.github.io",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=iqZGec4AAAAJ&hl=en",
         "Research interests": "Embedded Systems, Systems Programming, IoT",
@@ -130,8 +130,8 @@
         "PhD Year": "2023",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -143,7 +143,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Professor",
         "Dept Role": "Eminent Scholar, CCI Faculty Fellow",
-        "Website": "ateniese.github.io/",
+        "Website": "https://ateniese.github.io/",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=EyZJ08MAAAAJ&hl=en",
         "Research interests": "Cloud Security, Security, Cryptography",
@@ -157,8 +157,8 @@
         "PhD Year": "2000",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -170,7 +170,7 @@
         "Tenure-Track/Teaching/Staff": "Teaching",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~iavramo2/",
+        "Website": "https://people.cs.gmu.edu/~iavramo2/",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Algorithms, Theory, Systems",
@@ -184,8 +184,8 @@
         "PhD Year": "2020",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -197,7 +197,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Professor",
         "Dept Role": "PhD Program Director",
-        "Website": "people.cs.gmu.edu/~aydin/",
+        "Website": "https://people.cs.gmu.edu/~aydin/",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=Y70451sAAAAJ&hl=en",
         "Research interests": "Real-Time Systems, Embedded Systems, Sustainable Computing",
@@ -211,8 +211,8 @@
         "PhD Year": "2001",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -332,7 +332,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Professor",
         "Dept Role": "Current Dept. Chair (2026-)",
-        "Website": "people.cs.gmu.edu/~sqchen/",
+        "Website": "https://people.cs.gmu.edu/~sqchen/",
         "LinkedIn": "https://www.linkedin.com/in/songqing-chen-87286160/",
         "Google Scholar": "https://scholar.google.com/citations?user=T7IRM8EAAAAJ&hl=en",
         "Research interests": "Computer and Network Security, computer networks, computer systems, parallel and distributed systems, mobile computing",
@@ -346,8 +346,8 @@
         "PhD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -413,7 +413,7 @@
         "Tenure-Track/Teaching/Staff": "Emeritus",
         "Rank": "Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~kdejong/",
+        "Website": "https://people.cs.gmu.edu/~kdejong/",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Evolutionary Computation",
@@ -427,8 +427,8 @@
         "PhD Year": "1975",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -440,7 +440,7 @@
         "Tenure-Track/Teaching/Staff": "Teaching",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~pideng/",
+        "Website": "https://people.cs.gmu.edu/~pideng/",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Databases and data mining",
@@ -454,8 +454,8 @@
         "PhD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-04",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -548,7 +548,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~carlotta/",
+        "Website": "https://people.cs.gmu.edu/~carlotta/",
         "LinkedIn": "https://www.linkedin.com/in/carlotta-domeniconi-24739180",
         "Google Scholar": "https://scholar.google.com/citations?user=aKkIMogAAAAJ&hl=en",
         "Research interests": "Machine Learning (ML), Data Mining",
@@ -562,8 +562,8 @@
         "PhD Year": "2002",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -575,7 +575,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Associate Professor",
         "Dept Role": "MS CS Director",
-        "Website": "people.cs.gmu.edu/~zduric/",
+        "Website": "https://people.cs.gmu.edu/~zduric/",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=bVaZTY4AAAAJ&hl=en",
         "Research interests": "Computer Vision, AI",
@@ -589,8 +589,8 @@
         "PhD Year": "1995",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -683,7 +683,7 @@
         "Tenure-Track/Teaching/Staff": "Emeritus",
         "Rank": "Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~hgomaa/",
+        "Website": "https://mason.gmu.edu/~hgomaa/",
         "LinkedIn": "",
         "Google Scholar": "",
         "Research interests": "Human-Centered Computing",
@@ -697,8 +697,8 @@
         "PhD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-16",
-        "Last Verified": "2026-09-16",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -764,7 +764,7 @@
         "Tenure-Track/Teaching/Staff": "Tenured",
         "Rank": "Associate Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~gordon/",
+        "Website": "https://people.cs.gmu.edu/~gordon/",
         "LinkedIn": "https://www.linkedin.com/in/dov-gordon-85b8225",
         "Google Scholar": "https://scholar.google.com/citations?user=wS_5894AAAAJ&hl=en",
         "Research interests": "Cryptography, Security",
@@ -778,8 +778,8 @@
         "PhD Year": "2010",
         "Postdoc from": "Columbia University",
         "Postdoc Year": "2012",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1196,7 +1196,7 @@
         "Tenure-Track/Teaching/Staff": "Tenure-Track",
         "Rank": "Assistant Professor",
         "Dept Role": "",
-        "Website": "people.cs.gmu.edu/~evgenios/",
+        "Website": "https://people.cs.gmu.edu/~evgenios/",
         "LinkedIn": "",
         "Google Scholar": "https://scholar.google.com/citations?user=2s0r_AkAAAAJ",
         "Research interests": "Security",
@@ -1210,8 +1210,8 @@
         "PhD Year": "",
         "Postdoc from": "UC Berkeley",
         "Postdoc Year": "",
-        "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Modified": "2026-09-23",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
