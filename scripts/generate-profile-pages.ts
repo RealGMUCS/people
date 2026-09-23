@@ -40,7 +40,7 @@ function normalizeUrl(v: unknown): string {
   return url.startsWith('http') ? url : `https://${url}`;
 }
 
-// Faculty `picture` is either an external hotlinked URL or a local relative
+// A `picture` is either an external hotlinked URL or a local relative
 // path under public/portraits/ (see scripts/fetch-portraits.ts) — resolve the
 // latter to an absolute site URL for og:image/JSON-LD and for the profile
 // page's <img> src (profile pages live one directory below the site root).
@@ -296,12 +296,12 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
   const fullName = `${s.firstName} ${s.lastName}`.trim();
   const title = `${fullName}${s.degree ? ` (${s.degree})` : ''} — GMU CS Students & Alumni`;
   const canonicalUrl = `${siteUrl}/people/${s.slug}.html`;
-  const ogImage = s.picture || `${siteUrl}/default-portrait.svg`;
+  const ogImage = s.picture ? resolvePictureUrl(s.picture) : `${siteUrl}/default-portrait.svg`;
   const roleParts = [s.degree, s.currentJob || s.firstJob, s.location, 'Department of Computer Science, George Mason University'].filter(Boolean);
   const description = `${fullName} is ${roleParts.join(' · ')}.`;
 
   const portrait = s.picture
-    ? `<img class="portrait" src="${escapeHtml(s.picture)}" alt="Portrait of ${escapeHtml(fullName)}" width="240" height="240">`
+    ? `<img class="portrait" src="${escapeHtml(resolvePictureUrl(s.picture))}" alt="Portrait of ${escapeHtml(fullName)}" width="240" height="240">`
     : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file for ${escapeHtml(fullName)}" width="240" height="240">`;
 
   const topics = s.topics.length
@@ -378,7 +378,7 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
     },
     url: canonicalUrl,
     ...(s.currentJob ? { jobTitle: s.currentJob } : {}),
-    ...(s.picture ? { image: s.picture } : {}),
+    ...(s.picture ? { image: resolvePictureUrl(s.picture) } : {}),
     ...(sameAs.length ? { sameAs } : {}),
     ...(s.topics.length ? { knowsAbout: s.topics } : {}),
   });

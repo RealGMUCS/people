@@ -25,6 +25,14 @@ test('JSON datasets preserve their complete field contracts', () => {
     }
 });
 
+test('local student portraits reference files under public/portraits', () => {
+    for (const row of read('students')) {
+        const picture = typeof row.Picture === 'string' ? row.Picture : '';
+        if (!picture.startsWith('portraits/')) continue;
+        assert.ok(fs.existsSync(path.join(root, 'public', picture)), `${row['First Name']} ${row['Last Name']} portrait should exist`);
+    }
+});
+
 test('student primary advisors and award recipients resolve to faculty names', () => {
     const faculty = new Set(read('faculty').map(row => `${row['First Name']} ${row['Last Name']}`));
     const students = read('students');

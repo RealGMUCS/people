@@ -37,3 +37,17 @@ test('profile pages generate valid HTML for faculty and students', () => {
         assert.ok(content.includes('style.css'), `${slug}.html should link style.css`);
     }
 });
+
+test('student profile pages resolve local portrait URLs from the site root', () => {
+    const peopleDir = path.join(root, 'public', 'people');
+    const slug = 'md-tanvir-rouf-shawon';
+    const filePath = path.join(peopleDir, `${slug}.html`);
+    if (!fs.existsSync(filePath)) {
+        execFileSync('npx', ['tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
+    }
+
+    const content = fs.readFileSync(filePath, 'utf8');
+    const portraitUrl = 'https://realgmucs.github.io/people/portraits/md-tanvir-rouf-shawon.webp';
+    assert.ok(content.includes(`src="${portraitUrl}"`), 'portrait image should not resolve relative to /people/');
+    assert.ok(content.includes(`"image":"${portraitUrl}"`), 'structured image metadata should use an absolute URL');
+});
