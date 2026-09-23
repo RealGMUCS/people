@@ -173,7 +173,7 @@ export async function loadStudents(facultyByName) {
             internships: clean(row['Internships']),
             honors,
             topics,
-            picture: normalizeUrl(clean(row['Picture'])),
+            picture: normalizePicture(clean(row['Picture'])),
             website: normalizeUrl(clean(row['Website'])),
             linkedin: normalizeUrl(clean(row['LinkedIn'])),
             scholar: normalizeUrl(clean(row['Google Scholar'])),
@@ -298,7 +298,7 @@ function normalizeUrl(url) {
     return url.startsWith('http') ? url : `https://${url}`;
 }
 
-// A faculty "Picture" value is either an external hotlinked URL or a local
+// A "Picture" value is either an external hotlinked URL or a local
 // relative asset path (e.g. "portraits/x.webp", written by
 // scripts/fetch-portraits.ts) — the latter must NOT get an https:// prefix.
 function normalizePicture(picture) {

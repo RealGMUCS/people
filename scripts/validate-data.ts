@@ -102,9 +102,8 @@ function validHttpUrl(raw: string, allowMissingProtocol = false) {
     }
 }
 
-// A faculty "Picture" is either an external hotlinked URL, or a local relative
-// path under public/portraits/ (written by scripts/fetch-portraits.ts) — verify
-// the referenced file actually exists on disk.
+// A "Picture" is either an external hotlinked URL, or a local relative path
+// under public/portraits/ — verify the referenced file actually exists on disk.
 function validPicture(raw: string) {
     if (!raw) return true;
     if (raw.startsWith('portraits/')) return fs.existsSync(new URL(`../public/${raw}`, import.meta.url));
@@ -173,7 +172,7 @@ students.forEach((row, index) => {
     const lastVerified = value(row, 'Last Verified');
 
     if (!firstName && !lastName) errors.push(`students.json:${line}: first or last name is required`);
-    if (!validHttpUrl(picture)) errors.push(`students.json:${line}: invalid picture URL "${picture}"`);
+    if (!validPicture(picture)) errors.push(`students.json:${line}: invalid picture URL "${picture}"`);
     if (!validHttpUrl(website, true)) errors.push(`students.json:${line}: invalid website URL "${website}"`);
     if (!validHttpUrl(linkedin, true)) errors.push(`students.json:${line}: invalid linkedin URL "${linkedin}"`);
     if (!validHttpUrl(scholar, true)) errors.push(`students.json:${line}: invalid scholar URL "${scholar}"`);
