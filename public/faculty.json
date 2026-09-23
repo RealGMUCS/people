@@ -894,8 +894,8 @@
         "First Name": "Mike",
         "Last Name": "Fee",
         "gmu email/userid": "mfee4@gmu.edu",
-        "Picture": "",
-        "Picture Source": "",
+        "Picture": "portraits/mike-fee.webp",
+        "Picture Source": "https://cs.gmu.edu/sites/default/files/styles/media_library/public/2026-05/mike-fee-headshot-500x.jpg?itok=CqBkSPki",
         "Tenure-Track/Teaching/Staff": "Staff",
         "Rank": "",
         "Dept Role": "Undergraduate Academic Advisor",
@@ -921,8 +921,8 @@
         "First Name": "Cody",
         "Last Name": "Green",
         "gmu email/userid": "csug@gmu.edu",
-        "Picture": "",
-        "Picture Source": "",
+        "Picture": "portraits/cody-green.webp",
+        "Picture Source": "https://cs.gmu.edu/sites/default/files/2026-05/cody_green.jpg",
         "Tenure-Track/Teaching/Staff": "Staff",
         "Rank": "",
         "Dept Role": "Undergraduate Academic Advisor",
@@ -968,7 +968,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1049,7 +1049,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -1886,7 +1886,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -2021,7 +2021,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -2156,7 +2156,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -2183,7 +2183,7 @@
         "Postdoc from": "U.S. Naval Research Laboratory",
         "Postdoc Year": "2025",
         "Last Modified": "2026-09-11",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -2210,7 +2210,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
@@ -2615,7 +2615,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-09-04",
-        "Last Verified": "2026-09-11",
+        "Last Verified": "2026-09-23",
         "Verified": ""
     },
     {
