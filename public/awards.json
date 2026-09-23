@@ -1313,6 +1313,13 @@
     "Category": "Other Research Awards",
     "Award": "Best Paper Award, SSBSE (LLM-guided Input Generation)",
     "Year": "2025",
-    "Former": ""
+    "Former": "yes"
+  },
+  {
+    "Name": "Aayush Yadav",
+    "Category": "Most Influential Paper, Impact Paper, and Test of Time Paper Awards",
+    "Award": "Distinguished Paper Award, IEEE Symposium on Security and Privacy",
+    "Year": "2026",
+    "Former": "yes"
   }
 ]
