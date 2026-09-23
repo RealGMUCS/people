@@ -1454,5 +1454,40 @@
     "Award": "Outstanding PhD Student Award, George Mason University Department of Computer Science",
     "Year": "2024",
     "Former": ""
+  },
+  {
+    "Name": "Aedan Pettit",
+    "Category": "Mason Awards",
+    "Award": "Distinguished Academic Achievement Award, M.S. in Software Engineering, George Mason University Department of Computer Science",
+    "Year": "2025",
+    "Former": "yes"
+  },
+  {
+    "Name": "Joseph Sepich",
+    "Category": "Mason Awards",
+    "Award": "Distinguished Academic Achievement Award, M.S. in Software Engineering, George Mason University Department of Computer Science",
+    "Year": "2026",
+    "Former": "yes"
+  },
+  {
+    "Name": "Kaitlin O'Leary",
+    "Category": "Mason Awards",
+    "Award": "Distinguished Academic Achievement Award, M.S. in Software Engineering, George Mason University Department of Computer Science",
+    "Year": "2025",
+    "Former": "yes"
+  },
+  {
+    "Name": "Hamaad Zuberi",
+    "Category": "Mason Awards",
+    "Award": "Distinguished Academic Achievement Award, M.S. in Software Engineering, George Mason University Department of Computer Science",
+    "Year": "2025",
+    "Former": "yes"
+  },
+  {
+    "Name": "Anusha Gurram",
+    "Category": "Mason Awards",
+    "Award": "Distinguished Academic Achievement Award, M.S. in Software Engineering, George Mason University Department of Computer Science",
+    "Year": "2026",
+    "Former": "yes"
   }
 ]
