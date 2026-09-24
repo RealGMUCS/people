@@ -605,6 +605,7 @@ async function main() {
     readFile(resolve(root, 'src/style.css'), 'utf8'),
   ]);
   const combinedCss = `${profileCss}\n\n${customCss.replace(/@import\s+['"].\/profile\.css['"];?\s*/g, '')}`;
+  await mkdir(output, { recursive: true });
   await writeFile(resolve(root, 'public/style.css'), combinedCss, 'utf8');
   await writeFile(resolve(output, 'style.css'), combinedCss, 'utf8');
 
