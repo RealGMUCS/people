@@ -17,6 +17,10 @@ const FACULTY_KEYWORDS = {
     interest: f => f.interests.join(' '),
     interests: f => f.interests.join(' '),
     phd: f => f.phdFrom,
+    jd: f => f.jdFrom,
+    ms: f => f.msFrom,
+    bs: f => f.undergradFrom,
+    undergrad: f => f.undergradFrom,
     postdoc: f => f.postdocFrom,
     rank: f => f.category,
     type: f => f.type,
@@ -33,6 +37,10 @@ const KEYWORD_META = {
     interest: { label: 'Research', icon: '🔬' },
     interests: { label: 'Research', icon: '🔬' },
     phd: { label: 'PhD', icon: '🎓' },
+    jd: { label: 'JD', icon: '⚖️' },
+    ms: { label: 'MS', icon: '🎓' },
+    bs: { label: 'Undergrad', icon: '🎓' },
+    undergrad: { label: 'Undergrad', icon: '🎓' },
     postdoc: { label: 'Postdoc', icon: '🎓' },
     rank: { label: 'Rank', icon: '🎓' },
     type: { label: 'Type', icon: '🏷️' },
@@ -53,6 +61,10 @@ const FACULTY_SUGGESTION_SOURCES = {
     interest: () => Array.from(interestIndex.keys()),
     interests: () => Array.from(interestIndex.keys()),
     phd: () => uniqueNonEmpty(allFaculty.map(f => f.phdFrom)),
+    jd: () => uniqueNonEmpty(allFaculty.map(f => f.jdFrom)),
+    ms: () => uniqueNonEmpty(allFaculty.map(f => f.msFrom)),
+    bs: () => uniqueNonEmpty(allFaculty.map(f => f.undergradFrom)),
+    undergrad: () => uniqueNonEmpty(allFaculty.map(f => f.undergradFrom)),
     postdoc: () => uniqueNonEmpty(allFaculty.map(f => f.postdocFrom)),
     rank: () => uniqueNonEmpty(allFaculty.map(f => f.category)),
     type: () => uniqueNonEmpty(allFaculty.map(f => f.type)),
@@ -456,6 +468,7 @@ function renderCard(f) {
     const detailParts = [
         eduPart('Postdoc', f.postdocFrom, f.postdocYear),
         eduPart('PhD', f.phdFrom, f.phdYear),
+        eduPart('JD', f.jdFrom, f.jdYear),
         eduPart('MS', f.msFrom, f.msYear),
         eduPart('Undergrad', f.undergradFrom, f.undergradYear),
         f.yearStarted ? `At GMU since ${esc(String(f.yearStarted))}` : null,
@@ -472,7 +485,7 @@ function renderCard(f) {
     const trackTag = f.type
         ? `<span class="tag tag-track${f.type === 'Emeritus' ? ' tag-emeritus' : ''}">${esc(f.type)}</span>`
         : '';
-    const isGmuAlumni = isGmuInstitution(f.phdFrom) || isGmuInstitution(f.msFrom) || isGmuInstitution(f.undergradFrom);
+    const isGmuAlumni = isGmuInstitution(f.phdFrom) || isGmuInstitution(f.jdFrom) || isGmuInstitution(f.msFrom) || isGmuInstitution(f.undergradFrom);
     const gmuAlumniTag = isGmuAlumni
         ? `<span class="tag tag-gmu-alumni" title="Earned a degree from GMU">🎓 GMU Alumni</span>`
         : '';

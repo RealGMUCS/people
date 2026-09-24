@@ -21,6 +21,8 @@ const facultyFields = [
     'MS Year',
     'PhD from',
     'PhD Year',
+    'JD from',
+    'JD Year',
     'Postdoc from',
     'Postdoc Year',
     'Last Modified',
