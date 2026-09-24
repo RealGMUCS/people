@@ -297,7 +297,7 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
   const title = `${fullName}${s.degree ? ` (${s.degree})` : ''} — GMU CS Students & Alumni`;
   const canonicalUrl = `${siteUrl}/people/${s.slug}.html`;
   const ogImage = s.picture ? resolvePictureUrl(s.picture) : `${siteUrl}/default-portrait.svg`;
-  const roleParts = [s.degree, s.currentJob || s.firstJob, s.location, 'Department of Computer Science, George Mason University'].filter(Boolean);
+  const roleParts = [s.degree, s.currentJob || s.firstJob, 'Department of Computer Science, George Mason University'].filter(Boolean);
   const description = `${fullName} is ${roleParts.join(' · ')}.`;
 
   const portrait = s.picture
@@ -337,7 +337,7 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
     s.currentJob && `Current Job: ${escapeHtml(s.currentJob)}`,
     s.firstJob && `First Placement: ${escapeHtml(s.firstJob)}`,
     s.internships && `Internships: ${escapeHtml(s.internships)}`,
-    s.location && `Location: ${escapeHtml(s.location)}`,
+    s.location && (s.currentJob || s.firstJob) && `Placement Location: ${escapeHtml(s.location)}`,
   ].filter(Boolean) as string[];
 
   const careerSection = careerItems.length
@@ -444,7 +444,6 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
                 </div>
               </div>
               <p class="native">${escapeHtml([s.degree, s.currentJob || s.firstJob].filter(Boolean).join(' · '))}</p>
-              ${s.location ? `<p class="record-id">📍 ${escapeHtml(s.location)}</p>` : ''}
             </div>
           </div>
         </section>
