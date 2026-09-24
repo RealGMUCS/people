@@ -77,6 +77,8 @@ interface FacultyEntry {
   msYear: string;
   phdFrom: string;
   phdYear: string;
+  jdFrom: string;
+  jdYear: string;
   postdocFrom: string;
   postdocYear: string;
   lastModified: string;
@@ -130,6 +132,7 @@ function renderFacultyProfile(f: FacultyEntry) {
   const eduItems: string[] = [
     f.postdocFrom && `Postdoctoral training: ${[f.postdocFrom, f.postdocYear].filter(Boolean).join(', ')}`,
     f.phdFrom && `PhD: ${[f.phdFrom, f.phdYear].filter(Boolean).join(', ')}`,
+    f.jdFrom && `JD: ${[f.jdFrom, f.jdYear].filter(Boolean).join(', ')}`,
     f.msFrom && `MS: ${[f.msFrom, f.msYear].filter(Boolean).join(', ')}`,
     f.undergradFrom && `Undergraduate: ${[f.undergradFrom, f.undergradYear].filter(Boolean).join(', ')}`,
     f.yearStarted && `At George Mason University since ${f.yearStarted}`,
@@ -167,6 +170,7 @@ function renderFacultyProfile(f: FacultyEntry) {
   const sameAs = [f.website, f.scholar, f.linkedin].filter(Boolean);
   const alumniOf = [
     f.phdFrom && { '@type': 'EducationalOrganization', name: f.phdFrom },
+    f.jdFrom && { '@type': 'EducationalOrganization', name: f.jdFrom },
     f.msFrom && { '@type': 'EducationalOrganization', name: f.msFrom },
     f.undergradFrom && { '@type': 'EducationalOrganization', name: f.undergradFrom },
   ].filter(Boolean);
@@ -528,6 +532,8 @@ async function main() {
       msYear: clean(row['MS Year']),
       phdFrom: clean(row['PhD from']),
       phdYear: clean(row['PhD Year']),
+      jdFrom: clean(row['JD from']),
+      jdYear: clean(row['JD Year']),
       postdocFrom: clean(row['Postdoc from']),
       postdocYear: clean(row['Postdoc Year']),
       lastModified: clean(row['Last Modified']),

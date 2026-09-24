@@ -68,6 +68,8 @@ export async function loadFaculty() {
             msYear: clean(row['MS Year']),
             phdFrom: clean(row['PhD from']),
             phdYear: clean(row['PhD Year']),
+            jdFrom: clean(row['JD from']),
+            jdYear: clean(row['JD Year']),
             postdocFrom: clean(row['Postdoc from']),
             postdocYear: clean(row['Postdoc Year']),
             lastModified: clean(row['Last Modified']),
