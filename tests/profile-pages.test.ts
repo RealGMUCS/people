@@ -16,10 +16,7 @@ test('slugify generates clean URL-friendly slugs', () => {
 
 test('profile pages generate valid HTML for faculty and students', () => {
     const peopleDir = path.join(root, 'public', 'people');
-    if (!fs.existsSync(peopleDir)) {
-        // Run generation if not already generated
-        execFileSync('npx', ['tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
-    }
+    execFileSync('npx', ['tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
 
     const files = fs.readdirSync(peopleDir).filter(f => f.endsWith('.html'));
     assert.ok(files.length > 500, `Expected > 500 profile files, got ${files.length}`);
@@ -34,8 +31,11 @@ test('profile pages generate valid HTML for faculty and students', () => {
         assert.ok(content.includes('class="man-running-head"'), `${slug}.html should have .man-running-head`);
         assert.ok(content.includes('class="man-section"'), `${slug}.html should have .man-section`);
         assert.ok(content.includes('application/ld+json'), `${slug}.html should have structured schema.org JSON-LD`);
-        assert.ok(content.includes('style.css'), `${slug}.html should link style.css`);
+        assert.ok(content.includes('href="../style.css"'), `${slug}.html should link ../style.css`);
     }
+
+    const stylePath = path.join(root, 'public', 'style.css');
+    assert.ok(fs.existsSync(stylePath), 'public/style.css should exist for static profile pages');
 });
 
 test('student profile pages resolve local portrait URLs from the site root', () => {
