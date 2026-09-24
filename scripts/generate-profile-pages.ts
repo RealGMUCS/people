@@ -225,7 +225,7 @@ function renderFacultyProfile(f: FacultyEntry) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="subpage">
   <div id="app">
@@ -415,7 +415,7 @@ function renderStudentProfile(s: StudentEntry, facultyBySlug: Map<string, Facult
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="subpage">
   <div id="app">
@@ -594,6 +594,14 @@ async function main() {
       slug,
     };
   });
+
+  const [profileCss, customCss] = await Promise.all([
+    readFile(resolve(root, 'src/profile.css'), 'utf8'),
+    readFile(resolve(root, 'src/style.css'), 'utf8'),
+  ]);
+  const combinedCss = `${profileCss}\n\n${customCss.replace(/@import\s+['"].\/profile\.css['"];?\s*/g, '')}`;
+  await writeFile(resolve(root, 'public/style.css'), combinedCss, 'utf8');
+  await writeFile(resolve(output, 'style.css'), combinedCss, 'utf8');
 
   await rm(peopleDir, { recursive: true, force: true });
   await mkdir(peopleDir, { recursive: true });
