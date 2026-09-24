@@ -302,17 +302,17 @@
     "Dissertation Title": "",
     "Current Job": "",
     "First Job": "",
-    "Location": "Redmond, WA",
-    "Internships": "Intern, Microsoft",
+    "Location": "",
+    "Internships": "",
     "Honors & Awards": "",
     "Topics": "NLP, Multilingual NLP",
     "Picture": "https://joshua-otten.github.io/images/profile_pic.jpg",
     "Website": "https://joshua-otten.github.io/",
     "LinkedIn": "https://www.linkedin.com/in/joshua-otten-300647363",
     "Google Scholar": "",
-    "Last Modified": "2026-09-23",
-    "Last Verified": "2026-09-23",
-    "Verified": ""
+    "Last Modified": "2026-09-24",
+    "Last Verified": "2026-09-24",
+    "Verified": "Yes"
   },
   {
     "First Name": "Belu",
@@ -12430,5 +12430,26 @@
     "Last Modified": "2026-09-23",
     "Last Verified": "2026-09-23",
     "Verified": ""
+  },
+  {
+    "First Name": "Tamara",
+    "Last Name": "Maddox",
+    "Advisor": "",
+    "Co-Advisor": "",
+    "Degree": "BS",
+    "Dissertation Title": "",
+    "Current Job": "Professor (Teaching), George Mason University",
+    "First Job": "",
+    "Location": "Fairfax, VA",
+    "Internships": "",
+    "Honors & Awards": "",
+    "Topics": "Artificial Intelligence, Computer Law & Ethics",
+    "Picture": "",
+    "Website": "https://people.cs.gmu.edu/~tmaddox/",
+    "LinkedIn": "",
+    "Google Scholar": "",
+    "Last Modified": "2026-09-24",
+    "Last Verified": "2026-09-24",
+    "Verified": "Yes"
   }
 ]
