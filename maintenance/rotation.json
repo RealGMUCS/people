@@ -1,13 +1,34 @@
 {
     "_about": "Cursors for the scheduled routines (TASKS/AUTOMATION.md). `next` is the first profile slug of the next batch; print a batch with `npm run next-batch -- <key>`. A routine's PR advances its own cursor; never edit another routine's.",
     "check": {
-        "faculty": { "size": 10, "next": "" },
-        "students": { "size": 20, "next": "" }
+        "faculty": {
+            "size": 10,
+            "next": ""
+        },
+        "students": {
+            "size": 20,
+            "next": ""
+        }
     },
     "honors": {
-        "faculty": { "size": 15, "next": "" }
+        "faculty": {
+            "size": 15,
+            "next": ""
+        }
     },
     "discover": {
-        "advisors": { "size": 6, "next": "" }
+        "advisors": {
+            "size": 6,
+            "next": ""
+        }
+    },
+    "former": {
+        "_about": "Leads `npm run next-batch -- former` skips, with the reason they are not a former CS faculty record. Add a name here (from a discover PR) once settled.",
+        "skip": {
+            "Sushil Jajodia": "Still at GMU (ISE and CSIS, Distinguished University Professor); never a CS department appointment. https://csis.gmu.edu/jajodia/ (2026-10-30)",
+            "Emanuela Marasco": "GMU appointment was in Information Sciences and Technology, not CS. https://csis.gmu.edu/pages/news/emanuela-marasco-joining-csis.html (2026-10-30)",
+            "Jens-Peter Kaps": "GMU Electrical and Computer Engineering faculty, not CS. (2026-10-30)",
+            "Mark J. Pullen": "Deceased (2025); waiting for an owner decision on including deceased former faculty. https://content.gmu.edu/news/2025-07/college-engineering-and-computing-mourns-passing-mark-pullen (2026-10-30)"
+        }
     }
 }

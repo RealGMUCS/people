@@ -3,6 +3,7 @@
 //
 // Usage: tsx scripts/next-batch.ts <check|honors|discover> [--from <json>]
 //        tsx scripts/next-batch.ts portraits
+//        tsx scripts/next-batch.ts former
 //
 // Entries are ordered by profile slug (the same slug as people/<slug>.html). Each list in
 // maintenance/rotation.json stores `next`, the first slug of the next batch; the batch wraps
@@ -64,12 +65,37 @@ if (key === 'portraits') {
   process.exit(0);
 }
 
+// Former-faculty leads: names the data already points at (students' advisors, award recipients)
+// that have no faculty record yet. Each is either a former faculty member to add, a current
+// affiliate missing from the roster, someone from another department, or a misspelling.
+if (key === 'former') {
+  const known = new Set(faculty.map(fullName));
+  const skip: Record<string, string> = read('maintenance/rotation.json').former?.skip ?? {};
+  const studentNames = new Set(students.map(fullName));
+  const leads = new Map<string, string[]>();
+  const note = (name: string, why: string) => {
+    if (!name || known.has(name) || Object.hasOwn(skip, name) || /^(none|na|n\/a)$/i.test(name)) return;
+    leads.set(name, [...(leads.get(name) ?? []), why]);
+  };
+  for (const s of students) {
+    note(s['Advisor'] || '', `advisor of ${fullName(s)}`);
+    note(s['Co-Advisor'] || '', `co-advisor of ${fullName(s)}`);
+  }
+  const awards: Row[] = read('public/awards.json');
+  for (const a of awards) if (!studentNames.has(a['Name'] || '')) note(a['Name'] || '', `award: ${a['Award']}`);
+  const sorted = [...leads].sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+  console.log(`Former-faculty leads (${sorted.length}): names in students.json or awards.json with no faculty record`);
+  console.log(`  (skipping ${Object.keys(skip).length} settled in maintenance/rotation.json former.skip)`);
+  for (const [name, why] of sorted) console.log(`  ${name}  —  ${why.length} reference(s): ${why.slice(0, 3).join('; ')}${why.length > 3 ? '; …' : ''}`);
+  process.exit(0);
+}
+
 const rotation = read('maintenance/rotation.json');
 const fromIdx = process.argv.indexOf('--from');
 const override = fromIdx !== -1 ? JSON.parse(process.argv[fromIdx + 1] || '{}') : null;
 const config: Record<string, Cursor> | undefined = (override ?? rotation)[key];
 if (!config) {
-  console.error(`Usage: tsx scripts/next-batch.ts <${Object.keys(rotation).filter(k => !k.startsWith('_')).join('|')}|portraits>`);
+  console.error(`Usage: tsx scripts/next-batch.ts <${Object.keys(rotation).filter(k => !k.startsWith('_')).join('|')}|portraits|former>`);
   process.exit(1);
 }
 

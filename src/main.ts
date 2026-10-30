@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty } from './data';
-import { esc, resolvePictureUrl, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, renderProfileIcons, renderEmailBadge, activateEmailBadges, annotateOptionCounts, isGmuInstitution } from './common';
+import { esc, resolvePictureUrl, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, renderProfileIcons, renderEmailBadge, activateEmailBadges, annotateOptionCounts, isGmuInstitution, gmuYears } from './common';
 import './style.css';
 
 let allFaculty = [];
@@ -25,6 +25,7 @@ const FACULTY_KEYWORDS = {
     rank: f => f.category,
     type: f => f.type,
     office: f => f.office,
+    now: f => f.currentPosition,
     honors: f => f.achievements.join(' '),
     honor: f => f.achievements.join(' '),
     award: f => f.achievements.join(' '),
@@ -45,6 +46,7 @@ const KEYWORD_META = {
     rank: { label: 'Rank', icon: '🎓' },
     type: { label: 'Type', icon: '🏷️' },
     office: { label: 'Office', icon: '🏢' },
+    now: { label: 'Now', icon: '🧭' },
     honors: { label: 'Honors', icon: '🏆' },
     honor: { label: 'Honors', icon: '🏆' },
     award: { label: 'Honors', icon: '🏆' },
@@ -69,6 +71,7 @@ const FACULTY_SUGGESTION_SOURCES = {
     rank: () => uniqueNonEmpty(allFaculty.map(f => f.category)),
     type: () => uniqueNonEmpty(allFaculty.map(f => f.type)),
     office: () => uniqueNonEmpty(allFaculty.map(f => f.office)),
+    now: () => uniqueNonEmpty(allFaculty.map(f => f.currentPosition)),
     honors: () => uniqueNonEmpty(allFaculty.flatMap(f => f.achievements)),
     honor: () => uniqueNonEmpty(allFaculty.flatMap(f => f.achievements)),
     award: () => uniqueNonEmpty(allFaculty.flatMap(f => f.achievements)),
@@ -83,8 +86,9 @@ const SEARCH_HELP_ENTRIES = [
     { code: 'phd:', example: 'MIT' },
     { code: 'postdoc:', example: 'University of Maryland' },
     { code: 'office:', example: 'Engineering 4430' },
+    { code: 'now:', example: 'Johns Hopkins', scope: 'former faculty' },
     { code: 'honors:', example: 'NSF CAREER' },
-    { code: '#tag', example: '— e.g. #AI, #associate' },
+    { code: '#tag', example: '— e.g. #AI, #associate, #former' },
 ];
 
 function resetDirectory() {
@@ -204,8 +208,9 @@ function setupFilters() {
     document.getElementById('rank-filter').addEventListener('change', () => render());
     document.getElementById('type-filter').addEventListener('change', () => render());
     document.getElementById('sort-order')?.addEventListener('change', () => render());
-    annotateOptionCounts('rank-filter', allFaculty, rankMatches);
-    annotateOptionCounts('type-filter', allFaculty, typeMatches);
+    // Counts describe the default (current) directory, except the Former option itself.
+    annotateOptionCounts('rank-filter', allFaculty, (f, value) => value === 'Former' ? f.former : !f.former && rankMatches(f, value));
+    annotateOptionCounts('type-filter', allFaculty, (f, value) => !f.former && typeMatches(f, value));
 }
 
 // Rank dropdown mixes two underlying fields: Professor/Associate/Assistant come from
@@ -215,6 +220,7 @@ function setupFilters() {
 // of a specific Rank filter (they only show under "All").
 function rankMatches(f, value) {
     if (value === 'all') return true;
+    if (value === 'Former') return f.former;
     if (value === 'Emeritus' || value === 'Affiliate') return f.type === value;
     // Professor/Associate/Assistant are exclusive of Emeritus/Affiliate: an
     // Emeritus professor still carries their prior rank in f.category (so
@@ -305,8 +311,10 @@ function getFiltered() {
         list = interestIndex.get(activeInterest) || [];
     }
 
-    // Dropdown filters
-    list = list.filter(f => rankMatches(f, rankFilter) && typeMatches(f, typeFilter));
+    // Dropdown filters. Former faculty stay out of the default listing; a search (so advisor and
+    // award links resolve) or the Former option brings them in.
+    const includeFormer = rankFilter === 'Former' || Boolean(query);
+    list = list.filter(f => (includeFormer || !f.former) && rankMatches(f, rankFilter) && typeMatches(f, typeFilter));
 
     // Search query or keyword filter
     const kw = search.effectiveSearch();
@@ -326,6 +334,7 @@ function getFiltered() {
             // #tag shortcuts
             const tag = query.slice(1);
             list = list.filter(f => {
+                if (tag === 'former') return f.former;
                 const typeMatch = f.type && f.type.toLowerCase().includes(tag);
                 const categoryMatch = f.category && f.category.toLowerCase().includes(tag);
                 const interestMatch = f.interests.some(i => i.toLowerCase().includes(tag));
@@ -410,7 +419,10 @@ function render() {
 
     grid.className = 'roster';
     const filtered = getFiltered();
-    countEl.textContent = `${filtered.length} people`;
+    const formerCount = filtered.filter(f => f.former).length;
+    countEl.textContent = formerCount && formerCount < filtered.length
+        ? `${filtered.length} people (${formerCount} former)`
+        : formerCount ? `${formerCount} former ${formerCount === 1 ? 'member' : 'members'}` : `${filtered.length} people`;
     grid.innerHTML = filtered.map(renderCard).join('');
     activateEmailBadges(grid);
     updateQueryPlan(filtered.length);
@@ -427,7 +439,7 @@ function renderAwards() {
 
 function renderAwardItem(a) {
     const name = a.faculty
-        ? `<a class="award-person" data-name="${esc(a.name)}" href="#">${esc(a.name)}</a>`
+        ? `<a class="award-person" data-name="${esc(a.name)}" href="#">${esc(a.name)}</a>${a.faculty.former ? ' <span class="award-former">(former)</span>' : ''}`
         : `<span class="award-person former" title="Formerly at GMU">${esc(a.name)}</span>`;
     const year = a.year ? `<span class="award-year">${esc(a.year)}</span>` : '';
     return `<li class="award-item">${name}<span class="award-desc">${esc(a.award)}</span>${year}</li>`;
@@ -436,12 +448,18 @@ function renderAwardItem(a) {
 function renderCard(f) {
     const fullName = `${f.firstName} ${f.lastName}`;
 
-    // Position meta line: "Associate Professor · ENGR 4430"
-    const metaParts = [
-        f.category ? esc(f.category) : null,
-        f.office ? esc(f.office) : null,
-    ].filter(Boolean);
+    // Position meta line: "Associate Professor · ENGR 4430". A former member's shows the rank
+    // they held and their GMU years instead ("Associate Professor at GMU, 2018–2023"), and the
+    // next line where they are now.
+    const years = gmuYears(f.yearStarted, f.yearLeft);
+    const metaParts = f.former
+        ? [`${esc(f.rank || f.category || 'Faculty')} at GMU${years ? `, ${esc(years)}` : ''}`]
+        : [
+            f.category ? esc(f.category) : null,
+            f.office ? esc(f.office) : null,
+        ].filter(Boolean);
     if (f.role) metaParts.unshift(esc(f.role));
+    const nowLine = f.former && f.currentPosition ? `<div class="entry-meta entry-now">Now: ${esc(f.currentPosition)}</div>` : '';
 
     // Education details line, vietprofs' Postdoc/PhD/MS/Undergrad order:
     // "Postdoc: CMU, 2016; PhD: MIT, 2014; MS: Cornell, 2010; Undergrad: UCLA, 2008; At GMU since 2018"
@@ -452,20 +470,21 @@ function renderCard(f) {
         eduPart('JD', f.jdFrom, f.jdYear),
         eduPart('MS', f.msFrom, f.msYear),
         eduPart('Undergrad', f.undergradFrom, f.undergradYear),
-        f.yearStarted ? `At GMU since ${esc(String(f.yearStarted))}` : null,
+        !f.former && f.yearStarted ? `At GMU since ${esc(String(f.yearStarted))}` : null,
     ].filter(Boolean);
 
-    // Contact line: email (rendered as an image, see renderEmailBadge) + advisees count
-    const emailHtml = renderEmailBadge(f.email);
+    // Contact line: email (rendered as an image, see renderEmailBadge) + advisees count. A former
+    // member's GMU address no longer reaches them, so it isn't shown.
+    const emailHtml = f.former ? '' : renderEmailBadge(f.email);
     const adviseesHtml = f.advisees?.length > 0
         ? `<a class="advisees-link" href="students.html?q=advisor:${encodeURIComponent(fullName)}">${f.advisees.length} student${f.advisees.length === 1 ? '' : 's'} ↗</a>`
         : '';
     const contactParts = [emailHtml, adviseesHtml].filter(Boolean);
 
     // Tags: track type (Emeritus gets a standout style) + GMU-alumni badge (PhD/MS/Undergrad from GMU) + research interest topics
-    const trackTag = f.type
+    const trackTag = (f.former ? `<span class="tag tag-track tag-former" title="No longer at GMU CS">Former</span>` : '') + (f.type
         ? `<span class="tag tag-track${f.type === 'Emeritus' ? ' tag-emeritus' : ''}">${esc(f.type)}</span>`
-        : '';
+        : '');
     const isGmuAlumni = isGmuInstitution(f.phdFrom) || isGmuInstitution(f.jdFrom) || isGmuInstitution(f.msFrom) || isGmuInstitution(f.undergradFrom);
     const gmuAlumniTag = isGmuAlumni
         ? `<span class="tag tag-gmu-alumni" title="Earned a degree from GMU">🎓 GMU Alumni</span>`
@@ -501,6 +520,7 @@ function renderCard(f) {
           <time class="entry-updated" datetime="${esc(f.lastModified || '')}" title="Record last modified ${esc(f.lastModified || '')}">Updated ${esc(f.lastModified || '')}</time>
         </div>
         ${metaParts.length ? `<div class="entry-meta">${metaParts.join(' · ')}</div>` : ''}
+        ${nowLine}
         ${detailParts.length ? `<div class="entry-details">${detailParts.join('; ')}</div>` : ''}
         ${contactParts.length ? `<div class="entry-details">${contactParts.join(' · ')}</div>` : ''}
         ${achievementsList}

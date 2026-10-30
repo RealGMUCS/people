@@ -25,7 +25,9 @@ profiles (LinkedIn, Google Scholar, personal pages) — see
 
 - **People** (`index.html`): search by name, research area, PhD school, rank,
   or honors; filter by track and rank; `?view=awards` for the faculty awards
-  page grouped by category.
+  page grouped by category. Former faculty (who left GMU CS) keep their records,
+  with their GMU years and current position: hidden by default, shown by a
+  search, the **Former** rank filter, `#former`, or `now: <institution>`.
 - **Students/Alumni** (`students.html`): search by name, advisor, topic, job,
   internship, or honors; filter by degree (PhD/MS/Undergrad) and current vs.
   alumni status; `?view=insights` for auto-computed stats (top advisors,

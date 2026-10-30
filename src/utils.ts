@@ -139,3 +139,10 @@ export function abbreviateInsightText(text: string): string {
   }
   return result;
 }
+
+// "2018–2023", "until 2023", or "from 2018" for a former member's years in GMU CS.
+export function gmuYears(yearStarted: string, yearLeft: string): string {
+  if (yearStarted && yearLeft) return `${yearStarted}–${yearLeft}`;
+  if (yearLeft) return `until ${yearLeft}`;
+  return yearStarted ? `from ${yearStarted}` : '';
+}

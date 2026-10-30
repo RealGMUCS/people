@@ -11,6 +11,8 @@ Ensure `public/faculty.json` stays complete and up-to-date with newly hired or p
 
 ---
 
+Former faculty count too: people who held a CS faculty appointment and left are kept as `Former: Yes` records (see `ROSTER_MAINTENANCE.md` §1, "Former Faculty"). `npm run next-batch -- former` lists the leads the data already points at.
+
 ## 🛠️ Data & Verification Standards (`ROSTER_MAINTENANCE.md`)
 
 1. **Required Fields**:
