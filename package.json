@@ -13,7 +13,8 @@
         "fetch:portraits": "tsx scripts/fetch-portraits.ts",
         "test": "tsx --test tests/**/*.test.ts",
         "preview": "vite preview",
-        "sync:vietprofs-ui": "tsx scripts/sync-vietprofs-ui.ts"
+        "sync:vietprofs-ui": "tsx scripts/sync-vietprofs-ui.ts",
+        "next-batch": "tsx scripts/next-batch.ts"
     },
     "devDependencies": {
         "@types/node": "^26.4.1",
