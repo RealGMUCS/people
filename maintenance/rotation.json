@@ -27,7 +27,13 @@
         "skip": {
             "Sushil Jajodia": "Still at GMU (ISE and CSIS, Distinguished University Professor); never a CS department appointment. https://csis.gmu.edu/jajodia/ (2026-10-30)",
             "Emanuela Marasco": "GMU appointment was in Information Sciences and Technology, not CS. https://csis.gmu.edu/pages/news/emanuela-marasco-joining-csis.html (2026-10-30)",
-            "Jens-Peter Kaps": "GMU Electrical and Computer Engineering faculty, not CS. (2026-10-30)"
+            "Jens-Peter Kaps": "GMU Electrical and Computer Engineering faculty, not CS. (2026-10-30)",
+            "Ravi Sandhu": "GMU appointment was in ISE (1989-2007, per his CV); left for UTSA before ISE merged into CS on 2008-01-01. (2026-10-30)",
+            "Jon Whittle": "GMU appointment was in ISE; left for Lancaster in summer 2007, before the ISE-CS merger. Later CS listings were stale. (2026-10-30)",
+            "Michael Locasto": "Only visiting appointments at GMU (Visiting Research Professor 2008-2010; Visiting Assistant Professor in the 2012 listing). (2026-10-30)",
+            "Bo Liu": "Announced CS hire ('arriving Fall 2022', listed Nov 2021-Mar 2022) who never took up the appointment; his CV omits GMU. (2026-10-30)",
+            "Jonathan Warrell": "Announced CS hire ('arriving Spring 2022', one Nov 2021 listing) who never took up the appointment; his homepage omits GMU. (2026-10-30)",
+            "Cem Evrendilek": "Effectively visiting: Izmir University of Economics faculty since 2007, taught at GMU in Spring 2024 only. (2026-10-30)"
         }
     }
 }
