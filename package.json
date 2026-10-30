@@ -5,15 +5,15 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "predev": "npm run sync && tsx scripts/generate-profile-pages.ts --dev",
-        "sync": "tsx scripts/sync-upstream.ts",
+        "predev": "tsx scripts/generate-profile-pages.ts --dev",
         "generate:profiles": "tsx scripts/generate-profile-pages.ts",
-        "build": "npm run sync && npm run typecheck && npm run validate:data && npm test && vite build && tsx scripts/generate-profile-pages.ts",
+        "build": "npm run typecheck && npm run validate:data && npm test && vite build && tsx scripts/generate-profile-pages.ts",
         "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
         "validate:data": "tsx scripts/validate-data.ts",
         "fetch:portraits": "tsx scripts/fetch-portraits.ts",
         "test": "tsx --test tests/**/*.test.ts",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "sync:vietprofs-ui": "tsx scripts/sync-vietprofs-ui.ts"
     },
     "devDependencies": {
         "@types/node": "^26.4.1",

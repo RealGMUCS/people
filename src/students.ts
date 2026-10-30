@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty, loadStudents } from './data';
-import { esc, resolvePictureUrl, loadSearchKit, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, renderProfileIcons, annotateOptionCounts } from './common';
+import { esc, resolvePictureUrl, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, renderProfileIcons, annotateOptionCounts } from './common';
 import './style.css';
 import { isAcademiaJob, isGovLabJob, isIndustryJob, isGmuFacultyJob, getGmuAlumniFaculty, extractOrg, topCounts } from './student-insights';
 
@@ -159,21 +159,6 @@ function resetDirectory() {
     render();
 }
 
-function pickRandomStudent() {
-    if (allStudents.length > 0) {
-        const person = allStudents[Math.floor(Math.random() * allStudents.length)];
-        document.getElementById('main-search').value = `name: ${person.firstName} ${person.lastName}`;
-        hideCommandOutput();
-        render();
-        const entries = document.querySelectorAll('.entry');
-        if (entries.length > 0) {
-            keyboardSelectedIndex = 0;
-            entries[0].classList.add('entry-keyboard-selected');
-            entries[0].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-        }
-    }
-}
-
 let queryPlan = '';
 
 function updateQueryPlan(matches, mode = currentView) {
@@ -201,7 +186,6 @@ function updateQueryPlan(matches, mode = currentView) {
 let runCommand;
 
 async function init() {
-    await loadSearchKit();
     const facultyData = await loadFaculty();
     allFaculty = facultyData.faculty;
     const studentData = await loadStudents(facultyData.facultyByName);
@@ -212,21 +196,15 @@ async function init() {
     const randomIndices = sample(Array.from({ length: allStudents.length }, (_, i) => i), allStudents.length);
     allStudents.forEach((s, idx) => { s.randomIndex = randomIndices[idx]; });
 
+    const searchHelp = setupSearchHelp(SEARCH_HELP_ENTRIES, () => search);
     runCommand = createSharedCommandHandler({
         getSearch: () => search,
         resetDirectory,
         onUpdate: () => render(),
-        onRandom: pickRandomStudent,
         getQueryPlan: () => queryPlan,
-        getStats: () => `${allStudents.length} graduate students and alumni`,
-        facts: [
-            'GMU CS Alumni work at top tech companies, research labs, and academic institutions worldwide.',
-            'GMU CS graduate students publish at top-tier conferences like SIGCOMM, S&P, PLDI, ICSE, and NeurIPS.',
-            'Over 40+ alumni hold tenure-line or research faculty positions across global universities.'
-        ]
+        help: searchHelp,
     });
 
-    setupSearchHelp(SEARCH_HELP_ENTRIES);
     search = createSearchController({
         input: document.getElementById('main-search'),
         scopeChip: document.getElementById('search-scope-chip'),
@@ -241,6 +219,7 @@ async function init() {
             if (cmd === 'recent' || cmd === 'updates' || cmd === 'recently updated' || cmd === 'whats new') {
                 const sortEl = document.getElementById('sort-order');
                 if (sortEl) sortEl.value = 'recent';
+                search.setSearchValue('');
                 render();
                 showCommandOutput('Displaying students sorted by most recently updated.');
                 return true;
@@ -248,6 +227,7 @@ async function init() {
             if (cmd === 'newest' || cmd === 'added' || cmd === 'recently added' || cmd === 'new') {
                 const sortEl = document.getElementById('sort-order');
                 if (sortEl) sortEl.value = 'newest';
+                search.setSearchValue('');
                 render();
                 showCommandOutput('Displaying students sorted by newest entry added.');
                 return true;
@@ -265,14 +245,16 @@ async function init() {
         document.getElementById('main-search').focus();
     });
     setupSharedKeyboardShortcuts({
-        getItemElements: () => [...document.querySelectorAll('.entry')],
+        help: searchHelp,
+        search,
         getSelectedIndex: () => keyboardSelectedIndex,
         setSelectedIndex: idx => { keyboardSelectedIndex = idx; },
-        onRandom: () => runCommand('/dev/random'),
+        onClear: () => render(),
     });
     refreshSearchExamples();
     restoreFromUrl();
     render();
+    finishPageSetup();
 
     window.addEventListener('popstate', () => {
         restoreFromUrl();
@@ -282,7 +264,7 @@ async function init() {
     const commitStr = typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev';
     console.info(`%cGMU CS Directory ${commitStr}`, 'color:#006633;font-weight:bold;font-size:16px');
     console.info('The roster is open source: https://github.com/RealGMUCS/people');
-    console.info('Try typing “help”, “fortune”, or “uname -a” into search.');
+    console.info('Try typing “help” or “query plan” into search.');
 }
 
 function setupFilters() {
@@ -896,16 +878,6 @@ document.addEventListener('click', e => {
     window.scrollTo({ top: 0 });
     render();
 });
-
-const backToTopBtn = document.getElementById('back-to-top');
-if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-        backToTopBtn.hidden = window.scrollY < 400;
-    });
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
 
 init();
 

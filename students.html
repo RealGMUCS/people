@@ -57,9 +57,7 @@
     <div id="app">
         <header>
             <div class="title-row">
-                <a class="site-title-link" href="./" aria-label="GMU CS Directory">
-                    <h1>GMU CS Directory</h1>
-                </a>
+                <h1><a class="home-link" href="./">GMU CS Directory</a></h1>
                 <div class="header-icons">
                     <a class="icon-link github-link" href="https://github.com/RealGMUCS/people" target="_blank"
                         rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">
@@ -90,22 +88,20 @@
                         </button>
                         <input type="search" id="main-search" class="search-input" role="combobox" aria-autocomplete="list"
                             aria-expanded="false" aria-controls="search-suggestion-panel"
-                            placeholder="Search by name, advisor, topic… try advisor:, honors:, job:, #AI" autofocus autocomplete="off">
+                            placeholder="Search by name, advisor, topic… try advisor:, honors:, job:, #AI" autocomplete="off" aria-label="Search">
+                        <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help"><span class="search-help-icon" aria-hidden="true">?</span></button>
                     </div>
                     <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
                 </div>
-                <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog"
-                    aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help"
-                    title="Search syntax and keyboard help">?</button>
                 <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help"
                     hidden>
                     <p><strong>QUERY SYNTAX</strong></p>
                     <p>Type a keyword prefix to search one field directly:</p>
                     <ul id="search-help-list"></ul>
-                    <p style="margin-top:0.75rem;"><strong>KEYBOARD</strong></p>
+                    <p><strong>KEYBOARD</strong></p>
                     <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>r</code> random · <code>Esc</code> clear</p>
-                    <p style="margin-top:0.75rem;"><strong>COMMANDS</strong></p>
-                    <p><code>help</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
+                    <p><strong>COMMANDS</strong></p>
+                    <p><code>help</code> · <code>query plan</code> · <code>recent</code> · <code>newest</code> · <code>clear</code></p>
                 </div>
             </div>
 
@@ -141,7 +137,7 @@
             </select>
         </div>
 
-        <output id="command-output" class="command-output" hidden></output>
+        <output id="command-output" class="command-output" aria-live="polite" hidden></output>
 
         <div class="examples" id="examples" aria-label="Example searches"></div>
 
@@ -152,10 +148,9 @@
         </div>
 
         <div class="result-row">
-            <p id="faculty-count" class="result-count"></p>
+            <p id="faculty-count" class="result-count" aria-live="polite"></p>
             <div class="header-links">
                 <a href="?view=insights" id="insights-link" class="page-link-btn">📊 Insights</a>
-                <a href="submit.html" class="submission-link">Add or update info</a>
             </div>
         </div>
 
@@ -163,6 +158,7 @@
             <section id="faculty-results" class="roster"></section>
         </main>
 
+        <a class="add-fab" href="submit.html" aria-label="Add or update info" title="Add or update info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></a>
         <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top" hidden>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
         </button>

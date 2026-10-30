@@ -600,11 +600,12 @@ async function main() {
     };
   });
 
-  const [profileCss, customCss] = await Promise.all([
-    readFile(resolve(root, 'src/profile.css'), 'utf8'),
+  // Static profile pages can't resolve @import through Vite, so inline the shared baseline.
+  const [sharedCss, siteCss] = await Promise.all([
+    readFile(resolve(root, 'src/vietprofs/roars-ui.css'), 'utf8'),
     readFile(resolve(root, 'src/style.css'), 'utf8'),
   ]);
-  const combinedCss = `${profileCss}\n\n${customCss.replace(/@import\s+['"].\/profile\.css['"];?\s*/g, '')}`;
+  const combinedCss = `${sharedCss}\n${siteCss.replace("@import './vietprofs/roars-ui.css';\n", '')}`;
   await mkdir(output, { recursive: true });
   await writeFile(resolve(root, 'public/style.css'), combinedCss, 'utf8');
   await writeFile(resolve(output, 'style.css'), combinedCss, 'utf8');
