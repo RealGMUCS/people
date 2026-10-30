@@ -61,7 +61,12 @@ export async function loadFaculty() {
             scholar: normalizeUrl(clean(row['Google Scholar'])),
             interests: parseInterests(row[interestKey]),
             office: clean(row['Office (building and room #)']),
+            // Former faculty: no longer listed on any cs.gmu.edu people page. Track and rank
+            // stay as held at GMU; the directory hides them until a search or the Former filter.
+            former: clean(row['Former']) === 'Yes',
             yearStarted: clean(row['Year started at GMU']),
+            yearLeft: clean(row['Year left GMU']),
+            currentPosition: clean(row['Current Position']),
             undergradFrom: clean(row['Undergrad from']),
             undergradYear: clean(row['Undergrad Year']),
             msFrom: clean(row['MS from']),
@@ -84,10 +89,14 @@ export async function loadFaculty() {
         };
     }).filter(f => f.firstName || f.lastName);
 
-    // Link each award recipient to a faculty card where one exists
+    // Link each award recipient to a faculty card where one exists; a former faculty record
+    // marks the award as former, so awards.json's Former column is only needed for students.
     const byName = new Map(faculty.map(f => [`${f.firstName || ''} ${f.lastName || ''}`.trim(), f]));
     awardCategories.forEach(cat => {
-        cat.awards.forEach(a => { a.faculty = byName.get(a.name) || null; });
+        cat.awards.forEach(a => {
+            a.faculty = byName.get(a.name) || null;
+            if (a.faculty?.former) a.former = true;
+        });
     });
 
     // Link student advisees to faculty cards

@@ -99,10 +99,14 @@ them share these rules:
    fill a field from a guess, a name-only match, or a third-party aggregator. Never set
    `Verified: Yes`; only direct correspondence sets it (`ROSTER_MAINTENANCE.md` §2). On a record
    with `Verified: Yes`, never change a field the live evidence contradicts; file an Issue for the
-   owner instead. Never delete a faculty or student record; a departure is an Issue.
+   owner instead. Never delete a faculty or student record: a faculty member who left is converted
+   to a former record (by the auditor, from a `Review possible departure:` side finding).
 6. **Timestamps.** Set `Last Modified` (today, `YYYY-MM-DD`) on every record you change and
    `Last Verified` on every record you fully checked, changed or not (`ROSTER_MAINTENANCE.md` §2).
    Don't touch either on records you didn't check.
+   **Former faculty** (`Former: Yes`) are records too: they're checked, rotated, and cited like
+   everyone else (`ROSTER_MAINTENANCE.md` §1, "Former Faculty"), with their GMU years and
+   `Current Position` in place of an appointment.
 7. **Validate.** Before opening a PR: `npm run build && git diff --check` (the build runs
    `typecheck`, `validate:data`, and the tests). If it fails for a reason you can't fix inside the
    batch, don't open the PR; open an Issue with the failure instead.
@@ -132,7 +136,7 @@ per finding so the auditor can verify it independently.
 | Finding | Title after the `[scheduled:<key>]` prefix |
 | :-- | :-- |
 | Faculty rank, track, role, or office looks stale | `Review possible rank change: <name>` (or `stale role`, `stale office`) |
-| Faculty member seems to have left GMU, retired, or died | `Review possible departure: <name>` |
+| Faculty member seems to have left GMU or retired (no longer on any cs.gmu.edu people page) | `Review possible departure: <name>` (give the new position and the year left, with sources) |
 | Student degree, advisor, graduation, or job looks stale | `Review student record: <name> — <field>` |
 | Dead or wrong Website, Scholar, LinkedIn, or Picture | `Likely wrong <field>: <name>` |
 | Two records are the same person | `Duplicate record: <name>` |
@@ -154,7 +158,7 @@ Rules:
 These stay open for the owner, with the auditor's findings and a recommendation in a comment:
 
 - A conflict with a `Verified: Yes` record (the owner confirmed it directly; ask them).
-- A faculty departure, or anything else that would delete a record.
+- A faculty member who has died, or anything that would delete a record.
 - Ambiguous identity (two people with the name, a name-only match) or eligibility.
 - Anything only the subject can settle (a degree not in MARS, a private job change). Issues the
   owner opened asking for confirmation (e.g. #35) are in this group.
@@ -196,6 +200,12 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, with these rules taking precedence:
 - **New people:** a verified new student or alum (official GMU page, MARS deposit, or the
   advisor's own lab page naming them as a GMU CS student) is added in the fix PR. A new faculty or
   staff member is added only when the official GMU CS or CEC directory lists them.
+- **Departures:** a `Review possible departure:` finding is confirmed when the person is on no
+  cs.gmu.edu people page (`ROSTER_MAINTENANCE.md` §1) and a current official page shows where they
+  went. Convert the record in the fix PR: `Former: Yes`, `Year left GMU` and `Current Position`
+  from cited sources (blank when none states them), GMU email and office cleared, track and rank
+  kept as held at GMU. Never delete it. Someone now listed as affiliate or emeritus instead gets
+  that track, not `Former`.
 - **Owner decisions:** see "Needs an owner decision". `[scheduled:review]` Issues are for the owner;
   leave them alone.
 - **Automation health,** every run, after the normal work. Check:
@@ -216,21 +226,37 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, with these rules taking precedence:
 ### Discover new people (`discover`)
 
 Playbooks: `TASKS/discover_new_faculty_and_staff.md` and
-`TASKS/discover_new_students_and_alumni.md`. Each run does three passes, in this order:
+`TASKS/discover_new_students_and_alumni.md`. Each run does four passes, in this order:
 
-1. **Faculty and staff directory diff.** Compare the official GMU CS directory
-   (`cs.gmu.edu/directory/by-category/` and the CEC directory) against `public/faculty.json`.
-   Someone listed there but not here is a new record; someone here who is missing there is a
+1. **Faculty and staff directory diff.** Compare the official GMU CS people pages (faculty
+   `cs.gmu.edu/people/faculty?page=0` through `?page=8`, `/people/faculty/affiliate-faculty?page=0`
+   and `?page=1`, `/people/faculty/emeriti-faculty`, `/people/staff`; the faculty pages are
+   server-rendered, so `curl` each page and read the `view-profile-title` links) against the
+   current records in `public/faculty.json`. Someone listed there but not here is a new record (an
+   affiliate gets track `Affiliate`); a current record missing from every page is a
    `Review possible departure:` side finding (never a deletion). Also scan the department news
-   page for the last 60 days for hires and promotions.
+   page for the last 60 days for hires, promotions, and departures.
 2. **Advisor rotation.** `npm run next-batch -- discover` prints 6 faculty. For each, read their
    lab and students pages (and the people pages they link) and the advisor's CV if it lists
    students, and compare against `public/students.json` (`Advisor`/`Co-Advisor`). Students and
    alumni listed there but not here are new records.
-3. **MARS.** Search `mars.gmu.edu` for Computer Science PhD dissertations and MS theses deposited in
-   the last 12 months that aren't in `public/students.json`.
+3. **MARS.** Find Computer Science PhD dissertations and MS theses deposited in the last 12 months
+   that aren't in `public/students.json`. `mars.gmu.edu` redirects to `digitalcollections.gmu.edu`,
+   which refuses automated fetches, so search for them (`site:digitalcollections.gmu.edu
+   "Computer Science" dissertation <year>`) and confirm each from the search result or the
+   advisor's CV; list the pass as blocked when neither works.
+4. **Former faculty.** `npm run next-batch -- former` lists names that students' `Advisor` fields
+   or `awards.json` point at with no faculty record. Take the first 3 not covered by an open
+   `[scheduled:discover]` PR or Issue. For each, decide per `ROSTER_MAINTENANCE.md` §1 ("Former
+   Faculty"): a former CS faculty member becomes a new `Former: Yes` record with GMU years, track and
+   rank as held, `Current Position`, degrees, and links, each cited; a current affiliate missing from
+   the roster becomes an `Affiliate` record (pass 1 usually catches these); someone whose GMU
+   appointment was only in another department, or a spelling variant of an existing record, goes in
+   the PR body as "not a CS faculty record" and in `maintenance/rotation.json` under
+   `former.skip` (name → reason, source, date), so `next-batch` stops listing it.
 
-Cap: one PR with at most 5 new faculty/staff and 15 new students/alumni, each with its source URL.
+Cap: one PR with at most 5 new faculty/staff (current or former) and 15 new students/alumni, each
+with its source URL.
 New records follow `ROSTER_MAINTENANCE.md` §1 and §4 exactly: every field present in file key
 order, `Advisor` spelled exactly as the faculty record, unknown fields blank, `Verified` blank.
 Someone you can't verify from an official or first-party source goes in a `New person:` Issue
@@ -252,7 +278,9 @@ check. If you run short of time, stop early and set the cursor to the first entr
 finish: a PR covering 12 entries properly beats one claiming 30.
 
 For each faculty member, open the official GMU profile, their homepage, and Scholar once and
-settle what they show:
+settle what they show. For a former member (`Former: Yes`), use their current official page
+instead: confirm `Current Position`, fill `Year started at GMU` / `Year left GMU` when a CV or
+announcement states them, and settle links and degrees the same way:
 - **Appointment:** `Rank`, `Tenure-Track/Teaching/Staff`, `Dept Role`, office, and email against
   the official profile. A promotion or new role is a fix in this PR; a departure is a side finding.
 - **Degrees:** fill or correct `Undergrad/MS/PhD/JD/Postdoc from` and their years only from the
@@ -325,9 +353,14 @@ Playbook: `TASKS/fetch_portraits.md`. Queue: `npm run next-batch -- portraits` l
 
 - **What did a run do?** `RemoteTrigger list_runs` for the routine, then `get_run_log` for a
   session, or the session link in the commit's `Claude-Session:` trailer.
-- **A run fails before it starts (no run in `list_runs`):** the routine probably can't reach
-  `RealGMUCS/people`. The Claude GitHub app must be installed on the `RealGMUCS` organization with
-  access to this repository.
+- **A run can't push, open a PR, or file an Issue** (`git push` or the GitHub API returns 403
+  "Resource not accessible by integration" / "Claude doesn't have GitHub access to
+  RealGMUCS/people"): the repository is public, so cloning works, but writing needs the Claude
+  GitHub app installed on the `RealGMUCS` organization with access to this repository
+  (<https://github.com/apps/claude/installations/select_target>; an org admin installs it). This
+  happened on the first test run, 2026-10-30.
+- **A run fails before it starts (no run in `list_runs`):** check the routine's repository source
+  and the environment.
 - **Fixes posted on Issues but never applied:** check the run log for `permission_denied`; fixes
   must go through the `audit-fix/<date>` PR, not a direct edit of `main`.
 - **PR branches piling up:** the branch-cleanup Action deletes them; check

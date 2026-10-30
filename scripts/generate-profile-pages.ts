@@ -1,7 +1,7 @@
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { escapeHtml, formatRosterDate } from '../src/utils.ts';
+import { escapeHtml, formatRosterDate, gmuYears } from '../src/utils.ts';
 import {
   LINKEDIN_ICON,
   PERSONAL_SITE_ICON,
@@ -70,7 +70,10 @@ interface FacultyEntry {
   scholar: string;
   interests: string[];
   office: string;
+  former: boolean;
   yearStarted: string;
+  yearLeft: string;
+  currentPosition: string;
   undergradFrom: string;
   undergradYear: string;
   msFrom: string;
@@ -115,11 +118,17 @@ interface StudentEntry {
 
 function renderFacultyProfile(f: FacultyEntry) {
   const fullName = `${f.firstName} ${f.lastName}`.trim();
-  const title = `${fullName} — Faculty Profile | GMU Computer Science`;
+  const title = `${fullName} — ${f.former ? 'Former ' : ''}Faculty Profile | GMU Computer Science`;
   const canonicalUrl = `${siteUrl}/people/${f.slug}.html`;
   const ogImage = f.picture ? resolvePictureUrl(f.picture) : `${siteUrl}/default-portrait.svg`;
-  const roleParts = [f.category || f.rank, f.role, f.office, 'Department of Computer Science, George Mason University'].filter(Boolean);
-  const description = `${fullName} is ${roleParts.join(' · ')}.`;
+  const years = f.former ? gmuYears(f.yearStarted, f.yearLeft) : '';
+  const roleParts = f.former
+    ? [
+        `Former ${f.rank || f.category || 'faculty member'}${years ? ` (${years})` : ''}, Department of Computer Science, George Mason University`,
+        f.currentPosition && `Now ${f.currentPosition}`,
+      ].filter(Boolean)
+    : [f.category || f.rank, f.role, f.office, 'Department of Computer Science, George Mason University'].filter(Boolean);
+  const description = f.former ? `${fullName}: ${roleParts.join('; ')}.` : `${fullName} is ${roleParts.join(' · ')}.`;
 
   const portrait = f.picture
     ? `<img class="portrait" src="${escapeHtml(resolvePictureUrl(f.picture))}" alt="Portrait of ${escapeHtml(fullName)}" width="240" height="240">`
@@ -135,7 +144,10 @@ function renderFacultyProfile(f: FacultyEntry) {
     f.jdFrom && `JD: ${[f.jdFrom, f.jdYear].filter(Boolean).join(', ')}`,
     f.msFrom && `MS: ${[f.msFrom, f.msYear].filter(Boolean).join(', ')}`,
     f.undergradFrom && `Undergraduate: ${[f.undergradFrom, f.undergradYear].filter(Boolean).join(', ')}`,
-    f.yearStarted && `At George Mason University since ${f.yearStarted}`,
+    f.former
+      ? years && `At George Mason University ${years}`
+      : f.yearStarted && `At George Mason University since ${f.yearStarted}`,
+    f.former && f.currentPosition && `Current position: ${f.currentPosition}`,
   ].filter(Boolean) as string[];
 
   const educationSection = eduItems.length
@@ -179,17 +191,22 @@ function renderFacultyProfile(f: FacultyEntry) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: fullName,
-    jobTitle: f.category || f.rank,
-    worksFor: {
-      '@type': 'EducationalOrganization',
-      name: 'George Mason University',
-      department: { '@type': 'Organization', name: 'Department of Computer Science' },
-    },
-    affiliation: {
-      '@type': 'EducationalOrganization',
-      name: 'George Mason University',
-      department: { '@type': 'Organization', name: 'Department of Computer Science' },
-    },
+    // A former member no longer works for GMU; schema.org's alumniOf covers the past affiliation.
+    ...(f.former
+      ? { ...(f.currentPosition ? { jobTitle: f.currentPosition } : {}) }
+      : {
+          jobTitle: f.category || f.rank,
+          worksFor: {
+            '@type': 'EducationalOrganization',
+            name: 'George Mason University',
+            department: { '@type': 'Organization', name: 'Department of Computer Science' },
+          },
+          affiliation: {
+            '@type': 'EducationalOrganization',
+            name: 'George Mason University',
+            department: { '@type': 'Organization', name: 'Department of Computer Science' },
+          },
+        }),
     url: canonicalUrl,
     ...(f.picture ? { image: resolvePictureUrl(f.picture) } : {}),
     ...(sameAs.length ? { sameAs } : {}),
@@ -257,8 +274,10 @@ function renderFacultyProfile(f: FacultyEntry) {
                   <a class="submission-link" href="${escapeHtml(editUrl)}">Suggest an edit</a>
                 </div>
               </div>
-              <p class="native">${escapeHtml([f.category || f.rank, f.role].filter(Boolean).join(' · '))}</p>
-              ${f.email ? `<p class="record-id">${escapeHtml(f.email)}</p>` : ''}
+              <p class="native">${escapeHtml(f.former
+                ? [`Former ${f.rank || f.category || 'faculty member'}${years ? `, ${years}` : ''}`, f.currentPosition && `now ${f.currentPosition}`].filter(Boolean).join(' · ')
+                : [f.category || f.rank, f.role].filter(Boolean).join(' · '))}</p>
+              ${f.email && !f.former ? `<p class="record-id">${escapeHtml(f.email)}</p>` : ''}
             </div>
           </div>
         </section>
@@ -266,6 +285,7 @@ function renderFacultyProfile(f: FacultyEntry) {
           <h2>SYNOPSIS</h2>
           <p class="synopsis">${escapeHtml(roleParts.join(' · '))}</p>
           <div class="tags">
+            ${f.former ? '<span class="tag tag-track tag-former">Former</span>' : ''}
             ${f.type ? `<span class="tag tag-track">${escapeHtml(f.type)}</span>` : ''}
             ${f.verified ? '<span class="tag tag-verified">✓ Verified</span>' : ''}
             ${f.interests.map(i => `<a class="tag tag-topic" href="../index.html?q=${encodeURIComponent(i)}">${escapeHtml(i)}</a>`).join('')}
@@ -280,7 +300,7 @@ function renderFacultyProfile(f: FacultyEntry) {
           <h2>ROSTER METADATA</h2>
           <dl class="roster-metadata">
             <div><dt>record</dt><dd>${escapeHtml(fullName)}</dd></div>
-            <div><dt>status</dt><dd>${f.verified ? 'Verified via direct correspondence' : 'Directory entry'}</dd></div>
+            <div><dt>status</dt><dd>${[f.former && 'Former faculty', f.verified ? 'Verified via direct correspondence' : 'Directory entry'].filter(Boolean).join(' · ')}</dd></div>
             <div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(f.lastVerified || f.lastModified || ''))}</dd></div>
             <div><dt>build</dt><dd><a href="https://github.com/RealGMUCS/people/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div>
           </dl>
@@ -525,7 +545,10 @@ async function main() {
       scholar: normalizeUrl(row['Google Scholar']),
       interests: parseInterests(row['Research interests'] || row['Research Interests']),
       office: clean(row['Office (building and room #)']),
+      former: clean(row['Former']) === 'Yes',
       yearStarted: clean(row['Year started at GMU']),
+      yearLeft: clean(row['Year left GMU']),
+      currentPosition: clean(row['Current Position']),
       undergradFrom: clean(row['Undergrad from']),
       undergradYear: clean(row['Undergrad Year']),
       msFrom: clean(row['MS from']),

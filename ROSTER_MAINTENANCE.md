@@ -14,6 +14,13 @@ Include individuals with active appointments in the GMU Department of Computer S
 * **Emeritus**: Emeriti faculty members who retired from GMU CS.
 * **Staff & Affiliated**: Department leadership, administrative staff, and courtesy joint appointments (labeled with appropriate track/role).
 
+### Former Faculty
+Include people who held a tenure-line, teaching, or research **faculty** appointment in GMU Computer Science and have left: moved to another institution or company, or retired without an emeritus title. They are marked `Former: Yes` and stay in `public/faculty.json`, so their students' `Advisor` links, their awards, and their profile pages keep working; the directory hides them until a search or the **Former** filter.
+* **The test is the official pages.** Someone is former when they are no longer listed on any `cs.gmu.edu` people page: [faculty](https://cs.gmu.edu/people/faculty) (paginated, `?page=0` to `?page=8`), [affiliate faculty](https://cs.gmu.edu/people/faculty/affiliate-faculty), [emeriti](https://cs.gmu.edu/people/faculty/emeriti-faculty), and [staff](https://cs.gmu.edu/people/staff). Someone who left but is still listed as affiliate faculty is a current `Affiliate` record; someone listed as emeritus is `Emeritus`.
+* **Not included:** visiting faculty, adjuncts, postdocs, departed staff, and people whose only GMU appointment was in another department (ISE, CYSE, ECE, IST), even if they advised CS students.
+* **Keep** `Tenure-Track/Teaching/Staff`, `Rank`, and `Dept Role` as held at GMU when they left (e.g. `Tenured`, `Associate Professor`). Clear the GMU email and office, which no longer reach them.
+* **Never delete** a departed faculty record: convert it to former instead.
+
 ### Graduate Students & Alumni
 Include current graduate students and alumni who earned or are pursuing degrees from GMU Computer Science:
 * **PhD Candidates & Alumni**: Tracked with degree format (e.g., `PhD '23` or `PhD`), primary advisor, co-advisor (where applicable), dissertation title, first job, current job, and current location.
@@ -58,16 +65,18 @@ Set `Verified` to `Yes` when a record (or the specific edit just made) was confi
 When verifying or updating entries, consult sources in the following priority order:
 
 1. **Official GMU Pages**:
-   * GMU CS Faculty Directory: `cs.gmu.edu/directory/by-category/`
+   * GMU CS people pages: `cs.gmu.edu/people/faculty` (paginated, `?page=0` to `?page=8`), `/people/faculty/affiliate-faculty`, `/people/faculty/emeriti-faculty`, `/people/staff`
    * CCE Directory: `computing.gmu.edu/directory`
    * Individual GMU Profiles: `cs.gmu.edu/profiles/[netid]`
+   * Faculty homepages on `people.cs.gmu.edu/~[netid]` (this host serves an incomplete TLS certificate chain and is sometimes down; retry, or read it through a search engine's cached result, rather than treating a failure as a dead link)
 2. **GMU Archival & Thesis Repository**:
-   * **MARS (Mason Archival Repository Service)**: `mars.gmu.edu` for official M.S. theses and Ph.D. dissertations.
-3. **Academic Bibliographic Databases**:
+   * **MARS (Mason Archival Repository Service)** for official M.S. theses and Ph.D. dissertations. `mars.gmu.edu` now redirects to `digitalcollections.gmu.edu`, which refuses automated fetches (403); find deposits through a web search (`site:digitalcollections.gmu.edu` or the title) and the advisor's CV instead.
+3. **Former faculty (years at GMU)**: their CV, an official bio or news item at GMU or the new employer, and Wayback Machine snapshots of the CS faculty listing (`web.archive.org/web/*/cs.gmu.edu/people/faculty*`), whose first and last appearance bound the years. Use a snapshot-derived year only when no CV or announcement states it, and say so in the evidence.
+4. **Academic Bibliographic Databases**:
    * Google Scholar profiles
    * DBLP Computer Science Bibliography
    * ORCID & IEEE Xplore
-4. **Professional & Personal Homepages**:
+5. **Professional & Personal Homepages**:
    * Personal academic websites (e.g., `mason.gmu.edu/~[userid]` or personal GitHub Pages)
    * LinkedIn profiles for current job titles and city/state locations
 
@@ -95,6 +104,9 @@ When verifying or updating entries, consult sources in the following priority or
 * `Tenure-Track/Teaching/Staff`: Primary track (`Tenure-Track`, `Teaching`, `Research`, `Staff`).
 * `Rank`: Academic rank (e.g., `Associate Professor`).
 * `Dept Role`: Administrative role, if any (e.g., `Department Chair`).
+* `Former`: `Yes` for former faculty (see §1, "Former Faculty"), blank for everyone currently listed.
+* `Year started at GMU` / `Year left GMU`: 4-digit years of the CS appointment. `Year left GMU` is set only on former records; leave either blank when no source states it.
+* `Current Position`: a former member's current title and organization (e.g. `Associate Professor, University of Central Florida`, or `Retired`), from their current official page; blank for current faculty.
 * `Undergrad from` / `Undergrad Year`, `MS from` / `MS Year`, `PhD from` / `PhD Year`, `Postdoc from` / `Postdoc Year`: institution name and 4-digit graduation/completion year for each degree stage, when known (mirrors vietprofs' `undergradInstitution`/`undergradYear` etc.). Leave both blank together if a stage doesn't apply (e.g. no postdoc) or the year can't be confirmed — never guess a year.
 * `Last Modified`: `YYYY-MM-DD`
 * `Last Verified`: `YYYY-MM-DD`

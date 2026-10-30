@@ -24,6 +24,7 @@ Ensure `public/faculty.json` is completely aligned with official GMU CS departme
    ```bash
    npm test && npm run typecheck && npm run validate:data && npm run build && git diff --check
    ```
-5. **PR / Issue Protocol**:
+5. **Former Faculty**: someone no longer on any `cs.gmu.edu` people page is converted to `Former: Yes` (with `Year left GMU` and `Current Position` when sourced), never deleted; see `ROSTER_MAINTENANCE.md` §1, "Former Faculty".
+6. **PR / Issue Protocol**:
    - Submit clean edits as a GitHub Pull Request on a topic branch.
    - If a faculty status is ambiguous or conflicting, open a GitHub Issue.

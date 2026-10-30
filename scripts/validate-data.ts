@@ -14,7 +14,10 @@ const facultyFields = [
     'Google Scholar',
     'Research interests',
     'Office (building and room #)',
+    'Former',
     'Year started at GMU',
+    'Year left GMU',
+    'Current Position',
     'Undergrad from',
     'Undergrad Year',
     'MS from',
@@ -146,6 +149,16 @@ faculty.forEach((row, index) => {
     }
     if (type && !facultyTypes.has(type)) errors.push(`faculty.json:${line}: invalid faculty type "${type}"`);
     if (startYear && !/^\d{4}$/.test(startYear)) errors.push(`faculty.json:${line}: invalid start year "${startYear}"`);
+    // Former faculty (no longer listed on any cs.gmu.edu people page) keep their GMU track and
+    // rank; `Year left GMU` and `Current Position` only make sense on a former record.
+    const former = value(row, 'Former');
+    const yearLeft = value(row, 'Year left GMU');
+    const currentPosition = value(row, 'Current Position');
+    if (former && former !== 'Yes') errors.push(`faculty.json:${line}: Former must be "Yes" or blank`);
+    if (yearLeft && !/^\d{4}$/.test(yearLeft)) errors.push(`faculty.json:${line}: invalid Year left GMU "${yearLeft}"`);
+    if (!former && (yearLeft || currentPosition)) errors.push(`faculty.json:${line}: Year left GMU and Current Position require Former: "Yes"`);
+    if (former && (email || value(row, 'Office (building and room #)'))) errors.push(`faculty.json:${line}: a former record keeps no GMU email or office`);
+    if (startYear && yearLeft && yearLeft < startYear) errors.push(`faculty.json:${line}: Year left GMU (${yearLeft}) is before Year started at GMU (${startYear})`);
     for (const field of ['Undergrad Year', 'MS Year', 'PhD Year', 'Postdoc Year']) {
         const year = value(row, field);
         if (year && !/^\d{4}$/.test(year)) errors.push(`faculty.json:${line}: invalid ${field} "${year}"`);
@@ -211,5 +224,6 @@ if (errors.length) {
     const formerNames = new Set(awards
         .filter(row => value(row, 'Former').toLowerCase() === 'yes')
         .map(row => value(row, 'Name')));
-    console.log(`Data validation passed: ${faculty.length} faculty, ${students.length} students, ${awards.length} awards, ${formerNames.size} former award recipients.`);
+    const formerFaculty = faculty.filter(row => value(row, 'Former') === 'Yes').length;
+    console.log(`Data validation passed: ${faculty.length - formerFaculty} current and ${formerFaculty} former faculty, ${students.length} students, ${awards.length} awards, ${formerNames.size} former award recipients.`);
 }

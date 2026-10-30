@@ -3,7 +3,7 @@ import * as kit from './vietprofs/search-kit.ts';
 import { setupBackToTop } from './vietprofs/back-to-top.ts';
 import { escapeHtml } from './utils.ts';
 
-export { escapeHtml as esc, formatRosterDate, showToast } from './utils.ts';
+export { escapeHtml as esc, formatRosterDate, gmuYears, showToast } from './utils.ts';
 export { normalizeText, parseKeywordQuery } from './vietprofs/search-kit.ts';
 
 // Only allow http(s) URLs in href/src attributes
@@ -142,7 +142,7 @@ export function annotateOptionCounts<T>(selectId: string, items: T[], matches: (
   if (!select) return;
   Array.from(select.options).forEach(opt => {
     const label = opt.textContent?.replace(/\s*\(\d+\)$/, '') ?? '';
-    const count = opt.value === 'all' ? items.length : items.filter(item => matches(item, opt.value)).length;
+    const count = items.filter(item => matches(item, opt.value)).length;
     opt.textContent = `${label} (${count})`;
   });
 }

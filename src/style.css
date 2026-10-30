@@ -1557,3 +1557,18 @@ a.award-person:hover {
   font-size: var(--text-xs);
   color: var(--text-secondary);
 }
+
+/* Former faculty (Former: Yes in faculty.json): a muted, dashed tag so the card reads as historical. */
+.tag-track.tag-former {
+  border-style: dashed;
+  color: var(--text-muted);
+}
+
+.entry-now {
+  color: var(--text-secondary);
+}
+
+.award-former {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
