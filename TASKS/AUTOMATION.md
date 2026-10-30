@@ -58,11 +58,11 @@ week's PRs are merged long before the next Sunday.
 
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| `audit` | _see below_ | Opus 5.5 | `30 10 * * 1` | Mon 6:30 AM | [Auditor](#auditor-audit) |
-| `discover` | _see below_ | Sonnet 5.5 | `0 5 * * 0` | Sun 1 AM | [Discover new people](#discover-new-people-discover) |
-| `check` | _see below_ | Sonnet 5.5 | `0 8 * * 0` | Sun 4 AM | [Check roster info](#check-roster-info-check) |
-| `honors` | _see below_ | Sonnet 5.5 | `0 11 * * 0` | Sun 7 AM | [Honors and awards](#honors-and-awards-honors) |
-| `portraits` | _see below_ | Sonnet 5.5 | `0 14 * * 0` | Sun 10 AM | [Portraits](#portraits-portraits) |
+| `audit` | `trig_01UpDXZQtP4zEejMb1y1LJkB` | Opus 5.5 | `30 10 * * 1` | Mon 6:30 AM | [Auditor](#auditor-audit) |
+| `discover` | `trig_01Xy8pVn2cAJBesVKNwc7dy9` | Sonnet 5.5 | `0 5 * * 0` | Sun 1 AM | [Discover new people](#discover-new-people-discover) |
+| `check` | `trig_013zYmGzofKWFyiRDtqPEmzb` | Sonnet 5.5 | `0 8 * * 0` | Sun 4 AM | [Check roster info](#check-roster-info-check) |
+| `honors` | `trig_01SQXJsBb2M9kdM6GvHGPsTK` | Sonnet 5.5 | `0 11 * * 0` | Sun 7 AM | [Honors and awards](#honors-and-awards-honors) |
+| `portraits` | `trig_01CTVLVcucbsvw6BXgJVmD8i` | Sonnet 5.5 | `0 14 * * 0` | Sun 10 AM | [Portraits](#portraits-portraits) |
 
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it, a
 run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
