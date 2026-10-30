@@ -1,15 +1,1131 @@
+@import './vietprofs/roars-ui.css';
 /*
- * GMU CS Directory — overrides & people-specific components
+ * GMU CS Directory stylesheet.
  *
- * The design-system base (tokens, reset, body, .entry/roster rows, .tags,
- * search components, form elements, insights, etc.) comes from vietprofs'
- * master stylesheet, synced to src/profile.css.
- *
- * This file loads after and only adds what is specific to GMU CS.
+ * The shared roars.dev baseline (design tokens, search box, suggestion list, help popover,
+ * command output, header icons, tags, tooltips, floating "+" and back-to-top) is vendored
+ * verbatim from VietProfs in src/vietprofs/roars-ui.css; change it there and run
+ * `npm run sync:vietprofs-ui`. Everything below is People's own: the page layout copied from
+ * VietProfs' directory/profile/submit styles (trimmed to the classes this site renders), then
+ * GMU CS specific components.
  */
-@import './profile.css';
 
-/* ─── GMU CS specific components & enhancements ────────────────────────── */
+/* ─── Base, header, profile pages (from VietProfs style.css) ─────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.command-output,
+.record-id,
+.roster-metadata,
+.raw-record {
+  font-family: var(--font-mono);
+}
+
+#app {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    /* biome-ignore lint/complexity/noImportantStyles: honor reduced motion across all components */
+    transition: none !important;
+    /* biome-ignore lint/complexity/noImportantStyles: honor reduced motion across all components */
+    animation: none !important;
+  }
+}
+
+.icon-link:focus-visible,
+.submission-link:focus-visible,
+.back-to-top:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+header {
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.raw-record summary {
+  width: max-content;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+@media (max-width: 560px) {
+  #app {
+    padding: 2rem 1rem 3rem;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .header-icons,
+  .header-icons a {
+    display: none;
+  }
+
+  .search-suggestion-panel {
+    width: 100%;
+  }
+}
+
+.personal-site-link,
+.scholar-link,
+.linkedin-link {
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.roster-metadata a {
+  color: inherit;
+}
+
+.submission-link {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--bamboo-green);
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.submission-link:hover,
+.submission-link:focus-visible {
+  background: var(--bamboo-green-hover);
+}
+
+@media (max-width: 560px) {
+  .submission-link {
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+.personal-site-link:hover,
+.personal-site-link:focus-visible,
+.scholar-link:hover,
+.scholar-link:focus-visible,
+.linkedin-link:hover,
+.linkedin-link:focus-visible {
+  color: var(--text-primary);
+}
+
+.personal-site-link svg,
+.scholar-link svg,
+.linkedin-link svg {
+  height: 1rem;
+  width: 1rem;
+  fill: currentColor;
+  display: block;
+}
+
+.honors-label {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.subpage #app {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.subpage {
+  background-color: var(--bg-color);
+  background-image: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.subpage main {
+  padding-bottom: 0;
+}
+
+.subpage .man-page {
+  padding-top: 1rem;
+}
+
+.subpage .man-running-head {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--text-primary);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.35;
+}
+
+.subpage .man-running-head a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.subpage .man-running-head a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.subpage .man-running-head > span:nth-child(2) {
+  text-align: center;
+}
+
+.subpage .man-running-head > span:last-child {
+  text-align: right;
+}
+
+.subpage .man-running-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.subpage .man-running-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.subpage .man-section {
+  display: block;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.subpage .section-note {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.subpage .man-section h2 {
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.subpage .man-section > :not(h2):not(summary) {
+  margin-left: 1.25rem;
+}
+
+.subpage .man-section > summary {
+  margin-left: 0;
+}
+
+.subpage .identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.subpage .portrait {
+  width: 96px;
+  height: 120px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+}
+
+.subpage .identity-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.subpage .name-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.subpage .name-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.subpage h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.subpage .native {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-top: 0.15rem;
+}
+
+.subpage footer {
+  color: var(--text-muted);
+  margin-top: 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+  font-size: var(--text-sm);
+}
+
+.subpage .record-id {
+  margin-top: 0.35rem;
+  color: var(--bamboo-green);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.subpage .synopsis {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.subpage .man-section ul {
+  margin-left: 1.25rem;
+  padding-left: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+.subpage .man-section li + li {
+  margin-top: 0.3rem;
+}
+
+.subpage .tag {
+  border-color: var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.45rem;
+}
+
+.subpage a.tag {
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.subpage a.tag:hover {
+  border-color: var(--bamboo-green);
+  color: var(--bamboo-green);
+}
+
+.subpage .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  margin-top: 0.25rem;
+}
+
+.subpage .links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.subpage .links a svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.subpage .links a:hover,
+.subpage .links a:focus-visible {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.subpage .roster-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  margin-top: 0.25rem;
+}
+
+.subpage .roster-metadata div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.subpage .roster-metadata dt {
+  color: var(--text-muted);
+}
+
+.subpage .raw-record {
+  margin-top: 0.6rem;
+  font-size: var(--text-xs);
+}
+
+.subpage .raw-record pre {
+  max-height: 24rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  overflow: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--tag-bg);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.subpage .profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.subpage .profile-actions .submission-link {
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.65rem;
+  font-size: var(--text-xs);
+}
+
+.home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 560px) {
+  .tag-topic {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.35;
+  }
+
+  .submission-link,
+  .search-input {
+    min-height: 44px;
+  }
+
+  .personal-site-link,
+  .scholar-link,
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 45px;
+  }
+
+  [data-tooltip]::after {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: auto;
+    max-width: none;
+    transform: translateY(2px);
+  }
+
+  [data-tooltip]:hover::after,
+  [data-tooltip]:focus::after,
+  [data-tooltip]:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .subpage .identity {
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .subpage .name-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .subpage .name-title {
+    align-items: flex-start;
+  }
+
+  .subpage .portrait {
+    width: 80px;
+    height: 100px;
+  }
+
+  .subpage .man-section {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .subpage .man-section h2 {
+    margin-left: 0;
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+  }
+
+  .subpage .man-section > :not(h2):not(summary) {
+    margin-left: 0.75rem;
+  }
+
+  .subpage .man-section > summary {
+    margin-left: 0;
+  }
+
+  .subpage .man-running-head {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.4rem;
+    align-items: center;
+    font-size: 0.62rem;
+  }
+
+  .subpage .man-running-title,
+  .subpage .man-running-brand {
+    min-width: 0;
+  }
+
+  .subpage .man-running-brand {
+    gap: 0.3rem;
+    min-height: 44px;
+  }
+
+  .subpage .man-running-label {
+    display: inline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .subpage .man-running-brand,
+  .subpage .links a,
+  .subpage .profile-actions a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+.toast-notification {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  padding: 0.65rem 1.15rem;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  pointer-events: none;
+}
+
+.toast-notification.toast-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Directory roster and insights (from VietProfs directory.css) ───────── */
+.ranked-item:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.controls {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.track-select {
+  min-width: 7.5rem;
+}
+
+@media (max-width: 560px) {
+
+  .controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .track-select {
+    min-width: 0;
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+
+.result-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.result-row .result-count {
+  margin-bottom: 0;
+}
+
+.result-count {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: 1rem;
+}
+
+.roster {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+}
+
+.entry {
+  position: relative;
+  padding: 0.9rem 0.75rem;
+  box-shadow: 0 0 0 0.5px var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.entry-with-portrait {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.entry-portrait {
+  width: 64px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  object-position: center top;
+}
+
+.entry-content {
+  min-width: 0;
+}
+
+.entry-name-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  line-height: 1.2;
+}
+
+.entry-name {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.entry-name:hover,
+a.entry-name:focus-visible {
+  text-decoration: underline;
+}
+
+.entry-meta {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.entry-details {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-top: 0.2rem;
+}
+
+.entry-honors {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  margin-top: 0.25rem;
+}
+
+.insights-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.insights-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.insights-caption {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  margin-bottom: 0.75rem;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.ranked-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ranked-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.45rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.ranked-item:hover {
+  background: var(--hover-bg);
+  border-color: var(--border-color);
+}
+
+.ranked-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.ranked-name {
+  min-width: 0;
+  flex: 1;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ranked-count {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.ranked-track {
+  height: 4px;
+  width: 100%;
+  background: var(--tag-bg);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.ranked-bar {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 560px) {
+  .entry .tag {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .ranked-item {
+    min-height: 44px;
+  }
+
+  .entry-name {
+    display: inline-flex;
+    align-items: center;
+    min-height: 45px;
+    min-width: 44px;
+  }
+}
+
+
+/* ─── Submission form (from VietProfs submit.css) ───────────────────────── */
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.submit-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: none;
+  padding: 0;
+}
+
+.form-section > label,
+.form-section legend {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+}
+
+.form-group[hidden] {
+  display: none;
+}
+
+.required-group {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, var(--card-bg));
+}
+
+.form-group h2,
+.form-group summary {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.form-group summary {
+  cursor: pointer;
+}
+
+.submit-page .submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0;
+}
+
+.submit-page .man-section.form-group {
+  padding: 0.85rem 0;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  background: transparent;
+  gap: 0;
+}
+
+.submit-page .man-section.form-group[hidden] {
+  display: none;
+}
+
+.submit-page .required-group {
+  border-color: var(--border-color);
+  background: transparent;
+}
+
+.submit-page .purpose-toggle {
+  margin-bottom: 0;
+  border: none;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.submit-page .form-section {
+  margin-top: 0.85rem;
+}
+
+.submit-page .man-section > .form-section:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.submit-page .submit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-help {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.form-help.notice {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.correction-suggestions {
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--card-bg);
+}
+
+.correction-suggestion {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.55rem 0.75rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.correction-suggestion:last-child {
+  border-bottom: 0;
+}
+
+.correction-suggestion span {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.correction-suggestion:hover,
+.correction-suggestion:focus-visible {
+  background: var(--hover-bg);
+}
+
+.form-section input[type='text'],
+.form-section input[type='url'],
+.form-section input[type='number'],
+.form-section select,
+.form-section textarea {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+}
+
+.form-section textarea {
+  resize: vertical;
+}
+
+.radio-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.purpose-toggle {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.purpose-toggle .radio-row {
+  font-size: var(--text-base);
+  font-weight: 500;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--bamboo-green);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.submit-btn:hover {
+  background: var(--bamboo-green-hover);
+}
+
+.submit-hint {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  max-width: 62ch;
+}
+
+@media (max-width: 560px) {
+  .form-section input,
+  .form-section select,
+  .form-section textarea {
+    min-height: 44px;
+  }
+
+  .radio-row {
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+/* ─── GMU CS header subtitle, result row, and entry extras ─────────────── */
+.subtitle-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.site-subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.site-subtitle span:first-child {
+  color: var(--bamboo-green);
+}
+
+.result-row .header-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.subpage .tags {
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.entry-updated {
+  display: inline-flex;
+  gap: 0.25em;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.entry-name-row .entry-updated {
+  margin-left: auto;
+}
+
+@media (max-width: 560px) {
+  .controls .sort-select {
+    grid-column: span 2;
+  }
+}
+
+/* ─── GMU CS specific components ─────────────────────────────────────────── */
 
 /* Verified badge — small checkmark in the card's bottom-right corner,
    marks a record confirmed via direct correspondence */
@@ -406,10 +1522,6 @@ a.award-person:hover {
     background: var(--hover-bg);
 }
 
-/* ─── Students insights view ──────────────────────────────────────────────── */
-.insights-view { display: block; max-width: 820px; margin: 0 auto 2rem; }
-.insights-caption { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.25rem; }
-
 /* Students insights view */
 .insights-view {
   display: block;
@@ -444,30 +1556,4 @@ a.award-person:hover {
   margin-top: 0.3rem;
   font-size: var(--text-xs);
   color: var(--text-secondary);
-}
-
-.home-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* CRT theme */
-.crt-mode {
-  --bg-color: #07100b;
-  --card-bg: #0b1710;
-  --text-primary: #b8ffd0;
-  --text-secondary: #83d99f;
-  --text-muted: #57966b;
-  --border-color: #20472d;
-  --hover-bg: #102719;
-  --tag-bg: #102319;
-  --tag-text: #8beaab;
-  --bamboo-green: #55d68b;
-  --bamboo-green-hover: #2e9e64;
-  --accent: #55d68b;
-}
-
-.crt-mode body {
-  background-image: repeating-linear-gradient(0deg, rgb(0 0 0 / 11%) 0, rgb(0 0 0 / 11%) 1px, transparent 1px, transparent 4px);
-  text-shadow: 0 0 0.35rem rgb(85 214 139 / 18%);
 }

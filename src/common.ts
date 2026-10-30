@@ -1,9 +1,10 @@
 // Shared utilities between the People (faculty/staff) and Students/Alumni pages.
-import * as kit from './search-kit.ts';
+import * as kit from './vietprofs/search-kit.ts';
+import { setupBackToTop } from './vietprofs/back-to-top.ts';
 import { escapeHtml } from './utils.ts';
 
 export { escapeHtml as esc, formatRosterDate, showToast } from './utils.ts';
-export { normalizeText, parseKeywordQuery } from './search-kit.ts';
+export { normalizeText, parseKeywordQuery } from './vietprofs/search-kit.ts';
 
 // Only allow http(s) URLs in href/src attributes
 export function safeUrl(url: unknown): string | null {
@@ -180,13 +181,7 @@ export function setupSearchExamplesClick(onSelect: (query: string) => void) {
   });
 }
 
-if (typeof localStorage !== 'undefined' && localStorage.getItem('gmu_cs:crt') === '1') {
-  document.documentElement.classList.add('crt-mode');
-}
-
-export function loadSearchKit() {
-  return Promise.resolve(kit);
-}
+const searchInput = () => document.getElementById('main-search') as HTMLInputElement;
 
 export function showCommandOutput(message: string) {
   kit.showCommandOutput(document.getElementById('command-output'), message);
@@ -206,6 +201,7 @@ export function createSearchController(options: any) {
   const controller = kit.createSearchController({
     ...options,
     getSuggestions: (key: string) => (options.suggestionSources[key] ? options.suggestionSources[key]() : []),
+    onClear: hideCommandOutput,
   });
   return {
     ...controller,
@@ -216,30 +212,71 @@ export function createSearchController(options: any) {
   };
 }
 
-// Populates the "(?)" search-syntax popover with page-specific keyword entries.
-export function setupSearchHelp(entries: any) {
-  kit.setupSearchHelp({
+// Populates the "(?)" search-syntax popover with page-specific keyword entries; opening it
+// closes the suggestion list so the two don't overlap.
+export function setupSearchHelp(entries: any, getSearch: () => { close: () => void } | undefined) {
+  return kit.setupSearchHelp({
     btn: document.getElementById('search-help-btn') as HTMLButtonElement,
     panel: document.getElementById('search-help-panel') as HTMLElement,
     list: document.getElementById('search-help-list') as HTMLElement,
     entries,
+    onBeforeToggle: () => getSearch()?.close(),
   });
 }
 
-export function createSharedCommandHandler(options: any) {
+// The shared help / query plan / clear commands; every other input is a search.
+export function createSharedCommandHandler(options: Omit<kit.CommandHandlerOptions, 'commandOutputEl'>) {
   return kit.createCommandHandler({
     ...options,
-    siteName: 'GMU CS Directory',
-    aboutText: 'GMU CS Directory — an open, community-maintained index of George Mason University Computer Science faculty, students, and alumni.',
-    searchInputId: 'main-search',
+    input: searchInput(),
     commandOutputEl: document.getElementById('command-output'),
-    searchHelpPanel: document.getElementById('search-help-panel'),
-    searchHelpBtn: document.getElementById('search-help-btn') as HTMLButtonElement,
-    buildCommit: typeof __BUILD_COMMIT__ !== 'undefined' ? __BUILD_COMMIT__ : 'dev',
-    buildLabel: typeof __BUILD_LABEL__ !== 'undefined' ? __BUILD_LABEL__ : '',
   });
 }
 
-export function setupSharedKeyboardShortcuts(options: any) {
-  return kit.setupKeyboardShortcuts({ ...options, searchInputId: 'main-search' });
+// Pick a random visible entry and j/k-select it, as VietProfs' `r` shortcut does.
+function selectRandomEntry(selectedIndex: number, setSelectedIndex: (index: number) => void) {
+  const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
+  if (!entries.length) return;
+  entries[selectedIndex]?.classList.remove('entry-keyboard-selected');
+  const index = Math.floor(Math.random() * entries.length);
+  setSelectedIndex(index);
+  entries[index]!.classList.add('entry-keyboard-selected');
+  entries[index]!.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+// j/k (or arrows) move, Enter opens, r random, / search, ? help, and Escape steps back:
+// close help → blur search → clear search.
+export function setupSharedKeyboardShortcuts(options: {
+  help: kit.SearchHelp;
+  search: { close: () => void; setSearchValue: (raw: string) => void };
+  getSelectedIndex: () => number;
+  setSelectedIndex: (index: number) => void;
+  onClear: () => void;
+}) {
+  kit.setupKeyboardShortcuts({
+    input: searchInput(),
+    help: options.help,
+    getItemElements: () => [...document.querySelectorAll<HTMLElement>('.entry')],
+    getSelectedIndex: options.getSelectedIndex,
+    setSelectedIndex: options.setSelectedIndex,
+    selectedClass: 'entry-keyboard-selected',
+    nextKeys: ['j', 'ArrowDown'],
+    prevKeys: ['k', 'ArrowUp'],
+    onEnter: selected => selected.querySelector<HTMLAnchorElement>('.entry-name')?.click(),
+    onRandom: () => selectRandomEntry(options.getSelectedIndex(), options.setSelectedIndex),
+    escape: {
+      closeSuggestions: () => options.search.close(),
+      clearSearch: () => {
+        options.search.setSearchValue('');
+        options.onClear();
+      },
+    },
+  });
+}
+
+// Page chrome shared with VietProfs: the floating back-to-top button, and landing ready to
+// type without popping the suggestion list open (leaves focus alone if the reader moved it).
+export function finishPageSetup() {
+  setupBackToTop(document.getElementById('back-to-top'));
+  if (document.activeElement === document.body) kit.focusQuietly(searchInput());
 }

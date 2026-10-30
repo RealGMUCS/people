@@ -6,6 +6,16 @@ Two directories for the George Mason University Computer Science department:
 all their UI code (`src/common.ts`, `src/style.css`) and data loading
 (`src/data.ts`).
 
+The look and search behavior are shared with
+[VietProfs](https://github.com/dynaroars/vietprofs) (and CS Picks):
+`src/vietprofs/` holds verbatim copies of its `roars-ui.css` (design tokens,
+search box, suggestions, help popover, tags, floating buttons), `search-kit.ts`
+(suggestions, scope chips, keyboard shortcuts, commands), and `back-to-top.ts`.
+Don't edit them here — change them in VietProfs, then run
+`npm run sync:vietprofs-ui` (expects `../vietprofs`; `VIETPROFS_DIR` overrides).
+`tests/vietprofs-ui.test.ts` fails on local edits. `src/style.css` imports
+`roars-ui.css` first and holds only this site's layout and components.
+
 Faculty data is sourced from [cs.gmu.edu](https://cs.gmu.edu/people/faculty/);
 students/alumni data was researched from each advisor's lab site and public
 profiles (LinkedIn, Google Scholar, personal pages) — see
@@ -21,8 +31,10 @@ profiles (LinkedIn, Google Scholar, personal pages) — see
   alumni status; `?view=insights` for auto-computed stats (top advisors,
   employers, and research topics).
 - **Keyword search** on both pages — type a prefix like `advisor:`, `honors:`,
-  `phd:`, `topic:`, `job:` to search one field directly (click the "i" icon
-  next to the search box for the full list); `#tag` shortcuts also work.
+  `phd:`, `topic:`, `job:` to search one field directly (click the `?` in
+  the search box for the full list); `#tag` shortcuts also work. Keyboard:
+  `/` search, `j`/`k` or arrows to move, `Enter` to open, `r` random, `Esc`
+  to step back.
 - **Submit / Update** (`submit.html`): a plain-text form for adding or
   correcting an entry in either directory, with a name-autocomplete that
   pre-fills the existing record. Submits via email or a pre-filled GitHub
@@ -35,9 +47,9 @@ profiles (LinkedIn, Google Scholar, personal pages) — see
 ```bash
 npm install
 npm run dev       # start the Vite development server
-npm run sync      # sync shared CSS, search kit, and assets from vietprofs
 npm test          # validate datasets and run tests
-npm run build     # sync, typecheck, test, and build the production site
+npm run build     # typecheck, test, and build the production site
+npm run sync:vietprofs-ui  # re-copy the shared UI files from ../vietprofs
 npm run preview   # preview the production build
 ```
 
