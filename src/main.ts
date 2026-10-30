@@ -459,7 +459,8 @@ function renderCard(f) {
             f.office ? esc(f.office) : null,
         ].filter(Boolean);
     if (f.role) metaParts.unshift(esc(f.role));
-    const nowLine = f.former && f.currentPosition ? `<div class="entry-meta entry-now">Now: ${esc(f.currentPosition)}</div>` : '';
+    const nowText = f.yearOfDeath ? `Died ${esc(f.yearOfDeath)}` : f.currentPosition ? `Now: ${esc(f.currentPosition)}` : '';
+    const nowLine = f.former && nowText ? `<div class="entry-meta entry-now">${nowText}</div>` : '';
 
     // Education details line, vietprofs' Postdoc/PhD/MS/Undergrad order:
     // "Postdoc: CMU, 2016; PhD: MIT, 2014; MS: Cornell, 2010; Undergrad: UCLA, 2008; At GMU since 2018"

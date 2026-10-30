@@ -107,6 +107,7 @@ When verifying or updating entries, consult sources in the following priority or
 * `Former`: `Yes` for former faculty (see §1, "Former Faculty"), blank for everyone currently listed.
 * `Year started at GMU` / `Year left GMU`: 4-digit years of the CS appointment. `Year left GMU` is set only on former records; leave either blank when no source states it.
 * `Current Position`: a former member's current title and organization (e.g. `Associate Professor, University of Central Florida`, or `Retired`), from their current official page; blank for current faculty.
+* `Year of death`: 4-digit year, only on a former record for someone who has died, from a GMU or employer memorial or an obituary. `Current Position` stays blank; the card shows "Died YYYY". Deceased former faculty are included like any other former member.
 * `Undergrad from` / `Undergrad Year`, `MS from` / `MS Year`, `PhD from` / `PhD Year`, `Postdoc from` / `Postdoc Year`: institution name and 4-digit graduation/completion year for each degree stage, when known (mirrors vietprofs' `undergradInstitution`/`undergradYear` etc.). Leave both blank together if a stage doesn't apply (e.g. no postdoc) or the year can't be confirmed — never guess a year.
 * `Last Modified`: `YYYY-MM-DD`
 * `Last Verified`: `YYYY-MM-DD`

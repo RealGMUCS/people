@@ -158,7 +158,8 @@ Rules:
 These stay open for the owner, with the auditor's findings and a recommendation in a comment:
 
 - A conflict with a `Verified: Yes` record (the owner confirmed it directly; ask them).
-- A faculty member who has died, or anything that would delete a record.
+- Anything that would delete a record. (A faculty member who has died becomes a former record with
+  `Year of death` from a memorial or obituary, like any other departure; see ROSTER_MAINTENANCE.md.)
 - Ambiguous identity (two people with the name, a name-only match) or eligibility.
 - Anything only the subject can settle (a degree not in MARS, a private job change). Issues the
   owner opened asking for confirmation (e.g. #35) are in this group.

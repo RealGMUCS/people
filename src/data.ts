@@ -67,6 +67,7 @@ export async function loadFaculty() {
             yearStarted: clean(row['Year started at GMU']),
             yearLeft: clean(row['Year left GMU']),
             currentPosition: clean(row['Current Position']),
+            yearOfDeath: clean(row['Year of death']),
             undergradFrom: clean(row['Undergrad from']),
             undergradYear: clean(row['Undergrad Year']),
             msFrom: clean(row['MS from']),

@@ -74,6 +74,7 @@ interface FacultyEntry {
   yearStarted: string;
   yearLeft: string;
   currentPosition: string;
+  yearOfDeath: string;
   undergradFrom: string;
   undergradYear: string;
   msFrom: string;
@@ -125,7 +126,7 @@ function renderFacultyProfile(f: FacultyEntry) {
   const roleParts = f.former
     ? [
         `Former ${f.rank || f.category || 'faculty member'}${years ? ` (${years})` : ''}, Department of Computer Science, George Mason University`,
-        f.currentPosition && `Now ${f.currentPosition}`,
+        f.yearOfDeath ? `Died ${f.yearOfDeath}` : f.currentPosition && `Now ${f.currentPosition}`,
       ].filter(Boolean)
     : [f.category || f.rank, f.role, f.office, 'Department of Computer Science, George Mason University'].filter(Boolean);
   const description = f.former ? `${fullName}: ${roleParts.join('; ')}.` : `${fullName} is ${roleParts.join(' · ')}.`;
@@ -193,7 +194,7 @@ function renderFacultyProfile(f: FacultyEntry) {
     name: fullName,
     // A former member no longer works for GMU; schema.org's alumniOf covers the past affiliation.
     ...(f.former
-      ? { ...(f.currentPosition ? { jobTitle: f.currentPosition } : {}) }
+      ? { ...(f.currentPosition ? { jobTitle: f.currentPosition } : {}), ...(f.yearOfDeath ? { deathDate: f.yearOfDeath } : {}) }
       : {
           jobTitle: f.category || f.rank,
           worksFor: {
@@ -275,7 +276,7 @@ function renderFacultyProfile(f: FacultyEntry) {
                 </div>
               </div>
               <p class="native">${escapeHtml(f.former
-                ? [`Former ${f.rank || f.category || 'faculty member'}${years ? `, ${years}` : ''}`, f.currentPosition && `now ${f.currentPosition}`].filter(Boolean).join(' · ')
+                ? [`Former ${f.rank || f.category || 'faculty member'}${years ? `, ${years}` : ''}`, f.yearOfDeath ? `died ${f.yearOfDeath}` : f.currentPosition && `now ${f.currentPosition}`].filter(Boolean).join(' · ')
                 : [f.category || f.rank, f.role].filter(Boolean).join(' · '))}</p>
               ${f.email && !f.former ? `<p class="record-id">${escapeHtml(f.email)}</p>` : ''}
             </div>
@@ -549,6 +550,7 @@ async function main() {
       yearStarted: clean(row['Year started at GMU']),
       yearLeft: clean(row['Year left GMU']),
       currentPosition: clean(row['Current Position']),
+      yearOfDeath: clean(row['Year of death']),
       undergradFrom: clean(row['Undergrad from']),
       undergradYear: clean(row['Undergrad Year']),
       msFrom: clean(row['MS from']),
