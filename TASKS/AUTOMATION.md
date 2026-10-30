@@ -240,7 +240,11 @@ Playbooks: `TASKS/discover_new_faculty_and_staff.md` and
 2. **Advisor rotation.** `npm run next-batch -- discover` prints 6 faculty. For each, read their
    lab and students pages (and the people pages they link) and the advisor's CV if it lists
    students, and compare against `public/students.json` (`Advisor`/`Co-Advisor`). Students and
-   alumni listed there but not here are new records.
+   alumni listed there but not here are new records. Pages on `people.cs.gmu.edu` (and
+   `cs.gmu.edu/~netid`) serve an incomplete TLS certificate chain: read them with `curl -skL`
+   rather than WebFetch, retry once on a 503, then try the latest Wayback snapshot
+   (`https://web.archive.org/web/2026/<url>`). Only list an advisor as blocked after all three
+   fail.
 3. **MARS.** Find Computer Science PhD dissertations and MS theses deposited in the last 12 months
    that aren't in `public/students.json`. `mars.gmu.edu` redirects to `digitalcollections.gmu.edu`,
    which refuses automated fetches, so search for them (`site:digitalcollections.gmu.edu
@@ -368,3 +372,5 @@ Playbook: `TASKS/fetch_portraits.md`. Queue: `npm run next-batch -- portraits` l
   `gh run list -w delete-pr-branches.yml`.
 - **Lots of blocked sources:** check that the Default environment's network access is still
   **Full**. Some sites (notably LinkedIn) block bots anyway; those entries stay as they are.
+- **GMU faculty pages fail with a certificate error:** `people.cs.gmu.edu` sends an incomplete
+  TLS chain. Use `curl -skL` (read-only, so skipping verification is safe), then Wayback.
