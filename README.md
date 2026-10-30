@@ -50,8 +50,15 @@ npm run dev       # start the Vite development server
 npm test          # validate datasets and run tests
 npm run build     # typecheck, test, and build the production site
 npm run sync:vietprofs-ui  # re-copy the shared UI files from ../vietprofs
+npm run next-batch -- check  # next batch for a scheduled routine (check, honors, discover, portraits)
 npm run preview   # preview the production build
 ```
+
+## Automated maintenance
+
+Weekly cloud routines discover new people, re-check roster info and links, look for new honors and
+portraits, and an Opus auditor reviews and merges their PRs. See
+[`TASKS/AUTOMATION.md`](TASKS/AUTOMATION.md); agent guidance is in [`AGENTS.md`](AGENTS.md).
 
 ## Updating the Data
 

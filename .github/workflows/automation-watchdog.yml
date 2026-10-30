@@ -1,0 +1,81 @@
+name: Automation watchdog
+
+# Model-free check that the scheduled cloud routines are still working. It can't see the routines,
+# only their GitHub output: a producer stopping shows up as no new output of its own, and the auditor
+# stopping shows up as PRs left open. Keeps one Issue open while something is wrong.
+
+on:
+  schedule:
+    - cron: '0 12 * * 3' # Wednesdays, 12:00 UTC (after the Monday audit)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check routine output and open or close the watchdog Issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          STALE_PR_DAYS: 9
+        run: |
+          set -euo pipefail
+          title="Automation watchdog (automated)"
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          pr_cutoff=$(date -u -d "-${STALE_PR_DAYS} days" +%Y-%m-%dT%H:%M:%SZ)
+          problems=""
+
+          # The auditor runs weekly (Monday) and takes PRs older than 12 hours, so none should sit
+          # past one missed audit.
+          stale=$(gh pr list --state open --limit 100 --json number,title,createdAt \
+            --jq ".[] | select(.createdAt < \"$pr_cutoff\") | \"- #\(.number) \(.title) (opened \(.createdAt[:10]))\"")
+          if [ -n "$stale" ]; then
+            problems+="### PRs open more than ${STALE_PR_DAYS} days"$'\n'
+            problems+="The auditor may have stopped, or these PRs are stuck (red CI, conflict, rejected but not closed)."$'\n\n'
+            problems+="$stale"$'\n\n'
+          fi
+
+          # Each weekly producer must show output (a [scheduled:<key>] PR or Issue) within about two
+          # cron cycles. Days per key; keep in step with the Schedule table in TASKS/AUTOMATION.md.
+          declare -A window=([discover]=15 [check]=15 [honors]=15 [portraits]=15)
+          since=$(date -u -d "-15 days" +%Y-%m-%d)
+          gh search prs --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > prs.json
+          gh search issues --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > issues.json
+          quiet=""
+          for key in "${!window[@]}"; do
+            cutoff=$(date -u -d "-${window[$key]} days" +%Y-%m-%dT%H:%M:%SZ)
+            count=$(jq -s --arg p "[scheduled:$key]" --arg c "$cutoff" '[.[][] | select((.title | startswith($p)) and .createdAt >= $c)] | length' prs.json issues.json)
+            if [ "$count" -eq 0 ]; then quiet+="- \`$key\`: no output since ${cutoff:0:10} (${window[$key]} days)"$'\n'; fi
+          done
+          if [ -n "$quiet" ]; then
+            problems+="### Routines with no output for about two cron cycles"$'\n'
+            problems+="Check the run logs for these routines (\`RemoteTrigger get_run_log\`) and https://claude.ai/code/routines."$'\n\n'
+            problems+="$quiet"$'\n'
+          fi
+
+          existing=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$problems" ]; then
+            echo "All checks passed."
+            if [ -n "$existing" ]; then
+              gh issue close "$existing" --comment "Checks passed on $(date -u +%Y-%m-%d) ([workflow run]($run_url)). Closing."
+            fi
+            exit 0
+          fi
+
+          {
+            echo "Watchdog run from $(date -u +%Y-%m-%d) ([workflow run]($run_url)). See \`TASKS/AUTOMATION.md\`."
+            echo
+            printf '%s' "$problems"
+          } > body.md
+          cat body.md
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file body.md
+          else
+            gh issue create --title "$title" --body-file body.md
+          fi

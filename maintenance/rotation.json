@@ -1,0 +1,13 @@
+{
+    "_about": "Cursors for the scheduled routines (TASKS/AUTOMATION.md). `next` is the first profile slug of the next batch; print a batch with `npm run next-batch -- <key>`. A routine's PR advances its own cursor; never edit another routine's.",
+    "check": {
+        "faculty": { "size": 10, "next": "" },
+        "students": { "size": 20, "next": "" }
+    },
+    "honors": {
+        "faculty": { "size": 15, "next": "" }
+    },
+    "discover": {
+        "advisors": { "size": 6, "next": "" }
+    }
+}

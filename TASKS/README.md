@@ -21,6 +21,13 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 /goal TASKS/AUDIT_ISSUES_PRS.md
 ```
 
+### Scheduled cloud routines
+
+The same playbooks run unattended every week as cloud routines (discover, check, honors,
+portraits, and an Opus auditor). [`AUTOMATION.md`](AUTOMATION.md) is the source of truth for
+their schedule, caps, and handoffs, and overrides the "until ALL batches are completed" directives
+below: a scheduled run stops at its cap.
+
 ---
 
 ## 🔒 PR & Issue Submission Protocol (No Direct Commits to `main`)
@@ -52,3 +59,4 @@ To preserve git history and ensure multi-agent safety:
 | [`audit_students_and_alumni.md`](audit_students_and_alumni.md) | Audit grad students & alumni (advisors, degrees, dissertation titles, current/first jobs, locations, internships, honors, `Verified`). | `public/students.json` PRs |
 | [`audit_awards_and_honors.md`](audit_awards_and_honors.md) | Audit `public/awards.json` for GMU faculty/student honors, CAREER awards, ACM/IEEE fellowships, and former recipient markers. | `public/awards.json` PRs |
 | [`AUDIT_ISSUES_PRS.md`](AUDIT_ISSUES_PRS.md) | Autonomous auditor agent that tests, squash-merges clean PRs into `main`, and closes resolved GitHub Issues. | Repository merge & issue closure |
+| [`AUTOMATION.md`](AUTOMATION.md) | Schedule, caps, and handoffs for the weekly cloud routines that run these playbooks. | Routine behavior |

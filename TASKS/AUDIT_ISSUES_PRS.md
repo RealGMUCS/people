@@ -5,6 +5,8 @@
 
 ---
 
+> **Scheduled runs:** the weekly `audit` routine follows this playbook with the caps, the 12-hour minimum age, and the rules in [`AUTOMATION.md`](AUTOMATION.md) "Auditor (`audit`)", which take precedence. It never reviews items its own session created, so every PR and Issue gets an independent review.
+
 ## 🎯 Purpose & Scope
 
 This task playbook instructs an autonomous audit agent to act as the primary review gate for all maintenance proposals, faculty updates, student/alumni additions, portrait URLs, and award updates in `people`.
@@ -39,23 +41,18 @@ For each open Pull Request:
    npm test && npm run typecheck && npm run validate:data && npm run build && git diff --check
    ```
 4. **Merge or Request Revision**:
-   - If tests pass and data edits are fully verified:
+   - If tests pass, CI is green, and the data edits are verified, squash-merge through GitHub with a comment saying what you re-verified:
      ```bash
-     git checkout main
-     git merge --squash <branch-name>
-     git commit -m "fix(roster): squash merge PR #<num> - <summary>"
-     git push origin main
-     git branch -d <branch-name>
-     git push origin --delete <branch-name>
-     gh pr close <num> --comment "Verified and squash-merged into main."
+     gh pr merge <num> --squash --delete-branch
      ```
+     Don't squash locally and push to `main`: scheduled cloud sessions can't push to `main`, and a GitHub merge keeps the PR as the record. (Branch deletion may fail from the cloud; the branch-cleanup Action handles it.)
    - If changes fail tests or contain unverified claims, leave a detailed review comment on the PR explaining the exact failure or missing proof.
 
 ### 3. Process & Resolve Open Issues
 For each open GitHub Issue:
 1. Review the submitted faculty correction, student graduation update, or award addition.
 2. Search official web sources to verify the claim.
-3. If verified, apply the edit on a topic branch, run local verification suite (`npm test && npm run typecheck && npm run validate:data && npm run build && git diff --check`), submit/merge, and close the issue with a link to the fix commit.
+3. If verified, apply the edit on a topic branch, run local verification suite (`npm test && npm run typecheck && npm run validate:data && npm run build && git diff --check`), submit/merge, and close the issue with a link to the fix commit. Scheduled runs batch every fix into one `audit-fix/<date>` PR (TASKS/AUTOMATION.md, "Applying fixes").
 
 ---
 
