@@ -16,7 +16,7 @@ Include individuals with active appointments in the GMU Department of Computer S
 
 ### Former Faculty
 Include people who held a tenure-line, teaching, or research **faculty** appointment in GMU Computer Science and have left: moved to another institution or company, or retired without an emeritus title. They are marked `Former: Yes` and stay in `public/faculty.json`, so their students' `Advisor` links, their awards, and their profile pages keep working; the directory hides them until a search or the **Former** filter.
-* **The test is the official pages.** Someone is former when they are no longer listed on any `cs.gmu.edu` people page: [faculty](https://cs.gmu.edu/people/faculty) (paginated, `?page=0` to `?page=8`), [affiliate faculty](https://cs.gmu.edu/people/faculty/affiliate-faculty), [emeriti](https://cs.gmu.edu/people/faculty/emeriti-faculty), and [staff](https://cs.gmu.edu/people/staff). Someone who left but is still listed as affiliate faculty is a current `Affiliate` record; someone listed as emeritus is `Emeritus`.
+* **The test is the official pages.** Someone is former when they are no longer listed on any `cs.gmu.edu` people page: [faculty](https://cs.gmu.edu/people/faculty) (paginated, `?page=0` to `?page=8`), [affiliate faculty](https://cs.gmu.edu/people/faculty/affiliate-faculty) (`?page=0` and `?page=1`), [emeriti](https://cs.gmu.edu/people/faculty/emeriti-faculty), and [staff](https://cs.gmu.edu/people/staff). Someone who left but is still listed as affiliate faculty is a current `Affiliate` record; someone listed as emeritus is `Emeritus`.
 * **Not included:** visiting faculty, adjuncts, postdocs, departed staff, and people whose only GMU appointment was in another department (ISE, CYSE, ECE, IST), even if they advised CS students.
 * **Keep** `Tenure-Track/Teaching/Staff`, `Rank`, and `Dept Role` as held at GMU when they left (e.g. `Tenured`, `Associate Professor`). Clear the GMU email and office, which no longer reach them.
 * **Never delete** a departed faculty record: convert it to former instead.
@@ -65,7 +65,7 @@ Set `Verified` to `Yes` when a record (or the specific edit just made) was confi
 When verifying or updating entries, consult sources in the following priority order:
 
 1. **Official GMU Pages**:
-   * GMU CS people pages: `cs.gmu.edu/people/faculty` (paginated, `?page=0` to `?page=8`), `/people/faculty/affiliate-faculty`, `/people/faculty/emeriti-faculty`, `/people/staff`
+   * GMU CS people pages: `cs.gmu.edu/people/faculty` (paginated, `?page=0` to `?page=8`), `/people/faculty/affiliate-faculty` (`?page=0` and `?page=1`), `/people/faculty/emeriti-faculty`, `/people/staff`
    * CCE Directory: `computing.gmu.edu/directory`
    * Individual GMU Profiles: `cs.gmu.edu/profiles/[netid]`
    * Faculty homepages on `people.cs.gmu.edu/~[netid]` (this host serves an incomplete TLS certificate chain and is sometimes down; retry, or read it through a search engine's cached result, rather than treating a failure as a dead link)
