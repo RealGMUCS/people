@@ -24,6 +24,8 @@ Include people who held a tenure-line, teaching, or research **faculty** appoint
 ### Graduate Students & Alumni
 Include current graduate students and alumni who earned or are pursuing degrees from GMU Computer Science:
 * **PhD Candidates & Alumni**: Tracked with degree format (e.g., `PhD '23` or `PhD`), primary advisor, co-advisor (where applicable), dissertation title, first job, current job, and current location.
+  * **Advised by CS faculty counts.** A GMU doctorate in another program (e.g. the former Information Technology PhD, or Computational Sciences) is included when the dissertation advisor is CS faculty; MARS labels several such alumni (James Rogers, Hesham Altaleb, Susan Farley, Guodong Shao, Khalid Alodhaibi, Mohammad Karami, Uday Kamath) as Information Technology. MARS's discipline field is not reliable on its own: it labels some CS PhDs "Computational Science".
+  * **Finding graduates.** GMU commencement programs list each CS PhD with title and advisors. MARS (`digitalcollections.gmu.edu`) blocks automated access, but every MARS dissertation has a DataCite DOI (`api.datacite.org/dois?query=prefix:10.13021 AND types.resourceType:Dissertation`) giving author, advisor, and year, and each DOI's `gmu.tind.io/record/<id>/export/xm` record gives the degree discipline (MARC 502 `$g`). Fetch those one at a time, slowly.
 * **M.S. Students & Alumni (Thesis & Non-Thesis)**:
   * **Thesis M.S.**: Include thesis advisor and thesis title.
   * **Coursework / Non-Thesis M.S.**: Include degree (`MS '24`), current placement/location, and set `Advisor` to `None`.
