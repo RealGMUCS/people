@@ -57,7 +57,7 @@ const studentFields = [
 ];
 
 const awardFields = ['Name', 'Category', 'Award', 'Year', 'Former'];
-const facultyTypes = new Set(['Affiliate', 'Emeritus', 'Staff', 'Teaching', 'Tenure-Track', 'Tenured']);
+const facultyTypes = new Set(['Affiliate', 'Emeritus', 'Research', 'Staff', 'Teaching', 'Tenure-Track', 'Tenured']);
 type JsonRecord = Record<string, unknown>;
 const errors: string[] = [];
 
