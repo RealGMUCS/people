@@ -18,6 +18,7 @@ const facultyFields = [
     'Year started at GMU',
     'Year left GMU',
     'Current Position',
+    'Year of death',
     'Undergrad from',
     'Undergrad Year',
     'MS from',
@@ -150,13 +151,18 @@ faculty.forEach((row, index) => {
     if (type && !facultyTypes.has(type)) errors.push(`faculty.json:${line}: invalid faculty type "${type}"`);
     if (startYear && !/^\d{4}$/.test(startYear)) errors.push(`faculty.json:${line}: invalid start year "${startYear}"`);
     // Former faculty (no longer listed on any cs.gmu.edu people page) keep their GMU track and
-    // rank; `Year left GMU` and `Current Position` only make sense on a former record.
+    // rank; `Year left GMU`, `Current Position`, and `Year of death` only make sense on a former
+    // record, and a deceased member has no current position.
     const former = value(row, 'Former');
     const yearLeft = value(row, 'Year left GMU');
     const currentPosition = value(row, 'Current Position');
+    const yearOfDeath = value(row, 'Year of death');
     if (former && former !== 'Yes') errors.push(`faculty.json:${line}: Former must be "Yes" or blank`);
     if (yearLeft && !/^\d{4}$/.test(yearLeft)) errors.push(`faculty.json:${line}: invalid Year left GMU "${yearLeft}"`);
-    if (!former && (yearLeft || currentPosition)) errors.push(`faculty.json:${line}: Year left GMU and Current Position require Former: "Yes"`);
+    if (yearOfDeath && !/^\d{4}$/.test(yearOfDeath)) errors.push(`faculty.json:${line}: invalid Year of death "${yearOfDeath}"`);
+    if (!former && (yearLeft || currentPosition || yearOfDeath)) errors.push(`faculty.json:${line}: Year left GMU, Current Position, and Year of death require Former: "Yes"`);
+    if (yearOfDeath && currentPosition) errors.push(`faculty.json:${line}: a deceased member has no Current Position`);
+    if (yearOfDeath && yearLeft && yearOfDeath < yearLeft) errors.push(`faculty.json:${line}: Year of death (${yearOfDeath}) is before Year left GMU (${yearLeft})`);
     if (former && (email || value(row, 'Office (building and room #)'))) errors.push(`faculty.json:${line}: a former record keeps no GMU email or office`);
     if (startYear && yearLeft && yearLeft < startYear) errors.push(`faculty.json:${line}: Year left GMU (${yearLeft}) is before Year started at GMU (${startYear})`);
     for (const field of ['Undergrad Year', 'MS Year', 'PhD Year', 'Postdoc Year']) {

@@ -23,9 +23,16 @@ test('former faculty records keep their GMU track and drop GMU contact details',
     }
 });
 
-test('only former records carry Year left GMU or Current Position', () => {
+test('only former records carry Year left GMU, Current Position, or Year of death', () => {
     for (const row of faculty.filter(r => r.Former !== 'Yes')) {
         assert.equal(row['Year left GMU'], '', `${row['First Name']} ${row['Last Name']}`);
+        assert.equal(row['Current Position'], '', `${row['First Name']} ${row['Last Name']}`);
+        assert.equal(row['Year of death'], '', `${row['First Name']} ${row['Last Name']}`);
+    }
+});
+
+test('a deceased former member has no current position', () => {
+    for (const row of faculty.filter(r => r['Year of death'])) {
         assert.equal(row['Current Position'], '', `${row['First Name']} ${row['Last Name']}`);
     }
 });
