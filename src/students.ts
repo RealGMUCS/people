@@ -475,6 +475,9 @@ function studentSearchMatch(s, q) {
     return fields.some(v => v && String(v).toLowerCase().includes(q));
 }
 
+// The first URL sync only normalizes the landing URL; later view switches add history entries.
+let historyReady = false;
+
 function updateUrl() {
     const params = new URLSearchParams();
     const q = search.searchQueryValue();
@@ -493,23 +496,26 @@ function updateUrl() {
 
     const qs = params.toString();
     const url = window.location.pathname + (qs ? '?' + qs : '');
-    history.replaceState(null, '', url);
+    // Switching views is a navigation Back should undo; filter and search edits only rewrite the entry.
+    const viewChanged = (new URLSearchParams(window.location.search).get('view') ?? '') !== (params.get('view') ?? '');
+    if (historyReady && viewChanged) history.pushState(null, '', url);
+    else history.replaceState(null, '', url);
+    historyReady = true;
 }
 
 function restoreFromUrl() {
     const params = new URLSearchParams(window.location.search);
 
-    if (params.get('view') === 'insights') currentView = 'insights';
-    if (params.has('q')) search.setSearchValue(params.get('q'));
-    if (params.has('degree')) document.getElementById('degree-filter').value = params.get('degree');
-    if (params.has('placement') && document.getElementById('placement-filter')) document.getElementById('placement-filter').value = params.get('placement');
-    if (params.has('status')) document.getElementById('status-filter').value = params.get('status');
-    if (params.has('sort') && document.getElementById('sort-order')) document.getElementById('sort-order').value = params.get('sort');
-    if (params.has('topic')) {
-        activeTopic = params.get('topic');
-        document.getElementById('active-filter').style.display = 'flex';
-        document.getElementById('active-filter-text').textContent = `Topic: ${activeTopic}`;
-    }
+    // Missing params reset to defaults, so Back/Forward fully restores an earlier entry.
+    currentView = params.get('view') === 'insights' ? 'insights' : 'directory';
+    search.setSearchValue(params.get('q') ?? '');
+    document.getElementById('degree-filter').value = params.get('degree') ?? 'all';
+    if (document.getElementById('placement-filter')) document.getElementById('placement-filter').value = params.get('placement') ?? 'all';
+    document.getElementById('status-filter').value = params.get('status') ?? 'all';
+    if (document.getElementById('sort-order')) document.getElementById('sort-order').value = params.get('sort') ?? 'random';
+    activeTopic = params.get('topic');
+    document.getElementById('active-filter').style.display = activeTopic ? 'flex' : 'none';
+    if (activeTopic) document.getElementById('active-filter-text').textContent = `Topic: ${activeTopic}`;
 }
 
 // Rendering
