@@ -249,6 +249,9 @@ function setupInterestBanner() {
     });
 }
 
+// Modified or middle clicks keep the browser's open-in-new-tab/window behavior.
+const isPlainClick = (e: MouseEvent) => e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
+
 function setupNav() {
     const go = (view) => {
         currentView = view;
@@ -260,8 +263,8 @@ function setupNav() {
         window.scrollTo({ top: 0 });
         render();
     };
-    document.getElementById('awards-link').addEventListener('click', e => { e.preventDefault(); go('awards'); });
-    document.getElementById('nav-people').addEventListener('click', e => { e.preventDefault(); go('directory'); });
+    document.getElementById('awards-link').addEventListener('click', e => { if (!isPlainClick(e)) return; e.preventDefault(); go('awards'); });
+    document.getElementById('nav-people').addEventListener('click', e => { if (!isPlainClick(e)) return; e.preventDefault(); go('directory'); });
 }
 
 // One randomized "Try:" example per kind of query the search box accepts, so
@@ -359,6 +362,7 @@ function searchMatch(f, q) {
 
 // The first URL sync only normalizes the landing URL; later view switches add history entries.
 let historyReady = false;
+const DIRECTORY_TITLE = document.title;
 
 function updateUrl() {
     const params = new URLSearchParams();
@@ -381,6 +385,8 @@ function updateUrl() {
     if (historyReady && viewChanged) history.pushState(null, '', url);
     else history.replaceState(null, '', url);
     historyReady = true;
+    // Set after the history call so each entry (and bookmark) carries its own view's title.
+    document.title = currentView === 'awards' ? 'Faculty Awards — GMU CS Directory' : DIRECTORY_TITLE;
 }
 
 function restoreFromUrl() {
