@@ -357,6 +357,9 @@ function searchMatch(f, q) {
     return fields.some(v => v && String(v).toLowerCase().includes(q));
 }
 
+// The first URL sync only normalizes the landing URL; later view switches add history entries.
+let historyReady = false;
+
 function updateUrl() {
     const params = new URLSearchParams();
     const q = search.searchQueryValue();
@@ -373,24 +376,25 @@ function updateUrl() {
 
     const qs = params.toString();
     const url = window.location.pathname + (qs ? '?' + qs : '');
-    history.replaceState(null, '', url);
+    // Switching views is a navigation Back should undo; filter and search edits only rewrite the entry.
+    const viewChanged = (new URLSearchParams(window.location.search).get('view') ?? '') !== (params.get('view') ?? '');
+    if (historyReady && viewChanged) history.pushState(null, '', url);
+    else history.replaceState(null, '', url);
+    historyReady = true;
 }
 
 function restoreFromUrl() {
     const params = new URLSearchParams(window.location.search);
 
-    if (params.get('view') === 'awards') {
-        currentView = 'awards';
-    }
-    if (params.has('q')) search.setSearchValue(params.get('q'));
-    if (params.has('rank')) document.getElementById('rank-filter').value = params.get('rank');
-    if (params.has('type')) document.getElementById('type-filter').value = params.get('type');
-    if (params.has('sort') && document.getElementById('sort-order')) document.getElementById('sort-order').value = params.get('sort');
-    if (params.has('interest')) {
-        activeInterest = params.get('interest');
-        document.getElementById('active-filter').style.display = 'flex';
-        document.getElementById('active-filter-text').textContent = `Research: ${activeInterest}`;
-    }
+    // Missing params reset to defaults, so Back/Forward fully restores an earlier entry.
+    currentView = params.get('view') === 'awards' ? 'awards' : 'directory';
+    search.setSearchValue(params.get('q') ?? '');
+    document.getElementById('rank-filter').value = params.get('rank') ?? 'all';
+    document.getElementById('type-filter').value = params.get('type') ?? 'all';
+    if (document.getElementById('sort-order')) document.getElementById('sort-order').value = params.get('sort') ?? 'name-asc';
+    activeInterest = params.get('interest');
+    document.getElementById('active-filter').style.display = activeInterest ? 'flex' : 'none';
+    if (activeInterest) document.getElementById('active-filter-text').textContent = `Research: ${activeInterest}`;
 }
 
 // Rendering
