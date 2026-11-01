@@ -1,0 +1,32 @@
+{
+    "checked": "2026-10-30",
+    "records": [
+        {
+            "name": "James Matthew Kukucka",
+            "advisor": "Wing Lam",
+            "documentedResearchAdvisors": [
+                "Jonathan Bell",
+                "Paul Ammann"
+            ],
+            "sources": [
+                "https://webdocs.gmu.edu/wp-content/uploads/Winter-2025-Commencement-Program.pdf",
+                "https://jonbell.net/cv.pdf#page=10",
+                "https://www.jonbell.net/preprint/issta24-mutator.pdf"
+            ],
+            "note": "Mason's 2025 commencement program lists Wing Lam as Kukucka's advisor for the matching dissertation. Bell's CV lists Kukucka as a PhD advisee with the same dissertation title and documents co-advising with Paul Ammann after Bell left GMU, during 2019–2025. These sources establish advising relationships with all three people, but do not establish the exact succession or Wing's start date. The owner's suggested Bell-to-Ammann-to-Lam succession is a hypothesis, not direct confirmation. Restored Wing Lam after an overly strong web-based replacement with Bell; retained the earlier research-advising evidence here because the roster has no historical-advisors field. Co-Advisor remains blank rather than arbitrarily choosing one of the two documented research advisers. This research does not confer Verified: Yes."
+        },
+        {
+            "name": "Abdulrahman Alshammari",
+            "advisor": "Wing Lam",
+            "coAdvisor": "Paul Ammann",
+            "documentedResearchAdvisors": [
+                "Jonathan Bell",
+                "Paul Ammann"
+            ],
+            "sources": [
+                "https://jonbell.net/cv.pdf#page=10"
+            ],
+            "note": "Bell's CV identifies Alshammari and his matching dissertation as a PhD advisee co-advised with Paul Ammann during 2019–2024. This supports Bell's research-advising role but does not disprove the roster's existing Wing Lam attribution. Reverted the unsupported replacement of Wing with Bell and preserved the original Wing Lam / Paul Ammann fields. Wing's role and any handoff chronology were not independently established in this check. This research does not confer Verified: Yes."
+        }
+    ]
+}

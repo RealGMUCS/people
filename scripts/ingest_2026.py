@@ -143,6 +143,9 @@ phd_graduates = [
         'honor': 'Outstanding Academic Achievement (PhD)'
     },
     {
+        # Wing Lam is listed in the 2025 commencement program.
+        # Bell/Ammann research advising is documented in maintenance/advisor-corrections.json;
+        # those relationships do not establish that Wing's attribution is wrong.
         'first': 'James Matthew', 'last': 'Kukucka', 'advisor': 'Wing Lam', 'coadvisor': '',
         'dissertation': 'Evaluating and Improving Fuzzer Mutation Strategies',
         'honor': 'Distinguished Academic Achievement (PhD)'

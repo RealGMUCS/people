@@ -1,0 +1,1195 @@
+{
+    "checked": "2026-10-30",
+    "scope": "Faculty undergraduate, masters, and postdoctoral education; public bios and CVs. Years are graduation years or the end of a postdoctoral appointment, never its start. Existing direct confirmations are preserved. Unresolved stages are not evidence of absence.",
+    "records": [
+        {
+            "name": "Ghada Abdelmoumin",
+            "fields": {
+                "MS from": "Virginia Tech",
+                "MS Year": "2008"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf",
+                "https://thedig.howard.edu/node/11236"
+            ],
+            "note": "Howard confirms Alexandria undergraduate degree and another MS at Western Illinois, but no completion years; those stages remain unresolved."
+        },
+        {
+            "name": "Jan Allbeck",
+            "fields": {
+                "Undergrad from": "Bloomsburg University",
+                "Undergrad Year": "1995",
+                "MS from": "University of Pennsylvania",
+                "MS Year": "1997"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~jallbeck/allbeckCV.pdf"
+            ]
+        },
+        {
+            "name": "Paul Ammann",
+            "fields": {
+                "Undergrad from": "Dartmouth College",
+                "Undergrad Year": "1983"
+            },
+            "sources": [
+                "https://web.cs.dartmouth.edu/graduate/alumni-professors",
+                "https://assets.cambridge.org/97805218/80381/frontmatter/9780521880381_frontmatter.pdf"
+            ],
+            "note": "MS institution confirmed, but completion year not established."
+        },
+        {
+            "name": "Giuseppe Ateniese",
+            "fields": {},
+            "sources": [
+                "https://ateniese.github.io/"
+            ],
+            "note": "Earned Laurea (MSc), Salerno, 1995. No separately dated undergraduate degree or explicit postdoc found; no honorary degree added."
+        },
+        {
+            "name": "Hakan Aydin",
+            "fields": {
+                "Undergrad from": "Istanbul Technical University",
+                "Undergrad Year": "1991",
+                "MS from": "Istanbul Technical University",
+                "MS Year": "1994"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~aydin/tii10.pdf"
+            ]
+        },
+        {
+            "name": "Foteini Baldimtsi",
+            "fields": {
+                "Undergrad from": "University of Macedonia",
+                "Undergrad Year": "2008",
+                "MS from": "Brown University",
+                "MS Year": "2011"
+            },
+            "sources": [
+                "https://cs.brown.edu/people/fbaldimt/cv/foteini_cv.pdf",
+                "https://www.baldimtsi.com/"
+            ]
+        },
+        {
+            "name": "Simin Chen",
+            "fields": {},
+            "sources": [
+                "https://siminchen.site/"
+            ],
+            "note": "Existing Tongji degrees confirmed; Columbia postdoc end year is not stated on homepage."
+        },
+        {
+            "name": "Missy Cummings",
+            "fields": {
+                "Undergrad from": "U.S. Naval Academy",
+                "Undergrad Year": "1988",
+                "MS from": "Naval Postgraduate School",
+                "MS Year": "1994"
+            },
+            "sources": [
+                "https://www.gmu.edu/profiles/cummings"
+            ]
+        },
+        {
+            "name": "Socrates Dimitriadis",
+            "fields": {
+                "Undergrad Year": "1999"
+            },
+            "sources": [
+                "https://socrates.name/"
+            ],
+            "note": "University of Crete MSc completed 2002; existing Brown MSc lacks a separately confirmed year, so it is preserved."
+        },
+        {
+            "name": "Carlotta Domeniconi",
+            "fields": {
+                "Undergrad from": "University of Milano",
+                "Undergrad Year": "1992",
+                "MS from": "International Institute for Advanced Scientific Studies, Salerno",
+                "MS Year": "1997"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/2019-20.pdf"
+            ]
+        },
+        {
+            "name": "Jessica Lin",
+            "fields": {
+                "Undergrad from": "University of California, Riverside",
+                "Undergrad Year": "1999",
+                "MS Year": "2002"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~jessica/"
+            ]
+        },
+        {
+            "name": "Mingrui Liu",
+            "fields": {
+                "Postdoc from": "Boston University",
+                "Postdoc Year": "2021",
+                "Undergrad from": "Shanghai University",
+                "Undergrad Year": "2013",
+                "MS from": "Shanghai Jiao Tong University",
+                "MS Year": "2016"
+            },
+            "sources": [
+                "https://mingrliu.github.io/",
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ],
+            "note": "Catalog distinguishes Shanghai University BS (2013) from Shanghai Jiao Tong MS (2016), correcting the prior undergraduate institution; homepage mentions study at SJTU without labeling it undergraduate."
+        },
+        {
+            "name": "Lannan (Lisa) Luo",
+            "fields": {
+                "Undergrad from": "Xidian University",
+                "Undergrad Year": "2009",
+                "MS from": "University of Electronic Science and Technology of China",
+                "MS Year": "2012"
+            },
+            "sources": [
+                "https://lannan.github.io/"
+            ]
+        },
+        {
+            "name": "Evgenios Kornaropoulos",
+            "fields": {
+                "Undergrad Year": "2009",
+                "MS Year": "2012"
+            },
+            "sources": [
+                "https://cs.brown.edu/media/filer_public/1e/48/1e480cc2-620a-40b8-a99e-3c0535b0e72a/kornaropoulosevgenios.pdf"
+            ],
+            "note": "Also holds Brown ScM, 2014; the roster keeps the existing Crete MSc rather than collapsing distinct degrees into one year."
+        },
+        {
+            "name": "Jana Košecká",
+            "fields": {
+                "MS from": "Slovak Technical University",
+                "MS Year": "1988"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~kosecka/KoseckaVita.pdf"
+            ],
+            "note": "Research appointments require an explicit postdoctoral title before adding postdoc stage."
+        },
+        {
+            "name": "Kevin Andrea",
+            "fields": {
+                "Undergrad from": "George Mason University",
+                "Undergrad Year": "2012",
+                "MS from": "George Mason University",
+                "MS Year": "2014"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~kandrea/Andrea_CV.pdf"
+            ]
+        },
+        {
+            "name": "Ivan Avramovic",
+            "fields": {
+                "Undergrad from": "University of Illinois at Urbana-Champaign",
+                "Undergrad Year": "1997",
+                "MS from": "George Mason University",
+                "MS Year": "2012"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~iavramo2/cv-gmu.pdf"
+            ]
+        },
+        {
+            "name": "Daniel Barbará",
+            "fields": {
+                "Undergrad from": "Universidad Metropolitana",
+                "Undergrad Year": "1975",
+                "MS from": "Princeton University",
+                "MS Year": "1981"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~dbarbara/cv.html"
+            ]
+        },
+        {
+            "name": "Alex Brodsky",
+            "fields": {
+                "Undergrad from": "Hebrew University of Jerusalem",
+                "Undergrad Year": "1982",
+                "MS from": "Hebrew University of Jerusalem",
+                "MS Year": "1983"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ]
+        },
+        {
+            "name": "Zoran Durić",
+            "fields": {
+                "Undergrad from": "University of Sarajevo, Bosnia and Herzegovina",
+                "Undergrad Year": "1982"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~zduric/WebPages/Vitae.pdf"
+            ]
+        },
+        {
+            "name": "Amarda Shehu",
+            "fields": {
+                "Undergrad from": "Clarkson University",
+                "Undergrad Year": "2002"
+            },
+            "sources": [
+                "https://shehulab.cs.gmu.edu/group/principal-investigator/"
+            ]
+        },
+        {
+            "name": "Robert Simon",
+            "fields": {
+                "Undergrad from": "University of Rochester",
+                "Undergrad Year": "1981"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/2019-20.pdf"
+            ]
+        },
+        {
+            "name": "Larry Kerschberg",
+            "fields": {
+                "Undergrad from": "Case Institute of Technology",
+                "Undergrad Year": "1964",
+                "MS from": "University of Wisconsin",
+                "MS Year": "1966"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/2019-20.pdf"
+            ]
+        },
+        {
+            "name": "Dana Richards",
+            "fields": {
+                "MS from": "University of Virginia",
+                "MS Year": "1976"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ]
+        },
+        {
+            "name": "Michael Reep",
+            "fields": {
+                "Undergrad from": "Clarkson University",
+                "Undergrad Year": "1985",
+                "MS from": "George Mason University",
+                "MS Year": "1997"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ]
+        },
+        {
+            "name": "David Porfirio",
+            "fields": {
+                "Undergrad from": "University of Arizona",
+                "Undergrad Year": "2016",
+                "MS from": "University of Wisconsin-Madison",
+                "MS Year": "2018",
+                "Postdoc Year": "2024"
+            },
+            "sources": [
+                "https://dporfirio.github.io/content/CV.pdf"
+            ],
+            "note": "CV distinguishes NRC postdoc (2022–2024) from computer scientist (2024–2025), correcting the prior postdoc end year of 2025."
+        },
+        {
+            "name": "Lishan Yang",
+            "fields": {
+                "Undergrad from": "University of Science and Technology of China",
+                "Undergrad Year": "2016"
+            },
+            "sources": [
+                "https://lishanyang.github.io/CV_LishanYang.pdf"
+            ]
+        },
+        {
+            "name": "Xuesu Xiao",
+            "fields": {
+                "Undergrad from": "Tongji University; FH Aachen University of Applied Sciences",
+                "Undergrad Year": "2013",
+                "MS from": "Carnegie Mellon University",
+                "MS Year": "2015",
+                "Postdoc from": "University of Texas at Austin",
+                "Postdoc Year": "2021"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~xxiao2/index.html",
+                "https://people.cs.gmu.edu/~xiao/xuesu_website_files/CV_Xiao.pdf"
+            ],
+            "note": "UT Austin postdoc ended May 2021; June 2021–August 2022 was a research affiliate appointment. Both 2013 undergraduate institutions belong to the documented dual degree."
+        },
+        {
+            "name": "Jinwei Ye",
+            "fields": {
+                "Undergrad from": "Huazhong University of Science and Technology",
+                "Undergrad Year": "2009",
+                "Postdoc from": "U.S. Army Research Laboratory",
+                "Postdoc Year": "2015"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~jinweiye/files/%5BCV%5DJinweiYe.pdf"
+            ]
+        },
+        {
+            "name": "Fang-Yi Yu",
+            "fields": {
+                "Undergrad from": "National Taiwan University",
+                "Undergrad Year": "2013",
+                "Postdoc Year": "2022"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~fangyiyu/CV.pdf"
+            ],
+            "note": "Harvard postdoc ended August 2022; earlier Michigan postdoc ended May 2020. Single postdoc field retains existing Harvard appointment."
+        },
+        {
+            "name": "Qiang Zeng",
+            "fields": {
+                "Undergrad from": "Beihang University",
+                "Undergrad Year": "2005",
+                "MS from": "Beihang University",
+                "MS Year": "2008"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~qzeng2/files/zeng_cv.pdf"
+            ]
+        },
+        {
+            "name": "Craig Yu",
+            "fields": {
+                "Undergrad Year": "2007",
+                "MS Year": "2009"
+            },
+            "sources": [
+                "https://www.cs.umb.edu/~craigyu/papers/wayfinding_main.pdf"
+            ]
+        },
+        {
+            "name": "Xiaokuan Zhang",
+            "fields": {
+                "Undergrad Year": "2015",
+                "Postdoc Year": "2022"
+            },
+            "sources": [
+                "https://mainarke.github.io/assets/CV_xiaokuan.pdf"
+            ]
+        },
+        {
+            "name": "Antonios Anastasopoulos",
+            "fields": {
+                "Undergrad from": "National Technical University of Athens",
+                "Undergrad Year": "2014",
+                "MS from": "National Technical University of Athens",
+                "MS Year": "2014"
+            },
+            "sources": [
+                "https://www.cs.cmu.edu/~aanastas/files/AntonisAnastasopoulosCV.pdf",
+                "https://www.cs.cmu.edu/~aanastas/",
+                "https://iir.gmu.edu/immigrant-stories-overview/greece/greece-summary-of-interview-with-dr-antonios-anastasopoulos"
+            ],
+            "note": "Integrated BSc/MSc explicitly dated 2014. Existing CMU postdoc institution is preserved; its end year is not explicitly documented in the consulted CV, so no completion year is inferred from the GMU appointment."
+        },
+        {
+            "name": "Dov Gordon",
+            "fields": {
+                "Undergrad from": "Columbia University",
+                "Undergrad Year": "2003",
+                "MS from": "University of Maryland, College Park",
+                "MS Year": "2008"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~gordon/cv_0918.pdf"
+            ]
+        },
+        {
+            "name": "Brittany Johnson-Matthews",
+            "fields": {
+                "Undergrad from": "College of Charleston",
+                "Undergrad Year": "2011"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~johnsonb/"
+            ]
+        },
+        {
+            "name": "Zhicong Lu",
+            "fields": {
+                "Undergrad from": "Tsinghua University",
+                "Undergrad Year": "2012",
+                "MS from": "University of Toronto",
+                "MS Year": "2017"
+            },
+            "sources": [
+                "https://www.cs.utoronto.ca/~luzhc/assets/pdf/Zhicong_Lu_CV.pdf"
+            ],
+            "note": "Also holds Tsinghua MA, 2015; single MS field records the computer science MSc."
+        },
+        {
+            "name": "Sanjeev Setia",
+            "fields": {
+                "MS from": "University of Maryland, College Park",
+                "MS Year": "1990"
+            },
+            "sources": [
+                "https://www.usenix.org/publications/compsystems/1994/spr_contributors.pdf"
+            ],
+            "note": "Also holds BITS Pilani MSc (Tech), 1987; no undergraduate degree inferred from that title."
+        },
+        {
+            "name": "Arun Sood",
+            "fields": {
+                "Undergrad Year": "1966",
+                "MS Year": "1967"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~asood/Sood-Resume.pdf"
+            ]
+        },
+        {
+            "name": "Amihai Motro",
+            "fields": {
+                "Undergrad from": "Tel Aviv University",
+                "Undergrad Year": "1972",
+                "MS from": "Hebrew University of Jerusalem",
+                "MS Year": "1976"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~ami/"
+            ]
+        },
+        {
+            "name": "Ping Deng",
+            "fields": {
+                "Undergrad from": "Sichuan University",
+                "Undergrad Year": "2001",
+                "MS from": "University of Texas at Dallas",
+                "MS Year": "2003"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ]
+        },
+        {
+            "name": "Mark Snyder",
+            "fields": {
+                "Undergrad from": "University of North Carolina at Chapel Hill",
+                "Undergrad Year": "2004",
+                "MS Year": "2007"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ]
+        },
+        {
+            "name": "Shvetha Soundararajan",
+            "fields": {
+                "Undergrad Year": "2006",
+                "MS Year": "2008"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ]
+        },
+        {
+            "name": "Xinyuan (Frank) Wang",
+            "fields": {
+                "Undergrad from": "Peking University",
+                "Undergrad Year": "1987",
+                "MS from": "Chinese Academy of Space Technology",
+                "MS Year": "1990"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ]
+        },
+        {
+            "name": "Robert Pettit",
+            "fields": {
+                "Undergrad from": "University of Evansville",
+                "Undergrad Year": "1991",
+                "MS from": "George Mason University",
+                "MS Year": "1995"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ]
+        },
+        {
+            "name": "Vivian Motti",
+            "fields": {
+                "Undergrad Year": "2006",
+                "MS Year": "2009"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/2019-20.pdf"
+            ]
+        },
+        {
+            "name": "Shima Mohebbi",
+            "fields": {
+                "Undergrad from": "University of Science and Technology, Mazandaran, Iran",
+                "Undergrad Year": "2007",
+                "MS Year": "2009"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ],
+            "note": "Catalog also lists a University of Tennessee MS, 2015. Existing K.N. Toosi MSc retained; postdoc end year unresolved."
+        },
+        {
+            "name": "David Ignacio Gonzalez Samudio",
+            "fields": {
+                "Undergrad Year": "2006",
+                "MS Year": "2014"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ]
+        },
+        {
+            "name": "ThanhVu (Vu) Nguyen",
+            "fields": {
+                "Undergrad from": "Pennsylvania State University",
+                "Undergrad Year": "2003",
+                "MS from": "Pennsylvania State University",
+                "MS Year": "2006"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ]
+        },
+        {
+            "name": "Thomas LaToza",
+            "fields": {
+                "Undergrad Year": "2004",
+                "Postdoc from": "University of California, Irvine",
+                "Postdoc Year": "2015"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~tlatoza/latoza-cv.pdf"
+            ]
+        },
+        {
+            "name": "Fei Li",
+            "fields": {
+                "Undergrad Year": "1997",
+                "MS Year": "2002"
+            },
+            "sources": [
+                "https://people.cs.vt.edu/ctlu/Course/CS5944/2015S/Abs/Seminar-VT-Fei-GMU.pdf"
+            ]
+        },
+        {
+            "name": "Yotam Gingold",
+            "fields": {
+                "Undergrad Year": "2002",
+                "MS from": "New York University",
+                "MS Year": "2005"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/2019-20.pdf"
+            ]
+        },
+        {
+            "name": "Bo Han",
+            "fields": {
+                "Undergrad from": "Tsinghua University",
+                "Undergrad Year": "2000",
+                "MS from": "City University of Hong Kong",
+                "MS Year": "2006"
+            },
+            "sources": [
+                "https://www.cs.umd.edu/~srin/PDF/2011/offloading-jou.pdf?theme=2019"
+            ]
+        },
+        {
+            "name": "Kevin Lybarger",
+            "fields": {
+                "Undergrad from": "Seattle University",
+                "Undergrad Year": "2003",
+                "MS from": "University of Colorado Boulder",
+                "MS Year": "2007",
+                "Postdoc from": "University of Washington",
+                "Postdoc Year": "2022"
+            },
+            "sources": [
+                "https://static1.squarespace.com/static/6154d281eff0354572c24158/t/615502415baf690835e1dfaa/1632961090106/CV.pdf",
+                "https://static1.squarespace.com/static/6154d281eff0354572c24158/t/63ee5435b0680d73d3d16cca/1676563509378/Kevin_Lybarger_CV.pdf"
+            ],
+            "note": "Indexed CV text supplies degrees and the later CV supplies the postdoctoral end year; direct downloads returned 404."
+        },
+        {
+            "name": "Parth Pathak",
+            "fields": {
+                "Undergrad from": "Gujarat University",
+                "Undergrad Year": "2005",
+                "MS from": "North Carolina State University",
+                "MS Year": "2010",
+                "Postdoc from": "University of California, Davis",
+                "Postdoc Year": "2016"
+            },
+            "sources": [
+                "https://www.phpathak.com/files/CV.pdf"
+            ]
+        },
+        {
+            "name": "Maha Shamseddine",
+            "fields": {
+                "Undergrad from": "Beirut Arab University",
+                "Undergrad Year": "2001",
+                "MS from": "American University of Beirut",
+                "MS Year": "2003"
+            },
+            "sources": [
+                "https://www.es.mdh.se/pdf_publications/7195.pdf"
+            ]
+        },
+        {
+            "name": "Wassim Itani",
+            "fields": {
+                "Undergrad from": "Beirut Arab University",
+                "Undergrad Year": "2001",
+                "MS from": "American University of Beirut",
+                "MS Year": "2003"
+            },
+            "sources": [
+                "https://www.es.mdh.se/pdf_publications/7195.pdf"
+            ]
+        },
+        {
+            "name": "Angkul Kongmunvattana",
+            "fields": {
+                "Undergrad from": "Chulalongkorn University",
+                "Undergrad Year": "1995",
+                "MS from": "University of Louisiana at Lafayette",
+                "MS Year": "1997"
+            },
+            "sources": [
+                "https://citeseerx.ist.psu.edu/document?doi=51d80f117222e249a2ab52aab363d07a271d333f&repid=rep1&type=pdf"
+            ],
+            "note": "Authored biosketch, matched using name, PhD institution/year and Nevada appointment; not a name-only match."
+        },
+        {
+            "name": "Ahmed Bin Zaman",
+            "fields": {
+                "Undergrad from": "Shahjalal University of Science and Technology",
+                "Undergrad Year": "2012",
+                "MS from": "George Mason University",
+                "MS Year": "2020"
+            },
+            "sources": [
+                "https://par.nsf.gov/servlets/purl/10343790",
+                "https://mason.gmu.edu/~azaman6/"
+            ]
+        },
+        {
+            "name": "Duminda Wijesekera",
+            "fields": {
+                "Undergrad from": "University of Colombo",
+                "Undergrad Year": "1981",
+                "MS from": "University of Minnesota",
+                "MS Year": "1995",
+                "Postdoc from": "University of Minnesota",
+                "Postdoc Year": "1992"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~duminda/cv.pdf"
+            ],
+            "note": "CV explicitly lists visiting postdoctoral fellowship (1990–1992), after Cornell PhD (1990); also holds Cornell MS (1989). Single MS field records later Minnesota degree."
+        },
+        {
+            "name": "Daniel Menascé",
+            "fields": {
+                "Undergrad from": "Pontifícia Universidade Católica do Rio de Janeiro",
+                "Undergrad Year": "1974",
+                "MS from": "Pontifícia Universidade Católica do Rio de Janeiro",
+                "MS Year": "1975"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/2019-20.pdf"
+            ]
+        },
+        {
+            "name": "Songqing Chen",
+            "fields": {
+                "Undergrad Year": "1997",
+                "MS Year": "1999"
+            },
+            "sources": [
+                "https://www.sciencedirect.com/science/article/abs/pii/S1389128622000056"
+            ]
+        },
+        {
+            "name": "Ziyu Yao",
+            "fields": {
+                "Undergrad Year": "2015",
+                "MS from": "Ohio State University",
+                "MS Year": "2016"
+            },
+            "sources": [
+                "https://ziyuyao.org/assets/pdf/CV_ZiyuYao_public.pdf",
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ]
+        },
+        {
+            "name": "Shuochao Yao",
+            "fields": {
+                "Undergrad from": "Shanghai Jiao Tong University",
+                "Undergrad Year": "2014"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/",
+                "https://engineering.purdue.edu/~lusu/papers/TC2021.pdf"
+            ],
+            "note": "UIUC postdoc confirmed by authored paper bio, but no end year established."
+        },
+        {
+            "name": "Sadegh Torabi",
+            "fields": {
+                "Undergrad Year": "2005",
+                "MS Year": "2016"
+            },
+            "sources": [
+                "https://satorabi.github.io/"
+            ],
+            "note": "Also holds Kuwait University MSc, 2009; preserves existing UBC MSc."
+        },
+        {
+            "name": "Daigo Shishika",
+            "fields": {
+                "Undergrad Year": "2012",
+                "MS Year": "2015",
+                "Postdoc Year": "2020"
+            },
+            "sources": [
+                "https://dshishika.github.io/files/cv_shishika.pdf",
+                "https://sparx.vse.gmu.edu/personnel.html"
+            ],
+            "note": "GMU lab explicitly dates Penn postdoc completion to 2020."
+        },
+        {
+            "name": "Ziwei Zhu",
+            "fields": {
+                "Undergrad Year": "2016"
+            },
+            "sources": [
+                "https://zziwei.github.io/CV.pdf"
+            ]
+        },
+        {
+            "name": "Khaled Khasawneh",
+            "fields": {
+                "Undergrad from": "Jordan University of Science and Technology",
+                "Undergrad Year": "2012",
+                "MS from": "Binghamton University",
+                "MS Year": "2014"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ]
+        },
+        {
+            "name": "Parastoo Kamranfar",
+            "fields": {
+                "Undergrad from": "Azad University South Tehran Branch",
+                "Undergrad Year": "2008",
+                "MS from": "University of Tehran and Azad University, Sciences and Research Branch",
+                "MS Year": "2012"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/",
+                "https://chais.gmu.edu/person/parastoo-kamranfar/"
+            ]
+        },
+        {
+            "name": "Sara-Lynn Gopalkrishna",
+            "fields": {
+                "Undergrad from": "Binghamton University",
+                "Undergrad Year": "1991",
+                "MS from": "Portland State University",
+                "MS Year": "1999"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ],
+            "note": "Catalog also lists Columbia MAT (1992). Its PhD entry conflicts with the existing doctorate institution and was not applied; only the independently compatible BA/MS education is added."
+        },
+        {
+            "name": "Wing Lam",
+            "fields": {
+                "Undergrad from": "University of Washington",
+                "Undergrad Year": "2013"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/",
+                "https://people.cs.gmu.edu/~winglam/"
+            ]
+        },
+        {
+            "name": "Sean Luke",
+            "fields": {
+                "Undergrad from": "Brigham Young University",
+                "Undergrad Year": "1993"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ]
+        },
+        {
+            "name": "Sapna Gambhir",
+            "fields": {
+                "Undergrad from": "Kurukshetra University",
+                "Undergrad Year": "2001",
+                "MS from": "Guru Gobind Singh Indraprastha University",
+                "MS Year": "2004"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ],
+            "note": "MT (Master of Technology) recorded in the shared masters-stage field."
+        },
+        {
+            "name": "Thema Monroe-White",
+            "fields": {
+                "Undergrad Year": "2001",
+                "MS Year": "2004"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ]
+        },
+        {
+            "name": "Kun Sun",
+            "fields": {
+                "Undergrad from": "Nankai University",
+                "Undergrad Year": "1997",
+                "MS from": "Nankai University",
+                "MS Year": "2000"
+            },
+            "sources": [
+                "https://repository.lib.ncsu.edu/bitstreams/891a5e10-1c23-4ccd-a681-f67a2ba6f681/download"
+            ]
+        },
+        {
+            "name": "Kai Zeng",
+            "fields": {
+                "Undergrad from": "Huazhong University of Science and Technology",
+                "Undergrad Year": "2001",
+                "MS from": "Huazhong University of Science and Technology",
+                "MS Year": "2004",
+                "Postdoc Year": "2011"
+            },
+            "sources": [
+                "https://www.cnsr.ictas.vt.edu/publication/On%20broadcast%20authentication%20in%20wireless%20sensor%20networks.pdf",
+                "https://people-ece.vse.gmu.edu/~kzeng2/bio.html"
+            ]
+        },
+        {
+            "name": "Özlem Uzuner",
+            "fields": {
+                "Undergrad Year": "1998",
+                "MS Year": "1998"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/2019-20.pdf",
+                "https://gmucyber.onair.cc/ozlem-uzuner/"
+            ],
+            "note": "Catalog supplies both years; faculty bio independently confirms both MIT institutions. Both degrees completed in the same year."
+        },
+        {
+            "name": "Dieter Pfoser",
+            "fields": {
+                "MS from": "Johannes Kepler University Linz",
+                "MS Year": "1996"
+            },
+            "sources": [
+                "https://www.aaudxp-cms.aau.dk/media/ek0bf015/265948_98501_researchevaluation1996-2000.pdf"
+            ],
+            "note": "Institutional report explicitly calls the 1996 degree Magister (MSc); no separate undergraduate date inferred."
+        },
+        {
+            "name": "Rahul Tikekar",
+            "fields": {
+                "Undergrad Year": "1988",
+                "MS Year": "1990"
+            },
+            "sources": [
+                "https://catalog.sou.edu/mime/media/7/804/catalog06-07.pdf"
+            ]
+        },
+        {
+            "name": "Sanchari Das",
+            "fields": {
+                "Undergrad from": "The Heritage Academy",
+                "Undergrad Year": "2013",
+                "MS from": "Indiana University Bloomington",
+                "MS Year": "2018"
+            },
+            "sources": [
+                "https://www.drsancharidas.com/",
+                "https://www.heritageit.edu/PDF/Informtion_Brochure_2022.pdf",
+                "https://news.iu.edu/luddy/live/news/44487-luddy-school-honors-2021-alumni-award-winners"
+            ],
+            "note": "Personal bio establishes the Heritage Academy identity; its institutional brochure dates the BCA cohort. Single MS field records the Informatics MS, not the additional MCA or MBA."
+        },
+        {
+            "name": "Maya Larson",
+            "fields": {
+                "Undergrad from": "Marymount University",
+                "Undergrad Year": "1989",
+                "MS from": "George Washington University",
+                "MS Year": "2013"
+            },
+            "sources": [
+                "https://www.csee.umbc.edu/people/instructional-faculty/maya-larson/"
+            ],
+            "note": "Also holds Duke MA in economics (1993); the MS field records computer science."
+        },
+        {
+            "name": "Ric Heishman",
+            "fields": {
+                "Undergrad from": "University of Cincinnati",
+                "Undergrad Year": "1991",
+                "MS from": "American University",
+                "MS Year": "1997"
+            },
+            "sources": [
+                "https://cs.gmu.edu/~fli/papers/Integrating%20perceptual%20and%20cognitive%20modeling%20for%20adaptive%20and%20intelligent%20human-computer%20interaction.pdf"
+            ]
+        },
+        {
+            "name": "Wassim (Wes) Masri",
+            "fields": {
+                "Undergrad from": "Case Western Reserve University",
+                "Undergrad Year": "1986",
+                "MS from": "Pennsylvania State University",
+                "MS Year": "1988"
+            },
+            "sources": [
+                "https://research-fadi.aub.edu.lb/promotion/copies/chapters/advances_in_computers_2016_Ch6_Vol103.pdf"
+            ],
+            "note": "Author bio confirms BS and MS. A separate BE (1984) appears in the GMU catalog, but the single undergraduate field records the explicitly confirmed BS."
+        },
+        {
+            "name": "Archange Destiné",
+            "fields": {
+                "MS from": "George Mason University",
+                "MS Year": "2020"
+            },
+            "sources": [
+                "https://cs.gmu.edu/profiles/adestine"
+            ],
+            "note": "GMU biography explicitly dates GMU graduation to 2020; other listed MSc institutions have no dates and are not combined under the GMU year."
+        },
+        {
+            "name": "Binqian (Bella) Yin",
+            "fields": {
+                "Undergrad from": "China University of Petroleum",
+                "Undergrad Year": "2017",
+                "MS Year": "2018"
+            },
+            "sources": [
+                "https://cdn.prod.web.uta.edu/-/media/project/website/commencement/programs/2022/fall/utacommprogram-2022-fall.pdf",
+                "https://cs.gmu.edu/profiles/byin2"
+            ],
+            "note": "Commencement identity matches GMU bio through Earth Science doctorate, machine-learning research on geology, and the Pittsburgh MS."
+        },
+        {
+            "name": "Xu (Ethan) Han",
+            "fields": {
+                "Undergrad from": "Chengdu University of Information Technology; University of Electronic Science and Technology of China",
+                "Undergrad Year": "2013",
+                "MS from": "University of Maryland, College Park",
+                "MS Year": "2015"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/"
+            ],
+            "note": "Catalog explicitly lists both undergraduate degrees in 2013; no degree stage inferred from GMU doctoral enrollment."
+        },
+        {
+            "name": "Sungsoo (Ray) Hong",
+            "fields": {
+                "Undergrad from": "Ajou University",
+                "Undergrad Year": "2005",
+                "MS from": "Yonsei University",
+                "MS Year": "2007"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/",
+                "https://alignment.lab.gmu.edu/people"
+            ],
+            "note": "Catalog lists Ray Hong; matched to lab director Sungsoo Ray Hong using department and University of Washington doctorate."
+        },
+        {
+            "name": "Andrian Marcus",
+            "fields": {
+                "Undergrad from": "Babeș-Bolyai University",
+                "Undergrad Year": "1995",
+                "MS from": "University of Memphis",
+                "MS Year": "2001"
+            },
+            "sources": [
+                "https://orcid.org/0000-0001-5450-5598",
+                "https://www.andrianmarcus.net/about"
+            ],
+            "note": "Subject-authored ORCID explicitly dates BSc to 1995 and Memphis MS to 2001. This separates the previously conflated undergraduate institutions and takes precedence over inconsistent catalog MS 2000 / MA 1996 entries. No direct-confirmation badge is inferred."
+        },
+        {
+            "name": "Nora McDonald",
+            "fields": {
+                "Undergrad from": "Cornell University",
+                "Undergrad Year": "2004"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/",
+                "https://ist.gmu.edu/news/2023-05/ist-professor-sees-empathy-innovating-tech"
+            ]
+        },
+        {
+            "name": "David Rine",
+            "fields": {
+                "Undergrad from": "Illinois State University",
+                "Undergrad Year": "1963"
+            },
+            "sources": [
+                "https://news.illinoisstate.edu/2021/09/class-notes-3/",
+                "https://catalog.gmu.edu/about-mason/faculty-emeriti/"
+            ],
+            "note": "University alumni notes explicitly identify the 1963 graduate as GMU professor emeritus and founding engineering chair; MS year remains unresolved."
+        },
+        {
+            "name": "Marcos Zampieri",
+            "fields": {
+                "Undergrad from": "Ibero-American University, Brazil",
+                "Undergrad Year": "2005",
+                "MS from": "University of Wolverhampton",
+                "MS Year": "2010"
+            },
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/",
+                "https://marcoszampieri.com/"
+            ]
+        },
+        {
+            "name": "Mihai Boicu",
+            "fields": {
+                "Undergrad from": "University of Bucharest",
+                "Undergrad Year": "1995"
+            },
+            "sources": [
+                "https://www.jsoftware.us/vol3/jsw0303-05.pdf"
+            ],
+            "note": "Authored journal bio explicitly gives License in Informatics, 1995. No separate MS or postdoc inferred."
+        },
+        {
+            "name": "Xuxian Jiang",
+            "fields": {
+                "Undergrad from": "Xi'an Jiaotong University",
+                "Undergrad Year": "1998"
+            },
+            "sources": [
+                "https://friends.cs.purdue.edu/pubs/TPDS08.pdf"
+            ]
+        },
+        {
+            "name": "Kenneth De Jong",
+            "fields": {},
+            "sources": [
+                "https://science.gmu.edu/events/cds-colloquium-nature-inspired-computation"
+            ],
+            "note": "Official bio only dates PhD. No supported undergraduate, MS, or postdoc completion pair found."
+        },
+        {
+            "name": "Hassan Gomaa",
+            "fields": {},
+            "sources": [
+                "https://mason.gmu.edu/~hgomaa/",
+                "https://cs.gmu.edu/~menasce/papers/IEEE-TSE-Nov2000.pdf"
+            ],
+            "note": "Authored paper bio confirms University College London BSc without completion year; Imperial DIC is not entered as an MS."
+        },
+        {
+            "name": "Henry Hamburger",
+            "fields": {},
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty-emeriti/"
+            ],
+            "note": "Official listing provides only a doctorate title; no supported undergraduate, MS, or postdoc completion pair found."
+        },
+        {
+            "name": "Heidi Reichert",
+            "fields": {},
+            "sources": [
+                "https://content.gmu.edu/news/2026-10/heidi-reichert-brings-student-first-approach-computer-science",
+                "https://www.shepherd.edu/internships/internship-experiences"
+            ],
+            "note": "Primary sources confirm identity and undergraduate mathematics/data analytics study; completion year is not stated. Third-party education ranges are not used as graduation evidence."
+        },
+        {
+            "name": "Michael Jarret Baume",
+            "fields": {},
+            "sources": [
+                "https://api.drum.lib.umd.edu/server/api/core/bitstreams/ea2602dd-8fef-4239-a399-6481b1576f7f/content"
+            ],
+            "note": "Dissertation establishes identity and PhD, but no other dated education stage was established."
+        },
+        {
+            "name": "Juan (Judy) Luo",
+            "fields": {},
+            "sources": [
+                "https://catalog.gmu.edu/about-mason/faculty/faculty.pdf"
+            ],
+            "note": "Existing University of Nebraska MS (2003) confirmed; no undergraduate or postdoc completion pair found."
+        },
+        {
+            "name": "Pearl Wang",
+            "fields": {},
+            "sources": [
+                "https://bov.gmu.edu/wp-content/uploads/Meeting-Materials-Annual-Board-of-Visitors-Meeting-July-31-2020-updt-07312020.pdf"
+            ],
+            "note": "Official emeritus nomination establishes faculty identity, but no undergraduate, MS, or postdoc completion pair found."
+        },
+        {
+            "name": "Harry Wechsler",
+            "fields": {},
+            "sources": [
+                "https://cs.gmu.edu/~wechsler/biosketch-wechsler.pdf"
+            ],
+            "note": "Official biosketch dates doctorate and faculty appointments; visiting professorships are not treated as postdoctoral training."
+        },
+        {
+            "name": "Constantinos Kolias",
+            "fields": {},
+            "sources": [
+                "https://icsdweb.aegean.gr/info-sec-lab/member/?user=108",
+                "https://ckolias.com/"
+            ],
+            "note": "Official lab bio confirms TEI Athens diploma and University of the Aegean MSc, without completion years. GMU research assistant professorship is not a postdoc."
+        },
+        {
+            "name": "Ana Loreto Gonzalez",
+            "fields": {},
+            "sources": [
+                "https://www.conainte.itsoeh.edu.mx/conainte/wp-content/uploads/2025/08/Memoria-CONAINTE-2020.pdf"
+            ],
+            "note": "Authored conference biography confirms existing Skövde postdoc ending 2018. Earlier CINVESTAV period combines postdoc and visiting researcher roles without an exact postdoc end; no new undergraduate/MS pair found."
+        },
+        {
+            "name": "João Pedro Sousa",
+            "fields": {},
+            "sources": [
+                "https://csd.cs.cmu.edu/academics/doctoral/degrees-conferred/joao-pedro-sousa"
+            ],
+            "note": "Official CMU page establishes identity and doctorate, but no other dated degree stage was established."
+        }
+    ]
+}
