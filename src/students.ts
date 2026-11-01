@@ -332,8 +332,12 @@ function setupActiveFilterBanner() {
     });
 }
 
+// Modified or middle clicks keep the browser's open-in-new-tab/window behavior.
+const isPlainClick = (e: MouseEvent) => e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
+
 function setupNav() {
     document.getElementById('nav-students').addEventListener('click', e => {
+        if (!isPlainClick(e)) return;
         e.preventDefault();
         currentView = 'directory';
         activeTopic = null;
@@ -345,6 +349,7 @@ function setupNav() {
         render();
     });
     document.getElementById('insights-link').addEventListener('click', e => {
+        if (!isPlainClick(e)) return;
         e.preventDefault();
         currentView = 'insights';
         window.scrollTo({ top: 0 });
@@ -477,6 +482,7 @@ function studentSearchMatch(s, q) {
 
 // The first URL sync only normalizes the landing URL; later view switches add history entries.
 let historyReady = false;
+const DIRECTORY_TITLE = document.title;
 
 function updateUrl() {
     const params = new URLSearchParams();
@@ -501,6 +507,8 @@ function updateUrl() {
     if (historyReady && viewChanged) history.pushState(null, '', url);
     else history.replaceState(null, '', url);
     historyReady = true;
+    // Set after the history call so each entry (and bookmark) carries its own view's title.
+    document.title = currentView === 'insights' ? 'Student & Alumni Insights — GMU CS Directory' : DIRECTORY_TITLE;
 }
 
 function restoreFromUrl() {
