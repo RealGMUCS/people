@@ -3,7 +3,7 @@
     "check": {
         "faculty": {
             "size": 10,
-            "next": ""
+            "next": "anne-marchant"
         },
         "students": {
             "size": 20,
