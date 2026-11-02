@@ -3,7 +3,7 @@
     "check": {
         "faculty": {
             "size": 10,
-            "next": ""
+            "next": "anne-marchant"
         },
         "students": {
             "size": 20,
@@ -13,13 +13,13 @@
     "honors": {
         "faculty": {
             "size": 15,
-            "next": ""
+            "next": "beth-posocco"
         }
     },
     "discover": {
         "advisors": {
             "size": 6,
-            "next": ""
+            "next": "archange-destine"
         }
     },
     "former": {
