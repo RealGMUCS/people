@@ -68,7 +68,9 @@ print(f"Added {added_awards} 2025 faculty awards.")
 # 2. 2025 PhD Graduates Data
 phd_2025 = [
     {
-        'first': 'Abdulrahman', 'last': 'Alshammari', 'advisor': 'Wing Lam', 'coadvisor': '',
+        # Retain the existing attribution; Bell's CV also documents research advising.
+        # See maintenance/advisor-corrections.json; the handoff chronology is unconfirmed.
+        'first': 'Abdulrahman', 'last': 'Alshammari', 'advisor': 'Wing Lam', 'coadvisor': 'Paul Ammann',
         'dissertation': 'Detecting Test Flakiness Without Rerunning Tests',
         'honor': ''
     },
