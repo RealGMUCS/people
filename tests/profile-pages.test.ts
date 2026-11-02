@@ -16,7 +16,7 @@ test('slugify generates clean URL-friendly slugs', () => {
 
 test('profile pages generate valid HTML for faculty and students', () => {
     const peopleDir = path.join(root, 'public', 'people');
-    execFileSync('npx', ['tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
+    execFileSync(process.execPath, ['--import', 'tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
 
     const files = fs.readdirSync(peopleDir).filter(f => f.endsWith('.html'));
     assert.ok(files.length > 500, `Expected > 500 profile files, got ${files.length}`);
@@ -43,7 +43,7 @@ test('student profile pages resolve local portrait URLs from the site root', () 
     const slug = 'md-tanvir-rouf-shawon';
     const filePath = path.join(peopleDir, `${slug}.html`);
     if (!fs.existsSync(filePath)) {
-        execFileSync('npx', ['tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
+        execFileSync(process.execPath, ['--import', 'tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
     }
 
     const content = fs.readFileSync(filePath, 'utf8');
