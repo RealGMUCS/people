@@ -366,7 +366,8 @@ Each run does four passes:
      or older history newly added to a CV still counts: add what's missing, skip duplicates.
    - `baseline` (a page with no earlier snapshot, e.g. a new faculty member or a newly linked CV):
      read it in full, as the news playbook §2 describes, for the last 18 months of news and for
-     every honor in a category `awards.json` uses.
+     every honor in a category `awards.json` uses. Exception: while the honors backfill (pass 3)
+     is running, a baseline `bio` or `cv` isn't read here; the backfill reads every CV and bio.
    - `thin` (little text, likely rendered by JavaScript): read it with WebFetch or a browser; if
      that also fails, list it as blocked.
    - `failed`: retry once (Wayback for `people.cs.gmu.edu`), then list it as blocked. The snapshot
