@@ -90,6 +90,7 @@ h1 {
 }
 
 .personal-site-link,
+.lab-site-link,
 .scholar-link,
 .linkedin-link {
   color: var(--text-muted);
@@ -131,7 +132,9 @@ h1 {
 }
 
 .personal-site-link:hover,
+.lab-site-link:hover,
 .personal-site-link:focus-visible,
+.lab-site-link:focus-visible,
 .scholar-link:hover,
 .scholar-link:focus-visible,
 .linkedin-link:hover,
@@ -140,6 +143,7 @@ h1 {
 }
 
 .personal-site-link svg,
+.lab-site-link svg,
 .scholar-link svg,
 .linkedin-link svg {
   height: 1rem;
@@ -459,6 +463,7 @@ h1 {
   }
 
   .personal-site-link,
+  .lab-site-link,
   .scholar-link,
   .linkedin-link {
     display: inline-flex;
@@ -1571,4 +1576,78 @@ a.award-person:hover {
 .award-former {
   color: var(--text-muted);
   font-size: var(--text-xs);
+}
+
+/* Faculty and student news uses the directory's search and roster layout. */
+.news-intro {
+  margin: 0 0 1.25rem;
+}
+.news-intro h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+}
+.news-intro p,
+.news-coverage,
+.news-meta,
+.news-footer {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+.news-entry {
+  padding: 1rem;
+}
+.news-meta,
+.news-people,
+.news-footer,
+.news-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+}
+.news-meta {
+  margin-bottom: 0.45rem;
+}
+.news-entry h3 {
+  font-size: var(--text-lg);
+  line-height: 1.4;
+}
+.news-summary {
+  margin: 0.5rem 0 0.65rem;
+}
+.news-people {
+  font-size: var(--text-sm);
+  margin-bottom: 0.7rem;
+}
+.news-person {
+  color: var(--text-secondary);
+}
+.news-person + .news-person::before {
+  content: '·';
+  display: inline-block;
+  margin-right: 0.75rem;
+}
+.news-footer {
+  justify-content: space-between;
+}
+.news-footer a {
+  color: var(--bamboo-green);
+  overflow-wrap: anywhere;
+}
+.news-tags button {
+  cursor: pointer;
+}
+.news-coverage {
+  margin-top: 1.25rem;
+}
+.news-empty {
+  padding: 2rem 0.75rem;
+}
+.news-empty p {
+  margin: 0.5rem 0 1rem;
+}
+.news-entry a:focus-visible,
+.news-entry button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
 }

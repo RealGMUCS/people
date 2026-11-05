@@ -41,7 +41,7 @@ profiles (LinkedIn, Google Scholar, personal pages) — see
   correcting an entry in either directory, with a name-autocomplete that
   pre-fills the existing record. Submits via email or a pre-filled GitHub
   issue.
-- Website/LinkedIn/Google Scholar render as icons; clicking a research
+- Website/Lab Website/LinkedIn/Google Scholar render as icons; clicking a research
   interest or topic tag filters to everyone who shares it.
 
 ## Getting Started
@@ -82,7 +82,8 @@ are joined from `awards.json` by their full name (`First Last`).
 | Tenure-Track/Teaching/Staff | Tenured |
 | Rank | Associate Professor |
 | Dept Role | MS SWE Director |
-| Website | roars.dev |
+| Website | https://tvn.roars.dev/ |
+| Lab Website | https://roars.dev/ |
 | LinkedIn | https://www.linkedin.com/in/... |
 | Google Scholar | https://scholar.google.com/citations?user=... |
 | Research interests | Software Engineering (SE), Formal Methods |
@@ -144,3 +145,18 @@ Automatic: every push to `main` builds and deploys to
 ## License
 
 MIT
+
+### Faculty & Student News
+
+[`news.html`](news.html) uses the directory search interface for sourced research, award, grant,
+graduation, and student achievement stories. Search by `person:`, `category:`, `year:`, `topic:`,
+`source:`, or `title:`, and filter by category/year. Search and filter URLs can be shared.
+
+Stories live in `public/news.json`; dates retain the source’s year/month/day precision. The
+historical collection draws on faculty/lab archives, university announcements, NSF records,
+and award-body lists. Coverage and access failures are recorded in `maintenance/news-scan.json`;
+held candidates and conflicting dates are in `maintenance/news-evidence.json`. This is a curated
+archive, and some historical milestones may still be missing. Follow
+[`TASKS/collect_faculty_news.md`](TASKS/collect_faculty_news.md) to expand it.
+`npm run news:sources -- --limit 10` lists the next deduplicated homepage/lab sources and faculty
+without URLs, using `maintenance/news-scan.json` to track coverage. No recurring job is scheduled.

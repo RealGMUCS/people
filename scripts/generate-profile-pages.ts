@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { escapeHtml, formatRosterDate, gmuYears } from '../src/utils.ts';
 import {
   LINKEDIN_ICON,
+  LAB_ICON,
   PERSONAL_SITE_ICON,
   SCHOLAR_ICON,
 } from '../src/common.ts';
@@ -66,6 +67,7 @@ interface FacultyEntry {
   category: string;
   role: string;
   website: string;
+  labWebsite: string;
   linkedin: string;
   scholar: string;
   interests: string[];
@@ -168,7 +170,8 @@ function renderFacultyProfile(f: FacultyEntry) {
     : '';
 
   const links: Array<{ label: string; href: string; icon: string }> = [
-    f.website && { label: 'Personal or Lab Website', href: f.website, icon: PERSONAL_SITE_ICON },
+    f.website && { label: 'Website', href: f.website, icon: PERSONAL_SITE_ICON },
+    f.labWebsite && { label: 'Research Lab Website', href: f.labWebsite, icon: LAB_ICON },
     f.scholar && { label: 'Google Scholar Profile', href: f.scholar, icon: SCHOLAR_ICON },
     f.linkedin && { label: 'LinkedIn Profile', href: f.linkedin, icon: LINKEDIN_ICON },
   ].filter(Boolean) as Array<{ label: string; href: string; icon: string }>;
@@ -542,6 +545,7 @@ async function main() {
       category: clean(row['Rank']),
       role: clean(row['Dept Role']),
       website: normalizeUrl(row['Website']),
+      labWebsite: normalizeUrl(row['Lab Website']),
       linkedin: normalizeUrl(row['LinkedIn']),
       scholar: normalizeUrl(row['Google Scholar']),
       interests: parseInterests(row['Research interests'] || row['Research Interests']),
@@ -654,7 +658,7 @@ async function main() {
       ...facultyList.map(f => `  <url>\n    <loc>${siteUrl}/people/${f.slug}.html</loc>\n    <lastmod>${f.lastModified || '2026-09-15'}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`),
       ...studentList.map(s => `  <url>\n    <loc>${siteUrl}/people/${s.slug}.html</loc>\n    <lastmod>${s.lastModified || '2026-09-15'}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`),
     ];
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/students.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${sitemapUrls.join('\n')}\n</urlset>\n`;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/students.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/news.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${sitemapUrls.join('\n')}\n</urlset>\n`;
     await writeFile(resolve(output, 'sitemap.xml'), sitemap, 'utf8');
   }
 

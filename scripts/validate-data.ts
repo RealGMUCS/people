@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { validateNews } from '../src/news-data.ts';
 
 const facultyFields = [
     'First Name',
@@ -10,6 +11,7 @@ const facultyFields = [
     'Rank',
     'Dept Role',
     'Website',
+    'Lab Website',
     'LinkedIn',
     'Google Scholar',
     'Research interests',
@@ -132,6 +134,7 @@ faculty.forEach((row, index) => {
     const startYear = value(row, 'Year started at GMU');
     const picture = value(row, 'Picture');
     const website = value(row, 'Website');
+    const labWebsite = value(row, 'Lab Website');
     const linkedin = value(row, 'LinkedIn');
     const scholar = value(row, 'Google Scholar');
     const lastModified = value(row, 'Last Modified');
@@ -170,6 +173,7 @@ faculty.forEach((row, index) => {
         if (year && !/^\d{4}$/.test(year)) errors.push(`faculty.json:${line}: invalid ${field} "${year}"`);
     }
     if (!validPicture(picture)) errors.push(`faculty.json:${line}: invalid picture URL "${picture}"`);
+    if (!validHttpUrl(labWebsite, true)) errors.push(`faculty.json:${line}: invalid lab website URL "${labWebsite}"`);
     if (!validHttpUrl(website, true)) errors.push(`faculty.json:${line}: invalid website URL "${website}"`);
     if (!validHttpUrl(linkedin, true)) errors.push(`faculty.json:${line}: invalid linkedin URL "${linkedin}"`);
     if (!validHttpUrl(scholar, true)) errors.push(`faculty.json:${line}: invalid scholar URL "${scholar}"`);
@@ -221,6 +225,13 @@ awards.forEach((row, index) => {
     if (awardKeys.has(key)) errors.push(`awards.json:${line}: duplicate award for "${name}"`);
     awardKeys.add(key);
 });
+
+try {
+    const news = JSON.parse(fs.readFileSync(new URL('../public/news.json', import.meta.url), 'utf8'));
+    errors.push(...validateNews(news, facultyNames as Set<string>));
+} catch (error) {
+    errors.push(`news.json: ${error instanceof Error ? error.message : String(error)}`);
+}
 
 if (errors.length) {
     console.error(`Data validation failed with ${errors.length} error${errors.length === 1 ? '' : 's'}:`);

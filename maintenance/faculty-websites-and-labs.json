@@ -1,0 +1,882 @@
+{
+    "checked": "2026-11-05",
+    "scope": "Faculty homepage and research lab/group links, prioritizing all 49 current tenure-line faculty and checking other current faculty homepages where available. A blank lab field means no distinct usable page was confirmed, not that the person has no lab. Former records receive the schema field but are not researched. Verified markers are preserved. Schema migration updates Last Modified on every record; Last Verified changes only for successfully checked pages or source-confirmed additions.",
+    "records": [
+        {
+            "name": "Antonios Anastasopoulos",
+            "fields": {
+                "Lab Website": "https://nlp.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://antonisa.github.io/",
+                "https://nlp.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Hakan Aydin",
+            "fields": {
+                "Lab Website": "https://cnslab.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~aydin/",
+                "https://cnslab.cs.gmu.edu/people/",
+                "https://cnslab.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Daniel Barbará",
+            "fields": {
+                "Lab Website": "https://people.cs.gmu.edu/~dmml/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~dbarbara",
+                "https://people.cs.gmu.edu/~dmml/people.html",
+                "https://people.cs.gmu.edu/~dmml/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Mihai Boicu",
+            "fields": {
+                "Website": "https://mason.gmu.edu/~mboicu/",
+                "Lab Website": "https://plait.gmu.edu/"
+            },
+            "sources": [
+                "https://mason.gmu.edu/~mboicu/",
+                "https://plait.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Songqing Chen",
+            "fields": {
+                "Lab Website": "https://cnslab.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~sqchen/",
+                "https://cnslab.cs.gmu.edu/people/",
+                "https://cnslab.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Sanchari Das",
+            "fields": {
+                "Lab Website": "https://www.drsancharidas.com/labs-and-students"
+            },
+            "sources": [
+                "https://www.drsancharidas.com/",
+                "https://www.drsancharidas.com/labs-and-students"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Carlotta Domeniconi",
+            "fields": {
+                "Lab Website": "https://people.cs.gmu.edu/~dmml/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~carlotta/",
+                "https://people.cs.gmu.edu/~dmml/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Yotam Gingold",
+            "fields": {
+                "Website": "https://cragl.cs.gmu.edu/bio.html",
+                "Lab Website": "https://cragl.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://cragl.cs.gmu.edu/",
+                "https://cragl.cs.gmu.edu/bio.html"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Brittany Johnson-Matthews",
+            "fields": {
+                "Lab Website": "https://inspired.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~johnsonb/",
+                "https://inspired.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Kenton Murray",
+            "fields": {
+                "Lab Website": "https://maieutic-nlp.github.io/website/"
+            },
+            "sources": [
+                "https://kentonmurray.com",
+                "https://maieutic-nlp.github.io/website/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Khaled Khasawneh",
+            "fields": {
+                "Lab Website": "https://sites.google.com/view/knkhasawneh/camlsec"
+            },
+            "sources": [
+                "https://sites.google.com/view/knkhasawneh/khaled-n-khasawneh",
+                "https://sites.google.com/view/knkhasawneh/camlsec"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Wing Lam",
+            "fields": {
+                "Lab Website": "https://people.cs.gmu.edu/~winglam/lab/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~winglam/",
+                "https://people.cs.gmu.edu/~winglam/lab/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Thomas LaToza",
+            "fields": {
+                "Lab Website": "https://devx.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~tlatoza/",
+                "https://devx.cs.gmu.edu/members/thomas",
+                "https://devx.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Fei Li",
+            "fields": {
+                "Lab Website": "https://people.cs.gmu.edu/~lifei/algorithms-lab-gmu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~lifei/",
+                "https://people.cs.gmu.edu/~lifei/algorithms-lab-gmu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Jessica Lin",
+            "fields": {
+                "Lab Website": "https://people.cs.gmu.edu/~dmml/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~jessica/",
+                "https://people.cs.gmu.edu/~dmml/people.html",
+                "https://people.cs.gmu.edu/~dmml/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Mingrui Liu",
+            "fields": {
+                "Lab Website": "https://github.com/MingruiLiu-ML-Lab"
+            },
+            "sources": [
+                "https://mingrliu.github.io",
+                "https://mingrliu.github.io/software.html",
+                "https://github.com/MingruiLiu-ML-Lab"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Zhicong Lu",
+            "fields": {
+                "Lab Website": "https://deerlab22030.github.io/deerlab/"
+            },
+            "sources": [
+                "https://luzhc.github.io/",
+                "https://deerlab22030.github.io/deerlab/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Sean Luke",
+            "fields": {
+                "Lab Website": "https://people.cs.gmu.edu/~robotics/pmwiki.php"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~sean/",
+                "https://people.cs.gmu.edu/~robotics/pmwiki.php"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Lannan (Lisa) Luo",
+            "fields": {
+                "Lab Website": "https://lannan.github.io/group.html"
+            },
+            "sources": [
+                "https://lannan.github.io/",
+                "https://lannan.github.io/group.html"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Daniel Menascé",
+            "fields": {
+                "Lab Website": "https://cnslab.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~menasce/",
+                "https://cnslab.cs.gmu.edu/people/",
+                "https://cnslab.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Thema Monroe-White",
+            "fields": {
+                "Website": "https://schar.gmu.edu/profiles/tmonroew"
+            },
+            "sources": [],
+            "note": "CHAIS leadership links her official Schar faculty profile, which confirms the joint CS appointment. Added the profile as Website; no separate lab page confirmed."
+        },
+        {
+            "name": "Vivian Motti",
+            "fields": {
+                "Lab Website": "https://sites.google.com/site/vivianmotti/hcd-lab"
+            },
+            "sources": [
+                "https://sites.google.com/site/vivianmotti/welcome",
+                "https://sites.google.com/site/vivianmotti/hcd-lab"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "ThanhVu (Vu) Nguyen",
+            "fields": {
+                "Website": "https://tvn.roars.dev/",
+                "Lab Website": "https://roars.dev/"
+            },
+            "sources": [
+                "https://roars.dev",
+                "https://tvn.roars.dev/",
+                "https://roars.dev/"
+            ],
+            "note": "ROARS lists Vu as PI and links his personal homepage at tvn.roars.dev. Both pages are readable through web search; direct HTTP requests encounter Cloudflare (403). Split the prior combined lab URL into personal Website and Lab Website.",
+            "lab_http_status": 403
+        },
+        {
+            "name": "Parth Pathak",
+            "fields": {
+                "Lab Website": "https://www.phpathak.com/group/"
+            },
+            "sources": [
+                "https://phpathak.com/",
+                "https://www.phpathak.com/group/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "David Porfirio",
+            "fields": {
+                "Lab Website": "https://ari-lab-gmu.github.io/"
+            },
+            "sources": [
+                "https://dporfirio.github.io/",
+                "https://ari-lab-gmu.github.io/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Sanjeev Setia",
+            "fields": {
+                "Lab Website": "https://cnslab.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~setia/",
+                "https://cnslab.cs.gmu.edu/people/",
+                "https://cnslab.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Xuesu Xiao",
+            "fields": {
+                "Lab Website": "https://robotixx.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~xiao/",
+                "https://robotixx.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Ziyu Yao",
+            "fields": {
+                "Lab Website": "https://ziyuyao.org/group/"
+            },
+            "sources": [
+                "https://ziyuyao.org/",
+                "https://ziyuyao.org/group/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Jinwei Ye",
+            "fields": {
+                "Lab Website": "https://ivlab.cs.gmu.edu/"
+            },
+            "sources": [
+                "https://people.cs.gmu.edu/~jinweiye/",
+                "https://ivlab.cs.gmu.edu/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Craig Yu",
+            "fields": {
+                "Lab Website": "https://craigyuyu.github.io/home/group.html"
+            },
+            "sources": [
+                "https://craigyuyu.github.io/home/",
+                "https://craigyuyu.github.io/home/group.html"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Keren Zhou",
+            "fields": {
+                "Lab Website": "https://deep-learning-profiling-tools.github.io/CAT-Lab/"
+            },
+            "sources": [
+                "https://www.jokeren.tech/",
+                "https://deep-learning-profiling-tools.github.io/CAT-Lab/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Kun Sun",
+            "fields": {
+                "Lab Website": "https://sunlab-gmu.github.io/"
+            },
+            "sources": [
+                "https://csis.gmu.edu/ksun/",
+                "https://sunlab-gmu.github.io/"
+            ],
+            "note": "Faculty homepage links to this lab/group, or the lab faculty listing identifies this person. Website and lab pages checked separately.",
+            "lab_http_status": 200
+        },
+        {
+            "name": "Jan Allbeck",
+            "sources": [
+                "https://people.cs.gmu.edu/~jallbeck/"
+            ],
+            "note": "GAIA is linked by the faculty homepage, but the lab explicitly says virtual-humans research has stopped and the site is an unmaintained archive; no active separate lab added.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Paul Ammann",
+            "sources": [
+                "https://people.cs.gmu.edu/~pammann/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Kevin Andrea",
+            "sources": [
+                "https://kevinandrea.github.io"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Giuseppe Ateniese",
+            "sources": [
+                "https://ateniese.github.io/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Ivan Avramovic",
+            "sources": [
+                "https://people.cs.gmu.edu/~iavramo2/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Foteini Baldimtsi",
+            "sources": [
+                "https://www.baldimtsi.com/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Alex Brodsky",
+            "sources": [
+                "https://people.cs.gmu.edu/~brodsky"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Simin Chen",
+            "sources": [
+                "https://siminchen.site/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Missy Cummings",
+            "sources": [
+                "https://www.gmu.edu/profiles/cummings"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Kenneth De Jong",
+            "sources": [
+                "https://people.cs.gmu.edu/~kdejong/"
+            ],
+            "note": "Homepage could not be fully fetched; no new lab link inferred.",
+            "homepage_status": 404
+        },
+        {
+            "name": "Ping Deng",
+            "sources": [
+                "https://people.cs.gmu.edu/~pideng/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Socrates Dimitriadis",
+            "sources": [
+                "https://socrates.name/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Zoran Durić",
+            "sources": [
+                "https://people.cs.gmu.edu/~zduric/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Hassan Gomaa",
+            "sources": [
+                "https://mason.gmu.edu/~hgomaa/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Dov Gordon",
+            "sources": [
+                "https://people.cs.gmu.edu/~gordon/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Bo Han",
+            "sources": [
+                "https://people.cs.gmu.edu/~bohan/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Sungsoo (Ray) Hong",
+            "sources": [
+                "https://alignment.lab.gmu.edu/"
+            ],
+            "note": "Existing Website is the combined personal/Alignment Lab site; no duplicate lab URL added.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Aditya Johri",
+            "sources": [
+                "https://mason.gmu.edu/~johri/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Shahnaz Kamberi",
+            "sources": [
+                "https://www.shahnazkamberi.com/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Parastoo Kamranfar",
+            "sources": [
+                "https://cec.gmu.edu/profiles/pkamranf"
+            ],
+            "note": "Homepage could not be fully fetched; no new lab link inferred.",
+            "homepage_status": 403
+        },
+        {
+            "name": "Larry Kerschberg",
+            "sources": [
+                "people.cs.gmu.edu/~kersch/"
+            ],
+            "note": "Homepage could not be fully fetched; no new lab link inferred.",
+            "homepage_status": 404
+        },
+        {
+            "name": "Evgenios Kornaropoulos",
+            "sources": [
+                "https://people.cs.gmu.edu/~evgenios/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Jana Košecká",
+            "sources": [
+                "https://people.cs.gmu.edu/~kosecka/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Kevin Lybarger",
+            "sources": [
+                "https://www.lybargerlanguagelab.org/"
+            ],
+            "note": "Existing Website is the combined personal/Lybarger Language Lab site; no duplicate lab URL added.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Tamara Maddox",
+            "sources": [
+                "https://people.cs.gmu.edu/~tmaddox/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Andrian Marcus",
+            "sources": [
+                "https://andrianmarcus.net/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Wassim (Wes) Masri",
+            "sources": [
+                "https://masonswe.cs.gmu.edu/people/"
+            ],
+            "note": "Homepage could not be fully fetched; no new lab link inferred.",
+            "homepage_status": 403
+        },
+        {
+            "name": "Nora McDonald",
+            "sources": [
+                "https://www.noramcdonald.net"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Shima Mohebbi",
+            "sources": [
+                "https://mohebbilab.cec.gmu.edu/"
+            ],
+            "note": "Existing Website is the CARING lab site; no distinct personal homepage confirmed.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Amihai Motro",
+            "sources": [
+                "https://people.cs.gmu.edu/~ami/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Hamza Mughal",
+            "sources": [
+                "http://hamzamughal.com/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "John Otten",
+            "sources": [
+                "https://people.cs.gmu.edu/~jotten2/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Robert Pettit",
+            "sources": [
+                "https://people.cs.gmu.edu/~rpettit/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Dieter Pfoser",
+            "sources": [
+                "https://www.dieter.pfoser.org/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Dana Richards",
+            "sources": [
+                "https://people.cs.gmu.edu/~richards/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Katherine (Raven) Russell",
+            "sources": [
+                "https://gildir.github.io/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Amarda Shehu",
+            "sources": [
+                "https://people.cs.gmu.edu/~ashehu/"
+            ],
+            "note": "Personal homepage describes a lab; the Research Lab link in her 2026 CV points back to the same homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Robert Simon",
+            "sources": [
+                "https://people.cs.gmu.edu/~simon/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Gurdip Singh",
+            "sources": [
+                "https://cs.gmu.edu/profiles/gsingh36"
+            ],
+            "note": "Homepage could not be fully fetched; no new lab link inferred.",
+            "homepage_status": 403
+        },
+        {
+            "name": "Mark Snyder",
+            "sources": [
+                "https://people.cs.gmu.edu/~msnyde14/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Arun Sood",
+            "sources": [
+                "https://people.cs.gmu.edu/~asood/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Shvetha Soundararajan",
+            "sources": [
+                "https://people.cs.gmu.edu/~shvetha/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Gregory Stein",
+            "sources": [
+                "https://gjstein.com/"
+            ],
+            "note": "Personal homepage also presents the RAIL Group; no separate lab homepage confirmed.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Rahul Tikekar",
+            "sources": [
+                "https://people.cs.gmu.edu/~rtikekar/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Pearl Wang",
+            "sources": [
+                "https://people.cs.gmu.edu/~pwang/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Xinyuan (Frank) Wang",
+            "sources": [
+                "https://people.cs.gmu.edu/~xwangc/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Harry Wechsler",
+            "sources": [
+                "https://people.cs.gmu.edu/~wechsler/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Duminda Wijesekera",
+            "sources": [
+                "https://people.cs.gmu.edu/~duminda/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Lishan Yang",
+            "sources": [
+                "https://lishanyang.github.io/"
+            ],
+            "note": "Homepage names randGood, but its only separate group link is a photo gallery; no lab URL inferred.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Shuochao Yao",
+            "sources": [
+                "https://yscacaca.github.io/"
+            ],
+            "note": "No separate lab site linked on checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Fang-Yi Yu",
+            "sources": [
+                "https://people.cs.gmu.edu/~fangyiyu/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Ahmed Bin Zaman",
+            "sources": [
+                "https://mason.gmu.edu/~azaman6/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Qiang Zeng",
+            "sources": [
+                "https://people.cs.gmu.edu/~zeng/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Xiaokuan Zhang",
+            "sources": [
+                "https://mainarke.github.io"
+            ],
+            "note": "Homepage names SECSAT but does not link a separate lab site.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Yutao Zhong",
+            "sources": [
+                "https://people.cs.gmu.edu/~yzhong/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Ziwei Zhu",
+            "sources": [
+                "https://zziwei.github.io/"
+            ],
+            "note": "No separate lab site linked on checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Marcos Zampieri",
+            "sources": [
+                "https://mzampieri.com/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Sadegh Torabi",
+            "sources": [
+                "https://mason.gmu.edu/~storabi"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Kai Zeng",
+            "sources": [
+                "http://people-ece.vse.gmu.edu/~kzeng2/"
+            ],
+            "note": "No separate lab/group URL confirmed on the checked homepage.",
+            "homepage_status": 200
+        },
+        {
+            "name": "Daigo Shishika",
+            "sources": [
+                "https://shishika.com/",
+                "https://www.shishika.com/"
+            ],
+            "note": "Personal homepage explicitly links Lab Website to the distinct www host, which serves CRADL (Collaborative Robotics, Autonomy, and Dynamics Lab).",
+            "fields": {
+                "Lab Website": "https://www.shishika.com/"
+            },
+            "lab_http_status": 200
+        }
+    ]
+}
