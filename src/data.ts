@@ -57,6 +57,7 @@ export async function loadFaculty() {
             category: deriveCategory(rawRank),
             role: clean(row[roleKey]),
             website: normalizeUrl(clean(row['Website'])),
+            labWebsite: normalizeUrl(clean(row['Lab Website'])),
             linkedin: normalizeUrl(clean(row['LinkedIn'])),
             scholar: normalizeUrl(clean(row['Google Scholar'])),
             interests: parseInterests(row[interestKey]),

@@ -1,7 +1,7 @@
 # Verify Homepages & Lab Websites (`verify_websites_and_labs.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/verify_websites_and_labs.md`):**
-> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Audit all personal academic websites and research lab URLs in `public/faculty.json` and `public/students.json`. Verify active HTTP status, fix broken/404 links, remove outdated domain redirects, and update new lab sites (`mason.gmu.edu/~netid`, GitHub Pages, personal domains). Update `Website`, `Last Modified`, and `Last Verified` fields. Submit updates as a GitHub PR. Never commit directly to `main`. Do NOT stop execution until ALL batches are completed!
+> Execute the task workflow across **ALL BATCHES CONTINUOUSLY** until **100% of items in the repository are fully audited and processed**. Audit all personal academic websites and research lab URLs in `public/faculty.json` and `public/students.json`. Verify active HTTP status, fix broken/404 links, remove outdated domain redirects, and update new lab sites (`mason.gmu.edu/~netid`, GitHub Pages, personal domains). Update `Website`, `Lab Website` (faculty only), `Last Modified`, and `Last Verified` fields. Submit updates as a GitHub PR. Never commit directly to `main`. Do NOT stop execution until ALL batches are completed!
 
 ---
 
@@ -14,7 +14,7 @@ Ensure all personal homepage and lab links across faculty and student directory 
 ## 🛠️ Verification Rules
 
 1. **Active HTTP Check**: Test links to ensure they resolve without HTTP 404, 500, or domain squatting.
-2. **Canonical Domain**: Prefer personal academic homepages or GMU hosted user pages.
+2. **Canonical Domain**: Prefer personal academic homepages or GMU hosted user pages. Keep faculty `Website` and `Lab Website` separate; confirm lab membership from the faculty homepage or the lab’s people page. Do not duplicate a combined personal/lab URL across both fields.
 3. **Local Verification**:
    ```bash
    npm test && npm run typecheck && npm run validate:data && npm run build && git diff --check

@@ -1,0 +1,2055 @@
+{
+    "scope": "Roster-wide historical discovery pass: attempted all 119 distinct listed faculty/lab URLs, reviewed linked archives, searched missing-homepage faculty, and supplemented with university, funder, conference, and professional-society records. Sources without readable content are explicitly flagged. This is a substantial curated archive, not a guarantee that every historical event has been recovered.",
+    "lastModified": "2026-11-05",
+    "summary": {
+        "stories": 193,
+        "earliestYear": "1994",
+        "latestYear": "2026",
+        "facultyWithStories": 70,
+        "storySources": 101,
+        "listedSourcesAttempted": 119,
+        "facultyWithoutUrlsSearched": 18,
+        "sourceOutcomes": {
+            "checked": 199,
+            "unavailable": 9,
+            "empty": 2,
+            "redirected": 2
+        }
+    },
+    "sources": [
+        {
+            "url": "https://roars.dev/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "News and people sections reviewed through the web tool; direct requests encounter Cloudflare."
+        },
+        {
+            "url": "https://nlp.cs.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://ivlab.cs.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://ari-lab-gmu.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://deep-learning-profiling-tools.github.io/CAT-Lab/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~xiao/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~zeng/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~winglam/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.jokeren.tech/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~jallbeck/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~pammann/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Brief page reviewed; no dated milestones in visible content. Other primary sources searched where available."
+        },
+        {
+            "url": "https://antonisa.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://kevinandrea.github.io",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://ateniese.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~iavramo2/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~aydin/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://cnslab.cs.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.baldimtsi.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~dbarbara",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Brief page reviewed; no dated milestones in visible content. Other primary sources searched where available."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~dmml/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Brief page reviewed; no dated milestones in visible content. Other primary sources searched where available."
+        },
+        {
+            "url": "https://mason.gmu.edu/~mboicu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://plait.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~brodsky",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~sqchen/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://siminchen.site/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.gmu.edu/profiles/cummings",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.drsancharidas.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.drsancharidas.com/labs-and-students",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~kdejong/",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 404; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~pideng/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://socrates.name/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~carlotta/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~zduric/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://cragl.cs.gmu.edu/bio.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://cragl.cs.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://mason.gmu.edu/~hgomaa/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~gordon/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~bohan/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://alignment.lab.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~johnsonb/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://inspired.cs.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Reviewed browser-rendered content; initial HTML alone did not expose the full page."
+        },
+        {
+            "url": "https://mason.gmu.edu/~johri/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.shahnazkamberi.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://cec.gmu.edu/profiles/pkamranf",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 403; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~kersch/",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 404; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://kentonmurray.com",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://maieutic-nlp.github.io/website/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://sites.google.com/view/knkhasawneh/khaled-n-khasawneh",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://sites.google.com/view/knkhasawneh/camlsec",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~evgenios/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~kosecka/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~winglam/lab/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~tlatoza/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://devx.cs.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~lifei/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~lifei/algorithms-lab-gmu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~jessica/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://mingrliu.github.io",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://github.com/MingruiLiu-ML-Lab",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://luzhc.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://deerlab22030.github.io/deerlab/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Reviewed browser-rendered content; initial HTML alone did not expose the full page."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~sean/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~robotics/pmwiki.php",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://lannan.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://lannan.github.io/group.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.lybargerlanguagelab.org/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~tmaddox/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://andrianmarcus.net/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://masonswe.cs.gmu.edu/people/",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 403; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://www.noramcdonald.net",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~menasce/",
+            "checked": "2026-11-05",
+            "status": "empty",
+            "note": "Browser fallback also returned no substantive page; alternate award/funder sources used."
+        },
+        {
+            "url": "https://mohebbilab.cec.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://schar.gmu.edu/profiles/tmonroew",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Direct request blocked; primary-page content reviewed through the web tool fallback."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~ami/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://sites.google.com/site/vivianmotti/welcome",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://sites.google.com/site/vivianmotti/hcd-lab",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "http://hamzamughal.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://tvn.roars.dev/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Direct request blocked; primary-page content reviewed through the web tool fallback."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~jotten2/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://phpathak.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.phpathak.com/group/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~rpettit/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.dieter.pfoser.org/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://dporfirio.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~richards/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://gildir.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~setia/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~ashehu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~simon/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://cs.gmu.edu/profiles/gsingh36",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 403; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~msnyde14/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Reviewed browser-rendered content; initial HTML alone did not expose the full page."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~asood/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~shvetha/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Reviewed browser-rendered content; initial HTML alone did not expose the full page."
+        },
+        {
+            "url": "https://gjstein.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~rtikekar/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~pwang/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~xwangc/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~wechsler/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Brief page reviewed; no dated milestones in visible content. Other primary sources searched where available."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~duminda/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://robotixx.cs.gmu.edu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://lishanyang.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://yscacaca.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://ziyuyao.org/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://ziyuyao.org/group/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~jinweiye/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~fangyiyu/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://craigyuyu.github.io/home/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://craigyuyu.github.io/home/group.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://mason.gmu.edu/~azaman6/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://mainarke.github.io",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~yzhong/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://zziwei.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://csis.gmu.edu/ksun/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://sunlab-gmu.github.io/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://mzampieri.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://mason.gmu.edu/~storabi",
+            "checked": "2026-11-05",
+            "status": "empty",
+            "note": "Browser fallback also returned no substantive page; alternate award/funder sources used."
+        },
+        {
+            "url": "http://people-ece.vse.gmu.edu/~kzeng2/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "http://shishika.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://www.shishika.com/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+        },
+        {
+            "url": "https://cec.gmu.edu/research/grants",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Direct request blocked; primary-page content reviewed through the web tool fallback."
+        },
+        {
+            "url": "https://cs.gmu.edu/about/news",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Direct request blocked; primary-page content reviewed through the web tool fallback."
+        },
+        {
+            "url": "https://cs.gmu.edu/people/faculty/awards-and-honors",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Direct request blocked; primary-page content reviewed through the web tool fallback."
+        },
+        {
+            "url": "https://www.csis.gmu.edu/pages/archive-news.php",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://cs.gmu.edu/media/uploads/19-gmu_annual_report__final_hyperlinked_-_copy.pdf",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 404; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://antonisa.github.io/news/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://mingrliu.github.io/news.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://mingrliu.github.io/awards.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://www.phpathak.com/all-news",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://gjstein.com/news/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://www.andrianmarcus.net/news",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://www.andrianmarcus.net/research",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://yscacaca.github.io/news/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://www.shishika.com/previous-news",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~winglam/awards/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~winglam/grants/",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 404; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://stearnscenter.gmu.edu/awards/teaching-excellence-award-winners/",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 403; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://sparc.cs.gmu.edu/news.jsp",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://c5i.gmu.edu/recent-awards/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://osp.gmu.edu/wp-content/uploads/OSP_Newsletter_Feb2009.pdf",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Downloaded PDF and reviewed extracted text for historical faculty recognition."
+        },
+        {
+            "url": "https://www.lybargerlanguagelab.org/news.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://people-ece.vse.gmu.edu/~kzeng2/news.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Brief page reviewed; no dated milestones in visible content. Other primary sources searched where available."
+        },
+        {
+            "url": "https://people-ece.vse.gmu.edu/~kzeng2/awards.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://lannan.github.io/news.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~asood/ResearchContracts.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://c5i.gmu.edu/contracts-and-grants/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+        },
+        {
+            "url": "https://www.iapr.org/fellows/?ar=1",
+            "checked": "2026-11-05",
+            "status": "redirected",
+            "note": "Generic fellow overview is not evidence of a named recipient; the chronological fellow list was used instead."
+        },
+        {
+            "url": "https://sig.sigevo.org/Impact-Award",
+            "checked": "2026-11-05",
+            "status": "redirected",
+            "note": "Generic destination is not specific award evidence; used the dated award-body list instead."
+        },
+        {
+            "url": "https://cec.gmu.edu/meet-our-faculty/faculty-and-staff-excellence-awards",
+            "checked": "2026-11-05",
+            "status": "unavailable",
+            "note": "HTTP 403; this is an access failure, not a finding of no news."
+        },
+        {
+            "url": "https://ist.gmu.edu/news/2026-10/bringing-ancient-mesopotamia-ai-age",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-10/helping-ai-speak-more-worlds-languages",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-10/microgrids-meet-market",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-08/george-mason-computer-scientist-receives-doe-genesis-award-breakthrough-ai-hpc",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-07/nsf-career-award-allows-researcher-look-under-ais-hood",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-06/why-did-ai-agent-cross-road",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-06/george-mason-phd-student-recognized-blockchain-privacy-research",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2537125",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cec.gmu.edu/news/2026-05/faculty-honored-presidential-awards",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-05/hbcu-hubs-highlighted-new-study-black-business-builders",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2540913",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2026-01/groundbreaking-study-reveals-hidden-complexity-human-genetics",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2025-12/genprogs-decade-defining-developments-debugging",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2025-11/george-mason-undergraduate-earns-national-recognition-xr-security-research",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2025-10/anonymitys-arx-nemesis",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2025-10/ist-professors-unveil-human-ai-collaboration-tool-automate-cartoon-colorization",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://qsec.gmu.edu/quantum-algorithms-for-high-performance-analysis-of-single-cell-omics-data-and-explainable-drug-discovery/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://science.gmu.edu/news/george-mason-university-congratulates-four-faculty-inducted-virginia-academy-science",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2025-08/ais-blind-spots-one-phd-students-clear-vision",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://jianying.space/acns/acns-tot.html",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2431617",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cec.gmu.edu/news/2024-05/ist-faculty-receive-nsf-funding-support-socioeconomically-disadvantaged-students",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2024-05/computer-scientists-are-developing-research-infrastructure-support-multi-user-multi",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2224674",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://science.gmu.edu/news/mason-researchers-receive-funding-driver-visual-searching-behavior-when-navigating-through",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2238133",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.ieee-ras.org/images/conferences/ICRA/ICRA_Awards_Brochures/2023_RAS_awards_booklet_REVISED_300_rev_-2_1.pdf",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://content.gmu.edu/news/2022-05/foteini-baldimtsi-earns-nsf-career-award",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://aimbe.org/college-of-fellows/cof-7117/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://sig.sigevo.org/SIGEVO-Impact-Award",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.amazon.science/research-awards/program-updates/fall-2021-and-winter-2022-amazon-research-awards-recipients-announced",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://research.google/programs-and-events/research-scholar-program/recipients/?filtertab=2022",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cs.gmu.edu/news/2021-12/computer-science-faculty-member-receives-schev-award",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://science.gmu.edu/news/college-science-accolades-summer-2021",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cec.gmu.edu/news/2021-03/mason-faculty-design-break-through-tech-program",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.gmu.edu/news/2021-03/taking-it-streets-commonwealth-cyber-initiative-funds-research-autonomous-cars",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://stearnscenter.gmu.edu/recognition/teaching-awards/david-j-king-teaching-awards/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://content.gmu.edu/news/2020-02/computer-science-researcher-investigates-new-ways-computing-encrypted-data",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1845508",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://science.gmu.edu/news/faculty-staff-accolades-september-2016",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1453018",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1218325",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1216993",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1205453",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1144106",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1116122",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1146578",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0915681",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0746649",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0546244",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0540906",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0447814",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://cis.ieee.org/images/files/Documents/adcom-minutes/adcom_minutes_2004_07.pdf",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0420793",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0347774",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0208519",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.cmg.org/2017/11/aa-michelson-award-winners/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=9732113",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://iapr.org/fellows/chronological-list-of-iapr-fellows/",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=9704447",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.sigmetrics.hosting.acm.org/acm-fellows.shtml",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=9409697",
+            "checked": "2026-11-05",
+            "status": "checked",
+            "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        }
+    ],
+    "facultyWithoutSources": [
+        {
+            "person": "Ghada Abdelmoumin",
+            "checked": "2026-11-05",
+            "query": "\"Ghada Abdelmoumin\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Archange Destiné",
+            "checked": "2026-11-05",
+            "query": "\"Archange Destiné\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Sapna Gambhir",
+            "checked": "2026-11-05",
+            "query": "\"Sapna Gambhir\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "David Ignacio Gonzalez Samudio",
+            "checked": "2026-11-05",
+            "query": "\"David Ignacio Gonzalez Samudio\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Sara-Lynn Gopalkrishna",
+            "checked": "2026-11-05",
+            "query": "\"Sara-Lynn Gopalkrishna\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Henry Hamburger",
+            "checked": "2026-11-05",
+            "query": "\"Henry Hamburger\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Xu (Ethan) Han",
+            "checked": "2026-11-05",
+            "query": "\"Xu (Ethan) Han\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Heidi Reichert",
+            "checked": "2026-11-05",
+            "query": "\"Heidi Reichert\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Wassim Itani",
+            "checked": "2026-11-05",
+            "query": "\"Wassim Itani\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Michael Jarret Baume",
+            "checked": "2026-11-05",
+            "query": "\"Michael Jarret Baume\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Angkul Kongmunvattana",
+            "checked": "2026-11-05",
+            "query": "\"Angkul Kongmunvattana\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Juan (Judy) Luo",
+            "checked": "2026-11-05",
+            "query": "\"Juan (Judy) Luo\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Michael Reep",
+            "checked": "2026-11-05",
+            "query": "\"Michael Reep\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "David Rine",
+            "checked": "2026-11-05",
+            "query": "\"David Rine\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Maha Shamseddine",
+            "checked": "2026-11-05",
+            "query": "\"Maha Shamseddine\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Qi Wei",
+            "checked": "2026-11-05",
+            "query": "\"Qi Wei\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Binqian (Bella) Yin",
+            "checked": "2026-11-05",
+            "query": "\"Binqian (Bella) Yin\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        },
+        {
+            "person": "Özlem Uzuner",
+            "checked": "2026-11-05",
+            "query": "\"Özlem Uzuner\" GMU news award grant lab",
+            "status": "searched",
+            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+        }
+    ],
+    "funderSearches": [
+        {
+            "person": "Jan Allbeck",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Jan+Allbeck&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Antonios Anastasopoulos",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Antonios+Anastasopoulos&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Giuseppe Ateniese",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Giuseppe+Ateniese&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Hakan Aydin",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Hakan+Aydin&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Foteini Baldimtsi",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Foteini+Baldimtsi&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Daniel Barbará",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Daniel+Barbar%C3%A1&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Mihai Boicu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Mihai+Boicu&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Alex Brodsky",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Alex+Brodsky&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Songqing Chen",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Songqing+Chen&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Simin Chen",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Simin+Chen&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Missy Cummings",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Missy+Cummings&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Sanchari Das",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Sanchari+Das&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Carlotta Domeniconi",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Carlotta+Domeniconi&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Zoran Durić",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Zoran+Duri%C4%87&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Yotam Gingold",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Yotam+Gingold&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Dov Gordon",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Dov+Gordon&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Bo Han",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Bo+Han&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Sungsoo (Ray) Hong",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Sungsoo++Hong&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Michael Jarret Baume",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Michael+Jarret+Baume&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Brittany Johnson-Matthews",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Brittany+Johnson-Matthews&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Aditya Johri",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Aditya+Johri&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Kenton Murray",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Kenton+Murray&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Khaled Khasawneh",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Khaled+Khasawneh&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Evgenios Kornaropoulos",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Evgenios+Kornaropoulos&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Jana Košecká",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Jana+Kosecka&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Wing Lam",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Wing+Lam&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Thomas LaToza",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Thomas+LaToza&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Fei Li",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Fei+Li&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Jessica Lin",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Jessica+Lin&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Mingrui Liu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Mingrui+Liu&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Zhicong Lu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Zhicong+Lu&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Sean Luke",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Sean+Luke&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Lannan (Lisa) Luo",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Lannan++Luo&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Kevin Lybarger",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Kevin+Lybarger&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Andrian Marcus",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Andrian+Marcus&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Nora McDonald",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Nora+McDonald&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Shima Mohebbi",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Shima+Mohebbi&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Thema Monroe-White",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Thema+Monroe-White&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Vivian Motti",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Vivian+Motti&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "ThanhVu (Vu) Nguyen",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Thanhvu+Nguyen&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Parth Pathak",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Parth+Pathak&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Dieter Pfoser",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Dieter+Pfoser&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "David Porfirio",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=David+Porfirio&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Dana Richards",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Dana+Richards&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Sanjeev Setia",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Sanjeev+Setia&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Amarda Shehu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Amarda+Shehu&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Gurdip Singh",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Gurdip+Singh&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Gregory Stein",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Gregory+Stein&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Xinyuan (Frank) Wang",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Xinyuan++Wang&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Qi Wei",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Qi+Wei&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Duminda Wijesekera",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Duminda+Wijesekera&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Xuesu Xiao",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Xuesu+Xiao&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Lishan Yang",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Lishan+Yang&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Shuochao Yao",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Shuochao+Yao&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Ziyu Yao",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Ziyu+Yao&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Jinwei Ye",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Jinwei+Ye&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Fang-Yi Yu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Fang-Yi+Yu&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Craig Yu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Craig+Yu&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Qiang Zeng",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Qiang+Zeng&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Xiaokuan Zhang",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Xiaokuan+Zhang&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Keren Zhou",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Keren+Zhou&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Ziwei Zhu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Ziwei+Zhu&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Kun Sun",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Kun+Sun&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Marcos Zampieri",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Marcos+Zampieri&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Sadegh Torabi",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Sadegh+Torabi&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Özlem Uzuner",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=%C3%96zlem+Uzuner&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Kai Zeng",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Kai+Zeng&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Daigo Shishika",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Daigo+Shishika&keyword=CAREER&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "CAREER",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Fei Li",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Fei+Li&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 4
+        },
+        {
+            "person": "Sanjeev Setia",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Sanjeev+Setia&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 3
+        },
+        {
+            "person": "Duminda Wijesekera",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Duminda+Wijesekera&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Robert Simon",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Robert+Simon&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 2
+        },
+        {
+            "person": "Dana Richards",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Dana+Richards&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Daniel Barbara",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Daniel+Barbara&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 2
+        },
+        {
+            "person": "Brittany Johnson",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Brittany+Johnson&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 2
+        },
+        {
+            "person": "Fang-Yi Yu",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Fang-Yi+Yu&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 0
+        },
+        {
+            "person": "Sadegh Torabi",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Sadegh+Torabi&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Jessica Lin",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Jessica+Lin&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 1
+        },
+        {
+            "person": "Simin Chen",
+            "url": "https://api.nsf.gov/services/v1/awards.json?pdPIName=Simin+Chen&rpp=100",
+            "checked": "2026-11-05",
+            "status": 200,
+            "scope": "research grants",
+            "masonAwardsReturned": 0
+        }
+    ]
+}

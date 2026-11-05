@@ -520,7 +520,7 @@ function renderCard(f) {
 
     const defaultPortrait = `${import.meta.env.BASE_URL}default-portrait.svg`;
     const picture = resolvePictureUrl(f.picture) || defaultPortrait;
-    const profileIcons = renderProfileIcons(fullName, { website: f.website, scholar: f.scholar, linkedin: f.linkedin });
+    const profileIcons = renderProfileIcons(fullName, { website: f.website, labWebsite: f.labWebsite, scholar: f.scholar, linkedin: f.linkedin });
 
     return `
     <div class="entry entry-with-portrait">

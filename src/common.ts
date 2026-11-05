@@ -27,6 +27,7 @@ export function resolvePictureUrl(picture: unknown): string | null {
 // .linkedin-link).
 export const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
 export const PERSONAL_SITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
+export const LAB_ICON = '<path d="M9 2h6v2h-1v5.59l6.71 9.4A1.9 1.9 0 0 1 19.16 22H4.84a1.9 1.9 0 0 1-1.55-3.01L10 9.59V4H9V2Zm3 8.23L7.88 16h8.24L12 10.23Z"/>';
 export const LINKEDIN_ICON = '<path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48Z"/>';
 
 function entryIconLink(className: string, href: string, label: string, title: string, icon: string) {
@@ -35,10 +36,11 @@ function entryIconLink(className: string, href: string, label: string, title: st
   return ` <a class="${className}" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}" title="${escapeHtml(title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg></a>`;
 }
 
-// website/scholar/linkedin icon trio for a faculty or student entry's name row.
-export function renderProfileIcons(name: string, { website, scholar, linkedin }: { website?: string; scholar?: string; linkedin?: string }) {
+// Website, research lab, Scholar, and LinkedIn icons for a faculty or student entry's name row.
+export function renderProfileIcons(name: string, { website, labWebsite, scholar, linkedin }: { website?: string; labWebsite?: string; scholar?: string; linkedin?: string }) {
   return [
-    website && entryIconLink('personal-site-link', website, `${name} personal or lab website`, 'Personal or lab website', PERSONAL_SITE_ICON),
+    website && entryIconLink('personal-site-link', website, `${name} website`, 'Website', PERSONAL_SITE_ICON),
+    labWebsite && entryIconLink('lab-site-link', labWebsite, `${name} research lab website`, 'Research lab website', LAB_ICON),
     scholar && entryIconLink('scholar-link', scholar, `${name} on Google Scholar`, 'Google Scholar', SCHOLAR_ICON),
     linkedin && entryIconLink('linkedin-link', linkedin, `${name} on LinkedIn`, 'LinkedIn', LINKEDIN_ICON),
   ].filter(Boolean).join('');

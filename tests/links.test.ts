@@ -3,8 +3,21 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { renderProfileIcons } from '../src/common.ts';
 
 const root = process.cwd();
+
+test('faculty website and lab icons have independent destinations and accessible labels', () => {
+    const html = renderProfileIcons('A & B', {
+        website: 'https://example.org/person',
+        labWebsite: 'https://example.org/lab',
+    });
+    assert.match(html, /class="personal-site-link" href="https:\/\/example.org\/person"/);
+    assert.match(html, /class="lab-site-link" href="https:\/\/example.org\/lab"/);
+    assert.ok(html.includes('aria-label="A &amp; B research lab website"'));
+    assert.ok(!renderProfileIcons('Person', { website: 'https://example.org' }).includes('lab-site-link'));
+    assert.equal(renderProfileIcons('Person', { labWebsite: 'javascript:alert(1)' }), '');
+});
 
 test('generated profile pages never emit schemeless external links', () => {
     const peopleDir = path.join(root, 'public', 'people');
