@@ -50,10 +50,16 @@ export function newsField(item: NewsItem, key: string): string {
         default: return [item.title, item.summary, ...item.people, ...item.tags, item.date, NEWS_CATEGORIES[item.category], item.sourceName].join(' ');
     }
 }
-export function filterNews(items: NewsItem[], options: { query?: string; scope?: string; category?: string; year?: string; sort?: string }): NewsItem[] {
+export function csNewsFacultyNames(rows: Record<string, string>[]): Set<string> {
+    return new Set(rows
+        .filter(row => !['Affiliate', 'Staff'].includes(row['Tenure-Track/Teaching/Staff'] || ''))
+        .map(row => `${row['First Name']} ${row['Last Name']}`.trim()));
+}
+export function filterNews(items: NewsItem[], options: { query?: string; scope?: string; category?: string; year?: string; sort?: string; facultyNames?: ReadonlySet<string> }): NewsItem[] {
     const query = normalizeText((options.query || '').trim().replace(/^#/, ''));
     const dateKey = (item: NewsItem) => item.date.length === 4 ? `${item.date}-01-01` : item.date.length === 7 ? `${item.date}-01` : item.date;
     return items.filter(item =>
+        (!options.facultyNames || item.people.some(name => options.facultyNames!.has(name))) &&
         (!options.category || options.category === 'all' || item.category === options.category) &&
         (!options.year || options.year === 'all' || item.date.startsWith(options.year)) &&
         (!query || normalizeText(newsField(item, options.scope || '')).includes(query))

@@ -1,6 +1,6 @@
 import { createSearchController, setupSearchHelp, renderSearchExamples, setupSearchExamplesClick, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, esc, safeUrl, showCommandOutput } from './common';
 import { personPath, slugify } from './data';
-import { NEWS_CATEGORIES, filterNews, formatNewsDate, newsField, validateNews } from './news-data';
+import { NEWS_CATEGORIES, csNewsFacultyNames, filterNews, formatNewsDate, newsField, validateNews } from './news-data';
 import type { NewsItem } from './news-data';
 import './style.css';
 
@@ -8,10 +8,12 @@ const input = document.getElementById('main-search') as HTMLInputElement;
 const results = document.getElementById('news-results')!;
 const count = document.getElementById('news-count')!;
 const category = document.getElementById('category-filter') as HTMLSelectElement;
+const facultyGroup = document.getElementById('faculty-group-filter') as HTMLSelectElement;
 const year = document.getElementById('year-filter') as HTMLSelectElement;
 const sort = document.getElementById('sort-order') as HTMLSelectElement;
 let items: NewsItem[] = [];
 let people = new Set<string>();
+let csFaculty = new Set<string>();
 let selectedIndex = -1;
 let search: ReturnType<typeof createSearchController> | undefined;
 const scopes = ['person', 'name', 'category', 'year', 'topic', 'source', 'title'];
@@ -20,6 +22,7 @@ const keywordMeta = Object.fromEntries(scopes.map(key => [key, { label: key[0]!.
 const values = (key: string) => [...new Set(items.flatMap(item => key === 'person' || key === 'name' ? item.people : key === 'topic' ? item.tags : [newsField(item, key)]))];
 
 function reset() {
+    facultyGroup.value = 'cs';
     category.value = year.value = 'all';
     sort.value = 'newest';
     search?.setSearchValue('');
@@ -32,6 +35,7 @@ function render() {
         query: scoped ? scoped.query : input.value,
         scope: scoped?.key,
         category: category.value, year: year.value, sort: sort.value,
+        facultyNames: facultyGroup.value === 'all' ? undefined : csFaculty,
     });
     selectedIndex = -1;
     count.textContent = `${visible.length} of ${items.length} news items`;
@@ -52,6 +56,7 @@ function render() {
     const params = new URLSearchParams();
     const query = search?.searchQueryValue() || '';
     if (query) params.set('q', query);
+    if (facultyGroup.value === 'all') params.set('faculty', 'all');
     if (category.value !== 'all') params.set('category', category.value);
     if (year.value !== 'all') params.set('year', year.value);
     if (sort.value !== 'newest') params.set('sort', sort.value);
@@ -61,6 +66,7 @@ function render() {
 }
 function restore() {
     const params = new URLSearchParams(location.search);
+    facultyGroup.value = params.get('faculty') === 'all' ? 'all' : 'cs';
     category.value = Object.hasOwn(NEWS_CATEGORIES, params.get('category') || '') ? params.get('category')! : 'all';
     const requestedYear = params.get('year');
     year.value = [...year.options].some(opt => opt.value === requestedYear) ? requestedYear! : 'all';
@@ -78,6 +84,7 @@ async function init() {
     const errors = validateNews(raw, new Set(names(faculty)));
     if (errors.length) throw new Error(errors.join('\n'));
     items = raw as NewsItem[];
+    csFaculty = csNewsFacultyNames(faculty as Record<string, string>[]);
     people = new Set([...names(faculty), ...names(students)]);
     category.innerHTML += Object.entries(NEWS_CATEGORIES).map(([key, label]) => `<option value="${key}">${label} (${items.filter(item => item.category === key).length})</option>`).join('');
     year.innerHTML += [...new Set(items.map(item => item.date.slice(0, 4)))].sort().reverse().map(value => `<option value="${value}">${value}</option>`).join('');
@@ -89,7 +96,7 @@ async function init() {
     ], () => search);
     const runCommand = createSharedCommandHandler({
         getSearch: () => search || null, resetDirectory: reset, onUpdate: render, help,
-        getQueryPlan: () => `scope=${search?.effectiveSearch()?.key || 'all'} category=${category.value} year=${year.value} sort=${sort.value} matches=${count.textContent}`,
+        getQueryPlan: () => `scope=${search?.effectiveSearch()?.key || 'all'} faculty=${facultyGroup.value} category=${category.value} year=${year.value} sort=${sort.value} matches=${count.textContent}`,
     });
     search = createSearchController({
         input, scopeChip: document.getElementById('search-scope-chip'),
@@ -107,7 +114,7 @@ async function init() {
             return runCommand(raw);
         },
     });
-    [category, year, sort].forEach(select => select.addEventListener('change', render));
+    [facultyGroup, category, year, sort].forEach(select => select.addEventListener('change', render));
     document.getElementById('clear-news-filters')!.addEventListener('click', reset);
     results.addEventListener('click', event => {
         const target = event.target as HTMLElement;
