@@ -193,8 +193,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, with these rules taking precedence:
   as long as its per-entry table shows real checks (spot-check 3 "confirmed" rows live); that is
   what advances the rotation. For `news`, re-verify every added or corrected story and awards row
   against its source (people, date precision, category, and that a grant amount or award isn't
-  overstated), and spot-check 3 sources logged as "no new stories" and 3 honors-rotation faculty
-  logged as "nothing found". Older `[scheduled:honors]` PRs, if any, are reviewed the same way.
+  overstated), and spot-check 3 changed pages logged as "none" and 3 backfill people logged as
+  "nothing found". The `news-watch.json` snapshot diff is mechanical; don't re-verify it. Older `[scheduled:honors]` PRs, if any, are reviewed the same way.
   A table that shows only URL status codes isn't a check: close the PR
   and say why, and the next run repeats those entries.
 - **Issues:** side findings and submissions from `submit.html` (and owner-pasted "Roster
@@ -338,48 +338,63 @@ Playbook: `TASKS/fetch_portraits.md`. Queue: `npm run next-batch -- portraits` l
 
 ### Faculty news and honors (`news`)
 
-Playbooks: `TASKS/collect_faculty_news.md` (a bounded pass) and `TASKS/audit_awards_and_honors.md`.
-Runs twice a week. Faculty often announce honors as news, so one run reads each page once and
-feeds both `public/news.json` and `public/awards.json`. This routine replaced the weekly `honors`
-routine on 2026-11-05 and owns its `honors.faculty` cursor in `rotation.json`.
+Playbooks: `TASKS/collect_faculty_news.md` and `TASKS/audit_awards_and_honors.md`. Runs twice a
+week. Faculty often announce honors as news, so one run feeds both `public/news.json` and
+`public/awards.json`. This routine replaced the weekly `honors` routine on 2026-11-05.
 
-Two cursors:
+**Coverage is every current faculty member, every run**, by a script rather than by reading every
+page: `npm run news:watch` fetches each homepage and lab site (and the news/people subpages logged
+in `maintenance/news-scan.json`), each official bio (`cs.gmu.edu/profiles/<netid>`), each CV it
+finds through a CV/vita/resume link on those sites (PDFs via `pdftotext`), and the CS and CEC news
+pages, then diffs each page's text lines against the snapshot `maintenance/news-watch.json` and
+reports only the new lines. The model reads what changed, not all ~350 pages.
 
-- **News sources:** the review log `maintenance/news-scan.json`. `npm run news:sources -- --limit
-  10` lists the 10 faculty homepage/lab sources reviewed longest ago (about six weeks per source
-  at this pace).
-- **Honors rotation:** `npm run next-batch -- honors` prints 8 of the 168 faculty and staff records (16 a
-  week, so everyone about every 10 weeks).
-
-If an open `[scheduled:news]` PR exists, continue after it: save its files
-(`git show origin/<branch>:maintenance/news-scan.json > "$TMPDIR/news-scan.json"`) and pass
-`--from "$TMPDIR/news-scan.json"` to `news:sources`, and pass its `rotation.json` to `next-batch`
+Setup, after `npm ci`: install `pdftotext` if missing (`apt-get install -y poppler-utils`). If an
+open `[scheduled:news]` PR exists, continue after it: save its snapshot
+(`git show origin/<branch>:maintenance/news-watch.json > "$TMPDIR/news-watch.json"`) and add
+`--from "$TMPDIR/news-watch.json"` below, and pass its `rotation.json` to `next-batch`
 (convention 3). Branch from fresh `origin/main`, not from that PR.
 
 Each run does four passes:
 
-1. **Sources.** For each of the 10 sources, follow the news playbook §2: the homepage or lab page,
-   its news/archive and people pages, and the specific announcement behind each promising item.
-   Look back 90 days before the source's last review. Every item yields a news story (playbook
-   §3), and an honor in a category `awards.json` already uses also yields an awards row. Record
-   every source in `news-scan.json` with today's date, a status (`checked`, `unavailable`,
-   `empty`, `redirected`), and a short note (e.g. "2 stories, 1 award added", "no new eligible
-   news", "403; Wayback also failed"). A blocked source keeps a non-`checked` status so it isn't
-   mistaken for a clean review.
-2. **Honors rotation.** For each of the 8 faculty, read their CV and official bio (and their
-   homepage, unless pass 1 already read it this run) for honors in the categories already used in
-   `public/awards.json` (fellowships, NSF CAREER, young-investigator awards, test-of-time and
-   most-influential-paper awards, dissertation awards, Mason and Virginia awards). Per-year
-   best-paper awards don't qualify for `awards.json` unless that category already lists them for
-   others (they can still be news). A recent honor (within 18 months) also gets a news story.
-3. **Department news.** Read GMU CS and CEC news for the last 30 days for faculty and student
-   achievements and honors tied to a named CS faculty member.
-4. **No-URL faculty.** Take the first 2 names in `facultyWithoutSources` and search their full
-   name with GMU, lab, and news; note what you found in the PR body. A confirmed homepage or lab
-   is a `Likely wrong Website:` side finding, not a roster edit in this PR.
+1. **Watch.** `npm run news:watch -- --write --report "$TMPDIR/news-watch-report.json"`. For each
+   entry in the report:
+   - `changed`: read its `newLines`, then open the page (and the specific announcement, award
+     list, or funder page behind each promising line) and decide per the news playbook §3-§4. A new
+     line in a CV or bio is usually an honor, grant, or promotion: check it for an `awards.json` row
+     and, if within the last 18 months, a news story. A line that is only reworded, reformatted,
+     or older history newly added to a CV still counts: add what's missing, skip duplicates.
+   - `baseline` (a page with no earlier snapshot, e.g. a new faculty member or a newly linked CV):
+     read it in full, as the news playbook §2 describes, for the last 18 months of news and for
+     every honor in a category `awards.json` uses.
+   - `thin` (little text, likely rendered by JavaScript): read it with WebFetch or a browser; if
+     that also fails, list it as blocked.
+   - `failed`: retry once (Wayback for `people.cs.gmu.edu`), then list it as blocked. The snapshot
+     keeps the old hashes, so the next run diffs it again.
+   Record each page you read in `news-scan.json` (today's date, status, a short note). Unchanged
+   pages need no entry; the snapshot shows when they were last fetched.
+   If the report's `since` is empty (no snapshot yet), this run only creates the baseline: don't
+   read the `baseline` pages. The 2026-11-05 historical news pass and the honors backfill cover
+   what they held.
+2. **Deep re-read.** `npm run news:sources -- --limit 5` lists the 5 sources read longest ago.
+   Read them in full, looking back 90 days before their last review, to catch what a line diff
+   misses (an edited old item, a linked page the watcher doesn't fetch). Log them in
+   `news-scan.json`.
+3. **Honors backfill (one time).** Until `rotation.json` `honors.faculty.next` is `"done"`,
+   `npm run next-batch -- honors` prints the next 15 people. Read each one's CV, official bio,
+   and homepage in full for honors in categories `awards.json` already uses (fellowships, NSF
+   CAREER, young-investigator awards, test-of-time and most-influential-paper awards, dissertation
+   awards, Mason and Virginia awards). This catches honors that predate the snapshot; once it
+   finishes, the watch covers everyone. Per-year best-paper awards don't qualify for
+   `awards.json` unless that category already lists them for others (they can still be news).
+4. **No-URL faculty.** Take the first 2 names in `npm run news:sources`'s `facultyWithoutSources`
+   and search their full name with GMU, lab, and news; note what you found in the PR body. A
+   confirmed homepage or lab is a `Likely wrong Website:` side finding, not a roster edit here.
 
-Cap: one PR with at most 15 added or corrected `news.json` stories and at most 10 added or
-corrected `awards.json` rows, each with its source URL.
+Cap: one PR with at most 25 added or corrected `news.json` stories and at most 15 added or
+corrected `awards.json` rows, each with its source URL. If the changes would exceed that, take the
+newest first and list the rest in the PR body; the next run won't see those lines again, so
+also add them to `maintenance/news-evidence.json` as held candidates.
 
 - **News stories** follow the news playbook §3-§5 exactly: eligibility, dedup by
   people/title/venue/year, never-invented date precision, grant amounts never guessed or credited
@@ -391,12 +406,15 @@ corrected `awards.json` rows, each with its source URL.
   and never delete a row (a doubtful row is a side finding). A student honor also goes in that
   student's `Honors & Awards` field (with `Last Modified`); otherwise don't edit roster files.
 
-The PR body has: a table with one row per source (URL, people, status, stories and awards added or
-"none", note); a table of the 8 honors-rotation faculty with what was checked and found; every
-story and awards row added or changed with its source URL; the department-news result; and the
-no-URL searches. The PR sets `honors.faculty.next` and updates the news log, so open it even when
-nothing was added. If you run short of time, stop early, set the cursor to the first faculty
-member you didn't finish, and log only the sources you actually reviewed.
+The PR always includes the updated `news-watch.json` snapshot, so open it even when nothing was
+added. Its body has: the watch summary (pages watched by kind, changed, baseline, thin, failed);
+a table with one row per changed, baseline, or re-read page (URL, kind, people, what the new lines
+were, stories/awards added or "none: <reason>"); the backfill table (person, what was read, what
+was found) while the backfill runs; every story and awards row added or changed with its source
+URL; blocked pages; and the no-URL searches. If you run short of time, stop early: list the
+changed pages you didn't get to as held candidates in `news-evidence.json` (URL and their new
+lines) so the next run reads them, and set the backfill cursor to the first person you didn't
+finish.
 
 ## Changing the setup
 

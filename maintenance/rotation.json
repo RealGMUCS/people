@@ -12,8 +12,9 @@
     },
     "honors": {
         "faculty": {
-            "size": 8,
-            "next": "beth-posocco"
+            "size": 15,
+            "next": "beth-posocco",
+            "wrap": false
         }
     },
     "discover": {

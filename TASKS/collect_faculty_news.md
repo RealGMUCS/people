@@ -17,8 +17,10 @@ For a requested full pass, continue until every available source is checked or h
 access problem, and every faculty member without a source has a documented discovery attempt.
 For a bounded pass, stop at the requested cap and report coverage and remaining work. A checked
 source with no eligible stories is a valid result. Do not claim a complete audit from the initial
-seed. The scheduled `news` routine (twice a week) runs a bounded pass under
-[AUTOMATION.md](AUTOMATION.md), "Faculty news and honors", together with the honors playbook; its caps and PR handoff take precedence.
+seed. The scheduled `news` routine (twice a week) covers every faculty page with
+`npm run news:watch`, which reports only text that is new since its last snapshot, and reads the
+changes under [AUTOMATION.md](AUTOMATION.md), "Faculty news and honors", together with the honors
+playbook; its caps and PR handoff take precedence.
 
 ## 1. Build the queue
 

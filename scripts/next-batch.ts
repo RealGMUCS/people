@@ -9,11 +9,13 @@
 // maintenance/rotation.json stores `next`, the first slug of the next batch; the batch wraps
 // around at the end of the list. `--from` overrides the stored cursors with the rotation.json
 // contents of an open, not-yet-merged PR (pass the file's JSON text), so a run never repeats it.
+// A cursor with `"wrap": false` is a one-time pass: its last batch ends at the end of the list and
+// sets `next` to "done", after which it prints nothing to do.
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 type Row = Record<string, string>;
-type Cursor = { size: number; next: string };
+type Cursor = { size: number; next: string; wrap?: boolean };
 
 const root = resolve(import.meta.dirname, '..');
 const read = (file: string) => JSON.parse(readFileSync(resolve(root, file), 'utf8'));
@@ -102,11 +104,18 @@ if (!config) {
 for (const [name, cursor] of Object.entries(config)) {
   if (typeof cursor !== 'object' || cursor === null || !('size' in cursor)) continue;
   const sorted = [...listFor(name)].sort((a, b) => a.slug.localeCompare(b.slug));
+  const once = cursor.wrap === false;
+  if (once && cursor.next === 'done') {
+    console.log(`${key}.${name}: one-time pass complete (next is "done"); nothing to do\n`);
+    continue;
+  }
   let start = sorted.findIndex(e => e.slug >= (cursor.next || ''));
   if (start === -1) start = 0;
-  const batch = Array.from({ length: Math.min(cursor.size, sorted.length) }, (_, i) => sorted[(start + i) % sorted.length]!);
-  const after = sorted[(start + batch.length) % sorted.length]!;
-  console.log(`${key}.${name}: ${batch.length} of ${sorted.length}, starting at "${batch[0]?.slug}"`);
+  const size = Math.min(cursor.size, once ? sorted.length - start : sorted.length);
+  const batch = Array.from({ length: size }, (_, i) => sorted[(start + i) % sorted.length]!);
+  const end = start + batch.length;
+  const after = once && end >= sorted.length ? 'done' : sorted[end % sorted.length]!.slug;
+  console.log(`${key}.${name}: ${batch.length} of ${sorted.length}, starting at "${batch[0]?.slug}"${once ? ' (one-time pass)' : ''}`);
   for (const e of batch) console.log(`  ${e.slug}  ${fullName(e.row)}  —  ${describe(name === 'students' ? 'students' : 'faculty', e.row)}`);
-  console.log(`  → when the whole batch is done, set ${key}.${name}.next to "${after.slug}"\n`);
+  console.log(`  → when the whole batch is done, set ${key}.${name}.next to "${after}"\n`);
 }
