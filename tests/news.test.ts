@@ -1,11 +1,26 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { filterNews, formatNewsDate, validNewsDate, validateNews } from '../src/news-data.ts';
+import { csNewsFacultyNames, filterNews, formatNewsDate, validNewsDate, validateNews } from '../src/news-data.ts';
 import type { NewsItem } from '../src/news-data.ts';
 
 const items = JSON.parse(fs.readFileSync('public/news.json', 'utf8')) as NewsItem[];
 const faculty = new Set((JSON.parse(fs.readFileSync('public/faculty.json', 'utf8')) as Record<string, string>[]).map(row => `${row['First Name']} ${row['Last Name']}`));
+
+test('CS news includes student and shared milestones tied to CS faculty, excluding affiliate-only stories', () => {
+    const rows = ['Tenured', 'Teaching', 'Emeritus', 'Research', 'Affiliate', 'Staff'].map(type => ({
+        'First Name': type, 'Last Name': 'Person', 'Tenure-Track/Teaching/Staff': type,
+    }));
+    const cs = csNewsFacultyNames(rows);
+    assert.deepEqual([...cs], ['Tenured Person', 'Teaching Person', 'Emeritus Person', 'Research Person']);
+    const sample = [
+        ['Affiliate Person'], ['Staff Person'], ['Student Only'],
+        ['Student Only', 'Teaching Person'], ['Affiliate Person', 'Tenured Person'], ['Emeritus Person'],
+    ].map((people, i) => ({ ...items[0]!, id: `story-${i}`, people }));
+    assert.deepEqual(new Set(filterNews(sample, { facultyNames: cs }).map(item => item.id)), new Set(['story-3', 'story-4', 'story-5']));
+    assert.equal(filterNews(sample, {}).length, sample.length);
+    assert.equal(filterNews(sample, { facultyNames: cs, query: 'Affiliate', scope: 'person' }).length, 1);
+});
 
 test('news data has sourced stories with valid dates, categories, IDs, and faculty connections', () => {
     assert.deepEqual(validateNews(items, faculty), []);

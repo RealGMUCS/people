@@ -150,7 +150,9 @@ MIT
 
 [`news.html`](news.html) uses the directory search interface for sourced research, award, grant,
 graduation, and student achievement stories. Search by `person:`, `category:`, `year:`, `topic:`,
-`source:`, or `title:`, and filter by category/year. Search and filter URLs can be shared.
+`source:`, or `title:`, and filter by category/year. The faculty-group dropdown defaults to
+CS faculty; choose All faculty to include affiliates. Shared stories appear when at least one
+named faculty member belongs to the selected group. Search and filter URLs can be shared.
 
 Stories live in `public/news.json`; dates retain the source’s year/month/day precision. The
 historical collection draws on faculty/lab archives, university announcements, NSF records,
