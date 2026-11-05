@@ -13,11 +13,11 @@
 // CVs are found by following CV/vita/resume links on the homepage and lab site; PDFs are read with
 // `pdftotext` (poppler-utils).
 import { execFile } from 'node:child_process';
-import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
+import { canonical, cvLinks, hash, htmlLines, toLines } from './news-watch-lib.ts';
 
 const run = promisify(execFile);
 const root = new URL('..', import.meta.url);
@@ -35,15 +35,6 @@ type Source = { url: string; kind: Kind; people: string[] };
 
 // Department news pages credit people the faculty sites may not mention.
 const DEPARTMENT = ['https://cs.gmu.edu/news/', 'https://cec.gmu.edu/news'];
-// A link counts as a CV when its text, or its file name, is a CV word on its own ("[CV]",
-// "Curriculum Vitae", "resume.pdf", "Smith_CV.pdf"); "cvpr" or "iccv" don't match.
-const CV_WORD = /(^|[^a-z])(cv|c\.v\.|vita|vitae|resume|résumé|curriculum[\s_-]*vitae)([^a-z]|$)/i;
-
-const canonical = (raw: string) => {
-    const url = new URL(/^https?:\/\//.test(raw) ? raw : `https://${raw}`);
-    url.hash = '';
-    return url.href.replace(/\/$/, '');
-};
 
 function watchList(): Source[] {
     const faculty = read('public/faculty.json') as Record<string, string>[];
@@ -79,32 +70,6 @@ function watchList(): Source[] {
     return [...byUrl.values()];
 }
 
-const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', ndash: '-', mdash: '-', rsquo: "'", lsquo: "'", ldquo: '"', rdquo: '"' };
-const decode = (text: string) => text.replace(/&(#\d+|#x[\da-f]+|\w+);/gi, (m, e: string) =>
-    e[0] === '#' ? String.fromCodePoint(e[1]?.toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : Number(e.slice(1))) : ENTITIES[e.toLowerCase()] ?? m);
-const toLines = (text: string) => [...new Set(text.split('\n').map(line => line.replace(/\s+/g, ' ').trim()).filter(line => line.length >= 15))];
-const htmlLines = (html: string) => toLines(decode(html
-    .replace(/<(script|style|noscript|svg)[\s\S]*?<\/\1>/gi, ' ')
-    .replace(/<!--[\s\S]*?-->/g, ' ')
-    .replace(/<(br|\/p|\/div|\/li|\/h\d|\/tr|\/dd|\/dt|hr)\b[^>]*>/gi, '\n')
-    .replace(/<[^>]+>/g, ' ')));
-function cvLinks(html: string, base: string): string[] {
-    const found = new Set<string>();
-    for (const [, href, text] of html.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
-        const label = decode(text.replace(/<[^>]+>/g, ' ')).trim();
-        let url: URL;
-        try {
-            url = new URL(decode(href), base);
-        } catch { continue; /* malformed href */ }
-        let file = url.pathname.split('/').filter(Boolean).pop() || '';
-        try { file = decodeURIComponent(file); } catch { /* keep it encoded */ }
-        // Short link text only: a sentence that mentions a CV isn't a CV link.
-        const isCv = (label.length <= 40 && CV_WORD.test(label)) || CV_WORD.test(file);
-        if (isCv && /^https?:$/.test(url.protocol) && !/linkedin\.com|scholar\.google/.test(url.host)) found.add(canonical(url.href));
-    }
-    return [...found];
-}
-const hash = (line: string) => createHash('sha1').update(line.toLowerCase()).digest('hex').slice(0, 8);
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'news-watch-'));
@@ -121,8 +86,9 @@ async function fetchOnce(url: string): Promise<{ status: string; lines: string[]
     try {
         // curl -k: people.cs.gmu.edu and some lab hosts send incomplete TLS chains; read-only.
         const { stdout } = await run('curl', ['-skL', '--compressed', '--max-time', '40', '-A', 'Mozilla/5.0 (compatible; GMU-CS-Directory news watch)',
-            '-o', file, '-w', '%{http_code} %{content_type} %{url_effective}', url]);
-        const [code, type = '', effective = url] = stdout.trim().split(' ');
+            '-o', file, '-w', '%{http_code}\t%{content_type}\t%{url_effective}', url]);
+        // Tabs, not spaces: a content type like "text/html; charset=utf-8" contains a space.
+        const [code, type = '', effective = url] = stdout.trim().split('\t');
         if (!code.startsWith('2')) return { status: `http ${code}`, lines: [], cvs: [] };
         const head = fs.readFileSync(file).subarray(0, 5).toString('latin1');
         if (/pdf/i.test(type) || head === '%PDF-') {
