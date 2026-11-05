@@ -35,7 +35,9 @@ type Source = { url: string; kind: Kind; people: string[] };
 
 // Department news pages credit people the faculty sites may not mention.
 const DEPARTMENT = ['https://cs.gmu.edu/news/', 'https://cec.gmu.edu/news'];
-const CV_LINK = /(^|[/_.\-\s])(cv|c\.v\.|vita|vitae|resume|résumé|curriculum[\s_-]?vitae)([/_.\-\s]|$)/i;
+// A link counts as a CV when its text, or its file name, is a CV word on its own ("[CV]",
+// "Curriculum Vitae", "resume.pdf", "Smith_CV.pdf"); "cvpr" or "iccv" don't match.
+const CV_WORD = /(^|[^a-z])(cv|c\.v\.|vita|vitae|resume|résumé|curriculum[\s_-]*vitae)([^a-z]|$)/i;
 
 const canonical = (raw: string) => {
     const url = new URL(/^https?:\/\//.test(raw) ? raw : `https://${raw}`);
@@ -43,7 +45,36 @@ const canonical = (raw: string) => {
     return url.href.replace(/\/$/, '');
 };
 
-function watchList(): Source[] {
+// Official bios are cs.gmu.edu/profiles/<slug>, but the slug isn't always the netid, so map names
+// to the profile links on the department's listing pages, falling back to the netid.
+const normalize = (name: string) => name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\([^)]*\)/g, ' ')
+    .toLowerCase().replace(/[^a-z\s-]/g, '').replace(/[\s-]+/g, ' ').trim();
+async function profileLinks(): Promise<Map<string, string>> {
+    const links = new Map<string, string>();
+    for (const listing of ['https://cs.gmu.edu/people/faculty', 'https://cs.gmu.edu/people/faculty/affiliate-faculty', 'https://cs.gmu.edu/people/faculty/emeriti-faculty']) {
+        for (let page = 0; page < 20; page++) {
+            const html = await fetchHtml(`${listing}?page=${page}`);
+            const found = [...html.matchAll(/view-profile-title"><a href="(\/profiles\/[^"]+)"[^>]*>([^<]+)</g)];
+            // Stop at an empty page, or one that repeats names already seen (past the last page).
+            const fresh = found.filter(([, , name]) => !links.has(normalize(decode(name))));
+            for (const [, href, name] of fresh) links.set(normalize(decode(name)), `https://cs.gmu.edu${href}`);
+            if (!fresh.length) break;
+            await sleep(1000);
+        }
+    }
+    return links;
+}
+function profileFor(links: Map<string, string>, first: string, last: string, netid: string): string {
+    const exact = links.get(normalize(`${first} ${last}`));
+    if (exact) return exact;
+    // "Jim Chen" vs "James Chen", or a middle name on one side: same last name and first initial, if unique.
+    const lastName = normalize(last), initial = normalize(first)[0];
+    const close = [...links].filter(([name]) => name.endsWith(` ${lastName}`) && name[0] === initial);
+    if (close.length === 1) return close[0][1];
+    return netid ? `https://cs.gmu.edu/profiles/${netid}` : '';
+}
+
+function watchList(profiles: Map<string, string>): Source[] {
     const faculty = read('public/faculty.json') as Record<string, string>[];
     const scan = read('maintenance/news-scan.json') as { sources: { url: string; status: string }[] };
     const byUrl = new Map<string, Source>();
@@ -63,8 +94,8 @@ function watchList(): Source[] {
             if (!hostPeople.has(host)) hostPeople.set(host, new Set());
             hostPeople.get(host)!.add(name);
         }
-        const netid = (row['gmu email/userid'] || '').split('@')[0];
-        if (netid) add(`https://cs.gmu.edu/profiles/${netid}`, 'bio', name);
+        const bio = profileFor(profiles, row['First Name'], row['Last Name'], (row['gmu email/userid'] || '').split('@')[0]);
+        if (bio) add(bio, 'bio', name);
     }
     // Subpages logged by earlier news reviews (news archives, people pages) on a faculty site's
     // host. One-off historical sources (PDFs, award lists elsewhere) aren't watched.
@@ -92,19 +123,39 @@ function cvLinks(html: string, base: string): string[] {
     const found = new Set<string>();
     for (const [, href, text] of html.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
         const label = decode(text.replace(/<[^>]+>/g, ' ')).trim();
-        if (!CV_LINK.test(` ${label} `) && !CV_LINK.test(href)) continue;
+        let url: URL;
         try {
-            const url = new URL(decode(href), base);
-            if (/^https?:$/.test(url.protocol) && !/linkedin\.com|scholar\.google/.test(url.host)) found.add(canonical(url.href));
-        } catch { /* malformed href */ }
+            url = new URL(decode(href), base);
+        } catch { continue; /* malformed href */ }
+        let file = url.pathname.split('/').filter(Boolean).pop() || '';
+        try { file = decodeURIComponent(file); } catch { /* keep it encoded */ }
+        // Short link text only: a sentence that mentions a CV isn't a CV link.
+        const isCv = (label.length <= 40 && CV_WORD.test(label)) || CV_WORD.test(file);
+        if (isCv && /^https?:$/.test(url.protocol) && !/linkedin\.com|scholar\.google/.test(url.host)) found.add(canonical(url.href));
     }
     return [...found];
 }
 const hash = (line: string) => createHash('sha1').update(line.toLowerCase()).digest('hex').slice(0, 8);
 
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+async function fetchHtml(url: string): Promise<string> {
+    try {
+        const { stdout } = await run('curl', ['-sL', '--compressed', '--max-time', '40', '-A', 'Mozilla/5.0 (compatible; GMU-CS-Directory news watch)', url], { maxBuffer: 50 * 1024 * 1024 });
+        return stdout;
+    } catch {
+        return '';
+    }
+}
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'news-watch-'));
 let fileNo = 0;
+// Throttling (403/429/444), server errors, and timeouts get one slower retry.
 async function fetchPage(url: string): Promise<{ status: string; lines: string[]; cvs: string[] }> {
+    const first = await fetchOnce(url);
+    if (!/^(http (403|429|444|5\d\d)|error)/.test(first.status)) return first;
+    await sleep(5000);
+    return fetchOnce(url);
+}
+async function fetchOnce(url: string): Promise<{ status: string; lines: string[]; cvs: string[] }> {
     const file = path.join(tmp, `page-${fileNo++}`);
     try {
         // curl -k: people.cs.gmu.edu and some lab hosts send incomplete TLS chains; read-only.
@@ -122,7 +173,9 @@ async function fetchPage(url: string): Promise<{ status: string; lines: string[]
         const lines = htmlLines(html);
         return { status: lines.length < 3 ? 'thin' : 'ok', lines, cvs: cvLinks(html, effective) };
     } catch (error) {
-        return { status: `error ${(error as Error).message.split('\n')[0].slice(0, 80)}`, lines: [], cvs: [] };
+        // curl exit codes: 6 host not found, 7 refused, 28 timeout, 35 TLS failure.
+        const code = (error as { code?: number | string }).code;
+        return { status: typeof code === 'number' ? `error curl exit ${code}` : `error ${(error as Error).message.split('\n')[0].slice(0, 80)}`, lines: [], cvs: [] };
     } finally {
         fs.rmSync(file, { force: true });
     }
@@ -143,39 +196,63 @@ async function check(sources: Source[]): Promise<Source[]> {
     const discovered = new Map<string, Source>();
     const queue = sources.filter(source => !watched.has(source.url) && (!only || source.url === canonical(only)));
     for (const source of queue) watched.add(source.url);
+    // Eight fetches at a time overall, but one at a time per host with a pause between them, so
+    // cs.gmu.edu (100+ profile pages) doesn't start refusing requests.
+    const busy = new Set<string>();
+    const next = async (): Promise<Source | undefined> => {
+        while (queue.length) {
+            const i = queue.findIndex(source => !busy.has(new URL(source.url).host));
+            if (i >= 0) {
+                const [source] = queue.splice(i, 1);
+                busy.add(new URL(source.url).host);
+                return source;
+            }
+            await sleep(200);
+        }
+        return undefined;
+    };
+    const release = async (source: Source) => {
+        await sleep(1000);
+        busy.delete(new URL(source.url).host);
+    };
     await Promise.all(Array.from({ length: 8 }, async () => {
-        for (let source = queue.shift(); source; source = queue.shift()) {
-            const page = await fetchPage(source.url);
-            const prior = snapshot.sources[source.url];
-            const entry = { kind: source.kind, people: source.people.join('; ') };
-            if (page.status !== 'ok' && page.status !== 'thin') {
-                report.failed.push({ ...source, status: page.status, lastFetched: prior?.fetched || '' });
-                snapshot.sources[source.url] = { ...entry, fetched: prior?.fetched || '', status: page.status, lines: prior?.lines || '' };
-                // A CV we can't reach this time stays watched through the snapshot.
-                continue;
+        for (let source = await next(); source; source = await next()) {
+            try {
+                const page = await fetchPage(source.url);
+                const prior = snapshot.sources[source.url];
+                const entry = { kind: source.kind, people: source.people.join('; ') };
+                if (page.status !== 'ok' && page.status !== 'thin') {
+                    report.failed.push({ ...source, status: page.status, lastFetched: prior?.fetched || '' });
+                    snapshot.sources[source.url] = { ...entry, fetched: prior?.fetched || '', status: page.status, lines: prior?.lines || '' };
+                    // A CV we can't reach this time stays watched through the snapshot.
+                    continue;
+                }
+                for (const cv of page.cvs) {
+                    if (source.kind !== 'site') break;
+                    const item = discovered.get(cv) || { url: cv, kind: 'cv' as const, people: [] };
+                    for (const name of source.people) if (!item.people.includes(name)) item.people.push(name);
+                    discovered.set(cv, item);
+                }
+                const hashes = page.lines.map(hash);
+                if (page.status === 'thin') report.thin.push(source);
+                if (!prior?.lines) report.baseline.push(source);
+                else {
+                    const seen = new Set(prior.lines.split(' '));
+                    const added = page.lines.filter((_, i) => !seen.has(hashes[i]));
+                    if (added.length) report.changed.push({ ...source, since: prior.fetched, newLines: added.slice(0, 80), more: Math.max(0, added.length - 80) });
+                    else report.unchanged++;
+                }
+                snapshot.sources[source.url] = { ...entry, fetched: today, status: page.status, lines: [...new Set(hashes)].sort().join(' ') };
+            } finally {
+                await release(source);
             }
-            for (const cv of page.cvs) {
-                if (source.kind !== 'site') break;
-                const item = discovered.get(cv) || { url: cv, kind: 'cv' as const, people: [] };
-                for (const name of source.people) if (!item.people.includes(name)) item.people.push(name);
-                discovered.set(cv, item);
-            }
-            const hashes = page.lines.map(hash);
-            if (page.status === 'thin') report.thin.push(source);
-            if (!prior?.lines) report.baseline.push(source);
-            else {
-                const seen = new Set(prior.lines.split(' '));
-                const added = page.lines.filter((_, i) => !seen.has(hashes[i]));
-                if (added.length) report.changed.push({ ...source, since: prior.fetched, newLines: added.slice(0, 80), more: Math.max(0, added.length - 80) });
-                else report.unchanged++;
-            }
-            snapshot.sources[source.url] = { ...entry, fetched: today, status: page.status, lines: [...new Set(hashes)].sort().join(' ') };
         }
     }));
     return [...discovered.values()];
 }
 
-const current = watchList();
+const profiles = await profileLinks();
+const current = watchList(profiles);
 const currentPeople = new Set(current.flatMap(source => source.people));
 const cvs = await check(current);
 // CVs found on earlier runs stay watched while their people are current, even if the homepage
@@ -199,7 +276,7 @@ const reportPath = arg('--report');
 if (reportPath) fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 4)}\n`);
 const count = (kind: Kind) => [...watched].filter(url => snapshot.sources[url]?.kind === kind).length;
 console.log(JSON.stringify({
-    date: today, since: report.since, watched: report.watched,
+    date: today, since: report.since, watched: report.watched, profilesListed: profiles.size,
     byKind: { site: count('site'), bio: count('bio'), cv: count('cv'), department: count('department') },
     changed: report.changed.map(c => `${c.kind} ${c.url} (${c.newLines.length + c.more} new lines)`),
     baseline: report.baseline.length, unchanged: report.unchanged,
