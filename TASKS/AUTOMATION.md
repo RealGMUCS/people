@@ -344,10 +344,12 @@ week. Faculty often announce honors as news, so one run feeds both `public/news.
 
 **Coverage is every current faculty member, every run**, by a script rather than by reading every
 page: `npm run news:watch` fetches each homepage and lab site (and the news/people subpages logged
-in `maintenance/news-scan.json`), each official bio (`cs.gmu.edu/profiles/<netid>`), each CV it
-finds through a CV/vita/resume link on those sites (PDFs via `pdftotext`), and the CS and CEC news
-pages, then diffs each page's text lines against the snapshot `maintenance/news-watch.json` and
-reports only the new lines. The model reads what changed, not all ~350 pages.
+in `maintenance/news-scan.json`), each CV it finds through a CV/vita/resume link on those sites
+(PDFs via `pdftotext`), and the CS and CEC news pages, then diffs each page's text lines against
+the snapshot `maintenance/news-watch.json` and reports only the new lines. The model reads what
+changed, not every page. Official `cs.gmu.edu/profiles` bios aren't watched: they rarely change,
+the department announces the same honors on its news page, and 100+ profile requests twice a week
+get throttled. The honors backfill reads each bio once.
 
 Setup, after `npm ci`: install `pdftotext` if missing (`apt-get install -y poppler-utils`). If an
 open `[scheduled:news]` PR exists, continue after it: save its snapshot
@@ -361,13 +363,13 @@ Each run does four passes:
    entry in the report:
    - `changed`: read its `newLines`, then open the page (and the specific announcement, award
      list, or funder page behind each promising line) and decide per the news playbook §3-§4. A new
-     line in a CV or bio is usually an honor, grant, or promotion: check it for an `awards.json` row
+     line in a CV is usually an honor, grant, or promotion: check it for an `awards.json` row
      and, if within the last 18 months, a news story. A line that is only reworded, reformatted,
      or older history newly added to a CV still counts: add what's missing, skip duplicates.
    - `baseline` (a page with no earlier snapshot, e.g. a new faculty member or a newly linked CV):
      read it in full, as the news playbook §2 describes, for the last 18 months of news and for
      every honor in a category `awards.json` uses. Exception: while the honors backfill (pass 3)
-     is running, a baseline `bio` or `cv` isn't read here; the backfill reads every CV and bio.
+     is running, a baseline `cv` isn't read here; the backfill reads every CV.
    - `thin` (little text, likely rendered by JavaScript): read it with WebFetch or a browser; if
      that also fails, list it as blocked.
    - `failed`: retry once (Wayback for `people.cs.gmu.edu`), then list it as blocked. The snapshot
