@@ -3,12 +3,24 @@ import { normalizeText } from './vietprofs/search-kit.ts';
 export const NEWS_CATEGORIES = {
     'faculty-achievement': 'Faculty achievements',
     'paper-award': 'Paper awards & distinctions',
+    paper: 'Papers',
     grant: 'Grant awards',
     graduation: 'Student graduations & defenses',
+    job: 'Jobs & placements',
     'student-achievement': 'Student achievements',
     research: 'Research highlights',
 } as const;
 export type NewsCategory = keyof typeof NEWS_CATEGORIES;
+export const NEWS_CATEGORY_ICONS: Record<NewsCategory, string> = {
+    'faculty-achievement': '🏅',
+    'paper-award': '🏆',
+    paper: '📄',
+    grant: '💰',
+    graduation: '🎓',
+    job: '💼',
+    'student-achievement': '🌟',
+    research: '🔬',
+};
 export interface NewsItem {
     id: string;
     title: string;

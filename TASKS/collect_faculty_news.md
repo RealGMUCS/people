@@ -108,7 +108,7 @@ Keep four-space JSON indentation and this exact key order (enforced by `validate
 | `title` | Specific, factual headline. |
 | `summary` | One or two original sentences; state what happened and to whom. |
 | `date` | Supported event date or dated announcement, `YYYY-MM-DD`, `YYYY-MM`, or `YYYY`. Preserve the source's precision. Never invent January 1 or use the scan date as the event date. |
-| `category` | `faculty-achievement`, `paper-award`, `grant`, `graduation`, `student-achievement`, or `research`. |
+| `category` | `faculty-achievement`, `paper-award`, `paper`, `grant`, `graduation`, `job`, `student-achievement`, or `research`. Use `paper` for publications/acceptances, `paper-award` for paper distinctions, `job` for announced jobs/placements, and `research` for broader research highlights or software. For combined milestones, use the primary event (e.g., `graduation` for a defense that also announces a job). |
 | `people` | Unique full-name strings, including at least one exact faculty roster name. Include actual recipients and supported faculty connections. Unlisted people display without a profile link. |
 | `tags` | Short searchable topics, funders, venues, or award names; unique strings. |
 | `sourceName` | Readable primary-source name, such as a lab, faculty homepage, university, or funder. |

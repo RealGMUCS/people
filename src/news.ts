@@ -1,6 +1,6 @@
 import { createSearchController, setupSearchHelp, renderSearchExamples, setupSearchExamplesClick, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, esc, safeUrl, showCommandOutput } from './common';
 import { personPath, slugify } from './data';
-import { NEWS_CATEGORIES, csNewsFacultyNames, filterNews, formatNewsDate, newsField, validateNews } from './news-data';
+import { NEWS_CATEGORIES, NEWS_CATEGORY_ICONS, csNewsFacultyNames, filterNews, formatNewsDate, newsField, validateNews } from './news-data';
 import type { NewsItem } from './news-data';
 import './style.css';
 
@@ -46,7 +46,7 @@ function render() {
             ? `<a class="news-person" href="${esc(personPath(slugify(name)))}">${esc(name)}</a>`
             : `<span class="news-person">${esc(name)}</span>`).join('');
         return `<article class="entry news-entry" id="${esc(item.id)}">
-            <div class="news-meta"><time datetime="${esc(item.date)}">${esc(formatNewsDate(item.date))}</time><span class="tag">${esc(NEWS_CATEGORIES[item.category])}</span></div>
+            <div class="news-meta"><time datetime="${esc(item.date)}">${esc(formatNewsDate(item.date))}</time><span class="tag news-category"><span aria-hidden="true">${NEWS_CATEGORY_ICONS[item.category]}</span>${esc(NEWS_CATEGORIES[item.category])}</span></div>
             <h3><a class="entry-name" href="${source}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h3>
             <p class="news-summary">${esc(item.summary)}</p>
             <div class="news-people" aria-label="People in this story">${names}</div>
@@ -86,7 +86,7 @@ async function init() {
     items = raw as NewsItem[];
     csFaculty = csNewsFacultyNames(faculty as Record<string, string>[]);
     people = new Set([...names(faculty), ...names(students)]);
-    category.innerHTML += Object.entries(NEWS_CATEGORIES).map(([key, label]) => `<option value="${key}">${label} (${items.filter(item => item.category === key).length})</option>`).join('');
+    category.innerHTML += Object.entries(NEWS_CATEGORIES).map(([key, label]) => `<option value="${key}">${NEWS_CATEGORY_ICONS[key as NewsItem['category']]} ${label} (${items.filter(item => item.category === key).length})</option>`).join('');
     year.innerHTML += [...new Set(items.map(item => item.date.slice(0, 4)))].sort().reverse().map(value => `<option value="${value}">${value}</option>`).join('');
     const help = setupSearchHelp([
         { code: 'person:', example: 'Wing Lam' }, { code: 'category:', example: 'grant' },
@@ -123,6 +123,7 @@ async function init() {
         if (target.closest('[data-news-reset]')) reset();
     });
     renderSearchExamples([
+        { label: 'Papers', query: 'category: papers' },
         { label: 'Paper awards', query: 'category: paper awards' },
         { label: 'Grants', query: 'category: grant' },
         { label: 'Graduations', query: 'category: graduation' },
