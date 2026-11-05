@@ -24,8 +24,8 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 
 ### Scheduled cloud routines
 
-The same playbooks run unattended every week as cloud routines (discover, check, honors,
-portraits, and an Opus auditor). [`AUTOMATION.md`](AUTOMATION.md) is the source of truth for
+The same playbooks run unattended as cloud routines (weekly discover, check, and portraits;
+news and honors together twice a week; and an Opus auditor). [`AUTOMATION.md`](AUTOMATION.md) is the source of truth for
 their schedule, caps, and handoffs, and overrides the "until ALL batches are completed" directives
 below: a scheduled run stops at its cap.
 
