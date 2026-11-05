@@ -1,7 +1,17 @@
+// Prints the next faculty homepage/lab sources to review for news (TASKS/collect_faculty_news.md).
+//
+// Usage: tsx scripts/news-sources.ts [--limit <n>] [--from <path>]
+//
+// `--from` reads the review log from another copy of maintenance/news-scan.json, such as the
+// version on an open, not-yet-merged [scheduled:news] PR branch saved to a file, so a scheduled
+// run continues after that PR instead of repeating its sources.
 import fs from 'node:fs';
 
+const fromIndex = process.argv.indexOf('--from');
+const scanFile = fromIndex < 0 ? new URL('../maintenance/news-scan.json', import.meta.url) : process.argv[fromIndex + 1];
+if (!scanFile) throw new Error('--from needs a path to a news-scan.json file');
 const faculty = JSON.parse(fs.readFileSync(new URL('../public/faculty.json', import.meta.url), 'utf8')) as Record<string, string>[];
-const audit = JSON.parse(fs.readFileSync(new URL('../maintenance/news-scan.json', import.meta.url), 'utf8')) as { sources: { url: string; checked: string; status: string }[] };
+const audit = JSON.parse(fs.readFileSync(scanFile, 'utf8')) as { sources: { url: string; checked: string; status: string }[] };
 const limitIndex = process.argv.indexOf('--limit');
 const limit = limitIndex < 0 ? 10 : Number(process.argv[limitIndex + 1]);
 if (!Number.isInteger(limit) || limit <= 0) throw new Error('--limit must be a positive integer');

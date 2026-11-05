@@ -17,8 +17,8 @@ For a requested full pass, continue until every available source is checked or h
 access problem, and every faculty member without a source has a documented discovery attempt.
 For a bounded pass, stop at the requested cap and report coverage and remaining work. A checked
 source with no eligible stories is a valid result. Do not claim a complete audit from the initial
-seed. This playbook does not create a schedule; scheduled runs, if separately configured, follow
-[AUTOMATION.md](AUTOMATION.md), including its caps and PR handoff.
+seed. The scheduled `news` routine (twice a week) runs a bounded pass under
+[AUTOMATION.md](AUTOMATION.md), "Faculty news", whose caps and PR handoff take precedence.
 
 ## 1. Build the queue
 
@@ -133,6 +133,6 @@ chips, profile/source links, empty results, and a copied URL restoring the same 
 all stories have readable source attribution and dates without invented precision.
 
 Report stories added/corrected, distinct sources checked, people covered, blocked/missing sources,
-and sources remaining. Owner-directed local sessions follow AGENTS.md. Scheduled work uses a
-`[scheduled:news]` topic PR only when such a routine is explicitly configured, never an unsolicited
-schedule or a push to `main`. Include coverage and source evidence in its description.
+and sources remaining. Owner-directed local sessions follow AGENTS.md. Scheduled runs open a
+`[scheduled:news]` PR (never a push to `main`) with coverage and source evidence in its
+description, as AUTOMATION.md describes.

@@ -13,7 +13,7 @@ Policy (inclusion, fields, sources, the `Verified` marker) lives in `AGENTS.md` 
 ## How it fits together
 
 ```
- producers (Sonnet, Sunday)              auditor (Opus, Monday)              owner
+ producers (Sonnet, Sun; news Sun+Thu)  auditor (Opus, Monday)              owner
  ──────────────────────────              ──────────────────────              ─────
  task PRs  "[scheduled:<key>] ..."  ──►  re-verify live, test on main,
                                          CI green → squash-merge
@@ -49,12 +49,15 @@ Spread rule (token budget): the owner's VietProfs and CS Picks routines share th
 and fill most of every weekday (VietProfs producers 05:00-14:00 UTC Mon-Sat and its audit at 03:00;
 CS Picks 16:00-01:30 UTC). VietProfs has no producers on Sunday, so People's producers use those
 Sunday slots, one every three hours, and the People audit takes the free Monday mid-morning slot.
+The twice-weekly `news` producer runs at 18:00 UTC on Sunday and Thursday, between the CS Picks
+audit (16:00) and its `confs` run (20:00), so no 3-hour window holds more than two starts.
 No more than two routines of the three repos start within any 3 hours; check the sibling schedules
 before moving anything here.
 
 Ordering rule: every producer runs Sunday and the auditor runs Monday 10:30 UTC, so the newest
-producer output (Sunday 14:00) is 20+ hours old at the audit, past its 12-hour minimum, and the
-week's PRs are merged long before the next Sunday.
+producer output (Sunday 18:00, `news`) is 16+ hours old at the audit, past its 12-hour minimum, and
+the week's PRs are merged long before the next Sunday. The Thursday `news` PR waits for the next
+Monday audit; Sunday's `news` run continues after it (see the `news` section).
 
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -63,6 +66,7 @@ week's PRs are merged long before the next Sunday.
 | `check` | `trig_013zYmGzofKWFyiRDtqPEmzb` | Sonnet 5.5 | `0 8 * * 0` | Sun 4 AM | [Check roster info](#check-roster-info-check) |
 | `honors` | `trig_01SQXJsBb2M9kdM6GvHGPsTK` | Sonnet 5.5 | `0 11 * * 0` | Sun 7 AM | [Honors and awards](#honors-and-awards-honors) |
 | `portraits` | `trig_01CTVLVcucbsvw6BXgJVmD8i` | Sonnet 5.5 | `0 14 * * 0` | Sun 10 AM | [Portraits](#portraits-portraits) |
+| `news` | `trig_018FaffrhjVztsyDLXdWU6mR` | Sonnet 5.5 | `0 18 * * 0,4` | Sun, Thu 2 PM | [Faculty news](#faculty-news-news) |
 
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it, a
 run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
@@ -72,7 +76,7 @@ Outside the cloud:
 | What | Where | When | Notes |
 | :-- | :-- | :-- | :-- |
 | PR CI | GitHub Action `.github/workflows/ci.yml` | Every PR to `main` | `npm ci`, `npm run build` (typecheck, data validation, tests, Vite build, profile pages), `git diff --check`. The auditor merges only on green. Pushes to `main` are built and deployed by `deploy.yml`. |
-| Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Wed 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 9 days (the auditor stopped or a PR is stuck) or a producer has had no `[scheduled:<key>]` output for 15 days (two weekly cycles; keep in step with the Schedule table); closes it when checks pass. No model involved. |
+| Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Wed 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 9 days (the auditor stopped or a PR is stuck) or a producer has had no `[scheduled:<key>]` output for 15 days (8 for the twice-weekly `news`; about two cycles; keep in step with the Schedule table); closes it when checks pass. No model involved. |
 | Branch cleanup | GitHub Action `.github/workflows/delete-pr-branches.yml` | When a PR closes; sweep Mon 13:00 UTC; manual via `gh workflow run delete-pr-branches.yml` | Deletes a PR's branch once all its PRs are closed. Keeps `main`, branches with an open PR, and branches that never had a PR. No model involved. |
 
 ## Conventions for every scheduled run
@@ -182,9 +186,11 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, with these rules taking precedence:
   is wrong or unsupported, request changes or close with a comment naming each rejected item and
   why; never merge a partial subset silently. When several PRs touch the same data file, merge the
   oldest first, then rebase each remaining PR onto `main`, resolve conflicts, re-validate, and merge.
-- **Rotation PRs** (`check`, `honors`, `discover`): merge one even when it changed no roster data,
+- **Rotation PRs** (`check`, `honors`, `discover`, `news`): merge one even when it changed no roster data,
   as long as its per-entry table shows real checks (spot-check 3 "confirmed" rows live); that is
-  what advances the rotation. A table that shows only URL status codes isn't a check: close the PR
+  what advances the rotation. For `news`, re-verify every added or corrected story against its
+  `sourceUrl` (people, date precision, category, and that a grant amount or award isn't
+  overstated), and spot-check 3 sources logged as "no new stories". A table that shows only URL status codes isn't a check: close the PR
   and say why, and the next run repeats those entries.
 - **Issues:** side findings and submissions from `submit.html` (and owner-pasted "Roster
   feedback:" Issues) are leads, not sources, unless the owner wrote them from direct
@@ -341,6 +347,42 @@ Playbook: `TASKS/fetch_portraits.md`. Queue: `npm run next-batch -- portraits` l
 - In the PR body, give each portrait's record, its source page, and one line on why it was
   accepted. List people you searched for without finding a usable headshot, so the next run skips
   them for 8 weeks (by searching earlier `[scheduled:portraits]` PRs for their names).
+
+### Faculty news (`news`)
+
+Playbook: `TASKS/collect_faculty_news.md` (a bounded pass). Runs twice a week. The cursor is the
+review log `maintenance/news-scan.json`, not `rotation.json`: `npm run news:sources -- --limit 10`
+lists the 10 faculty homepage/lab sources reviewed longest ago (about six weeks per source at this
+pace). If an open `[scheduled:news]` PR exists, save its log and pass it, so you continue after it:
+`git show origin/<branch>:maintenance/news-scan.json > "$TMPDIR/news-scan.json"` and
+`npm run news:sources -- --limit 10 --from "$TMPDIR/news-scan.json"`. Branch from fresh
+`origin/main`, not from that PR.
+
+Each run does three passes:
+
+1. **Sources.** For each of the 10 sources, follow playbook §2: the homepage or lab page, its
+   news/archive and people pages, and the specific announcement behind each promising item. Look
+   back 90 days before the source's last review. Record every source in `news-scan.json` with
+   today's date, a status (`checked`, `unavailable`, `empty`, `redirected`), and a short note
+   (e.g. "2 stories added", "no new eligible news", "403; Wayback also failed"). A blocked source
+   keeps a non-`checked` status so it is not mistaken for a clean review.
+2. **Department news.** Read the GMU CS news page and CEC news for the last 30 days for faculty
+   and student achievements tied to a named CS faculty member.
+3. **No-URL faculty.** Take the first 2 names in `facultyWithoutSources` and search their full
+   name with GMU, lab, and news; note what you found in the PR body. A confirmed homepage or lab
+   is a `Likely wrong Website:` side finding, not a roster edit in this PR.
+
+Cap: one PR with at most 15 added or corrected `public/news.json` stories, written exactly per
+playbook §3-§5 (eligibility, dedup by people/title/venue/year, never-invented date precision,
+grant amounts never guessed or credited wholly to one PI, `people` using exact roster spellings).
+Candidates you can't date or confirm go in `maintenance/news-evidence.json`, not `news.json`.
+Update `news-scan.json` `lastModified` and the `summary` counts to match. Don't edit roster files;
+an honor worth an `awards.json` row is a `Possible new honor:` side finding.
+
+The PR body has a table with one row per source (URL, people, status, stories added or "none",
+note), a list of every story added or changed with its `sourceUrl`, the department-news result,
+and the no-URL searches. Open it even when no story was added, because the updated log advances
+the queue.
 
 ## Changing the setup
 
