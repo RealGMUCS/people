@@ -18,7 +18,7 @@ access problem, and every faculty member without a source has a documented disco
 For a bounded pass, stop at the requested cap and report coverage and remaining work. A checked
 source with no eligible stories is a valid result. Do not claim a complete audit from the initial
 seed. The scheduled `news` routine (twice a week) runs a bounded pass under
-[AUTOMATION.md](AUTOMATION.md), "Faculty news", whose caps and PR handoff take precedence.
+[AUTOMATION.md](AUTOMATION.md), "Faculty news and honors", together with the honors playbook; its caps and PR handoff take precedence.
 
 ## 1. Build the queue
 
@@ -122,8 +122,9 @@ within an imprecisely dated period is conservative and does not establish an exa
 Do not mark web-researched news or roster records `Verified: Yes`.
 
 Record scan outcomes even when there are no stories. Do not update unrelated faculty/student
-records simply because their website yielded news. Consider a separate sourced roster or honors
-update if warranted, with its own inclusion and timestamp checks.
+records simply because their website yielded news. An honor found here also belongs in
+`public/awards.json` when its category is already used there (see `audit_awards_and_honors.md`);
+other roster updates need their own sourced inclusion and timestamp checks.
 
 ## 6. Validate and hand off
 

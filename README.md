@@ -58,8 +58,8 @@ npm run preview   # preview the production build
 
 ## Automated maintenance
 
-Weekly cloud routines discover new people, re-check roster info and links, look for new honors and
-portraits, and an Opus auditor reviews and merges their PRs. See
+Scheduled cloud routines discover new people, re-check roster info and links, collect faculty news
+and honors (twice a week), and find portraits; an Opus auditor reviews and merges their PRs. See
 [`TASKS/AUTOMATION.md`](TASKS/AUTOMATION.md); agent guidance is in [`AGENTS.md`](AGENTS.md).
 
 ## Updating the Data

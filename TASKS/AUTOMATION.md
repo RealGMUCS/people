@@ -48,7 +48,8 @@ an hour in winter).
 Spread rule (token budget): the owner's VietProfs and CS Picks routines share the same usage limit
 and fill most of every weekday (VietProfs producers 05:00-14:00 UTC Mon-Sat and its audit at 03:00;
 CS Picks 16:00-01:30 UTC). VietProfs has no producers on Sunday, so People's producers use those
-Sunday slots, one every three hours, and the People audit takes the free Monday mid-morning slot.
+Sunday slots, one every three hours (05:00-14:00; 11:00 is free since `honors` merged into
+`news`), and the People audit takes the free Monday mid-morning slot.
 The twice-weekly `news` producer runs at 18:00 UTC on Sunday and Thursday, between the CS Picks
 audit (16:00) and its `confs` run (20:00), so no 3-hour window holds more than two starts.
 No more than two routines of the three repos start within any 3 hours; check the sibling schedules
@@ -64,9 +65,11 @@ Monday audit; Sunday's `news` run continues after it (see the `news` section).
 | `audit` | `trig_01UpDXZQtP4zEejMb1y1LJkB` | Opus 5.5 | `30 10 * * 1` | Mon 6:30 AM | [Auditor](#auditor-audit) |
 | `discover` | `trig_01Xy8pVn2cAJBesVKNwc7dy9` | Sonnet 5.5 | `0 5 * * 0` | Sun 1 AM | [Discover new people](#discover-new-people-discover) |
 | `check` | `trig_013zYmGzofKWFyiRDtqPEmzb` | Sonnet 5.5 | `0 8 * * 0` | Sun 4 AM | [Check roster info](#check-roster-info-check) |
-| `honors` | `trig_01SQXJsBb2M9kdM6GvHGPsTK` | Sonnet 5.5 | `0 11 * * 0` | Sun 7 AM | [Honors and awards](#honors-and-awards-honors) |
 | `portraits` | `trig_01CTVLVcucbsvw6BXgJVmD8i` | Sonnet 5.5 | `0 14 * * 0` | Sun 10 AM | [Portraits](#portraits-portraits) |
-| `news` | `trig_018FaffrhjVztsyDLXdWU6mR` | Sonnet 5.5 | `0 18 * * 0,4` | Sun, Thu 2 PM | [Faculty news](#faculty-news-news) |
+| `news` | `trig_018FaffrhjVztsyDLXdWU6mR` | Sonnet 5.5 | `0 18 * * 0,4` | Sun, Thu 2 PM | [Faculty news and honors](#faculty-news-and-honors-news) |
+
+The former weekly `honors` routine (`trig_01SQXJsBb2M9kdM6GvHGPsTK`, Sun 11:00 UTC) is disabled
+since 2026-11-05; `news` does its work. Routines can only be deleted in the web UI.
 
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it, a
 run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
@@ -186,11 +189,13 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, with these rules taking precedence:
   is wrong or unsupported, request changes or close with a comment naming each rejected item and
   why; never merge a partial subset silently. When several PRs touch the same data file, merge the
   oldest first, then rebase each remaining PR onto `main`, resolve conflicts, re-validate, and merge.
-- **Rotation PRs** (`check`, `honors`, `discover`, `news`): merge one even when it changed no roster data,
+- **Rotation PRs** (`check`, `discover`, `news`): merge one even when it changed no roster data,
   as long as its per-entry table shows real checks (spot-check 3 "confirmed" rows live); that is
-  what advances the rotation. For `news`, re-verify every added or corrected story against its
-  `sourceUrl` (people, date precision, category, and that a grant amount or award isn't
-  overstated), and spot-check 3 sources logged as "no new stories". A table that shows only URL status codes isn't a check: close the PR
+  what advances the rotation. For `news`, re-verify every added or corrected story and awards row
+  against its source (people, date precision, category, and that a grant amount or award isn't
+  overstated), and spot-check 3 sources logged as "no new stories" and 3 honors-rotation faculty
+  logged as "nothing found". Older `[scheduled:honors]` PRs, if any, are reviewed the same way.
+  A table that shows only URL status codes isn't a check: close the PR
   and say why, and the next run repeats those entries.
 - **Issues:** side findings and submissions from `submit.html` (and owner-pasted "Roster
   feedback:" Issues) are leads, not sources, unless the owner wrote them from direct
@@ -313,23 +318,6 @@ In the PR body, put one table row per entry, including entries checked with no c
 status/appointment (confirmed / changed / blocked), website, Scholar, LinkedIn, and the source URL
 used. The auditor rejects a check PR without that table.
 
-### Honors and awards (`honors`)
-
-Playbook: `TASKS/audit_awards_and_honors.md`. Each run does two passes:
-
-1. **Rotation.** `npm run next-batch -- honors` prints 15 faculty (every faculty member about every
-   8 weeks). For each, read their CV, official bio, and homepage for honors in the categories
-   already used in `public/awards.json` (fellowships, NSF CAREER, young-investigator awards, test-of-
-   time and most-influential-paper awards, dissertation awards, Mason and Virginia awards).
-   Per-year best-paper awards don't qualify unless that category already lists them for others.
-2. **News.** Scan GMU CS and CEC news for the last 60 days for new honors to faculty or students.
-
-Cap: one PR with at most 15 added or corrected `awards.json` rows, each with its source URL, using
-an existing `Category` name, `Name` spelled exactly as in `faculty.json` or `students.json`, and
-`Former: Yes` only for someone no longer at GMU. Student honors also go in the student's
-`Honors & Awards` field. The PR body lists the 15 faculty checked and what was found for each, and
-sets `honors.faculty.next`, so open it even when nothing was found.
-
 ### Portraits (`portraits`)
 
 Playbook: `TASKS/fetch_portraits.md`. Queue: `npm run next-batch -- portraits` lists faculty with no
@@ -348,41 +336,67 @@ Playbook: `TASKS/fetch_portraits.md`. Queue: `npm run next-batch -- portraits` l
   accepted. List people you searched for without finding a usable headshot, so the next run skips
   them for 8 weeks (by searching earlier `[scheduled:portraits]` PRs for their names).
 
-### Faculty news (`news`)
+### Faculty news and honors (`news`)
 
-Playbook: `TASKS/collect_faculty_news.md` (a bounded pass). Runs twice a week. The cursor is the
-review log `maintenance/news-scan.json`, not `rotation.json`: `npm run news:sources -- --limit 10`
-lists the 10 faculty homepage/lab sources reviewed longest ago (about six weeks per source at this
-pace). If an open `[scheduled:news]` PR exists, save its log and pass it, so you continue after it:
-`git show origin/<branch>:maintenance/news-scan.json > "$TMPDIR/news-scan.json"` and
-`npm run news:sources -- --limit 10 --from "$TMPDIR/news-scan.json"`. Branch from fresh
-`origin/main`, not from that PR.
+Playbooks: `TASKS/collect_faculty_news.md` (a bounded pass) and `TASKS/audit_awards_and_honors.md`.
+Runs twice a week. Faculty often announce honors as news, so one run reads each page once and
+feeds both `public/news.json` and `public/awards.json`. This routine replaced the weekly `honors`
+routine on 2026-11-05 and owns its `honors.faculty` cursor in `rotation.json`.
 
-Each run does three passes:
+Two cursors:
 
-1. **Sources.** For each of the 10 sources, follow playbook §2: the homepage or lab page, its
-   news/archive and people pages, and the specific announcement behind each promising item. Look
-   back 90 days before the source's last review. Record every source in `news-scan.json` with
-   today's date, a status (`checked`, `unavailable`, `empty`, `redirected`), and a short note
-   (e.g. "2 stories added", "no new eligible news", "403; Wayback also failed"). A blocked source
-   keeps a non-`checked` status so it is not mistaken for a clean review.
-2. **Department news.** Read the GMU CS news page and CEC news for the last 30 days for faculty
-   and student achievements tied to a named CS faculty member.
-3. **No-URL faculty.** Take the first 2 names in `facultyWithoutSources` and search their full
+- **News sources:** the review log `maintenance/news-scan.json`. `npm run news:sources -- --limit
+  10` lists the 10 faculty homepage/lab sources reviewed longest ago (about six weeks per source
+  at this pace).
+- **Honors rotation:** `npm run next-batch -- honors` prints 8 of the 168 faculty and staff records (16 a
+  week, so everyone about every 10 weeks).
+
+If an open `[scheduled:news]` PR exists, continue after it: save its files
+(`git show origin/<branch>:maintenance/news-scan.json > "$TMPDIR/news-scan.json"`) and pass
+`--from "$TMPDIR/news-scan.json"` to `news:sources`, and pass its `rotation.json` to `next-batch`
+(convention 3). Branch from fresh `origin/main`, not from that PR.
+
+Each run does four passes:
+
+1. **Sources.** For each of the 10 sources, follow the news playbook §2: the homepage or lab page,
+   its news/archive and people pages, and the specific announcement behind each promising item.
+   Look back 90 days before the source's last review. Every item yields a news story (playbook
+   §3), and an honor in a category `awards.json` already uses also yields an awards row. Record
+   every source in `news-scan.json` with today's date, a status (`checked`, `unavailable`,
+   `empty`, `redirected`), and a short note (e.g. "2 stories, 1 award added", "no new eligible
+   news", "403; Wayback also failed"). A blocked source keeps a non-`checked` status so it isn't
+   mistaken for a clean review.
+2. **Honors rotation.** For each of the 8 faculty, read their CV and official bio (and their
+   homepage, unless pass 1 already read it this run) for honors in the categories already used in
+   `public/awards.json` (fellowships, NSF CAREER, young-investigator awards, test-of-time and
+   most-influential-paper awards, dissertation awards, Mason and Virginia awards). Per-year
+   best-paper awards don't qualify for `awards.json` unless that category already lists them for
+   others (they can still be news). A recent honor (within 18 months) also gets a news story.
+3. **Department news.** Read GMU CS and CEC news for the last 30 days for faculty and student
+   achievements and honors tied to a named CS faculty member.
+4. **No-URL faculty.** Take the first 2 names in `facultyWithoutSources` and search their full
    name with GMU, lab, and news; note what you found in the PR body. A confirmed homepage or lab
    is a `Likely wrong Website:` side finding, not a roster edit in this PR.
 
-Cap: one PR with at most 15 added or corrected `public/news.json` stories, written exactly per
-playbook §3-§5 (eligibility, dedup by people/title/venue/year, never-invented date precision,
-grant amounts never guessed or credited wholly to one PI, `people` using exact roster spellings).
-Candidates you can't date or confirm go in `maintenance/news-evidence.json`, not `news.json`.
-Update `news-scan.json` `lastModified` and the `summary` counts to match. Don't edit roster files;
-an honor worth an `awards.json` row is a `Possible new honor:` side finding.
+Cap: one PR with at most 15 added or corrected `news.json` stories and at most 10 added or
+corrected `awards.json` rows, each with its source URL.
 
-The PR body has a table with one row per source (URL, people, status, stories added or "none",
-note), a list of every story added or changed with its `sourceUrl`, the department-news result,
-and the no-URL searches. Open it even when no story was added, because the updated log advances
-the queue.
+- **News stories** follow the news playbook §3-§5 exactly: eligibility, dedup by
+  people/title/venue/year, never-invented date precision, grant amounts never guessed or credited
+  wholly to one PI, `people` using exact roster spellings. Candidates you can't date or confirm go
+  in `maintenance/news-evidence.json`, not `news.json`. Update `news-scan.json` `lastModified` and
+  the `summary` counts to match.
+- **Awards rows** use an existing `Category` name, `Name` spelled exactly as in `faculty.json` or
+  `students.json`, and `Former: Yes` only for someone no longer at GMU. Never invent an award year
+  and never delete a row (a doubtful row is a side finding). A student honor also goes in that
+  student's `Honors & Awards` field (with `Last Modified`); otherwise don't edit roster files.
+
+The PR body has: a table with one row per source (URL, people, status, stories and awards added or
+"none", note); a table of the 8 honors-rotation faculty with what was checked and found; every
+story and awards row added or changed with its source URL; the department-news result; and the
+no-URL searches. The PR sets `honors.faculty.next` and updates the news log, so open it even when
+nothing was added. If you run short of time, stop early, set the cursor to the first faculty
+member you didn't finish, and log only the sources you actually reviewed.
 
 ## Changing the setup
 
