@@ -189,7 +189,7 @@
             "url": "https://people.cs.gmu.edu/~kdejong/",
             "checked": "2026-11-05",
             "status": "unavailable",
-            "note": "HTTP 404; this is an access failure, not a finding of no news."
+            "note": "HTTP 404 on 2026-10-30 and twice on 2026-11-05; removed from the roster Website field at the owner's request (2026-11-05)."
         },
         {
             "url": "https://people.cs.gmu.edu/~pideng/",
@@ -285,7 +285,7 @@
             "url": "https://people.cs.gmu.edu/~kersch/",
             "checked": "2026-11-05",
             "status": "unavailable",
-            "note": "HTTP 404; this is an access failure, not a finding of no news."
+            "note": "HTTP 404 on 2026-10-30 and twice on 2026-11-05; removed from the roster Website field at the owner's request (2026-11-05)."
         },
         {
             "url": "https://kentonmurray.com",

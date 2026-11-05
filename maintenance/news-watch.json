@@ -541,20 +541,6 @@
             "status": "ok",
             "lines": "1b2557e2 2849daba 4c2d8904 55270857 658eee73 88879272 8b8c506c 9e5e8143 b1488309 b7784fea b99905ae c18104c3 c28cb4a3 e0c5f20a e2fdb975 ee7d3561 f0237e00"
         },
-        "https://people.cs.gmu.edu/~kdejong": {
-            "kind": "site",
-            "people": "Kenneth De Jong",
-            "fetched": "",
-            "status": "http 404",
-            "lines": ""
-        },
-        "https://people.cs.gmu.edu/~kersch": {
-            "kind": "site",
-            "people": "Larry Kerschberg",
-            "fetched": "",
-            "status": "http 404",
-            "lines": ""
-        },
         "https://people.cs.gmu.edu/~kosecka": {
             "kind": "site",
             "people": "Jana Košecká",
