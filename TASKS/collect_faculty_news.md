@@ -66,8 +66,15 @@ Include concrete achievements with a named Mason connection:
 - New research grants, industry awards, and gifts with an explicit recipient and funder.
 - Completed student defenses and graduations; meaningful placements when publicly announced.
 - Student scholarships, fellowships, competitions, research awards, and other major achievements.
-- Selected research results, notable software releases, and paper acceptances with a clear result
-  or contribution. Summarize related acceptances together rather than importing publication lists.
+- Every full paper accepted at a top venue in its area: main research tracks of flagship
+  conferences (e.g., NeurIPS, ICML, ICLR, CVPR, ACL, EMNLP, ICSE, FSE, ASE, ISSTA, CAV, CCS,
+  USENIX Security, S&P, NDSS, MobiCom, MobiSys, SenSys, EuroSys, CHI, CSCW, UIST, SIGGRAPH, ICRA,
+  IROS, CoRL, KDD) and flagship journals (e.g., TSE, TOSEM, TPAMI, JAIR). Apply the rule to every
+  lab alike. Group a lab's acceptances from one announcement into one story; list papers rather
+  than import a whole publication list.
+- Not newsworthy on their own: workshop papers, Findings, posters, demos, short/NIER papers,
+  and doctoral or student symposia. Second-tier venues are included only for an award.
+- Selected research results and notable software releases with a clear contribution.
 
 Omit routine travel, committee service, hiring advertisements, semester greetings, social events,
 undated promotional claims, and achievements unrelated to the Mason appointment. A paper acceptance
