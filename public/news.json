@@ -1,5 +1,140 @@
 [
     {
+        "id": "sun-usenix-atc-2026",
+        "title": "Sun group papers accepted at USENIX Security and ATC 2026",
+        "summary": "BenchChecker assesses the credibility of bug-fixing benchmarks for LLMs at USENIX Security 2026, and Yunlong Xing’s DESAN eliminates redundant sanitizer checks at ATC 2026.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "USENIX Security",
+            "ATC",
+            "Security"
+        ],
+        "sourceName": "Kun Sun’s homepage",
+        "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zeng-mobisys-2026",
+        "title": "Neural network diversification published at MobiSys 2026",
+        "summary": "Ying Meng’s MobiSys 2026 paper turns a single model into trillions of orthogonal variants to defeat attacks.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Qiang Zeng",
+            "Ying Meng"
+        ],
+        "tags": [
+            "MobiSys",
+            "AI security"
+        ],
+        "sourceName": "Qiang Zeng’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~zeng/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "robotixx-iros-corl-2026",
+        "title": "RobotiXX papers accepted at IROS and CoRL 2026",
+        "summary": "Xiao’s publication list includes ten IROS 2026 papers, on topics from vertically challenging terrain to fire-aware robots, and a CoRL 2026 paper on zero-shot quadruped transfer.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "IROS",
+            "CoRL",
+            "Robotics"
+        ],
+        "sourceName": "Xuesu Xiao’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xiao/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "craig-yu-siggraph-chi-ismar-2026",
+        "title": "Yu group papers accepted at SIGGRAPH, CHI, and ISMAR 2026",
+        "summary": "The papers cover role-aware virtual agents guided by a multimodal LLM (SIGGRAPH), HieraVisVR for VR playtesting (CHI), and LLM-based think-aloud analysis of player experience (ISMAR).",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Craig Yu"
+        ],
+        "tags": [
+            "SIGGRAPH",
+            "CHI",
+            "ISMAR",
+            "Virtual reality"
+        ],
+        "sourceName": "Craig Yu’s homepage",
+        "sourceUrl": "https://craigyuyu.github.io/home/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "hong-cscw-2026",
+        "title": "Autistic job-seeker interview preparation paper at CSCW 2026",
+        "summary": "The Alignment Lab studies human-AI collaboration for interview preparation by autistic job seekers.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Sungsoo (Ray) Hong"
+        ],
+        "tags": [
+            "CSCW",
+            "Human-AI collaboration",
+            "Accessibility"
+        ],
+        "sourceName": "Alignment Lab",
+        "sourceUrl": "https://alignment.lab.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-usenix-security-pwnie-2026",
+        "title": "AIOops accepted at USENIX Security 2026; Pwnie finalists",
+        "summary": "Kornaropoulos’s AIOops (USENIX Security 2026) and LLMmap (USENIX Security 2025), which fingerprints large language models, are finalists for the 2026 Pwnie Award for Best AI Security Research.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Evgenios Kornaropoulos"
+        ],
+        "tags": [
+            "USENIX Security",
+            "Pwnie Awards",
+            "AI security"
+        ],
+        "sourceName": "Evgenios Kornaropoulos’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~evgenios/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ye-cvpr-tpami-2025-2026",
+        "title": "Ye group papers at CVPR 2025 and TPAMI 2026",
+        "summary": "Yufan Zhang leads “Seeing a 3D World in a Grain of Sand” (CVPR 2025) and “Snapshot 3D Gaussian Splatting for Miniature Scenes” (TPAMI 2026).",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Jinwei Ye",
+            "Yufan Zhang"
+        ],
+        "tags": [
+            "CVPR",
+            "TPAMI",
+            "Computer vision"
+        ],
+        "sourceName": "Jinwei Ye’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~jinweiye/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "rahman-phd-defense-amazon-2026",
         "title": "Md. Mushfiqur Rahman defends PhD and joins Amazon",
         "summary": "Lybarger’s lab celebrates Rahman’s defense on accessible, safe health communication and his Applied Scientist II position.",
@@ -139,6 +274,48 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "roars-neurips-2026",
+        "title": "ROARS Lab paper accepted at NeurIPS 2026",
+        "summary": "Hai Duong leads a NeurIPS 2026 research paper on using reinforcement learning to aid neural network verification.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Verification",
+            "AI safety"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-ndss-ccs-tosem-2026",
+        "title": "Zhang group papers accepted at NDSS 2027, CCS 2026, and TOSEM",
+        "summary": "The group reports an NDSS 2027 paper on XR app privacy-disclosure inconsistencies, CCS 2026 papers on TPU attacks and Apple Vision Pro privacy with Yichang Xiong and Vamsi Shankar Simhadri, and a TOSEM paper on LLM-driven secure code generation.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Yichang Xiong",
+            "Vamsi Shankar Simhadri"
+        ],
+        "tags": [
+            "NDSS",
+            "CCS",
+            "TOSEM",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "zeng-students-neurips-2026",
         "title": "Two student-led papers accepted at NeurIPS",
         "summary": "Qiang Zeng reports NeurIPS 2026 acceptances for two papers first-authored by his students Xiang Li and Jie Hou.",
@@ -175,6 +352,25 @@
         ],
         "sourceName": "CAT Lab",
         "sourceUrl": "https://deep-learning-profiling-tools.github.io/CAT-Lab/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lu-emnlp-2026",
+        "title": "Chinese pragmatic-inference benchmark accepted at EMNLP 2026",
+        "summary": "Lu’s group benchmarks social pragmatic inference for indirect and playful Chinese online comments in an EMNLP 2026 main-conference paper.",
+        "date": "2026-09-20",
+        "category": "paper",
+        "people": [
+            "Zhicong Lu"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP",
+            "Social computing"
+        ],
+        "sourceName": "Zhicong Lu’s homepage",
+        "sourceUrl": "https://luzhc.github.io/",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
     },
@@ -258,6 +454,66 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "zhu-emnlp-2026",
+        "title": "Three Zhu group papers accepted at EMNLP 2026 main conference",
+        "summary": "Students Anjishnu Mukherjee, Bowen Wei, Sina Mansouri, and Mohit Bharatbhai Marvania contribute to three EMNLP 2026 main-conference papers.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Anjishnu Mukherjee",
+            "Bowen Wei",
+            "Sina Mansouri",
+            "Mohit Bharatbhai Marvania"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "porfirio-uist-2026",
+        "title": "Puqi Zhou paper accepted at UIST 2026",
+        "summary": "Puqi Zhou has a paper accepted at the 2026 ACM Symposium on User Interface Software and Technology.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "David Porfirio",
+            "Puqi Zhou"
+        ],
+        "tags": [
+            "UIST",
+            "Human-computer interaction"
+        ],
+        "sourceName": "ARI Lab",
+        "sourceUrl": "https://ari-lab-gmu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-mobicom-2026",
+        "title": "On-device LLM streaming paper accepted at MobiCom 2026",
+        "summary": "Yao’s group presents a speculate-and-refine asynchronous streaming framework for on-device LLM inference.",
+        "date": "2026-08-09",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "MobiCom",
+            "LLM inference",
+            "Mobile systems"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "zhou-doe-genesis-2026",
         "title": "Keren Zhou receives DOE Genesis Award",
         "summary": "The award supports AI methods for predicting and optimizing high-performance computing applications.",
@@ -331,6 +587,28 @@
         ],
         "sourceName": "Imaging and Vision Lab",
         "sourceUrl": "https://ivlab.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-colm-2026",
+        "title": "Two Mason NLP papers accepted at COLM",
+        "summary": "The group congratulates Anjishnu Mukherjee, Chutong Meng, and Prabin Bhandari on two COLM 2026 acceptances.",
+        "date": "2026-07",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Anjishnu Mukherjee",
+            "Chutong Meng",
+            "Prabin Bhandari"
+        ],
+        "tags": [
+            "COLM",
+            "NLP",
+            "Language models"
+        ],
+        "sourceName": "George Mason NLP",
+        "sourceUrl": "https://nlp.cs.gmu.edu/",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
     },
@@ -451,6 +729,86 @@
         ],
         "sourceName": "GMU Computer Science",
         "sourceUrl": "https://cs.gmu.edu/news/2026-06/george-mason-phd-student-recognized-blockchain-privacy-research",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-colt-2026",
+        "title": "Large-step-size gradient descent result accepted at COLT 2026",
+        "summary": "Liu’s COLT 2026 paper shows that gradient descent with arbitrarily large step sizes on logistic regression over low-dimensional separable data reaches arbitrarily accurate solutions in a constant number of iterations.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "COLT",
+            "Learning theory",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-kdd-2026",
+        "title": "Vulnerability benchmark accepted at KDD 2026",
+        "summary": "Vishnu Teja Kandalam’s vulnerability benchmark paper is accepted at KDD 2026.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Vishnu Teja Kandalam"
+        ],
+        "tags": [
+            "KDD",
+            "Security",
+            "Benchmarks"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "culpa-usenix-security-2026",
+        "title": "CULPA Rust memory-safety paper accepted at USENIX Security 2026",
+        "summary": "Hung-Mao (Rafael) Chen and Bo Lu, with Xiaokuan Zhang and Kun Sun, detect memory-safety bugs in unsafe Rust through the lens of safety requirements.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Kun Sun",
+            "Hung-Mao (Rafael) Chen",
+            "Bo Lu"
+        ],
+        "tags": [
+            "USENIX Security",
+            "Rust",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-icml-2026",
+        "title": "Zhu group paper accepted at ICML 2026",
+        "summary": "Student Jinhao Pan and collaborators have a paper accepted at ICML 2026.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Jinhao Pan"
+        ],
+        "tags": [
+            "ICML",
+            "Machine learning"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
     },
@@ -588,6 +946,128 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "roars-cvpr-highlight-2026",
+        "title": "Vision verification paper selected as CVPR Highlight",
+        "summary": "ROARS Lab reports a CVPR 2026 Highlight for Hai Duong’s research paper on verifying AI-based computer vision systems.",
+        "date": "2026-04",
+        "category": "paper-award",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "CVPR",
+            "Highlight",
+            "Verification"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-icml-2026",
+        "title": "Two Liu group papers accepted at ICML 2026",
+        "summary": "The papers study data selection for large language model pretraining and non-Euclidean gradient descent, with students Michael Crawshaw, Jie Hao, and Rui Yu.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Michael Timothy Crawshaw",
+            "Jie Hao",
+            "Rui Yu"
+        ],
+        "tags": [
+            "ICML",
+            "Machine learning",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-ccs-rust-2026",
+        "title": "Rust security paper accepted at CCS 2026",
+        "summary": "Zhang’s group reports a conditionally accepted Rust security paper at ACM CCS 2026.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "CCS",
+            "Rust",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-cvpr-highlight-2026",
+        "title": "Vision transformer generalization paper selected as CVPR Highlight",
+        "summary": "Yao’s CVPR 2026 paper Inside-Out, which measures vision transformer generalization through mechanistic interpretability, is selected as a Highlight (top 3%).",
+        "date": "2026-04",
+        "category": "paper-award",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "CVPR",
+            "Highlight",
+            "Interpretability"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "web-agents-acl-2026",
+        "title": "Web agent failure analysis accepted at ACL 2026",
+        "summary": "Mohamed Aghzal, Gregory Stein, and Ziyu Yao explain why LLM-based web agents fail from a hierarchical planning perspective.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao",
+            "Gregory Stein",
+            "Mohamed Aghzal"
+        ],
+        "tags": [
+            "ACL",
+            "LLM agents",
+            "Planning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-jair-2026",
+        "title": "Multi-agent path finding paper published in JAIR",
+        "summary": "Hoang-Dung Bui, Erion Plaku, and Gregory Stein address multi-agent path finding under limited communication range via dynamic leading.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Gregory Stein",
+            "Erion Plaku",
+            "Hoang-Dung Bui"
+        ],
+        "tags": [
+            "JAIR",
+            "Multi-agent planning",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s homepage",
+        "sourceUrl": "https://gjstein.com/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "daigo-shishika-nsf-career-2026",
         "title": "Daigo Shishika receives NSF CAREER award",
         "summary": "The project studies signaling, deception, and cooperation through motion in multi-agent systems.",
@@ -685,6 +1165,24 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "shuochao-mobisys-2026",
+        "title": "Physics-supervised IMU sensing paper accepted at MobiSys 2026",
+        "summary": "The paper learns IMU sensing without labels using physics-based supervision.",
+        "date": "2026-04-11",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "MobiSys",
+            "Sensing"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "ziyu-foresight-interpretability-2026",
         "title": "Foresight Institute supports mechanistic interpretability research",
         "summary": "Yao announces a collaborative grant with Huan Sun.",
@@ -719,6 +1217,159 @@
         ],
         "sourceName": "Kun Sun’s homepage",
         "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-tse-2026",
+        "title": "Specification repair paper accepted in TSE",
+        "summary": "ROARS Lab publishes a 2026 IEEE Transactions on Software Engineering research paper on specification repair and test generation.",
+        "date": "2026-03",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen"
+        ],
+        "tags": [
+            "TSE",
+            "Software engineering",
+            "Formal methods"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-mobisys-2026",
+        "title": "5G NR backscatter paper accepted at MobiSys 2026",
+        "summary": "Pathak’s group presents low-complexity, high-speed backscatter for wideband 5G NR.",
+        "date": "2026-03",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "MobiSys",
+            "Backscatter",
+            "5G"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-chi-2026",
+        "title": "AI peers paper accepted at CHI 2026",
+        "summary": "Yao’s group designs AI peers for the MathVC math-education platform in a CHI 2026 paper.",
+        "date": "2026-02",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "CHI",
+            "AI for education"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-icra-2026",
+        "title": "mmWave radar NeRF paper accepted at ICRA 2026",
+        "summary": "The group’s ICRA 2026 paper presents a NeRF model for mmWave radar view synthesis and pose estimation.",
+        "date": "2026-02",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "ICRA",
+            "mmWave",
+            "Robotics"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "robotixx-icra-2026",
+        "title": "RobotiXX presents five papers at ICRA 2026",
+        "summary": "The lab presents four ICRA 2026 conference papers and one RA-L paper.",
+        "date": "2026-02-01",
+        "category": "paper",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "ICRA",
+            "Robotics"
+        ],
+        "sourceName": "RobotiXX Lab",
+        "sourceUrl": "https://robotixx.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-fse-2026",
+        "title": "Structural robustness paper accepted at FSE 2026",
+        "summary": "Hai Duong’s FSE 2026 research paper formalizes and verifies structural robustness properties of AI systems.",
+        "date": "2026-01",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "FSE",
+            "Verification",
+            "AI safety"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-iclr-2026",
+        "title": "Bilevel optimization paper accepted at ICLR 2026",
+        "summary": "Students Yuman Wu, Xiaochuan Gong, and Jie Hao coauthor an ICLR 2026 paper on bilevel optimization under uniform convexity.",
+        "date": "2026-01",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Yuman Wu",
+            "Xiaochuan Gong",
+            "Jie Hao"
+        ],
+        "tags": [
+            "ICLR",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-sensys-2026",
+        "title": "Bistatic mmWave backscatter paper accepted at SenSys 2026",
+        "summary": "The group proposes bistatic beamforming for mmWave backscatter IoT devices.",
+        "date": "2026-01",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "SenSys",
+            "mmWave",
+            "IoT"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
     },
@@ -900,6 +1551,86 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "sun-security-papers-2025",
+        "title": "Sun group papers at USENIX Security, CCS, and NDSS 2025",
+        "summary": "The group reports DISPATCH, which separates security patches from entangled code changes, at USENIX Security 2025, two CCS 2025 papers on encrypted-traffic classification and off-path TCP exploits, and an NDSS 2025 paper on Wi-Fi TCP hijacking.",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "USENIX Security",
+            "CCS",
+            "NDSS",
+            "Security"
+        ],
+        "sourceName": "Kun Sun’s homepage",
+        "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zeng-papers-2025",
+        "title": "Zeng group papers at USENIX Security, ICCV, and MobiCom 2025",
+        "summary": "Xiang Li’s OneFlip (USENIX Security 2025) and SoleFlip (ICCV 2025) implant backdoors with single bit flips, Junming Chen’s nRootTag turns Bluetooth devices into trackers (USENIX Security 2025), and Xiaoyue Ma’s MatterGuard uses LLMs to test Matter IoT SDKs (MobiCom 2025).",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Qiang Zeng",
+            "Xiang Li",
+            "Junming Chen",
+            "Xiaoyue Ma"
+        ],
+        "tags": [
+            "USENIX Security",
+            "ICCV",
+            "MobiCom",
+            "Security"
+        ],
+        "sourceName": "Qiang Zeng’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~zeng/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "craig-yu-ismar-2025",
+        "title": "Virtual activity crafting paper accepted at ISMAR 2025",
+        "summary": "Yu’s group crafts dynamic virtual activities with advanced multimodal models.",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Craig Yu"
+        ],
+        "tags": [
+            "ISMAR",
+            "Mixed reality"
+        ],
+        "sourceName": "Craig Yu’s homepage",
+        "sourceUrl": "https://craigyuyu.github.io/home/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-chi-2025",
+        "title": "Scaffold-based product design paper accepted at CHI 2025",
+        "summary": "Xue Yu’s CHI 2025 paper explores product designs with scaffold-based editing.",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Yotam Gingold",
+            "Xue Yu"
+        ],
+        "tags": [
+            "CHI",
+            "Design tools"
+        ],
+        "sourceName": "CRAGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "xiao-schev-rising-star-announcement",
         "title": "Xuesu Xiao named SCHEV Outstanding Faculty Award Rising Star",
         "summary": "Xiao announces selection for Virginia’s Outstanding Faculty Award Rising Star, recognizing teaching, research, and public service.",
@@ -957,6 +1688,26 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "zhu-aaai-2026",
+        "title": "Two papers accepted at AAAI 2026, including an oral",
+        "summary": "Bowen Wei and Jinhao Pan’s AAAI 2026 papers include an oral on prototype-based explainable classification of LLM decisions.",
+        "date": "2025-11",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Bowen Wei",
+            "Jinhao Pan"
+        ],
+        "tags": [
+            "AAAI",
+            "Explainable AI"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "bertram-liu-xr-honorable-mention-2025",
         "title": "Bertram Liu earns XR security workshop honorable mention",
         "summary": "The undergraduate’s first-authored research detects insecure interface properties in extended-reality systems.",
@@ -993,6 +1744,27 @@
         ],
         "sourceName": "Xuesu Xiao’s homepage",
         "sourceUrl": "https://people.cs.gmu.edu/~xiao/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-emnlp-2025",
+        "title": "Three student papers presented at EMNLP 2025",
+        "summary": "Anastasopoulos’s students Chutong Meng, Poorvi Acharya, and Fahim Faisal present three papers at EMNLP 2025.",
+        "date": "2025-11-01",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Chutong Meng",
+            "Poorvi Acharya",
+            "Fahim Faisal"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s homepage",
+        "sourceUrl": "https://antonisa.github.io/news/",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
     },
@@ -1095,6 +1867,64 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "roars-neurips-spotlight-2025",
+        "title": "DNN verification paper selected for NeurIPS Spotlight",
+        "summary": "Hai Duong’s NeurIPS 2025 paper on compositional DNN verification was selected as a Spotlight; a second accepted paper addresses certifying DNN verification.",
+        "date": "2025-09",
+        "category": "paper-award",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Spotlight",
+            "Verification"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-neurips-2025",
+        "title": "Adaptive hierarchical optimization paper accepted at NeurIPS 2025",
+        "summary": "Students Xiaochuan Gong and Jie Hao coauthor Liu’s NeurIPS 2025 paper on adaptive hierarchical optimization.",
+        "date": "2025-09",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Xiaochuan Gong",
+            "Jie Hao"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-neurips-2025",
+        "title": "Yao group paper accepted at NeurIPS 2025",
+        "summary": "Yao reports a paper accepted at NeurIPS 2025.",
+        "date": "2025-09",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Machine learning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "lybarger-nih-knee-pain-2025",
         "title": "NIH supports collaborative chronic knee-pain research",
         "summary": "Lybarger participates in a Mason team receiving a $4.65 million project award; the amount is the team’s total.",
@@ -1146,6 +1976,82 @@
             "Research highlight"
         ],
         "sourceName": "Shuochao Yao’s news archive",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neuralsat-vnncomp-2025",
+        "title": "NeuralSAT ranks second at VNN-COMP 2025",
+        "summary": "ROARS Lab reports second place overall for NeuralSAT, developed by Hai Duong, in the 2025 neural network verification competition.",
+        "date": "2025-08",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "AI safety",
+            "Verification",
+            "Competition"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-ase-2025",
+        "title": "DNN verification benchmark paper accepted at ASE 2025",
+        "summary": "Linhan Li’s first first-author research paper, accepted at ASE 2025, generates challenging benchmarks for DNN verification.",
+        "date": "2025-08",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Linhan Li"
+        ],
+        "tags": [
+            "ASE",
+            "Verification",
+            "Benchmarks"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-emnlp-2025",
+        "title": "Two Yao group papers accepted at EMNLP 2025 main conference",
+        "summary": "Yao’s group has two EMNLP 2025 main-conference papers, plus two in Findings.",
+        "date": "2025-08",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-eurosys-2026",
+        "title": "Streaming LLM serving paper accepted at EuroSys 2026",
+        "summary": "Yao’s group has a streaming LLM serving paper accepted at EuroSys 2026.",
+        "date": "2025-08-23",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "EuroSys",
+            "LLM serving"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
         "sourceUrl": "https://yscacaca.github.io/news/",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
@@ -1210,6 +2116,46 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "zhang-springer-cybersecurity-award-2025",
+        "title": "Web3 authentication paper wins Springer Cybersecurity Award",
+        "summary": "Zhang’s CCS 2024 paper on Web3 authentication, led by his student Kailun, receives the Springer Cybersecurity Award for Best Practical Research Paper.",
+        "date": "2025-07",
+        "category": "paper-award",
+        "people": [
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "Springer Cybersecurity Award",
+            "Web3",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-ccs-2025",
+        "title": "VR firmware security paper accepted at CCS 2025",
+        "summary": "Vamsi Shankar Simhadri and Yichang Xiong’s VR firmware security paper is accepted at ACM CCS 2025.",
+        "date": "2025-07",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Vamsi Shankar Simhadri",
+            "Yichang Xiong"
+        ],
+        "tags": [
+            "CCS",
+            "VR",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "chuxiong-wu-dissertation-defense-2025",
         "title": "Chuxiong Wu defends his dissertation",
         "summary": "Qiang Zeng congratulates Chuxiong Wu on his PhD defense and announces a planned assistant professor appointment at Southern Illinois University.",
@@ -1267,6 +2213,81 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "robotixx-iros-2025",
+        "title": "RobotiXX presents 13 papers at IROS 2025",
+        "summary": "The lab presents 12 IROS 2025 conference papers and one RA-L paper, placing Xiao among the conference’s top 10 paper contributors.",
+        "date": "2025-06-15",
+        "category": "paper",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "IROS",
+            "Robotics"
+        ],
+        "sourceName": "RobotiXX Lab",
+        "sourceUrl": "https://robotixx.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-acl-2025",
+        "title": "Two papers presented at ACL 2025",
+        "summary": "Anastasopoulos’s group presents two papers at the ACL 2025 main conference, alongside workshop and Interspeech papers.",
+        "date": "2025-06-01",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "ACL",
+            "NLP"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s homepage",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-icml-2025",
+        "title": "Liu group paper accepted at ICML 2025",
+        "summary": "Student Michael Crawshaw and collaborators have a paper accepted at ICML 2025.",
+        "date": "2025-05",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Michael Timothy Crawshaw"
+        ],
+        "tags": [
+            "ICML",
+            "Machine learning"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-acl-2025",
+        "title": "Two papers accepted at ACL 2025",
+        "summary": "Bowen Wei and Fardin Ahsan Sakib’s ACL 2025 papers address interpretable text classification and spurious correlations.",
+        "date": "2025-05",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Bowen Wei",
+            "Fardin Ahsan Sakib"
+        ],
+        "tags": [
+            "ACL",
+            "NLP"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "stein-paudel-doctoral-consortium-2025",
         "title": "Abhishek Paudel selected for ICRA Doctoral Consortium",
         "summary": "Stein reports recognition for Paudel’s research on long-horizon planning under uncertainty.",
@@ -1306,6 +2327,103 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "roars-cav-issta-2025",
+        "title": "ROARS Lab papers accepted at CAV and ISSTA 2025",
+        "summary": "Hai Duong’s CAV 2025 paper presents the NeuralSAT DNN verification tool. Two ISSTA 2025 tool papers, the first papers for Linhan Li and Stefania Piciorea, add LSP support for the COOL language and VS Code support for invariant generation and symbolic execution.",
+        "date": "2025-04",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong",
+            "Linhan Li",
+            "Stefania Piciorea"
+        ],
+        "tags": [
+            "CAV",
+            "ISSTA",
+            "Verification"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-mobisys-2025",
+        "title": "Spoofing-resilient mmWave sensing paper accepted at MobiSys 2025",
+        "summary": "The group integrates spoofing-resilient mmWave sensing with backscatter communication.",
+        "date": "2025-04",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "MobiSys",
+            "mmWave",
+            "Sensing"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-naacl-2025",
+        "title": "Three papers presented at NAACL 2025",
+        "summary": "Anastasopoulos’s group presents three papers at NAACL 2025.",
+        "date": "2025-04-15",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "NAACL",
+            "NLP"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s homepage",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-mobisys-2025",
+        "title": "On-device DNN training paper accepted at MobiSys 2025",
+        "summary": "Yao’s group has an on-device DNN training paper accepted at MobiSys 2025.",
+        "date": "2025-03-03",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "MobiSys",
+            "On-device learning"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-cvpr-2025",
+        "title": "VLM path-plan evaluation benchmark accepted at CVPR 2025",
+        "summary": "Mohamed Aghzal and collaborators benchmark vision-language models for evaluating path plans.",
+        "date": "2025-02",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao",
+            "Mohamed Aghzal"
+        ],
+        "tags": [
+            "CVPR",
+            "Vision-language models",
+            "Planning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
         "id": "sun-redan-ndss-distinguished-2025",
         "title": "ReDAN receives NDSS Distinguished Paper Award",
         "summary": "CSIS recognizes Sun’s collaborative research on remote denial-of-service attacks against NAT networks.",
@@ -1340,6 +2458,123 @@
         ],
         "sourceName": "Songqing Chen’s homepage",
         "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neuralsat-vnncomp-2024",
+        "title": "NeuralSAT ranks second at VNN-COMP 2024",
+        "summary": "NeuralSAT, developed by Hai Duong and Vu Nguyen, placed second overall among international teams in the 2024 neural network verification competition.",
+        "date": "2025-01",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "AI safety",
+            "Verification",
+            "Competition"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2025-05/george-masons-roars-lab-retains-its-ranking-leader-ai-safety-2024-international-neural",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-iclr-2025",
+        "title": "Two Liu group papers accepted at ICLR 2025",
+        "summary": "Student Michael Crawshaw and collaborators have two papers accepted at ICLR 2025.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Michael Timothy Crawshaw"
+        ],
+        "tags": [
+            "ICLR",
+            "Machine learning"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "typepulse-usenix-security-2025",
+        "title": "Rust type-confusion detector accepted at USENIX Security 2025",
+        "summary": "Hung-Mao (Rafael) Chen’s TYPEPULSE, with Xiaokuan Zhang and Kun Sun, detects type confusion bugs in Rust programs.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Kun Sun",
+            "Hung-Mao (Rafael) Chen"
+        ],
+        "tags": [
+            "USENIX Security",
+            "Rust",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-naacl-2025",
+        "title": "Spurious-correlation paper accepted at NAACL 2025",
+        "summary": "Yuqing Zhou’s NAACL 2025 paper addresses spurious correlations in classification.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Yuqing Zhou"
+        ],
+        "tags": [
+            "NAACL",
+            "NLP"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-iclr-2025",
+        "title": "Dynamic LLM reasoning paper accepted at ICLR 2025",
+        "summary": "Murong Yue and collaborators publish work on dynamic LLM reasoning at ICLR 2025.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao",
+            "Murong Yue"
+        ],
+        "tags": [
+            "ICLR",
+            "LLM reasoning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-icra-2025",
+        "title": "Two RAIL papers accepted at ICRA 2025",
+        "summary": "Stein’s lab has ICRA 2025 papers on anticipatory planning for large-scale home environments and hybrid social navigation.",
+        "date": "2025-01-28",
+        "category": "paper",
+        "people": [
+            "Gregory Stein"
+        ],
+        "tags": [
+            "ICRA",
+            "Planning",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s homepage",
+        "sourceUrl": "https://gjstein.com/news/",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
     },
@@ -2058,6 +3293,27 @@
         ],
         "sourceName": "Imaging and Vision Lab",
         "sourceUrl": "https://ivlab.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neuralsat-vnncomp-2023",
+        "title": "NeuralSAT earns New Participant Award at VNN-COMP 2023",
+        "summary": "In its first VNN-COMP, NeuralSAT ranked fourth overall, won the tllverifybench category, and received the New Participant Award for Hai Duong and Linhan Li’s work.",
+        "date": "2023-08",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong",
+            "Linhan Li"
+        ],
+        "tags": [
+            "AI safety",
+            "Verification",
+            "Competition"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
     },
