@@ -233,6 +233,22 @@ try {
     errors.push(`news.json: ${error instanceof Error ? error.message : String(error)}`);
 }
 
+// A LinkedIn or Google Scholar profile belongs to one person, so the same URL on two different
+// names means an edit landed on the wrong record. (Websites are exempt: a lab site can be shared.)
+// The same name may appear in both files (faculty who are also GMU alumni) with the same links.
+for (const field of ['LinkedIn', 'Google Scholar']) {
+    const owners = new Map<string, Set<string>>();
+    for (const row of [...faculty, ...students]) {
+        const url = value(row, field).toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
+        if (!url) continue;
+        const name = `${value(row, 'First Name')} ${value(row, 'Last Name')}`.trim();
+        owners.set(url, (owners.get(url) ?? new Set()).add(name));
+    }
+    owners.forEach((names, url) => {
+        if (names.size > 1) errors.push(`${field} "${url}" is shared by different people: ${[...names].join(', ')}`);
+    });
+}
+
 if (errors.length) {
     console.error(`Data validation failed with ${errors.length} error${errors.length === 1 ? '' : 's'}:`);
     errors.forEach(error => console.error(`- ${error}`));
