@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+          _/\
+         /  \      GMU CS Directory
+        /_/\_\     an open, version-controlled academic directory
+          ||
+     view source encouraged · https://github.com/RealGMUCS/people
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMU CS Faculty & Student News</title>
+    <meta name="description"
+        content="Research, awards, grants, graduations, and achievements from the George Mason University Computer Science community." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://realgmucs.github.io/people/news.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GMU CS Directory" />
+    <meta property="og:title" content="GMU CS Faculty & Student News" />
+    <meta property="og:description" content="Research, awards, grants, graduations, and achievements from the George Mason University Computer Science community." />
+    <meta property="og:url" content="https://realgmucs.github.io/people/news.html" />
+    <meta property="og:image" content="https://realgmucs.github.io/people/default-portrait.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="GMU CS Faculty & Student News" />
+    <meta name="twitter:description" content="Research, awards, grants, graduations, and achievements from the George Mason University Computer Science community." />
+    <meta name="twitter:image" content="https://realgmucs.github.io/people/default-portrait.svg" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "GMU CS Faculty & Student News",
+        "description": "Faculty and student news from George Mason University Computer Science.",
+        "url": "https://realgmucs.github.io/people/news.html",
+        "provider": {
+            "@type": "EducationalOrganization",
+            "name": "George Mason University",
+            "department": {
+                "@type": "Organization",
+                "name": "Department of Computer Science"
+            },
+            "url": "https://cs.gmu.edu"
+        }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="title-row">
+                <h1><a class="home-link" href="./">GMU CS Directory</a></h1>
+                <div class="header-icons">
+                    <a class="icon-link github-link" href="https://github.com/RealGMUCS/people" target="_blank"
+                        rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">
+                        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="subtitle-row">
+                <p class="site-subtitle"><span>George Mason University</span> · Department of Computer Science</p>
+                <nav class="top-nav" aria-label="Primary navigation">
+                    <a href="./" id="nav-people">Faculty/Staff</a>
+                    <a href="students.html" id="nav-students">Students/Alumni</a>
+                    <a href="news.html" id="nav-news" class="active" aria-current="page">News</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="news-intro" aria-labelledby="news-heading">
+            <h2 id="news-heading">Faculty &amp; Student News</h2>
+            <p>Research, recognition, funding, and milestones from the GMU CS community.</p>
+        </section>
+
+        <div class="controls" id="controls">
+            <div class="search-box">
+                <div class="search-fields">
+                    <div class="search-input-shell">
+                        <button type="button" id="search-scope-chip" class="search-scope-chip" hidden
+                            aria-label="Remove search scope">
+                            <span id="search-scope-chip-label"></span>
+                            <span class="search-scope-chip-remove" aria-hidden="true">×</span>
+                        </button>
+                        <input type="search" id="main-search" class="search-input" role="combobox" aria-autocomplete="list"
+                            aria-expanded="false" aria-controls="search-suggestion-panel"
+                            placeholder="Search news… try person:, category:, year:, #robotics" autocomplete="off" aria-label="Search news">
+                        <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help"><span class="search-help-icon" aria-hidden="true">?</span></button>
+                    </div>
+                    <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
+                </div>
+                <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help"
+                    hidden>
+                    <p><strong>QUERY SYNTAX</strong></p>
+                    <p>Type a keyword prefix to search one field directly:</p>
+                    <ul id="search-help-list"></ul>
+                    <p><strong>KEYBOARD</strong></p>
+                    <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>r</code> random · <code>Esc</code> clear</p>
+                    <p><strong>COMMANDS</strong></p>
+                    <p><code>help</code> · <code>query plan</code> · <code>recent</code> · <code>newest</code> · <code>clear</code></p>
+                </div>
+            </div>
+
+            <select id="category-filter" class="field-select" aria-label="Filter by news category">
+                <option value="all">All Categories</option>
+            </select>
+            <select id="year-filter" class="field-select" aria-label="Filter by news year">
+                <option value="all">All Years</option>
+            </select>
+            <select id="faculty-group-filter" class="field-select" aria-label="Faculty group">
+                <option value="cs">CS faculty</option>
+                <option value="all">All faculty (including affiliates)</option>
+            </select>
+            <select id="sort-order" class="field-select sort-select" aria-label="Sort news">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+        </div>
+
+        <output id="command-output" class="command-output" aria-live="polite" hidden></output>
+
+        <div class="examples" id="examples" aria-label="Example searches"></div>
+
+        <div class="result-row">
+            <p id="news-count" class="result-count" aria-live="polite">Loading news…</p>
+            <button type="button" id="clear-news-filters" class="page-link-btn">Clear filters</button>
+        </div>
+        <main>
+            <section id="news-results" class="roster" aria-label="News results" aria-busy="true"></section>
+        </main>
+        <p class="news-coverage">Selected updates from faculty websites, lab pages, and official announcements. Each story links to its source.</p>
+
+        <a class="add-fab" href="submit.html" aria-label="Add or update info" title="Add or update info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></a>
+        <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+        </button>
+    </div>
+
+    <script type="module" src="/src/news.ts"></script>
+</body>
+
+</html>

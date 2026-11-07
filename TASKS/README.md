@@ -15,6 +15,7 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 /goal TASKS/backfill_linkedin.md
 /goal TASKS/check_google_scholar.md
 /goal TASKS/verify_websites_and_labs.md
+/goal TASKS/collect_faculty_news.md
 /goal TASKS/audit_faculty_roster.md
 /goal TASKS/audit_students_and_alumni.md
 /goal TASKS/audit_awards_and_honors.md
@@ -23,8 +24,8 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 
 ### Scheduled cloud routines
 
-The same playbooks run unattended every week as cloud routines (discover, check, honors,
-portraits, and an Opus auditor). [`AUTOMATION.md`](AUTOMATION.md) is the source of truth for
+The same playbooks run unattended as cloud routines (weekly discover, check, and portraits;
+news and honors together twice a week; and an Opus auditor). [`AUTOMATION.md`](AUTOMATION.md) is the source of truth for
 their schedule, caps, and handoffs, and overrides the "until ALL batches are completed" directives
 below: a scheduled run stops at its cap.
 
@@ -54,6 +55,7 @@ To preserve git history and ensure multi-agent safety:
 | [`fetch_portraits.md`](fetch_portraits.md) | Search official GMU directory pages, lab sites, and homepages for verified headshots. | `public/faculty.json`, `public/students.json` PRs |
 | [`backfill_linkedin.md`](backfill_linkedin.md) | Backfill missing LinkedIn personal profile URLs for faculty and student cards. | `public/faculty.json`, `public/students.json` PRs |
 | [`check_google_scholar.md`](check_google_scholar.md) | Audit and backfill missing Google Scholar citation profile links. | `public/faculty.json`, `public/students.json` PRs |
+| [`collect_faculty_news.md`](collect_faculty_news.md) | Curate faculty and student news from every faculty homepage and lab, with source coverage tracking. | `public/news.json`, `maintenance/news-scan.json` |
 | [`verify_websites_and_labs.md`](verify_websites_and_labs.md) | Verify personal homepages, research lab URLs, and resolve broken links. | `public/faculty.json`, `public/students.json` PRs |
 | [`audit_faculty_roster.md`](audit_faculty_roster.md) | Audit GMU CS faculty data (rank, track, netid, office, undergrad/MS/PhD degrees, roles, research topics, timestamps, `Verified`). | `public/faculty.json` PRs |
 | [`audit_students_and_alumni.md`](audit_students_and_alumni.md) | Audit grad students & alumni (advisors, degrees, dissertation titles, current/first jobs, locations, internships, honors, `Verified`). | `public/students.json` PRs |

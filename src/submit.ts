@@ -20,6 +20,7 @@ function facultyToText(f) {
         ['Rank', f.rank],
         ['Dept Role', f.role],
         ['Website', f.website],
+        ['Lab Website', f.labWebsite],
         ['LinkedIn', f.linkedin],
         ['Google Scholar', f.scholar],
         ['Research interests', f.interests.join(', ')],

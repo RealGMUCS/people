@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { slugify } from '../scripts/generate-profile-pages.ts';
+import { escapeHtml } from '../src/utils.ts';
 
 const root = process.cwd();
 
@@ -36,6 +37,21 @@ test('profile pages generate valid HTML for faculty and students', () => {
 
     const stylePath = path.join(root, 'public', 'style.css');
     assert.ok(fs.existsSync(stylePath), 'public/style.css should exist for static profile pages');
+
+    const faculty = JSON.parse(fs.readFileSync(path.join(root, 'public', 'faculty.json'), 'utf8'));
+    for (const row of faculty) {
+        const slug = slugify(`${row['First Name']} ${row['Last Name']}`);
+        const content = fs.readFileSync(path.join(peopleDir, `${slug}.html`), 'utf8');
+        const links = content.match(/<nav class="links"[^>]*>([\s\S]*?)<\/nav>/)?.[1] || '';
+        if (row['Lab Website']) {
+            assert.ok(links.includes(`href="${escapeHtml(row['Lab Website'])}"`), `${slug} should link its research lab`);
+            assert.ok(links.includes('Research Lab Website'), `${slug} should label its research lab`);
+            const website = /^https?:\/\//.test(row.Website) ? row.Website : `https://${row.Website}`;
+            assert.ok(links.includes(`href="${escapeHtml(website)}"`), `${slug} should retain its separate website`);
+        } else {
+            assert.ok(!links.includes('Research Lab Website'), `${slug} should omit an unknown research lab`);
+        }
+    }
 });
 
 test('student profile pages resolve local portrait URLs from the site root', () => {

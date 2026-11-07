@@ -1,0 +1,76 @@
+{
+    "checked": "2026-11-05",
+    "dateRules": "Event date or dated primary announcement, retaining year/month/day precision; no inferred January 1 dates. NSF administrative transfer dates are not original award dates.",
+    "heldCandidates": [
+        {
+            "title": "4-VA supports digital twins for human–robot construction work",
+            "people": [
+                "Gregory Stein"
+            ],
+            "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established."
+        },
+        {
+            "title": "4-VA supports accountable use of generative AI in writing",
+            "people": [
+                "Tamara Maddox"
+            ],
+            "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established."
+        },
+        {
+            "title": "4-VA supports Sara-Lynn Gopalkrishna’s programming-course redesign",
+            "people": [
+                "Sara-Lynn Gopalkrishna"
+            ],
+            "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established."
+        }
+    ],
+    "discrepancies": [
+        {
+            "person": "Jana Košecká",
+            "topic": "NSF CAREER year",
+            "note": "NSF award 0347774 is dated 2004; the separate honors dataset lists 2003. News follows the primary funder record. Existing honors data was not changed.",
+            "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0347774"
+        },
+        {
+            "person": "Mingrui Liu",
+            "topic": "Cisco award year",
+            "note": "Faculty archive lists 2023 while the departmental honors page lists 2024. News retains the direct faculty archive year; the discrepancy remains recorded.",
+            "sourceUrl": "https://mingrliu.github.io/news.html"
+        }
+    ],
+    "exclusions": [
+        {
+            "people": [
+                "Qiang Zeng",
+                "Kai Zeng"
+            ],
+            "reason": "NSF CAREER transfer records at Mason do not establish new awards; original award dates were at prior institutions."
+        },
+        {
+            "people": [
+                "Simin Chen",
+                "Lannan (Lisa) Luo",
+                "Andrian Marcus",
+                "Kenton Murray",
+                "Zhicong Lu",
+                "Lap-Fai (Craig) Yu"
+            ],
+            "reason": "Excluded historical awards, defenses, and grants that occurred at earlier employers. Later awards received during Mason appointments remain eligible."
+        },
+        {
+            "reason": "Routine conference attendance, service, recruitment, undated project descriptions, and unsourced name-only matches omitted."
+        }
+    ],
+    "historicalCoverage": "Coverage is uneven because some faculty maintain deep news archives and others publish little news or have inaccessible/dead pages. Empty searches are not evidence that a person has no achievements.",
+    "sourceLinkCheck": {
+        "checked": "2026-11-05",
+        "distinctStoryUrls": 101,
+        "directHttp200": 72,
+        "directHttp403": 27,
+        "directRequestErrors": 2,
+        "note": "Direct checks found no 404 story links. Access blocks and the two transient request failures were covered by the primary-page web-tool reviews. Institutional bot protection can differ by client."
+    }
+}

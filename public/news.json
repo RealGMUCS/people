@@ -1,0 +1,4954 @@
+[
+    {
+        "id": "sun-usenix-atc-2026",
+        "title": "Sun group papers accepted at USENIX Security and ATC 2026",
+        "summary": "BenchChecker assesses the credibility of bug-fixing benchmarks for LLMs at USENIX Security 2026, and Yunlong Xing’s DESAN eliminates redundant sanitizer checks at ATC 2026.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "USENIX Security",
+            "ATC",
+            "Security"
+        ],
+        "sourceName": "Kun Sun’s homepage",
+        "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zeng-mobisys-2026",
+        "title": "Neural network diversification published at MobiSys 2026",
+        "summary": "Ying Meng’s MobiSys 2026 paper turns a single model into trillions of orthogonal variants to defeat attacks.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Qiang Zeng",
+            "Ying Meng"
+        ],
+        "tags": [
+            "MobiSys",
+            "AI security"
+        ],
+        "sourceName": "Qiang Zeng’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~zeng/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "robotixx-iros-corl-2026",
+        "title": "RobotiXX papers accepted at IROS and CoRL 2026",
+        "summary": "Xiao’s publication list includes ten IROS 2026 papers, on topics from vertically challenging terrain to fire-aware robots, and a CoRL 2026 paper on zero-shot quadruped transfer.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "IROS",
+            "CoRL",
+            "Robotics"
+        ],
+        "sourceName": "Xuesu Xiao’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xiao/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "craig-yu-siggraph-chi-ismar-2026",
+        "title": "Yu group papers accepted at SIGGRAPH, CHI, and ISMAR 2026",
+        "summary": "The papers cover role-aware virtual agents guided by a multimodal LLM (SIGGRAPH), HieraVisVR for VR playtesting (CHI), and LLM-based think-aloud analysis of player experience (ISMAR).",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Craig Yu"
+        ],
+        "tags": [
+            "SIGGRAPH",
+            "CHI",
+            "ISMAR",
+            "Virtual reality"
+        ],
+        "sourceName": "Craig Yu’s homepage",
+        "sourceUrl": "https://craigyuyu.github.io/home/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "hong-cscw-2026",
+        "title": "Autistic job-seeker interview preparation paper at CSCW 2026",
+        "summary": "The Alignment Lab studies human-AI collaboration for interview preparation by autistic job seekers.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Sungsoo (Ray) Hong"
+        ],
+        "tags": [
+            "CSCW",
+            "Human-AI collaboration",
+            "Accessibility"
+        ],
+        "sourceName": "Alignment Lab",
+        "sourceUrl": "https://alignment.lab.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-usenix-security-pwnie-2026",
+        "title": "AIOops accepted at USENIX Security 2026; Pwnie finalists",
+        "summary": "Kornaropoulos’s AIOops (USENIX Security 2026) and LLMmap (USENIX Security 2025), which fingerprints large language models, are finalists for the 2026 Pwnie Award for Best AI Security Research.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Evgenios Kornaropoulos"
+        ],
+        "tags": [
+            "USENIX Security",
+            "Pwnie Awards",
+            "AI security"
+        ],
+        "sourceName": "Evgenios Kornaropoulos’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~evgenios/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ye-cvpr-tpami-2025-2026",
+        "title": "Ye group papers at CVPR 2025 and TPAMI 2026",
+        "summary": "Yufan Zhang leads “Seeing a 3D World in a Grain of Sand” (CVPR 2025) and “Snapshot 3D Gaussian Splatting for Miniature Scenes” (TPAMI 2026).",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Jinwei Ye",
+            "Yufan Zhang"
+        ],
+        "tags": [
+            "CVPR",
+            "TPAMI",
+            "Computer vision"
+        ],
+        "sourceName": "Jinwei Ye’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~jinweiye/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-cec-dean-excellence-2026",
+        "title": "Evgenios Kornaropoulos receives CEC Dean’s Excellence Award",
+        "summary": "Kornaropoulos is honored with the College of Engineering and Computing’s Dean’s Excellence Award for Outstanding Tenure-Track Assistant Professor.",
+        "date": "2026",
+        "category": "faculty-achievement",
+        "people": [
+            "Evgenios Kornaropoulos"
+        ],
+        "tags": [
+            "Faculty award",
+            "CEC"
+        ],
+        "sourceName": "Evgenios Kornaropoulos’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~evgenios/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "rahman-phd-defense-amazon-2026",
+        "title": "Md. Mushfiqur Rahman defends PhD and joins Amazon",
+        "summary": "Lybarger’s lab celebrates Rahman’s defense on accessible, safe health communication and his Applied Scientist II position.",
+        "date": "2026-10-28",
+        "category": "graduation",
+        "people": [
+            "Kevin Lybarger",
+            "Ziwei Zhu",
+            "Md. Mushfiqur Rahman"
+        ],
+        "tags": [
+            "PhD",
+            "Clinical NLP",
+            "AI safety"
+        ],
+        "sourceName": "Lybarger Language Lab",
+        "sourceUrl": "https://www.lybargerlanguagelab.org/news.html#2026-10-28-md-dissertation-defense",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lybarger-demi-jbi-2026",
+        "title": "DEMI research advances prediction from aggregated clinical data",
+        "summary": "Lybarger and collaborators publish a method for predicting outcomes without individual patient records in the Journal of Biomedical Informatics.",
+        "date": "2026-10-27",
+        "category": "paper",
+        "people": [
+            "Kevin Lybarger"
+        ],
+        "tags": [
+            "Healthcare",
+            "Clinical NLP"
+        ],
+        "sourceName": "Lybarger Language Lab",
+        "sourceUrl": "https://www.lybargerlanguagelab.org/news.html#2026-10-27-demi-jbi-published",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zampieri-schmidt-cuneiai-2026",
+        "title": "Schmidt Sciences funds CuneiAI research",
+        "summary": "Zampieri and Helsinki collaborators receive support for AI analysis of ancient Mesopotamian languages and cuneiform texts.",
+        "date": "2026-10-19",
+        "category": "grant",
+        "people": [
+            "Marcos Zampieri"
+        ],
+        "tags": [
+            "Schmidt Sciences",
+            "NLP",
+            "Digital humanities"
+        ],
+        "sourceName": "GMU Information Sciences and Technology",
+        "sourceUrl": "https://ist.gmu.edu/news/2026-10/bringing-ancient-mesopotamia-ai-age",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "murray-language-access-research-2026",
+        "title": "Kenton Murray broadens language access in AI",
+        "summary": "Mason profiles Murray’s work with researchers and language communities to improve multilingual technology.",
+        "date": "2026-10-14",
+        "category": "research",
+        "people": [
+            "Kenton Murray"
+        ],
+        "tags": [
+            "NLP",
+            "Multilingual AI"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-10/helping-ai-speak-more-worlds-languages",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "brodsky-microgrid-icorps-2026",
+        "title": "Microgrid Optima receives NSF I-Corps support",
+        "summary": "Brodsky and entrepreneurial lead Xu Han explore markets for energy-management decision technology.",
+        "date": "2026-10-02",
+        "category": "grant",
+        "people": [
+            "Alex Brodsky",
+            "Xu (Ethan) Han"
+        ],
+        "tags": [
+            "NSF I-Corps",
+            "Energy",
+            "Technology transfer"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-10/microgrids-meet-market",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "robotixx-roboracer-iros-2026",
+        "title": "RobotiXX takes first and second at IROS RoboRacer",
+        "summary": "The lab celebrates Aniket Datar, Francesco Cancelliere, and Alexandyr Card for its first- and second-place finishes at the IROS 2026 RoboRacer competition.",
+        "date": "2026-10-01",
+        "category": "student-achievement",
+        "people": [
+            "Xuesu Xiao",
+            "Aniket Datar",
+            "Francesco Cancelliere",
+            "Alexandyr Card"
+        ],
+        "tags": [
+            "Robotics",
+            "Competition",
+            "IROS"
+        ],
+        "sourceName": "Xuesu Xiao’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xiao/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-emnlp-outstanding-paper-2026",
+        "title": "Bilingual pretraining research wins EMNLP Outstanding Paper",
+        "summary": "Anjishnu Mukherjee, Ziwei Zhu, and Antonios Anastasopoulos earn recognition for studying language-conditioned representations.",
+        "date": "2026-10",
+        "category": "paper-award",
+        "people": [
+            "Ziwei Zhu",
+            "Antonios Anastasopoulos",
+            "Anjishnu Mukherjee"
+        ],
+        "tags": [
+            "EMNLP",
+            "Outstanding paper",
+            "NLP"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neurips-2026",
+        "title": "ROARS Lab paper accepted at NeurIPS 2026",
+        "summary": "Hai Duong leads a NeurIPS 2026 research paper on using reinforcement learning to aid neural network verification.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Verification",
+            "AI safety"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-ndss-ccs-tosem-2026",
+        "title": "Zhang group papers accepted at NDSS 2027, CCS 2026, and TOSEM",
+        "summary": "The group reports an NDSS 2027 paper on XR app privacy-disclosure inconsistencies, CCS 2026 papers on TPU attacks and Apple Vision Pro privacy with Yichang Xiong and Vamsi Shankar Simhadri, and a TOSEM paper on LLM-driven secure code generation.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Yichang Xiong",
+            "Vamsi Shankar Simhadri"
+        ],
+        "tags": [
+            "NDSS",
+            "CCS",
+            "TOSEM",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zeng-students-neurips-2026",
+        "title": "Two student-led papers accepted at NeurIPS",
+        "summary": "Qiang Zeng reports NeurIPS 2026 acceptances for two papers first-authored by his students Xiang Li and Jie Hou.",
+        "date": "2026-09-24",
+        "category": "paper",
+        "people": [
+            "Qiang Zeng",
+            "Xiang Li",
+            "Jie Hou"
+        ],
+        "tags": [
+            "AI",
+            "Security",
+            "NeurIPS"
+        ],
+        "sourceName": "Qiang Zeng’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~zeng/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cat-hpc-bench-neurips-2026",
+        "title": "HPC-Bench accepted at NeurIPS 2026",
+        "summary": "CAT Lab’s benchmark for evaluating LLM-generated HPC code optimizations was accepted in the NeurIPS Evaluations and Datasets track.",
+        "date": "2026-09-24",
+        "category": "paper",
+        "people": [
+            "Keren Zhou"
+        ],
+        "tags": [
+            "AI",
+            "High-performance computing",
+            "NeurIPS"
+        ],
+        "sourceName": "CAT Lab",
+        "sourceUrl": "https://deep-learning-profiling-tools.github.io/CAT-Lab/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lu-emnlp-2026",
+        "title": "Chinese pragmatic-inference benchmark accepted at EMNLP 2026",
+        "summary": "Lu’s group benchmarks social pragmatic inference for indirect and playful Chinese online comments in an EMNLP 2026 main-conference paper.",
+        "date": "2026-09-20",
+        "category": "paper",
+        "people": [
+            "Zhicong Lu"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP",
+            "Social computing"
+        ],
+        "sourceName": "Zhicong Lu’s homepage",
+        "sourceUrl": "https://luzhc.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lu-cscw-honorable-mention-2026",
+        "title": "Livestreaming labor research earns CSCW honorable mention",
+        "summary": "Lu announces recognition for collaborative research on how multi-channel networks govern livestreaming work in China.",
+        "date": "2026-09-14",
+        "category": "paper-award",
+        "people": [
+            "Zhicong Lu"
+        ],
+        "tags": [
+            "CSCW",
+            "Honorable mention",
+            "Human-computer interaction"
+        ],
+        "sourceName": "Zhicong Lu’s homepage",
+        "sourceUrl": "https://luzhc.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cat-nki-teaching-sigcse-2027",
+        "title": "NKI Teaching Lab accepted at SIGCSE TS 2027",
+        "summary": "CAT Lab announces acceptance of its accelerator-free toolchain for teaching tile-level AI accelerator programming. The paper includes Zhicong Lu, Binqian (Bella) Yin, and Keren Zhou.",
+        "date": "2026-09-14",
+        "category": "paper",
+        "people": [
+            "Keren Zhou",
+            "Zhicong Lu",
+            "Binqian (Bella) Yin"
+        ],
+        "tags": [
+            "Computer science education",
+            "AI accelerators",
+            "SIGCSE"
+        ],
+        "sourceName": "CAT Lab",
+        "sourceUrl": "https://deep-learning-profiling-tools.github.io/CAT-Lab/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neuralsat-vnncomp-2026",
+        "title": "NeuralSAT ranks fourth at VNN-COMP 2026",
+        "summary": "ROARS Lab reports fourth place overall for NeuralSAT in the neural network verification competition, recognizing Hai Duong’s work.",
+        "date": "2026-09",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "AI safety",
+            "Verification",
+            "Competition"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-flashbob-neurips-2026",
+        "title": "FlashBoB accepted at NeurIPS",
+        "summary": "Liu announces GPU-kernel research on efficient higher-order differentiation for softmax attention, led by his students.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "NeurIPS",
+            "GPU",
+            "Machine learning"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-emnlp-2026",
+        "title": "Three Zhu group papers accepted at EMNLP 2026 main conference",
+        "summary": "Students Anjishnu Mukherjee, Bowen Wei, Sina Mansouri, and Mohit Bharatbhai Marvania contribute to three EMNLP 2026 main-conference papers.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Anjishnu Mukherjee",
+            "Bowen Wei",
+            "Sina Mansouri",
+            "Mohit Bharatbhai Marvania"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "porfirio-uist-2026",
+        "title": "Puqi Zhou paper accepted at UIST 2026",
+        "summary": "Puqi Zhou has a paper accepted at the 2026 ACM Symposium on User Interface Software and Technology.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "David Porfirio",
+            "Puqi Zhou"
+        ],
+        "tags": [
+            "UIST",
+            "Human-computer interaction"
+        ],
+        "sourceName": "ARI Lab",
+        "sourceUrl": "https://ari-lab-gmu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-mobicom-2026",
+        "title": "On-device LLM streaming paper accepted at MobiCom 2026",
+        "summary": "Yao’s group presents a speculate-and-refine asynchronous streaming framework for on-device LLM inference.",
+        "date": "2026-08-09",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "MobiCom",
+            "LLM inference",
+            "Mobile systems"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhou-doe-genesis-2026",
+        "title": "Keren Zhou receives DOE Genesis Award",
+        "summary": "The award supports AI methods for predicting and optimizing high-performance computing applications.",
+        "date": "2026-08-04",
+        "category": "grant",
+        "people": [
+            "Keren Zhou"
+        ],
+        "tags": [
+            "Department of Energy",
+            "AI",
+            "High-performance computing"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-08/george-mason-computer-scientist-receives-doe-genesis-award-breakthrough-ai-hpc",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-nsf-cyberai-2026",
+        "title": "NSF funds Zhang’s CyberAI Innovation proposal",
+        "summary": "The faculty homepage announces a new award supporting the group’s work.",
+        "date": "2026-08",
+        "category": "grant",
+        "people": [
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "NSF",
+            "AI",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "nlp-emnlp-2026",
+        "title": "Mason NLP celebrates four EMNLP acceptances",
+        "summary": "The group announces three papers accepted to the EMNLP main conference and one to Findings, congratulating Anjishnu, Hao, and Antik.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "NLP",
+            "EMNLP",
+            "AI"
+        ],
+        "sourceName": "George Mason NLP",
+        "sourceUrl": "https://nlp.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ivlab-sttr-phase-one-2026",
+        "title": "Jinwei Ye receives NSF STTR Phase I award",
+        "summary": "The Imaging and Vision Lab announces an NSF STTR Phase I award with LightThought.",
+        "date": "2026-08",
+        "category": "grant",
+        "people": [
+            "Jinwei Ye"
+        ],
+        "tags": [
+            "Computer vision",
+            "NSF",
+            "STTR"
+        ],
+        "sourceName": "Imaging and Vision Lab",
+        "sourceUrl": "https://ivlab.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-colm-2026",
+        "title": "Two Mason NLP papers accepted at COLM",
+        "summary": "The group congratulates Anjishnu Mukherjee, Chutong Meng, and Prabin Bhandari on two COLM 2026 acceptances.",
+        "date": "2026-07",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Anjishnu Mukherjee",
+            "Chutong Meng",
+            "Prabin Bhandari"
+        ],
+        "tags": [
+            "COLM",
+            "NLP",
+            "Language models"
+        ],
+        "sourceName": "George Mason NLP",
+        "sourceUrl": "https://nlp.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-nsf-career-2026",
+        "title": "Ziyu Yao receives NSF CAREER award",
+        "summary": "The five-year project investigates language-model mechanisms to improve transparency and AI-generated code.",
+        "date": "2026-07-20",
+        "category": "grant",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Explainable AI",
+            "Language models"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-07/nsf-career-award-allows-researcher-look-under-ais-hood",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-vignette-acl-highlight-2026",
+        "title": "VIGNETTE receives ACL SAC Highlight recognition",
+        "summary": "The project examines socially grounded bias in vision-language models.",
+        "date": "2026-07",
+        "category": "paper-award",
+        "people": [
+            "Ziwei Zhu",
+            "Antonios Anastasopoulos",
+            "Chahat Raj",
+            "Bowen Wei"
+        ],
+        "tags": [
+            "ACL",
+            "Research highlight",
+            "Responsible AI"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-dhakal-phd-2026",
+        "title": "Roshan Dhakal graduates with PhD",
+        "summary": "Dhakal’s dissertation studies learning-augmented anticipatory planning for long-lived robots.",
+        "date": "2026-07",
+        "category": "graduation",
+        "people": [
+            "Gregory Stein",
+            "Roshan Dhakal"
+        ],
+        "tags": [
+            "PhD",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s news archive",
+        "sourceUrl": "https://gjstein.com/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "srivastava-phd-defense-2026",
+        "title": "Saurabh Srivastava defends his PhD",
+        "summary": "Mason NLP celebrates Saurabh Srivastava’s PhD defense and announces his planned move to Adobe to continue research on language models.",
+        "date": "2026-07",
+        "category": "graduation",
+        "people": [
+            "Ziyu Yao",
+            "Saurabh Srivastava"
+        ],
+        "tags": [
+            "PhD",
+            "NLP",
+            "Language models"
+        ],
+        "sourceName": "George Mason NLP",
+        "sourceUrl": "https://nlp.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shiwei-hong-ai-comedy-2026",
+        "title": "Shiwei Hong studies collaborative AI comedy writing",
+        "summary": "Her ACL-accepted research tests whether agents improve humor through discussion and feedback.",
+        "date": "2026-06-08",
+        "category": "research",
+        "people": [
+            "Zhicong Lu",
+            "Shiwei Hong"
+        ],
+        "tags": [
+            "ACL",
+            "AI agents",
+            "Creativity"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-06/why-did-ai-agent-cross-road",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "yadav-ieee-sp-distinguished-paper-2026",
+        "title": "Aayush Yadav earns IEEE security distinguished-paper recognition",
+        "summary": "The doctoral student’s research studies transaction privacy and threshold encryption in blockchain systems.",
+        "date": "2026-06-02",
+        "category": "paper-award",
+        "people": [
+            "Foteini Baldimtsi",
+            "Aayush Yadav"
+        ],
+        "tags": [
+            "IEEE S&P",
+            "Distinguished paper",
+            "Cryptography"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-06/george-mason-phd-student-recognized-blockchain-privacy-research",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-colt-2026",
+        "title": "Large-step-size gradient descent result accepted at COLT 2026",
+        "summary": "Liu’s COLT 2026 paper shows that gradient descent with arbitrarily large step sizes on logistic regression over low-dimensional separable data reaches arbitrarily accurate solutions in a constant number of iterations.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "COLT",
+            "Learning theory",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-kdd-2026",
+        "title": "Vulnerability benchmark accepted at KDD 2026",
+        "summary": "Vishnu Teja Kandalam’s vulnerability benchmark paper is accepted at KDD 2026.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Vishnu Teja Kandalam"
+        ],
+        "tags": [
+            "KDD",
+            "Security",
+            "Benchmarks"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "culpa-usenix-security-2026",
+        "title": "CULPA Rust memory-safety paper accepted at USENIX Security 2026",
+        "summary": "Hung-Mao (Rafael) Chen and Bo Lu, with Xiaokuan Zhang and Kun Sun, detect memory-safety bugs in unsafe Rust through the lens of safety requirements.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Kun Sun",
+            "Hung-Mao (Rafael) Chen",
+            "Bo Lu"
+        ],
+        "tags": [
+            "USENIX Security",
+            "Rust",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-icml-2026",
+        "title": "Zhu group paper accepted at ICML 2026",
+        "summary": "Student Jinhao Pan and collaborators have a paper accepted at ICML 2026.",
+        "date": "2026-05",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Jinhao Pan"
+        ],
+        "tags": [
+            "ICML",
+            "Machine learning"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "nora-mcdonald-nsf-career-2026",
+        "title": "Nora McDonald receives NSF CAREER award",
+        "summary": "The project studies adolescent autonomy and resilience in personalized, AI-mediated environments.",
+        "date": "2026-05-25",
+        "category": "grant",
+        "people": [
+            "Nora McDonald"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2537125",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "bo-han-presidential-research-2026",
+        "title": "Bo Han receives Presidential Faculty Excellence in Research Award",
+        "summary": "Mason recognizes Han’s work on mobile immersive computing and student mentorship.",
+        "date": "2026-05-14",
+        "category": "faculty-achievement",
+        "people": [
+            "Bo Han"
+        ],
+        "tags": [
+            "Faculty award",
+            "Extended reality"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2026-05/faculty-honored-presidential-awards",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "monroe-white-kauffman-hbcu-2026",
+        "title": "Kauffman Foundation supports HBCU entrepreneurship research",
+        "summary": "Monroe-White joins a multi-institution project studying HBCUs, Black entrepreneurship, and economic mobility.",
+        "date": "2026-05-13",
+        "category": "grant",
+        "people": [
+            "Thema Monroe-White"
+        ],
+        "tags": [
+            "Kauffman Foundation",
+            "Entrepreneurship",
+            "Equity"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-05/hbcu-hubs-highlighted-new-study-black-business-builders",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-icml-spotlight-2026",
+        "title": "ROARS research selected for ICML Spotlight",
+        "summary": "The lab reports an ICML 2026 Spotlight for its work on generating randomized self-reductions for mathematical functions.",
+        "date": "2026-05",
+        "category": "paper-award",
+        "people": [
+            "ThanhVu (Vu) Nguyen"
+        ],
+        "tags": [
+            "AI",
+            "Formal methods",
+            "ICML",
+            "Spotlight"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "nguyen-outstanding-service-2026",
+        "title": "Vu Nguyen receives CS Outstanding Service Award",
+        "summary": "ROARS Lab announces the department’s Outstanding Service Award for Vu Nguyen’s service and contributions.",
+        "date": "2026-05",
+        "category": "faculty-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen"
+        ],
+        "tags": [
+            "Service",
+            "Faculty award"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "hai-duong-outstanding-phd-2026",
+        "title": "Hai Duong receives Outstanding PhD Student Award",
+        "summary": "ROARS Lab celebrates Hai Duong’s 2026 Outstanding PhD Student Award from GMU Computer Science.",
+        "date": "2026-05",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "Student award",
+            "PhD",
+            "Verification"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "faisal-phd-defense-2026",
+        "title": "Fahim Faisal defends his PhD",
+        "summary": "Mason NLP celebrates Fahim Faisal’s PhD defense and announces a planned postdoctoral position at Oak Ridge National Laboratory.",
+        "date": "2026-05",
+        "category": "graduation",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Fahim Faisal"
+        ],
+        "tags": [
+            "PhD",
+            "NLP",
+            "Postdoc"
+        ],
+        "sourceName": "George Mason NLP",
+        "sourceUrl": "https://nlp.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-cvpr-highlight-2026",
+        "title": "Vision verification paper selected as CVPR Highlight",
+        "summary": "ROARS Lab reports a CVPR 2026 Highlight for Hai Duong’s research paper on verifying AI-based computer vision systems.",
+        "date": "2026-04",
+        "category": "paper-award",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "CVPR",
+            "Highlight",
+            "Verification"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-icml-2026",
+        "title": "Two Liu group papers accepted at ICML 2026",
+        "summary": "The papers study data selection for large language model pretraining and non-Euclidean gradient descent, with students Michael Crawshaw, Jie Hao, and Rui Yu.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Michael Timothy Crawshaw",
+            "Jie Hao",
+            "Rui Yu"
+        ],
+        "tags": [
+            "ICML",
+            "Machine learning",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-ccs-rust-2026",
+        "title": "Rust security paper accepted at CCS 2026",
+        "summary": "Zhang’s group reports a conditionally accepted Rust security paper at ACM CCS 2026.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "CCS",
+            "Rust",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-cvpr-highlight-2026",
+        "title": "Vision transformer generalization paper selected as CVPR Highlight",
+        "summary": "Yao’s CVPR 2026 paper Inside-Out, which measures vision transformer generalization through mechanistic interpretability, is selected as a Highlight (top 3%).",
+        "date": "2026-04",
+        "category": "paper-award",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "CVPR",
+            "Highlight",
+            "Interpretability"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "web-agents-acl-2026",
+        "title": "Web agent failure analysis accepted at ACL 2026",
+        "summary": "Mohamed Aghzal, Gregory Stein, and Ziyu Yao explain why LLM-based web agents fail from a hierarchical planning perspective.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao",
+            "Gregory Stein",
+            "Mohamed Aghzal"
+        ],
+        "tags": [
+            "ACL",
+            "LLM agents",
+            "Planning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-jair-2026",
+        "title": "Multi-agent path finding paper published in JAIR",
+        "summary": "Hoang-Dung Bui, Erion Plaku, and Gregory Stein address multi-agent path finding under limited communication range via dynamic leading.",
+        "date": "2026-04",
+        "category": "paper",
+        "people": [
+            "Gregory Stein",
+            "Erion Plaku",
+            "Hoang-Dung Bui"
+        ],
+        "tags": [
+            "JAIR",
+            "Multi-agent planning",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s homepage",
+        "sourceUrl": "https://gjstein.com/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "daigo-shishika-nsf-career-2026",
+        "title": "Daigo Shishika receives NSF CAREER award",
+        "summary": "The project studies signaling, deception, and cooperation through motion in multi-agent systems.",
+        "date": "2026-04-16",
+        "category": "grant",
+        "people": [
+            "Daigo Shishika"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2540913",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-yunlong-xing-defense-2026",
+        "title": "Yunlong Xing defends dissertation",
+        "summary": "Kun Sun announces Xing’s defense on software sanitization and patch generation, with a planned Michigan Tech faculty position.",
+        "date": "2026-04",
+        "category": "graduation",
+        "people": [
+            "Kun Sun",
+            "Yunlong Xing"
+        ],
+        "tags": [
+            "PhD",
+            "Security",
+            "Faculty placement"
+        ],
+        "sourceName": "Kun Sun’s homepage",
+        "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-amazon-research-award-2026",
+        "title": "ROARS receives second Amazon Research Award",
+        "summary": "The lab announces an Amazon Research Award supporting verifiable AI and machine-learning-assisted mathematical reasoning.",
+        "date": "2026-04",
+        "category": "grant",
+        "people": [
+            "ThanhVu (Vu) Nguyen"
+        ],
+        "tags": [
+            "AI safety",
+            "Amazon Research Award",
+            "Formal methods"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ishimwe-dissertation-defense-2026",
+        "title": "Didier Ishimwe defends his dissertation",
+        "summary": "ROARS Lab celebrates Didier Ishimwe’s dissertation defense on complexity analysis, marking its second PhD alumnus.",
+        "date": "2026-04",
+        "category": "graduation",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Didier Ishimwe"
+        ],
+        "tags": [
+            "PhD",
+            "Software engineering",
+            "Complexity analysis"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "crawshaw-phd-dissertation-award-2026",
+        "title": "Michael Crawshaw defends PhD and wins dissertation award",
+        "summary": "Mingrui Liu celebrates his first PhD graduate, a CS Outstanding Dissertation Award recipient, and announces a planned Flatiron Institute postdoc.",
+        "date": "2026-04",
+        "category": "graduation",
+        "people": [
+            "Mingrui Liu",
+            "Michael Crawshaw"
+        ],
+        "tags": [
+            "PhD",
+            "Dissertation award",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-mobisys-2026",
+        "title": "Physics-supervised IMU sensing paper accepted at MobiSys 2026",
+        "summary": "The paper learns IMU sensing without labels using physics-based supervision.",
+        "date": "2026-04-11",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "MobiSys",
+            "Sensing"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-foresight-interpretability-2026",
+        "title": "Foresight Institute supports mechanistic interpretability research",
+        "summary": "Yao announces a collaborative grant with Huan Sun.",
+        "date": "2026-03",
+        "category": "grant",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "Foresight Institute",
+            "Explainable AI"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-rafael-chen-defense-2026",
+        "title": "Hung-Mao Chen defends dissertation",
+        "summary": "Sun celebrates Chen’s defense on Rust security and announces a planned Google software-engineering role.",
+        "date": "2026-03",
+        "category": "graduation",
+        "people": [
+            "Kun Sun",
+            "Hung-Mao (Rafael) Chen"
+        ],
+        "tags": [
+            "PhD",
+            "Rust",
+            "Security"
+        ],
+        "sourceName": "Kun Sun’s homepage",
+        "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-tse-2026",
+        "title": "Specification repair paper accepted in TSE",
+        "summary": "ROARS Lab publishes a 2026 IEEE Transactions on Software Engineering research paper on specification repair and test generation.",
+        "date": "2026-03",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen"
+        ],
+        "tags": [
+            "TSE",
+            "Software engineering",
+            "Formal methods"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-mobisys-2026",
+        "title": "5G NR backscatter paper accepted at MobiSys 2026",
+        "summary": "Pathak’s group presents low-complexity, high-speed backscatter for wideband 5G NR.",
+        "date": "2026-03",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "MobiSys",
+            "Backscatter",
+            "5G"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-chi-2026",
+        "title": "AI peers paper accepted at CHI 2026",
+        "summary": "Yao’s group designs AI peers for the MathVC math-education platform in a CHI 2026 paper.",
+        "date": "2026-02",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "CHI",
+            "AI for education"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-icra-2026",
+        "title": "mmWave radar NeRF paper accepted at ICRA 2026",
+        "summary": "The group’s ICRA 2026 paper presents a NeRF model for mmWave radar view synthesis and pose estimation.",
+        "date": "2026-02",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "ICRA",
+            "mmWave",
+            "Robotics"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "robotixx-icra-2026",
+        "title": "RobotiXX presents five papers at ICRA 2026",
+        "summary": "The lab presents four ICRA 2026 conference papers and one RA-L paper.",
+        "date": "2026-02-01",
+        "category": "paper",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "ICRA",
+            "Robotics"
+        ],
+        "sourceName": "RobotiXX Lab",
+        "sourceUrl": "https://robotixx.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-fse-2026",
+        "title": "Structural robustness paper accepted at FSE 2026",
+        "summary": "Hai Duong’s FSE 2026 research paper formalizes and verifies structural robustness properties of AI systems.",
+        "date": "2026-01",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "FSE",
+            "Verification",
+            "AI safety"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-iclr-2026",
+        "title": "Bilevel optimization paper accepted at ICLR 2026",
+        "summary": "Students Yuman Wu, Xiaochuan Gong, and Jie Hao coauthor an ICLR 2026 paper on bilevel optimization under uniform convexity.",
+        "date": "2026-01",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Yuman Wu",
+            "Xiaochuan Gong",
+            "Jie Hao"
+        ],
+        "tags": [
+            "ICLR",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-sensys-2026",
+        "title": "Bistatic mmWave backscatter paper accepted at SenSys 2026",
+        "summary": "The group proposes bistatic beamforming for mmWave backscatter IoT devices.",
+        "date": "2026-01",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "SenSys",
+            "mmWave",
+            "IoT"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shehu-kabir-genetic-interactions-2026",
+        "title": "AI research helps explain interactions between genetic variants",
+        "summary": "Shehu’s group and Anowarul Kabir contribute computational models to a collaborative PNAS study of restored protein function.",
+        "date": "2026-01-12",
+        "category": "research",
+        "people": [
+            "Amarda Shehu",
+            "Anowarul Kabir"
+        ],
+        "tags": [
+            "PNAS",
+            "AI",
+            "Computational biology"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2026-01/groundbreaking-study-reveals-hidden-complexity-human-genetics",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "wing-lam-tdrepro-ase-2026",
+        "title": "TDRepro wins ACM SIGSOFT Distinguished Paper Award",
+        "summary": "Wing Lam’s homepage reports an ASE 2026 distinguished paper award for TDRepro, a neurosymbolic approach to reproducing timing-dependent flaky test failures.",
+        "date": "2026",
+        "category": "paper-award",
+        "people": [
+            "Wing Lam",
+            "Shanto Rahman",
+            "Talank Baral"
+        ],
+        "tags": [
+            "Software engineering",
+            "Testing",
+            "ASE",
+            "ACM SIGSOFT"
+        ],
+        "sourceName": "Wing Lam’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~winglam/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "wing-lam-jvm-issta-2026",
+        "title": "JVM configuration research wins distinguished paper award",
+        "summary": "Wing Lam reports an ACM SIGSOFT Distinguished Paper Award at ISSTA 2026 for research on profiling-guided Bayesian optimization of JVM configurations.",
+        "date": "2026",
+        "category": "paper-award",
+        "people": [
+            "Wing Lam"
+        ],
+        "tags": [
+            "Software engineering",
+            "ISSTA",
+            "ACM SIGSOFT"
+        ],
+        "sourceName": "Wing Lam’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~winglam/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-configwiz-securecomm-best-paper-2026",
+        "title": "ConfigWiz wins SecureComm Best Paper",
+        "summary": "Sun announces recognition for automated privilege configuration in containerized applications.",
+        "date": "2026",
+        "category": "paper-award",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "SecureComm",
+            "Best paper",
+            "Containers"
+        ],
+        "sourceName": "Kun Sun’s homepage",
+        "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-phd-class-2026",
+        "title": "RAIL celebrates four new PhDs",
+        "summary": "Stein announces the graduations of Abhishek Paudel, Abhish Khanal, Raihan Islam Arnob, and Hoang-Dung Bui in spring 2026.",
+        "date": "2026",
+        "category": "graduation",
+        "people": [
+            "Gregory Stein",
+            "Abhishek Paudel",
+            "Abhish Khanal",
+            "Raihan Islam Arnob",
+            "Hoang-Dung Bui"
+        ],
+        "tags": [
+            "PhD",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s news archive",
+        "sourceUrl": "https://gjstein.com/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "puqi-zhou-doctoral-scholarship-2026",
+        "title": "Puqi Zhou earns Doctoral Research Scholarship",
+        "summary": "ARI Lab congratulates Puqi Zhou on receiving George Mason’s 2026–2027 Doctoral Research Scholarship.",
+        "date": "2026",
+        "category": "student-achievement",
+        "people": [
+            "David Porfirio",
+            "Puqi Zhou"
+        ],
+        "tags": [
+            "Scholarship",
+            "Human-robot interaction"
+        ],
+        "sourceName": "Autonomous Robot Interaction Lab",
+        "sourceUrl": "https://ari-lab-gmu.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "mohebbi-iise-sustainability-teaching-2026",
+        "title": "Shima Mohebbi receives IISE sustainability teaching award",
+        "summary": "CARING Lab reports the Sustainable Development division’s teaching recognition.",
+        "date": "2026",
+        "category": "faculty-achievement",
+        "people": [
+            "Shima Mohebbi"
+        ],
+        "tags": [
+            "IISE",
+            "Teaching",
+            "Sustainability"
+        ],
+        "sourceName": "CARING Lab",
+        "sourceUrl": "https://mohebbilab.cec.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "craig-yu-service-award-2026",
+        "title": "Craig Yu receives CS Outstanding Service Award",
+        "summary": "Yu announces the department’s 2026 service recognition.",
+        "date": "2026",
+        "category": "faculty-achievement",
+        "people": [
+            "Craig Yu"
+        ],
+        "tags": [
+            "Service",
+            "Faculty award"
+        ],
+        "sourceName": "Craig Yu’s homepage",
+        "sourceUrl": "https://craigyuyu.github.io/home/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-mosound-honorable-mention-2026",
+        "title": "MoSound receives CHI Best Paper Honorable Mention",
+        "summary": "Jialin Huang’s sound-design research earns recognition at CHI 2026.",
+        "date": "2026",
+        "category": "paper-award",
+        "people": [
+            "Yotam Gingold",
+            "Jialin Huang"
+        ],
+        "tags": [
+            "CHI",
+            "Human-computer interaction"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-security-papers-2025",
+        "title": "Sun group papers at USENIX Security, CCS, and NDSS 2025",
+        "summary": "The group reports DISPATCH, which separates security patches from entangled code changes, at USENIX Security 2025, two CCS 2025 papers on encrypted-traffic classification and off-path TCP exploits, and an NDSS 2025 paper on Wi-Fi TCP hijacking.",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "USENIX Security",
+            "CCS",
+            "NDSS",
+            "Security"
+        ],
+        "sourceName": "Kun Sun’s homepage",
+        "sourceUrl": "https://csis.gmu.edu/ksun/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zeng-papers-2025",
+        "title": "Zeng group papers at USENIX Security, ICCV, and MobiCom 2025",
+        "summary": "Xiang Li’s OneFlip (USENIX Security 2025) and SoleFlip (ICCV 2025) implant backdoors with single bit flips, Junming Chen’s nRootTag turns Bluetooth devices into trackers (USENIX Security 2025), and Xiaoyue Ma’s MatterGuard uses LLMs to test Matter IoT SDKs (MobiCom 2025).",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Qiang Zeng",
+            "Xiang Li",
+            "Junming Chen",
+            "Xiaoyue Ma"
+        ],
+        "tags": [
+            "USENIX Security",
+            "ICCV",
+            "MobiCom",
+            "Security"
+        ],
+        "sourceName": "Qiang Zeng’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~zeng/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "craig-yu-ismar-2025",
+        "title": "Virtual activity crafting paper accepted at ISMAR 2025",
+        "summary": "Yu’s group crafts dynamic virtual activities with advanced multimodal models.",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Craig Yu"
+        ],
+        "tags": [
+            "ISMAR",
+            "Mixed reality"
+        ],
+        "sourceName": "Craig Yu’s homepage",
+        "sourceUrl": "https://craigyuyu.github.io/home/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-chi-2025",
+        "title": "Scaffold-based product design paper accepted at CHI 2025",
+        "summary": "Xue Yu’s CHI 2025 paper explores product designs with scaffold-based editing.",
+        "date": "2025",
+        "category": "paper",
+        "people": [
+            "Yotam Gingold",
+            "Xue Yu"
+        ],
+        "tags": [
+            "CHI",
+            "Design tools"
+        ],
+        "sourceName": "CRAGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "xiao-schev-rising-star-announcement",
+        "title": "Xuesu Xiao named SCHEV Outstanding Faculty Award Rising Star",
+        "summary": "Xiao announces selection for Virginia’s Outstanding Faculty Award Rising Star, recognizing teaching, research, and public service.",
+        "date": "2025-12-22",
+        "category": "faculty-achievement",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "Faculty award",
+            "SCHEV",
+            "Robotics"
+        ],
+        "sourceName": "Xuesu Xiao’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xiao/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "nguyen-genprog-tse-influential-2025",
+        "title": "GenProg wins TSE 50th Anniversary Most Influential Paper Award",
+        "summary": "Nguyen and collaborators are recognized for foundational work on automatic software repair.",
+        "date": "2025-12-18",
+        "category": "paper-award",
+        "people": [
+            "ThanhVu (Vu) Nguyen"
+        ],
+        "tags": [
+            "IEEE TSE",
+            "Test of time",
+            "Software engineering"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2025-12/genprogs-decade-defining-developments-debugging",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shishika-goutam-das-defense-2025",
+        "title": "Goutam Das successfully defends PhD",
+        "summary": "CRADL celebrates Das’s completed doctoral defense.",
+        "date": "2025-12",
+        "category": "graduation",
+        "people": [
+            "Daigo Shishika",
+            "Goutam Das"
+        ],
+        "tags": [
+            "PhD",
+            "Robotics"
+        ],
+        "sourceName": "CRADL",
+        "sourceUrl": "https://www.shishika.com/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-aaai-2026",
+        "title": "Two papers accepted at AAAI 2026, including an oral",
+        "summary": "Bowen Wei and Jinhao Pan’s AAAI 2026 papers include an oral on prototype-based explainable classification of LLM decisions.",
+        "date": "2025-11",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Bowen Wei",
+            "Jinhao Pan"
+        ],
+        "tags": [
+            "AAAI",
+            "Explainable AI"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "bertram-liu-xr-honorable-mention-2025",
+        "title": "Bertram Liu earns XR security workshop honorable mention",
+        "summary": "The undergraduate’s first-authored research detects insecure interface properties in extended-reality systems.",
+        "date": "2025-11-25",
+        "category": "student-achievement",
+        "people": [
+            "Xiaokuan Zhang",
+            "Bertram (Briar) Liu"
+        ],
+        "tags": [
+            "Undergraduate research",
+            "Workshop award",
+            "XR security"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2025-11/george-mason-undergraduate-earns-national-recognition-xr-security-research",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "haiyue-chen-best-presenter-2025",
+        "title": "Haiyue Chen wins Best Student Presenter Award",
+        "summary": "Xiao’s homepage celebrates Haiyue Chen’s award at her first academic conference, where she demonstrated a robot remotely from Galway, Ireland.",
+        "date": "2025-11-02",
+        "category": "student-achievement",
+        "people": [
+            "Xuesu Xiao",
+            "Haiyue Chen"
+        ],
+        "tags": [
+            "Student award",
+            "Robotics",
+            "Presentation"
+        ],
+        "sourceName": "Xuesu Xiao’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xiao/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-emnlp-2025",
+        "title": "Three student papers presented at EMNLP 2025",
+        "summary": "Anastasopoulos’s students Chutong Meng, Poorvi Acharya, and Fahim Faisal present three papers at EMNLP 2025.",
+        "date": "2025-11-01",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Chutong Meng",
+            "Poorvi Acharya",
+            "Fahim Faisal"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s homepage",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "robotixx-heai-best-poster-2025",
+        "title": "Navigation research wins IROS workshop Best Poster Award",
+        "summary": "The RobotiXX paper “Towards Human-Like Instruction Navigation in Real-World” received the Best Poster Award at the Human-aware Embodied AI workshop at IROS 2025.",
+        "date": "2025-10-24",
+        "category": "paper-award",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "Robotics",
+            "IROS",
+            "Workshop award"
+        ],
+        "sourceName": "Xuesu Xiao’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xiao/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-chhillar-arx-2025",
+        "title": "Mason team identifies privacy weakness in ARX",
+        "summary": "Somiya Chhillar and Kornaropoulos study information leakage in a widely used anonymization tool, presenting findings at CCS.",
+        "date": "2025-10-20",
+        "category": "research",
+        "people": [
+            "Evgenios Kornaropoulos",
+            "Somiya Chhillar"
+        ],
+        "tags": [
+            "Privacy",
+            "ACM CCS",
+            "Healthcare"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2025-10/anonymitys-arx-nemesis",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shadowmagic-human-ai-colorization-2025",
+        "title": "ShadowMagic helps comic artists with AI-assisted shading",
+        "summary": "Hong, Gingold, and collaborators develop a Photoshop plug-in to support artists’ creative workflow.",
+        "date": "2025-10-10",
+        "category": "research",
+        "people": [
+            "Sungsoo (Ray) Hong",
+            "Yotam Gingold",
+            "Chuan Yan",
+            "Amrita Ganguly"
+        ],
+        "tags": [
+            "Human-computer interaction",
+            "Computer graphics",
+            "UIST"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2025-10/ist-professors-unveil-human-ai-collaboration-tool-automate-cartoon-colorization",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "fei-li-quantum-omics-2025",
+        "title": "Fei Li receives funding for quantum omics algorithms",
+        "summary": "QSEC announces research combining single-cell data and drug screening for explainable drug discovery.",
+        "date": "2025-10-06",
+        "category": "grant",
+        "people": [
+            "Fei Li"
+        ],
+        "tags": [
+            "Quantum computing",
+            "Drug discovery"
+        ],
+        "sourceName": "Mason Quantum Science and Engineering Center",
+        "sourceUrl": "https://qsec.gmu.edu/quantum-algorithms-for-high-performance-analysis-of-single-cell-omics-data-and-explainable-drug-discovery/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-colm-workshop-honorable-mention-2025",
+        "title": "LLM interference research earns COLM workshop honorable mention",
+        "summary": "Yao reports recognition at a workshop on explaining language-model reasoning and planning.",
+        "date": "2025-10",
+        "category": "paper-award",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "COLM",
+            "Workshop award",
+            "Explainable AI"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neurips-spotlight-2025",
+        "title": "DNN verification paper selected for NeurIPS Spotlight",
+        "summary": "Hai Duong’s NeurIPS 2025 paper on compositional DNN verification was selected as a Spotlight; a second accepted paper addresses certifying DNN verification.",
+        "date": "2025-09",
+        "category": "paper-award",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Spotlight",
+            "Verification"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-neurips-2025",
+        "title": "Adaptive hierarchical optimization paper accepted at NeurIPS 2025",
+        "summary": "Students Xiaochuan Gong and Jie Hao coauthor Liu’s NeurIPS 2025 paper on adaptive hierarchical optimization.",
+        "date": "2025-09",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Xiaochuan Gong",
+            "Jie Hao"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-neurips-2025",
+        "title": "Yao group paper accepted at NeurIPS 2025",
+        "summary": "Yao reports a paper accepted at NeurIPS 2025.",
+        "date": "2025-09",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Machine learning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lybarger-nih-knee-pain-2025",
+        "title": "NIH supports collaborative chronic knee-pain research",
+        "summary": "Lybarger participates in a Mason team receiving a $4.65 million project award; the amount is the team’s total.",
+        "date": "2025-09-30",
+        "category": "grant",
+        "people": [
+            "Kevin Lybarger"
+        ],
+        "tags": [
+            "NIH",
+            "Healthcare"
+        ],
+        "sourceName": "Lybarger Language Lab",
+        "sourceUrl": "https://www.lybargerlanguagelab.org/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cummings-vasem-election-2025",
+        "title": "Missy Cummings elected to VASEM",
+        "summary": "Mason celebrates Cummings’s election to the Virginia Academy of Science, Engineering, and Medicine at its annual summit.",
+        "date": "2025-09-30",
+        "category": "faculty-achievement",
+        "people": [
+            "Missy Cummings"
+        ],
+        "tags": [
+            "VASEM",
+            "Autonomy",
+            "Faculty honor"
+        ],
+        "sourceName": "GMU College of Science",
+        "sourceUrl": "https://science.gmu.edu/news/george-mason-university-congratulates-four-faculty-inducted-virginia-academy-science",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-sigmobile-highlight-2025",
+        "title": "Sparse inference research selected as SIGMOBILE Highlight",
+        "summary": "The distinction recognizes the group’s SenSys work on dynamic sparse neural-network inference.",
+        "date": "2025-09-23",
+        "category": "paper-award",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "SIGMOBILE",
+            "SenSys",
+            "Research highlight"
+        ],
+        "sourceName": "Shuochao Yao’s news archive",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neuralsat-vnncomp-2025",
+        "title": "NeuralSAT ranks second at VNN-COMP 2025",
+        "summary": "ROARS Lab reports second place overall for NeuralSAT, developed by Hai Duong, in the 2025 neural network verification competition.",
+        "date": "2025-08",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "AI safety",
+            "Verification",
+            "Competition"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-ase-2025",
+        "title": "DNN verification benchmark paper accepted at ASE 2025",
+        "summary": "Linhan Li’s first first-author research paper, accepted at ASE 2025, generates challenging benchmarks for DNN verification.",
+        "date": "2025-08",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Linhan Li"
+        ],
+        "tags": [
+            "ASE",
+            "Verification",
+            "Benchmarks"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-emnlp-2025",
+        "title": "Two Yao group papers accepted at EMNLP 2025 main conference",
+        "summary": "Yao’s group has two EMNLP 2025 main-conference papers, plus two in Findings.",
+        "date": "2025-08",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-eurosys-2026",
+        "title": "Streaming LLM serving paper accepted at EuroSys 2026",
+        "summary": "Yao’s group has a streaming LLM serving paper accepted at EuroSys 2026.",
+        "date": "2025-08-23",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "EuroSys",
+            "LLM serving"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-rtcsa-outstanding-paper-2025",
+        "title": "Anytime lidar inference wins RTCSA Outstanding Paper",
+        "summary": "Shuochao Yao announces recognition for the group’s lidar-inference research.",
+        "date": "2025-08-22",
+        "category": "paper-award",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "RTCSA",
+            "Embedded systems",
+            "Lidar"
+        ],
+        "sourceName": "Shuochao Yao’s news archive",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "nroottag-distinguished-artifact-2025",
+        "title": "nRootTag wins USENIX Security Distinguished Artifact Award",
+        "summary": "Qiang Zeng reports a Distinguished Artifact Award at USENIX Security 2025 for nRootTag, recognizing work by Junming Chen.",
+        "date": "2025-08-13",
+        "category": "paper-award",
+        "people": [
+            "Qiang Zeng",
+            "Junming Chen"
+        ],
+        "tags": [
+            "Security",
+            "USENIX",
+            "Artifact award"
+        ],
+        "sourceName": "Qiang Zeng’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~zeng/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sakib-clinical-nlp-acl-2025",
+        "title": "Fardin Ahsan Sakib tackles bias in clinical language models",
+        "summary": "Mason profiles his ACL 2025 research on detecting and mitigating shortcut learning in health-record processing.",
+        "date": "2025-08-12",
+        "category": "research",
+        "people": [
+            "Ziwei Zhu",
+            "Fardin Ahsan Sakib"
+        ],
+        "tags": [
+            "ACL",
+            "Healthcare",
+            "Responsible AI"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2025-08/ais-blind-spots-one-phd-students-clear-vision",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-springer-cybersecurity-award-2025",
+        "title": "Web3 authentication paper wins Springer Cybersecurity Award",
+        "summary": "Zhang’s CCS 2024 paper on Web3 authentication, led by his student Kailun, receives the Springer Cybersecurity Award for Best Practical Research Paper.",
+        "date": "2025-07",
+        "category": "paper-award",
+        "people": [
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "Springer Cybersecurity Award",
+            "Web3",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-ccs-2025",
+        "title": "VR firmware security paper accepted at CCS 2025",
+        "summary": "Vamsi Shankar Simhadri and Yichang Xiong’s VR firmware security paper is accepted at ACM CCS 2025.",
+        "date": "2025-07",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Vamsi Shankar Simhadri",
+            "Yichang Xiong"
+        ],
+        "tags": [
+            "CCS",
+            "VR",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chuxiong-wu-dissertation-defense-2025",
+        "title": "Chuxiong Wu defends his dissertation",
+        "summary": "Qiang Zeng congratulates Chuxiong Wu on his PhD defense and announces a planned assistant professor appointment at Southern Illinois University.",
+        "date": "2025-07-28",
+        "category": "graduation",
+        "people": [
+            "Qiang Zeng",
+            "Chuxiong Wu"
+        ],
+        "tags": [
+            "PhD",
+            "Security",
+            "Faculty placement"
+        ],
+        "sourceName": "Qiang Zeng’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~zeng/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-nsf-reliable-ranking-2025",
+        "title": "NSF supports interpretable learning for reliable ranking",
+        "summary": "Zhu announces an information-integration award for neuro-symbolic learning methods.",
+        "date": "2025-07",
+        "category": "grant",
+        "people": [
+            "Ziwei Zhu"
+        ],
+        "tags": [
+            "NSF",
+            "Responsible AI",
+            "Ranking"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "antonios-career-2025",
+        "title": "Antonios Anastasopoulos receives NSF CAREER award",
+        "summary": "The project develops language technologies for data-scarce languages using grammar books.",
+        "date": "2025-06-15",
+        "category": "grant",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "NLP"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s news archive",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "robotixx-iros-2025",
+        "title": "RobotiXX presents 13 papers at IROS 2025",
+        "summary": "The lab presents 12 IROS 2025 conference papers and one RA-L paper, placing Xiao among the conference’s top 10 paper contributors.",
+        "date": "2025-06-15",
+        "category": "paper",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "IROS",
+            "Robotics"
+        ],
+        "sourceName": "RobotiXX Lab",
+        "sourceUrl": "https://robotixx.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-acl-2025",
+        "title": "Two papers presented at ACL 2025",
+        "summary": "Anastasopoulos’s group presents two papers at the ACL 2025 main conference, alongside workshop and Interspeech papers.",
+        "date": "2025-06-01",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "ACL",
+            "NLP"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s homepage",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-icml-2025",
+        "title": "Liu group paper accepted at ICML 2025",
+        "summary": "Student Michael Crawshaw and collaborators have a paper accepted at ICML 2025.",
+        "date": "2025-05",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Michael Timothy Crawshaw"
+        ],
+        "tags": [
+            "ICML",
+            "Machine learning"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-acl-2025",
+        "title": "Two papers accepted at ACL 2025",
+        "summary": "Bowen Wei and Fardin Ahsan Sakib’s ACL 2025 papers address interpretable text classification and spurious correlations.",
+        "date": "2025-05",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Bowen Wei",
+            "Fardin Ahsan Sakib"
+        ],
+        "tags": [
+            "ACL",
+            "NLP"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-paudel-doctoral-consortium-2025",
+        "title": "Abhishek Paudel selected for ICRA Doctoral Consortium",
+        "summary": "Stein reports recognition for Paudel’s research on long-horizon planning under uncertainty.",
+        "date": "2025-05-19",
+        "category": "student-achievement",
+        "people": [
+            "Gregory Stein",
+            "Abhishek Paudel"
+        ],
+        "tags": [
+            "ICRA",
+            "Doctoral consortium",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s news archive",
+        "sourceUrl": "https://gjstein.com/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-sensys-best-paper-nomination-2025",
+        "title": "Pathak group earns SenSys best paper nomination",
+        "summary": "The lab reports selection among seven nominated papers; this is a nomination rather than a win.",
+        "date": "2025-05",
+        "category": "paper-award",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "SenSys",
+            "Best paper finalist",
+            "Wireless networks"
+        ],
+        "sourceName": "Parth Pathak’s news archive",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-cav-issta-2025",
+        "title": "ROARS Lab papers accepted at CAV and ISSTA 2025",
+        "summary": "Hai Duong’s CAV 2025 paper presents the NeuralSAT DNN verification tool. Two ISSTA 2025 tool papers, the first papers for Linhan Li and Stefania Piciorea, add LSP support for the COOL language and VS Code support for invariant generation and symbolic execution.",
+        "date": "2025-04",
+        "category": "paper",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong",
+            "Linhan Li",
+            "Stefania Piciorea"
+        ],
+        "tags": [
+            "CAV",
+            "ISSTA",
+            "Verification"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-mobisys-2025",
+        "title": "Spoofing-resilient mmWave sensing paper accepted at MobiSys 2025",
+        "summary": "The group integrates spoofing-resilient mmWave sensing with backscatter communication.",
+        "date": "2025-04",
+        "category": "paper",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "MobiSys",
+            "mmWave",
+            "Sensing"
+        ],
+        "sourceName": "Parth Pathak’s homepage",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-naacl-2025",
+        "title": "Three papers presented at NAACL 2025",
+        "summary": "Anastasopoulos’s group presents three papers at NAACL 2025.",
+        "date": "2025-04-15",
+        "category": "paper",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "NAACL",
+            "NLP"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s homepage",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shuochao-mobisys-2025",
+        "title": "On-device DNN training paper accepted at MobiSys 2025",
+        "summary": "Yao’s group has an on-device DNN training paper accepted at MobiSys 2025.",
+        "date": "2025-03-03",
+        "category": "paper",
+        "people": [
+            "Shuochao Yao"
+        ],
+        "tags": [
+            "MobiSys",
+            "On-device learning"
+        ],
+        "sourceName": "Shuochao Yao’s homepage",
+        "sourceUrl": "https://yscacaca.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-cvpr-2025",
+        "title": "VLM path-plan evaluation benchmark accepted at CVPR 2025",
+        "summary": "Mohamed Aghzal and collaborators benchmark vision-language models for evaluating path plans.",
+        "date": "2025-02",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao",
+            "Mohamed Aghzal"
+        ],
+        "tags": [
+            "CVPR",
+            "Vision-language models",
+            "Planning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-redan-ndss-distinguished-2025",
+        "title": "ReDAN receives NDSS Distinguished Paper Award",
+        "summary": "CSIS recognizes Sun’s collaborative research on remote denial-of-service attacks against NAT networks.",
+        "date": "2025-02-26",
+        "category": "paper-award",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "NDSS",
+            "Distinguished paper",
+            "Network security"
+        ],
+        "sourceName": "CSIS news archive",
+        "sourceUrl": "https://www.csis.gmu.edu/pages/archive-news.php",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2025",
+        "title": "Na Wang defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2025-02",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Na Wang"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neuralsat-vnncomp-2024",
+        "title": "NeuralSAT ranks second at VNN-COMP 2024",
+        "summary": "NeuralSAT, developed by Hai Duong and Vu Nguyen, placed second overall among international teams in the 2024 neural network verification competition.",
+        "date": "2025-01",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong"
+        ],
+        "tags": [
+            "AI safety",
+            "Verification",
+            "Competition"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2025-05/george-masons-roars-lab-retains-its-ranking-leader-ai-safety-2024-international-neural",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-iclr-2025",
+        "title": "Two Liu group papers accepted at ICLR 2025",
+        "summary": "Student Michael Crawshaw and collaborators have two papers accepted at ICLR 2025.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Mingrui Liu",
+            "Michael Timothy Crawshaw"
+        ],
+        "tags": [
+            "ICLR",
+            "Machine learning"
+        ],
+        "sourceName": "Mingrui Liu’s homepage",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "typepulse-usenix-security-2025",
+        "title": "Rust type-confusion detector accepted at USENIX Security 2025",
+        "summary": "Hung-Mao (Rafael) Chen’s TYPEPULSE, with Xiaokuan Zhang and Kun Sun, detects type confusion bugs in Rust programs.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Xiaokuan Zhang",
+            "Kun Sun",
+            "Hung-Mao (Rafael) Chen"
+        ],
+        "tags": [
+            "USENIX Security",
+            "Rust",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-naacl-2025",
+        "title": "Spurious-correlation paper accepted at NAACL 2025",
+        "summary": "Yuqing Zhou’s NAACL 2025 paper addresses spurious correlations in classification.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Ziwei Zhu",
+            "Yuqing Zhou"
+        ],
+        "tags": [
+            "NAACL",
+            "NLP"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-iclr-2025",
+        "title": "Dynamic LLM reasoning paper accepted at ICLR 2025",
+        "summary": "Murong Yue and collaborators publish work on dynamic LLM reasoning at ICLR 2025.",
+        "date": "2025-01",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao",
+            "Murong Yue"
+        ],
+        "tags": [
+            "ICLR",
+            "LLM reasoning"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-icra-2025",
+        "title": "Two RAIL papers accepted at ICRA 2025",
+        "summary": "Stein’s lab has ICRA 2025 papers on anticipatory planning for large-scale home environments and hybrid social navigation.",
+        "date": "2025-01-28",
+        "category": "paper",
+        "people": [
+            "Gregory Stein"
+        ],
+        "tags": [
+            "ICRA",
+            "Planning",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s homepage",
+        "sourceUrl": "https://gjstein.com/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "antonios-crisis-circ-2025",
+        "title": "NSF supports language technology for crisis response",
+        "summary": "Anastasopoulos announces a collaborative CIRC award with University of Washington researchers.",
+        "date": "2025-01-01",
+        "category": "grant",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "NSF",
+            "NLP",
+            "Crisis response"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s news archive",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-career-2025",
+        "title": "Evgenios Kornaropoulos receives NSF CAREER award",
+        "summary": "His homepage announces the award in January 2025.",
+        "date": "2025-01",
+        "category": "grant",
+        "people": [
+            "Evgenios Kornaropoulos"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Security"
+        ],
+        "sourceName": "Evgenios Kornaropoulos’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~evgenios/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "yang-teaching-award-2025",
+        "title": "Lishan Yang receives CS teaching award",
+        "summary": "Yang lists the department’s 2025 tenure-line Outstanding Teaching Award.",
+        "date": "2025",
+        "category": "faculty-achievement",
+        "people": [
+            "Lishan Yang"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Lishan Yang’s homepage",
+        "sourceUrl": "https://lishanyang.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "mohebbi-momeni-track-paper-2025",
+        "title": "Mohebbi and Behnam Momeni win IISE track paper award",
+        "summary": "The team receives the Sustainable Development division’s Best Track Paper Award.",
+        "date": "2025",
+        "category": "paper-award",
+        "people": [
+            "Shima Mohebbi",
+            "Behnam Momeni"
+        ],
+        "tags": [
+            "IISE",
+            "Track paper award",
+            "Sustainability"
+        ],
+        "sourceName": "CARING Lab",
+        "sourceUrl": "https://mohebbilab.cec.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "mohebbi-asee-eop-grant-2025",
+        "title": "Shima Mohebbi receives Engineering for One Planet mini-grant",
+        "summary": "CARING Lab announces support from ASEE for sustainability in engineering education.",
+        "date": "2025",
+        "category": "grant",
+        "people": [
+            "Shima Mohebbi"
+        ],
+        "tags": [
+            "ASEE",
+            "Sustainability",
+            "Education"
+        ],
+        "sourceName": "CARING Lab",
+        "sourceUrl": "https://mohebbilab.cec.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-nairr-pilot-award-2025",
+        "title": "Mingrui Liu receives NAIRR Pilot Award",
+        "summary": "Liu’s awards page records support from the National AI Research Resource Pilot.",
+        "date": "2025",
+        "category": "grant",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "NAIRR",
+            "AI"
+        ],
+        "sourceName": "Mingrui Liu’s awards",
+        "sourceUrl": "https://mingrliu.github.io/awards.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-kaust-rising-star-2025",
+        "title": "Mingrui Liu named KAUST Rising Star in AI",
+        "summary": "Liu’s awards page lists the 2025 recognition.",
+        "date": "2025",
+        "category": "faculty-achievement",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "AI",
+            "Rising star"
+        ],
+        "sourceName": "Mingrui Liu’s awards",
+        "sourceUrl": "https://mingrliu.github.io/awards.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kevin-andrea-teaching-recognition-2025",
+        "title": "Kevin Andrea receives Teaching Excellence Award",
+        "summary": "The Stearns Center lists the faculty member among that year’s honorees.",
+        "date": "2025",
+        "category": "faculty-achievement",
+        "people": [
+            "Kevin Andrea"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "craig-yu-innovators-award-2025",
+        "title": "Craig Yu receives Mason Innovators Award",
+        "summary": "Yu’s homepage records recognition in the Digital Innovation category.",
+        "date": "2025",
+        "category": "faculty-achievement",
+        "people": [
+            "Craig Yu"
+        ],
+        "tags": [
+            "Innovation",
+            "Faculty award",
+            "Extended reality"
+        ],
+        "sourceName": "Craig Yu’s homepage",
+        "sourceUrl": "https://craigyuyu.github.io/home/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-phd-defense-2025",
+        "title": "Xue Yu completes PhD defense",
+        "summary": "CraGL announces Yu’s completed doctoral defense.",
+        "date": "2025",
+        "category": "graduation",
+        "people": [
+            "Yotam Gingold",
+            "Xue Yu"
+        ],
+        "tags": [
+            "PhD",
+            "Computer graphics"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ateniese-acns-test-of-time-2025",
+        "title": "Proxy re-encryption research receives ACNS Test-of-Time Award",
+        "summary": "The conference recognizes Matthew Green and Giuseppe Ateniese’s 2007 work in its 2025 awards.",
+        "date": "2025",
+        "category": "paper-award",
+        "people": [
+            "Giuseppe Ateniese"
+        ],
+        "tags": [
+            "ACNS",
+            "Test of time",
+            "Cryptography"
+        ],
+        "sourceName": "ACNS award history",
+        "sourceUrl": "https://jianying.space/acns/acns-tot.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lybarger-pcori-depression-2024",
+        "title": "PCORI supports AI decision tools for depression care",
+        "summary": "Lybarger and Farrokh Alemi receive a three-year award to evaluate conversational AI for antidepressant recommendations.",
+        "date": "2024-12-10",
+        "category": "grant",
+        "people": [
+            "Kevin Lybarger"
+        ],
+        "tags": [
+            "PCORI",
+            "Healthcare",
+            "AI"
+        ],
+        "sourceName": "Lybarger Language Lab",
+        "sourceUrl": "https://www.lybargerlanguagelab.org/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-army-robot-planning-2024",
+        "title": "Mason team receives Army support for robot planning",
+        "summary": "Stein announces a collaborative Army Research Lab award with Daigo Shishika, Xuesu Xiao, and Xuan Wang.",
+        "date": "2024-12",
+        "category": "grant",
+        "people": [
+            "Gregory Stein",
+            "Daigo Shishika",
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "Army Research Laboratory",
+            "Robotics"
+        ],
+        "sourceName": "Gregory Stein’s news archive",
+        "sourceUrl": "https://gjstein.com/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-yoon-chae-defense-2024",
+        "title": "Yoon Chae defends PhD",
+        "summary": "Pathak announces Chae’s completed defense and planned assistant professorship at the University of Texas at Arlington.",
+        "date": "2024-12",
+        "category": "graduation",
+        "people": [
+            "Parth Pathak",
+            "Yoon Chae"
+        ],
+        "tags": [
+            "PhD",
+            "Faculty placement"
+        ],
+        "sourceName": "Parth Pathak’s news archive",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "antonios-positive-impact-best-paper-2024",
+        "title": "NLP for Positive Impact workshop recognizes Mason research",
+        "summary": "Anastasopoulos reports the workshop’s Best Research Paper Award.",
+        "date": "2024-11-01",
+        "category": "paper-award",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "NLP",
+            "Workshop award"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s news archive",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "antonios-sigspatial-best-paper-2024",
+        "title": "Anastasopoulos group wins SIGSPATIAL Best Research Paper",
+        "summary": "The faculty news archive records the 2024 research-paper award.",
+        "date": "2024-10-15",
+        "category": "paper-award",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "SIGSPATIAL",
+            "Best paper"
+        ],
+        "sourceName": "Antonios Anastasopoulos’s news archive",
+        "sourceUrl": "https://antonisa.github.io/news/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-web3-ccs-distinguished-2024",
+        "title": "Web3 authentication research wins CCS Distinguished Paper",
+        "summary": "Zhang celebrates Kailun Yan’s work exposing blind-message authentication attacks.",
+        "date": "2024-10",
+        "category": "paper-award",
+        "people": [
+            "Xiaokuan Zhang",
+            "Kailun Yan"
+        ],
+        "tags": [
+            "ACM CCS",
+            "Distinguished paper",
+            "Web3"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "torabi-ev-charging-security-2024",
+        "title": "NSF supports analysis of EV charging vulnerabilities",
+        "summary": "Torabi’s collaborative project examines vulnerabilities in charging-management systems at multiple scales.",
+        "date": "2024-08-01",
+        "category": "grant",
+        "people": [
+            "Sadegh Torabi"
+        ],
+        "tags": [
+            "NSF",
+            "EV charging",
+            "Security"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2431617",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-iwqos-best-paper-2024",
+        "title": "Kun Sun wins IWQoS Best Paper Award",
+        "summary": "The CSIS archive announces the 2024 award.",
+        "date": "2024-06-21",
+        "category": "paper-award",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "IWQoS",
+            "Best paper",
+            "Network security"
+        ],
+        "sourceName": "CSIS news archive",
+        "sourceUrl": "https://www.csis.gmu.edu/pages/archive-news.php",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhu-cci-award-2024",
+        "title": "Ziwei Zhu receives CCI funding",
+        "summary": "Zhu announces a collaborative award with co-investigator Jin Lee.",
+        "date": "2024-06",
+        "category": "grant",
+        "people": [
+            "Ziwei Zhu"
+        ],
+        "tags": [
+            "CCI",
+            "AI"
+        ],
+        "sourceName": "Ziwei Zhu’s homepage",
+        "sourceUrl": "https://zziwei.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lybarger-nih-aim-ahead-2024",
+        "title": "NIH pilot supports an AI chatbot for depression care",
+        "summary": "The AIM-AHEAD project develops and tests personalized antidepressant recommendations for African Americans.",
+        "date": "2024-06",
+        "category": "grant",
+        "people": [
+            "Kevin Lybarger"
+        ],
+        "tags": [
+            "NIH",
+            "Health equity",
+            "AI"
+        ],
+        "sourceName": "Lybarger Language Lab",
+        "sourceUrl": "https://www.lybargerlanguagelab.org/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "uzuner-boicu-nsf-student-support-2024",
+        "title": "NSF planning grant supports low-income computing students",
+        "summary": "Uzuner and Boicu join a team developing ways to reduce financial barriers and improve student support.",
+        "date": "2024-05-31",
+        "category": "grant",
+        "people": [
+            "Özlem Uzuner",
+            "Mihai Boicu"
+        ],
+        "tags": [
+            "NSF",
+            "Student support",
+            "Computing education"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2024-05/ist-faculty-receive-nsf-funding-support-socioeconomically-disadvantaged-students",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "comic-xr-infrastructure-2024",
+        "title": "Mason and Maryland build shared extended-reality infrastructure",
+        "summary": "Han, Chen, Pathak, and Yu develop infrastructure for research on connected, multi-user XR experiences.",
+        "date": "2024-05-13",
+        "category": "research",
+        "people": [
+            "Bo Han",
+            "Songqing Chen",
+            "Parth Pathak",
+            "Craig Yu"
+        ],
+        "tags": [
+            "NSF",
+            "Extended reality",
+            "Networking"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2024-05/computer-scientists-are-developing-research-infrastructure-support-multi-user-multi",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-clipboard-icse-distinguished-2024",
+        "title": "Android clipboard research wins SIGSOFT Distinguished Paper",
+        "summary": "Zhang reports recognition at ICSE for research on clipboard monitoring in Android applications.",
+        "date": "2024-02",
+        "category": "paper-award",
+        "people": [
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "ICSE",
+            "ACM SIGSOFT",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-iclr-spotlight-2024",
+        "title": "Bilevel optimization research selected for ICLR Spotlight",
+        "summary": "Liu congratulates students Jie and Xiaochuan on research addressing unbounded smoothness.",
+        "date": "2024-01",
+        "category": "paper-award",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "ICLR",
+            "Spotlight",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s news archive",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "yang-cluster-best-paper-finalist-2024",
+        "title": "GPU reliability study named CLUSTER Best Paper finalist",
+        "summary": "Yang’s cross-layer GPU reliability assessment receives finalist recognition, rather than a winning award.",
+        "date": "2024",
+        "category": "paper-award",
+        "people": [
+            "Lishan Yang"
+        ],
+        "tags": [
+            "CLUSTER",
+            "Best paper finalist",
+            "GPU reliability"
+        ],
+        "sourceName": "Lishan Yang’s homepage",
+        "sourceUrl": "https://lishanyang.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "yang-ai4edu-cybertraining-2024",
+        "title": "NSF supports cloud infrastructure training for AI education",
+        "summary": "Yang’s funding list identifies her as co-PI on a collaborative CyberTraining project running from 2024 to 2028.",
+        "date": "2024",
+        "category": "grant",
+        "people": [
+            "Lishan Yang"
+        ],
+        "tags": [
+            "NSF",
+            "Education",
+            "Cloud computing"
+        ],
+        "sourceName": "Lishan Yang’s homepage",
+        "sourceUrl": "https://lishanyang.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "thomas-latoza-teaching-recognition-2024",
+        "title": "Thomas LaToza receives Teacher of Distinction",
+        "summary": "The Stearns Center lists the faculty member among that year’s honorees.",
+        "date": "2024",
+        "category": "faculty-achievement",
+        "people": [
+            "Thomas LaToza"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shehu-vasem-election-2024",
+        "title": "Amarda Shehu elected to VASEM",
+        "summary": "The CS department records Shehu’s election to the Virginia Academy of Science, Engineering, and Medicine.",
+        "date": "2024",
+        "category": "faculty-achievement",
+        "people": [
+            "Amarda Shehu"
+        ],
+        "tags": [
+            "VASEM",
+            "Faculty honor"
+        ],
+        "sourceName": "GMU Department of Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/people/faculty/awards-and-honors",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "mohebbi-murali-wsc-student-award-2024",
+        "title": "Pavithra Murali wins ACM SIGSIM student-paper award",
+        "summary": "CARING Lab reports the Best PhD Student Paper Award at the Winter Simulation Conference.",
+        "date": "2024",
+        "category": "student-achievement",
+        "people": [
+            "Shima Mohebbi",
+            "Pavithra Sripathanallur Murali"
+        ],
+        "tags": [
+            "ACM SIGSIM",
+            "Student award",
+            "Simulation"
+        ],
+        "sourceName": "CARING Lab",
+        "sourceUrl": "https://mohebbilab.cec.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lam-research-rising-star-2024",
+        "title": "Wing Lam receives CS research rising-star award",
+        "summary": "Lam’s awards page records the department’s 2024 recognition.",
+        "date": "2024",
+        "category": "faculty-achievement",
+        "people": [
+            "Wing Lam"
+        ],
+        "tags": [
+            "Faculty award",
+            "Software engineering"
+        ],
+        "sourceName": "Wing Lam’s awards and grants",
+        "sourceUrl": "https://people.cs.gmu.edu/~winglam/awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lam-career-2024",
+        "title": "Wing Lam receives NSF CAREER award",
+        "summary": "The project studies reliable and efficient regression testing when tests are flaky.",
+        "date": "2024",
+        "category": "grant",
+        "people": [
+            "Wing Lam"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Software testing"
+        ],
+        "sourceName": "Wing Lam’s awards and grants",
+        "sourceUrl": "https://people.cs.gmu.edu/~winglam/awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "johri-aera-book-award-2024",
+        "title": "Engineering education handbook wins AERA division book award",
+        "summary": "Johri reports Division I recognition for the handbook he edited.",
+        "date": "2024",
+        "category": "faculty-achievement",
+        "people": [
+            "Aditya Johri"
+        ],
+        "tags": [
+            "AERA",
+            "Engineering education",
+            "Book award"
+        ],
+        "sourceName": "Aditya Johri’s homepage",
+        "sourceUrl": "https://mason.gmu.edu/~johri/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-phd-defenses-2024",
+        "title": "Chuan Yan and Yong Li defend their dissertations",
+        "summary": "CraGL celebrates two doctoral defenses and announces Yan’s planned Stanford postdoc.",
+        "date": "2024",
+        "category": "graduation",
+        "people": [
+            "Yotam Gingold",
+            "Chuan Yan",
+            "Yong Li"
+        ],
+        "tags": [
+            "PhD",
+            "Computer graphics"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-cci-llm-supply-chain-2023",
+        "title": "CCI supports language-model supply-chain security",
+        "summary": "Yao and Xiaokuan Zhang receive collaborative support for LLM security research.",
+        "date": "2023-12",
+        "category": "grant",
+        "people": [
+            "Ziyu Yao",
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "CCI",
+            "Language models",
+            "Security"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-aaai-new-faculty-2023",
+        "title": "Mingrui Liu selected for AAAI New Faculty Highlights",
+        "summary": "The program recognizes Liu’s work on the foundations of federated learning.",
+        "date": "2023-12",
+        "category": "faculty-achievement",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "AAAI",
+            "Federated learning"
+        ],
+        "sourceName": "Mingrui Liu’s news archive",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shishika-iros-cognitive-finalist-2023",
+        "title": "Team-coordination paper nominated for IROS cognitive-robotics award",
+        "summary": "CRADL reports a best-paper nomination for research on coordination with state-dependent graph costs.",
+        "date": "2023-10",
+        "category": "paper-award",
+        "people": [
+            "Daigo Shishika"
+        ],
+        "tags": [
+            "IROS",
+            "Best paper finalist",
+            "Robotics"
+        ],
+        "sourceName": "CRADL",
+        "sourceUrl": "https://www.shishika.com/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ye-nsf-career-2023",
+        "title": "Jinwei Ye receives NSF CAREER award",
+        "summary": "The Imaging and Vision Lab announces the 2023 award.",
+        "date": "2023-08",
+        "category": "grant",
+        "people": [
+            "Jinwei Ye"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Computer vision"
+        ],
+        "sourceName": "Imaging and Vision Lab",
+        "sourceUrl": "https://ivlab.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "roars-neuralsat-vnncomp-2023",
+        "title": "NeuralSAT earns New Participant Award at VNN-COMP 2023",
+        "summary": "In its first VNN-COMP, NeuralSAT ranked fourth overall, won the tllverifybench category, and received the New Participant Award for Hai Duong and Linhan Li’s work.",
+        "date": "2023-08",
+        "category": "student-achievement",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Hai Duong",
+            "Linhan Li"
+        ],
+        "tags": [
+            "AI safety",
+            "Verification",
+            "Competition"
+        ],
+        "sourceName": "ROARS Lab",
+        "sourceUrl": "https://roars.dev/#news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "johnson-equity-collaboration-2023",
+        "title": "NSF funds technology-equity research",
+        "summary": "Johnson-Matthews’s collaborative project engages marginalized groups in improving technological equity.",
+        "date": "2023-06-15",
+        "category": "grant",
+        "people": [
+            "Brittany Johnson-Matthews"
+        ],
+        "tags": [
+            "NSF",
+            "Responsible technology",
+            "Equity"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2224674",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "zhang-ethereum-grants-2023",
+        "title": "Ethereum Foundation awards two research grants",
+        "summary": "Zhang announces support for smart-contract security research.",
+        "date": "2023-05",
+        "category": "grant",
+        "people": [
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "Ethereum Foundation",
+            "Web3",
+            "Security"
+        ],
+        "sourceName": "Xiaokuan Zhang’s homepage",
+        "sourceUrl": "https://mainarke.github.io/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shishika-dtr-win-2023",
+        "title": "Mason team wins Defend the Republic blimp competition",
+        "summary": "CRADL announces the team’s competition victory.",
+        "date": "2023-04",
+        "category": "student-achievement",
+        "people": [
+            "Daigo Shishika"
+        ],
+        "tags": [
+            "Robotics",
+            "Competition"
+        ],
+        "sourceName": "CRADL",
+        "sourceUrl": "https://www.shishika.com/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "wijesekera-driver-attention-2023",
+        "title": "Wijesekera receives support for driver-attention study",
+        "summary": "The Federal Highway Administration subaward studies how drivers navigate alternative intersection designs.",
+        "date": "2023-02-23",
+        "category": "grant",
+        "people": [
+            "Duminda Wijesekera"
+        ],
+        "tags": [
+            "Transportation",
+            "Human factors"
+        ],
+        "sourceName": "GMU College of Science",
+        "sourceUrl": "https://science.gmu.edu/news/mason-researchers-receive-funding-driver-visual-searching-behavior-when-navigating-through",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "thanhvu-vu-nguyen-nsf-career-2023",
+        "title": "ThanhVu (Vu) Nguyen receives NSF CAREER award",
+        "summary": "The project develops constraint-solving methods to verify deep neural networks.",
+        "date": "2023-01-25",
+        "category": "grant",
+        "people": [
+            "ThanhVu (Vu) Nguyen"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2238133",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "mohebbi-aslani-track-paper-2023",
+        "title": "CARING team wins IISE modeling-and-simulation track award",
+        "summary": "Mohebbi, Babak Aslani, and Mark Herman Dsouza receive the division’s Best Track Paper Award.",
+        "date": "2023",
+        "category": "paper-award",
+        "people": [
+            "Shima Mohebbi",
+            "Babak Aslani",
+            "Mark Herman Dsouza"
+        ],
+        "tags": [
+            "IISE",
+            "Track paper award",
+            "Simulation"
+        ],
+        "sourceName": "CARING Lab",
+        "sourceUrl": "https://mohebbilab.cec.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-cisco-faculty-award-2023",
+        "title": "Mingrui Liu receives Cisco Faculty Research Award",
+        "summary": "Liu lists Cisco’s faculty research recognition among his 2023 awards.",
+        "date": "2023",
+        "category": "grant",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "Cisco",
+            "Machine learning"
+        ],
+        "sourceName": "Mingrui Liu’s awards",
+        "sourceUrl": "https://mingrliu.github.io/awards.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lam-android-testing-infrastructure-2023",
+        "title": "NSF supports Android testing infrastructure planning",
+        "summary": "Lam and Kevin Moran receive support for planning shared infrastructure and data for Android testing.",
+        "date": "2023",
+        "category": "grant",
+        "people": [
+            "Wing Lam",
+            "Kevin Moran"
+        ],
+        "tags": [
+            "NSF",
+            "Software testing"
+        ],
+        "sourceName": "Wing Lam’s awards and grants",
+        "sourceUrl": "https://people.cs.gmu.edu/~winglam/awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kosecka-ieee-fellow-2023",
+        "title": "Jana Košecká elevated to IEEE Fellow",
+        "summary": "IEEE recognizes her contributions to embodied vision and semantic modeling in robotics.",
+        "date": "2023",
+        "category": "faculty-achievement",
+        "people": [
+            "Jana Košecká"
+        ],
+        "tags": [
+            "IEEE Fellow",
+            "Computer vision",
+            "Robotics"
+        ],
+        "sourceName": "IEEE Robotics and Automation Society",
+        "sourceUrl": "https://www.ieee-ras.org/images/conferences/ICRA/ICRA_Awards_Brochures/2023_RAS_awards_booklet_REVISED_300_rev_-2_1.pdf",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-phd-defenses-2023",
+        "title": "Josef Graus completes PhD defense",
+        "summary": "CraGL announces Graus’s completed doctoral defense.",
+        "date": "2023",
+        "category": "graduation",
+        "people": [
+            "Yotam Gingold",
+            "Josef Graus"
+        ],
+        "tags": [
+            "PhD",
+            "Computer graphics"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-cci-healthcare-2022",
+        "title": "CCI supports privacy research for equitable healthcare",
+        "summary": "Kornaropoulos and Rebecca Sutter receive support for ethical, provable de-identification.",
+        "date": "2022-12",
+        "category": "grant",
+        "people": [
+            "Evgenios Kornaropoulos"
+        ],
+        "tags": [
+            "CCI",
+            "Privacy",
+            "Healthcare"
+        ],
+        "sourceName": "Evgenios Kornaropoulos’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~evgenios/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "liu-neurips-spotlights-2022",
+        "title": "Two Liu group papers selected for NeurIPS Spotlights",
+        "summary": "The lab reports spotlight selections for distributed gradient clipping and bilevel optimization research.",
+        "date": "2022-11",
+        "category": "paper-award",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Spotlight",
+            "Optimization"
+        ],
+        "sourceName": "Mingrui Liu’s news archive",
+        "sourceUrl": "https://mingrliu.github.io/news.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-meta-award-2022",
+        "title": "Meta supports searchable-encryption research",
+        "summary": "Kornaropoulos announces a Meta Research Award in Security for his group.",
+        "date": "2022-08",
+        "category": "grant",
+        "people": [
+            "Evgenios Kornaropoulos"
+        ],
+        "tags": [
+            "Meta",
+            "Cryptography"
+        ],
+        "sourceName": "Evgenios Kornaropoulos’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~evgenios/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-mobisys-best-paper-2022",
+        "title": "Millimeter-wave backscatter research wins MobiSys Best Paper",
+        "summary": "Pathak announces the lab’s 2022 best paper award.",
+        "date": "2022-07",
+        "category": "paper-award",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "MobiSys",
+            "Best paper",
+            "Wireless networks"
+        ],
+        "sourceName": "Parth Pathak’s news archive",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kornaropoulos-nsf-encrypted-databases-2022",
+        "title": "NSF funds collaborative encrypted-database research",
+        "summary": "Kornaropoulos reports a SaTC Medium award as lead PI, collaborating with Yale and Brown.",
+        "date": "2022-07",
+        "category": "grant",
+        "people": [
+            "Evgenios Kornaropoulos"
+        ],
+        "tags": [
+            "NSF",
+            "Cryptography"
+        ],
+        "sourceName": "Evgenios Kornaropoulos’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~evgenios/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "baldimtsi-career-2022",
+        "title": "Foteini Baldimtsi receives NSF CAREER award",
+        "summary": "Her project develops practical privacy-preserving transactions with accountability mechanisms.",
+        "date": "2022-05-16",
+        "category": "grant",
+        "people": [
+            "Foteini Baldimtsi"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Cryptography",
+            "Privacy"
+        ],
+        "sourceName": "George Mason University News",
+        "sourceUrl": "https://content.gmu.edu/news/2022-05/foteini-baldimtsi-earns-nsf-career-award",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shehu-aimbe-fellow-2022",
+        "title": "Amarda Shehu elected AIMBE Fellow",
+        "summary": "The institute recognizes Shehu’s advances in computational biology and bioinformatics.",
+        "date": "2022-02-18",
+        "category": "faculty-achievement",
+        "people": [
+            "Amarda Shehu"
+        ],
+        "tags": [
+            "AIMBE",
+            "Fellow",
+            "Computational biology"
+        ],
+        "sourceName": "American Institute for Medical and Biological Engineering",
+        "sourceUrl": "https://aimbe.org/college-of-fellows/cof-7117/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "luke-dejong-sigevo-impact-2022",
+        "title": "Genetic-programming benchmarks paper receives SIGEVO Impact Award",
+        "summary": "Sean Luke and Kenneth De Jong coauthored the 2012 GECCO paper recognized for its lasting influence on benchmark design.",
+        "date": "2022",
+        "category": "paper-award",
+        "people": [
+            "Sean Luke",
+            "Kenneth De Jong"
+        ],
+        "tags": [
+            "ACM SIGEVO",
+            "Test of time",
+            "Genetic programming"
+        ],
+        "sourceName": "ACM SIGEVO",
+        "sourceUrl": "https://sig.sigevo.org/SIGEVO-Impact-Award",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "lam-dissertation-award-2022",
+        "title": "Wing Lam wins SIGSOFT doctoral dissertation award",
+        "summary": "The award recognizes his dissertation on detecting and controlling flaky tests.",
+        "date": "2022",
+        "category": "faculty-achievement",
+        "people": [
+            "Wing Lam"
+        ],
+        "tags": [
+            "ACM SIGSOFT",
+            "Dissertation award"
+        ],
+        "sourceName": "Wing Lam’s awards and grants",
+        "sourceUrl": "https://people.cs.gmu.edu/~winglam/awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kosecka-amazon-research-award-2022",
+        "title": "Amazon supports Jana Košecká’s sign-language recognition research",
+        "summary": "Amazon’s recipient list identifies the Mason project on hand-shape modeling for American Sign Language.",
+        "date": "2022",
+        "category": "grant",
+        "people": [
+            "Jana Košecká"
+        ],
+        "tags": [
+            "Amazon Research Award",
+            "Computer vision",
+            "Accessibility"
+        ],
+        "sourceName": "Amazon Science",
+        "sourceUrl": "https://www.amazon.science/research-awards/program-updates/fall-2021-and-winter-2022-amazon-research-awards-recipients-announced",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "johri-teaching-mentoring-2022",
+        "title": "Aditya Johri recognized for teaching and undergraduate mentoring",
+        "summary": "Johri lists Mason’s Teaching Excellence and OSCAR Mentoring Excellence awards for 2022.",
+        "date": "2022",
+        "category": "faculty-achievement",
+        "people": [
+            "Aditya Johri"
+        ],
+        "tags": [
+            "Teaching",
+            "Mentoring",
+            "Faculty award"
+        ],
+        "sourceName": "Aditya Johri’s homepage",
+        "sourceUrl": "https://mason.gmu.edu/~johri/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "johnson-google-research-scholar-2022",
+        "title": "Brittany Johnson-Matthews receives Google Research Scholar Award",
+        "summary": "Google supports research on recognizing and strengthening ethical signals in communities developing data-driven software.",
+        "date": "2022",
+        "category": "grant",
+        "people": [
+            "Brittany Johnson-Matthews"
+        ],
+        "tags": [
+            "Google",
+            "Software engineering",
+            "Responsible technology"
+        ],
+        "sourceName": "Google Research",
+        "sourceUrl": "https://research.google/programs-and-events/research-scholar-program/recipients/?filtertab=2022",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shehu-schev-2022-announcement",
+        "title": "Amarda Shehu selected for 2022 SCHEV Outstanding Faculty Award",
+        "summary": "Mason announces statewide recognition for Shehu’s scholarship, teaching, and service.",
+        "date": "2021-12-17",
+        "category": "faculty-achievement",
+        "people": [
+            "Amarda Shehu"
+        ],
+        "tags": [
+            "SCHEV",
+            "Faculty award"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2021-12/computer-science-faculty-member-receives-schev-award",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "ziyu-bibm-best-paper-2021",
+        "title": "CliniQG4QA wins IEEE BIBM Best Paper Award",
+        "summary": "Yao announces recognition for the clinical question-generation project.",
+        "date": "2021-12",
+        "category": "paper-award",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "BIBM",
+            "Best paper",
+            "NLP",
+            "Healthcare"
+        ],
+        "sourceName": "Ziyu Yao’s homepage",
+        "sourceUrl": "https://ziyuyao.org/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pfoser-anastasopoulos-spatial-language-2021",
+        "title": "NSF supports translation from spatial language to spatial data",
+        "summary": "Pfoser and Anastasopoulos collaborate on simulation-based methods.",
+        "date": "2021-11-29",
+        "category": "grant",
+        "people": [
+            "Dieter Pfoser",
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "NSF",
+            "Spatial computing",
+            "NLP"
+        ],
+        "sourceName": "GMU College of Science",
+        "sourceUrl": "https://science.gmu.edu/news/college-science-accolades-summer-2021",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "luke-pfoser-behavior-disease-2021",
+        "title": "NSF funds modeling of mobility, behavior, and disease spread",
+        "summary": "Luke and Pfoser join a Mason collaboration led by Taylor Anderson.",
+        "date": "2021-11-29",
+        "category": "grant",
+        "people": [
+            "Sean Luke",
+            "Dieter Pfoser"
+        ],
+        "tags": [
+            "NSF",
+            "Simulation",
+            "Public health"
+        ],
+        "sourceName": "GMU College of Science",
+        "sourceUrl": "https://science.gmu.edu/news/college-science-accolades-summer-2021",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2021",
+        "title": "Zili Zha defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2021-07",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Zili Zha"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pathak-career-2021",
+        "title": "Parth Pathak receives NSF CAREER award",
+        "summary": "The project investigates low-power millimeter-wave networking and sensing.",
+        "date": "2021-05",
+        "category": "grant",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Wireless networks"
+        ],
+        "sourceName": "Parth Pathak’s news archive",
+        "sourceUrl": "https://www.phpathak.com/all-news",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "wijesekera-cci-autonomous-cars-2021",
+        "title": "CCI supports autonomous-driving research at Mason",
+        "summary": "Wijesekera’s project develops connected-vehicle technologies and privacy-preserving network capabilities.",
+        "date": "2021-03-25",
+        "category": "grant",
+        "people": [
+            "Duminda Wijesekera"
+        ],
+        "tags": [
+            "CCI",
+            "Autonomous vehicles",
+            "Security"
+        ],
+        "sourceName": "George Mason University",
+        "sourceUrl": "https://www.gmu.edu/news/2021-03/taking-it-streets-commonwealth-cyber-initiative-funds-research-autonomous-cars",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "setia-uzuner-break-through-tech-2021",
+        "title": "Break Through Tech grant expands access to computing",
+        "summary": "Setia and Uzuner describe Mason’s initiative combining curriculum changes, internships, and community support.",
+        "date": "2021-03-04",
+        "category": "grant",
+        "people": [
+            "Sanjeev Setia",
+            "Özlem Uzuner"
+        ],
+        "tags": [
+            "Computing education",
+            "Broadening participation"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2021-03/mason-faculty-design-break-through-tech-program",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shehu-beck-medal-2021",
+        "title": "Amarda Shehu receives Beck Family Presidential Medal",
+        "summary": "The university recognizes her research and scholarship.",
+        "date": "2021",
+        "category": "faculty-achievement",
+        "people": [
+            "Amarda Shehu"
+        ],
+        "tags": [
+            "Faculty award",
+            "Research"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2021-12/computer-science-faculty-member-receives-schev-award",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "menasce-david-king-teaching-2021",
+        "title": "Daniel Menascé receives David J. King Teaching Award",
+        "summary": "The university award recognizes sustained educational contributions.",
+        "date": "2021",
+        "category": "faculty-achievement",
+        "people": [
+            "Daniel Menascé"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/david-j-king-teaching-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "johri-fulbright-nokia-2021",
+        "title": "Aditya Johri serves as Fulbright-Nokia Distinguished Chair",
+        "summary": "Johri’s biography records his 2021 research appointment at Aalto University.",
+        "date": "2021",
+        "category": "faculty-achievement",
+        "people": [
+            "Aditya Johri"
+        ],
+        "tags": [
+            "Fulbright",
+            "Engineering education"
+        ],
+        "sourceName": "Aditya Johri’s homepage",
+        "sourceUrl": "https://mason.gmu.edu/~johri/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2020",
+        "title": "Li Liu defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2020-11",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Li Liu"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "gordon-career-announcement-2020",
+        "title": "NSF CAREER award supports Dov Gordon’s secure-computation research",
+        "summary": "Gordon investigates efficiency improvements that retain meaningful privacy protections.",
+        "date": "2020-02-04",
+        "category": "grant",
+        "people": [
+            "Dov Gordon"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Cryptography",
+            "Privacy"
+        ],
+        "sourceName": "George Mason University News",
+        "sourceUrl": "https://content.gmu.edu/news/2020-02/computer-science-researcher-investigates-new-ways-computing-encrypted-data",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "qi-wei-teaching-recognition-2020",
+        "title": "Qi Wei receives Teaching Excellence Award for High Impact",
+        "summary": "The Stearns Center lists the faculty member among that year’s honorees.",
+        "date": "2020",
+        "category": "faculty-achievement",
+        "people": [
+            "Qi Wei"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "thomas-latoza-nsf-career-2019",
+        "title": "Thomas LaToza receives NSF CAREER award",
+        "summary": "The project investigates how developers understand and debug software through mental models.",
+        "date": "2019-02-01",
+        "category": "grant",
+        "people": [
+            "Thomas LaToza"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1845508",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "paul-ammann-teaching-recognition-2019",
+        "title": "Paul Ammann receives Teaching Excellence Award",
+        "summary": "The Stearns Center lists the faculty member among that year’s honorees.",
+        "date": "2019",
+        "category": "faculty-achievement",
+        "people": [
+            "Paul Ammann"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-phd-defenses-2019",
+        "title": "Jianchao Tan defends PhD and earns departmental recognition",
+        "summary": "CraGL reports Tan’s doctoral defense and the CS department’s Outstanding Graduate Student award.",
+        "date": "2019",
+        "category": "graduation",
+        "people": [
+            "Yotam Gingold",
+            "Jianchao Tan"
+        ],
+        "tags": [
+            "PhD",
+            "Student award"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-nsf-container-security-2018",
+        "title": "NSF supports fine-grained container security",
+        "summary": "CSIS announces Sun’s grant for restricting container resource access.",
+        "date": "2018-08-21",
+        "category": "grant",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "NSF",
+            "Containers",
+            "Security"
+        ],
+        "sourceName": "CSIS news archive",
+        "sourceUrl": "https://www.csis.gmu.edu/pages/archive-news.php",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sun-nsf-programmable-security-2018",
+        "title": "NSF funds programmable-security workshop",
+        "summary": "CSIS announces Sun’s award supporting research discussion on software-defined security.",
+        "date": "2018-08-07",
+        "category": "grant",
+        "people": [
+            "Kun Sun"
+        ],
+        "tags": [
+            "NSF",
+            "Network security"
+        ],
+        "sourceName": "CSIS news archive",
+        "sourceUrl": "https://www.csis.gmu.edu/pages/archive-news.php",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shehu-teaching-excellence-2018",
+        "title": "Amarda Shehu receives Teaching Excellence Award",
+        "summary": "The university’s SCHEV announcement documents her 2018 teaching honor.",
+        "date": "2018",
+        "category": "faculty-achievement",
+        "people": [
+            "Amarda Shehu"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2021-12/computer-science-faculty-member-receives-schev-award",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "cragl-phd-defenses-2018",
+        "title": "Songrun Liu completes PhD defense",
+        "summary": "CraGL celebrates the completion of Songrun Liu’s doctoral defense.",
+        "date": "2018",
+        "category": "graduation",
+        "people": [
+            "Yotam Gingold",
+            "Songrun Liu"
+        ],
+        "tags": [
+            "PhD",
+            "Computer graphics"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2018",
+        "title": "Mengbai Xiao, Wentao Chang, An Wang defend PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defenses.",
+        "date": "2018",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Mengbai Xiao",
+            "Wentao Chang",
+            "An Wang"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "andrea-simon-milcom-best-paper-2017",
+        "title": "Kevin Andrea and Robert Simon win MILCOM paper award",
+        "summary": "The Fred Ellersick Best Unclassified Paper Award recognizes their collaborative research on moving-target defenses for IoT.",
+        "date": "2017-10",
+        "category": "paper-award",
+        "people": [
+            "Kevin Andrea",
+            "Robert Simon"
+        ],
+        "tags": [
+            "MILCOM",
+            "Best paper",
+            "IoT security"
+        ],
+        "sourceName": "Mason C5I Center",
+        "sourceUrl": "https://c5i.gmu.edu/recent-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2017",
+        "title": "Huangxin Wang defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2017-05",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Huangxin Wang"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "allbeck-darpa-megacities-2017",
+        "title": "DARPA funds megacities command-and-control research",
+        "summary": "Allbeck joins a Mason team developing capabilities for assessing complex urban operations.",
+        "date": "2017-02",
+        "category": "grant",
+        "people": [
+            "Jan Allbeck"
+        ],
+        "tags": [
+            "DARPA",
+            "Simulation"
+        ],
+        "sourceName": "Mason C5I Center",
+        "sourceUrl": "https://c5i.gmu.edu/contracts-and-grants/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "yotam-gingold-teaching-recognition-2017",
+        "title": "Yotam Gingold receives Teaching Excellence Award",
+        "summary": "The Stearns Center lists the faculty member among that year’s honorees.",
+        "date": "2017",
+        "category": "faculty-achievement",
+        "people": [
+            "Yotam Gingold"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kai-zeng-senior-design-2017",
+        "title": "Wireless-security students receive GMU senior-design award",
+        "summary": "Zeng lists the ECE department’s fall 2017 Best Senior Design Award with his student team.",
+        "date": "2017",
+        "category": "student-achievement",
+        "people": [
+            "Kai Zeng"
+        ],
+        "tags": [
+            "Student award",
+            "Engineering design"
+        ],
+        "sourceName": "Kai Zeng’s awards",
+        "sourceUrl": "https://people-ece.vse.gmu.edu/~kzeng2/awards.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "pfoser-movement-networks-nsf-2016",
+        "title": "NSF funds Dieter Pfoser’s transportation-network research",
+        "summary": "The project models movement using uncertain transportation data.",
+        "date": "2016-10-03",
+        "category": "grant",
+        "people": [
+            "Dieter Pfoser"
+        ],
+        "tags": [
+            "NSF",
+            "Spatial computing",
+            "Transportation"
+        ],
+        "sourceName": "GMU College of Science",
+        "sourceUrl": "https://science.gmu.edu/news/faculty-staff-accolades-september-2016",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sparc-undergraduate-teaching-awards-2016",
+        "title": "SPARC teaching assistants recognized by CS department",
+        "summary": "Ben Noble, Jackie Roberts, and John Wong receive Outstanding Undergraduate Teaching Assistant awards.",
+        "date": "2016-05-11",
+        "category": "student-achievement",
+        "people": [
+            "Paul Ammann",
+            "Jeff Offutt",
+            "Ben Noble",
+            "Jackie Roberts",
+            "John Wong"
+        ],
+        "tags": [
+            "Undergraduate research",
+            "Teaching award"
+        ],
+        "sourceName": "GMU SPARC news",
+        "sourceUrl": "https://sparc.cs.gmu.edu/news.jsp",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2016",
+        "title": "Mohammad Karami defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2016-05",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Mohammad Karami"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "snyder-dobolyi-teaching-awards-2016",
+        "title": "Mark Snyder and Kinga Dobolyi receive Teaching Excellence Awards",
+        "summary": "SPARC celebrates university recognition for its computing educators.",
+        "date": "2016-04-11",
+        "category": "faculty-achievement",
+        "people": [
+            "Mark Snyder",
+            "Kinga Dobolyi"
+        ],
+        "tags": [
+            "Teaching",
+            "Computer science education"
+        ],
+        "sourceName": "GMU SPARC news",
+        "sourceUrl": "https://sparc.cs.gmu.edu/news.jsp",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "kai-zeng-assip-science-fair-2016",
+        "title": "ASSIP interns win state science-fair computer-science prize",
+        "summary": "Zeng celebrates Eric Wang, William Xu, and Suhas Sastry’s first prize at the Virginia State Science and Engineering Fair.",
+        "date": "2016",
+        "category": "student-achievement",
+        "people": [
+            "Kai Zeng",
+            "Eric Wang",
+            "William Xu",
+            "Suhas Sastry"
+        ],
+        "tags": [
+            "ASSIP",
+            "Student award"
+        ],
+        "sourceName": "Kai Zeng’s awards",
+        "sourceUrl": "https://people-ece.vse.gmu.edu/~kzeng2/awards.html",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "yotam-gingold-nsf-career-2015",
+        "title": "Yotam Gingold receives NSF CAREER award",
+        "summary": "The project develops direct manipulation methods for geometry creation through numerical optimization.",
+        "date": "2015-02-04",
+        "category": "grant",
+        "people": [
+            "Yotam Gingold"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1453018",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "sean-luke-teaching-recognition-2015",
+        "title": "Sean Luke receives Teaching Excellence Award for Teaching with Technology",
+        "summary": "The Stearns Center lists the faculty member among that year’s honorees.",
+        "date": "2015",
+        "category": "faculty-achievement",
+        "people": [
+            "Sean Luke"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "mihai-boicu-teaching-recognition-2015",
+        "title": "Mihai Boicu receives Teacher of Distinction",
+        "summary": "The Stearns Center lists the faculty member among that year’s honorees.",
+        "date": "2015",
+        "category": "faculty-achievement",
+        "people": [
+            "Mihai Boicu"
+        ],
+        "tags": [
+            "Teaching",
+            "Faculty award"
+        ],
+        "sourceName": "Stearns Center",
+        "sourceUrl": "https://stearnscenter.gmu.edu/recognition/teaching-awards/teaching-excellence-awards/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2014",
+        "title": "Mohammed Hassan defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2014-11",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Mohammed Hassan"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "wang-securecomm-best-paper-2013",
+        "title": "Softphone security study wins SecureComm Best Paper",
+        "summary": "Ryan Farley and Frank Wang receive recognition for research on preventing attacks that disable computers through softphone flaws.",
+        "date": "2013-09",
+        "category": "paper-award",
+        "people": [
+            "Xinyuan (Frank) Wang",
+            "Ryan Farley"
+        ],
+        "tags": [
+            "SecureComm",
+            "Best paper",
+            "Security"
+        ],
+        "sourceName": "Frank Wang’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xwangc/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2013",
+        "title": "Yao Liu defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2013-04",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Yao Liu"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "shehu-oscar-mentoring-2013",
+        "title": "Amarda Shehu receives OSCAR mentoring award",
+        "summary": "Mason’s later faculty profile records her 2013 undergraduate-mentoring recognition.",
+        "date": "2013",
+        "category": "faculty-achievement",
+        "people": [
+            "Amarda Shehu"
+        ],
+        "tags": [
+            "Mentoring",
+            "Undergraduate research"
+        ],
+        "sourceName": "GMU Computer Science",
+        "sourceUrl": "https://cs.gmu.edu/news/2021-12/computer-science-faculty-member-receives-schev-award",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "jessica-lin-time-series-2012",
+        "title": "NSF funds hierarchical time-series research",
+        "summary": "Lin’s collaborative project applies statistical language-processing methods to discover and use time-series structure.",
+        "date": "2012-08-28",
+        "category": "grant",
+        "people": [
+            "Jessica Lin"
+        ],
+        "tags": [
+            "NSF",
+            "Time series",
+            "Data mining"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1218325",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "fei-li-energy-efficient-algorithms-2012",
+        "title": "NSF funds algorithms for energy-efficient computing",
+        "summary": "Li’s collaborative project studies algorithmic approaches to reducing computing energy use.",
+        "date": "2012-07-23",
+        "category": "grant",
+        "people": [
+            "Fei Li"
+        ],
+        "tags": [
+            "NSF",
+            "Algorithms",
+            "Energy efficiency"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1216993",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "simon-cross-domain-infrastructure-2012",
+        "title": "NSF funds shared wireless and security infrastructure",
+        "summary": "Simon’s project builds an experimental platform spanning wireless computing, cybersecurity, and data mining.",
+        "date": "2012-06-06",
+        "category": "grant",
+        "people": [
+            "Robert Simon"
+        ],
+        "tags": [
+            "NSF",
+            "Research infrastructure",
+            "Wireless networks"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1205453",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "amarda-shehu-nsf-career-2012",
+        "title": "Amarda Shehu receives NSF CAREER award",
+        "summary": "The project develops probabilistic methods for complex, constrained protein systems.",
+        "date": "2012-02-22",
+        "category": "grant",
+        "people": [
+            "Amarda Shehu"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1144106",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "simon-aydin-energy-harvesting-2011",
+        "title": "NSF supports energy harvesting for sensor networks",
+        "summary": "Simon’s project investigates performance-sensitive wireless sensor networks.",
+        "date": "2011-08-07",
+        "category": "grant",
+        "people": [
+            "Robert Simon"
+        ],
+        "tags": [
+            "NSF",
+            "Wireless networks",
+            "Energy efficiency"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1116122",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "fei-li-reliable-energy-scheduling-2011",
+        "title": "NSF supports reliability-aware scheduling research",
+        "summary": "Li investigates chip reliability when designing energy-saving scheduling algorithms.",
+        "date": "2011-07-27",
+        "category": "grant",
+        "people": [
+            "Fei Li"
+        ],
+        "tags": [
+            "NSF",
+            "Algorithms",
+            "Reliability"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=1146578",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2010",
+        "title": "Lei Liu defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2010-12",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Lei Liu"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "fei-li-online-scheduling-2009",
+        "title": "NSF funds online scheduling algorithms",
+        "summary": "Li’s collaborative project examines scheduling for networked systems and applications.",
+        "date": "2009-08-05",
+        "category": "grant",
+        "people": [
+            "Fei Li"
+        ],
+        "tags": [
+            "NSF",
+            "Algorithms",
+            "Networking"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0915681",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "chen-defenses-2009",
+        "title": "Dongyu Liu defends PhD research",
+        "summary": "Songqing Chen’s alumni list records the completed doctoral defense.",
+        "date": "2009-08",
+        "category": "graduation",
+        "people": [
+            "Songqing Chen",
+            "Dongyu Liu"
+        ],
+        "tags": [
+            "PhD",
+            "Computer systems"
+        ],
+        "sourceName": "Songqing Chen’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~sqchen/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "domeniconi-emerging-researcher-report-2009",
+        "title": "Mason newsletter celebrates Carlotta Domeniconi’s emerging-researcher recognition",
+        "summary": "The research newsletter profiles her pattern-recognition work and reports the honor.",
+        "date": "2009-02",
+        "category": "faculty-achievement",
+        "people": [
+            "Carlotta Domeniconi"
+        ],
+        "tags": [
+            "Faculty award",
+            "Machine learning"
+        ],
+        "sourceName": "GMU Office of Sponsored Programs",
+        "sourceUrl": "https://osp.gmu.edu/wp-content/uploads/OSP_Newsletter_Feb2009.pdf",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "wang-career-2009",
+        "title": "Frank Wang receives NSF CAREER award",
+        "summary": "Wang’s homepage records the early-career research award.",
+        "date": "2009",
+        "category": "grant",
+        "people": [
+            "Xinyuan (Frank) Wang"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Security"
+        ],
+        "sourceName": "Frank Wang’s homepage",
+        "sourceUrl": "https://people.cs.gmu.edu/~xwangc/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "songqing-chen-nsf-career-2008",
+        "title": "Songqing Chen receives NSF CAREER award",
+        "summary": "The project studies resource management for high-quality streaming to wireless clients.",
+        "date": "2008-01-22",
+        "category": "grant",
+        "people": [
+            "Songqing Chen"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0746649",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "hakan-aydin-nsf-career-2006",
+        "title": "Hakan Aydin receives NSF CAREER award",
+        "summary": "The award supports system-wide energy management for real-time embedded devices.",
+        "date": "2006-01-20",
+        "category": "grant",
+        "people": [
+            "Hakan Aydin"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0546244",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "richards-exponential-networks-2005",
+        "title": "NSF supports Dana Richards’s network-structure research",
+        "summary": "The exploratory project investigates the structure of exponential networks.",
+        "date": "2005-09-12",
+        "category": "grant",
+        "people": [
+            "Dana Richards"
+        ],
+        "tags": [
+            "NSF",
+            "Algorithms",
+            "Networks"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0540906",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "carlotta-domeniconi-nsf-career-2005",
+        "title": "Carlotta Domeniconi receives NSF CAREER award",
+        "summary": "The project investigates locally relevant features for pattern classification and clustering.",
+        "date": "2005-02-01",
+        "category": "grant",
+        "people": [
+            "Carlotta Domeniconi"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0447814",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "dejong-ec-pioneer-2005",
+        "title": "Kenneth De Jong receives Evolutionary Computation Pioneer Award",
+        "summary": "IEEE’s society minutes document approval of De Jong for the 2005 honor.",
+        "date": "2005",
+        "category": "faculty-achievement",
+        "people": [
+            "Kenneth De Jong"
+        ],
+        "tags": [
+            "IEEE",
+            "Evolutionary computation",
+            "Lifetime achievement"
+        ],
+        "sourceName": "IEEE Computational Intelligence Society",
+        "sourceUrl": "https://cis.ieee.org/images/files/Documents/adcom-minutes/adcom_minutes_2004_07.pdf",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "setia-mobile-agent-testbed-2004",
+        "title": "NSF supports mobile-agent research testbed",
+        "summary": "Setia’s instrumentation award acquires infrastructure for research and teaching with mobile collaborative agents.",
+        "date": "2004-08-17",
+        "category": "grant",
+        "people": [
+            "Sanjeev Setia"
+        ],
+        "tags": [
+            "NSF",
+            "Robotics",
+            "Research infrastructure"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0420793",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "jana-ko-eck-nsf-career-2004",
+        "title": "Jana Košecká receives NSF CAREER award",
+        "summary": "The award supports geometric and appearance-based methods for acquiring visual models.",
+        "date": "2004-01-20",
+        "category": "grant",
+        "people": [
+            "Jana Košecká"
+        ],
+        "tags": [
+            "NSF CAREER",
+            "Research funding"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0347774",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "barbara-clustering-impact-2002",
+        "title": "NSF funds impact-based clustering research",
+        "summary": "Barbará’s project develops clustering algorithms and applications.",
+        "date": "2002-08-15",
+        "category": "grant",
+        "people": [
+            "Daniel Barbará"
+        ],
+        "tags": [
+            "NSF",
+            "Data mining",
+            "Algorithms"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=0208519",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "menasce-michelson-award-2001",
+        "title": "Daniel Menascé receives A. A. Michelson Award",
+        "summary": "The Computer Measurement Group recognizes Menascé’s technical achievements and professional contributions to computer performance evaluation.",
+        "date": "2001",
+        "category": "faculty-achievement",
+        "people": [
+            "Daniel Menascé"
+        ],
+        "tags": [
+            "CMG",
+            "Performance evaluation"
+        ],
+        "sourceName": "Computer Measurement Group",
+        "sourceUrl": "https://www.cmg.org/2017/11/aa-michelson-award-winners/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "barbara-quasi-cubes-1998",
+        "title": "NSF supports approximate multidimensional data analysis",
+        "summary": "Barbará’s Quasi-Cubes project explores approximation in multidimensional datasets.",
+        "date": "1998-08-26",
+        "category": "grant",
+        "people": [
+            "Daniel Barbará"
+        ],
+        "tags": [
+            "NSF",
+            "Databases",
+            "Data mining"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=9732113",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "wechsler-iapr-fellow-1998",
+        "title": "Harry Wechsler elected IAPR Fellow",
+        "summary": "The association recognizes Wechsler’s contributions to vision and pattern recognition and his professional service.",
+        "date": "1998",
+        "category": "faculty-achievement",
+        "people": [
+            "Harry Wechsler"
+        ],
+        "tags": [
+            "IAPR",
+            "Fellow",
+            "Computer vision"
+        ],
+        "sourceName": "International Association for Pattern Recognition",
+        "sourceUrl": "https://iapr.org/fellows/chronological-list-of-iapr-fellows/",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "setia-parallel-applications-1997",
+        "title": "NSF funds adaptable parallel applications",
+        "summary": "Setia studies support for malleable applications on workstation clusters.",
+        "date": "1997-08-29",
+        "category": "grant",
+        "people": [
+            "Sanjeev Setia"
+        ],
+        "tags": [
+            "NSF",
+            "Parallel computing",
+            "Systems"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=9704447",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "menasce-acm-fellow-1997",
+        "title": "Daniel Menascé elected ACM Fellow",
+        "summary": "ACM SIGMETRICS records his induction in its fellows history.",
+        "date": "1997",
+        "category": "faculty-achievement",
+        "people": [
+            "Daniel Menascé"
+        ],
+        "tags": [
+            "ACM Fellow",
+            "Performance evaluation"
+        ],
+        "sourceName": "ACM SIGMETRICS",
+        "sourceUrl": "https://www.sigmetrics.hosting.acm.org/acm-fellows.shtml",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "setia-research-initiation-1994",
+        "title": "Sanjeev Setia receives NSF research-initiation award",
+        "summary": "The project investigates scheduling and memory management in message-passing multicomputers.",
+        "date": "1994-09-01",
+        "category": "grant",
+        "people": [
+            "Sanjeev Setia"
+        ],
+        "tags": [
+            "NSF",
+            "Parallel computing",
+            "Systems"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=9409697",
+        "lastModified": "2026-11-05",
+        "lastVerified": "2026-11-05"
+    }
+]

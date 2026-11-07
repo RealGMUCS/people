@@ -41,9 +41,9 @@ jobs:
             problems+="$stale"$'\n\n'
           fi
 
-          # Each weekly producer must show output (a [scheduled:<key>] PR or Issue) within about two
-          # cron cycles. Days per key; keep in step with the Schedule table in TASKS/AUTOMATION.md.
-          declare -A window=([discover]=15 [check]=15 [honors]=15 [portraits]=15)
+          # Each producer (weekly; news twice weekly) must show output (a [scheduled:<key>] PR or
+          # Issue) within about two cron cycles. Days per key; keep in step with the Schedule table in TASKS/AUTOMATION.md.
+          declare -A window=([discover]=15 [check]=15 [portraits]=15 [news]=8)
           since=$(date -u -d "-15 days" +%Y-%m-%d)
           gh search prs --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > prs.json
           gh search issues --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > issues.json

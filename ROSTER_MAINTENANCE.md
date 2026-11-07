@@ -102,6 +102,8 @@ When verifying or updating entries, consult sources in the following priority or
 * `First Name`, `Last Name`: Faculty member's name.
 * `gmu email/userid`: GMU email address or NetID.
 * `Picture`: local relative path under `public/portraits/` (e.g. `portraits/jane-doe.webp`), written by `npm run fetch:portraits` — do not hand-edit this to an external URL; set `Picture Source` instead and re-run the script.
+* `Website`: personal academic homepage or official faculty profile.
+* `Lab Website`: separate public research lab or group page, confirmed by the faculty homepage or the lab’s faculty listing. Leave blank when no separate page is confirmed; do not duplicate `Website`. A combined personal/lab site may remain in `Website`.
 * `Picture Source`: the original external hotlink the local picture was fetched from (provenance only, not rendered).
 * `Tenure-Track/Teaching/Staff`: Primary track (`Tenure-Track`, `Teaching`, `Research`, `Staff`).
 * `Rank`: Academic rank (e.g., `Associate Professor`).

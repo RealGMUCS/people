@@ -14,7 +14,9 @@
         "test": "tsx --test tests/**/*.test.ts",
         "preview": "vite preview",
         "sync:vietprofs-ui": "tsx scripts/sync-vietprofs-ui.ts",
-        "next-batch": "tsx scripts/next-batch.ts"
+        "next-batch": "tsx scripts/next-batch.ts",
+        "news:sources": "tsx scripts/news-sources.ts",
+        "news:watch": "tsx scripts/news-watch.ts"
     },
     "devDependencies": {
         "@types/node": "^26.4.1",
