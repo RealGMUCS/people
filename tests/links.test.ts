@@ -22,7 +22,7 @@ test('faculty website and lab icons have independent destinations and accessible
 test('generated profile pages never emit schemeless external links', () => {
     const peopleDir = path.join(root, 'public', 'people');
     if (!fs.existsSync(peopleDir)) {
-        execFileSync('npx', ['tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
+        execFileSync(process.execPath, ['--import', 'tsx', 'scripts/generate-profile-pages.ts', '--dev'], { cwd: root });
     }
 
     const files = fs.readdirSync(peopleDir).filter(f => f.endsWith('.html'));

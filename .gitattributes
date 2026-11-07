@@ -1,0 +1,3 @@
+# src/vietprofs/ is hash-checked byte-for-byte (tests/vietprofs-ui.test.ts), so keep LF line
+# endings even where Git converts to CRLF on checkout (Windows core.autocrlf).
+src/vietprofs/** text eol=lf
