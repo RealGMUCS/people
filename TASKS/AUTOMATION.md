@@ -290,8 +290,14 @@ Playbooks: `TASKS/audit_faculty_roster.md`, `TASKS/audit_students_and_alumni.md`
 
 **Every run opens a PR, even when no record changed**, because the PR advances the rotation. An
 entry counts as checked only when every bullet below was done for it; a URL-status pass is not a
-check. If you run short of time, stop early and set the cursor to the first entry you didn't
-finish: a PR covering 12 entries properly beats one claiming 30.
+check. **Finish the whole batch, students included.** A run has no time budget to protect:
+stopping because the run feels long, or to "avoid skimming", is not allowed. Stop early only for
+a concrete blocker you can name (the session is ending, the tool or context limit is reached, or
+every remaining source is blocked). When you do, name that blocker in the PR body's `## Scope`
+section and set each cursor to the first entry you didn't finish. A blocked entry (source 403s,
+bot check) is listed as blocked and doesn't stop the batch: move on to the next entry. Do the
+students even if a faculty entry was blocked; a PR with 0 students checked and no named blocker is
+rejected by the auditor.
 
 For each faculty member, open the official GMU profile, their homepage, and Scholar once and
 settle what they show. For a former member (`Former: Yes`), use their current official page
