@@ -88,9 +88,9 @@ When verifying or updating entries, consult sources in the following priority or
 
 ### `public/students.json`
 * `First Name`, `Last Name`: Official name as registered at GMU.
-* `Advisor`: Full name of primary faculty advisor (e.g., `Amarda Shehu`). Set to `None` for unadvised coursework M.S. students.
+* `Advisor`: Full name of primary faculty advisor (e.g., `Amarda Shehu`). Set to `None` for unadvised coursework M.S. students, and to `NA` when the owner keeps a record whose advisor is deliberately not attributed (e.g. the listed faculty member asked not to be named as advisor). A CS faculty advisor must match a `faculty.json` name exactly so the card links; a GMU advisor outside CS (e.g. Sushil Jajodia, Jens-Peter Kaps, Emanuela Marasco; see `maintenance/rotation.json` `former.skip`) is written as their full name and simply doesn't link. Don't add them to `faculty.json`.
 * `Co-Advisor`: Full name of co-advisor, if applicable (e.g., `Fei Li`).
-* `Degree`: Degree and graduation year (e.g., `PhD '23`, `MS '24`, `PhD`).
+* `Degree`: Degree and graduation year (e.g., `PhD '23`, `MS '24`, `PhD`). A person with several GMU degrees lists them oldest first, comma-separated (`MS '04, PhD '10`; a current PhD student who finished the MS here is `MS '26, PhD`); the site reads the **last** entry for current vs. alumni status. Someone who left without a degree keeps the program and a parenthetical (`PhD (GRA 1994–1998, no degree)`). The owner's own students from a prior institution (e.g. University of Nebraska-Lincoln) are kept, with the institution after the year (`PhD '22, University of Nebraska-Lincoln`).
 * `Dissertation Title`: Title of completed doctoral dissertation or master's thesis.
 * `Current Job`: Current job title and organization (e.g., `Assistant Professor, UC Riverside`).
 * `First Job`: First placement upon graduation (e.g., `Postdoc, MIT`).

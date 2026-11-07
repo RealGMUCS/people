@@ -310,7 +310,10 @@ function studentStatus(s) {
     if (s.currentJob || s.firstJob) {
         return 'alumni';
     }
-    const match = (s.degree || '').match(/'(\d{2})\b/);
+    // Read the last listed degree: "MS '26, PhD" is a current PhD student, not an MS alum.
+    const degrees = (s.degree || '').split(',').filter(d => /^\s*(PhD|MS|MA|MEng|BS|BA|JD)\b/i.test(d));
+    const lastDegree = degrees.length ? degrees[degrees.length - 1] : (s.degree || '');
+    const match = lastDegree.match(/'(\d{2})\b/);
     if (match) {
         const rawYr = parseInt(match[1], 10);
         const year = rawYr > 50 ? 1900 + rawYr : 2000 + rawYr;
