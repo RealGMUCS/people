@@ -25,7 +25,7 @@ Include people who held a tenure-line, teaching, or research **faculty** appoint
 Include current graduate students and alumni who earned or are pursuing degrees from GMU Computer Science:
 * **PhD Candidates & Alumni**: Tracked with degree format (e.g., `PhD '23` or `PhD`), primary advisor, co-advisor (where applicable), dissertation title, first job, current job, and current location.
   * **Advised by CS faculty counts.** A GMU doctorate in another program (e.g. the former Information Technology PhD, or Computational Sciences) is included when the dissertation advisor is CS faculty; MARS labels several such alumni (James Rogers, Hesham Altaleb, Susan Farley, Guodong Shao, Khalid Alodhaibi, Mohammad Karami, Uday Kamath) as Information Technology. MARS's discipline field is not reliable on its own: it labels some CS PhDs "Computational Science".
-  * **Finding graduates.** GMU commencement programs list each CS PhD with title and advisors. MARS (`digitalcollections.gmu.edu`) blocks automated access, but every MARS dissertation has a DataCite DOI (`api.datacite.org/dois?query=prefix:10.13021 AND types.resourceType:Dissertation`) giving author, advisor, and year, and each DOI's `gmu.tind.io/record/<id>/export/xm` record gives the degree discipline (MARC 502 `$g`). Fetch those one at a time, slowly.
+  * **Finding graduates.** GMU commencement programs list each CS PhD with title and advisors. MARS (`digitalcollections.gmu.edu`) blocks automated access, but every MARS dissertation has a DataCite DOI (`api.datacite.org/dois?query=prefix:10.13021 AND types.resourceType:Dissertation`) giving author, advisor, and year, and the record's MARC (via OAI-PMH: `https://digitalcollections.gmu.edu/oai2d?verb=GetRecord&metadataPrefix=marcxml&identifier=oai:digitalcollections.gmu.edu:<id>`, where `<id>` is the `gmu.tind.io/record/<id>` number) gives the degree discipline (502 `$g`; author in 700, advisor in 720 `$e advisor`). `gmu.tind.io/.../export/xm` is now behind a bot challenge. Space OAI requests ~20 s apart; retry a 503.
 * **M.S. Students & Alumni (Thesis & Non-Thesis)**:
   * **Thesis M.S.**: Include thesis advisor and thesis title.
   * **Coursework / Non-Thesis M.S.**: Include degree (`MS '24`), current placement/location, and set `Advisor` to `None`.
@@ -72,7 +72,7 @@ When verifying or updating entries, consult sources in the following priority or
    * Individual GMU Profiles: `cs.gmu.edu/profiles/[netid]`
    * Faculty homepages on `people.cs.gmu.edu/~[netid]` (this host serves an incomplete TLS certificate chain and is sometimes down; retry, or read it through a search engine's cached result, rather than treating a failure as a dead link)
 2. **GMU Archival & Thesis Repository**:
-   * **MARS (Mason Archival Repository Service)** for official M.S. theses and Ph.D. dissertations. `mars.gmu.edu` now redirects to `digitalcollections.gmu.edu`, which refuses automated fetches (403); find deposits through a web search (`site:digitalcollections.gmu.edu` or the title) and the advisor's CV instead.
+   * **MARS (Mason Archival Repository Service)** for official M.S. theses and Ph.D. dissertations. `mars.gmu.edu` now redirects to `digitalcollections.gmu.edu`, whose pages refuse automated fetches (403) but whose OAI-PMH endpoint works (see §1); find deposits through a web search (`site:digitalcollections.gmu.edu` or the title) and the advisor's CV instead.
 3. **Former faculty (years at GMU)**: their CV, an official bio or news item at GMU or the new employer, and Wayback Machine snapshots of the CS faculty listing (`web.archive.org/web/*/cs.gmu.edu/people/faculty*`), whose first and last appearance bound the years. Use a snapshot-derived year only when no CV or announcement states it, and say so in the evidence.
 4. **Academic Bibliographic Databases**:
    * Google Scholar profiles
@@ -88,9 +88,9 @@ When verifying or updating entries, consult sources in the following priority or
 
 ### `public/students.json`
 * `First Name`, `Last Name`: Official name as registered at GMU.
-* `Advisor`: Full name of primary faculty advisor (e.g., `Amarda Shehu`). Set to `None` for unadvised coursework M.S. students.
+* `Advisor`: Full name of primary faculty advisor (e.g., `Amarda Shehu`). Set to `None` for unadvised coursework M.S. students, and to `NA` when the owner keeps a record whose advisor is deliberately not attributed (e.g. the listed faculty member asked not to be named as advisor). A CS faculty advisor must match a `faculty.json` name exactly so the card links; a GMU advisor outside CS (e.g. Sushil Jajodia, Jens-Peter Kaps, Emanuela Marasco; see `maintenance/rotation.json` `former.skip`) is written as their full name and simply doesn't link. Don't add them to `faculty.json`.
 * `Co-Advisor`: Full name of co-advisor, if applicable (e.g., `Fei Li`).
-* `Degree`: Degree and graduation year (e.g., `PhD '23`, `MS '24`, `PhD`).
+* `Degree`: Degree and graduation year (e.g., `PhD '23`, `MS '24`, `PhD`). A person with several GMU degrees lists them oldest first, comma-separated (`MS '04, PhD '10`; a current PhD student who finished the MS here is `MS '26, PhD`); the site reads the **last** entry for current vs. alumni status. Someone who left without a degree keeps the program and a parenthetical (`PhD (GRA 1994–1998, no degree)`). The owner's own students from a prior institution (e.g. University of Nebraska-Lincoln) are kept, with the institution after the year (`PhD '22, University of Nebraska-Lincoln`).
 * `Dissertation Title`: Title of completed doctoral dissertation or master's thesis.
 * `Current Job`: Current job title and organization (e.g., `Assistant Professor, UC Riverside`).
 * `First Job`: First placement upon graduation (e.g., `Postdoc, MIT`).
