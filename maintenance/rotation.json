@@ -3,11 +3,11 @@
     "check": {
         "faculty": {
             "size": 10,
-            "next": "anne-marchant"
+            "next": "carlotta-domeniconi"
         },
         "students": {
             "size": 20,
-            "next": ""
+            "next": "abdulaziz-alaboudi"
         }
     },
     "honors": {
