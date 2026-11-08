@@ -121,6 +121,11 @@ them share these rules:
    MARS, and the person's own site outrank LinkedIn and Scholar (`ROSTER_MAINTENANCE.md` §3). If a
    source is blocked (egress proxy, bot check, LinkedIn), don't accept the fact and don't delete
    the existing value because of the block; list the entry as blocked so a later run retries it.
+   **If a block stops the whole run** (a permission denial, the GMU pages unreachable, or too few
+   sources left to do the batch honestly), don't end with only a summary or a push notification:
+   open one `[scheduled:<key>] Blocked: <cause>` Issue (or comment on the open one for your key)
+   with the denied command or failing URLs and their exact errors, what was done, and the cursor
+   left unchanged. Then stop. The auditor closes it once a later run of that key succeeds.
 9. **Side findings.** Report them as described below.
 10. **No follow-ups.** Once your PR/Issues are open, stop. Don't schedule check-ins, reminders,
     wakeups, or re-armed routines to watch CI or the PR, and never call PR-subscription tools
@@ -457,3 +462,9 @@ finish.
   **Full**. Some sites (notably LinkedIn) block bots anyway; those entries stay as they are.
 - **GMU faculty pages fail with a certificate error:** `people.cs.gmu.edu` sends an incomplete
   TLS chain. Use `curl -skL` (read-only, so skipping verification is safe), then Wayback.
+  The cloud classifier may deny `-k` as TLS weakening; on 2026-11-08 that stopped `discover` and
+  `check` with no PR or Issue, and WebFetch got 503 from `cs.gmu.edu`. The fix is an Auto mode
+  allow rule on each routine that reads GMU pages (`discover`, `check`, `audit`), added in the web
+  UI (agents can't edit routine permissions): "Read-only `curl -skL` GETs of public `*.gmu.edu`
+  pages and faculty homepages/lab sites are allowed; people.cs.gmu.edu sends an incomplete TLS
+  chain, the output is only read as data, and no credentials or uploads are involved."
