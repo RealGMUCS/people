@@ -25,6 +25,22 @@
             ],
             "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
             "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established."
+        },
+        {
+            "title": "Zampieri EMNLP 2026 papers (SUNDER; multilingual news image captioning)",
+            "people": [
+                "Marcos Zampieri"
+            ],
+            "sourceUrl": "https://mzampieri.com",
+            "reason": "Homepage lists two EMNLP (2026) papers without saying main track or Findings; hold until track is confirmed."
+        },
+        {
+            "title": "Craig Yu Department Outstanding Research Award",
+            "people": [
+                "Craig Yu"
+            ],
+            "sourceUrl": "https://craigyuyu.github.io/home/",
+            "reason": "Homepage news lists the award with no year; hold for awards.json until the year is established."
         }
     ],
     "discrepancies": [
