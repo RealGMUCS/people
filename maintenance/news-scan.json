@@ -1,8 +1,8 @@
 {
     "scope": "Roster-wide historical discovery pass: attempted all 119 distinct listed faculty/lab URLs, reviewed linked archives, searched missing-homepage faculty, and supplemented with university, funder, conference, and professional-society records. Sources without readable content are explicitly flagged. This is a substantial curated archive, not a guarantee that every historical event has been recovered.",
-    "lastModified": "2026-11-05",
+    "lastModified": "2026-11-08",
     "summary": {
-        "stories": 193,
+        "stories": 259,
         "earliestYear": "1994",
         "latestYear": "2026",
         "facultyWithStories": 70,
@@ -655,9 +655,9 @@
         },
         {
             "url": "https://craigyuyu.github.io/home/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-08",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Backfill read: honors present; research award has no year (held)."
         },
         {
             "url": "https://craigyuyu.github.io/home/group.html",
@@ -1288,6 +1288,72 @@
             "checked": "2026-11-05",
             "status": "checked",
             "note": "Primary source reviewed for the linked news claim; date precision retained from the source."
+        },
+        {
+            "url": "https://mzampieri.com",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Baseline read; Narrate2Nav story added, EMNLP 2026 papers held."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~kosecka",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Thin page read via curl; only service roles (ECCV 2026 General Chair), no news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~evgenios",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Changed: program-committee line only; not newsworthy."
+        },
+        {
+            "url": "https://cec.gmu.edu/news",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Changed: Piegan PhD '26 feature is not a roster person; none."
+        },
+        {
+            "url": "https://cs.gmu.edu/news",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Changed: DC scholarship line, not faculty news; none."
+        },
+        {
+            "url": "https://andrianmarcus.net",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Deep re-read: service/speaker news only; honors already in awards.json."
+        },
+        {
+            "url": "https://antonisa.github.io",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Deep re-read: all items already in news.json."
+        },
+        {
+            "url": "https://ari-lab-gmu.github.io",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Deep re-read: items already covered (UIST, DIS, scholarship)."
+        },
+        {
+            "url": "https://ateniese.github.io",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Deep re-read: no new honors."
+        },
+        {
+            "url": "https://cnslab.cs.gmu.edu",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Deep re-read: newest item is 2019; no eligible news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~johnsonb/docs/CV.pdf",
+            "checked": "2026-11-08",
+            "status": "checked",
+            "note": "Backfill read: no honors beyond what awards.json lists."
         }
     ],
     "facultyWithoutSources": [
