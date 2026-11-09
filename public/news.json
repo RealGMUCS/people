@@ -1,5 +1,29 @@
 [
     {
+        "id": "zampieri-xiao-narrate2nav-icra-2026",
+        "title": "Narrate2Nav robot-navigation paper at ICRA 2026",
+        "summary": "Marcos Zampieri and Xuesu Xiao co-author Narrate2Nav, a real-time visual navigation approach with implicit language reasoning for human-centric environments, listed at ICRA 2026.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Marcos Zampieri",
+            "Xuesu Xiao",
+            "Amirreza Payandeh",
+            "Anuj Pokhrel",
+            "Daeun Song"
+        ],
+        "tags": [
+            "ICRA",
+            "Robotics",
+            "Navigation",
+            "NLP"
+        ],
+        "sourceName": "Marcos Zampieri’s homepage",
+        "sourceUrl": "https://mzampieri.com",
+        "lastModified": "2026-11-08",
+        "lastVerified": "2026-11-08"
+    },
+    {
         "id": "sun-usenix-atc-2026",
         "title": "Sun group papers accepted at USENIX Security and ATC 2026",
         "summary": "BenchChecker assesses the credibility of bug-fixing benchmarks for LLMs at USENIX Security 2026, and Yunlong Xing’s DESAN eliminates redundant sanitizer checks at ATC 2026.",
