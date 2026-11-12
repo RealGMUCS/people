@@ -41,6 +41,22 @@
             ],
             "sourceUrl": "https://craigyuyu.github.io/home/",
             "reason": "Homepage news lists the award with no year; hold for awards.json until the year is established."
+        },
+        {
+            "title": "Shima Mohebbi elected 2027 INFORMS PSOR Vice President of Communications and DAS Cluster Co-Chair",
+            "people": [
+                "Shima Mohebbi"
+            ],
+            "sourceUrl": "https://mohebbilab.cec.gmu.edu",
+            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found."
+        },
+        {
+            "title": "Kevin Lybarger lab: Saadat Hasan Khan passes dissertation proposal defense (2026-11-09)",
+            "people": [
+                "Kevin Lybarger"
+            ],
+            "sourceUrl": "https://www.lybargerlanguagelab.org/news.html",
+            "reason": "A proposal defense is not a completed dissertation defense or graduation; not newsworthy under playbook §3. Student not confirmed in students.json."
         }
     ],
     "discrepancies": [
