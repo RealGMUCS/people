@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty } from './data';
-import { esc, resolvePictureUrl, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, renderProfileIcons, renderEmailBadge, activateEmailBadges, annotateOptionCounts, isGmuInstitution, gmuYears } from './common';
+import { esc, resolvePictureUrl, renderAchievementGroups, setupAchievementsToggle, createSearchController, setupSearchHelp, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, finishPageSetup, renderProfileIcons, renderEmailBadge, activateEmailBadges, annotateOptionCounts, isGmuInstitution, gmuYears } from './common';
 import './style.css';
 
 let allFaculty = [];
@@ -9,7 +9,6 @@ let awardCategories = [];
 let activeInterest = null; // currently selected faculty research-interest filter
 let currentView = 'directory'; // 'directory' | 'awards'
 let search;
-let keyboardSelectedIndex = -1;
 
 const FACULTY_KEYWORDS = {
     name: f => `${f.firstName} ${f.lastName}`,
@@ -180,13 +179,6 @@ async function init() {
         search.setSearchValue(query);
         render();
         document.getElementById('main-search').focus();
-    });
-    setupSharedKeyboardShortcuts({
-        help: searchHelp,
-        search,
-        getSelectedIndex: () => keyboardSelectedIndex,
-        setSelectedIndex: idx => { keyboardSelectedIndex = idx; },
-        onClear: () => render(),
     });
     refreshSearchExamples();
     restoreFromUrl();
@@ -414,7 +406,6 @@ function render() {
     if (controlsEl) controlsEl.style.display = awardsView ? 'none' : '';
     const examplesEl = document.getElementById('examples') || document.querySelector('.search-examples');
     if (examplesEl) examplesEl.style.display = awardsView ? 'none' : '';
-    keyboardSelectedIndex = -1;
 
     if (awardsView) {
         search.resetScope();

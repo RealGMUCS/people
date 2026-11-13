@@ -16,7 +16,8 @@
         "sync:vietprofs-ui": "tsx scripts/sync-vietprofs-ui.ts",
         "next-batch": "tsx scripts/next-batch.ts",
         "news:sources": "tsx scripts/news-sources.ts",
-        "news:watch": "tsx scripts/news-watch.ts"
+        "news:watch": "tsx scripts/news-watch.ts",
+        "news:feeds": "tsx scripts/news-feeds.ts"
     },
     "devDependencies": {
         "@types/node": "^26.4.1",

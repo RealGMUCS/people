@@ -1,5 +1,372 @@
 [
     {
+        "id": "ateniese-kornaropoulos-tennor-ccs-2026",
+        "title": "TENNOR oblivious neural-network execution paper at CCS 2026",
+        "summary": "Zifan Qu, Giuseppe Ateniese, and Evgenios Kornaropoulos, with Vasileios Kemerlis, present TENNOR, a design for trustworthy neural-network execution through obliviousness and retrievals, at ACM CCS 2026.",
+        "date": "2026-11",
+        "category": "paper",
+        "people": [
+            "Giuseppe Ateniese",
+            "Evgenios Kornaropoulos",
+            "Zifan Qu"
+        ],
+        "tags": [
+            "CCS",
+            "Security",
+            "Machine learning"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3830454.3846750",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "baldimtsi-anonymous-tokens-ccs-2026",
+        "title": "Anonymous tokens with private metadata paper at CCS 2026",
+        "summary": "Foteini Baldimtsi and Aayush Yadav, with Lucjan Hanzlik and Quan Nguyen, present non-interactive anonymous tokens that carry a private metadata bit at ACM CCS 2026.",
+        "date": "2026-11",
+        "category": "paper",
+        "people": [
+            "Foteini Baldimtsi",
+            "Aayush Yadav"
+        ],
+        "tags": [
+            "CCS",
+            "Cryptography",
+            "Privacy"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3830454.3832714",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "han-proxlink-mobicom-2026",
+        "title": "ProxLink multi-user XR synchronization paper at MobiCom 2026",
+        "summary": "Bo Han and collaborators present ProxLink, a lightweight decentralized synchronization framework for multi-user extended reality, at ACM MobiCom 2026.",
+        "date": "2026-10",
+        "category": "paper",
+        "people": [
+            "Bo Han"
+        ],
+        "tags": [
+            "MobiCom",
+            "XR",
+            "Networking"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3795866.3844481",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "han-chen-imc-2026",
+        "title": "Two Bo Han papers at IMC 2026",
+        "summary": "Ruizhi Cheng and Bo Han characterize video-based conversational interaction with generative AI, and Bo Han and Songqing Chen, with alumnus Yao Liu and collaborators, give a first performance look at AI on smartglasses; both appear at ACM IMC 2026.",
+        "date": "2026-10",
+        "category": "paper",
+        "people": [
+            "Bo Han",
+            "Songqing Chen",
+            "Ruizhi Cheng",
+            "Yao Liu"
+        ],
+        "tags": [
+            "IMC",
+            "Measurement",
+            "Generative AI",
+            "Smartglasses"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3777912.3839793",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "latoza-designfix-ase-2026",
+        "title": "DesignFix design-rule repair paper at ASE 2026",
+        "summary": "Mainul Hossain and Thomas LaToza present DesignFix, a context-augmented approach to repairing design rule violations, at IEEE/ACM ASE 2026.",
+        "date": "2026-10",
+        "category": "paper",
+        "people": [
+            "Thomas LaToza",
+            "Mainul Hossain"
+        ],
+        "tags": [
+            "ASE",
+            "Software engineering",
+            "Program repair"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3832783.3837422",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "lam-flaky-tests-ase-pacmse-2026",
+        "title": "Lam group flaky-test papers at ASE 2026 and in PACMSE",
+        "summary": "Shanto Rahman, Talank Baral, and Wing Lam present TDRepro, a neurosymbolic approach to reproducing timing-dependent flaky test failures, at IEEE/ACM ASE 2026; Suzzana Rafi, Wing Lam, and collaborators publish a dataset of reproducible flaky-test failures in Proceedings of the ACM on Software Engineering.",
+        "date": "2026-10",
+        "category": "paper",
+        "people": [
+            "Wing Lam",
+            "Shanto Rahman",
+            "Talank Baral",
+            "Suzzana Rafi"
+        ],
+        "tags": [
+            "ASE",
+            "PACMSE",
+            "Flaky tests",
+            "Software testing"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3832783.3834384",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "lu-legal-information-pacmhci-2026",
+        "title": "Legal information seeking on video platforms paper in PACM HCI",
+        "summary": "Zhicong Lu and collaborators study how people in China seek legal information on video-sharing platforms, in Proceedings of the ACM on Human-Computer Interaction.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "Zhicong Lu"
+        ],
+        "tags": [
+            "PACM HCI",
+            "HCI",
+            "Social computing"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3816962",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "kdd-domeniconi-causal-2026",
+        "title": "Causal structure discovery paper at KDD 2026",
+        "summary": "Carlotta Domeniconi and collaborators present a method for continuous causal component and structure discovery from time series at ACM SIGKDD 2026.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "Carlotta Domeniconi"
+        ],
+        "tags": [
+            "KDD",
+            "Causal discovery",
+            "Time series"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3770855.3818046",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "han-lite-sigcomm-2026",
+        "title": "LITE immersive telepresence paper at SIGCOMM 2026",
+        "summary": "Ruizhi Cheng, Bo Han, and collaborators present LITE, loss-resilient immersive telepresence with multi-modal semantics, at ACM SIGCOMM 2026.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "Bo Han",
+            "Ruizhi Cheng"
+        ],
+        "tags": [
+            "SIGCOMM",
+            "Telepresence",
+            "Networking"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3789240.3829116",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "zampieri-nsf-ai-assisted-development-2026",
+        "title": "NSF funds Zampieri project on AI-assisted software development education",
+        "summary": "Marcos Zampieri receives an NSF award to prepare computer science students to use AI-assisted programming tools responsibly while strengthening core programming and software engineering skills.",
+        "date": "2026-08-06",
+        "category": "grant",
+        "people": [
+            "Marcos Zampieri"
+        ],
+        "tags": [
+            "NSF",
+            "CS education",
+            "AI"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2610164",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "zampieri-nsf-coding-agent-2026",
+        "title": "NSF funds Zampieri’s coding agent for software security education",
+        "summary": "Marcos Zampieri leads George Mason’s part of a collaborative NSF IUSE project building a trustworthy AI coding agent to support engaged learning in undergraduate software security courses.",
+        "date": "2026-08-04",
+        "category": "grant",
+        "people": [
+            "Marcos Zampieri"
+        ],
+        "tags": [
+            "NSF",
+            "IUSE",
+            "Software security",
+            "CS education"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2613889",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "yao-authorship-tosem-2026",
+        "title": "Code authorship attribution paper in TOSEM",
+        "summary": "Ziyu Yao, with Atish Kumar Dipongkor and Kevin Moran, reassesses code authorship attribution in the era of language models in ACM Transactions on Software Engineering and Methodology.",
+        "date": "2026-07",
+        "category": "paper",
+        "people": [
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "TOSEM",
+            "Software engineering",
+            "Language models"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3837079",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "ye-pixel-cube-tog-2026",
+        "title": "Pixel Cube portrait video relighting paper in ACM TOG",
+        "summary": "Yufan Zhang, Jinwei Ye, and collaborators present Pixel Cube, diffusion-based portrait video relighting through realistic lighting reproduction, in ACM Transactions on Graphics.",
+        "date": "2026-07",
+        "category": "paper",
+        "people": [
+            "Jinwei Ye",
+            "Yufan Zhang"
+        ],
+        "tags": [
+            "TOG",
+            "Graphics",
+            "Computational photography"
+        ],
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3811400",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "liu-nsf-mfai-2026",
+        "title": "NSF MFAI award for conformality-guided learning",
+        "summary": "Mingrui Liu leads George Mason’s part of a collaborative NSF Mathematical Foundations of AI project on uncertainty estimates for learning with evolving and heterogeneous data.",
+        "date": "2026-07-17",
+        "category": "grant",
+        "people": [
+            "Mingrui Liu"
+        ],
+        "tags": [
+            "NSF",
+            "MFAI",
+            "Machine learning",
+            "Uncertainty"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2601681",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "zhou-nsf-pose-tile-debugger-2026",
+        "title": "NSF POSE Phase I award for Tile-Debugger",
+        "summary": "Keren Zhou leads an NSF Pathways to Enable Open-Source Ecosystems award, with Songqing Chen, Xiaokuan Zhang, and Binqian (Bella) Yin, to grow Tile-Debugger, an open-source framework for simulating and debugging AI workloads on GPUs and accelerators.",
+        "date": "2026-07-07",
+        "category": "grant",
+        "people": [
+            "Keren Zhou",
+            "Songqing Chen",
+            "Xiaokuan Zhang",
+            "Binqian (Bella) Yin"
+        ],
+        "tags": [
+            "NSF",
+            "POSE",
+            "Open source",
+            "GPUs"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2549919",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "zhou-nsf-shf-ragged-tensors-2026",
+        "title": "NSF SHF award for ragged tensor optimization",
+        "summary": "Keren Zhou and Binqian (Bella) Yin lead George Mason’s part of a collaborative NSF Software and Hardware Foundations project optimizing ragged tensor operators for deep learning workloads.",
+        "date": "2026-07-02",
+        "category": "grant",
+        "people": [
+            "Keren Zhou",
+            "Binqian (Bella) Yin"
+        ],
+        "tags": [
+            "NSF",
+            "SHF",
+            "Deep learning",
+            "Compilers"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2554012",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "stein-multirobot-icra-2026",
+        "title": "Multi-robot learning-informed task planning paper at ICRA 2026",
+        "summary": "Abhish Khanal, Abhishek Paudel, and Gregory Stein, with Hung Pham, present multi-robot learning-informed task planning under uncertainty at IEEE ICRA 2026.",
+        "date": "2026-06",
+        "category": "paper",
+        "people": [
+            "Gregory Stein",
+            "Abhish Khanal",
+            "Abhishek Paudel"
+        ],
+        "tags": [
+            "ICRA",
+            "Robotics",
+            "Planning"
+        ],
+        "sourceName": "IEEE Xplore",
+        "sourceUrl": "https://doi.org/10.1109/icra57385.2026.11696166",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "chen-nsf-pose-convening-2026",
+        "title": "NSF supports convening on secure open-source ecosystems",
+        "summary": "Songqing Chen is co-PI, with Massimiliano Albanese, of an NSF POSE award for a community-wide convening on secure and viable open-source ecosystems in the era of AI.",
+        "date": "2026-06-30",
+        "category": "grant",
+        "people": [
+            "Songqing Chen"
+        ],
+        "tags": [
+            "NSF",
+            "POSE",
+            "Open source",
+            "Security"
+        ],
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2626488",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
         "id": "zampieri-xiao-narrate2nav-icra-2026",
         "title": "Narrate2Nav robot-navigation paper at ICRA 2026",
         "summary": "Marcos Zampieri and Xuesu Xiao co-author Narrate2Nav, a real-time visual navigation approach with implicit language reasoning for human-centric environments, listed at ICRA 2026.",
@@ -496,6 +863,25 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "zampieri-emnlp-2026",
+        "title": "Two Zampieri papers in the EMNLP 2026 main conference",
+        "summary": "Marcos Zampieri coauthors SUNDER, selective unmasking for text understanding, with Alphaeus Dmonte and Tharindu Ranasinghe, and a study of large-scale multilingual news image captioning with LLMs; both appear in the EMNLP 2026 main conference proceedings.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Marcos Zampieri"
+        ],
+        "tags": [
+            "EMNLP",
+            "NLP",
+            "Multilingual"
+        ],
+        "sourceName": "ACL Anthology",
+        "sourceUrl": "https://aclanthology.org/2026.emnlp-main.825/",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
         "id": "zhu-emnlp-2026",
         "title": "Three Zhu group papers accepted at EMNLP 2026 main conference",
         "summary": "Students Anjishnu Mukherjee, Bowen Wei, Sina Mansouri, and Mohit Bharatbhai Marvania contribute to three EMNLP 2026 main-conference papers.",
@@ -576,22 +962,25 @@
     },
     {
         "id": "zhang-nsf-cyberai-2026",
-        "title": "NSF funds Zhang’s CyberAI Innovation proposal",
-        "summary": "The faculty homepage announces a new award supporting the group’s work.",
-        "date": "2026-08",
+        "title": "NSF funds CyberAI curriculum for agentic AI security",
+        "summary": "Kun Sun and Xiaokuan Zhang lead George Mason’s part of a collaborative NSF CyberAI Innovation project building a modular, hands-on curriculum on security risks of agentic AI systems.",
+        "date": "2026-08-10",
         "category": "grant",
         "people": [
+            "Kun Sun",
             "Xiaokuan Zhang"
         ],
         "tags": [
             "NSF",
+            "CyberAI",
             "AI",
-            "Security"
+            "Security",
+            "CS education"
         ],
-        "sourceName": "Xiaokuan Zhang’s homepage",
-        "sourceUrl": "https://mainarke.github.io/",
-        "lastModified": "2026-11-05",
-        "lastVerified": "2026-11-05"
+        "sourceName": "National Science Foundation",
+        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2623086",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
     },
     {
         "id": "nlp-emnlp-2026",

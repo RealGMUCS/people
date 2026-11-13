@@ -8,7 +8,8 @@
                 "Gregory Stein"
             ],
             "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established."
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
+            "lastTried": "2026-11-13"
         },
         {
             "title": "4-VA supports accountable use of generative AI in writing",
@@ -16,7 +17,8 @@
                 "Tamara Maddox"
             ],
             "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established."
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
+            "lastTried": "2026-11-13"
         },
         {
             "title": "4-VA supports Sara-Lynn Gopalkrishna’s programming-course redesign",
@@ -24,23 +26,8 @@
                 "Sara-Lynn Gopalkrishna"
             ],
             "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established."
-        },
-        {
-            "title": "Zampieri EMNLP 2026 papers (SUNDER; multilingual news image captioning)",
-            "people": [
-                "Marcos Zampieri"
-            ],
-            "sourceUrl": "https://mzampieri.com",
-            "reason": "Homepage lists two EMNLP (2026) papers without saying main track or Findings; hold until track is confirmed."
-        },
-        {
-            "title": "Craig Yu Department Outstanding Research Award",
-            "people": [
-                "Craig Yu"
-            ],
-            "sourceUrl": "https://craigyuyu.github.io/home/",
-            "reason": "Homepage news lists the award with no year; hold for awards.json until the year is established."
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
+            "lastTried": "2026-11-13"
         },
         {
             "title": "Shima Mohebbi elected 2027 INFORMS PSOR Vice President of Communications and DAS Cluster Co-Chair",
@@ -104,5 +91,19 @@
         "directHttp403": 27,
         "directRequestErrors": 2,
         "note": "Direct checks found no 404 story links. Access blocks and the two transient request failures were covered by the primary-page web-tool reviews. Institutional bot protection can differ by client."
-    }
+    },
+    "resolved": [
+        {
+            "title": "Zampieri EMNLP 2026 papers (SUNDER; multilingual news image captioning)",
+            "resolved": "2026-11-13",
+            "outcome": "news: zampieri-emnlp-2026",
+            "evidence": "ACL Anthology ids 2026.emnlp-main.825 and 2026.emnlp-main.1209 (main conference), linked from https://mzampieri.com"
+        },
+        {
+            "title": "Craig Yu Department Outstanding Research Award",
+            "resolved": "2026-11-13",
+            "outcome": "awards.json: Craig Yu, Mason Awards, Department Outstanding Research Award, 2022",
+            "evidence": "Wayback snapshots of https://craigyuyu.github.io/home/: line absent on 2022-04-13, present on 2022-07-04, listed among SIGGRAPH 2022 items."
+        }
+    ]
 }

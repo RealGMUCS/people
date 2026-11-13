@@ -235,47 +235,6 @@ export function createSharedCommandHandler(options: Omit<kit.CommandHandlerOptio
   });
 }
 
-// Pick a random visible entry and j/k-select it, as VietProfs' `r` shortcut does.
-function selectRandomEntry(selectedIndex: number, setSelectedIndex: (index: number) => void) {
-  const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
-  if (!entries.length) return;
-  entries[selectedIndex]?.classList.remove('entry-keyboard-selected');
-  const index = Math.floor(Math.random() * entries.length);
-  setSelectedIndex(index);
-  entries[index]!.classList.add('entry-keyboard-selected');
-  entries[index]!.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-}
-
-// j/k (or arrows) move, Enter opens, r random, / search, ? help, and Escape steps back:
-// close help → blur search → clear search.
-export function setupSharedKeyboardShortcuts(options: {
-  help: kit.SearchHelp;
-  search: { close: () => void; setSearchValue: (raw: string) => void };
-  getSelectedIndex: () => number;
-  setSelectedIndex: (index: number) => void;
-  onClear: () => void;
-}) {
-  kit.setupKeyboardShortcuts({
-    input: searchInput(),
-    help: options.help,
-    getItemElements: () => [...document.querySelectorAll<HTMLElement>('.entry')],
-    getSelectedIndex: options.getSelectedIndex,
-    setSelectedIndex: options.setSelectedIndex,
-    selectedClass: 'entry-keyboard-selected',
-    nextKeys: ['j', 'ArrowDown'],
-    prevKeys: ['k', 'ArrowUp'],
-    onEnter: selected => selected.querySelector<HTMLAnchorElement>('.entry-name')?.click(),
-    onRandom: () => selectRandomEntry(options.getSelectedIndex(), options.setSelectedIndex),
-    escape: {
-      closeSuggestions: () => options.search.close(),
-      clearSearch: () => {
-        options.search.setSearchValue('');
-        options.onClear();
-      },
-    },
-  });
-}
-
 // Page chrome shared with VietProfs: the floating back-to-top button, and landing ready to
 // type without popping the suggestion list open (leaves focus alone if the reader moved it).
 export function finishPageSetup() {

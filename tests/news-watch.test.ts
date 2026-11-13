@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cvLinks, htmlLines } from '../scripts/news-watch-lib.ts';
+import { bundleLines, cvLinks, htmlLines, metaRefresh, MINOR_TRACK, nameKey, nameKeys, scriptSources, TOP_VENUE } from '../scripts/news-watch-lib.ts';
 
 // Link shapes copied from faculty homepages (2026-11-05).
 test('cvLinks finds CV links by text, file name, or aria-label, resolved against the page', () => {
@@ -36,4 +36,41 @@ test('cvLinks ignores look-alikes, long sentences, and LinkedIn/Scholar', () => 
 test('htmlLines drops scripts and markup, splits blocks, and keeps lines of 15+ characters', () => {
     const html = '<script>var x = "ignored text here";</script><ul><li>NSF CAREER Award, 2015</li><li>Home</li></ul><p>Best Paper &amp; Award at ICSE 2024</p>';
     assert.deepEqual(htmlLines(html), ['NSF CAREER Award, 2015', 'Best Paper & Award at ICSE 2024']);
+});
+
+// Stub homepages seen on 2026-11-13 (msnyde14, shvetha, torabi.org).
+test('metaRefresh follows refresh tags and domain-forwarding framesets', () => {
+    assert.equal(metaRefresh('<meta http-equiv="REFRESH" content="0;url=http://www.muddsnyder.com/">', 'https://people.cs.gmu.edu/~msnyde14/'), 'http://www.muddsnyder.com/');
+    assert.equal(metaRefresh('<meta http-equiv="refresh" content="0;url= Home.html" />', 'https://people.cs.gmu.edu/~shvetha/'), 'https://people.cs.gmu.edu/~shvetha/Home.html');
+    assert.equal(metaRefresh('<frameset><frame name="TopFrame" src="https://satorabi.github.io/"></frameset>', 'http://torabi.org/'), 'https://satorabi.github.io/');
+    assert.equal(metaRefresh('<meta name="viewport" content="width=device-width">', 'https://example.org/'), undefined);
+});
+
+test('scriptSources keeps same-host scripts; bundleLines keeps prose and drops code', () => {
+    const html = '<script type="module" src="/deerlab/assets/index-D4.js"></script><script src="https://cdn.example.com/x.js"></script>';
+    assert.deepEqual(scriptSources(html, 'https://deerlab22030.github.io/deerlab/'), ['https://deerlab22030.github.io/deerlab/assets/index-D4.js']);
+    const js = 'const a="Our social-pragmatic inference benchmark paper was accepted.",b="md:hidden flex flex-col gap-[4px] p-2",c="function x() { return 1; }",d=`Junjie, Weisen, and Zhicong helped guide the AVATAR project`;';
+    assert.deepEqual(bundleLines(js), ['Our social-pragmatic inference benchmark paper was accepted.', 'Junjie, Weisen, and Zhicong helped guide the AVATAR project']);
+});
+
+test('nameKeys and nameKey match roster names across nicknames, accents, and middle names', () => {
+    assert.deepEqual(nameKeys('Lap-Fai (Craig)', 'Yu').sort(), ['craig yu', 'lap-fai yu']);
+    assert.deepEqual(nameKeys('Daniel', 'Menascé'), ['daniel menasce']);
+    assert.equal(nameKey('Marcos A. Zampieri'), 'marcos zampieri');
+    assert.equal(nameKey('Zampieri, Marcos'), 'marcos zampieri');
+    assert.equal(nameKey('Daniel Menasce'), 'daniel menasce');
+});
+
+// OpenAlex source names, 2026-11-13.
+test('TOP_VENUE and MINOR_TRACK sort OpenAlex venues', () => {
+    const top = (venue: string) => TOP_VENUE.test(venue) && !MINOR_TRACK.test(venue);
+    assert.ok(top('ACM SIGSAC Conference on Computer and Communications Security (CCS)'));
+    assert.ok(top('ACM Annual International Conference on Mobile Computing and Networking (MobiCom)'));
+    assert.ok(top('ACM Transactions on Software Engineering and Methodology'));
+    assert.ok(top('Proceedings - IEEE International Conference on Robotics and Automation/Proceedings'));
+    assert.ok(!top('IEEE European Symposium on Security and Privacy'));
+    assert.ok(!top('ACM Asia Conference on Computer and Communications Security (ASIA CCS)'));
+    assert.ok(!top('ACM Workshop on Artificial Intelligence and Security (AISec)'));
+    assert.ok(!top('IEEE International Conference on Software Maintenance (ICSM)'));
+    assert.ok(!top('arXiv (Cornell University)'));
 });
