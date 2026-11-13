@@ -1,0 +1,21 @@
+{
+    "_about": "Ids already reported by `npm run news:feeds` (scripts/news-feeds.ts), so each run lists only new NSF awards and OpenAlex papers. Not a review log.",
+    "lastRun": "",
+    "seen": {
+        "nsf": [
+            "2537125",
+            "2540626",
+            "2540913",
+            "2549919",
+            "2554012",
+            "2601681",
+            "2610164",
+            "2613889",
+            "2622357",
+            "2623086",
+            "2626488",
+            "2626605"
+        ],
+        "openalex": []
+    }
+}

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { loadFaculty, loadStudents } from './data';
-import { esc, resolvePictureUrl, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, renderProfileIcons, annotateOptionCounts } from './common';
+import { esc, resolvePictureUrl, createSearchController, setupSearchHelp, uniqueNonEmpty, splitList, sample, renderSearchExamples, setupSearchExamplesClick, showCommandOutput, hideCommandOutput, createSharedCommandHandler, finishPageSetup, renderProfileIcons, annotateOptionCounts } from './common';
 import './style.css';
 import { isAcademiaJob, isGovLabJob, isIndustryJob, isGmuFacultyJob, getGmuAlumniFaculty, extractOrg, topCounts } from './student-insights';
 
@@ -10,7 +10,6 @@ let topicIndex = new Map();
 let activeTopic = null;
 let currentView = 'directory'; // 'directory' | 'insights'
 let search;
-let keyboardSelectedIndex = -1;
 
 const CURRENT_YEAR = new Date().getFullYear();
 const advisorSearchText = s => [s.advisor, s.coAdvisor].filter(Boolean).join(' ');
@@ -243,13 +242,6 @@ async function init() {
         search.setSearchValue(query);
         render();
         document.getElementById('main-search').focus();
-    });
-    setupSharedKeyboardShortcuts({
-        help: searchHelp,
-        search,
-        getSelectedIndex: () => keyboardSelectedIndex,
-        setSelectedIndex: idx => { keyboardSelectedIndex = idx; },
-        onClear: () => render(),
     });
     refreshSearchExamples();
     restoreFromUrl();
@@ -540,7 +532,6 @@ function render() {
     if (controlsEl) controlsEl.style.display = insightsView ? 'none' : '';
     const examplesEl = document.getElementById('examples') || document.querySelector('.search-examples');
     if (examplesEl) examplesEl.style.display = insightsView ? 'none' : '';
-    keyboardSelectedIndex = -1;
 
     const filtered = getFiltered();
 
