@@ -17,7 +17,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
-import { canonical, cvLinks, hash, htmlLines, toLines } from './news-watch-lib.ts';
+import { bundleLines, canonical, cvLinks, hash, htmlLines, metaRefresh, scriptSources, toLines } from './news-watch-lib.ts';
 
 const run = promisify(execFile);
 const root = new URL('..', import.meta.url);
@@ -34,7 +34,8 @@ type Snapshot = { _about: string; lastRun: string; sources: Record<string, Entry
 type Source = { url: string; kind: Kind; people: string[] };
 
 // Department news pages credit people the faculty sites may not mention.
-const DEPARTMENT = ['https://cs.gmu.edu/news/', 'https://cec.gmu.edu/news'];
+// gmu.edu/news/all lists every university headline; the model reads only the new ones.
+const DEPARTMENT = ['https://cs.gmu.edu/news/', 'https://cec.gmu.edu/news', 'https://www.gmu.edu/news/all'];
 
 function watchList(): Source[] {
     const faculty = read('public/faculty.json') as Record<string, string>[];
@@ -81,30 +82,57 @@ async function fetchPage(url: string): Promise<{ status: string; lines: string[]
     await sleep(5000);
     return fetchOnce(url);
 }
-async function fetchOnce(url: string): Promise<{ status: string; lines: string[]; cvs: string[] }> {
+type Download = { code: string; type: string; effective: string; file: string };
+async function download(url: string): Promise<Download> {
     const file = path.join(tmp, `page-${fileNo++}`);
+    // curl -k: people.cs.gmu.edu and some lab hosts send incomplete TLS chains; read-only.
+    // -g: URLs like ".../[CV]JinweiYe.pdf" contain brackets curl would otherwise expand.
+    const { stdout } = await run('curl', ['-skLg', '--compressed', '--max-time', '40', '--max-filesize', '20000000', '-A', 'Mozilla/5.0 (compatible; GMU-CS-Directory news watch)',
+        '-o', file, '-w', '%{http_code}\t%{content_type}\t%{url_effective}', url]);
+    // Tabs, not spaces: a content type like "text/html; charset=utf-8" contains a space.
+    const [code, type = '', effective = url] = stdout.trim().split('\t');
+    return { code, type, effective, file };
+}
+async function fetchOnce(url: string, hops = 0): Promise<{ status: string; lines: string[]; cvs: string[] }> {
+    let page: Download | undefined;
     try {
-        // curl -k: people.cs.gmu.edu and some lab hosts send incomplete TLS chains; read-only.
-        const { stdout } = await run('curl', ['-skL', '--compressed', '--max-time', '40', '-A', 'Mozilla/5.0 (compatible; GMU-CS-Directory news watch)',
-            '-o', file, '-w', '%{http_code}\t%{content_type}\t%{url_effective}', url]);
-        // Tabs, not spaces: a content type like "text/html; charset=utf-8" contains a space.
-        const [code, type = '', effective = url] = stdout.trim().split('\t');
-        if (!code.startsWith('2')) return { status: `http ${code}`, lines: [], cvs: [] };
-        const head = fs.readFileSync(file).subarray(0, 5).toString('latin1');
-        if (/pdf/i.test(type) || head === '%PDF-') {
-            const { stdout: text } = await run('pdftotext', [file, '-'], { maxBuffer: 50 * 1024 * 1024 });
+        page = await download(url);
+        if (!page.code.startsWith('2')) return { status: `http ${page.code}`, lines: [], cvs: [] };
+        const head = fs.readFileSync(page.file).subarray(0, 5).toString('latin1');
+        if (/pdf/i.test(page.type) || head === '%PDF-') {
+            const { stdout: text } = await run('pdftotext', [page.file, '-'], { maxBuffer: 50 * 1024 * 1024 });
             const lines = toLines(text);
             return { status: lines.length < 3 ? 'thin' : 'ok', lines, cvs: [] };
         }
-        const html = fs.readFileSync(file, 'utf8');
-        const lines = htmlLines(html);
-        return { status: lines.length < 3 ? 'thin' : 'ok', lines, cvs: cvLinks(html, effective) };
+        const html = fs.readFileSync(page.file, 'utf8');
+        let lines = htmlLines(html);
+        let cvs = cvLinks(html, page.effective);
+        if (lines.length < 3) {
+            // A stub that forwards with <meta refresh>: read the page it forwards to.
+            const target = hops < 3 ? metaRefresh(html, page.effective) : undefined;
+            if (target && canonical(target) !== canonical(page.effective)) {
+                const next = await fetchOnce(target, hops + 1);
+                if (!next.status.startsWith('http') && !next.status.startsWith('error')) {
+                    lines = [...new Set([...lines, ...next.lines])];
+                    cvs = [...new Set([...cvs, ...next.cvs])];
+                }
+            } else {
+                // A JavaScript app: its text is in its own bundle.
+                for (const src of scriptSources(html, page.effective).slice(0, 4)) {
+                    const js = await download(src).catch(() => undefined);
+                    if (!js) continue;
+                    if (js.code.startsWith('2')) lines = [...new Set([...lines, ...bundleLines(fs.readFileSync(js.file, 'utf8'))])];
+                    fs.rmSync(js.file, { force: true });
+                }
+            }
+        }
+        return { status: lines.length < 3 ? 'thin' : 'ok', lines, cvs };
     } catch (error) {
         // curl exit codes: 6 host not found, 7 refused, 28 timeout, 35 TLS failure.
         const code = (error as { code?: number | string }).code;
         return { status: typeof code === 'number' ? `error curl exit ${code}` : `error ${(error as Error).message.split('\n')[0].slice(0, 80)}`, lines: [], cvs: [] };
     } finally {
-        fs.rmSync(file, { force: true });
+        if (page) fs.rmSync(page.file, { force: true });
     }
 }
 
@@ -116,7 +144,7 @@ snapshot._about = 'Line hashes of each watched page, written by `npm run news:wa
 const only = arg('--only');
 
 type Change = Source & { since: string; newLines: string[]; more: number };
-const report = { date: today, since: snapshot.lastRun, watched: 0, changed: [] as Change[], baseline: [] as Source[], failed: [] as (Source & { status: string; lastFetched: string })[], thin: [] as Source[], unchanged: 0 };
+const report = { date: today, since: snapshot.lastRun, watched: 0, changed: [] as Change[], baseline: [] as Source[], failed: [] as (Source & { status: string; lastFetched: string })[], dead: [] as (Source & { status: string })[], thin: [] as Source[], unchanged: 0 };
 const watched = new Set<string>();
 
 async function check(sources: Source[]): Promise<Source[]> {
@@ -148,6 +176,13 @@ async function check(sources: Source[]): Promise<Source[]> {
                 const page = await fetchPage(source.url);
                 const prior = snapshot.sources[source.url];
                 const entry = { kind: source.kind, people: source.people.join('; ') };
+                // A CV link that 404s is broken on the faculty member's own site: not worth a retry
+                // or a read, and not kept in the snapshot.
+                if (source.kind === 'cv' && /^http (404|410)$/.test(page.status)) {
+                    report.dead.push({ ...source, status: page.status });
+                    delete snapshot.sources[source.url];
+                    continue;
+                }
                 if (page.status !== 'ok' && page.status !== 'thin') {
                     report.failed.push({ ...source, status: page.status, lastFetched: prior?.fetched || '' });
                     snapshot.sources[source.url] = { ...entry, fetched: prior?.fetched || '', status: page.status, lines: prior?.lines || '' };
@@ -207,6 +242,7 @@ console.log(JSON.stringify({
     changed: report.changed.map(c => `${c.kind} ${c.url} (${c.newLines.length + c.more} new lines)`),
     baseline: report.baseline.length, unchanged: report.unchanged,
     failed: report.failed.map(f => `${f.kind} ${f.url}: ${f.status}`),
+    dead: report.dead.map(d => `${d.kind} ${d.url}: ${d.status}`),
     thin: report.thin.map(t => `${t.kind} ${t.url}`),
     detail: reportPath ? `full report in ${reportPath}` : 'pass --report <path> for the new lines',
 }, null, 4));

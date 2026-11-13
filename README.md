@@ -10,7 +10,7 @@ The look and search behavior are shared with
 [VietProfs](https://github.com/dynaroars/vietprofs) (and CS Picks):
 `src/vietprofs/` holds verbatim copies of its `roars-ui.css` (design tokens,
 search box, suggestions, help popover, tags, floating buttons), `search-kit.ts`
-(suggestions, scope chips, keyboard shortcuts, commands), and `back-to-top.ts`.
+(suggestions, scope chips, commands), and `back-to-top.ts`.
 Don't edit them here — change them in VietProfs, then run
 `npm run sync:vietprofs-ui` (expects `../vietprofs`; `VIETPROFS_DIR` overrides).
 `tests/vietprofs-ui.test.ts` fails on local edits. `src/style.css` imports
@@ -34,9 +34,7 @@ profiles (LinkedIn, Google Scholar, personal pages) — see
   employers, and research topics).
 - **Keyword search** on both pages — type a prefix like `advisor:`, `honors:`,
   `phd:`, `topic:`, `job:` to search one field directly (click the `?` in
-  the search box for the full list); `#tag` shortcuts also work. Keyboard:
-  `/` search, `j`/`k` or arrows to move, `Enter` to open, `r` random, `Esc`
-  to step back.
+  the search box for the full list); `#tag` shortcuts also work.
 - **Submit / Update** (`submit.html`): a plain-text form for adding or
   correcting an entry in either directory, with a name-autocomplete that
   pre-fills the existing record. Submits via email or a pre-filled GitHub

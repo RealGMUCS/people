@@ -18,7 +18,8 @@ access problem, and every faculty member without a source has a documented disco
 For a bounded pass, stop at the requested cap and report coverage and remaining work. A checked
 source with no eligible stories is a valid result. Do not claim a complete audit from the initial
 seed. The scheduled `news` routine (twice a week) covers every faculty page with
-`npm run news:watch`, which reports only text that is new since its last snapshot, and reads the
+`npm run news:watch`, which reports only text that is new since its last snapshot, plus
+`npm run news:feeds` for new NSF awards and flagship-venue papers (§2 step 4 sources), and reads the
 changes under [AUTOMATION.md](AUTOMATION.md), "Faculty news and honors", together with the honors
 playbook; its caps and PR handoff take precedence.
 
@@ -50,7 +51,8 @@ emeritus faculty. Record held candidates, conflicting years, and exclusions in
    news article, or funder award page when available. Prefer a stable story permalink over a
    moving homepage. When the homepage is the only source, retain the closest working anchor.
 4. Search official GMU news and the CS department as a supplement, especially for people without
-   maintained personal news. Avoid using aggregators or search snippets as the sole evidence.
+   maintained personal news. For grants and papers, `npm run news:feeds -- --since <date>` lists
+   NSF awards to roster faculty at GMU and their GMU-affiliated papers at flagship venues. Avoid using aggregators or search snippets as the sole evidence.
 5. Record success, no relevant news, or failure for every URL in `maintenance/news-scan.json`,
    with its actual review date and a short note. Keep a blocked URL distinct from a clean review.
    Incomplete TLS chains on `people.cs.gmu.edu` are a known access issue; retry or use indexed
