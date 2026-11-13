@@ -1,4 +1,4 @@
-import { createSearchController, setupSearchHelp, renderSearchExamples, setupSearchExamplesClick, createSharedCommandHandler, setupSharedKeyboardShortcuts, finishPageSetup, esc, safeUrl, showCommandOutput } from './common';
+import { createSearchController, setupSearchHelp, renderSearchExamples, setupSearchExamplesClick, createSharedCommandHandler, finishPageSetup, esc, safeUrl, showCommandOutput } from './common';
 import { personPath, slugify } from './data';
 import { NEWS_CATEGORIES, NEWS_CATEGORY_ICONS, csNewsFacultyNames, filterNews, formatNewsDate, newsField, validateNews } from './news-data';
 import type { NewsItem } from './news-data';
@@ -14,7 +14,6 @@ const sort = document.getElementById('sort-order') as HTMLSelectElement;
 let items: NewsItem[] = [];
 let people = new Set<string>();
 let csFaculty = new Set<string>();
-let selectedIndex = -1;
 let search: ReturnType<typeof createSearchController> | undefined;
 const scopes = ['person', 'name', 'category', 'year', 'topic', 'source', 'title'];
 const keywordMap = Object.fromEntries(scopes.map(key => [key, (item: NewsItem) => newsField(item, key)]));
@@ -37,7 +36,6 @@ function render() {
         category: category.value, year: year.value, sort: sort.value,
         facultyNames: facultyGroup.value === 'all' ? undefined : csFaculty,
     });
-    selectedIndex = -1;
     count.textContent = `${visible.length} of ${items.length} news items`;
     results.setAttribute('aria-busy', 'false');
     results.innerHTML = visible.length ? visible.map(item => {
@@ -130,7 +128,6 @@ async function init() {
         { label: 'Robotics', query: '#robotics' },
     ]);
     setupSearchExamplesClick(query => { search?.setSearchValue(query); render(); input.focus(); });
-    setupSharedKeyboardShortcuts({ help, search, getSelectedIndex: () => selectedIndex, setSelectedIndex: index => { selectedIndex = index; }, onClear: render });
     restore(); render(); finishPageSetup();
     window.addEventListener('popstate', () => { restore(); render(); });
 }
