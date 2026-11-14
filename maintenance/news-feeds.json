@@ -1,5 +1,5 @@
 {
-    "_about": "Ids already reported by `npm run news:feeds` (scripts/news-feeds.ts), so each run lists only new NSF awards and OpenAlex papers. Not a review log.",
+    "_about": "Ids already reported by `npm run news:feeds` (scripts/news-feeds.ts), so each run lists only new NSF awards, CEC grants-list entries, and OpenAlex papers. Not a review log.",
     "lastRun": "",
     "seen": {
         "nsf": [
@@ -16,6 +16,7 @@
             "2626488",
             "2626605"
         ],
+        "cec": [],
         "openalex": []
     }
 }
