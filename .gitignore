@@ -6,3 +6,6 @@ csawards/
 mails/
 public/people/
 public/sitemap.xml
+
+# Registrar extracts (student records): never commit
+*.xlsx

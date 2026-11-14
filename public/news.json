@@ -1,5 +1,460 @@
 [
     {
+        "id": "motti-state-ai-bridge-argentina-2026",
+        "title": "State Department funds AI Bridge Argentina",
+        "summary": "Vivian Motti receives U.S. Department of State funding for AI Bridge Argentina, with $93,313 in anticipated funding.",
+        "date": "2026-10-12",
+        "category": "grant",
+        "people": [
+            "Vivian Motti"
+        ],
+        "tags": [
+            "Department of State",
+            "AI"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "khasawneh-vipa-gaia-2026",
+        "title": "VIPA funds GAIA research on GPU power attacks",
+        "summary": "Khaled Khasawneh and Md Tanvir Arafin receive Virginia Innovation Partnership Authority funding to study GPU microarchitecture power attacks, and defenses against them, in AI data centers ($100,000 anticipated).",
+        "date": "2026-09-21",
+        "category": "grant",
+        "people": [
+            "Khaled Khasawneh"
+        ],
+        "tags": [
+            "VIPA",
+            "Hardware security",
+            "AI data centers"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "xiao-doe-radiation-robot-2026",
+        "title": "DOE funds a radiation-monitoring robot",
+        "summary": "Xuesu Xiao receives U.S. Department of Energy funding for a robot that automates radiation site surveys, with $60,000 in anticipated funding.",
+        "date": "2026-08-24",
+        "category": "grant",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "Department of Energy",
+            "Robotics"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "zeng-luo-vipa-data-center-assurance-2026",
+        "title": "VIPA funds security assurance for autonomous data centers",
+        "summary": "Qiang Zeng and Lannan (Lisa) Luo receive Virginia Innovation Partnership Authority funding for semantics-aware security assurance of autonomous data center infrastructure ($100,000 anticipated).",
+        "date": "2026-08-17",
+        "category": "grant",
+        "people": [
+            "Qiang Zeng",
+            "Lannan (Lisa) Luo"
+        ],
+        "tags": [
+            "VIPA",
+            "Security",
+            "AI data centers"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "kai-zeng-vipa-ai-data-center-security-2026",
+        "title": "VIPA funds cyber-physical defenses for AI data centers",
+        "summary": "Kai Zeng and Liling Huang receive Virginia Innovation Partnership Authority funding for defense-in-depth cyber-physical security of AI data centers ($100,000 anticipated).",
+        "date": "2026-08-17",
+        "category": "grant",
+        "people": [
+            "Kai Zeng"
+        ],
+        "tags": [
+            "VIPA",
+            "Cyber-physical security",
+            "AI data centers"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "sun-zhang-vipa-security-operations-2026",
+        "title": "VIPA funds AI-powered security operations for data centers",
+        "summary": "Kun Sun and Xiaokuan Zhang receive Virginia Innovation Partnership Authority funding for an AI-powered security operations architecture that detects threats continuously and responds to risks autonomously in data centers ($100,000 anticipated).",
+        "date": "2026-08-10",
+        "category": "grant",
+        "people": [
+            "Kun Sun",
+            "Xiaokuan Zhang"
+        ],
+        "tags": [
+            "VIPA",
+            "Security",
+            "AI data centers"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "pathak-vipa-timing-infrastructure-2026",
+        "title": "VIPA funds secure timing for shared data centers",
+        "summary": "Parth Pathak receives Virginia Innovation Partnership Authority funding to secure the timing infrastructure shared in data centers ($100,000 anticipated).",
+        "date": "2026-08-10",
+        "category": "grant",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "VIPA",
+            "Networking",
+            "Security"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "shishika-afrl-border-defense-2026",
+        "title": "AFRL funds research on border defense with heterogeneous teams",
+        "summary": "Daigo Shishika receives Air Force Research Laboratory funding for control automation research on border defense by heterogeneous teams, with $287,500 in anticipated funding.",
+        "date": "2026-07-13",
+        "category": "grant",
+        "people": [
+            "Daigo Shishika"
+        ],
+        "tags": [
+            "Air Force Research Laboratory",
+            "Multi-agent systems"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "anastasopoulos-darpa-low-resource-languages-2026",
+        "title": "DARPA funds model-to-data research for low-resource languages",
+        "summary": "Antonios Anastasopoulos receives DARPA funding to develop a model-to-data paradigm for low-resource and Indigenous languages, with $198,894 in anticipated funding.",
+        "date": "2026-06-29",
+        "category": "grant",
+        "people": [
+            "Antonios Anastasopoulos"
+        ],
+        "tags": [
+            "DARPA",
+            "NLP",
+            "Low-resource languages"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "brodsky-shishika-army-smart-swarms-2026",
+        "title": "Army funds smart swarms for military planners",
+        "summary": "Alex Brodsky and Daigo Shishika, with Cameron Nowzari, receive U.S. Army funding for smart swarms that support military planners in command and control and human-machine collaboration ($966,836 anticipated).",
+        "date": "2026-06-22",
+        "category": "grant",
+        "people": [
+            "Alex Brodsky",
+            "Daigo Shishika"
+        ],
+        "tags": [
+            "U.S. Army",
+            "Swarms",
+            "Human-machine collaboration"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "das-vipa-healthcare-cybersecurity-workforce-2026",
+        "title": "VIPA funds a healthcare cybersecurity workforce project",
+        "summary": "Sanchari Das receives Virginia Innovation Partnership Authority funding to build the healthcare cybersecurity workforce, with $100,000 in anticipated funding.",
+        "date": "2026-06-15",
+        "category": "grant",
+        "people": [
+            "Sanchari Das"
+        ],
+        "tags": [
+            "VIPA",
+            "Security",
+            "Healthcare"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "khasawneh-army-vehicle-network-security-2026",
+        "title": "Army funds vehicle network security for military ground vehicles",
+        "summary": "Khaled Khasawneh and Jim Jones receive U.S. Army funding for a network security architecture for next-generation military ground vehicles ($499,364 anticipated).",
+        "date": "2026-05-27",
+        "category": "grant",
+        "people": [
+            "Khaled Khasawneh"
+        ],
+        "tags": [
+            "U.S. Army",
+            "Vehicle security"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "xiao-army-off-road-teams-2026",
+        "title": "Two Army awards for Xuesu Xiao’s off-road robot teams",
+        "summary": "Xuesu Xiao receives two U.S. Army awards: one on vision-language-action models for off-road integrated teams ($517,604 anticipated) and one on hasty defense with attrition in manned-unmanned formations ($513,248 anticipated).",
+        "date": "2026-05-27",
+        "category": "grant",
+        "people": [
+            "Xuesu Xiao"
+        ],
+        "tags": [
+            "U.S. Army",
+            "Robotics",
+            "Vision-language-action models"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "pathak-vipa-mmids-2026",
+        "title": "VIPA funds battery-less 5G mmID tags",
+        "summary": "Parth Pathak receives Virginia Innovation Partnership Authority funding for 5G-native battery-less tags (mmIDs) for tracking and communication, with $75,000 in anticipated funding.",
+        "date": "2026-05-04",
+        "category": "grant",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "VIPA",
+            "5G",
+            "Wireless sensing"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "khasawneh-vipa-ai-governance-2026",
+        "title": "VIPA funds AI governance through hardware monitoring",
+        "summary": "Khaled Khasawneh and Yicheng Zhang receive Virginia Innovation Partnership Authority funding for responsible AI governance through cognitive hardware monitoring ($75,000 anticipated).",
+        "date": "2026-04-27",
+        "category": "grant",
+        "people": [
+            "Khaled Khasawneh"
+        ],
+        "tags": [
+            "VIPA",
+            "Responsible AI",
+            "Hardware security"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "kai-zeng-vipa-covert-communication-2026",
+        "title": "VIPA funds covert communication and steganography research",
+        "summary": "Kai Zeng and Brian L. Mark receive Virginia Innovation Partnership Authority funding for work on covert communication, generative AI, and steganography ($50,000 anticipated).",
+        "date": "2026-03-17",
+        "category": "grant",
+        "people": [
+            "Kai Zeng"
+        ],
+        "tags": [
+            "VIPA",
+            "Wireless security",
+            "Generative AI"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "khasawneh-odu-iot-security-2026",
+        "title": "Funding for securing IoT in critical infrastructure",
+        "summary": "Khaled Khasawneh receives funding through the Old Dominion University Research Foundation for an intelligent framework to secure IoT systems in critical infrastructure, with $50,000 in anticipated funding.",
+        "date": "2026-03-02",
+        "category": "grant",
+        "people": [
+            "Khaled Khasawneh"
+        ],
+        "tags": [
+            "IoT security",
+            "Critical infrastructure"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "chen-uva-fortai-2026",
+        "title": "Songqing Chen receives funding for FORTAI",
+        "summary": "Songqing Chen receives funding through the University of Virginia for FORTAI, a zero-trust security framework for infrastructure that serves agentic AI, with $50,000 in anticipated funding.",
+        "date": "2026-02-02",
+        "category": "grant",
+        "people": [
+            "Songqing Chen"
+        ],
+        "tags": [
+            "Zero trust",
+            "Agentic AI",
+            "Security"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "das-google-cci-2026",
+        "title": "Google and CCI fund Sanchari Das’s security research",
+        "summary": "Sanchari Das receives two awards for 2026, each with $100,000 in anticipated funding: Google support for research on AI-facilitated romance scams against older adults, and a CCI Critical Infrastructure Cybersecurity award for explainable anomaly detection in hospital operating-room HVAC and ICU power systems.",
+        "date": "2026",
+        "category": "grant",
+        "people": [
+            "Sanchari Das"
+        ],
+        "tags": [
+            "Google",
+            "CCI",
+            "Usable security",
+            "Healthcare"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "pathak-vipa-spectrum-analytics-2026",
+        "title": "VIPA funds secure spectrum analytics on the edge",
+        "summary": "Parth Pathak receives Virginia Innovation Partnership Authority funding for secure spectrum analytics at the edge using deep learning, with $50,000 in anticipated funding.",
+        "date": "2026-01-16",
+        "category": "grant",
+        "people": [
+            "Parth Pathak"
+        ],
+        "tags": [
+            "VIPA",
+            "Wireless",
+            "Deep learning"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "kai-zeng-vipa-6g-isac-2026",
+        "title": "VIPA funds secure 6G sensing and communication",
+        "summary": "Kai Zeng receives Virginia Innovation Partnership Authority funding to secure 6G infrastructure for integrated sensing and communication, with $100,000 in anticipated funding.",
+        "date": "2026-01-12",
+        "category": "grant",
+        "people": [
+            "Kai Zeng"
+        ],
+        "tags": [
+            "VIPA",
+            "6G",
+            "Wireless security"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "luo-vipa-side-channels-2026",
+        "title": "VIPA funds AI-powered side-channel anomaly detection",
+        "summary": "Lannan (Lisa) Luo receives Virginia Innovation Partnership Authority funding to use AI-powered video and audio side channels to detect cyber-physical anomalies, with $100,000 in anticipated funding.",
+        "date": "2026-01-12",
+        "category": "grant",
+        "people": [
+            "Lannan (Lisa) Luo"
+        ],
+        "tags": [
+            "VIPA",
+            "Side channels",
+            "Cyber-physical security"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "luke-dod-osint-decision-support-2026",
+        "title": "DoD funds AI decision-support research for Sean Luke",
+        "summary": "Sean Luke receives U.S. Department of Defense funding to study open-source and publicly available information with AI and large language models for decision-support modeling ($41,666 anticipated).",
+        "date": "2026-01-05",
+        "category": "grant",
+        "people": [
+            "Sean Luke"
+        ],
+        "tags": [
+            "Department of Defense",
+            "AI",
+            "Decision support"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "mohebbi-vipa-manufacturing-cybersecurity-2026",
+        "title": "VIPA funds AI-driven cybersecurity for small manufacturers",
+        "summary": "Shima Mohebbi and Babak Aslani receive Virginia Innovation Partnership Authority funding for scalable AI-driven cybersecurity for small and medium critical manufacturers ($100,000 anticipated).",
+        "date": "2026-01-05",
+        "category": "grant",
+        "people": [
+            "Shima Mohebbi"
+        ],
+        "tags": [
+            "VIPA",
+            "Cybersecurity",
+            "Manufacturing"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-13",
+        "lastVerified": "2026-11-13"
+    },
+    {
         "id": "ateniese-kornaropoulos-tennor-ccs-2026",
         "title": "TENNOR oblivious neural-network execution paper at CCS 2026",
         "summary": "Zifan Qu, Giuseppe Ateniese, and Evgenios Kornaropoulos, with Vasileios Kemerlis, present TENNOR, a design for trustworthy neural-network execution through obliviousness and retrievals, at ACM CCS 2026.",
