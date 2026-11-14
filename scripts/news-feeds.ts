@@ -81,7 +81,13 @@ async function nsf(): Promise<NsfItem[]> {
 async function cec(): Promise<CecItem[]> {
     const response = await fetch(CEC_GRANTS, { headers: { 'User-Agent': 'Mozilla/5.0 (GMU-CS-Directory news feeds)' } });
     if (!response.ok) throw new Error(`HTTP ${response.status} for ${CEC_GRANTS}`);
-    return cecEntries(await response.text(), key => roster.get(key));
+    // The list sometimes uses a longer or shorter first name ("Antonis", "Alexander") than the
+    // roster: accept the same last name with the same first four letters.
+    const loose = (key: string) => roster.get(key) ?? [...roster].find(([k]) => {
+        const [first, last] = k.split(' '), [qFirst, qLast] = key.split(' ');
+        return last === qLast && first.length >= 4 && qFirst.length >= 4 && first.slice(0, 4) === qFirst.slice(0, 4);
+    })?.[1];
+    return cecEntries(await response.text(), loose);
 }
 
 // OpenAlex works with a George Mason authorship by a roster faculty member, at a flagship venue.

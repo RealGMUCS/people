@@ -95,13 +95,18 @@ test('cecEntries parses the CEC grants list and keeps entries naming roster facu
 <hr>
 <p><strong>Eric W. Vollmecke receives funding from Air Force Research Laboratory</strong></p>
 <p>Eric W. Vollmecke receives funding from Air Force Research Laboratory for NEXTGEN BLOS Study.</p>
-<p>Anticipated funding: $333,572</p></div>`;
+<p>Anticipated funding: $333,572</p>
+<hr>
+<p><strong>Alexander Brodsky</strong> receives funding from the Virginia Innovation Partnership Authority for From RFIDs to mmIDs.</p>
+<p>Anticipated funding: $75,000</p>
+<p>July 27,2026</p></div>`;
     const roster = new Map([['keren zhou', 'Keren Zhou'], ['songqing chen', 'Songqing Chen'], ['alexander brodsky', 'Alexander Brodsky'], ['eric vollmecke', 'Eric Vollmecke']]);
     const items = cecEntries(html, key => roster.get(key));
     assert.deepEqual(items.map(({ id, url, headline, ...rest }) => rest), [
-        { date: '2026-08-24', funder: 'NSF', title: 'POSE: Phase I: Tile-Debugger', amount: '$300,000', people: ['Keren Zhou', 'Songqing Chen'] },
-        { date: '2026-09-14', funder: 'NSF', title: 'I-Corps: Translation potential of a platform', amount: '$50,000', people: ['Alexander Brodsky'] },
+        { date: '2026-08-24', funder: 'National Science Foundation (NSF)', title: 'POSE: Phase I: Tile-Debugger', amount: '$300,000', people: ['Keren Zhou', 'Songqing Chen'] },
+        { date: '2026-09-14', funder: 'National Science Foundation (NSF)', title: 'I-Corps: Translation potential of a platform', amount: '$50,000', people: ['Alexander Brodsky'] },
         { date: '', funder: 'Air Force Research Laboratory', title: 'NEXTGEN BLOS Study', amount: '$333,572', people: ['Eric Vollmecke'] },
+        { date: '2026-07-27', funder: 'Virginia Innovation Partnership Authority', title: 'From RFIDs to mmIDs', amount: '$75,000', people: ['Alexander Brodsky'] },
     ]);
     assert.match(items[0].id, /^[\da-f]{8}$/);
 });
