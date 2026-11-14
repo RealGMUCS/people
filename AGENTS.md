@@ -22,7 +22,7 @@ npm run validate:data
 npm run build        # typecheck + validate:data + tests + Vite build + profile pages
 npm run news:sources -- --limit 10  # next faculty homepage/lab sources to review for news
 npm run news:watch -- --report r.json  # new text on every faculty site and CV since the snapshot
-npm run news:feeds -- --report f.json  # new NSF awards and flagship-venue papers by roster faculty
+npm run news:feeds -- --report f.json  # new NSF awards, CEC grants-list entries, and flagship-venue papers
 npm run next-batch -- <check|honors|discover|portraits>   # next batch for a scheduled routine
 npm run fetch:portraits -- --name "Full Name"            # localize a faculty Picture URL
 npm run sync:vietprofs-ui   # re-copy the shared UI from ../vietprofs

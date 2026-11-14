@@ -132,3 +132,53 @@ export const TOP_VENUE = new RegExp([
 // Not newsworthy on their own (playbook §3), even at a top venue, and regional spin-offs whose
 // names contain a flagship's ("IEEE European Symposium on Security and Privacy", "ASIA CCS").
 export const MINOR_TRACK = /workshop|findings|companion|extended abstract|poster|demo|doctoral|student (research|symposium)|adjunct|\barxiv\b|zenodo|ssrn|research square|techrxiv|european symposium|euros&p|\basia\b|asiaccs/i;
+
+// The College of Engineering and Computing's grants list (cec.gmu.edu/research/grants): about
+// weekly, every new award to CEC faculty from any funder, newest first, as <hr>-separated blocks of
+// "<strong>Name(s) receive(d) funding from Funder</strong>", "... from Funder for Title.",
+// "Anticipated funding: $N", and the posting date. Older entries roll off, so it has no window: the
+// seen ids keep each entry from being listed twice. An entry has no permalink of its own.
+export const CEC_GRANTS = 'https://cec.gmu.edu/research/grants';
+export type CecItem = { inNews?: string; related?: string[]; id: string; url: string; date: string; headline: string; funder: string; title: string; amount: string; people: string[] };
+const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+export function cecEntries(html: string, lookup: (key: string) => string | undefined): CecItem[] {
+    const items: CecItem[] = [];
+    for (const block of html.split(/<hr\b[^>]*>/i)) {
+        const paras = [...block.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)].map(m => decode(m[1].replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim()).filter(Boolean);
+        // The headline is bold; a few entries are a single sentence (with only the name in bold).
+        const headline = block.match(/<strong>([\s\S]*?)<\/strong>/i)?.[1];
+        const bold = headline && decode(headline.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+        const head = bold && /\breceive[sd]?\b/i.test(bold) ? bold : paras.find(p => /\breceive[sd]?\b.*\bfunding\b/i.test(p));
+        if (!head || !/\breceive[sd]?\b/i.test(head)) continue;
+        // The funder as the headline names it (the sentence may abbreviate it). The title follows
+        // "for" in the sentence; when the headline's funder itself contains "for" ("Call for
+        // Proposals"), split after it; a few entries have no "for" and put the title straight after.
+        let funder = head.match(/funding (?:from|through) (?:the )?(.+?)(?: for .*)?$/i)?.[1] || '';
+        const sentence = paras.find(p => p !== head && /\bfunding (?:from|through)\b/i.test(p)) || head;
+        let title = '';
+        const fullFunder = head.match(/funding (?:from|through) (?:the )?(.+)$/i)?.[1] || '';
+        if (fullFunder && sentence.includes(`${fullFunder} for `)) {
+            title = sentence.slice(sentence.indexOf(`${fullFunder} for `) + fullFunder.length + 5);
+            funder = fullFunder;
+        }
+        else if (/\bfunding (?:from|through)\b.+? for /i.test(sentence)) title = sentence.replace(/^.*?\bfunding (?:from|through) .+? for /i, '');
+        else if (funder && sentence.includes(funder)) title = sentence.slice(sentence.indexOf(funder) + funder.length);
+        title = title.trim().replace(/^["“]|\.?["”]?\.?$/g, '').trim();
+        const amount = paras.map(p => p.match(/^anticipated funding:\s*(\$[\d,]+)/i)?.[1]).find(Boolean) || '';
+        const dated = paras.map(p => p.match(/^([A-Z][a-z]+) (\d{1,2}),\s*(\d{4})$/)).find(m => m && MONTHS.includes(m[1].toLowerCase()));
+        const date = dated ? `${dated[3]}-${String(MONTHS.indexOf(dated[1].toLowerCase()) + 1).padStart(2, '0')}-${dated[2].padStart(2, '0')}` : '';
+        // "Keren Zhou, Xiaokuan Zhang, and Songqing Chen", "Eric W. Vollmecke": each name's first
+        // word with one of the next two words, so a middle name or initial doesn't hide a match.
+        const people = new Set<string>();
+        for (const part of head.split(/\breceive/i)[0].split(/,|\band\b/)) {
+            const tokens = fold(part).split(' ').filter(Boolean);
+            for (let i = 0; i < tokens.length; i++) for (let j = i + 1; j <= i + 2 && j < tokens.length; j++) {
+                const name = lookup(`${tokens[i]} ${tokens[j]}`);
+                if (name) people.add(name);
+            }
+        }
+        if (!people.size) continue;
+        items.push({ id: hash(`${date} ${head} ${title}`), url: CEC_GRANTS, date, headline: head, funder, title, amount, people: [...people] });
+    }
+    return items;
+}
