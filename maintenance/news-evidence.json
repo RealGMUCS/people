@@ -44,6 +44,15 @@
             ],
             "sourceUrl": "https://www.lybargerlanguagelab.org/news.html",
             "reason": "A proposal defense is not a completed dissertation defense or graduation; not newsworthy under playbook §3. Student not confirmed in students.json."
+        },
+        {
+            "title": "NSF funds Kai Zeng’s secure ISAC work (resource grid obfuscation)",
+            "people": [
+                "Kai Zeng"
+            ],
+            "sourceUrl": "https://cec.gmu.edu/research/grants",
+            "reason": "CEC grants list (posted 2026-06-29) shows NSF funding for “Secure ISAC in NextG through Resource Grid Obfuscation”, $25,000 anticipated. No matching record in the NSF Award API (keyword search, 2026-11-13); likely a supplement or subaward. Hold until the NSF record or an announcement confirms what it is.",
+            "lastTried": "2026-11-13"
         }
     ],
     "discrepancies": [
@@ -81,6 +90,9 @@
         },
         {
             "reason": "Routine conference attendance, service, recruitment, undated project descriptions, and unsourced name-only matches omitted."
+        },
+        {
+            "reason": "2026-11-13 CEC grants list: Raytheon drone-competition participation (Xuesu Xiao, with Cameron Nowzari and Ningshi Yao, $15,000) and a $15,000 Virginia Tech subaward (Kai Zeng, O-RAN software radio) omitted as competition support and a subcontract under $25,000. Dateless entries (Sanchari Das: Google; CCI) sit between postings of 2026-01-26 and 2026-02-02 and list a January–December 2026 period, so the story is dated 2026."
         }
     ],
     "historicalCoverage": "Coverage is uneven because some faculty maintain deep news archives and others publish little news or have inaccessible/dead pages. Empty searches are not evidence that a person has no achievements.",

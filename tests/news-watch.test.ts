@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { bundleLines, cvLinks, htmlLines, metaRefresh, MINOR_TRACK, nameKey, nameKeys, scriptSources, TOP_VENUE } from '../scripts/news-watch-lib.ts';
+import { bundleLines, cecEntries, cvLinks, htmlLines, metaRefresh, MINOR_TRACK, nameKey, nameKeys, scriptSources, TOP_VENUE } from '../scripts/news-watch-lib.ts';
 
 // Link shapes copied from faculty homepages (2026-11-05).
 test('cvLinks finds CV links by text, file name, or aria-label, resolved against the page', () => {
@@ -73,4 +73,40 @@ test('TOP_VENUE and MINOR_TRACK sort OpenAlex venues', () => {
     assert.ok(!top('ACM Workshop on Artificial Intelligence and Security (AISec)'));
     assert.ok(!top('IEEE International Conference on Software Maintenance (ICSM)'));
     assert.ok(!top('arXiv (Cornell University)'));
+});
+
+// Entry shapes copied from cec.gmu.edu/research/grants (2026-11-13).
+test('cecEntries parses the CEC grants list and keeps entries naming roster faculty', () => {
+    const html = `<div class="field"><p><span class="intro-text">The following is a list of grants recently awarded.</span></p>
+<p><strong>Bob Elder received funding from the Army Contracting Command, Rock Island</strong></p>
+<p>Bob Elder received funding from the Army Contracting Command, Rock Island for AFCENT Operational Concepts.</p>
+<p>Anticipated funding: $276,165</p>
+<p>November 9, 2026</p>
+<hr>
+<p><strong>Keren Zhou, Xiaokuan Zhang, and Songqing Chen received funding from the National Science Foundation (NSF)</strong></p>
+<p>Keren Zhou, Xiaokuan Zhang, and Songqing Chen received funding from the NSF for POSE: Phase I: Tile-Debugger.</p>
+<p>Anticipated funding: $300,000</p>
+<p>August 24, 2026</p>
+<hr>
+<p><strong>Alexander Brodsky receives funding from the National Science Foundation (NSF)</strong></p>
+<p>Alexander Brodsky received funding from the NSF for I-Corps: Translation potential of a platform.</p>
+<p>September 14, 2026</p>
+<p>Anticipated funding: $50,000</p>
+<hr>
+<p><strong>Eric W. Vollmecke receives funding from Air Force Research Laboratory</strong></p>
+<p>Eric W. Vollmecke receives funding from Air Force Research Laboratory for NEXTGEN BLOS Study.</p>
+<p>Anticipated funding: $333,572</p>
+<hr>
+<p><strong>Alexander Brodsky</strong> receives funding from the Virginia Innovation Partnership Authority for From RFIDs to mmIDs.</p>
+<p>Anticipated funding: $75,000</p>
+<p>July 27,2026</p></div>`;
+    const roster = new Map([['keren zhou', 'Keren Zhou'], ['songqing chen', 'Songqing Chen'], ['alexander brodsky', 'Alexander Brodsky'], ['eric vollmecke', 'Eric Vollmecke']]);
+    const items = cecEntries(html, key => roster.get(key));
+    assert.deepEqual(items.map(({ id, url, headline, ...rest }) => rest), [
+        { date: '2026-08-24', funder: 'National Science Foundation (NSF)', title: 'POSE: Phase I: Tile-Debugger', amount: '$300,000', people: ['Keren Zhou', 'Songqing Chen'] },
+        { date: '2026-09-14', funder: 'National Science Foundation (NSF)', title: 'I-Corps: Translation potential of a platform', amount: '$50,000', people: ['Alexander Brodsky'] },
+        { date: '', funder: 'Air Force Research Laboratory', title: 'NEXTGEN BLOS Study', amount: '$333,572', people: ['Eric Vollmecke'] },
+        { date: '2026-07-27', funder: 'Virginia Innovation Partnership Authority', title: 'From RFIDs to mmIDs', amount: '$75,000', people: ['Alexander Brodsky'] },
+    ]);
+    assert.match(items[0].id, /^[\da-f]{8}$/);
 });

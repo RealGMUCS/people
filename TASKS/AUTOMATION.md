@@ -362,8 +362,10 @@ in `maintenance/news-scan.json`), each CV it finds through a CV/vita/resume link
 (PDFs via `pdftotext`), and the CS and CEC news pages, then diffs each page's text lines against
 the snapshot `maintenance/news-watch.json` and reports only the new lines. The model reads what
 changed, not every page. `npm run news:feeds` adds the records faculty sites announce late or
-never: new NSF awards to roster faculty at George Mason (NSF Award Search API) and new papers by
-roster faculty with a GMU affiliation at flagship venues (OpenAlex; uses `OPENALEX_API_KEY`, set
+never: new NSF awards to roster faculty at George Mason (NSF Award Search API), new funding of any
+kind (federal, state, industry, foundation) from the college's grants list
+(<https://cec.gmu.edu/research/grants>), and new papers by roster faculty with a GMU affiliation at
+flagship venues (OpenAlex; uses `OPENALEX_API_KEY`, set
 in the cloud environment). Official `cs.gmu.edu/profiles` bios aren't watched: they rarely change,
 the department announces the same honors on its news page, and 100+ profile requests twice a week
 get throttled. The honors backfill reads each bio once.
@@ -419,6 +421,26 @@ Each run does six passes:
      is news when it is substantial), and check a CAREER award isn't a transfer from a previous
      institution (playbook §4). When the OpenAlex part fails (`errors`), note it under "Blocked";
      the state keeps the window open, so the next run catches up.
+   - `cecGrants`: an entry on the CEC grants list (<https://cec.gmu.edu/research/grants>) naming
+     roster faculty: any funder (DoD, DOE, NIH, VIPA/CCI, industry, foundations, and NSF again).
+     The list rolls (old entries drop off) and has no per-entry permalinks; every run reads all of
+     it, and the state remembers entries already reported. For each entry:
+     - An NSF award: the NSF record is the better source. If `grants` (or an existing story, see
+       `related`) covers it, skip; otherwise look the award up on NSF Award Search and write the
+       story from that record, as above.
+     - Any other funder: write a `grant` story with the CEC grants page as `sourceUrl`, dated by the
+       entry's `date` (when the college posted it; an entry without one takes the date of the
+       nearest dated entry below it, i.e. no later than that, and say so in the evidence note). Name
+       the funder and the project in your own words (the list's titles sometimes carry stray text
+       such as "Active"); give the amount as the college's "anticipated funding". If the funder or
+       the faculty member has an announcement of their own, prefer it as `sourceUrl`. Group one
+       person's entries from one posting into one story.
+     - Check `related`: an existing story about the same award (e.g. one written from a lab page)
+       gets the amount or funder filled in rather than a second story.
+     - Skip what isn't news on its own: competition participation, travel or event support, and
+       subcontracts under $25,000, unless the faculty member announces them.
+     - Record each entry you skip, and why, in `news-evidence.json` only when it might be news
+       later (e.g. waiting for the funder's own announcement); otherwise the state is enough.
    - `papers`: a GMU-affiliated paper by roster faculty at a flagship venue. Open the DOI, confirm
      it is a full paper in the main track (not a workshop, Findings, short, poster, or companion
      paper, whatever the source name says), then write a `paper` story dated by the publication
