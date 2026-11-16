@@ -3,11 +3,11 @@
     "check": {
         "faculty": {
             "size": 10,
-            "next": "carlotta-domeniconi"
+            "next": "daniel-barbara"
         },
         "students": {
             "size": 20,
-            "next": "abdulaziz-alaboudi"
+            "next": "akshitha-theretupally"
         }
     },
     "honors": {
