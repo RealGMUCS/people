@@ -1,6 +1,6 @@
 {
     "_about": "Ids already reported by `npm run news:feeds` (scripts/news-feeds.ts), so each run lists only new NSF awards, CEC grants-list entries, and OpenAlex papers. Not a review log.",
-    "lastRun": "",
+    "lastRun": "2026-11-16",
     "seen": {
         "nsf": [
             "2537125",
@@ -61,6 +61,27 @@
             "fa2eec16",
             "fe7fcc57"
         ],
-        "openalex": []
+        "openalex": [
+            "W4416510191",
+            "W4417539662",
+            "W7143454758",
+            "W7160834943",
+            "W7162119667",
+            "W7165789176",
+            "W7196944786",
+            "W7196950809",
+            "W7197009810",
+            "W7202197951",
+            "W7208739326",
+            "W7214625345",
+            "W7214653607",
+            "W7215088502",
+            "W7220921814",
+            "W7221045028",
+            "W7221076414",
+            "W7223085759",
+            "W7225880006",
+            "W7225918390"
+        ]
     }
 }
