@@ -716,7 +716,7 @@
     {
         "First Name": "Carlotta",
         "Last Name": "Domeniconi",
-        "gmu email/userid": "carlotta@cs.gmu.edu",
+        "gmu email/userid": "cdomenic@gmu.edu",
         "Picture": "portraits/carlotta-domeniconi.webp",
         "Picture Source": "https://cs.gmu.edu/sites/default/files/styles/thumbnail/public/2023-09/C.Domeniconi-1x1_081105002e.jpg?itok=NPRlM8mB",
         "Tenure-Track/Teaching/Staff": "Tenured",
@@ -743,8 +743,8 @@
         "JD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-11-05",
-        "Last Verified": "2026-11-05",
+        "Last Modified": "2026-11-15",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
@@ -1186,7 +1186,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-11-05",
-        "Last Verified": "2026-09-23",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
@@ -1220,7 +1220,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-11-05",
-        "Last Verified": "2026-09-23",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
@@ -2852,7 +2852,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-11-05",
-        "Last Verified": "2026-11-05",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
@@ -3804,7 +3804,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-11-05",
-        "Last Verified": "2026-11-05",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
@@ -4416,7 +4416,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-11-05",
-        "Last Verified": "2026-10-30",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
@@ -4904,7 +4904,7 @@
         "Tenure-Track/Teaching/Staff": "Research",
         "Rank": "Research Associate Professor",
         "Dept Role": "",
-        "Website": "",
+        "Website": "https://people.cs.gmu.edu/~dfleck/",
         "Lab Website": "",
         "LinkedIn": "",
         "Google Scholar": "",
@@ -4925,7 +4925,7 @@
         "JD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-11-05",
+        "Last Modified": "2026-11-15",
         "Last Verified": "2026-10-30",
         "Verified": ""
     },
@@ -5028,7 +5028,7 @@
         "Postdoc from": "",
         "Postdoc Year": "",
         "Last Modified": "2026-11-05",
-        "Last Verified": "2026-10-30",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
@@ -5674,7 +5674,7 @@
         "Postdoc from": "University of Pennsylvania",
         "Postdoc Year": "2020",
         "Last Modified": "2026-11-05",
-        "Last Verified": "2026-11-05",
+        "Last Verified": "2026-11-15",
         "Verified": ""
     },
     {
