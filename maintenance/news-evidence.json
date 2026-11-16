@@ -3,47 +3,13 @@
     "dateRules": "Event date or dated primary announcement, retaining year/month/day precision; no inferred January 1 dates. NSF administrative transfer dates are not original award dates.",
     "heldCandidates": [
         {
-            "title": "4-VA supports digital twins for human–robot construction work",
-            "people": [
-                "Gregory Stein"
-            ],
-            "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
-            "lastTried": "2026-11-13"
-        },
-        {
-            "title": "4-VA supports accountable use of generative AI in writing",
-            "people": [
-                "Tamara Maddox"
-            ],
-            "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
-            "lastTried": "2026-11-13"
-        },
-        {
-            "title": "4-VA supports Sara-Lynn Gopalkrishna’s programming-course redesign",
-            "people": [
-                "Sara-Lynn Gopalkrishna"
-            ],
-            "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
-            "lastTried": "2026-11-13"
-        },
-        {
             "title": "Shima Mohebbi elected 2027 INFORMS PSOR Vice President of Communications and DAS Cluster Co-Chair",
             "people": [
                 "Shima Mohebbi"
             ],
             "sourceUrl": "https://mohebbilab.cec.gmu.edu",
-            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found."
-        },
-        {
-            "title": "Kevin Lybarger lab: Saadat Hasan Khan passes dissertation proposal defense (2026-11-09)",
-            "people": [
-                "Kevin Lybarger"
-            ],
-            "sourceUrl": "https://www.lybargerlanguagelab.org/news.html",
-            "reason": "A proposal defense is not a completed dissertation defense or graduation; not newsworthy under playbook §3. Student not confirmed in students.json."
+            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found. 2026-11-16: web search found no INFORMS PSOR slate naming her; still undated.",
+            "lastTried": "2026-11-16"
         },
         {
             "title": "NSF funds Kai Zeng’s secure ISAC work (resource grid obfuscation)",
@@ -51,8 +17,26 @@
                 "Kai Zeng"
             ],
             "sourceUrl": "https://cec.gmu.edu/research/grants",
-            "reason": "CEC grants list (posted 2026-06-29) shows NSF funding for “Secure ISAC in NextG through Resource Grid Obfuscation”, $25,000 anticipated. No matching record in the NSF Award API (keyword search, 2026-11-13); likely a supplement or subaward. Hold until the NSF record or an announcement confirms what it is.",
-            "lastTried": "2026-11-13"
+            "reason": "CEC grants list (posted 2026-06-29) shows NSF funding for “Secure ISAC in NextG through Resource Grid Obfuscation”, $25,000 anticipated. No matching record in the NSF Award API (keyword search, 2026-11-13); likely a supplement or subaward. Hold until the NSF record or an announcement confirms what it is. 2026-11-16: NSF Award API keyword search again returned 0 records.",
+            "lastTried": "2026-11-16"
+        },
+        {
+            "title": "Porfirio: HRI 2026 Student Design Competition Honorable Mention (Nose Knows)",
+            "people": [
+                "David Porfirio"
+            ],
+            "sourceUrl": "https://ari-lab-gmu.github.io/",
+            "reason": "CV lists it as an honorable mention; the lab page credits HFAC students (Tiger, Kannan, Henley, Williamson) and Porfirio's role is unclear (CV marks him 'faculty mentor' in the honors list). Hold until the student names are confirmed on students.json or the HRI award list.",
+            "lastTried": "2026-11-16"
+        },
+        {
+            "title": "Plaku: ICAPS 2017 Best Robotics Paper (Le and Plaku)",
+            "people": [
+                "Erion Plaku"
+            ],
+            "sourceUrl": "https://erionplaku.github.io/",
+            "reason": "Per-year best-paper award; his employer in 2017 not confirmed as GMU, so it may predate his Mason appointment. Hold.",
+            "lastTried": "2026-11-16"
         }
     ],
     "discrepancies": [
@@ -93,6 +77,19 @@
         },
         {
             "reason": "2026-11-13 CEC grants list: Raytheon drone-competition participation (Xuesu Xiao, with Cameron Nowzari and Ningshi Yao, $15,000) and a $15,000 Virginia Tech subaward (Kai Zeng, O-RAN software radio) omitted as competition support and a subcontract under $25,000. Dateless entries (Sanchari Das: Google; CCI) sit between postings of 2026-01-26 and 2026-02-02 and list a January–December 2026 period, so the story is dated 2026."
+        },
+        {
+            "people": [
+                "Kevin Lybarger"
+            ],
+            "reason": "2026-11-16: Saadat Hasan Khan's proposal-defense pass (lab news 2026-11-09) is not a completed dissertation defense or graduation, so not newsworthy under playbook §3."
+        },
+        {
+            "people": [
+                "Bo Han",
+                "Amarda Shehu"
+            ],
+            "reason": "2026-11-16 feeds: Han's 4-page CSCW paper (companion) and Shehu's 6-page KDD paper (perspective/short) are not full main-track papers."
         }
     ],
     "historicalCoverage": "Coverage is uneven because some faculty maintain deep news archives and others publish little news or have inaccessible/dead pages. Empty searches are not evidence that a person has no achievements.",
@@ -116,6 +113,12 @@
             "resolved": "2026-11-13",
             "outcome": "awards.json: Craig Yu, Mason Awards, Department Outstanding Research Award, 2022",
             "evidence": "Wayback snapshots of https://craigyuyu.github.io/home/: line absent on 2022-04-13, present on 2022-07-04, listed among SIGGRAPH 2022 items."
+        },
+        {
+            "title": "4-VA 2025–26 grants (Gregory Stein, Tamara Maddox, Sara-Lynn Gopalkrishna)",
+            "resolved": "2026-11-16",
+            "outcome": "news: stein-4va-digital-twin-construction-2025, maddox-4va-accountable-genai-writing-2025, gopalkrishna-4va-cs108-redesign-2025 (plus zhu-4va-fair-decision-systems-2025)",
+            "evidence": "George Mason news release dated October 9, 2025: https://content.gmu.edu/news/2025-10/george-mason-faculty-awarded-14-grants-4-va"
         }
     ]
 }
