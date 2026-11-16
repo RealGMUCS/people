@@ -3786,6 +3786,27 @@
         "lastVerified": "2026-11-05"
     },
     {
+        "id": "anastasopoulos-acl-social-impact-dialectbench-2024",
+        "title": "DIALECTBENCH wins ACL 2024 Best Social Impact Paper Award",
+        "summary": "Fahim Faisal and Antonios Anastasopoulos, with collaborators from several institutions, receive the Best Social Impact Paper Award at ACL 2024 for DIALECTBENCH, a benchmark of dialects and closely related language varieties.",
+        "date": "2024-08",
+        "category": "paper-award",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Fahim Faisal"
+        ],
+        "tags": [
+            "ACL",
+            "Best Social Impact Paper",
+            "Dialects",
+            "Benchmark"
+        ],
+        "sourceName": "ACL Anthology",
+        "sourceUrl": "https://aclanthology.org/2024.acl-long.777",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
+    },
+    {
         "id": "lybarger-pcori-depression-2024",
         "title": "PCORI supports AI decision tools for depression care",
         "summary": "Lybarger and Farrokh Alemi receive a three-year award to evaluate conversational AI for antidepressant recommendations.",

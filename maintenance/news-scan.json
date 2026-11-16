@@ -2,7 +2,7 @@
     "scope": "Roster-wide historical discovery pass: attempted all 119 distinct listed faculty/lab URLs, reviewed linked archives, searched missing-homepage faculty, and supplemented with university, funder, conference, and professional-society records. Sources without readable content are explicitly flagged. This is a substantial curated archive, not a guarantee that every historical event has been recovered.",
     "lastModified": "2026-11-16",
     "summary": {
-        "stories": 308,
+        "stories": 309,
         "earliestYear": "1994",
         "latestYear": "2026",
         "facultyWithStories": 70,
@@ -1462,6 +1462,24 @@
             "checked": "2026-11-16",
             "status": "checked",
             "note": "Dated Oct 9, 2025; settled 4-VA held candidates; four stories added."
+        },
+        {
+            "url": "https://andrianmarcus.net",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Deep re-read: only FSE 2026 New Faculty Symposium speaker and conference lists; no new honors."
+        },
+        {
+            "url": "https://antonisa.github.io",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Deep re-read: found ACL 2024 Best Social Impact Paper (DIALECTBENCH), confirmed on ACL Anthology; story added. Other items already covered."
+        },
+        {
+            "url": "https://ateniese.github.io",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Deep re-read: bio lists only honors already in awards.json; no news items."
         }
     ],
     "facultyWithoutSources": [
