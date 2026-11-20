@@ -35,7 +35,8 @@
                 "Shima Mohebbi"
             ],
             "sourceUrl": "https://mohebbilab.cec.gmu.edu",
-            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found."
+            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found. 2026-11-20: web search again found no PSOR slate or DAS cluster roster naming her; still undated.",
+            "lastTried": "2026-11-20"
         },
         {
             "title": "Kevin Lybarger lab: Saadat Hasan Khan passes dissertation proposal defense (2026-11-09)",
@@ -51,8 +52,17 @@
                 "Kai Zeng"
             ],
             "sourceUrl": "https://cec.gmu.edu/research/grants",
-            "reason": "CEC grants list (posted 2026-06-29) shows NSF funding for “Secure ISAC in NextG through Resource Grid Obfuscation”, $25,000 anticipated. No matching record in the NSF Award API (keyword search, 2026-11-13); likely a supplement or subaward. Hold until the NSF record or an announcement confirms what it is.",
-            "lastTried": "2026-11-13"
+            "reason": "CEC grants list (posted 2026-06-29) shows NSF funding for “Secure ISAC in NextG through Resource Grid Obfuscation”, $25,000 anticipated. No matching record in the NSF Award API (keyword search, 2026-11-13); likely a supplement or subaward. Hold until the NSF record or an announcement confirms what it is. 2026-11-20: NSF Award API keyword searches (resource grid, ISAC, obfuscation, Zeng at George Mason) again returned nothing relevant.",
+            "lastTried": "2026-11-20"
+        },
+        {
+            "title": "Gheorghe Tecuci: Volgenau School of Engineering Outstanding Research Faculty Award (2005)",
+            "people": [
+                "Gheorghe Tecuci"
+            ],
+            "sourceUrl": "https://cec.gmu.edu/research/awards-and-fellows",
+            "reason": "A search result snippet attributes the award and year 2005 to the CEC awards-and-fellows page, but the page itself returns 'Access denied' to automated reads (2026-11-20) and the Wayback Machine is blocked. Hold until the page or another primary source can be read, then add an awards.json row (Mason Awards).",
+            "lastTried": "2026-11-20"
         }
     ],
     "discrepancies": [
