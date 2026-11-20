@@ -1,8 +1,8 @@
 {
     "scope": "Roster-wide historical discovery pass: attempted all 119 distinct listed faculty/lab URLs, reviewed linked archives, searched missing-homepage faculty, and supplemented with university, funder, conference, and professional-society records. Sources without readable content are explicitly flagged. This is a substantial curated archive, not a guarantee that every historical event has been recovered.",
-    "lastModified": "2026-11-08",
+    "lastModified": "2026-11-20",
     "summary": {
-        "stories": 259,
+        "stories": 306,
         "earliestYear": "1994",
         "latestYear": "2026",
         "facultyWithStories": 70,
@@ -19,9 +19,9 @@
     "sources": [
         {
             "url": "https://roars.dev/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "News and people sections reviewed through the web tool; direct requests encounter Cloudflare."
+            "note": "Watch: NeurIPS workshop paper (not news); older history items already covered."
         },
         {
             "url": "https://nlp.cs.gmu.edu/",
@@ -109,9 +109,9 @@
         },
         {
             "url": "https://people.cs.gmu.edu/~aydin/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Backfill read: teaching awards (twice) have no years; not added."
         },
         {
             "url": "https://cnslab.cs.gmu.edu/",
@@ -121,9 +121,9 @@
         },
         {
             "url": "https://www.baldimtsi.com/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Backfill read: Oblivious Signaling USENIX Security 2026 story added (program page confirms)."
         },
         {
             "url": "https://people.cs.gmu.edu/~dbarbara",
@@ -343,9 +343,9 @@
         },
         {
             "url": "https://people.cs.gmu.edu/~lifei/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Backfill read: no honors."
         },
         {
             "url": "https://people.cs.gmu.edu/~lifei/algorithms-lab-gmu/",
@@ -475,9 +475,9 @@
         },
         {
             "url": "http://hamzamughal.com/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Backfill read: TA awards only; not news."
         },
         {
             "url": "https://tvn.roars.dev/",
@@ -553,9 +553,9 @@
         },
         {
             "url": "https://cs.gmu.edu/profiles/gsingh36",
-            "checked": "2026-11-05",
-            "status": "unavailable",
-            "note": "HTTP 403; this is an access failure, not a finding of no news."
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Backfill read: CAREER 1995 present; NSF Research Initiation 1992 has no matching category."
         },
         {
             "url": "https://people.cs.gmu.edu/~msnyde14/",
@@ -601,9 +601,9 @@
         },
         {
             "url": "https://people.cs.gmu.edu/~wechsler/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Brief page reviewed; no dated milestones in visible content. Other primary sources searched where available."
+            "note": "Backfill read: 2003 Research Excellence Award row added."
         },
         {
             "url": "https://people.cs.gmu.edu/~duminda/",
@@ -619,9 +619,9 @@
         },
         {
             "url": "https://lishanyang.github.io/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Watch: new line is an SC 2026 invited talk (undated month); not news."
         },
         {
             "url": "https://yscacaca.github.io/",
@@ -631,9 +631,9 @@
         },
         {
             "url": "https://ziyuyao.org/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Watch: arXiv preprint only; not news."
         },
         {
             "url": "https://ziyuyao.org/group/",
@@ -649,9 +649,9 @@
         },
         {
             "url": "https://people.cs.gmu.edu/~fangyiyu/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Backfill read: NeurIPS 2026 story added; EC 2026 items unconfirmed (not added)."
         },
         {
             "url": "https://craigyuyu.github.io/home/",
@@ -733,9 +733,9 @@
         },
         {
             "url": "https://cec.gmu.edu/research/grants",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Direct request blocked; primary-page content reviewed through the web tool fallback."
+            "note": "Feeds + watch: Kai Zeng NSC SWIFT-ISAC story added; NCMS entry names a non-roster PI."
         },
         {
             "url": "https://cs.gmu.edu/about/news",
@@ -787,9 +787,9 @@
         },
         {
             "url": "https://gjstein.com/news/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+            "note": "Backfill read: all items already covered."
         },
         {
             "url": "https://www.andrianmarcus.net/news",
@@ -853,9 +853,9 @@
         },
         {
             "url": "https://www.lybargerlanguagelab.org/news.html",
-            "checked": "2026-11-05",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+            "note": "Watch: comprehensive-exam item only (not news per playbook §3); no new stories."
         },
         {
             "url": "https://people-ece.vse.gmu.edu/~kzeng2/news.html",
@@ -1303,15 +1303,15 @@
         },
         {
             "url": "https://people.cs.gmu.edu/~evgenios",
-            "checked": "2026-11-08",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Changed: program-committee line only; not newsworthy."
+            "note": "Backfill read: Joukowsky dissertation award row added (year from Brown CS)."
         },
         {
             "url": "https://cec.gmu.edu/news",
-            "checked": "2026-11-08",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Changed: Piegan PhD '26 feature is not a roster person; none."
+            "note": "Watch: INSO DNS-security initiative (Itani) story added; other items not CS faculty."
         },
         {
             "url": "https://cs.gmu.edu/news",
@@ -1321,62 +1321,80 @@
         },
         {
             "url": "https://andrianmarcus.net",
-            "checked": "2026-11-08",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Deep re-read: service/speaker news only; honors already in awards.json."
+            "note": "Deep re-read: no new honors; Most Influential and CAREER rows already in awards.json."
         },
         {
             "url": "https://antonisa.github.io",
-            "checked": "2026-11-08",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Deep re-read: all items already in news.json."
+            "note": "Deep re-read: all items already covered by stories."
         },
         {
             "url": "https://ari-lab-gmu.github.io",
-            "checked": "2026-11-08",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Deep re-read: items already covered (UIST, DIS, scholarship)."
+            "note": "Deep re-read: UIST 2026 paper and scholarship already covered; DIS/HRI companion items not news."
         },
         {
             "url": "https://ateniese.github.io",
-            "checked": "2026-11-08",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Deep re-read: no new honors."
+            "note": "Deep re-read: bio honors already in awards.json."
         },
         {
             "url": "https://cnslab.cs.gmu.edu",
-            "checked": "2026-11-08",
+            "checked": "2026-11-20",
             "status": "checked",
-            "note": "Deep re-read: newest item is 2019; no eligible news."
+            "note": "Deep re-read: news ends 2019; none."
         },
         {
             "url": "https://people.cs.gmu.edu/~johnsonb/docs/CV.pdf",
             "checked": "2026-11-08",
             "status": "checked",
             "note": "Backfill read: no honors beyond what awards.json lists."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~fangyiyu/CV.pdf",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Backfill read: no awards in awards.json categories."
+        },
+        {
+            "url": "https://mason.gmu.edu/~hgomaa/assets/Resume.pdf",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Backfill read: 2001 research award row added; per-paper awards not added."
+        },
+        {
+            "url": "http://grigory.us",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Backfill read: former faculty, away from academia; no new honors."
         }
     ],
     "facultyWithoutSources": [
         {
             "person": "Ghada Abdelmoumin",
-            "checked": "2026-11-05",
-            "query": "\"Ghada Abdelmoumin\" GMU news award grant lab",
+            "checked": "2026-11-20",
+            "query": "\"Ghada Abdelmoumin\" George Mason University computer science",
             "status": "searched",
-            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+            "note": "Re-searched 2026-11-20: only GMU profile pages; no lab or personal site."
         },
         {
             "person": "Archange Destiné",
-            "checked": "2026-11-05",
-            "query": "\"Archange Destiné\" GMU news award grant lab",
+            "checked": "2026-11-20",
+            "query": "\"Archange Destiné\" George Mason University computer science",
             "status": "searched",
-            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+            "note": "Searched 2026-11-20: only GMU CEC profile (adestine); no personal or lab site."
         },
         {
             "person": "Sapna Gambhir",
-            "checked": "2026-11-05",
-            "query": "\"Sapna Gambhir\" GMU news award grant lab",
+            "checked": "2026-11-20",
+            "query": "\"Sapna Gambhir\" George Mason University computer science",
             "status": "searched",
-            "note": "Searched university profiles/news and primary institutional sources; only dated, identity-matched milestones were published."
+            "note": "Searched 2026-11-20: only GMU CEC profile; AICTE Lilavati award has no year, not added."
         },
         {
             "person": "David Ignacio Gonzalez Samudio",
