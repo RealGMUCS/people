@@ -3,11 +3,11 @@
     "check": {
         "faculty": {
             "size": 10,
-            "next": "daniel-barbara"
+            "next": "duminda-wijesekera"
         },
         "students": {
             "size": 20,
-            "next": "akshitha-theretupally"
+            "next": "andre-abadie"
         }
     },
     "honors": {
