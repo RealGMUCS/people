@@ -1,5 +1,84 @@
 [
     {
+        "id": "kai-zeng-nsc-swift-isac-2026",
+        "title": "National Spectrum Consortium funds SWIFT-ISAC UAV-detection project",
+        "summary": "Kai Zeng receives National Spectrum Consortium funding for SWIFT-ISAC, which develops swarm-UAV detection using fused, transformer-based integrated sensing and communication ($3,254,389 anticipated).",
+        "date": "2026-11-16",
+        "category": "grant",
+        "people": [
+            "Kai Zeng"
+        ],
+        "tags": [
+            "National Spectrum Consortium",
+            "ISAC",
+            "UAV detection"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/research/grants",
+        "lastModified": "2026-11-20",
+        "lastVerified": "2026-11-20"
+    },
+    {
+        "id": "itani-inso-nist-dns-security-2026",
+        "title": "George Mason launches $1 million DNS security observatory",
+        "summary": "Wassim Itani is a faculty partner in the Internet Namespace Security Observatory, a $1 million NIST-administered, congressionally funded initiative led by J.P. Auffret to study the security and post-quantum transition of the Domain Name System.",
+        "date": "2026-11-16",
+        "category": "grant",
+        "people": [
+            "Wassim Itani"
+        ],
+        "tags": [
+            "NIST",
+            "DNS security",
+            "INSO"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2026-11/defending-domains-george-mason-launches-1-million-internet-security-initiative",
+        "lastModified": "2026-11-20",
+        "lastVerified": "2026-11-20"
+    },
+    {
+        "id": "yu-speakeasy-neurips-2026",
+        "title": "Speakeasy peer-prediction paper at NeurIPS 2026",
+        "summary": "Fang-Yi Yu and Yuang Zhang's Speakeasy adds an audit layer to peer-prediction mechanisms so truthful reporting survives cheap correlated signals such as LLM-written reviews; the paper is in the NeurIPS 2026 program.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "Fang-Yi Yu",
+            "Yuang Zhang"
+        ],
+        "tags": [
+            "NeurIPS",
+            "Peer prediction",
+            "Mechanism design"
+        ],
+        "sourceName": "NeurIPS 2026",
+        "sourceUrl": "https://neurips.cc/virtual/2026/poster/155068",
+        "lastModified": "2026-11-20",
+        "lastVerified": "2026-11-20"
+    },
+    {
+        "id": "baldimtsi-oblivious-signaling-usenix-2026",
+        "title": "Oblivious Signaling paper at USENIX Security 2026",
+        "summary": "Shuhan Mirza, Foteini Baldimtsi, and Giuseppe Ateniese present Oblivious Signaling, an anonymous-messaging design that moves the homomorphic-encryption cost from message retrieval to sending, in the USENIX Security 2026 technical program.",
+        "date": "2026-08",
+        "category": "paper",
+        "people": [
+            "Foteini Baldimtsi",
+            "Giuseppe Ateniese",
+            "Shuhan Mirza"
+        ],
+        "tags": [
+            "USENIX Security",
+            "Cryptography",
+            "Privacy"
+        ],
+        "sourceName": "USENIX Security 2026",
+        "sourceUrl": "https://www.usenix.org/conference/usenixsecurity26/technical-sessions",
+        "lastModified": "2026-11-20",
+        "lastVerified": "2026-11-20"
+    },
+    {
         "id": "kornaropoulos-aisec-distinguished-paper-2026",
         "title": "Hacking Back the AI Hacker wins AISec 2026 Distinguished Paper Award",
         "summary": "Evgenios Kornaropoulos and Giuseppe Ateniese, with Dario Pasquini, receive one of two Distinguished Paper Awards at the 19th ACM Workshop on Artificial Intelligence and Security for their paper on prompt injection as a defense against LLM-driven cyberattacks.",
