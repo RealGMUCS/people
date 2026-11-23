@@ -8,8 +8,8 @@
                 "Gregory Stein"
             ],
             "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
-            "lastTried": "2026-11-13"
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date. 2026-11-23: still no post date.",
+            "lastTried": "2026-11-23"
         },
         {
             "title": "4-VA supports accountable use of generative AI in writing",
@@ -17,8 +17,8 @@
                 "Tamara Maddox"
             ],
             "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
-            "lastTried": "2026-11-13"
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date. 2026-11-23: still no post date.",
+            "lastTried": "2026-11-23"
         },
         {
             "title": "4-VA supports Sara-Lynn Gopalkrishna’s programming-course redesign",
@@ -26,8 +26,8 @@
                 "Sara-Lynn Gopalkrishna"
             ],
             "sourceUrl": "https://4va.gmu.edu/4-vamason-awards-14-grants/",
-            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date.",
-            "lastTried": "2026-11-13"
+            "reason": "Source specifies academic funding cycle 2025–2026 but gives no publication/award date. Hold until a reliable event year/date is established. 2026-11-13: the page still shows no post date or award date. 2026-11-23: still no post date.",
+            "lastTried": "2026-11-23"
         },
         {
             "title": "Shima Mohebbi elected 2027 INFORMS PSOR Vice President of Communications and DAS Cluster Co-Chair",
@@ -35,7 +35,8 @@
                 "Shima Mohebbi"
             ],
             "sourceUrl": "https://mohebbilab.cec.gmu.edu",
-            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found."
+            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found. 2026-11-23: lab page still undated; web search found no PSOR election announcement.",
+            "lastTried": "2026-11-23"
         },
         {
             "title": "Kevin Lybarger lab: Saadat Hasan Khan passes dissertation proposal defense (2026-11-09)",
@@ -43,7 +44,8 @@
                 "Kevin Lybarger"
             ],
             "sourceUrl": "https://www.lybargerlanguagelab.org/news.html",
-            "reason": "A proposal defense is not a completed dissertation defense or graduation; not newsworthy under playbook §3. Student not confirmed in students.json."
+            "reason": "A proposal defense is not a completed dissertation defense or graduation; not newsworthy under playbook §3. Student not confirmed in students.json.",
+            "lastTried": "2026-11-23"
         },
         {
             "title": "NSF funds Kai Zeng’s secure ISAC work (resource grid obfuscation)",
@@ -52,7 +54,16 @@
             ],
             "sourceUrl": "https://cec.gmu.edu/research/grants",
             "reason": "CEC grants list (posted 2026-06-29) shows NSF funding for “Secure ISAC in NextG through Resource Grid Obfuscation”, $25,000 anticipated. No matching record in the NSF Award API (keyword search, 2026-11-13); likely a supplement or subaward. Hold until the NSF record or an announcement confirms what it is.",
-            "lastTried": "2026-11-13"
+            "lastTried": "2026-11-23"
+        },
+        {
+            "title": "Huzefa Rangwala: Lawrence Cranberry Faculty Fellow (2019-2024), Smithsonian Institution Fellow (2021), Outstanding Researcher Award (2018)",
+            "people": [
+                "Huzefa Rangwala"
+            ],
+            "sourceUrl": "https://rangwala.github.io/",
+            "reason": "Self-reported on his homepage; the awarding body of the 2018 Outstanding Researcher Award and the fellowship name's spelling are unconfirmed, and no category fits. Hold for a GMU or Smithsonian source.",
+            "lastTried": "2026-11-23"
         }
     ],
     "discrepancies": [
