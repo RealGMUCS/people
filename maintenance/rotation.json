@@ -13,14 +13,14 @@
     "honors": {
         "faculty": {
             "size": 15,
-            "next": "daniel-barbara",
+            "next": "heidi-reichert",
             "wrap": false
         }
     },
     "discover": {
         "advisors": {
             "size": 6,
-            "next": "brian-hrolenok"
+            "next": "constantinos-kolias"
         }
     },
     "former": {
