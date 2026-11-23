@@ -3,24 +3,24 @@
     "check": {
         "faculty": {
             "size": 10,
-            "next": "daniel-barbara"
+            "next": "duminda-wijesekera"
         },
         "students": {
             "size": 20,
-            "next": "akshitha-theretupally"
+            "next": "andre-abadie"
         }
     },
     "honors": {
         "faculty": {
             "size": 15,
-            "next": "daniel-barbara",
+            "next": "heidi-reichert",
             "wrap": false
         }
     },
     "discover": {
         "advisors": {
             "size": 6,
-            "next": "brian-hrolenok"
+            "next": "constantinos-kolias"
         }
     },
     "former": {

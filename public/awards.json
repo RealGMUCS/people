@@ -1706,5 +1706,33 @@
     "Award": "Vice Chancellor's Gold Medal, BRAC University",
     "Year": "2019",
     "Former": ""
+  },
+  {
+    "Name": "Hassan Gomaa",
+    "Category": "Mason Awards",
+    "Award": "Award for Outstanding Research Contributions, Department of Information and Software Engineering",
+    "Year": "2001",
+    "Former": ""
+  },
+  {
+    "Name": "Harry Wechsler",
+    "Category": "Mason Awards",
+    "Award": "Research Excellence Award, School of Information Technology and Engineering",
+    "Year": "2003",
+    "Former": ""
+  },
+  {
+    "Name": "Evgenios Kornaropoulos",
+    "Category": "Dissertation Awards",
+    "Award": "Outstanding Dissertation Award, Joukowsky Family Foundation (Brown University)",
+    "Year": "2019",
+    "Former": ""
+  },
+  {
+    "Name": "David Rosenblum",
+    "Category": "Other Lifetime Achievement Awards",
+    "Award": "Distinguished Service Award, ACM SIGSOFT",
+    "Year": "2018",
+    "Former": "Yes"
   }
 ]
