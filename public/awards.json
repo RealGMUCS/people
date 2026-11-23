@@ -1706,5 +1706,68 @@
     "Award": "Vice Chancellor's Gold Medal, BRAC University",
     "Year": "2019",
     "Former": ""
+  },
+  {
+    "Name": "Ivan Avramovic",
+    "Category": "Mason Awards",
+    "Award": "Outstanding Teaching Award as Assistant Professor, George Mason University",
+    "Year": "2022",
+    "Former": ""
+  },
+  {
+    "Name": "Ivan Avramovic",
+    "Category": "Other Research Awards",
+    "Award": "Best Paper, Journal of Health Administration Education (AUPHA) - *Exploring the Potential Benefits and Limitations of Using an AI Text Generation Tool in Education*, JHAE 2024",
+    "Year": "2025",
+    "Former": ""
+  },
+  {
+    "Name": "Jeff Offutt",
+    "Category": "Other Research Awards",
+    "Award": "Best Paper Award, ICST - *Efficiently Finding Data Flow Subsumptions*",
+    "Year": "2021",
+    "Former": "yes"
+  },
+  {
+    "Name": "Jeff Offutt",
+    "Category": "Other Research Awards",
+    "Award": "Best Paper Award, Mutation Workshop - *A Systematic Review of Cost Reduction Techniques for Mutation Testing: Preliminary Results*",
+    "Year": "2018",
+    "Former": "yes"
+  },
+  {
+    "Name": "Jeff Offutt",
+    "Category": "Other Research Awards",
+    "Award": "Outstanding Paper Award, ICECCS - *Coupling-based Integration Testing*",
+    "Year": "1996",
+    "Former": "yes"
+  },
+  {
+    "Name": "Jeff Offutt",
+    "Category": "Mason Awards",
+    "Award": "Outstanding Researcher Award, Department of Information and Software Engineering",
+    "Year": "2006",
+    "Former": "yes"
+  },
+  {
+    "Name": "Jeff Offutt",
+    "Category": "Mason Awards",
+    "Award": "Outstanding Researcher Award, School of Information Technology and Engineering",
+    "Year": "2004",
+    "Former": "yes"
+  },
+  {
+    "Name": "Jeff Offutt",
+    "Category": "Mason Awards",
+    "Award": "Best Teacher Award, School of Information Technology and Engineering",
+    "Year": "2003",
+    "Former": "yes"
+  },
+  {
+    "Name": "Jeff Offutt",
+    "Category": "Mason Awards",
+    "Award": "Outstanding Teacher Award, Department of Information and Software Engineering",
+    "Year": "2003",
+    "Former": "yes"
   }
 ]

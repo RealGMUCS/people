@@ -1,6 +1,6 @@
 {
     "scope": "Roster-wide historical discovery pass: attempted all 119 distinct listed faculty/lab URLs, reviewed linked archives, searched missing-homepage faculty, and supplemented with university, funder, conference, and professional-society records. Sources without readable content are explicitly flagged. This is a substantial curated archive, not a guarantee that every historical event has been recovered.",
-    "lastModified": "2026-11-08",
+    "lastModified": "2026-11-23",
     "summary": {
         "stories": 259,
         "earliestYear": "1994",
@@ -853,9 +853,9 @@
         },
         {
             "url": "https://www.lybargerlanguagelab.org/news.html",
-            "checked": "2026-11-05",
+            "checked": "2026-11-23",
             "status": "checked",
-            "note": "Supplemental archive or institutional source reviewed for dated milestones."
+            "note": "Read 2026-11-23: Rahman defense and DEMI already covered; remaining items Findings/proposal/comprehensive; none eligible."
         },
         {
             "url": "https://people-ece.vse.gmu.edu/~kzeng2/news.html",
@@ -1297,9 +1297,9 @@
         },
         {
             "url": "https://people.cs.gmu.edu/~kosecka",
-            "checked": "2026-11-08",
+            "checked": "2026-11-23",
             "status": "checked",
-            "note": "Thin page read via curl; only service roles (ECCV 2026 General Chair), no news."
+            "note": "Read via WebFetch 2026-11-23 (thin page): service roles only (ECCV 2026 General Chair); no eligible news."
         },
         {
             "url": "https://people.cs.gmu.edu/~evgenios",
@@ -1321,39 +1321,51 @@
         },
         {
             "url": "https://andrianmarcus.net",
-            "checked": "2026-11-08",
+            "checked": "2026-11-23",
             "status": "checked",
-            "note": "Deep re-read: service/speaker news only; honors already in awards.json."
+            "note": "Deep re-read 2026-11-23: no new eligible items."
         },
         {
             "url": "https://antonisa.github.io",
-            "checked": "2026-11-08",
+            "checked": "2026-11-23",
             "status": "checked",
-            "note": "Deep re-read: all items already in news.json."
+            "note": "Deep re-read 2026-11-23: no new eligible items."
         },
         {
             "url": "https://ari-lab-gmu.github.io",
-            "checked": "2026-11-08",
+            "checked": "2026-11-23",
             "status": "checked",
-            "note": "Deep re-read: items already covered (UIST, DIS, scholarship)."
+            "note": "Deep re-read 2026-11-23 (90 days back): no new eligible items; ARI Lab items already covered."
         },
         {
             "url": "https://ateniese.github.io",
-            "checked": "2026-11-08",
+            "checked": "2026-11-23",
             "status": "checked",
-            "note": "Deep re-read: no new honors."
+            "note": "Deep re-read 2026-11-23: no new eligible items."
         },
         {
             "url": "https://cnslab.cs.gmu.edu",
-            "checked": "2026-11-08",
+            "checked": "2026-11-23",
             "status": "checked",
-            "note": "Deep re-read: newest item is 2019; no eligible news."
+            "note": "Deep re-read 2026-11-23: no new eligible items."
         },
         {
             "url": "https://people.cs.gmu.edu/~johnsonb/docs/CV.pdf",
             "checked": "2026-11-08",
             "status": "checked",
             "note": "Backfill read: no honors beyond what awards.json lists."
+        },
+        {
+            "url": "https://mohebbilab.cec.gmu.edu",
+            "checked": "2026-11-23",
+            "status": "checked",
+            "note": "Re-read 2026-11-23: INFORMS PSOR item still undated; held."
+        },
+        {
+            "url": "https://lishanyang.github.io",
+            "checked": "2026-11-23",
+            "status": "checked",
+            "note": "Read 2026-11-23: new line is a naming preference; no news."
         }
     ],
     "facultyWithoutSources": [
