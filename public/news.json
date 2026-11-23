@@ -79,6 +79,27 @@
         "lastVerified": "2026-11-20"
     },
     {
+        "id": "kornaropoulos-aisec-distinguished-paper-2026",
+        "title": "Hacking Back the AI Hacker wins AISec 2026 Distinguished Paper Award",
+        "summary": "Evgenios Kornaropoulos and Giuseppe Ateniese, with Dario Pasquini, receive one of two Distinguished Paper Awards at the 19th ACM Workshop on Artificial Intelligence and Security for their paper on prompt injection as a defense against LLM-driven cyberattacks.",
+        "date": "2026-11",
+        "category": "paper-award",
+        "people": [
+            "Evgenios Kornaropoulos",
+            "Giuseppe Ateniese"
+        ],
+        "tags": [
+            "AISec",
+            "Distinguished Paper",
+            "Prompt injection",
+            "AI security"
+        ],
+        "sourceName": "AISec 2026",
+        "sourceUrl": "https://aisec.cc/",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
+    },
+    {
         "id": "motti-state-ai-bridge-argentina-2026",
         "title": "State Department funds AI Bridge Argentina",
         "summary": "Vivian Motti receives U.S. Department of State funding for AI Bridge Argentina, with $93,313 in anticipated funding.",
@@ -114,6 +135,25 @@
         "sourceUrl": "https://cec.gmu.edu/research/grants",
         "lastModified": "2026-11-13",
         "lastVerified": "2026-11-13"
+    },
+    {
+        "id": "lu-corl-c3ache-2026",
+        "title": "C³ache world-action-model caching paper accepted at CoRL 2026",
+        "summary": "Zhicong Lu's DEER Lab reports that its paper on C³ache, a training-free method that reuses residuals across inference chunks to speed up world action models, was accepted to CoRL 2026.",
+        "date": "2026-09",
+        "category": "paper",
+        "people": [
+            "Zhicong Lu"
+        ],
+        "tags": [
+            "CoRL",
+            "Robot learning",
+            "World action models"
+        ],
+        "sourceName": "DEER Lab",
+        "sourceUrl": "https://deerlab22030.github.io/deerlab/",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
     },
     {
         "id": "xiao-doe-radiation-robot-2026",
@@ -1954,9 +1994,9 @@
     },
     {
         "id": "zhang-ccs-rust-2026",
-        "title": "Rust security paper accepted at CCS 2026",
-        "summary": "Zhang’s group reports a conditionally accepted Rust security paper at ACM CCS 2026.",
-        "date": "2026-04",
+        "title": "Rust unsafe-function detection paper at CCS 2026",
+        "summary": "Zhang's group, with collaborators including Taesoo Kim, presents “The Illusion of Rust Safety: Detecting Modular Unsafe Functions with LLMs” in the ACM CCS 2026 proceedings.",
+        "date": "2026-11",
         "category": "paper",
         "people": [
             "Xiaokuan Zhang"
@@ -1966,10 +2006,10 @@
             "Rust",
             "Security"
         ],
-        "sourceName": "Xiaokuan Zhang’s homepage",
-        "sourceUrl": "https://mainarke.github.io/",
-        "lastModified": "2026-11-05",
-        "lastVerified": "2026-11-05"
+        "sourceName": "ACM Digital Library",
+        "sourceUrl": "https://doi.org/10.1145/3830454.3832709",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
     },
     {
         "id": "ziyu-cvpr-highlight-2026",
@@ -2793,6 +2833,82 @@
         "sourceUrl": "https://cs.gmu.edu/news/2025-10/ist-professors-unveil-human-ai-collaboration-tool-automate-cartoon-colorization",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "stein-4va-digital-twin-construction-2025",
+        "title": "4-VA funds digital-twin human–robot collaboration research",
+        "summary": "Gregory Stein is among George Mason faculty named in October 2025 for 2025–26 4-VA grants, for work on digital-twin environments and AI-embodied reasoning for human–robot collaboration in construction tasks, with Virginia Tech.",
+        "date": "2025-10-09",
+        "category": "grant",
+        "people": [
+            "Gregory Stein"
+        ],
+        "tags": [
+            "4-VA",
+            "Robotics",
+            "Digital twins"
+        ],
+        "sourceName": "George Mason University News",
+        "sourceUrl": "https://content.gmu.edu/news/2025-10/george-mason-faculty-awarded-14-grants-4-va",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
+    },
+    {
+        "id": "zhu-4va-fair-decision-systems-2025",
+        "title": "4-VA funds fair decision systems research with causal graph discovery",
+        "summary": "Ziwei Zhu is among George Mason faculty named in October 2025 for 2025–26 4-VA grants, for work on augmenting large language models with causal graph discovery to build fairer decision systems, with the University of Virginia.",
+        "date": "2025-10-09",
+        "category": "grant",
+        "people": [
+            "Ziwei Zhu"
+        ],
+        "tags": [
+            "4-VA",
+            "Fairness",
+            "Large language models"
+        ],
+        "sourceName": "George Mason University News",
+        "sourceUrl": "https://content.gmu.edu/news/2025-10/george-mason-faculty-awarded-14-grants-4-va",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
+    },
+    {
+        "id": "maddox-4va-accountable-genai-writing-2025",
+        "title": "4-VA supports accountable use of generative AI in writing",
+        "summary": "Tamara Maddox is among George Mason faculty named in October 2025 for 2025–26 4-VA grants, for designing a classroom platform for accountable use of generative AI in writing, with Virginia Tech.",
+        "date": "2025-10-09",
+        "category": "grant",
+        "people": [
+            "Tamara Maddox"
+        ],
+        "tags": [
+            "4-VA",
+            "Generative AI",
+            "Education"
+        ],
+        "sourceName": "George Mason University News",
+        "sourceUrl": "https://content.gmu.edu/news/2025-10/george-mason-faculty-awarded-14-grants-4-va",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
+    },
+    {
+        "id": "gopalkrishna-4va-cs108-redesign-2025",
+        "title": "4-VA supports CS 108 course renovation",
+        "summary": "Sara-Lynn Gopalkrishna is among George Mason faculty named in October 2025 for 2025–26 4-VA grants, for renovating CS 108, Introduction to Computer Programming.",
+        "date": "2025-10-09",
+        "category": "grant",
+        "people": [
+            "Sara-Lynn Gopalkrishna"
+        ],
+        "tags": [
+            "4-VA",
+            "Teaching",
+            "CS 108"
+        ],
+        "sourceName": "George Mason University News",
+        "sourceUrl": "https://content.gmu.edu/news/2025-10/george-mason-faculty-awarded-14-grants-4-va",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
     },
     {
         "id": "fei-li-quantum-omics-2025",
@@ -3747,6 +3863,27 @@
         "sourceUrl": "https://jianying.space/acns/acns-tot.html",
         "lastModified": "2026-11-05",
         "lastVerified": "2026-11-05"
+    },
+    {
+        "id": "anastasopoulos-acl-social-impact-dialectbench-2024",
+        "title": "DIALECTBENCH wins ACL 2024 Best Social Impact Paper Award",
+        "summary": "Fahim Faisal and Antonios Anastasopoulos, with collaborators from several institutions, receive the Best Social Impact Paper Award at ACL 2024 for DIALECTBENCH, a benchmark of dialects and closely related language varieties.",
+        "date": "2024-08",
+        "category": "paper-award",
+        "people": [
+            "Antonios Anastasopoulos",
+            "Fahim Faisal"
+        ],
+        "tags": [
+            "ACL",
+            "Best Social Impact Paper",
+            "Dialects",
+            "Benchmark"
+        ],
+        "sourceName": "ACL Anthology",
+        "sourceUrl": "https://aclanthology.org/2024.acl-long.777",
+        "lastModified": "2026-11-16",
+        "lastVerified": "2026-11-16"
     },
     {
         "id": "lybarger-pcori-depression-2024",

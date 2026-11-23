@@ -2,7 +2,7 @@
     "scope": "Roster-wide historical discovery pass: attempted all 119 distinct listed faculty/lab URLs, reviewed linked archives, searched missing-homepage faculty, and supplemented with university, funder, conference, and professional-society records. Sources without readable content are explicitly flagged. This is a substantial curated archive, not a guarantee that every historical event has been recovered.",
     "lastModified": "2026-11-20",
     "summary": {
-        "stories": 306,
+        "stories": 313,
         "earliestYear": "1994",
         "latestYear": "2026",
         "facultyWithStories": 70,
@@ -1372,6 +1372,132 @@
             "checked": "2026-11-20",
             "status": "checked",
             "note": "Backfill read: former faculty, away from academia; no new honors."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~evgenios",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Backfill read: Joukowsky dissertation award row added (year from Brown CS)."
+        },
+        {
+            "url": "https://deerlab22030.github.io/deerlab",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "JS-rendered; read via browser. CoRL 2026 paper story added (arXiv 2606.08962 lists Zhicong Lu); EMNLP and CSCW items already covered; AVATAR guidance is not news."
+        },
+        {
+            "url": "https://cragl.cs.gmu.edu",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "New lines are sabbatical and program-committee service: not news."
+        },
+        {
+            "url": "https://ari-lab-gmu.github.io",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Deep re-read: UIST 2026 paper and scholarship already covered; DIS/HRI companion items not news."
+        },
+        {
+            "url": "https://mainarke.github.io",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "New line is CCS 2027 PC service: not news. Rust CCS story corrected from the CCS proceedings."
+        },
+        {
+            "url": "https://inspired.cs.gmu.edu",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Page JS bundle noise plus project descriptions; no dated news."
+        },
+        {
+            "url": "https://cs.gmu.edu/news",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "New items (town hall, voting-experience study) name no CS faculty."
+        },
+        {
+            "url": "https://mason.gmu.edu/~storabi",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Redirects to satorabi.github.io (IST faculty page); no news section."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~msnyde14",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Redirects to muddsnyder.com; page and CV list no 2025-2026 items."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~shvetha",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Stub home page, no news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~jinweiye/files/[CV]JinweiYe.pdf",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "CV read; 2025-2026 papers and STTR award already covered."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~kosecka",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Thin static page; read: service roles only (ECCV 2026 general chair), no news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~menasce",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Stub page (one zip link), no news."
+        },
+        {
+            "url": "https://drive.google.com/file/d/1PrWhYkrii0GOBW1xjJCcOb2JbB3xyz2I/view?usp=sharing",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Sanchari Das CV downloaded and read; honors predate Mason or are nominations; no awards row."
+        },
+        {
+            "url": "https://drive.google.com/file/d/1MmtuV_XSIu6dVVjwxWyM_Kas1sYL-L03/view?usp=sharing",
+            "checked": "2026-11-16",
+            "status": "unavailable",
+            "note": "Kornaropoulos CV: Google Drive refuses download; homepage read instead."
+        },
+        {
+            "url": "https://mason.gmu.edu/~jtalaver/web/resume",
+            "checked": "2026-11-16",
+            "status": "unavailable",
+            "note": "HTTP 403; Wayback unreachable (000). Retry next run."
+        },
+        {
+            "url": "https://github.com/MingruiLiu-ML-Lab",
+            "checked": "2026-11-16",
+            "status": "unavailable",
+            "note": "HTTP 403; Wayback unreachable. Retry next run."
+        },
+        {
+            "url": "https://content.gmu.edu/news/2025-10/george-mason-faculty-awarded-14-grants-4-va",
+            "checked": "2026-11-16",
+            "status": "checked",
+            "note": "Dated Oct 9, 2025; settled 4-VA held candidates; four stories added."
+        },
+        {
+            "url": "https://andrianmarcus.net",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Deep re-read: no new honors; Most Influential and CAREER rows already in awards.json."
+        },
+        {
+            "url": "https://antonisa.github.io",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Deep re-read: all items already covered by stories."
+        },
+        {
+            "url": "https://ateniese.github.io",
+            "checked": "2026-11-20",
+            "status": "checked",
+            "note": "Deep re-read: bio honors already in awards.json."
         }
     ],
     "facultyWithoutSources": [
