@@ -342,7 +342,7 @@
     {
         "First Name": "Mihai",
         "Last Name": "Boicu",
-        "gmu email/userid": "mboicu@gmu.edu",
+        "gmu email/userid": "",
         "Picture": "portraits/mihai-boicu.webp",
         "Picture Source": "https://ist.gmu.edu/sites/default/files/2023-09/Mihai-Boicu-500x500.jpg",
         "Tenure-Track/Teaching/Staff": "Affiliate",
@@ -353,11 +353,11 @@
         "LinkedIn": "https://www.linkedin.com/in/mihaiboicu",
         "Google Scholar": "",
         "Research interests": "Artificial Intelligence (AI), Machine Learning (ML)",
-        "Office (building and room #)": "Nguyen Engineering 4611",
-        "Former": "",
+        "Office (building and room #)": "",
+        "Former": "Yes",
         "Year started at GMU": "",
         "Year left GMU": "",
-        "Current Position": "",
+        "Current Position": "Associate Professor, Information Sciences and Technology, George Mason University",
         "Year of death": "",
         "Undergrad from": "University of Bucharest",
         "Undergrad Year": "1995",
@@ -369,9 +369,9 @@
         "JD Year": "",
         "Postdoc from": "",
         "Postdoc Year": "",
-        "Last Modified": "2026-11-05",
-        "Last Verified": "2026-11-05",
-        "Verified": ""
+        "Last Modified": "2026-11-26",
+        "Last Verified": "2026-11-26",
+        "Verified": "Yes"
     },
     {
         "First Name": "Alex",
