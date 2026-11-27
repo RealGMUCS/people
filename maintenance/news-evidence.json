@@ -8,8 +8,8 @@
                 "Shima Mohebbi"
             ],
             "sourceUrl": "https://mohebbilab.cec.gmu.edu",
-            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found. 2026-11-20: web search again found no PSOR slate or DAS cluster roster naming her; still undated.",
-            "lastTried": "2026-11-20"
+            "reason": "Lab homepage item (seen 2026-11-12) gives no date and no link; hold until a dated INFORMS source is found. 2026-11-20: web search again found no PSOR slate or DAS cluster roster naming her; still undated. 2026-11-27: search again found no PSOR slate naming her.",
+            "lastTried": "2026-11-27"
         },
         {
             "title": "NSF funds Kai Zeng’s secure ISAC work (resource grid obfuscation)",
@@ -26,8 +26,8 @@
                 "Gheorghe Tecuci"
             ],
             "sourceUrl": "https://cec.gmu.edu/research/awards-and-fellows",
-            "reason": "A search result snippet attributes the award and year 2005 to the CEC awards-and-fellows page, but the page itself returns 'Access denied' to automated reads (2026-11-20) and the Wayback Machine is blocked. Hold until the page or another primary source can be read, then add an awards.json row (Mason Awards).",
-            "lastTried": "2026-11-20"
+            "reason": "A search result snippet attributes the award and year 2005 to the CEC awards-and-fellows page, but the page itself returns 'Access denied' to automated reads (2026-11-20) and the Wayback Machine is blocked. Hold until the page or another primary source can be read, then add an awards.json row (Mason Awards). 2026-11-27: search again attributes it to the CEC awards-and-fellows page (cec.sitemasonry.gmu.edu, not reachable from this environment); cs.gmu.edu/people/faculty/awards-and-honors does not list it.",
+            "lastTried": "2026-11-27"
         },
         {
             "title": "Porfirio: HRI 2026 Student Design Competition Honorable Mention (Nose Knows)",
@@ -46,6 +46,24 @@
             "sourceUrl": "https://erionplaku.github.io/",
             "reason": "Per-year best-paper award; his employer in 2017 not confirmed as GMU, so it may predate his Mason appointment. Hold.",
             "lastTried": "2026-11-16"
+        },
+        {
+            "title": "Ziwei Zhu: WSDM 2027 paper (Interpretable Classification via a Rule Network with Selective Logical Operators)",
+            "people": [
+                "Ziwei Zhu"
+            ],
+            "sourceUrl": "https://zziwei.github.io/",
+            "reason": "Homepage (seen 2026-11-27) reports acceptance to WSDM 2027 without stating the track; hold until the WSDM 2027 accepted-papers list confirms a full research-track paper. The companion BigData 2026 paper is marked Short (not news).",
+            "lastTried": "2026-11-27"
+        },
+        {
+            "title": "Kun Sun: NDSS 2024 Distinguished Paper Award (Heimdall, with Zhisheng Yan)",
+            "people": [
+                "Kun Sun"
+            ],
+            "sourceUrl": "https://csis.gmu.edu/ksun/",
+            "reason": "Sun's homepage claims it; the NDSS paper page (ndss-symposium.org) shows no award mention (2026-11-27). Hold until the NDSS award list confirms it.",
+            "lastTried": "2026-11-27"
         }
     ],
     "discrepancies": [

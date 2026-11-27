@@ -1,8 +1,8 @@
 {
     "scope": "Roster-wide historical discovery pass: attempted all 119 distinct listed faculty/lab URLs, reviewed linked archives, searched missing-homepage faculty, and supplemented with university, funder, conference, and professional-society records. Sources without readable content are explicitly flagged. This is a substantial curated archive, not a guarantee that every historical event has been recovered.",
-    "lastModified": "2026-11-20",
+    "lastModified": "2026-11-27",
     "summary": {
-        "stories": 313,
+        "stories": 317,
         "earliestYear": "1994",
         "latestYear": "2026",
         "facultyWithStories": 70,
@@ -19,9 +19,9 @@
     "sources": [
         {
             "url": "https://roars.dev/",
-            "checked": "2026-11-20",
+            "checked": "2026-11-27",
             "status": "checked",
-            "note": "Watch: NeurIPS workshop paper (not news); older history items already covered."
+            "note": "Watch: VNN-COMP 2026 report and Amazon Build on Trainium press item (story added from the CEC article); other lines older history already covered."
         },
         {
             "url": "https://nlp.cs.gmu.edu/",
@@ -175,9 +175,9 @@
         },
         {
             "url": "https://www.drsancharidas.com/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-27",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Watch: bio rewording only; no new dated item."
         },
         {
             "url": "https://www.drsancharidas.com/labs-and-students",
@@ -217,15 +217,15 @@
         },
         {
             "url": "https://cragl.cs.gmu.edu/bio.html",
-            "checked": "2026-11-05",
+            "checked": "2026-11-27",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Deep re-read: bio, no new honors."
         },
         {
             "url": "https://cragl.cs.gmu.edu/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-27",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Deep re-read: SIGGRAPH Asia 2026 papers and student honors added; CHI honorable mention already covered."
         },
         {
             "url": "https://mason.gmu.edu/~hgomaa/",
@@ -685,9 +685,9 @@
         },
         {
             "url": "https://zziwei.github.io/",
-            "checked": "2026-11-05",
+            "checked": "2026-11-27",
             "status": "checked",
-            "note": "Homepage/lab content and dated milestones reviewed; routine publications, travel, and pre-Mason achievements omitted."
+            "note": "Watch: WSDM 2027 acceptance held (track unconfirmed); BigData 2026 Short not news."
         },
         {
             "url": "https://csis.gmu.edu/ksun/",
@@ -1309,9 +1309,9 @@
         },
         {
             "url": "https://cec.gmu.edu/news",
-            "checked": "2026-11-20",
+            "checked": "2026-11-27",
             "status": "checked",
-            "note": "Watch: INSO DNS-security initiative (Itani) story added; other items not CS faculty."
+            "note": "Watch: CEC articles of Nov 23-24 2026 (CCI showcase story added; Liu NSF story corrected)."
         },
         {
             "url": "https://cs.gmu.edu/news",
@@ -1498,6 +1498,18 @@
             "checked": "2026-11-20",
             "status": "checked",
             "note": "Deep re-read: bio honors already in awards.json."
+        },
+        {
+            "url": "https://mason.gmu.edu/~drine",
+            "checked": "2026-11-27",
+            "status": "checked",
+            "note": "Baseline/deep re-read: emeritus stub page, no news."
+        },
+        {
+            "url": "https://people.cs.gmu.edu/~eclab",
+            "checked": "2026-11-27",
+            "status": "checked",
+            "note": "Baseline/deep re-read: static lab page last updated 2008, no news."
         }
     ],
     "facultyWithoutSources": [

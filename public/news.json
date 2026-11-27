@@ -1,5 +1,88 @@
 [
     {
+        "id": "cragl-chao-huang-honors-2026",
+        "title": "CraGL students honored: Ted Chao and Jialin Huang",
+        "summary": "Ted Chao was selected for the department’s Outstanding Ph.D. Student Award and Jialin Huang was named a 2026 WiGRAPH Rising Star.",
+        "date": "2026",
+        "category": "student-achievement",
+        "people": [
+            "Yotam Gingold",
+            "Ted Chao",
+            "Jialin Huang"
+        ],
+        "tags": [
+            "WiGRAPH",
+            "Outstanding PhD Student Award"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-27",
+        "lastVerified": "2026-11-27"
+    },
+    {
+        "id": "cragl-siggraph-asia-2026",
+        "title": "Two CraGL papers accepted at SIGGRAPH Asia 2026",
+        "summary": "Yong Cheng and Yotam Gingold’s paper on radial-basis-function interpolation of signed distance fields, and Ted Chao and Gingold’s paper on palette-based color and luminance editing of 3D Gaussian splats, are listed as SIGGRAPH Asia 2026 conference papers.",
+        "date": "2026",
+        "category": "paper",
+        "people": [
+            "Yotam Gingold",
+            "Yong Cheng",
+            "Ted Chao"
+        ],
+        "tags": [
+            "SIGGRAPH Asia",
+            "Computer graphics"
+        ],
+        "sourceName": "CraGL",
+        "sourceUrl": "https://cragl.cs.gmu.edu/",
+        "lastModified": "2026-11-27",
+        "lastVerified": "2026-11-27"
+    },
+    {
+        "id": "albanese-lybarger-cci-showcase-2026",
+        "title": "AI–analyst co-teaming paper selected for CCI 2026 Research Paper Showcase",
+        "summary": "Kevin Lybarger, Massimiliano Albanese, and doctoral student Arka Ghosh’s paper on LLM-based human–machine co-teaming for security operations centers, published in ACM Transactions on Internet Technology, was one of 22 chosen for the Commonwealth Cyber Initiative’s 2026 showcase.",
+        "date": "2026-11-23",
+        "category": "research",
+        "people": [
+            "Kevin Lybarger",
+            "Massimiliano Albanese",
+            "Arka Ghosh"
+        ],
+        "tags": [
+            "CCI",
+            "Cybersecurity",
+            "Large language models",
+            "Security operations centers"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2026-11/george-mason-researchers-explore-how-ai-can-strengthen-human-decision-making",
+        "lastModified": "2026-11-27",
+        "lastVerified": "2026-11-27"
+    },
+    {
+        "id": "nguyen-yao-amazon-trainium-2026",
+        "title": "ThanhVu Nguyen and Ziyu Yao receive Amazon Build on Trainium awards",
+        "summary": "Two Computer Science faculty members received awards through Amazon’s Build on Trainium program: Nguyen for verifiable AI and ML-assisted mathematical reasoning, and Yao for representation engineering of LLMs for secure code generation. Mason was one of four universities with multiple recipients in the round.",
+        "date": "2026-08-18",
+        "category": "grant",
+        "people": [
+            "ThanhVu (Vu) Nguyen",
+            "Ziyu Yao"
+        ],
+        "tags": [
+            "Amazon",
+            "Build on Trainium",
+            "AI safety",
+            "Secure code generation"
+        ],
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2026-08/two-george-mason-researchers-earn-amazon-awards-advance-responsible-ai",
+        "lastModified": "2026-11-27",
+        "lastVerified": "2026-11-27"
+    },
+    {
         "id": "kai-zeng-nsc-swift-isac-2026",
         "title": "National Spectrum Consortium funds SWIFT-ISAC UAV-detection project",
         "summary": "Kai Zeng receives National Spectrum Consortium funding for SWIFT-ISAC, which develops swarm-UAV detection using fused, transformer-based integrated sensing and communication ($3,254,389 anticipated).",
@@ -838,22 +921,24 @@
     {
         "id": "liu-nsf-mfai-2026",
         "title": "NSF MFAI award for conformality-guided learning",
-        "summary": "Mingrui Liu leads George Mason’s part of a collaborative NSF Mathematical Foundations of AI project on uncertainty estimates for learning with evolving and heterogeneous data.",
+        "summary": "Mingrui Liu and Jie Xu are collaborating with Rice University on a three-year NSF Mathematical Foundations of AI project on reliable uncertainty estimates for learning with evolving and heterogeneous data; Mason describes it as supported by a $550,000 NSF grant.",
         "date": "2026-07-17",
         "category": "grant",
         "people": [
-            "Mingrui Liu"
+            "Mingrui Liu",
+            "Jie Xu"
         ],
         "tags": [
             "NSF",
             "MFAI",
             "Machine learning",
-            "Uncertainty"
+            "Uncertainty",
+            "Rice University"
         ],
-        "sourceName": "National Science Foundation",
-        "sourceUrl": "https://www.nsf.gov/awardsearch/show-award?AWD_ID=2601681",
-        "lastModified": "2026-11-13",
-        "lastVerified": "2026-11-13"
+        "sourceName": "GMU College of Engineering and Computing",
+        "sourceUrl": "https://cec.gmu.edu/news/2026-11/teaching-ai-expect-unexpected",
+        "lastModified": "2026-11-27",
+        "lastVerified": "2026-11-27"
     },
     {
         "id": "zhou-nsf-pose-tile-debugger-2026",

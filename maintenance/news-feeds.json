@@ -1,6 +1,6 @@
 {
     "_about": "Ids already reported by `npm run news:feeds` (scripts/news-feeds.ts), so each run lists only new NSF awards, CEC grants-list entries, and OpenAlex papers. Not a review log.",
-    "lastRun": "2026-11-20",
+    "lastRun": "2026-11-27",
     "seen": {
         "nsf": [
             "2537125",
