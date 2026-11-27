@@ -1734,5 +1734,33 @@
     "Award": "Distinguished Service Award, ACM SIGSOFT",
     "Year": "2018",
     "Former": "Yes"
+  },
+  {
+    "Name": "Katherine (Raven) Russell",
+    "Category": "Mason Awards",
+    "Award": "Distinguished Academic Achievement Award, M.S. in Computer Science, George Mason University",
+    "Year": "2012",
+    "Former": ""
+  },
+  {
+    "Name": "Katherine (Raven) Russell",
+    "Category": "Mason Awards",
+    "Award": "Distinguished Academic Achievement Award, Ph.D. in Computer Science, George Mason University",
+    "Year": "2020",
+    "Former": ""
+  },
+  {
+    "Name": "Kun Sun",
+    "Category": "Mason Awards",
+    "Award": "Presidential Award for Faculty Excellence in Research",
+    "Year": "2022",
+    "Former": ""
+  },
+  {
+    "Name": "Kun Sun",
+    "Category": "Most Influential Paper, Impact Paper, and Test of Time Paper Awards",
+    "Award": "Distinguished Paper Award, NDSS - *ReDAN: An Empirical Study on Remote DoS Attacks against NAT Networks*",
+    "Year": "2025",
+    "Former": ""
   }
 ]
